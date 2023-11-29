@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class BusinessManageController {
 	
-	@GetMapping("/BusinessManage/businessMain.do")
+	@GetMapping("/BusinessManage/businessHotelMain.do")
 	public String goBookingManage(HttpSession session) {
 		session.setAttribute("¿Ö¾ÈµÊ", "ajwl");
 		return "BusinessManage/businessmanage_hotel";

@@ -1124,12 +1124,14 @@ th, td {
 									<nav class="HtHs" aria-label="홈">
 										<ul class="HtHs-nav-list">
 											<li><a href="businessHotelMain.do" aria-label="호텔 검색 "
-												class="dJtn dJtn-active dJtn-expanded dJtn-mod-variant-accordion"
-												aria-current="false"><img src="http://localhost/HCYHotel/common/business/img/hotelReservation.png" style="padding-right:12px;padding-left:12px;">
-															<div class="dJtn-menu-item-title">호텔예약 관리</div></a></li>
-											<li><a href="businessDiningMain.do" aria-label="항공권 검색 "
 												class="dJtn dJtn-expanded dJtn-mod-variant-accordion"
-												aria-current="false"><img src="http://localhost/HCYHotel/common/business/img/dining.png" style="padding-right:12px;padding-left:12px;">
+												aria-current="false"><img src="http://localhost/HCYHotel/common/business/img/hotelReservation.png" style="padding-right:12px;padding-left:12px;">
+														<path
+															d="M175 170a5 5 0 0 1-5-5v-5H30v5a5 5 0 1 1-10 0v-43.092c0-8.176 3.859-15.462 10-20.027V65c0-13.785 11.215-25 25-25h90c13.785 0 25 11.215 25 25v36.98c6.093 4.613 10 11.922 10 19.928V165a5 5 0 0 1-5 5zM30 150h140v-10H30v10zm0-20h140v-8.092c0-7.342-5.486-13.707-12.762-14.806c-40.216-6.077-73.399-6.207-114.477 0C35.415 108.21 30 114.4 30 121.908V130zm120-34.027c2.877.382 9.581 1.381 10 1.467V65c0-8.271-6.729-15-15-15H55c-8.271 0-15 6.729-15 15v32.438c.418-.084 7.123-1.083 10-1.465V85c0-8.271 6.729-15 15-15h25a14.94 14.94 0 0 1 10 3.829A14.943 14.943 0 0 1 110 70h25c8.271 0 15 6.729 15 15v10.973zm-45-3.45c11.463.167 22.988.912 35 2.233V85c0-2.757-2.243-5-5-5h-25c-2.757 0-5 2.243-5 5v7.523zM65 80c-2.757 0-5 2.243-5 5v9.756c12.012-1.321 23.537-2.065 35-2.232V85c0-2.757-2.243-5-5-5H65z"></path></svg>
+													<div class="dJtn-menu-item-title">호텔예약 관리</div></a></li>
+											<li><a href="#void" aria-label="항공권 검색 "
+												class="dJtn dJtn-active dJtn-expanded dJtn-mod-variant-accordion"
+												aria-current="page"><img src="http://localhost/HCYHotel/common/business/img/dining.png" style="padding-right:12px;padding-left:12px;">
 														<path
 															d="M140.448 177.069l-19.846-43.661c-2.877-6.328-7.998-11.612-12.447-14.676a1029.409 1029.409 0 0 1-14.935 12.983c-4.045 3.618-5.452 9.494-3.67 15.347l2.733 8.981a4.997 4.997 0 0 1-1.248 4.991l-10 10c-2.267 2.268-6.043 1.838-7.754-.851l-14.154-22.241l-10.592 10.592a5 5 0 1 1-7.071-7.07l10.593-10.593l-22.242-14.153c-2.695-1.716-3.112-5.493-.851-7.754l10-10a5 5 0 0 1 4.992-1.248l8.981 2.733c5.85 1.777 11.728.375 15.348-3.671c4.269-5.007 8.599-9.988 12.983-14.935c-3.063-4.449-8.349-9.571-14.676-12.447L22.931 59.552c-3.563-1.619-3.965-6.539-.705-8.712l11.53-7.687a15.083 15.083 0 0 1 11.333-2.213l60.319 12.364c6.006 1.33 14.836-3.512 20.984-9.246c6.775-6.625 13.831-12.567 25.684-17.738c5.899-2.573 12.876-1.07 17.773 3.828l.003.002c4.898 4.897 6.401 11.874 3.828 17.773c-5.171 11.853-11.111 18.909-17.735 25.682c-5.736 6.148-10.583 14.976-9.266 20.906l12.382 60.4a15.1 15.1 0 0 1-2.215 11.332l-7.687 11.53c-2.182 3.276-7.096 2.849-8.711-.704zm-24.66-65.169c5.789 4.467 10.925 10.784 13.918 17.369l16.123 35.472l2.697-4.045a5.034 5.034 0 0 0 .738-3.778L136.9 96.6a19.235 19.235 0 0 1-.445-3.891a1041.686 1041.686 0 0 1-20.667 19.191zm-49.416 28.799l12 18.857l3.471-3.471l-1.86-6.111c-2.938-9.652-.396-19.525 6.631-25.767l.077-.066c23.665-20.174 47.419-42.531 62.016-57.438c6.149-6.558 10.969-11.688 15.808-22.779c1.113-2.552-.165-5.136-1.733-6.703l-.003-.002c-1.567-1.568-4.151-2.846-6.704-1.734c-10.394 4.535-15.439 8.933-22.782 15.811c-15.335 15.027-37.539 38.676-57.433 62.013l-.067.076c-6.242 7.028-16.115 9.567-25.767 6.631l-6.111-1.859l-3.471 3.471l18.858 12l7.164-7.163a5 5 0 1 1 7.071 7.07l-7.165 7.164zM35.258 54.17l35.471 16.124c6.585 2.993 12.903 8.128 17.37 13.918a1045.845 1045.845 0 0 1 19.202-20.678a19.358 19.358 0 0 1-3.982-.452L43.081 50.735a5.039 5.039 0 0 0-3.778.738l-4.045 2.697z"></path></svg>
 													<div class="dJtn-menu-item-title">다이닝예약 관리</div></a></li>
@@ -1783,33 +1785,26 @@ th, td {
 							<div role="button" class="dDYU-off-screen" tabindex="0"></div>
 						</div>
 					</div>
-					<div id='calendar'></div>
-
-					<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    var calendarEl = document.getElementById('calendar');
-    var calendar = new FullCalendar.Calendar(calendarEl, {
-      initialView: 'dayGridMonth', // 초기 뷰를 월간 달력으로 설정
-      locale: 'ko', // 한국어 설정
-      events: [
-  		//이벤트 추가
-        // 추가적인 일정들을 추가할 수 있습니다.
-      ]
-    });
-    calendar.render(); // 캘린더를 화면에 렌더링합니다.
-  });
-</script>
+					<div style="position:absolute; left:623px">
+					<select>
+					<option>다이닝 선택</option>
+					</select>
+					</div>
 					<div
 						style="display: flex; justify-content: center; align-items: center; height: 200px;">
-						<table style="width: 900px; bolder: 1;display:none;">
+						<table style="width: 900px; bolder: 1;">
 							<tr>
-								<th>객실명</th>
+								<th>예약번호</th>
 								<th>아이디</th>
 								<th>예약자명</th>
-								<th>예약기간</th>
+								<th>예약인원</th>
+								<th>구분</th>
+								<th>예약시간</th>
 								<th>예약상태</th>
 							</tr>
 							<tr>
+								<td></td>
+								<td></td>
 								<td></td>
 								<td></td>
 								<td></td>
