@@ -10,7 +10,7 @@ public class DiningManageController {
 
 	@GetMapping("/BusinessManage/businessDiningMain.do")
 	public String goBookingManage(HttpSession session) {
-		session.setAttribute("id", "╦сюс");
+		session.setAttribute("id", "asfasdf");
 		
 		return "BusinessManage/businessmange_dining";
 	}
