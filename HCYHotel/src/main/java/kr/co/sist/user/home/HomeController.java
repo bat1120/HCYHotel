@@ -22,7 +22,7 @@ public class HomeController {
 	
 	@GetMapping("/user/user_home.do")
 	public String home() {
-		return "user/user_home";
+		return "user/user_home"; 
 	}//home
 	
 	
