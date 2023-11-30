@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page info="" %>
+<%@ page info="다연다연" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
@@ -23,7 +23,7 @@ $(function(){
 </head>
 <body>
 <ul>
-	<li><a href="user/dining_main.do">다이닝 메인</a></li>
+	<li><a href="user/dining/dining_main.do">다이닝 메인</a></li>
 </ul>
 </body>
 </html>
