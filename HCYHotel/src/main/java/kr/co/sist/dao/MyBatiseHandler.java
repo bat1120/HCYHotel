@@ -35,10 +35,10 @@ private SqlSessionFactory myBatisBuilder(String configFile) {
 	return ssf;
 }//myBatisBuilder
 
-public SqlSession getMyBatisHandler(String config,boolean autoCommit) {
+public SqlSession getMyBatisHandler(boolean autoCommit) {
 	SqlSession ss = null;
 	
-	ss= myBatisBuilder(config).openSession(autoCommit);
+	ss= myBatisBuilder("kr/co/sist/dao/mybatis-config.xml").openSession(autoCommit);
 	
 	return ss;
 }//getMyBatisHandler
@@ -47,8 +47,4 @@ public void closeHandler(SqlSession ss) {
 	if(ss!= null) {ss.close();}
 }//closeHandler
 
-public static void main(String[] args) {
-	MyBatiseHandler mbh=MyBatiseHandler.getInstance();
-	System.out.println(mbh.getMyBatisHandler("kr/co/sist/dao/mybatis-config.xml", false));
-}//main
 }//class

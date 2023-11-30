@@ -3,7 +3,6 @@
 <%@ page info="footer 해보는 중 눈눈누"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-	<div>
 		<footer
 			class="react-footer withDrawer new-nav-breakpoints pres-centered Su1_ Su1_-right-rail-disabled">
 			<div class="kml-layout mod-wide edges-m mobile-edges c31EJ">
@@ -31,11 +30,9 @@
 				</div>
 				<div class="FyHn FyHn-theme-base FyHn-pres-centered">
 					<div class="FyHn-inner-wrapper">
-						<p class="FyHn-headline FyHn-mod-size-small">호텔스컴바인은 세계적인 온라인
-							여행 기업 '부킹홀딩스(Booking Holdings Inc.)'의 그룹사입니다.</p>
+						<p class="FyHn-headline FyHn-mod-size-small">에이치씨와이컴바인은 글로벌 기업 '에이치씨와이(HCY Inc.)'의 그룹사입니다.</p>
 					</div>
 				</div>
 			</div>
 		</footer>
-	</div>
 
