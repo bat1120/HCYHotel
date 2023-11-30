@@ -15,7 +15,7 @@ public class BusinessManageController {
 	@GetMapping("/BusinessManage/businessHotelMain.do")
 	public String goBookingManage(HttpSession session) {
 		session.setAttribute("asdf", "ajwl");
-		return "BusinessManage/businessmanage_hotel";
+		return "BusinessManage/businessmanage_hotel_main";
 	}//goBookingManage
 	
 	public String cancelBooking(HttpSession session,String hotelCode) {

@@ -12,7 +12,7 @@ public class DiningManageController {
 	public String goBookingManage(HttpSession session) {
 		session.setAttribute("id", "asfasdf");
 		
-		return "BusinessManage/businessmange_dining";
+		return "BusinessManage/businessmange_dining_main";
 	}
 	
 }
