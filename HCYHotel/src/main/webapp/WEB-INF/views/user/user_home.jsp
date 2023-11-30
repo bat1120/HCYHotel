@@ -1020,7 +1020,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 													<script>
 													function test(){
 														location.href="user_login.do"														
-													}
+													} 
 													</script>
 													<button role="button"
 															class="Iqt3 Iqt3-mod-bold Button-No-Standard-Style Iqt3-mod-variant-outline Iqt3-mod-theme-none Iqt3-mod-shape-rounded-small Iqt3-mod-shape-mod-default Iqt3-mod-spacing-default Iqt3-mod-size-default"
