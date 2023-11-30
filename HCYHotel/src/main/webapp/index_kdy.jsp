@@ -23,7 +23,7 @@ $(function(){
 </head>
 <body>
 <ul>
-	<li><a href="user/dining_main.do">다이닝 메인</a></li>
+	<li><a href="user/dining/dining_main.do">다이닝 메인</a></li>
 </ul>
 </body>
 </html>
