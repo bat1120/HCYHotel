@@ -7,6 +7,7 @@
 <typeAliases>
 <typeAlias type="kr.co.sist.domain.prdDomain" alias="pd"/>
 <typeAlias type="kr.co.sist.admin.login.LoginVO" alias="lVO"/>
+<typeAlias type="kr.co.sist.business.manage.BusinessHotelDomain" alias="bhd"/>
 </typeAliases>
   <environments default="development">
     <environment id="development">
