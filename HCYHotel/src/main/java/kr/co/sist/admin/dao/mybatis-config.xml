@@ -5,7 +5,6 @@
 <configuration>
 <properties resource="properties/database.properties"/>
 <typeAliases>
-<typeAlias type="kr.co.sist.domain.prdDomain" alias="pd"/>
 <typeAlias type="kr.co.sist.admin.login.LoginVO" alias="lVO"/>
 <typeAlias type="kr.co.sist.business.manage.BusinessHotelDomain" alias="bhd"/>
 </typeAliases>
@@ -22,6 +21,6 @@
   </environments>
   
 <mappers>
-
+<mapper resource="kr/co/sist/admin/mapper/loginMapper.xml"></mapper>
   </mappers>
 </configuration>

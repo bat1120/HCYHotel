@@ -14,8 +14,8 @@
 </style>
 <script type="text/javascript">
     $(function(){
-alert(${msg})
-location.href=${url}
+alert("${msg}")
+location.href="${url}"
         })
 </script>
 <head>
