@@ -1027,7 +1027,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 															tabindex="0" aria-disabled="false" onclick="test()">
 															<div class="Iqt3-button-container">
 																<div class="Iqt3-button-content">
-																	<div>
+																	<div> 
 																		<span
 																			style="transform: translate3d(0, 0, 0); vertical-align: middle; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; width: auto; height: auto"><svg
 																				viewBox="0 0 200 200" width="100%" height="100%"
