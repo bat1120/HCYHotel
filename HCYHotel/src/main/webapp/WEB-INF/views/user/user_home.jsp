@@ -1015,10 +1015,16 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																<path fill="currentColor"
 																	d="M12 17.007c-3.618 0-7.023.821-10 2.265v2.735h20v-2.735c-2.977-1.444-6.382-2.265-10-2.265zM12 14.793a4 4 0 0 1-4-4v-4a4 4 0 0 1 8 0v4a4 4 0 0 1-4 4z"></path></svg></span></span>
 												</div>
-												<div class="menu-label__wrapper">
-													<span class="menu-label"><button role="button"
+												<div class="menu-label__wrapper" >
+													<span class="menu-label">
+													<script>
+													function test(){
+														location.href="user_login.do"														
+													}
+													</script>
+													<button role="button"
 															class="Iqt3 Iqt3-mod-bold Button-No-Standard-Style Iqt3-mod-variant-outline Iqt3-mod-theme-none Iqt3-mod-shape-rounded-small Iqt3-mod-shape-mod-default Iqt3-mod-spacing-default Iqt3-mod-size-default"
-															tabindex="0" aria-disabled="false">
+															tabindex="0" aria-disabled="false" onclick="test()">
 															<div class="Iqt3-button-container">
 																<div class="Iqt3-button-content">
 																	<div>
@@ -3097,10 +3103,11 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 		href="https://content.r9cdn.net/res/combined.css?v=5f13d1a23f67c3c1e65d620402b9ce4212e9d413-14pre-flipped&amp;cluster=5&amp;tag=ui/personalization/ContextualFrontDoorContent">
 	<link rel="stylesheet" type="text/css"
 		href="https://content.r9cdn.net/res/combined.css?v=ce9869ab07cc317af2baa86e8d814d041cf15374-14pre-flipped&amp;cluster=5&amp;tag=ui/trips-packages/drawer/shared">
-	<script async=""
+	<!--  <script async=""
 		src="https://content.r9cdn.net/res/combined.js?v=ac5c35b453232f3b5904d8f0d3081c8c3ef3feae-14pre-flipped&amp;cluster=5&amp;tag=ui/trips-packages/drawer/shared"></script>
 	<script async=""
 		src="https://content.r9cdn.net/res/combined.js?v=6b186515cbfa8576d6387ff3453feba2ec88c2d6-14pre-flipped&amp;cluster=5&amp;tag=ui/personalization/ContextualFrontDoorContent"></script>
+	-->
 	<script async="" src="https://accounts.google.com/gsi/client"></script>
 	<script type="text/javascript">
 window.R9 = window.R9 || {};
@@ -3124,13 +3131,13 @@ l.context.add('pageId', "frontdoor");
 })(window,"r9-version");
 }
 </script>
-	<script
+	<!--  <script
 		src="https://content.r9cdn.net/res/combined.js?v=a5d85204c6d8fbc9c81ed463ff34c7f7eece6153-14pre-flipped&amp;cluster=5"
 		type="text/javascript" defer=""></script>
 	<script
 		src="https://content.r9cdn.net/res/combined.js?v=762eaee90130ea5bc4f9319200094278b30e8ace-14pre-flipped&amp;cluster=5&amp;tag=ui/hotels/frontdoor/HotelFrontDoorPage"
 		type="text/javascript" defer=""></script>
-	<script type="text/javascript">
+	--><script type="text/javascript">
 window.R9.init = window.R9.init || [];
 window.R9.init.push(function() {
 var perf = window['@r9/perf'];
