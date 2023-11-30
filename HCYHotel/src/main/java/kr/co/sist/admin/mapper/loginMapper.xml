@@ -5,10 +5,12 @@
 <mapper namespace="kr.co.sist.admin.loginMapper">
 
 
-  <select id="selectChechLogin" resultType="String" parameterType="lVO">
-    select * 
+  <select id="selectChechLogin" resultType="String" parameterType="kr.co.sist.admin.login.LoginVO">
+<![CDATA[
+    select id 
     from admin 
-    where id = ${id}
-    and password = 
+    where id = #{id}
+    and password = #{pass}
+]]>
   </select>
 </mapper>
