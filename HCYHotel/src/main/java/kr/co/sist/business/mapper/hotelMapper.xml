@@ -4,8 +4,10 @@
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="kr.co.sist.business.hotelMapper">
 
-<select id="searchHotel" resultType="">
-
+<select id="searchHotel" resultType="String" parameterType="String">
+select hotelcode
+from   hotel
+where  id=#{id}
 </select>
   
 </mapper>
