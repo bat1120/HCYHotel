@@ -284,6 +284,7 @@ xhr.send('');
 	href="/apple-touch-icon-167x167.png">
 <link rel="apple-touch-icon" sizes="180x180"
 	href="/apple-touch-icon-180x180.png">
+	 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 <link rel="alternate"
 	href="android-app://com.kayak.android/http/www.kayak.com/deeplinks/hotels?a=adwordssearch/brand&amp;p=">
 <script type="application/ld+json">{"@context":"http://schema.org","@type":"Organization","name":"HotelsCombined","url":"https://www.hotelscombined.co.kr","sameAs":["https://www.facebook.com/HotelsCombinedKorea/","https://www.instagram.com/hotelscombined.kr/","https://www.linkedin.com/company/hotelscombined","https://www.pinterest.com/hotelscombined","https://twitter.com/hotelscombined","https://www.youtube.com/c/hotelscombinedkorea/","https://brunch.co.kr/@hotelscombined","http://blog.naver.com/hotelscombnd","https://post.naver.com/hotelscombnd"]}</script>
@@ -934,7 +935,6 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe673661048
 								<div>
 									<div
 										class="common-layout-react-HeaderAccountWrapper theme-dark account--collapsible">
-										<div class="ui-layout-header-HeaderTripsItem"></div>
 										<span><div class="auth-account-wrap menu__wrapper">
 												<div class="menu-icon__wrapper menu-icon__wrapper--auth">
 													<span class="menu-icon"><span
@@ -1826,9 +1826,11 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe673661048
 						</div>
 						<div class="C4-Q-search-form-spacer"></div>
 					</div>
-					<div>
+					<div style="text-align:center">
 					
-					dddddddd
+					<button type="button" class="btn btn-secondary">호텔 바로 예약하기</button>
+					<button type="button" class="btn btn-secondary">다이닝 바로 예약하기</button>
+					
 					</div>
 					<div class="Seuf">
 						<section class="bDbo bDbo-spacing-bottom"
