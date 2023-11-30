@@ -21,7 +21,7 @@ $(function(){
 });//ready
 </script>
 </head>
-<body>
+<body> 
 <ul>
 	<li><a href="user/dining/dining_main.do">다이닝 메인</a></li>
 </ul>
