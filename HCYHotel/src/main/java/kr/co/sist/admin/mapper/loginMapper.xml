@@ -5,10 +5,28 @@
 <mapper namespace="kr.co.sist.admin.loginMapper">
 
 
-  <select id="selectChechLogin" resultType="String" parameterType="lVO">
-    select * 
+  <select id="selectChechLogin" resultType="String" parameterType="kr.co.sist.admin.login.LoginVO">
+<![CDATA[
+    select id 
     from admin 
-    where id = ${id}
-    and password = 
+    where id = #{id}
+    and password = #{pass}
+]]>
+  </select>
+  
+<!--   <resultMap type="dd" id="dd">
+  	<result property="weeklyVisitor" column=""/>
+  	<result property="weeklyBusVisitor" column=""/>
+  	<result property="weeklyMemVisitor" column=""/>
+  	<result property="dailyVisitor" column=""/>
+  	<result property="newHotel" column=""/>
+  	<result property="newDining" column=""/>
+  	<result property="newReview" column=""/>
+  </resultMap> -->
+  
+  <select id="selectDashboard" resultType="dd">
+  <![CDATA[
+  
+  ]]>
   </select>
 </mapper>

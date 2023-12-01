@@ -23,9 +23,20 @@ public class AdminLoginService {
 	public boolean checkLogin(LoginVO lVO) {
 	boolean flag = false;
 	
-	
+	String checkId = AdminLoginDAO.getInstance().selectCheckLogin(lVO);
+	if(checkId != null) {
+		flag=true;
+	}//if
 	
 	return flag;
 	}//checkLogin
+	
+	public DashboardDomain loadDashboard() {
+		DashboardDomain dd = new DashboardDomain();
+		
+		
+		
+		return dd;
+	}//loadDashboard
 	
 }//class
