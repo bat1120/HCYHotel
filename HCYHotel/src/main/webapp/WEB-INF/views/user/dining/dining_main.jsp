@@ -1126,7 +1126,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe205666431
 					</div>
 				</main>
 			</div>
-		
+		<!-- footer -->
 		<jsp:include page="../footer.jsp"/>
 		</div>
 	</div>
