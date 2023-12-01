@@ -25,7 +25,6 @@ $(function(){
 <body>
 <ul>
 <li><a href="user/user_home.do">사용자 홈</a></li>
-<li><a href="user/user_login.do">로그인</a></li>
 </ul>
 </body>
 </html>

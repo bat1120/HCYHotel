@@ -384,8 +384,8 @@ googletag.cmd.push(function() {
 										<a href="/zf_user/helpdesk/idpw-find" class="forgotten"
 											onmousedown="try{n_trackEvent('login', 'pc_login_page' , 'find', '');}catch(e){}">아이디/비밀번호
 											찾기</a> <a href="/zf_user/applicant/rater/login-form"
-											target="_blank" class="link_rater" style="display: none;">협업자
-											로그인</a>
+											target="_blank" class="link_rater" style="display: none;">
+											</a>
 									</div>
 
 								</div>
@@ -398,15 +398,16 @@ googletag.cmd.push(function() {
 						<div class="login_banner_wrap person" style="display: block;">
 						</div>
 						<div class="login_banner_wrap company" style="display: none">
-							<div id="login_bottom_company"
+							<!-- <div id="login_bottom_company"
 								class="promotion-banner-box promotion-login" style="">
 								<a href="https://billing.saramin.co.kr/products/resume-pool"
 									target="_blank"><img
 									src="https://www.saraminbanner.co.kr/new/sub/2023/11/s4m50w_7k9c-1bqufdt_04PC.png"
 									alt="사람인 인재풀 첫구매 특별 할인" width="" height=""></a>
-							</div>
+							</div> -->
 						</div>
 					</div>
+					
 					<svg xmlns="http://www.w3.org/2000/svg" style="display: none">
         <symbol id="icon_login_naver" viewBox="0 0 20 20" fill="none">
             <path
@@ -457,16 +458,17 @@ googletag.cmd.push(function() {
 				</script>
 			</div>
 		</div>
+		
 		<!-- WMG-23414 회원가입유도 -->
 		<div class="wrap_member_info" style="display: none">
-			<div class="box_bottom_info">
+			<!-- <div class="box_bottom_info">
 				<p class="txt">왜 사람인을 선택해야 할까요?</p>
 				<button type="button" class="btn_bottom_info"
 					data-target="#area_info01">
 					<span class="ico_bottom">이동하기</span>
 				</button>
-			</div>
-			<div class="area_info01" id="area_info01">
+			</div> -->
+<!-- 			<div class="area_info01" id="area_info01">
 				<div class="inner_box">
 					<img
 						src="//www.saraminimage.co.kr/sri/common/img/img_member_info01.png"
@@ -487,8 +489,9 @@ googletag.cmd.push(function() {
 						</dl>
 					</div>
 				</div>
-			</div>
-			<div class="area_info02">
+			</div> -->
+			
+			<!-- <div class="area_info02">
 				<div class="inner_box">
 					<img
 						src="//www.saraminimage.co.kr/sri/common/img/img_member_info02_20220718.png"
@@ -566,7 +569,7 @@ googletag.cmd.push(function() {
 					<span class="blind">채용공고게재하기</span>
 				</button>
 				<span class="box_top"><button type="button" class="btn_top">TOP</button></span>
-			</div>
+			</div> -->
 
 			<script type="text/javascript">
         jQuery(function() {
@@ -1645,5 +1648,7 @@ wcs_do(_nasa);
 	<div id="criteo-tags-div" style="display: none;"></div>
 	<iframe height="0" width="0" title="Criteo DIS iframe"
 		style="display: none;"></iframe>
+<jsp:include page="footer.jsp"/>
 </body>
+
 </html>
