@@ -5,6 +5,7 @@
 <html lang="ko">
 <head>
 <title>로그인 - 사람인</title>
+	<jsp:include page="header.jsp"/>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="Content-Language" content="ko-KR">
@@ -183,6 +184,7 @@ googletag.cmd.push(function() {
 <iframe name="goog_topics_frame"
 	src="https://securepubads.g.doubleclick.net/static/topics/topics_frame.html"
 	style="display: none;"></iframe>
+
 <body cz-shortcut-listen="true">
 	<!-- skip navi -->
 	<div id="skipnavigation">
@@ -1632,7 +1634,7 @@ wcs_do(_nasa);
 	<div id="_sticky_warp" role="complementary"></div>
 
 
-
+ 
 
 
 	<div style="display: none; visibility: hidden;">
@@ -1648,7 +1650,7 @@ wcs_do(_nasa);
 	<div id="criteo-tags-div" style="display: none;"></div>
 	<iframe height="0" width="0" title="Criteo DIS iframe"
 		style="display: none;"></iframe>
-<jsp:include page="footer.jsp"/>
-</body>
 
+</body>
+<jsp:include page="footer.jsp"/>
 </html>
