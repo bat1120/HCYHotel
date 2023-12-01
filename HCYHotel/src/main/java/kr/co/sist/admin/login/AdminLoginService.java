@@ -31,4 +31,12 @@ public class AdminLoginService {
 	return flag;
 	}//checkLogin
 	
+	public DashboardDomain loadDashboard() {
+		DashboardDomain dd = new DashboardDomain();
+		
+		
+		
+		return dd;
+	}//loadDashboard
+	
 }//class

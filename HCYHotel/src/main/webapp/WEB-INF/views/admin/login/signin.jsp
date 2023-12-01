@@ -83,7 +83,6 @@
                                 <input type="checkbox" class="form-check-input" id="rememberId" name="chk" value="Y">
                                 <label class="form-check-label" for="exampleCheck1">ID 저장</label>
                             </div>
-                            <a href="">비밀번호 찾기</a>
                         </div>
                         <input type="button" class="btn btn-primary py-3 w-100 mb-4" value="로그인" id="btnLogin"/>
                         </form>
