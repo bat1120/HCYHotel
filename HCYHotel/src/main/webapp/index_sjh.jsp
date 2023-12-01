@@ -25,6 +25,7 @@ $(function(){
 <body>
 <ul>
 <li><a href="user/user_home.do">사용자 홈</a></li>
+<li><a href="user/user_findId.do">사용자 아이디 찾기</a></li>
 </ul>
 </body>
 </html>
