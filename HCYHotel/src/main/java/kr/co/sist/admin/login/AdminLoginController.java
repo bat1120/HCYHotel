@@ -35,7 +35,10 @@ public class AdminLoginController {
 	@PostMapping("/admin/login.do")
 	public String login(LoginVO lVO, HttpSession session,Model model) {
 		if(AdminLoginService.getInstance().checkLogin(lVO)) {
-			return "dashboard.do";
+			
+			
+			
+			return "admin/dashboard/dashboard";
 		}//if
 		model.addAttribute("msg","로그인 정보가 일치하지 않습니다.");
 		model.addAttribute("url","gologin.do");

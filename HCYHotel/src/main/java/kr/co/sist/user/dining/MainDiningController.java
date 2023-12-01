@@ -10,8 +10,7 @@ public class MainDiningController {
 	public String diningMain() {
 		
 		return "user/dining/dining_main";
-		//왜 지운애들은 뜨고 안지운 애들은 하나씩 사라지는걸까...
-		//으아아악
+		//왜 지운애들은 뜨고 안지운 애들은 하나씩 사라지는걸까... >>는 지하가 알랴줌 Google광고 그거 지워야댐
 	}//diningMain
 	
 }//class
