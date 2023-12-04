@@ -3,8 +3,7 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="kr.co.sist.admin.loginMapper">
-
-
+<!-- 로그인 체크 -->
   <select id="selectChechLogin" resultType="String" parameterType="kr.co.sist.admin.login.LoginVO">
 <![CDATA[
     select id 
@@ -24,9 +23,35 @@
   	<result property="newReview" column=""/>
   </resultMap> -->
   
+  <!-- 대시보드 내용 불러오기 -->
   <select id="selectDashboard" resultType="dd">
   <![CDATA[
-  
+  select *
+from
+(SELECT sum(NONMEMBER+MEMBER+BUISNESS) weeklyvisitor, sum(MEMBER) weeklyBusVisitor, sum(BUISNESS) weeklyMemVisitor
+FROM  ACCESSOR
+WHERE  ACCDATE between to_date(sysdate,'yy-mm-dd')-7 and to_date(sysdate,'yy-mm-dd'))
+,(SELECT sum(NONMEMBER+MEMBER+BUISNESS) dailyVisitor
+FROM  ACCESSOR
+WHERE  ACCDATE > sysdate-1 ),
+(select count(HOTELCODE) newHotel
+FROM HOTEL
+WHERE INPUTDATE between to_date(sysdate,'yy-mm-dd')-7 and to_date(sysdate,'yy-mm-dd')),
+(select count(DININGCODE) newDining
+FROM DINING
+WHERE INPUTDATE between to_date(sysdate,'yy-mm-dd')-7 and to_date(sysdate,'yy-mm-dd')),
+(select count(REVIEWCODE) newreview
+FROM
+(select REVIEWCODE
+FROM DININGREVIEW
+WHERE INPUTDATE between to_date(sysdate,'yy-mm-dd')-7 and to_date(sysdate,'yy-mm-dd')
+union all
+select REVIEWCODE
+FROM ROOMREVIEW
+WHERE INPUTDATE between to_date(sysdate,'yy-mm-dd')-7 and to_date(sysdate,'yy-mm-dd'))
+)
   ]]>
   </select>
+  
+  
 </mapper>

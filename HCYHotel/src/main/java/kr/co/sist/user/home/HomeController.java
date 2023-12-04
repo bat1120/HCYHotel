@@ -20,9 +20,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class HomeController {
 	
-	@GetMapping("/user/user_home.do")
+	@GetMapping("/user/home/user_home.do")
 	public String home() {
-		return "user/user_home"; 
+		return "user/home/user_home"; 
 	}//home
 	
 	

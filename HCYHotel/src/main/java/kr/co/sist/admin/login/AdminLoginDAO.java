@@ -24,8 +24,5 @@ public class AdminLoginDAO {
 		return result ;
 	}//selectCheckLogin
 	
-	public DashboardDomain selectDashboardDomain() {
-			
-	}//selectDashboardDomain
 	
 }//class

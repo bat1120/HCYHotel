@@ -71,7 +71,7 @@
                             <h3>로그인	</h3>
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="email" class="form-control" name="id" id="floatingInput" placeholder="name@example.com" value="${loginFlag eq 'Y' ? id : ''}">
+                            <input type="email" class="form-control" name="id" id="floatingInput" placeholder="name@example.com" value="${idRememberFlag eq 'Y' ? id : ''}">
                             <label for="floatingInput">id</label>
                         </div>
                         <div class="form-floating mb-4">
@@ -80,7 +80,7 @@
                         </div>
                         <div class="d-flex align-items-center justify-content-between mb-4">
                             <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="rememberId" name="chk" value="Y">
+                                <input type="checkbox" class="form-check-input" id="rememberId" name="check" value="Y" ${ idRememberFlag eq 'Y' ? 'checked="checked"' : ''}>
                                 <label class="form-check-label" for="exampleCheck1">ID 저장</label>
                             </div>
                         </div>

@@ -109,9 +109,9 @@
 .login_banner_wrap img {width:100%;height:100px}
 
 
-/* ë¡œê·¸ì¸ ë ˆì´ì–´ */
+/* 로그인 레이어 */
 .pop_login_layer *:focus-visible {outline:2px solid #3157dd;outline-offset:2px;border-radius:4px}
-.pop_login_layer {position:fixed;top:50%;left:50%;z-index:9999;margin-left:-204px;box-sizing:border-box;font-family:"ë§‘ì€ ê³ ë”•",dotum,sans-serif;font-size:12px;text-align:left;}
+.pop_login_layer {position:fixed;top:50%;left:50%;z-index:9999;margin-left:-204px;box-sizing:border-box;font-family:"맑은 고딕",dotum,sans-serif;font-size:12px;text-align:left;}
 .pop_login_layer .outer {position:relative;padding:52px 44px;width:408px;border:1px solid #666;border-radius:16px;box-sizing:border-box;background:#fff}
 .pop_login_layer .title {margin-bottom:32px;font-size:24px;font-weight:bold;line-height: 34px;letter-spacing:-1.5px}
 .pop_login_layer .title .txt_point {color:#2d65f2}
@@ -194,8 +194,8 @@
     }
 }
 
-    /* ê°œì¸ patterns ë¥¼ ë³µë¶™í•˜ì—¬ í´ëž˜ìŠ¤ëª… ë°”ê¿ˆ inpChkSw=>inpChkSwP */
-/* ë³´ì•ˆ Swich */
+    /* 개인 patterns 를 복붙하여 클래스명 바꿈 inpChkSw=>inpChkSwP */
+/* 보안 Swich */
 .inpChkSwP {display:inline-block;position:relative}
 .inpChkSwP input {clip:rect(1px, 1px, 1px, 1px);position:absolute;width:1px;height:1px}
 .inpChkSwP .lbl {position:relative;padding-right:48px;color:#5c667b;font-size:14px}
