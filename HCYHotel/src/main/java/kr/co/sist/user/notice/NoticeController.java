@@ -8,6 +8,11 @@ public class NoticeController {
 
 	@GetMapping("user/notice/user_notice.do")
 	public String userNotice() {
-		return "user/user_notice";
+		return "user/notice/user_notice";
 	}//userNotice
+	
+	@GetMapping("user/notice/user_notice_detail.do")
+	public String userNoticeDetail() {
+		return "user/notice/user_notice_detail";
+	}//userNoticeDetail
 }//class

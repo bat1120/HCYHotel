@@ -60,7 +60,7 @@
 	<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 	<script src="/static/common/js/amb.sns.js"></script>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
-<jsp:include page="../header.jsp"/>
+<jsp:include page="../include/header.jsp"/>
 	<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-112026198-1"></script>
 	<script>
 	  window.dataLayer = window.dataLayer || [];
@@ -1456,5 +1456,5 @@ function getCurrentUrl(u) {
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.12/jquery.bxslider.min.js"></script><script type="text/javascript" src="//collect.groobee.io/auth/f33bebc275c74318b247857fe7d31ef8?deviceType=pcWeb&amp;domain=www.ambatel.com/novotel/gangnam/ko/diningView.do&amp;callback=grb_callback&amp;cookieId=null&amp;ipPermission=success"></script><script type="text/javascript" src="//static.groobee.io/dist/core/1.48/grb_core.min.js?dist_ver=14800"></script><script type="text/javascript" src="//static.groobee.io/dist/front/1.48/grb_front_msgbx.min.js"></script></body>
 
 
-<jsp:include page="../footer.jsp"/>
+<jsp:include page="../include/footer.jsp"/>
 </html>
