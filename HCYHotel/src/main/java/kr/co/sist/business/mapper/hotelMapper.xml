@@ -5,9 +5,15 @@
 <mapper namespace="kr.co.sist.business.hotelMapper">
 
 <select id="searchHotel" resultType="String" parameterType="String">
-select hotelcode
+select hotelname
 from   hotel
 where  id=#{id}
 </select>
-  
+ <select id="searchReservation" resultType="bhd" parameterType="String">
+    select roomcode, id, bookingname, status, pplCnt, checkin, checkout
+    from roombooking
+    where checkin &lt;= #{selectdate}
+    and checkout &gt;= #{selectdate}
+</select>
+
 </mapper>

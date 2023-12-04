@@ -6,6 +6,7 @@
 <properties resource="properties/database.properties"/>
 <typeAliases>
  <typeAlias type="kr.co.sist.business.manage.BusinessHotelDomain" alias="bhd"/>
+ <typeAlias type="kr.co.sist.business.manage.BusinessHotelVO" alias="bhVO"/>
 </typeAliases>
   <environments default="development">
     <environment id="development">

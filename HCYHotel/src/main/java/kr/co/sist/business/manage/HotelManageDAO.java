@@ -26,19 +26,26 @@ public class HotelManageDAO {
 		
 		MyBatiseHandler mbh=MyBatiseHandler.getInstance();
 		SqlSession ss=mbh.getMyBatisHandler(false);
-		list=ss.selectList(id);
+		list=ss.selectList("kr.co.sist.business.hotelMapper.searchHotel",id);
 		mbh.closeHandler(ss);
 		
-		if(list==null) {
-			list.add("아이디 읎다");
-		}//if
 		return list;
 	}//selectHotelList
-	public static void main(String[] arg) {
-		List<String> list=new ArrayList<String>();
-		list=HotelManageDAO.getInstance().selectHotelList("bat1120");
-		
-		System.out.println(list);
-	}
+	
+//	public List<BusinessHotelDomain> searchBookingHotel(BusinessHotelVO bhVO){
+		public List<BusinessHotelDomain> selectBookingHotel(String date){
+		List<BusinessHotelDomain> list=new ArrayList<BusinessHotelDomain>();
+		MyBatiseHandler mbh=MyBatiseHandler.getInstance();
+		SqlSession ss=mbh.getMyBatisHandler(false);
+		list=ss.selectList("kr.co.sist.business.hotelMapper.searchReservation",date);
+		mbh.closeHandler(ss);
+		return list;
+	}//searchBookingHotel
+//	public static void main(String[] arg) {
+//		List<BusinessHotelDomain> list=new ArrayList<BusinessHotelDomain>();
+//		list=HotelManageDAO.getInstance().selectBookingHotel("member1");
+//		
+//		System.out.println(list);
+//	}
 	
 }

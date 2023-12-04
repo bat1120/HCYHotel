@@ -21,7 +21,14 @@ public class HotelManageService {
 	public List<String> searchHotelList(String id){
 		List<String> list=new ArrayList<String>();
 		
+		list=HotelManageDAO.getInstance().selectHotelList(id);
+		
 		return list;
 	}//searchHotelList
+	public List<BusinessHotelDomain> searchBookingList(String date){
+		List<BusinessHotelDomain> list=new ArrayList<BusinessHotelDomain>();
+		list=HotelManageDAO.getInstance().selectBookingHotel(date);
+		return list;
+	}//searchBookingList
 	
 }//class

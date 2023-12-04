@@ -8,13 +8,12 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-@Getter
 @Setter
+@Getter
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
-public class BusinessHotelDomain {
-	private String roomcode,id,bookingname,status;
-	private int pplCnt;
-	private Date checkin,checkout;
+public class BusinessHotelVO {
+private String hotelCode,hotelName;
+private Date inputDate;
 }
