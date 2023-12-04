@@ -1,8 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ include file="/common/admin/jsp/common_url.jsp" %>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
 <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
+    
+    <!-- jQuery CDN 시작 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<!-- jQuery CDN 끝 -->
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

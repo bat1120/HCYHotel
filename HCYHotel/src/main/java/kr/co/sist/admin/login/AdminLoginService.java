@@ -20,6 +20,12 @@ public class AdminLoginService {
 		respons.addCookie(flagCk);
 	}//checkCookie
 	
+	public void removeCookie(HttpServletResponse respons, String name,String value) {
+		Cookie flagCk = new Cookie(name,value);
+		flagCk.setMaxAge(0);
+		respons.addCookie(flagCk);
+	}//checkCookie
+	
 	public boolean checkLogin(LoginVO lVO) {
 	boolean flag = false;
 	
@@ -31,12 +37,5 @@ public class AdminLoginService {
 	return flag;
 	}//checkLogin
 	
-	public DashboardDomain loadDashboard() {
-		DashboardDomain dd = new DashboardDomain();
-		
-		
-		
-		return dd;
-	}//loadDashboard
 	
 }//class

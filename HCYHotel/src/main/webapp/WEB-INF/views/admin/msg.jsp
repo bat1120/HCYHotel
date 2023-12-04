@@ -14,6 +14,11 @@
 </style>
 <script type="text/javascript">
     $(function(){
+    	if(${empty msg}){
+    		alert("잘못된 접근입니다.")
+			location.href="gologin.do"
+			return;
+    	}//if
 alert("${msg}")
 location.href="${url}"
         })

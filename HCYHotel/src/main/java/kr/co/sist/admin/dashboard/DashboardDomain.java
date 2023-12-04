@@ -1,4 +1,4 @@
-package kr.co.sist.admin.login;
+package kr.co.sist.admin.dashboard;
 
 import lombok.Getter;
 import lombok.Setter;
