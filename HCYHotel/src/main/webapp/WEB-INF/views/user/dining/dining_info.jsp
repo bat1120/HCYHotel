@@ -3,7 +3,6 @@
 <%@ page info="다이닝 상세" %>
 
 <html lang="ko">
-<jsp:include page="../header.jsp"/>
 <head>
 	<meta charset="utf-8">
 	<title>노보텔 앰배서더 서울 강남</title>
@@ -61,6 +60,7 @@
 	<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 	<script src="/static/common/js/amb.sns.js"></script>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
+<jsp:include page="../header.jsp"/>
 	<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-112026198-1"></script>
 	<script>
 	  window.dataLayer = window.dataLayer || [];
