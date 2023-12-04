@@ -4,49 +4,61 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html lang="ko">
 <head>
-<title>사람인</title>
+<title>아이디/비밀번호 찾기 - 사람인</title>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="Content-Language" content="ko-KR">
 <meta name="naver-site-verification"
 	content="86455485e27cab6986d130e4c3b90c5b516820d1">
+<meta name="title" content="아이디/비밀번호 찾기 - 사람인">
+<meta name="writer" content="사람인">
+<meta name="keywords"
+	content="고객센터, 사람인, saramin, 사람인 고객센터, 공지사항, 도움말, 이벤트, FAQ, 문의내역">
+<meta name="description"
+	content="아이디/비밀번호 찾기 페이지 입니다. 사람인에서 더 많은 정보를 확인해보세요.">
 <meta name="naver" content="nosublinks">
-<meta property="og:title" content="사람인">
-<meta property="og:image"
-	content="//www.saraminimage.co.kr/logo/saraminsnslogo.png">
+<meta property="og:title" content="아이디/비밀번호 찾기 - 사람인">
 <meta property="og:site_name" content="사람인">
+<meta property="og:url"
+	content="https://www.saramin.co.kr/zf_user/helpdesk/idpw-find">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ko_KR">
-<meta property="fb:app_id" content="1593727887570039">
+<meta property="og:image"
+	content="http://www.saraminimage.co.kr/logo/saraminsnslogo.png">
 <meta property="og:image:width" content="200">
 <meta property="og:image:height" content="200">
-<link href="http://localhost/HCYHotel/common/user/css/sticky_assist.css" media="all"
+<meta property="og:description"
+	content="아이디/비밀번호 찾기 페이지 입니다. 사람인에서 더 많은 정보를 확인해보세요.">
+<meta property="fb:app_id" content="1593727887570039">
+<link href="http://localhost/HCYHotel/common/user/css/sticky_assist.css?v=20231130163301" media="all"
 	rel="stylesheet" type="text/css">
-<link href="http://localhost/HCYHotel/common/user/css/layout.css" media="all"
+<link href="http://localhost/HCYHotel/common/user/css/layout.css?v=20231130163301" media="all"
 	rel="stylesheet" type="text/css">
-<link href="http://localhost/HCYHotel/common/user/css/pattern.css" media="all"
+<link href="http://localhost/HCYHotel/common/user/css/pattern.css?v=20231130163301" media="all"
 	rel="stylesheet" type="text/css">
-<link href="http://localhost/HCYHotel/common/user/css/header_default.css" media="all"
+<link href="http://localhost/HCYHotel/common/user/css/header_default.css?v=20231130163301" media="all"
 	rel="stylesheet" type="text/css">
-<link href="http://localhost/HCYHotel/common/user/css/gnb_default_override.css"
+<link href="http://localhost/HCYHotel/common/user/css/gnb_default_override.css?v=20231130163301"
 	media="all" rel="stylesheet" type="text/css">
-<link href="http://localhost/HCYHotel/common/user/css/common_ui_keeping.css" media="all"
+<link href="http://localhost/HCYHotel/common/user/css/common_ui_keeping.css?v=20231130163301" media="all"
 	rel="stylesheet" type="text/css">
-<link href="http://localhost/HCYHotel/common/user/css/components.css" media="all"
+<link href="http://localhost/HCYHotel/common/user/css/components.css?v=20231130163301" media="all"
 	rel="stylesheet" type="text/css">
-<link href="http://localhost/HCYHotel/common/user/css/help.css" media="all"
+<link href="http://localhost/HCYHotel/common/user/css/help.css?v=20231130163301" media="all"
 	rel="stylesheet" type="text/css">
+<link href="https://www.saramin.co.kr/zf_user/helpdesk/idpw-find"
+	rel="canonical">
 <link href="/favicon.ico?ver=3" rel="favicon">
 <link href="/favicon.ico?ver=3" rel="icon" type="image/x-icon">
 <link href="/favicon.ico?ver=3" rel="shortcut icon" type="image/x-icon">
 <script type="text/javascript" async=""
 	src="https://www.googletagmanager.com/gtag/js?id=G-GR2XRGQ0FK&amp;l=dataLayer&amp;cx=c"></script>
+<script async=""
+	src="https://www.googletagmanager.com/gtm.js?id=GTM-MK2GBBH"></script>
 <script type="text/javascript" async=""
 	src="https://www.google-analytics.com/gtm/js?id=GTM-KN35GK2&amp;cid=1713712516.1694412036"></script>
 <script type="text/javascript" async=""
 	src="https://www.google-analytics.com/plugins/ua/linkid.js"></script>
-<script async=""
-	src="https://www.googletagmanager.com/gtm.js?id=GTM-MK2GBBH"></script>
 <script async="" src="https://www.google-analytics.com/analytics.js"></script>
 <script async="" src="//static.airbridge.io/sdk/latest/airbridge.min.js"></script>
 <script type="text/javascript"
@@ -84,7 +96,7 @@ document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
 	content="A6OdGH3fVf4eKRDbXb4thXA4InNqDJDRhZ8U533U/roYjp4Yau0T3YSuc63vmAs/8ga1cD0E3A7LEq6AXk1uXgsAAACTeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9">
 <script
 	src="https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202311280101/pubads_impl.js"
-	id="gpt-impl-0.5505293399592162" nonce=""></script>
+	id="gpt-impl-0.9984721501629041" nonce=""></script>
 
 <script type="text/javascript">
 googletag.cmd.push(function() {
@@ -186,7 +198,7 @@ googletag.cmd.push(function() {
 	<!--// skip navi -->
 	<!-- header -->
 	<jsp:include page="../include/header.jsp"/>
-<!-- 	<header id="sri_header" class="simple bubble">
+<!-- 	<header id="sri_header" class="simple bubble fixed">
 		<div class="wrap_header">
 			<a href="/" class="bi" aria-label="사람인"
 				data-nav-track="ga_lead|section-gnb|global_menu|ci"> <span
@@ -930,70 +942,20 @@ googletag.cmd.push(function() {
 		<div id="sri_wrap">
 			<div id="content">
 				<div class="wrap_title_recruit">
-					<h1 class="title_common">개인회원 비밀번호 찾기</h1>
+					<h1 class="title_common">회원가입 - 회원가입대상 확인</h1>
 				</div>
-				<div class="help_find" id="person_password">
-					<h2 class="blind">비밀번호 재설정</h2>
+				<!-- help_find -->
+				<div class="help_find help_find_type4">
+					<p class="desc_find">회원가입 대상확인</p>
 					<div class="cont_find">
-						<form
-							action="https://www.saramin.co.kr/zf_user/helpdesk/person-find-secure"
-							method="POST" id="reset_form">
-							<input type="hidden" name="id" id="id" value="sjh0930"> <input
-								type="hidden" name="cell" id="cell" value="01036940930">
-							<input type="hidden" name="email" id="email" value=""> <input
-								type="hidden" name="channel" id="channel" value="sms"> <input
-								type="hidden" name="seq" id="seq" value="seq1701674398">
-							<input type="hidden" name="name" id="name" value="송지하"> <input
-								type="hidden" name="redirect_url" id="redirect_url"
-								value="helpdesk/person-password-reset-update">
-							<fieldset>
-								<legend class="blind">비밀번호 재설정 입력 폼</legend>
-								<p class="desc_find">회원님의 비밀번호를 재설정해주세요.</p>
-								<ul class="list_find">
-									<li>
-										<div class="wrap_lab">
-											<label for="password1" class="lab_find">비밀번호</label>
-										</div>
-										<div class="wrap_input">
-											<span class="box_input"> <input type="password"
-												name="password1" id="password1" class="inp_find">
-											</span>
-											<p class="message_find" id="msg_password1"
-												style="display: none;">
-												사용불가 (안전성 강도 약함)<span class="txt_message">8~16자리 영문
-													대소문자, 숫자, 특수문자 중 3가지 이상 조합</span>
-											</p>
-											<p class="message_find ok" style="display: none;">사용가능한
-												비밀번호입니다. (안전성 강도 보통)</p>
-										</div>
-									</li>
-									<li>
-										<div class="wrap_lab">
-											<label for="password2" class="lab_find">비밀번호 확인</label>
-										</div>
-										<div class="wrap_input">
-											<span class="box_input"> <input type="password"
-												name="password2" id="password2" class="inp_find"
-												maxlength="16">
-											</span>
-											<p class="message_find" id="msg_password2"
-												style="display: none;">비밀번호가 일치하지 않습니다.</p>
-										</div>
-									</li>
-								</ul>
-								<div class="wrap_link">
-									<button type="button" class="btn_biggest_type01"
-										id="btn_password_reset">확인</button>
-								</div>
-							</fieldset>
-						</form>
+						<ul class="list_idpwd">
+							<li><strong class="tit_idpwd"><a href="#void">개인회원</a></strong></li>
+							<li><strong class="tit_idpwd"><a href="#void">사업자 회원</a></strong></li>
+						</ul>
 					</div>
 
 				</div>
-				<script language="javascript"
-					src="/js/member-find-idpw.js?v=20231130103248"></script>
-				<script language="javascript"
-					src="/js/libs/secure/PasswordStrength.js?v=20231130103248"></script>
+				<!-- //help_find -->
 			</div>
 		</div>
 		<div id="sri_banner">
@@ -1037,7 +999,7 @@ googletag.cmd.push(function() {
 					</div>
 					<div id="div-gpt-ad-1400664864294-6-inner" style="">
 						<div id="div-gpt-ad-1400664864294-6"
-							data-google-query-id="COTzpJqf9YIDFQRADwIdK-gCjw">
+							data-google-query-id="CKLemtap9YIDFRWC6QUdUSoEUA">
 							<div id="google_ads_iframe_/61280259/CS_120x600_0__container__"
 								style="border: 0pt none;">
 								<iframe id="google_ads_iframe_/61280259/CS_120x600_0"
@@ -1046,7 +1008,7 @@ googletag.cmd.push(function() {
 									scrolling="no" marginwidth="0" marginheight="0" frameborder="0"
 									role="region" aria-label="Advertisement" tabindex="0"
 									allow="attribution-reporting" data-load-complete="true"
-									data-google-container-id="2"
+									data-google-container-id="1"
 									style="border: 0px; vertical-align: bottom;"></iframe>
 							</div>
 						</div>
@@ -1054,6 +1016,7 @@ googletag.cmd.push(function() {
 				</div>
 			</div>
 		</div>
+		<!-- footer -->
 		<!-- <footer id="sri_footer" class="sri_footer">
 			<div class="wrap_footer">
 				<div class="links" role="navigation" aria-label="사람인 서비스 정책 및 이용문의">
@@ -1629,7 +1592,7 @@ var setApplyReload = function (flag) {
 			style="display: none; position: fixed; right: 34px; bottom: 0; z-index: 150; width: 448px; height: 740px; border: 0; border-radius: 20px; border-bottom-left-radius: 0; border-bottom-right-radius: 0; box-sizing: border-box; box-shadow: 0 2px 30px 0 rgba(0, 0, 0, 0.15);"></iframe>
 	</div>
 	<script src="/js/apply/QuickApply.js?v=20231130103248"></script>
-	<link href="/sri_css/login.css?v=20231130163301" rel="stylesheet"
+	<link href="http://localhost/HCYHotel/common/user/css/login.css?v=20231130163301" rel="stylesheet"
 		type="text/css">
 	<script type="text/javascript" src="/js/libs/secure/rsa.min.js"></script>
 	<script type="text/javascript"
@@ -1645,16 +1608,16 @@ var setApplyReload = function (flag) {
 				action="https://www.saramin.co.kr/zf_user/auth/login" method="post"
 				onsubmit="return loginCheckMainLayer(this);">
 				<input type="hidden" name="page_url" id="page_url"
-					value="L3pmX3VzZXIvaGVscGRlc2svcGVyc29uLXBhc3N3b3JkLXJlc2V0">
-				<input type="hidden" name="url" value=""> <input
-					type="hidden" name="allowType" value=""> <input
-					type="hidden" name="ut" value=""> <input type="hidden"
-					name="layerScrapIdx" value=""> <input type="hidden"
-					name="layerFavorIdx" value=""> <input type="hidden"
-					name="rec_apply_fl" value="n"> <input type="hidden"
-					name="encid" value="" id="encid"><input type="hidden"
-					name="encpw" value="" id="encpw"><input type="hidden"
-					name="seq" value="" id="seq">
+					value="L3pmX3VzZXIvaGVscGRlc2svaWRwdy1maW5k"> <input
+					type="hidden" name="url" value=""> <input type="hidden"
+					name="allowType" value=""> <input type="hidden" name="ut"
+					value=""> <input type="hidden" name="layerScrapIdx"
+					value=""> <input type="hidden" name="layerFavorIdx"
+					value=""> <input type="hidden" name="rec_apply_fl"
+					value="n"> <input type="hidden" name="encid" value=""
+					id="encid"><input type="hidden" name="encpw" value=""
+					id="encpw"><input type="hidden" name="seq" value=""
+					id="seq">
 				<fieldset class="inner">
 					<h4 id="login_title" class="title">
 						<span class="txt_point">로그인</span>이 필요한 서비스입니다.
@@ -1704,27 +1667,27 @@ var setApplyReload = function (flag) {
 					</div>
 					<ul class="social_login" id="wrap_social_login">
 						<li class="login_naver"><a
-							href="/zf_user/auth/sign-in-with?provider=naver.com&amp;display=popup&amp;url=%2Fzf_user%2Fhelpdesk%2Fperson-password-reset&amp;login_type=p"
+							href="/zf_user/auth/sign-in-with?provider=naver.com&amp;display=popup&amp;url=%2Fzf_user%2Fhelpdesk%2Fidpw-find&amp;login_type=p"
 							class="sl_naver ga_data_layer" data-provider="naver"><span
 								class="wrap_icon"><svg class="icon">
 										<use xlink:href="#icon_login_naver"></use></svg></span></a></li>
 						<li class="login_kakao"><a
-							href="/zf_user/auth/sign-in-with?provider=kakao.com&amp;display=popup&amp;url=%2Fzf_user%2Fhelpdesk%2Fperson-password-reset&amp;login_type=p"
+							href="/zf_user/auth/sign-in-with?provider=kakao.com&amp;display=popup&amp;url=%2Fzf_user%2Fhelpdesk%2Fidpw-find&amp;login_type=p"
 							class="sl_kakao ga_data_layer" data-provider="kakao"><span
 								class="wrap_icon"><svg class="icon">
 										<use xlink:href="#icon_login_kakao"></use></svg></span></a></li>
 						<li class="login_google"><a
-							href="/zf_user/auth/sign-in-with?provider=google.com&amp;display=popup&amp;url=%2Fzf_user%2Fhelpdesk%2Fperson-password-reset&amp;login_type=p"
+							href="/zf_user/auth/sign-in-with?provider=google.com&amp;display=popup&amp;url=%2Fzf_user%2Fhelpdesk%2Fidpw-find&amp;login_type=p"
 							class="sl_google ga_data_layer" data-provider="google"><span
 								class="wrap_icon"><svg class="icon">
 										<use xlink:href="#icon_login_google"></use></svg></span></a></li>
 						<li class="login_facebook"><a
-							href="/zf_user/auth/sign-in-with?provider=facebook.com&amp;display=popup&amp;url=%2Fzf_user%2Fhelpdesk%2Fperson-password-reset&amp;login_type=p"
+							href="/zf_user/auth/sign-in-with?provider=facebook.com&amp;display=popup&amp;url=%2Fzf_user%2Fhelpdesk%2Fidpw-find&amp;login_type=p"
 							class="sl_facebook ga_data_layer" data-provider="facebook"><span
 								class="wrap_icon"><svg class="icon">
 										<use xlink:href="#icon_login_facebook"></use></svg></span></a></li>
 						<li class="login_apple"><a
-							href="/zf_user/auth/sign-in-with?provider=apple.com&amp;display=popup&amp;url=%2Fzf_user%2Fhelpdesk%2Fperson-password-reset&amp;login_type=p"
+							href="/zf_user/auth/sign-in-with?provider=apple.com&amp;display=popup&amp;url=%2Fzf_user%2Fhelpdesk%2Fidpw-find&amp;login_type=p"
 							class="sl_apple ga_data_layer" data-provider="apple"><span
 								class="wrap_icon"><svg class="icon">
 										<use xlink:href="#icon_login_apple"></use></svg></span></a></li>
@@ -1784,7 +1747,7 @@ var setApplyReload = function (flag) {
             }
         })();
 
-        var page_url = 'L3pmX3VzZXIvaGVscGRlc2svcGVyc29uLXBhc3N3b3JkLXJlc2V0';
+        var page_url = 'L3pmX3VzZXIvaGVscGRlc2svaWRwdy1maW5k';
 
 
         function addEvent(ele, eventType, func) {
@@ -2232,8 +2195,8 @@ wcs_do(_nasa);
 
 	</div>
 	<div id="criteo-tags-div" style="display: none;"></div>
-	<iframe height="0" width="0" title="Criteo DIS iframe"
-		style="display: none;"></iframe>
+	<iframe name="google_ads_top_frame" id="google_ads_top_frame"
+		style="display: none; position: fixed; left: -999px; top: -999px; width: 0px; height: 0px;"></iframe>
 	<iframe src="https://www.google.com/recaptcha/api2/aframe" width="0"
 		height="0" style="display: none;"></iframe>
 </body>
