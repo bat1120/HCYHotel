@@ -473,7 +473,7 @@ googletag.cmd.push(function() {
 				</button>
 			</div> -->
 <!-- 			<div class="area_info01" id="area_info01">
-				<div class="inner_box">
+				<div class="inner_box"> 
 					<img
 						src="//www.saraminimage.co.kr/sri/common/img/img_member_info01.png"
 						alt="" class="img">
