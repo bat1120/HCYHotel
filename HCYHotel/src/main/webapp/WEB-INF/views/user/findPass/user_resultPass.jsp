@@ -20,9 +20,6 @@
 <meta property="fb:app_id" content="1593727887570039">
 <meta property="og:image:width" content="200">
 <meta property="og:image:height" content="200">
-
-<link href="http://localhost/HCYHotel/common/user/css/login.css" rel="stylesheet"
-		type="text/css">
 <link href="http://localhost/HCYHotel/common/user/css/sticky_assist.css" media="all"
 	rel="stylesheet" type="text/css">
 <link href="http://localhost/HCYHotel/common/user/css/layout.css" media="all"
@@ -64,7 +61,6 @@
 	src="/js/ui-component.js?v=20231130103248"></script>
 <script type="text/javascript"
 	src="/js/layout/default-layout.js?v=20231130103248"></script>
-<script src="/js/apply/QuickApply.js?v=20231130103248"></script>
 <script type="text/javascript">
 var googleSlotList = {};
 
@@ -87,8 +83,8 @@ document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
 <meta http-equiv="origin-trial"
 	content="A6OdGH3fVf4eKRDbXb4thXA4InNqDJDRhZ8U533U/roYjp4Yau0T3YSuc63vmAs/8ga1cD0E3A7LEq6AXk1uXgsAAACTeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9">
 <script
-	src="https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202311150101/pubads_impl.js"
-	id="gpt-impl-0.5810904376209061" nonce=""></script>
+	src="https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202311280101/pubads_impl.js"
+	id="gpt-impl-0.5505293399592162" nonce=""></script>
 
 <script type="text/javascript">
 googletag.cmd.push(function() {
@@ -188,8 +184,9 @@ googletag.cmd.push(function() {
 		<a href="#sri_section">본문 바로가기</a>
 	</div>
 	<!--// skip navi -->
-	
-	<!-- <header id="sri_header" class="simple bubble">
+	<!-- header -->
+	<jsp:include page="../include/header.jsp"/>
+<!-- 	<header id="sri_header" class="simple bubble">
 		<div class="wrap_header">
 			<a href="/" class="bi" aria-label="사람인"
 				data-nav-track="ga_lead|section-gnb|global_menu|ci"> <span
@@ -796,7 +793,6 @@ googletag.cmd.push(function() {
 
 		</div>
 	</header> -->
-	<jsp:include page="header.jsp"/>
 
 	<div id="srch_wrap" class="wrap_search">
 		<form id="AKCFrm" name="search" action="/zf_user/search">
@@ -934,122 +930,70 @@ googletag.cmd.push(function() {
 		<div id="sri_wrap">
 			<div id="content">
 				<div class="wrap_title_recruit">
-					<h1 class="title_common">개인회원 아이디 찾기</h1>
+					<h1 class="title_common">개인회원 비밀번호 찾기</h1>
 				</div>
-				<div class="help_find" id="person_find">
-
+				<div class="help_find" id="person_password">
+					<h2 class="blind">비밀번호 재설정</h2>
 					<div class="cont_find">
 						<form
 							action="https://www.saramin.co.kr/zf_user/helpdesk/person-find-secure"
-							method="post" id="find_form">
-							<input type="hidden" id="confirm_complete"
-								name="confirm_complete" value="n"> <input type="hidden"
-								id="confirm_send" name="confirm_send" value="n"> <input
-								type="hidden" id="channel" name="channel" value="sms"> <input
-								type="hidden" id="type" name="type" value="id"> <input
-								type="hidden" id="redirect_url" name="redirect_url"
-								value="helpdesk/person-find-id-list"> <input
-								type="hidden" id="seq" name="seq" value="seq1701416239">
+							method="POST" id="reset_form">
+							<input type="hidden" name="id" id="id" value="sjh0930"> <input
+								type="hidden" name="cell" id="cell" value="01036940930">
+							<input type="hidden" name="email" id="email" value=""> <input
+								type="hidden" name="channel" id="channel" value="sms"> <input
+								type="hidden" name="seq" id="seq" value="seq1701674398">
+							<input type="hidden" name="name" id="name" value="송지하"> <input
+								type="hidden" name="redirect_url" id="redirect_url"
+								value="helpdesk/person-password-reset-update">
 							<fieldset>
-								<legend class="blind">개인회원 아이디 찾기 입력 폼</legend>
-								<p class="desc_find">회원정보에 등록된 정보로 아이디를 찾을 수 있습니다.</p>
+								<legend class="blind">비밀번호 재설정 입력 폼</legend>
+								<p class="desc_find">회원님의 비밀번호를 재설정해주세요.</p>
 								<ul class="list_find">
 									<li>
 										<div class="wrap_lab">
-											<label for="name" class="lab_find">이름</label>
+											<label for="password1" class="lab_find">비밀번호</label>
 										</div>
 										<div class="wrap_input">
-											<span class="box_input"> <input type="text"
-												name="name" id="name" class="inp_find">
+											<span class="box_input"> <input type="password"
+												name="password1" id="password1" class="inp_find">
 											</span>
-											<p class="message_find" id="msg_name" style="display: none;">이름에
-												특수문자, 숫자는 사용하실 수 없습니다.</p>
+											<p class="message_find" id="msg_password1"
+												style="display: none;">
+												사용불가 (안전성 강도 약함)<span class="txt_message">8~16자리 영문
+													대소문자, 숫자, 특수문자 중 3가지 이상 조합</span>
+											</p>
+											<p class="message_find ok" style="display: none;">사용가능한
+												비밀번호입니다. (안전성 강도 보통)</p>
 										</div>
 									</li>
-
-									<li id="li_cell">
-										<div class="wrap_lab">
-											<label for="cell" class="lab_find">휴대폰 번호</label>
-										</div>
-										<div class="wrap_input">
-											<span class="box_input"> <input type="text"
-												name="cell" id="cell" class="inp_find"
-												placeholder="‘-’없이 입력">
-											</span>
-											<p class="message_find" id="msg_cell" style="display: none;">휴대폰번호를
-												정확하게 입력해주세요.</p>
-											<p class="message_find send" id="msg_cell1"
-												style="display: none;">카카오톡으로 인증번호가 발송되었습니다 (실패 시 SMS
-												전송)</p>
-
-										</div>
-									</li>
-
-									<li id="li_mail" style="display: none;">
-										<div class="wrap_lab">
-											<label for="email" class="lab_find">이메일 주소</label>
-										</div>
-										<div class="wrap_input">
-											<span class="box_input"> <input type="text"
-												name="email" id="email" class="inp_find">
-											</span>
-											<div class="suggest_email email_list">
-												<ul class="list_email">
-													<li class="auto_list"><a href="javascript:;"
-														onclick="return false;" class="link_email"><strong
-															class="txt_email"></strong>@naver.com</a></li>
-													<li class="auto_list"><a href="javascript:;"
-														onclick="return false;" class="link_email"><strong
-															class="txt_email"></strong>@gmail.com</a></li>
-													<li class="auto_list"><a href="javascript:;"
-														onclick="return false;" class="link_email"><strong
-															class="txt_email"></strong>@daum.net</a></li>
-													<li class="auto_list"><a href="javascript:;"
-														onclick="return false;" class="link_email"><strong
-															class="txt_email"></strong>@nate.com</a></li>
-													<li class="auto_list"><a href="javascript:;"
-														onclick="return false;" class="link_email"><strong
-															class="txt_email"></strong>@outlook.com</a></li>
-												</ul>
-											</div>
-											<p class="message_find" id="msg_mail" style="display: none;">휴대폰번호를
-												정확하게 입력해주세요.</p>
-											<button type="button" id="btn_cert_mail"
-												class="btn_basic2 type03 btn_cert">인증번호 발송</button>
-										</div>
-									</li>
-
 									<li>
 										<div class="wrap_lab">
-											<label for="findCite" class="lab_find">생년월일</label>
+											<label for="password2" class="lab_find">비밀번호 확인</label>
 										</div>
 										<div class="wrap_input">
-											<span class="box_input"> <input type="text"
-												name="findCite" id="findCite" class="inp_find"> <span
-												class="message_find time_find" style="display: none;">남은
-													시간 (3:00)</span>
+											<span class="box_input"> <input type="password"
+												name="password2" id="password2" class="inp_find"
+												maxlength="16">
 											</span>
-											<p class="message_find" id="msg_cert_num"
-												style="display: none;">입력시간이 만료되었습니다. 인증번호를 다시 발송해주세요.</p>
-											<p class="message_find ok" style="display: none;">인증 성공.
-												잠시만 기다려주세요.</p>
+											<p class="message_find" id="msg_password2"
+												style="display: none;">비밀번호가 일치하지 않습니다.</p>
 										</div>
 									</li>
 								</ul>
 								<div class="wrap_link">
 									<button type="button" class="btn_biggest_type01"
-										id="btn_cert_complete">아이디 찾기</button>
-									<!--                        <button type="button" class="btn_biggest_type01" id="btn_next" style="display: none">다음</button>-->
+										id="btn_password_reset">확인</button>
 								</div>
 							</fieldset>
 						</form>
 					</div>
 
 				</div>
-
-				<!--    <script type="text/javascript" src="//www.saraminimage.co.kr/js/libs/jquery-1.8.3.min.js"></script>-->
 				<script language="javascript"
 					src="/js/member-find-idpw.js?v=20231130103248"></script>
+				<script language="javascript"
+					src="/js/libs/secure/PasswordStrength.js?v=20231130103248"></script>
 			</div>
 		</div>
 		<div id="sri_banner">
@@ -1093,7 +1037,7 @@ googletag.cmd.push(function() {
 					</div>
 					<div id="div-gpt-ad-1400664864294-6-inner" style="">
 						<div id="div-gpt-ad-1400664864294-6"
-							data-google-query-id="CNed-LTd7YIDFQdlDwIdu9kBOQ">
+							data-google-query-id="COTzpJqf9YIDFQRADwIdK-gCjw">
 							<div id="google_ads_iframe_/61280259/CS_120x600_0__container__"
 								style="border: 0pt none;">
 								<iframe id="google_ads_iframe_/61280259/CS_120x600_0"
@@ -1110,8 +1054,7 @@ googletag.cmd.push(function() {
 				</div>
 			</div>
 		</div>
-		<jsp:include page="footer.jsp"/>
-<!-- 		<footer id="sri_footer" class="sri_footer">
+		<!-- <footer id="sri_footer" class="sri_footer">
 			<div class="wrap_footer">
 				<div class="links" role="navigation" aria-label="사람인 서비스 정책 및 이용문의">
 					<ul>
@@ -1184,6 +1127,7 @@ googletag.cmd.push(function() {
 				</div>
 			</div>
 		</footer> -->
+		<jsp:include page="../include/footer.jsp"/>
 	</div>
 	<div id="dimmed" class="sri_dimmed" style="display: none"></div>
 	<div class="img_svg_layout">
@@ -1684,7 +1628,9 @@ var setApplyReload = function (flag) {
 			name="quick_apply_layer_frame"
 			style="display: none; position: fixed; right: 34px; bottom: 0; z-index: 150; width: 448px; height: 740px; border: 0; border-radius: 20px; border-bottom-left-radius: 0; border-bottom-right-radius: 0; box-sizing: border-box; box-shadow: 0 2px 30px 0 rgba(0, 0, 0, 0.15);"></iframe>
 	</div>
-	
+	<script src="/js/apply/QuickApply.js?v=20231130103248"></script>
+	<link href="/sri_css/login.css?v=20231130163301" rel="stylesheet"
+		type="text/css">
 	<script type="text/javascript" src="/js/libs/secure/rsa.min.js"></script>
 	<script type="text/javascript"
 		src="/js/libs/secure/secure-login.js?v=131018"></script>
@@ -1699,16 +1645,16 @@ var setApplyReload = function (flag) {
 				action="https://www.saramin.co.kr/zf_user/auth/login" method="post"
 				onsubmit="return loginCheckMainLayer(this);">
 				<input type="hidden" name="page_url" id="page_url"
-					value="L3pmX3VzZXIvaGVscGRlc2svcGVyc29uLWZpbmQtaWQ="> <input
-					type="hidden" name="url" value=""> <input type="hidden"
-					name="allowType" value=""> <input type="hidden" name="ut"
-					value=""> <input type="hidden" name="layerScrapIdx"
-					value=""> <input type="hidden" name="layerFavorIdx"
-					value=""> <input type="hidden" name="rec_apply_fl"
-					value="n"> <input type="hidden" name="encid" value=""
-					id="encid"><input type="hidden" name="encpw" value=""
-					id="encpw"><input type="hidden" name="seq" value=""
-					id="seq">
+					value="L3pmX3VzZXIvaGVscGRlc2svcGVyc29uLXBhc3N3b3JkLXJlc2V0">
+				<input type="hidden" name="url" value=""> <input
+					type="hidden" name="allowType" value=""> <input
+					type="hidden" name="ut" value=""> <input type="hidden"
+					name="layerScrapIdx" value=""> <input type="hidden"
+					name="layerFavorIdx" value=""> <input type="hidden"
+					name="rec_apply_fl" value="n"> <input type="hidden"
+					name="encid" value="" id="encid"><input type="hidden"
+					name="encpw" value="" id="encpw"><input type="hidden"
+					name="seq" value="" id="seq">
 				<fieldset class="inner">
 					<h4 id="login_title" class="title">
 						<span class="txt_point">로그인</span>이 필요한 서비스입니다.
@@ -1758,27 +1704,27 @@ var setApplyReload = function (flag) {
 					</div>
 					<ul class="social_login" id="wrap_social_login">
 						<li class="login_naver"><a
-							href="/zf_user/auth/sign-in-with?provider=naver.com&amp;display=popup&amp;url=%2Fzf_user%2Fhelpdesk%2Fperson-find-id&amp;login_type=p"
+							href="/zf_user/auth/sign-in-with?provider=naver.com&amp;display=popup&amp;url=%2Fzf_user%2Fhelpdesk%2Fperson-password-reset&amp;login_type=p"
 							class="sl_naver ga_data_layer" data-provider="naver"><span
 								class="wrap_icon"><svg class="icon">
 										<use xlink:href="#icon_login_naver"></use></svg></span></a></li>
 						<li class="login_kakao"><a
-							href="/zf_user/auth/sign-in-with?provider=kakao.com&amp;display=popup&amp;url=%2Fzf_user%2Fhelpdesk%2Fperson-find-id&amp;login_type=p"
+							href="/zf_user/auth/sign-in-with?provider=kakao.com&amp;display=popup&amp;url=%2Fzf_user%2Fhelpdesk%2Fperson-password-reset&amp;login_type=p"
 							class="sl_kakao ga_data_layer" data-provider="kakao"><span
 								class="wrap_icon"><svg class="icon">
 										<use xlink:href="#icon_login_kakao"></use></svg></span></a></li>
 						<li class="login_google"><a
-							href="/zf_user/auth/sign-in-with?provider=google.com&amp;display=popup&amp;url=%2Fzf_user%2Fhelpdesk%2Fperson-find-id&amp;login_type=p"
+							href="/zf_user/auth/sign-in-with?provider=google.com&amp;display=popup&amp;url=%2Fzf_user%2Fhelpdesk%2Fperson-password-reset&amp;login_type=p"
 							class="sl_google ga_data_layer" data-provider="google"><span
 								class="wrap_icon"><svg class="icon">
 										<use xlink:href="#icon_login_google"></use></svg></span></a></li>
 						<li class="login_facebook"><a
-							href="/zf_user/auth/sign-in-with?provider=facebook.com&amp;display=popup&amp;url=%2Fzf_user%2Fhelpdesk%2Fperson-find-id&amp;login_type=p"
+							href="/zf_user/auth/sign-in-with?provider=facebook.com&amp;display=popup&amp;url=%2Fzf_user%2Fhelpdesk%2Fperson-password-reset&amp;login_type=p"
 							class="sl_facebook ga_data_layer" data-provider="facebook"><span
 								class="wrap_icon"><svg class="icon">
 										<use xlink:href="#icon_login_facebook"></use></svg></span></a></li>
 						<li class="login_apple"><a
-							href="/zf_user/auth/sign-in-with?provider=apple.com&amp;display=popup&amp;url=%2Fzf_user%2Fhelpdesk%2Fperson-find-id&amp;login_type=p"
+							href="/zf_user/auth/sign-in-with?provider=apple.com&amp;display=popup&amp;url=%2Fzf_user%2Fhelpdesk%2Fperson-password-reset&amp;login_type=p"
 							class="sl_apple ga_data_layer" data-provider="apple"><span
 								class="wrap_icon"><svg class="icon">
 										<use xlink:href="#icon_login_apple"></use></svg></span></a></li>
@@ -1838,7 +1784,7 @@ var setApplyReload = function (flag) {
             }
         })();
 
-        var page_url = 'L3pmX3VzZXIvaGVscGRlc2svcGVyc29uLWZpbmQtaWQ=';
+        var page_url = 'L3pmX3VzZXIvaGVscGRlc2svcGVyc29uLXBhc3N3b3JkLXJlc2V0';
 
 
         function addEvent(ele, eventType, func) {

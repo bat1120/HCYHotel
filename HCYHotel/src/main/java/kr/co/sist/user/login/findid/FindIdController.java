@@ -6,8 +6,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class FindIdController {
 
-	@GetMapping("/user/user_findId.do")
+	@GetMapping("/user/findId/user_findId.do")
 	public String login() {
-		return "user/user_findId";
+		return "user/findId/user_findId";
+	}
+	
+	@GetMapping("/user/findId/user_resultId.do")
+	public String loginResult() {
+		return "user/findId/user_resultId";
 	}
 }

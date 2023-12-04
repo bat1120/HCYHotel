@@ -2,20 +2,16 @@
 	pageEncoding="UTF-8"%>
 <%@ page info=""%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
 <html lang="ko">
 <head>
-<title>로그인 - 사람인</title>
-	<jsp:include page="header.jsp"/>
+<title>사람인</title>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="Content-Language" content="ko-KR">
 <meta name="naver-site-verification"
 	content="86455485e27cab6986d130e4c3b90c5b516820d1">
-<meta name="apple-itunes-app" content="app-id=739013038">
 <meta name="naver" content="nosublinks">
-<meta property="og:url" content="https://www.saramin.co.kr/zf_user/auth">
-<meta property="og:title" content="로그인 - 사람인">
+<meta property="og:title" content="사람인">
 <meta property="og:image"
 	content="//www.saraminimage.co.kr/logo/saraminsnslogo.png">
 <meta property="og:site_name" content="사람인">
@@ -23,11 +19,15 @@
 <meta property="og:locale" content="ko_KR">
 <meta property="fb:app_id" content="1593727887570039">
 <meta property="og:image:width" content="200">
-<meta property="og:image:height" content="200"> 
+<meta property="og:image:height" content="200">
+
+<link href="http://localhost/HCYHotel/common/user/css/login.css" rel="stylesheet"
+		type="text/css">
 <link href="http://localhost/HCYHotel/common/user/css/sticky_assist.css" media="all"
 	rel="stylesheet" type="text/css">
-<link href="https://www.saramin.co.kr/zf_user/auth" rel="canonical">
 <link href="http://localhost/HCYHotel/common/user/css/layout.css" media="all"
+	rel="stylesheet" type="text/css">
+<link href="http://localhost/HCYHotel/common/user/css/pattern.css" media="all"
 	rel="stylesheet" type="text/css">
 <link href="http://localhost/HCYHotel/common/user/css/header_default.css" media="all"
 	rel="stylesheet" type="text/css">
@@ -37,11 +37,7 @@
 	rel="stylesheet" type="text/css">
 <link href="http://localhost/HCYHotel/common/user/css/components.css" media="all"
 	rel="stylesheet" type="text/css">
-<link href="http://localhost/HCYHotel/common/user/css/etc.css" media="all"
-	rel="stylesheet" type="text/css">
-<link href="http://localhost/HCYHotel/common/user/css/pattern.css" media="screen"
-	rel="stylesheet" type="text/css">
-<link href="http://localhost/HCYHotel/common/user/css/login.css" media="screen"
+<link href="http://localhost/HCYHotel/common/user/css/help.css" media="all"
 	rel="stylesheet" type="text/css">
 <link href="/favicon.ico?ver=3" rel="favicon">
 <link href="/favicon.ico?ver=3" rel="icon" type="image/x-icon">
@@ -68,6 +64,7 @@
 	src="/js/ui-component.js?v=20231130103248"></script>
 <script type="text/javascript"
 	src="/js/layout/default-layout.js?v=20231130103248"></script>
+<script src="/js/apply/QuickApply.js?v=20231130103248"></script>
 <script type="text/javascript">
 var googleSlotList = {};
 
@@ -91,7 +88,7 @@ document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
 	content="A6OdGH3fVf4eKRDbXb4thXA4InNqDJDRhZ8U533U/roYjp4Yau0T3YSuc63vmAs/8ga1cD0E3A7LEq6AXk1uXgsAAACTeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9">
 <script
 	src="https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202311150101/pubads_impl.js"
-	id="gpt-impl-0.28752425656755487" nonce=""></script>
+	id="gpt-impl-0.5810904376209061" nonce=""></script>
 
 <script type="text/javascript">
 googletag.cmd.push(function() {
@@ -185,14 +182,621 @@ googletag.cmd.push(function() {
 <iframe name="goog_topics_frame"
 	src="https://securepubads.g.doubleclick.net/static/topics/topics_frame.html"
 	style="display: none;"></iframe>
-
 <body cz-shortcut-listen="true">
 	<!-- skip navi -->
 	<div id="skipnavigation">
 		<a href="#sri_section">본문 바로가기</a>
 	</div>
 	<!--// skip navi -->
+	
+	<!-- <header id="sri_header" class="simple bubble">
+		<div class="wrap_header">
+			<a href="/" class="bi" aria-label="사람인"
+				data-nav-track="ga_lead|section-gnb|global_menu|ci"> <span
+				class="frame"> <svg aria-hidden="true" focusable="false">
+						<use xlink:href="#svg_saramin_ci"></use></svg>
+			</span>
+			</a>
 
+			<div class="search">
+				<button class="btn_search" type="button"
+					data-nav-track="ga_lead|section-gnb|global_menu|search">
+					<svg class="icon" aria-hidden="true" focusable="false">
+						<use xlink:href="#svg_gnb_search"></use></svg>
+					<span class="keyword static"> 땡큐 베리 매치, 사람인! </span> <span
+						class="keyword fixed"> 땡큐 베리 매치, 사람인! </span>
+				</button>
+			</div>
+
+			<div class="utility">
+				<div class="sign">
+					<a href="/zf_user/auth"
+						data-nav-track="ga_lead|section-gnb|layer_sign|signin"
+						class="btn_sign signin">로그인</a>
+					<hr>
+					<a href="/zf_user/member/registration/join"
+						data-nav-track="ga_lead|section-gnb|layer_sign|join"
+						class="btn_sign signup">회원가입</a>
+				</div>
+
+				<a class="btn_profile add"
+					href="/zf_user/resume/resume-manage?t_ref=main"
+					data-nav-track="ga_lead|section-gnb|profile|registration"> <svg
+						aria-hidden="true" focusable="false">
+						<use xlink:href="#svg_gnb_plus"></use></svg> 프로필 등록
+				</a>
+
+				<div class="wrap_service">
+					<button class="btn_service" type="button" aria-expanded="false">
+						기업서비스
+						<svg aria-hidden="true" focusable="false">
+							<use xlink:href="#svg_gnb_profile_bracket"></use></svg>
+					</button>
+					<div class="layer_member">
+						<ul class="services">
+							<li class="half_col"><a href="/zf_user/auth?ut=c"
+								data-nav-track="ga_lead|section-gnb|layer_comp_service|signin_comp">로그인</a>
+								<a href="/zf_user/member/registration/join?ut=c"
+								data-nav-track="ga_lead|section-gnb|layer_comp_service|company_join">회원가입</a>
+							</li>
+							<li><a href="/zf_user/memcom/index/main"
+								data-nav-track="ga_lead|section-gnb|layer_comp_service|musthome">기업홈</a></li>
+							<li><a href="/zf_user/memcom/recruit/select-recruit-type"
+								data-nav-track="ga_lead|section-gnb|layer_comp_service|recruit-add">공고
+									등록</a></li>
+							<li><a href="/zf_user/company/recruit-manage?gnb_main=y"
+								data-nav-track="ga_lead|section-gnb|layer_comp_service|recruit-manage">지원자
+									관리</a></li>
+							<li><a href="/zf_user/memcom/talent-pool/main/search"
+								data-nav-track="ga_lead|section-gnb|layer_comp_service|talent_matching">인재풀</a></li>
+							<li><a href="/zf_user/memcom/ai-recruit/introduce"
+								data-nav-track="ga_lead|section-gnb|layer_comp_service|smart_recruiter">스마트
+									리크루터</a></li>
+							<li><a href="/zf_user/memcom/preview/custom-guide"
+								data-nav-track="ga_lead|section-gnb|layer_comp_service|verification">인적성
+									· 평가도구</a></li>
+							<li><a href="/zf_user/hr-magazine/list"
+								data-nav-track="ga_lead|section-gnb|layer_comp_service|hr-magazine">HR매거진</a></li>
+							<li><a href="/zf_user/service/products"
+								data-nav-track="ga_lead|section-gnb|layer_comp_service|products">채용상품</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="navigation">
+				<button type="button" class="btn_menu" aria-haspopup="true"
+					aria-expanded="false"
+					data-nav-track="ga_lead|section-gnb|total_menu|open">
+					<svg aria-hidden="true" focusable="false">
+						<use xlink:href="#svg_gnb_total_off"></use></svg>
+					<svg aria-hidden="true" focusable="false">
+						<use xlink:href="#svg_gnb_total_on"></use></svg>
+					<span class="blind">전체메뉴</span>
+				</button>
+				<div class="wrap_gnb">
+
+					<div class="major recruit">
+						<a class="depth1" href="/zf_user/jobs/list/domestic"
+							data-nav-track="ga_lead|section-gnb|recruit|recruit"> <span
+							class="txt">채용정보</span>
+						</a>
+						<ul class="depth2">
+							<li class=""><a href="/zf_user/jobs/list/domestic"
+								data-nav-track="ga_lead|section-gnb|recruit|area"> <span
+									class="txt">지역별</span>
+							</a></li>
+							<li class=""><a href="/zf_user/jobs/list/job-category"
+								data-nav-track="ga_lead|section-gnb|recruit|job"> <span
+									class="txt">직업별</span>
+							</a></li>
+							<li class=""><a href="/zf_user/jobs/hot100"
+								data-nav-track="ga_lead|section-gnb|recruit|hot100"> <span
+									class="txt">HOT100</span>
+							</a></li>
+							<li class=""><a href="/zf_user/jobs/list/headhunting"
+								data-nav-track="ga_lead|section-gnb|recruit|headhunting"> <span
+									class="txt">헤드헌팅</span>
+							</a></li>
+							<li class=""><a href="/zf_user/jobs/theme/it-headhunting"
+								data-nav-track="ga_lead|section-gnb|recruit|acceptance"> <span
+									class="txt">취업축하금</span>
+							</a></li>
+							<li class=""><a href="/zf_user/jobs/list/industry"
+								data-nav-track="ga_lead|section-gnb|recruit|upjong"> <span
+									class="txt">산업별</span>
+							</a></li>
+							<li class=""><a href="/zf_user/jobs/theme/main"
+								data-nav-track="ga_lead|section-gnb|recruit|theme"> <span
+									class="txt">채용관</span>
+							</a></li>
+							<li class=""><a href="/zf_user/curation"
+								data-nav-track="ga_lead|section-gnb|recruit|curation"> <span
+									class="txt">큐레이션</span>
+							</a></li>
+							<li class=""><a href="/zf_user/jobs/list/dispatch"
+								data-nav-track="ga_lead|section-gnb|recruit|dispatch"> <span
+									class="txt">파견대행</span>
+							</a></li>
+							<li class=""><a
+								href="//gig.saramin.co.kr/search/project?utm_source=saramin&amp;utm_medium=menu&amp;utm_campaign=PC_job&amp;utm=term=gig_project_search&amp;_ga=2.96279324.1436692926.1687132560-325923010.1657504937"
+								target="_blank" data-nav-track="ga_lead|section-gnb|recruit|gig">
+									<span class="txt">프리랜서</span>
+							</a></li>
+						</ul>
+					</div>
+					<div class="major">
+						<a class="depth1" href="/zf_user/service/talent-pool"
+							data-nav-track="ga_lead|section-gnb|talent|talent"> <span
+							class="cosmetic_link"><span class="baloon tag">연봉
+									UP은</span>포지션<span class="img">MATCH</span></span>
+						</a>
+						<ul class="depth2">
+							<li class=""><a href="/zf_user/service/talent-pool"
+								data-nav-track="ga_lead|section-gnb|talent|talent-pool"> <span
+									class="txt">홈</span>
+							</a></li>
+							<li class=""><a href="/zf_user/member/suggest/status-list"
+								data-nav-track="ga_lead|section-gnb|talent|talent_status-list">
+									<span class="txt">받은 제안</span>
+							</a></li>
+							<li class=""><a
+								href="/zf_user/member/resume-manage/lookup-status"
+								data-nav-track="ga_lead|section-gnb|talent|talent_resume_lookup">
+									<span class="txt">이력서 열람 현황</span>
+							</a></li>
+							<li class=""><a
+								href="/zf_user/memcom/talent-pool/main/search"
+								data-nav-track="ga_lead|section-gnb|talent|talent_person"> <span
+									class="txt">인재풀</span>
+							</a></li>
+						</ul>
+					</div>
+					<div class="major">
+						<a class="depth1" href="/zf_user/jobs/public/home"
+							data-nav-track="ga_lead|section-gnb|recruit|public"> <span
+							class="txt">신입·인턴</span>
+						</a>
+						<ul class="depth2">
+							<li class=""><a href="/zf_user/jobs/public/home"
+								data-nav-track="ga_lead|section-gnb|recruit|public_home"> <span
+									class="txt">홈</span>
+							</a></li>
+							<li class=""><a href="/zf_user/jobs/public/list"
+								data-nav-track="ga_lead|section-gnb|recruit|public_list"> <span
+									class="txt">실시간 공고</span>
+							</a></li>
+							<li class=""><a href="/zf_user/jobs/public/top-group"
+								data-nav-track="ga_lead|section-gnb|recruit|public_top-group">
+									<span class="txt">그룹사별 채용</span>
+							</a></li>
+							<li class=""><a href="/zf_user/calendar"
+								data-nav-track="ga_lead|section-gnb|recruit|public_calendar">
+									<span class="txt">채용달력</span>
+							</a></li>
+							<li class=""><a href="/zf_user/public-recruit/schedule"
+								data-nav-track="ga_lead|section-gnb|recruit|public_schedule">
+									<span class="txt">공채예상일정</span>
+							</a></li>
+							<li class=""><a
+								href="/zf_user/jobs/public/public-organization-recruitment-schedule"
+								data-nav-track="ga_lead|section-gnb|recruit|public_organization_schedule">
+									<span class="txt">공공기관 채용일정</span>
+							</a></li>
+							<li class=""><a
+								href="/zf_user/public-recruit/job-fair-schedule"
+								data-nav-track="ga_lead|section-gnb|recruit|public_jobfair_schedule">
+									<span class="txt">채용설명회</span>
+							</a></li>
+						</ul>
+					</div>
+					<div class="major">
+						<a class="depth1" href="/zf_user/company-review"
+							data-nav-track="ga_lead|section-gnb|company_info|company_info">
+							<span class="txt">기업·연봉</span>
+						</a>
+						<ul class="depth2">
+							<li class=""><a href="/zf_user/company-review"
+								data-nav-track="ga_lead|section-gnb|company_info|review"> <span
+									class="txt">기업리뷰</span>
+							</a></li>
+							<li class=""><a href="/zf_user/salaries/total-salary/list"
+								data-nav-track="ga_lead|section-gnb|company_info|salary"> <span
+									class="txt">연봉정보</span>
+							</a></li>
+							<li class=""><a href="/zf_user/interview-review"
+								data-nav-track="ga_lead|section-gnb|company_info|interview">
+									<span class="txt">면접후기</span>
+							</a></li>
+							<li class=""><a href="/zf_user/companylab"
+								data-nav-track="ga_lead|section-gnb|company_info|company_lab">
+									<span class="txt">기업연구소</span>
+							</a></li>
+							<li class=""><a
+								href="/zf_user/company-info/sri-certification?seq=108"
+								data-nav-track="ga_lead|section-gnb|company_info|certification">
+									<span class="txt">기업큐레이션</span>
+							</a></li>
+						</ul>
+					</div>
+					<div class="major">
+						<a class="depth1" href="/zf_user/careerplus"
+							data-nav-track="ga_lead|section-gnb|contents|contents"> <span
+							class="txt">커리어성장</span>
+						</a>
+						<ul class="depth2">
+							<li class=""><a href="/zf_user/careerplus"
+								data-nav-track="ga_lead|section-gnb|contents|home"> <span
+									class="txt">클래스</span>
+							</a></li>
+							<li class=""><a href="https://mentor-match.saramin.co.kr/"
+								target="_blank"
+								data-nav-track="ga_lead|section-gnb|contents|mentoring"> <span
+									class="txt">멘토링매치</span>
+							</a></li>
+							<li class=""><a
+								href="/zf_user/tools/personal-statement-coaching-service"
+								data-nav-track="ga_lead|section-gnb|contents|tool_personal-statement-coaching-service">
+									<span class="txt">Ai자소서 코칭</span>
+							</a></li>
+							<li class=""><a href="/zf_user/company-section/road-map"
+								data-nav-track="ga_lead|section-gnb|contents|roadmap"> <span
+									class="txt">이직로드맵</span>
+							</a></li>
+							<li class=""><a href="/zf_user/white-paper/office"
+								data-nav-track="ga_lead|section-gnb|contents|white-paper"> <span
+									class="txt">JOB스토리</span>
+							</a></li>
+							<li class=""><a href="/zf_user/tools/character-counter"
+								data-nav-track="ga_lead|section-gnb|contents|tool"> <span
+									class="txt">취업TOOL</span>
+							</a></li>
+							<li class=""><a href="/zf_user/help/live?category=10"
+								data-nav-track="ga_lead|section-gnb|contents|jobdata_jobnews">
+									<span class="txt">취업뉴스</span>
+							</a></li>
+							<li class=""><a href="/zf_user/pds-resume/resume-download"
+								data-nav-track="ga_lead|section-gnb|contents|jobdata_resume-download">
+									<span class="txt">이력서 양식</span>
+							</a></li>
+							<li class=""><a href="/zf_user/hr-magazine/list"
+								data-nav-track="ga_lead|section-gnb|contents|hr-magazine"> <span
+									class="txt">HR매거진</span>
+							</a></li>
+						</ul>
+					</div>
+					<div class="major">
+						<a class="depth1" href="/zf_user/company-review-qst-and-ans"
+							data-nav-track="ga_lead|section-gnb|qst-and-ans|qst-and-ans">
+							<span class="txt">커뮤니티</span>
+						</a>
+						<ul class="depth2">
+							<li class=""><a href="/zf_user/company-review-qst-and-ans"
+								data-nav-track="ga_lead|section-gnb|qst-and-ans|qst_home"> <span
+									class="txt">홈</span>
+							</a></li>
+							<li class=""><a
+								href="/zf_user/career-information/senior-list"
+								data-nav-track="ga_lead|section-gnb|qst-and-ans|qst_careerinfo">
+									<span class="txt">현직자 인터뷰</span>
+							</a></li>
+							<li class=""><a
+								href="/zf_user/company-review-qst-and-ans/influencer-intro"
+								data-nav-track="ga_lead|section-gnb|qst-and-ans|qst_expert">
+									<span class="txt">프로 전문가</span>
+							</a></li>
+						</ul>
+					</div>
+
+				</div>
+				<div class="familysite">
+					<a class="depth1 txt familysite_map"
+						href="https://www.jumpit.co.kr/" target="_blank" rel="noreferrer"
+						data-nav-track="ga_lead|section-gnb|menu|jumpit">혹시, <b>개발자</b>인가요?
+					</a>
+					<ul class="depth2">
+						<li class="jumpit"><a href="https://www.jumpit.co.kr/"
+							target="_blank" rel="noreferrer"
+							data-nav-track="ga_lead|section-gnb|menu|jumpit_sub"> 개발자
+								커리어는 <span class="logo_family_service jumpit"><span
+									class="blind">점핏 로고</span></span> <svg class="arrow"
+									aria-hidden="true" focusable="false">
+									<use xlink:href="#svg_gnb_profile_bracket"></use></svg>
+						</a></li>
+						<li class="gig"><a
+							href="//gig.saramin.co.kr/?utm_source=saramin&amp;utm_medium=menu&amp;utm_campaign=PC_main_gnb_sub&amp;utm=term=gig"
+							target="_blank" rel="noreferrer"
+							data-nav-track="ga_lead|section-gnb|menu|gig_sub"> 프리랜서 N잡은 <span
+								class="logo_family_service gig"><span class="blind">긱
+										로고</span></span> <svg class="arrow" aria-hidden="true" focusable="false">
+									<use xlink:href="#svg_gnb_profile_bracket"></use></svg>
+						</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="navi_total">
+			<div id="sri_index">
+				<div class="panel_menu menu">
+					<div class="major recruit">
+						<span class="copy">공고를 찾는다면</span> <span class="depth1"><span
+							class="txt">채용정보</span></span>
+						<ul class="depth2">
+							<li><a href="/zf_user/jobs/list/domestic"
+								data-nav-track="ga_lead|section-gnb|total_menu|recruit_area"><span
+									class="txt">지역별</span></a></li>
+							<li><a href="/zf_user/jobs/list/job-category"
+								data-nav-track="ga_lead|section-gnb|total_menu|recruit_job"><span
+									class="txt">직업별</span></a></li>
+							<li><a href="/zf_user/jobs/hot100"
+								data-nav-track="ga_lead|section-gnb|total_menu|recruit_hot100"><span
+									class="txt">HOT100</span></a></li>
+							<li><a href="/zf_user/jobs/list/headhunting"
+								data-nav-track="ga_lead|section-gnb|total_menu|recruit_headhunting"><span
+									class="txt">헤드헌팅</span></a></li>
+							<li><a href="/zf_user/jobs/theme/it-headhunting"
+								data-nav-track="ga_lead|section-gnb|total_menu|recruit_acceptance"><span
+									class="txt">취업축하금</span></a></li>
+							<li><a href="/zf_user/jobs/list/industry"
+								data-nav-track="ga_lead|section-gnb|total_menu|recruit_upjong"><span
+									class="txt">산업별</span></a></li>
+							<li><a href="/zf_user/jobs/theme/main"
+								data-nav-track="ga_lead|section-gnb|total_menu|recruit_theme"><span
+									class="txt">채용관</span></a></li>
+							<li><a href="/zf_user/curation"
+								data-nav-track="ga_lead|section-gnb|total_menu|recruit_curation"><span
+									class="txt">큐레이션</span></a></li>
+							<li><a href="/zf_user/jobs/list/dispatch"
+								data-nav-track="ga_lead|section-gnb|total_menu|recruit_dispatch"><span
+									class="txt">파견대행</span></a></li>
+							<li><a
+								href="//gig.saramin.co.kr/search/project?utm_source=saramin&amp;utm_medium=menu&amp;utm_campaign=PC_job&amp;utm=term=gig_project_search&amp;_ga=2.96279324.1436692926.1687132560-325923010.1657504937"
+								data-nav-track="ga_lead|section-gnb|total_menu|recruit_gig"><span
+									class="txt">프리랜서</span></a></li>
+						</ul>
+					</div>
+					<div class="major">
+						<span class="copy">제안을 받고싶다면</span> <span class="depth1"><span
+							class="txt">포지션MATCH</span></span>
+						<ul class="depth2">
+							<li><a href="/zf_user/service/talent-pool"
+								data-nav-track="ga_lead|section-gnb|total_menu|talent-pool"><span
+									class="txt">홈</span></a></li>
+							<li><a href="/zf_user/member/suggest/status-list"
+								data-nav-track="ga_lead|section-gnb|total_menu|talent_status-list"><span
+									class="txt">받은 제안</span></a></li>
+							<li><a href="/zf_user/member/resume-manage/lookup-status"
+								data-nav-track="ga_lead|section-gnb|total_menu|talent_resume_lookup"><span
+									class="txt">이력서 열람 현황</span></a></li>
+							<li><a href="/zf_user/memcom/talent-pool/main/search"
+								data-nav-track="ga_lead|section-gnb|total_menu|talent_person"><span
+									class="txt">인재풀</span></a></li>
+						</ul>
+					</div>
+					<div class="major">
+						<span class="depth1"><span class="txt">신입·인턴</span></span>
+						<ul class="depth2">
+							<li><a href="/zf_user/jobs/public/home"
+								data-nav-track="ga_lead|section-gnb|total_menu|public_home"><span
+									class="txt">홈</span></a></li>
+							<li><a href="/zf_user/jobs/public/list"
+								data-nav-track="ga_lead|section-gnb|total_menu|public_list"><span
+									class="txt">실시간 공고</span></a></li>
+							<li><a href="/zf_user/jobs/public/top-group"
+								data-nav-track="ga_lead|section-gnb|total_menu|public_top-group"><span
+									class="txt">그룹사별 채용</span></a></li>
+							<li><a href="/zf_user/calendar"
+								data-nav-track="ga_lead|section-gnb|total_menu|public_calendar"><span
+									class="txt">채용달력</span></a></li>
+							<li><a href="/zf_user/public-recruit/schedule"
+								data-nav-track="ga_lead|section-gnb|total_menu|public_schedule"><span
+									class="txt">공채예상일정</span></a></li>
+							<li><a
+								href="/zf_user/jobs/public/public-organization-recruitment-schedule"
+								data-nav-track="ga_lead|section-gnb|total_menu|public_organization_schedule"><span
+									class="txt">공공기관 채용일정</span></a></li>
+							<li><a href="/zf_user/public-recruit/job-fair-schedule"
+								data-nav-track="ga_lead|section-gnb|total_menu|public_jobfair_schedule"><span
+									class="txt">채용설명회</span></a></li>
+						</ul>
+					</div>
+					<div class="major">
+						<span class="depth1"><span class="txt">기업·연봉</span></span>
+						<ul class="depth2">
+							<li><a href="/zf_user/company-review"
+								data-nav-track="ga_lead|section-gnb|total_menu|company_review"><span
+									class="txt">기업리뷰</span></a></li>
+							<li><a href="/zf_user/salaries/total-salary/list"
+								data-nav-track="ga_lead|section-gnb|total_menu|company_salary"><span
+									class="txt">연봉정보</span></a></li>
+							<li><a href="/zf_user/interview-review"
+								data-nav-track="ga_lead|section-gnb|total_menu|company_interview"><span
+									class="txt">면접후기</span></a></li>
+							<li><a href="/zf_user/companylab"
+								data-nav-track="ga_lead|section-gnb|total_menu|companylab"><span
+									class="txt">기업연구소</span></a></li>
+							<li><a
+								href="/zf_user/company-info/sri-certification?seq=108"
+								data-nav-track="ga_lead|section-gnb|total_menu|company_certification"><span
+									class="txt">기업큐레이션</span></a></li>
+						</ul>
+					</div>
+					<div class="major">
+						<span class="depth1"><span class="txt">커리어성장</span></span>
+						<ul class="depth2">
+							<li><a href="/zf_user/careerplus"
+								data-nav-track="ga_lead|section-gnb|total_menu|contents"><span
+									class="txt">클래스</span></a></li>
+							<li><a href="https://mentor-match.saramin.co.kr/"
+								data-nav-track="ga_lead|section-gnb|total_menu|mentoring"><span
+									class="txt">멘토링매치</span></a></li>
+							<li><a
+								href="/zf_user/tools/personal-statement-coaching-service"
+								data-nav-track="ga_lead|section-gnb|total_menu|contents_unemp-calculator"><span
+									class="txt">Ai자소서 코칭</span></a></li>
+							<li><a href="/zf_user/company-section/road-map"
+								data-nav-track="ga_lead|section-gnb|total_menu|contents_roadmap"><span
+									class="txt">이직로드맵</span></a></li>
+							<li><a href="/zf_user/white-paper/office"
+								data-nav-track="ga_lead|section-gnb|total_menu|contents_white-paper"><span
+									class="txt">JOB스토리</span></a></li>
+							<li><a href="/zf_user/tools/character-counter"
+								data-nav-track="ga_lead|section-gnb|total_menu|contents_tool"><span
+									class="txt">취업TOOL</span></a></li>
+							<li><a href="/zf_user/help/live?category=10"
+								data-nav-track="ga_lead|section-gnb|total_menu|contents_jobnews"><span
+									class="txt">취업뉴스</span></a></li>
+							<li><a href="/zf_user/pds-resume/resume-download"
+								data-nav-track="ga_lead|section-gnb|total_menu|contents_resume-download"><span
+									class="txt">이력서 양식</span></a></li>
+						</ul>
+					</div>
+					<div class="major">
+						<span class="depth1"><span class="txt">커뮤니티</span></span>
+						<ul class="depth2">
+							<li><a href="/zf_user/company-review-qst-and-ans"
+								data-nav-track="ga_lead|section-gnb|total_menu|qst-and-ans"><span
+									class="txt">홈</span></a></li>
+							<li><a href="/zf_user/career-information/senior-list"
+								data-nav-track="ga_lead|section-gnb|total_menu|qst_careerinfo"><span
+									class="txt">현직자 인터뷰</span></a></li>
+							<li><a
+								href="/zf_user/company-review-qst-and-ans/influencer-intro"
+								data-nav-track="ga_lead|section-gnb|total_menu|qst_expert"><span
+									class="txt">프로 전문가</span></a></li>
+						</ul>
+					</div>
+					<div class="minor">
+						<ul class="items">
+							<li><a href="/zf_user/help/help-word/main"
+								data-nav-track="ga_lead|section-gnb|total_menu|help"><svg
+										class="icon" aria-hidden="true" focusable="false">
+										<use xlink:href="#svg_gnb_cs"></use></svg>고객센터</a></li>
+							<li><a
+								href="/zf_user/help/live?listType=notice&amp;mem_type=a"
+								data-nav-track="ga_lead|section-gnb|total_menu|notice"><svg
+										class="icon" aria-hidden="true" focusable="false">
+										<use xlink:href="#svg_gnb_notice"></use></svg>공지사항</a></li>
+							<li><a href="/zf_user/help/live?category=3"
+								data-nav-track="ga_lead|section-gnb|total_menu|event"><svg
+										class="icon" aria-hidden="true" focusable="false">
+										<use xlink:href="#svg_gnb_event"></use></svg>이벤트</a></li>
+						</ul>
+
+					</div>
+					<div class="personalize">
+						<a href="/zf_user/member/persons/main" class="myhome"
+							data-nav-track="ga_lead|section-gnb|total_menu|myhome">MY<svg
+								class="arrow" aria-hidden="true" focusable="false">
+								<use xlink:href="#svg_gnb_profile_bracket"></use></svg></a>
+						<ul class="items">
+							<li><a href="/zf_user/resume/resume-manage"
+								data-nav-track="ga_lead|section-gnb|total_menu|resume-manage">이력서
+									관리</a></li>
+							<li><a href="/zf_user/persons/scrap-recruit"
+								data-nav-track="ga_lead|section-gnb|total_menu|scrap">스크랩</a></li>
+							<li><a href="/zf_user/persons/apply-status-list"
+								data-nav-track="ga_lead|section-gnb|total_menu|apply_list">지원현황</a></li>
+							<li><a href="/zf_user/jobs/read-jobs"
+								data-nav-track="ga_lead|section-gnb|total_menu|recent">최근본</a></li>
+						</ul>
+					</div>
+					<a
+						href="//gig.saramin.co.kr/?utm_source=saramin&amp;utm_medium=menu&amp;utm_campaign=PC_main_gnb_total&amp;utm=term=gig"
+						target="_blank" rel="noreferrer" class="extra extra1"
+						data-nav-track="ga_lead|section-gnb|total_menu|gig"> <span
+						class="txt">IT프리랜서는</span> <span class="blind">사람인 긱</span> <span
+						class="logo"> <span class="logo_family_service gig"></span>
+					</span>
+					</a> <a href="https://www.jumpit.co.kr/" target="_blank"
+						rel="noreferrer" class="extra extra2"
+						data-nav-track="ga_lead|section-gnb|total_menu|jumpit"> <span
+						class="txt">개발자 커리어는</span> <span class="blind">점핏</span> <span
+						class="logo"> <span class="logo_family_service jumpit"></span>
+					</span>
+					</a> <a href="/zf_user/event/iam-ground-app/app-intro" target="_blank"
+						rel="noreferrer" class="extra extra3"
+						data-nav-track="ga_lead|section-gnb|total_menu|imground"> <span
+						class="txt">인적성 면접준비는</span> <span class="blind">아이엠그라운드 더
+							레디</span> <span class="logo"> <span
+							class="logo_family_service iamground"></span>
+					</span>
+					</a>
+				</div>
+				<div class="panel_menu links">
+					<span class="copy">사람인에 처음왔다면</span>
+					<ul class="items_normal">
+						<li><a href="https://mentor-match.saramin.co.kr/"
+							target="_blank"
+							data-nav-track="ga_lead|section-gnb|total_menu|mentoring_side">
+								<span class="icon"> <svg aria-hidden="true"
+										focusable="false">
+										<use xlink:href="#svg_gnb_link6"></use></svg>
+							</span> <span class="title">멘토링매치<svg class="arrow"
+										aria-hidden="true" focusable="false">
+										<use xlink:href="#svg_gnb_profile_bracket"></use></svg></span> <span
+								class="text">현직자에게 취업 상담 받으세요</span>
+						</a></li>
+						<li><a href="/zf_user/member/avatar/list"
+							data-nav-track="ga_lead|section-gnb|total_menu|service_aimatch">
+								<span class="icon"> <svg aria-hidden="true"
+										focusable="false">
+										<use xlink:href="#svg_gnb_link2"></use></svg>
+							</span> <span class="title">Ai매치<svg class="arrow"
+										aria-hidden="true" focusable="false">
+										<use xlink:href="#svg_gnb_profile_bracket"></use></svg></span> <span
+								class="text">내게 딱 맞는 공고만 보세요</span>
+						</a></li>
+						<li><a href="/zf_user/service/talent-pool"
+							data-nav-track="ga_lead|section-gnb|total_menu|service_talent-pool">
+								<span class="icon"> <svg aria-hidden="true"
+										focusable="false">
+										<use xlink:href="#svg_gnb_link3"></use></svg>
+							</span> <span class="title">포지션매치<svg class="arrow"
+										aria-hidden="true" focusable="false">
+										<use xlink:href="#svg_gnb_profile_bracket"></use></svg></span> <span
+								class="text">지원하기 전에 제안 받아보세요</span>
+						</a></li>
+						<li><a href="/zf_user/careerplus"
+							data-nav-track="ga_lead|section-gnb|total_menu|service_tip">
+								<span class="icon"> <svg aria-hidden="true"
+										focusable="false">
+										<use xlink:href="#svg_gnb_link5"></use></svg>
+							</span> <span class="title">커리어성장<svg class="arrow"
+										aria-hidden="true" focusable="false">
+										<use xlink:href="#svg_gnb_profile_bracket"></use></svg></span> <span
+								class="text">클래스 듣고 직무역량 키워봐요</span>
+						</a></li>
+						<li><a href="/zf_user/member/webvq/self-exam"
+							data-nav-track="ga_lead|section-gnb|total_menu|service_verification_person">
+								<span class="icon"> <svg aria-hidden="true"
+										focusable="false">
+										<use xlink:href="#svg_gnb_link1"></use></svg>
+							</span> <span class="title">직무적합도<svg class="arrow"
+										aria-hidden="true" focusable="false">
+										<use xlink:href="#svg_gnb_profile_bracket"></use></svg></span> <span
+								class="text">무료로 내 장단점을 확인해보세요</span>
+						</a></li>
+
+					</ul>
+				</div>
+			</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</div>
+	</header> -->
+	<jsp:include page="../include/header.jsp"/>
 
 	<div id="srch_wrap" class="wrap_search">
 		<form id="AKCFrm" name="search" action="/zf_user/search">
@@ -326,278 +930,260 @@ googletag.cmd.push(function() {
 		<div id="searchAutoCompleteTemplate" style="display: none"></div>
 	</div>
 
-	<div id="sri_section" class="  ">
+	<div id="sri_section" class="  has_banner">
 		<div id="sri_wrap">
 			<div id="content">
+				<div class="wrap_title_recruit">
+					<h1 class="title_common">개인회원 아이디 찾기</h1>
+				</div>
+				<div class="help_find" id="person_find">
 
-				<div class="wrap_content" role="main">
-					<h1 class="blind">회원로그인페이지입니다.</h1>
-					<div class="login_page_wrap">
-						<form id="login_frm" name="login_frm" class="login_frm"
-							method="post"
-							action="https://www.saramin.co.kr/zf_user/auth/login"
-							onsubmit="try {return check(this);} catch (e) {};">
-							<input type="hidden" name="m_code" value="0"> <input
-								type="hidden" name="page_url" value=""> <input
-								type="hidden" name="url" value=""> <input type="hidden"
-								name="FrameKey" value=""> <input type="hidden"
-								name="login_tab" value="p" id="login_tab">
-							<div class="login_input_wrap">
-								<!-- text 알림 -->
-								<ul class="tab_member_type" role="tablist">
-									<li role="none"><button type="button"
-											class="btn_tab t_per active" role="tab" tabindex="0"
-											aria-selected="true">사용자</button></li>
-									<li role="none"><button type="button"
-											class="btn_tab t_com" role="tab" tabindex="-1"
-											aria-selected="false">사업자</button></li>
+					<div class="cont_find">
+						<form
+							action="https://www.saramin.co.kr/zf_user/helpdesk/person-find-secure"
+							method="post" id="find_form">
+							<input type="hidden" id="confirm_complete"
+								name="confirm_complete" value="n"> <input type="hidden"
+								id="confirm_send" name="confirm_send" value="n"> <input
+								type="hidden" id="channel" name="channel" value="sms"> <input
+								type="hidden" id="type" name="type" value="id"> <input
+								type="hidden" id="redirect_url" name="redirect_url"
+								value="helpdesk/person-find-id-list"> <input
+								type="hidden" id="seq" name="seq" value="seq1701416239">
+							<fieldset>
+								<legend class="blind">개인회원 아이디 찾기 입력 폼</legend>
+								<p class="desc_find">회원정보에 등록된 정보로 아이디를 찾을 수 있습니다.</p>
+								<ul class="list_find">
+									<li>
+										<div class="wrap_lab">
+											<label for="name" class="lab_find">이름</label>
+										</div>
+										<div class="wrap_input">
+											<span class="box_input"> <input type="text"
+												name="name" id="name" class="inp_find">
+											</span>
+											<p class="message_find" id="msg_name" style="display: none;">이름에
+												특수문자, 숫자는 사용하실 수 없습니다.</p>
+										</div>
+									</li>
+
+									<li id="li_cell">
+										<div class="wrap_lab">
+											<label for="cell" class="lab_find">휴대폰 번호</label>
+										</div>
+										<div class="wrap_input">
+											<span class="box_input"> <input type="text"
+												name="cell" id="cell" class="inp_find"
+												placeholder="‘-’없이 입력">
+											</span>
+											<p class="message_find" id="msg_cell" style="display: none;">휴대폰번호를
+												정확하게 입력해주세요.</p>
+											<p class="message_find send" id="msg_cell1"
+												style="display: none;">카카오톡으로 인증번호가 발송되었습니다 (실패 시 SMS
+												전송)</p>
+
+										</div>
+									</li>
+
+									<li id="li_mail" style="display: none;">
+										<div class="wrap_lab">
+											<label for="email" class="lab_find">이메일 주소</label>
+										</div>
+										<div class="wrap_input">
+											<span class="box_input"> <input type="text"
+												name="email" id="email" class="inp_find">
+											</span>
+											<div class="suggest_email email_list">
+												<ul class="list_email">
+													<li class="auto_list"><a href="javascript:;"
+														onclick="return false;" class="link_email"><strong
+															class="txt_email"></strong>@naver.com</a></li>
+													<li class="auto_list"><a href="javascript:;"
+														onclick="return false;" class="link_email"><strong
+															class="txt_email"></strong>@gmail.com</a></li>
+													<li class="auto_list"><a href="javascript:;"
+														onclick="return false;" class="link_email"><strong
+															class="txt_email"></strong>@daum.net</a></li>
+													<li class="auto_list"><a href="javascript:;"
+														onclick="return false;" class="link_email"><strong
+															class="txt_email"></strong>@nate.com</a></li>
+													<li class="auto_list"><a href="javascript:;"
+														onclick="return false;" class="link_email"><strong
+															class="txt_email"></strong>@outlook.com</a></li>
+												</ul>
+											</div>
+											<p class="message_find" id="msg_mail" style="display: none;">휴대폰번호를
+												정확하게 입력해주세요.</p>
+											<button type="button" id="btn_cert_mail"
+												class="btn_basic2 type03 btn_cert">인증번호 발송</button>
+										</div>
+									</li>
+
+									<li>
+										<div class="wrap_lab">
+											<label for="findCite" class="lab_find">생년월일</label>
+										</div>
+										<div class="wrap_input">
+											<span class="box_input"> <input type="text"
+												name="findCite" id="findCite" class="inp_find"> <span
+												class="message_find time_find" style="display: none;">남은
+													시간 (3:00)</span>
+											</span>
+											<p class="message_find" id="msg_cert_num"
+												style="display: none;">입력시간이 만료되었습니다. 인증번호를 다시 발송해주세요.</p>
+											<p class="message_find ok" style="display: none;">인증 성공.
+												잠시만 기다려주세요.</p>
+										</div>
+									</li>
 								</ul>
-								<div class="tab_panel" role="tabpanel" aria-label="개인회원">
-									<div class="setting">
-										<span class="inpChk"> <input type="checkbox"
-											id="autologin" class="setting_inp" name="autologin"
-											onmousedown="try{n_trackEvent('login', 'pc_login_page' , 'login_save', '');}catch(e){}">
-
-										</span> <span class="inpChk"> <input type="checkbox"
-											id="id_save" class="setting_inp" name="id_save"
-											onmousedown="try{n_trackEvent('login', 'pc_login_page' , 'id_save', '');}catch(e){}">
-											<label class="setting_label" for="id_save"
-											onmousedown="try{n_trackEvent('login', 'pc_login_page' , 'id_save', '');}catch(e){}">
-												아이디 저장 </label>
-										</span>
-
-									</div>
-									<div class="login-form">
-										<div class="id-input-box">
-											<input type="text" id="id" name="id" class="txt_tool"
-												value="" required=""> <label id="id-label"
-												class="id-label" for="id">아이디</label>
-										</div>
-										<div class="pw-input-box">
-											<input type="password" id="password" name="password"
-												class="txt_tool" value="" maxlength="32" required="">
-											<label id="password-label" for="password">비밀번호</label>
-										</div>
-										<button type="submit" class="btn-login BtnType SizeML">로그인</button>
-									</div>
-									<div class="signup-forgotten" style="text-align: right">
-										<a id="a_join" href="/zf_user/member/registration/join"
-											class="sign_up"
-											onmousedown="try{n_trackEvent('login', 'pc_login_page' , 'join', '');}catch(e){}">회원가입</a>
-										<a href="/zf_user/helpdesk/idpw-find" class="forgotten"
-											onmousedown="try{n_trackEvent('login', 'pc_login_page' , 'find', '');}catch(e){}">아이디/비밀번호
-											찾기</a> <a href="/zf_user/applicant/rater/login-form"
-											target="_blank" class="link_rater" style="display: none;">
-											</a>
-									</div>
-
+								<div class="wrap_link">
+									<button type="button" class="btn_biggest_type01"
+										id="btn_cert_complete">아이디 찾기</button>
+									<!--                        <button type="button" class="btn_biggest_type01" id="btn_next" style="display: none">다음</button>-->
 								</div>
-							</div>
-
-							<input type="hidden" name="encid" value="" id="encid"><input
-								type="hidden" name="encpw" value="" id="encpw"><input
-								type="hidden" name="seq" value="" id="seq">
+							</fieldset>
 						</form>
-						<div class="login_banner_wrap person" style="display: block;">
-						</div>
-						<div class="login_banner_wrap company" style="display: none">
-							<!-- <div id="login_bottom_company"
-								class="promotion-banner-box promotion-login" style="">
-								<a href="https://billing.saramin.co.kr/products/resume-pool"
-									target="_blank"><img
-									src="https://www.saraminbanner.co.kr/new/sub/2023/11/s4m50w_7k9c-1bqufdt_04PC.png"
-									alt="사람인 인재풀 첫구매 특별 할인" width="" height=""></a>
-							</div> -->
-						</div>
 					</div>
-					
-					<svg xmlns="http://www.w3.org/2000/svg" style="display: none">
-        <symbol id="icon_login_naver" viewBox="0 0 20 20" fill="none">
-            <path
-							d="M13.5615 10.704L6.14588 0H0V20H6.43845V9.296L13.8541 20H20V0H13.5615V10.704Z"
-							fill="white"></path>
-        </symbol>
-        <symbol id="icon_login_kakao" viewBox="0 0 24 22" fill="none">
-            <path
-							d="M12 -0.00012207C5.37092 -0.00012207 0 4.23616 0 9.46609C0 12.868 2.27684 15.8528 5.69401 17.5215C5.44314 18.4545 4.78556 20.9082 4.65252 21.4316C4.48907 22.0839 4.89199 22.0725 5.15426 21.8981C5.35952 21.7616 8.44219 19.6681 9.77257 18.7654C10.4948 18.8716 11.2398 18.9285 12 18.9285C18.6291 18.9285 24 14.6922 24 9.4623C24 4.23237 18.6291 -0.00012207 12 -0.00012207Z"
-							fill="#181600"></path>
-        </symbol>
-        <symbol id="icon_login_google" viewBox="0 0 22 22" fill="none">
-            <path fill-rule="evenodd" clip-rule="evenodd"
-							d="M21.5593 11.25C21.5593 10.4697 21.4888 9.72048 21.3593 9.00027H10.9998V13.2552H16.9199C16.665 14.6303 15.8899 15.7951 14.7251 16.5754V19.3349H18.2805C20.3603 17.4199 21.5603 14.6002 21.5603 11.25H21.5593Z"
-							fill="#4285F4"></path>
-            <path fill-rule="evenodd" clip-rule="evenodd"
-							d="M10.9993 22.0002C13.9692 22.0002 16.4594 21.0147 18.2791 19.3349L14.7236 16.5754C13.7382 17.2355 12.4791 17.6251 10.9983 17.6251C8.133 17.6251 5.70815 15.6904 4.84287 13.0904H1.16931V15.9401C2.97966 19.5349 6.69881 22.0002 10.9993 22.0002Z"
-							fill="#34A853"></path>
-            <path fill-rule="evenodd" clip-rule="evenodd"
-							d="M4.84453 13.0895C4.62484 12.4294 4.49946 11.7248 4.49946 10.9994C4.49946 10.274 4.62484 9.56933 4.84453 8.90923V6.05951H1.16994C0.424868 7.54448 0 9.22426 0 10.9994C0 12.7745 0.424868 14.4543 1.16994 15.9392L4.84453 13.0895Z"
-							fill="#FBBC05"></path>
-            <path fill-rule="evenodd" clip-rule="evenodd"
-							d="M10.9993 4.37511C12.6138 4.37511 14.0646 4.93054 15.2045 6.01966L18.3599 2.86423C16.4542 1.09015 13.9641 0 10.9993 0C6.69881 0 2.97966 2.46527 1.16931 6.06007L4.8439 8.90979C5.70918 6.30981 8.13404 4.37511 10.9993 4.37511Z"
-							fill="#EA4335"></path>
-        </symbol>
-        <symbol id="icon_login_facebook" viewBox="0 0 14 26" fill="none">
-            <path
-							d="M4.60526 25.5H8.9386V14.4801H12.9504L13.3677 10.3223C13.3677 10.3223 13.4544 10.118 13.0165 10.118H8.9386V6.97963C8.9386 6.97963 8.75842 4.60805 11.1053 4.60805H13.5V0.937039C13.5 0.937039 12.4691 0.477875 9.97404 0.500833C9.97404 0.500833 7.77316 0.473283 6.05123 2.13086C6.05123 2.13086 4.60526 3.43489 4.60526 4.9134V10.118H0.5V14.4801H4.60526V25.5Z"
-							fill="white"></path>
-        </symbol>
-        <symbol id="icon_login_apple" viewBox="0 0 22 25" fill="none">
-            <path fill-rule="evenodd" clip-rule="evenodd"
-							d="M8.48584 5.81313C8.27201 4.15256 9.4239 0.539339 13.4774 0C13.9464 2.78179 11.6001 5.97873 8.48584 5.81313Z"
-							fill="white"></path>
-            <path fill-rule="evenodd" clip-rule="evenodd"
-							d="M20.7747 8.39829C19.4527 7.15287 18.3008 5.94884 15.8694 5.82349C13.9071 5.7407 13.0115 6.90332 11.1768 6.94472C9.47077 6.98612 9.59836 5.6579 6.0576 6.03164C2.98587 6.36283 0.298109 9.35277 0.511949 13.5467C0.725788 18.073 3.96764 24.3427 6.99566 24.3427C9.12815 24.3013 9.64089 23.3043 11.3894 23.3043C13.5644 23.3043 14.0772 24.5497 15.7832 24.3002C18.7261 23.885 21.499 19.3587 21.499 17.9063C19.878 17.076 18.2571 15.6638 18.0433 13.2972C17.8731 10.9305 19.3653 9.43557 20.7736 8.39714L20.7747 8.39829Z"
-							fill="white"></path>
-        </symbol>
-    </svg>
-				</div>
-				<script type="text/javascript">
-					
-					
-//<!--
 
-				
-				//-->
-				</script>
+				</div>
+
+				<!--    <script type="text/javascript" src="//www.saraminimage.co.kr/js/libs/jquery-1.8.3.min.js"></script>-->
+				<script language="javascript"
+					src="/js/member-find-idpw.js?v=20231130103248"></script>
 			</div>
 		</div>
-		
-		<!-- WMG-23414 회원가입유도 -->
-		<jsp:include page="footer.jsp"/>
-		<div class="wrap_member_info" style="display: none">
-			<!-- <div class="box_bottom_info">
-				<p class="txt">왜 사람인을 선택해야 할까요?</p>
-				<button type="button" class="btn_bottom_info"
-					data-target="#area_info01">
-					<span class="ico_bottom">이동하기</span>
-				</button>
-			</div> -->
-<!-- 			<div class="area_info01" id="area_info01">
-				<div class="inner_box">
-					<img
-						src="//www.saraminimage.co.kr/sri/common/img/img_member_info01.png"
-						alt="" class="img">
-					<div class="blind">
-						<strong>이미 110만 기업이 사람인에서 인재를 채용하고 있습니다.</strong>
-						<dl>
-							<dt>월방문자 수</dt>
-							<dd>349만</dd>
-						</dl>
-						<dl>
-							<dt>공고등록 수</dt>
-							<dd>250만</dd>
-						</dl>
-						<dl>
-							<dt>입사지원 수</dt>
-							<dd>3,200만</dd>
-						</dl>
-					</div>
+		<div id="sri_banner">
+			<div id="sri_banner_fixed" style="display: none;">
+				<div class="data_list">
+					<strong class="tit_data">최근본 공고<a
+						href="/zf_user/jobs/read-jobs" class="num track_event"
+						data-track_event="ADs|Click-116C" title="최근 본 공고로 이동"
+						onmousedown="try{dataLayer.push({'event' : 'ga_lead', 'category': 'job_pg','event-flow': 'right_wing','event-label': 'recent_go'})}catch(e){}"><em
+							id="recently-recruit-count">0</em><span class="blind">건 이상</span></a></strong>
+					<ul class="list_data" id="right_wing_lately_read_job_list"
+						style="display: none">
+					</ul>
+					<a href="/zf_user/jobs/read-jobs"
+						class="link_more lately_read_job_list_more_btn"
+						style="display: none"
+						onmousedown="try{dataLayer.push({'event' : 'ga_lead', 'category': 'job_pg','event-flow': 'right_wing','event-label': 'recent_more'})}catch(e){}">더보기</a>
 				</div>
-			</div> -->
-			
-			<!-- <div class="area_info02">
-				<div class="inner_box">
-					<img
-						src="//www.saraminimage.co.kr/sri/common/img/img_member_info02_20220718.png"
-						alt="" class="img">
-					<div class="blind">
-						<strong>사람인 인공지능 기술이 채용효과를 극대화 시켜드립니다</strong>
-						<p>매칭률 높은 구직자부터 다양한 방법을 통해 공고를 노출/관리하여 채용의 효율을 높입니다.</p>
-						<dl>
-							<dt>하루 평균 29만명 구직자들에게 공고노출(코리아클릭(2017년2주차)</dt>
-							<dd>다양한 취업 네트워크 관련 추가 노출</dd>
-							<dd>공고별 AI지원자 관리</dd>
-							<dd>메일/모바일PUSH추가노출</dd>
-							<dd>채용결과에 대한 채용효과 보고서 제공</dd>
-							<dd>딱 맞는 인재 추천 및 입사제의 지원</dd>
-						</dl>
-					</div>
-				</div>
+				<div class="data_list" id="right_wing_recommend_job_list"
+					style="display: none"></div>
+				<a href="#sri_section" id="btn_go_top"
+					class="sri_lnb_icon btn_go_top"><span class="blind">브라우저상단으로
+						이동</span></a>
 			</div>
-			<div class="area_info03">
-				<div class="inner_box">
-					<img
-						src="//www.saraminimage.co.kr/sri/common/img/img_member_info03.png"
-						alt="" class="img">
-					<div class="blind">
-						<p>일반공고에 비해 채용상품 이용공고 - 공고 조회수 4.3배 상승</p>
-						<p>일반공고에 비해 채용상품 이용공고 - 입사 지우너수 6.7배 상승</p>
-						<span>(2017년 12월 기준)</span> <strong>빠른 인재채용이 필요하다면 채용상품을
-							이용하세요.</strong>
-						<p>채용상품은 공고를 다른 공고보다 상단에 노출시켜 최적의 인재를 먼저 채용할 수 있게 도와줍니다.</p>
-					</div>
+			<div id="sri_banner_scrolled"
+				style="margin-top: 15px; display: none;">
+				<div>
+					<a
+						href="https://saramin.co.kr/zf_user/event/writing-promo?inner_source=saramin&amp;inner_medium=banner&amp;inner_campaign=pc_wings&amp;inner_term=writing-promo"
+						target="_blank" class="app-setup-btn"> <img
+						src="https://www.saraminbanner.co.kr/mobile_sv/rbc/2023/12/s4yo04_kroh-1bqufdt_3PC.jpg"
+						alt="2023 사람인 다시보기 10글자로 말해요" id="rightwing_banner_img">
+					</a>
 				</div>
-			</div>
-			<div class="area_info04">
-				<div class="inner_box">
-					<img
-						src="//www.saraminimage.co.kr/sri/common/img/img_member_info04_221201.png"
-						alt="" class="img">
-					<div class="blind">
-						<p>채용상품 효과, 궁금하시죠? 첫 구매시, 결제금액 100%를 환급해드립니다. 지금 그 효과를 경험하세요!</p>
-						<ol>
-							<li>원하는 채용상품을 선택한 후</li>
-							<li>결제를 완료하면(무통장,계좌이체,카드,휴대폰)</li>
-							<li>결제한 금액 그대로 다시 돌려드려요!</li>
-						</ol>
+				<div id="div-gpt-ad-1400664864294-6-wrapper"
+					class="google-adsense doctype">
+					<div class="google-standby-banner" style="display: none;">
+						<img
+							src="https://www.saraminbanner.co.kr/adserver/default/2021/06/qv2zp2_wj96-2so1pt_PC120600.png"
+							alt="">
 					</div>
-				</div>
-			</div>
-			<div class="area_info05">
-				<div class="inner_box">
-					<img
-						src="//www.saraminimage.co.kr/sri/common/img/img_member_info05_20200616.png"
-						alt="" class="img">
-					<div class="blind">
-						<strong>사람인은 채용을 효과적으로 할 수 있는 모든 것이 준비되어 있습니다.</strong>
-						<div>
-							<strong>다양한 채용설계</strong>
-							<p>블라인드, 자사양식, 일반채용 등 채용유형별 입사지원서 커스터마이징으로 채용을 좀 더 공정하게!</p>
-						</div>
-						<div>
-							<strong>간편한 지원자 관리</strong>
-							<p>서류 전형부터 최종 합격까지 분야별, 전형별 지원자를 한 큐에! 간편한 지원자 관리를 이용해보세요!</p>
-						</div>
-						<div>
-							<strong>인재선발 서비스</strong>
-							<p>딱 맞는 인재추천부터 원 클릭(One Click)으로 입사제의까지! 매일 새로운 인재를 확인해보세요!</p>
+					<div id="div-gpt-ad-1400664864294-6-inner" style="">
+						<div id="div-gpt-ad-1400664864294-6"
+							data-google-query-id="CNed-LTd7YIDFQdlDwIdu9kBOQ">
+							<div id="google_ads_iframe_/61280259/CS_120x600_0__container__"
+								style="border: 0pt none;">
+								<iframe id="google_ads_iframe_/61280259/CS_120x600_0"
+									name="google_ads_iframe_/61280259/CS_120x600_0"
+									title="3rd party ad content" width="120" height="600"
+									scrolling="no" marginwidth="0" marginheight="0" frameborder="0"
+									role="region" aria-label="Advertisement" tabindex="0"
+									allow="attribution-reporting" data-load-complete="true"
+									data-google-container-id="2"
+									style="border: 0px; vertical-align: bottom;"></iframe>
+							</div>
 						</div>
 					</div>
-					<a href="/zf_user/member/registration/join?ut=c" class="btn_link "><img
-						src="//www.saraminimage.co.kr/sri/common/img/btn_member_info.png"
-						alt="회원가입하고 채용공고 게재하기"></a>
 				</div>
 			</div>
-			<div class="wrap_member_wing off">
-				<button class="btn_public_link">
-					<span class="blind">채용공고게재하기</span>
-				</button>
-				<span class="box_top"><button type="button" class="btn_top">TOP</button></span>
-			</div> -->
-
-			<script type="text/javascript">
-        jQuery(function() {
-            var $ = jQuery;
-            $('.btn_bottom_info').click(function(){
-                var scrollPosition = $($(this).attr('data-target')).offset().top;
-                $('html, body').animate({
-                    scrollTop: scrollPosition
-                }, 500);
-            })
-            $( window ).scroll( function(){
-                if ( $( this ).scrollTop() > 800 ) {
-                    $('.wrap_member_wing').removeClass('off');
-                } else {
-                    $('.wrap_member_wing').addClass('off');
-                }
-            });
-            $('.btn_top,.btn_public_link,.btn_registration').click(function(){
-                $('html, body').animate({scrollTop:0}, 400);
-            });
-        });
-    </script>
 		</div>
-		<!-- WMG-23414 회원가입유도 -->
+		<jsp:include page="../include/header.jsp"/>
+<!-- 		<footer id="sri_footer" class="sri_footer">
+			<div class="wrap_footer">
+				<div class="links" role="navigation" aria-label="사람인 서비스 정책 및 이용문의">
+					<ul>
+						<li class="first"><a href="//www.saraminhr.co.kr/"
+							target="_blank" rel="noopener" title="회사소개 새창열기">회사소개</a></li>
+						<li><a href="//saraminhr.team" target="_blank" rel="noopener"
+							title="인재채용 새창열기">인재채용</a></li>
+						<li><a href="/zf_user/help/terms-of-service"
+							title="회원약관 바로가기">회원약관</a></li>
+						<li class="bold"><a href="/zf_user/help/privacy"
+							title="개인정보처리방침 바로가기">개인정보처리방침</a></li>
+						<li><a
+							href="https://www.saramin.co.kr/zf_user/popup/email-refuse"
+							onclick="window.open(this.href, '이메일무단수집거부', 'width=380,height=200,left=0,top=0'); return false;"
+							rel="noopener" title="이메일무단수집거부 바로가기">이메일무단수집거부</a></li>
+						<li><a href="https://oapi.saramin.co.kr/" target="_blank"
+							rel="noopener" title="채용정보 API">채용정보 API</a></li>
+						<li><a href="/zf_user/help/inquery/partnership-inquiry-write"
+							target="_self" rel="noopener" title="제휴문의">제휴문의</a></li>
+						<li><a href="http://www.saramin.co.kr/zf_user/help"
+							title="고객센터 바로가기">고객센터</a></li>
+					</ul>
+				</div>
+				<div class="copyright">
+					<div class="help_list">
+						<dl>
+							<dt>사람인 고객센터</dt>
+							<dd>02-2025-4733 (평일 09:00~19:00, 주말공휴일 휴무)</dd>
+						</dl>
+						<dl>
+							<dt>이메일</dt>
+							<dd>
+								<a href="mailto:help@saramin.co.kr" target="_blank"
+									title="이메일 바로가기">help@saramin.co.kr</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt>FAX</dt>
+							<dd>02-6937-0039</dd>
+						</dl>
+					</div>
+					<div class="link_channel">
+						<a href="/zf_user/company-review-qst-and-ans" target="_blank"
+							title="커뮤니티 바로가기" class="link_cont">프로들과 이야기하자! <strong>커뮤니티</strong></a>
+						<dl>
+							<dt>사람인 공식채널</dt>
+							<dd>
+								<a href="https://www.instagram.com/saramin_official/?hl=ko"
+									target="_blank"><span class="blind">사람인 인스타그램</span></a>
+							</dd>
+							<dd>
+								<a href="https://blog.naver.com/saraminapp" target="_blank"><span
+									class="blind">사람인 네이버 블로그</span></a>
+							</dd>
+							<dd>
+								<a href="https://post.naver.com/my.nhn?memberNo=5661329"
+									target="_blank"><span class="blind">사람인 네이버 포스트</span></a>
+							</dd>
+							<dd>
+								<a href="https://ko-kr.facebook.com/saramin.dream/"
+									target="_blank"><span class="blind">사람인 페이스북</span></a>
+							</dd>
+							<dd>
+								<a href="https://www.youtube.com/@saramindream" target="_blank"><span
+									class="blind">사람인 유튜브</span></a>
+							</dd>
+						</dl>
+					</div>
+
+				</div>
+			</div>
+		</footer> -->
 	</div>
 	<div id="dimmed" class="sri_dimmed" style="display: none"></div>
 	<div class="img_svg_layout">
@@ -1098,325 +1684,373 @@ var setApplyReload = function (flag) {
 			name="quick_apply_layer_frame"
 			style="display: none; position: fixed; right: 34px; bottom: 0; z-index: 150; width: 448px; height: 740px; border: 0; border-radius: 20px; border-bottom-left-radius: 0; border-bottom-right-radius: 0; box-sizing: border-box; box-shadow: 0 2px 30px 0 rgba(0, 0, 0, 0.15);"></iframe>
 	</div>
-	<script src="/js/apply/QuickApply.js?v=20231130103248"></script>
+	
 	<script type="text/javascript" src="/js/libs/secure/rsa.min.js"></script>
 	<script type="text/javascript"
 		src="/js/libs/secure/secure-login.js?v=131018"></script>
-	<script type="text/javascript">
-		
-		
-    //<!--
-    
-window.addEventListener('DOMContentLoaded', () => {
-    let memberActive;
-    const loginTab = document.querySelector('#login_tab');
-    /**
-     * setArrtibutes 한번에 멀티라인으로 주기 위해
-     * @param el
-     * @param attributes
-     */
-    const setAttributes = (el, attributes) => {
-        Object.keys(attributes).forEach(attr => {
-            el.setAttribute(attr, attributes[attr])
-        })
-    }
-    const actAttributes = {
-        'tabindex': '0',
-        'aria-selected': true
-    }
-    const nonActAttributes = {
-        'tabindex': '-1',
-        'aria-selected': false
-    }
 
-    const bindEvt = () => {
+	<div id="pop_login_layer_dimmed"
+		style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url(//www.saraminimage.co.kr/event_2014/0708_rank1/bg_dimmed.png) repeat 0 0; z-index: 9998;"></div>
+	<div id="pop_login_layer" class="pop_login_layer"
+		style="display: none; position: absolute; top: 280px;" role="dialog"
+		aria-labelledby="login_title">
+		<div class="outer">
+			<form name="loginFrm" id="loginFrm"
+				action="https://www.saramin.co.kr/zf_user/auth/login" method="post"
+				onsubmit="return loginCheckMainLayer(this);">
+				<input type="hidden" name="page_url" id="page_url"
+					value="L3pmX3VzZXIvaGVscGRlc2svcGVyc29uLWZpbmQtaWQ="> <input
+					type="hidden" name="url" value=""> <input type="hidden"
+					name="allowType" value=""> <input type="hidden" name="ut"
+					value=""> <input type="hidden" name="layerScrapIdx"
+					value=""> <input type="hidden" name="layerFavorIdx"
+					value=""> <input type="hidden" name="rec_apply_fl"
+					value="n"> <input type="hidden" name="encid" value=""
+					id="encid"><input type="hidden" name="encpw" value=""
+					id="encpw"><input type="hidden" name="seq" value=""
+					id="seq">
+				<fieldset class="inner">
+					<h4 id="login_title" class="title">
+						<span class="txt_point">로그인</span>이 필요한 서비스입니다.
+					</h4>
+					<div class="setting">
+						<span class="inpChk"> <input type="checkbox"
+							id="ly_autologin" class="setting_inp" name="autologin"
+							onmousedown="try{n_trackEvent('login', 'pc_login_page' , 'login_save', '');}catch(e){}">
+							<label class="setting_label" for="ly_autologin"
+							onmousedown="try{n_trackEvent('login', 'pc_login_page' , 'login_save', '');}catch(e){}">
+								로그인 유지 </label>
+						</span> <span class="inpChk"> <input type="checkbox"
+							id="ly_id_save" class="setting_inp" name="id_save"
+							onmousedown="try{n_trackEvent('login', 'pc_login_page' , 'id_save', '');}catch(e){}">
+							<label class="setting_label" for="ly_id_save"
+							onmousedown="try{n_trackEvent('login', 'pc_login_page' , 'id_save', '');}catch(e){}">
+								아이디 저장 </label>
+						</span> <span class="inpChkSwP ssl_login_box"> <input
+							type="checkbox" id="ly_ssl_login" title="보안접속"
+							class="ssl_login_hide" checked="checked"> <label
+							for="ly_ssl_login" id="ly_ssl_login_label" class="lbl label_type">보안</label>
+						</span>
+					</div>
+					<div id="login_form" class="login-form">
+						<div id="id_input_form" class="id-input-box focus">
+							<input type="text" name="id" id="ly_id" class="txt_tool" value=""
+								required=""> <label id="ly-id-label" class="id-label"
+								for="ly_id"><span>아이디</span></label>
+						</div>
+						<div id="pw_input_form" class="pw-input-box">
+							<input type="password" name="password" id="ly_password" value=""
+								required=""> <label id="ly-password-label"
+								for="ly_password"><span>비밀번호</span></label>
+						</div>
+						<button type="submit" class="btn-login"
+							onmousedown="loggingEventAndTagManager(['login','pc_login_layer','per_login',''],['ga_lead','login','pc_login_layer','per_login'])">
+							<span>로그인</span>
+						</button>
+					</div>
+					<div class="signup-forgotten">
+						<a href="/zf_user/member/registration/join" target="_blank"
+							class="sign_up">회원가입</a> <a href="/zf_user/helpdesk/idpw-find"
+							target="_blank" class="forgotten">아이디/비밀번호 찾기</a>
+					</div>
+					<div class="social_login_tit">
+						<p class="tit">소셜 계정으로 간편 로그인</p>
+					</div>
+					<ul class="social_login" id="wrap_social_login">
+						<li class="login_naver"><a
+							href="/zf_user/auth/sign-in-with?provider=naver.com&amp;display=popup&amp;url=%2Fzf_user%2Fhelpdesk%2Fperson-find-id&amp;login_type=p"
+							class="sl_naver ga_data_layer" data-provider="naver"><span
+								class="wrap_icon"><svg class="icon">
+										<use xlink:href="#icon_login_naver"></use></svg></span></a></li>
+						<li class="login_kakao"><a
+							href="/zf_user/auth/sign-in-with?provider=kakao.com&amp;display=popup&amp;url=%2Fzf_user%2Fhelpdesk%2Fperson-find-id&amp;login_type=p"
+							class="sl_kakao ga_data_layer" data-provider="kakao"><span
+								class="wrap_icon"><svg class="icon">
+										<use xlink:href="#icon_login_kakao"></use></svg></span></a></li>
+						<li class="login_google"><a
+							href="/zf_user/auth/sign-in-with?provider=google.com&amp;display=popup&amp;url=%2Fzf_user%2Fhelpdesk%2Fperson-find-id&amp;login_type=p"
+							class="sl_google ga_data_layer" data-provider="google"><span
+								class="wrap_icon"><svg class="icon">
+										<use xlink:href="#icon_login_google"></use></svg></span></a></li>
+						<li class="login_facebook"><a
+							href="/zf_user/auth/sign-in-with?provider=facebook.com&amp;display=popup&amp;url=%2Fzf_user%2Fhelpdesk%2Fperson-find-id&amp;login_type=p"
+							class="sl_facebook ga_data_layer" data-provider="facebook"><span
+								class="wrap_icon"><svg class="icon">
+										<use xlink:href="#icon_login_facebook"></use></svg></span></a></li>
+						<li class="login_apple"><a
+							href="/zf_user/auth/sign-in-with?provider=apple.com&amp;display=popup&amp;url=%2Fzf_user%2Fhelpdesk%2Fperson-find-id&amp;login_type=p"
+							class="sl_apple ga_data_layer" data-provider="apple"><span
+								class="wrap_icon"><svg class="icon">
+										<use xlink:href="#icon_login_apple"></use></svg></span></a></li>
+					</ul>
+				</fieldset>
+			</form>
+			<button class="pop_login_layer_close" id="pop_login_layer_close">닫기</button>
+		</div>
+		<svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+        <symbol id="icon_login_naver" viewBox="0 0 20 20" fill="none">
+            <path
+				d="M13.5615 10.704L6.14588 0H0V20H6.43845V9.296L13.8541 20H20V0H13.5615V10.704Z"
+				fill="white"></path>
+        </symbol>
+        <symbol id="icon_login_kakao" viewBox="0 0 24 22" fill="none">
+            <path
+				d="M12 -0.00012207C5.37092 -0.00012207 0 4.23616 0 9.46609C0 12.868 2.27684 15.8528 5.69401 17.5215C5.44314 18.4545 4.78556 20.9082 4.65252 21.4316C4.48907 22.0839 4.89199 22.0725 5.15426 21.8981C5.35952 21.7616 8.44219 19.6681 9.77257 18.7654C10.4948 18.8716 11.2398 18.9285 12 18.9285C18.6291 18.9285 24 14.6922 24 9.4623C24 4.23237 18.6291 -0.00012207 12 -0.00012207Z"
+				fill="#181600"></path>
+        </symbol>
+		<symbol id="icon_login_google" viewBox="0 0 22 22" fill="none">
+			<path fill-rule="evenodd" clip-rule="evenodd"
+				d="M21.5593 11.25C21.5593 10.4697 21.4888 9.72048 21.3593 9.00027H10.9998V13.2552H16.9199C16.665 14.6303 15.8899 15.7951 14.7251 16.5754V19.3349H18.2805C20.3603 17.4199 21.5603 14.6002 21.5603 11.25H21.5593Z"
+				fill="#4285F4"></path>
+			<path fill-rule="evenodd" clip-rule="evenodd"
+				d="M10.9993 22.0002C13.9692 22.0002 16.4594 21.0147 18.2791 19.3349L14.7236 16.5754C13.7382 17.2355 12.4791 17.6251 10.9983 17.6251C8.133 17.6251 5.70815 15.6904 4.84287 13.0904H1.16931V15.9401C2.97966 19.5349 6.69881 22.0002 10.9993 22.0002Z"
+				fill="#34A853"></path>
+			<path fill-rule="evenodd" clip-rule="evenodd"
+				d="M4.84453 13.0895C4.62484 12.4294 4.49946 11.7248 4.49946 10.9994C4.49946 10.274 4.62484 9.56933 4.84453 8.90923V6.05951H1.16994C0.424868 7.54448 0 9.22426 0 10.9994C0 12.7745 0.424868 14.4543 1.16994 15.9392L4.84453 13.0895Z"
+				fill="#FBBC05"></path>
+			<path fill-rule="evenodd" clip-rule="evenodd"
+				d="M10.9993 4.37511C12.6138 4.37511 14.0646 4.93054 15.2045 6.01966L18.3599 2.86423C16.4542 1.09015 13.9641 0 10.9993 0C6.69881 0 2.97966 2.46527 1.16931 6.06007L4.8439 8.90979C5.70918 6.30981 8.13404 4.37511 10.9993 4.37511Z"
+				fill="#EA4335"></path>
+		</symbol>
+        <symbol id="icon_login_facebook" viewBox="0 0 14 26" fill="none">
+            <path
+				d="M4.60526 25.5H8.9386V14.4801H12.9504L13.3677 10.3223C13.3677 10.3223 13.4544 10.118 13.0165 10.118H8.9386V6.97963C8.9386 6.97963 8.75842 4.60805 11.1053 4.60805H13.5V0.937039C13.5 0.937039 12.4691 0.477875 9.97404 0.500833C9.97404 0.500833 7.77316 0.473283 6.05123 2.13086C6.05123 2.13086 4.60526 3.43489 4.60526 4.9134V10.118H0.5V14.4801H4.60526V25.5Z"
+				fill="white"></path>
+        </symbol>
+        <symbol id="icon_login_apple" viewBox="0 0 22 25" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+				d="M8.48584 5.81313C8.27201 4.15256 9.4239 0.539339 13.4774 0C13.9464 2.78179 11.6001 5.97873 8.48584 5.81313Z"
+				fill="white"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+				d="M20.7747 8.39829C19.4527 7.15287 18.3008 5.94884 15.8694 5.82349C13.9071 5.7407 13.0115 6.90332 11.1768 6.94472C9.47077 6.98612 9.59836 5.6579 6.0576 6.03164C2.98587 6.36283 0.298109 9.35277 0.511949 13.5467C0.725788 18.073 3.96764 24.3427 6.99566 24.3427C9.12815 24.3013 9.64089 23.3043 11.3894 23.3043C13.5644 23.3043 14.0772 24.5497 15.7832 24.3002C18.7261 23.885 21.499 19.3587 21.499 17.9063C19.878 17.076 18.2571 15.6638 18.0433 13.2972C17.8731 10.9305 19.3653 9.43557 20.7736 8.39714L20.7747 8.39829Z"
+				fill="white"></path>
+        </symbol>
+	</svg>
+		<script type="text/javascript">
 
+        var getId = (function () {
+            var elCache = {};
+            return function (id) {
+                if (!elCache[id]) {
+                    elCache[id] = document.getElementById(id);
+                }
+                return elCache[id];
+            }
+        })();
+
+        var page_url = 'L3pmX3VzZXIvaGVscGRlc2svcGVyc29uLWZpbmQtaWQ=';
+
+
+        function addEvent(ele, eventType, func) {
+            var obj = typeof ele === 'string' ? getId(ele) : ele;
+            if (obj.addEventListener) {
+                obj.addEventListener(eventType, func, false);
+            } else if (obj.attachEvent) {//IE
+                obj.attachEvent('on' + eventType, func);
+            }
+        }
+        
+
+        //창닫기
+        addEvent("pop_login_layer_close", "click", function () {
+            getId('page_url').value = page_url;
+            getId('pop_login_layer').style.display = 'none';
+            getId('pop_login_layer_dimmed').style.display = 'none';
+            /**
+             * 신입인턴 홈에서 버튼 클릭후 로그인레이어 창 띄우고 닫았을때 사용되는 부분입니다.
+             */
+            if(window.jobsHomeClickBeforeDom) window.jobsHomeClickBeforeDom.focus();
+        });
 
         /**
-         * 회원 가입링크
-         * @type {Element}
+         * 로그인 모달 창 마지막 포커스 닫기 버튼에 tab 키로 이동시 모달안으로 포커스 유지하기 위해 ly_autologin 이동
          */
-        const btnJoin = document.querySelector('#a_join');
-
-        btnJoin.addEventListener('click', (e) => {
-            e.preventDefault();
-            const href = e.currentTarget.href;
-            location.href = href + '?ut=' + document.querySelector('#login_tab').value;
+        addEvent("pop_login_layer_close", "keydown", function (e) {
+            var keycode = e.keyCode;
+            if(keycode === 9) {
+                if(!e.shiftKey) {
+                    e.preventDefault();
+                    document.querySelector('#ly_autologin').focus();
+                }
+            }
         });
-    }
 
-    /**
-     * tab관련 이벤트
-     */
-    const tabEvent = () => {
-        const btnTabs = document.querySelectorAll('.tab_member_type .btn_tab');
-        const btnLen = btnTabs.length;
-        btnTabs.forEach((el,idx) => el.addEventListener('keydown', e => {
-            const keyCode = e.keyCode;
-            switch (keyCode) {
-                case 9: //tab + tab + shift
-                    if(!e.shiftKey) {
-                        e.preventDefault();
-                        document.querySelector('#autologin').focus();
-                    }
-                    break;
-                case 37: // left arrow
-                    if(idx !== 0) {
-                        e.currentTarget.setAttribute('tabindex', '-1');
-                        btnTabs[idx-1].setAttribute('tabindex', '0');
-                        btnTabs[idx-1].focus();
-                    } else {
-                        e.currentTarget.setAttribute('tabindex', '-1');
-                        btnTabs[btnLen - 1].setAttribute('tabindex', '0');
-                        btnTabs[btnLen - 1].focus();
-                    }
-                    break;
-                case 39: // right arrow
-                    if(idx === btnLen - 1) {
-                        e.currentTarget.setAttribute('tabindex', '-1');
-                        btnTabs[0].setAttribute('tabindex', '0');
-                        btnTabs[0].focus();
-                    } else {
-                        e.currentTarget.setAttribute('tabindex', '-1');
-                        btnTabs[idx+1].setAttribute('tabindex', '0');
-                        btnTabs[idx+1].focus();
-                    }
-                    break;
-                case 32: // Space
-                case 13: // Enter
-                    btnTabs.forEach(e => {
-                        e.classList.remove('active');
-                        e.setAttribute('aria-selected', false);
-                        e.setAttribute('tabindex', '-1');
-                    });
-                    loginTab.value = e.currentTarget.classList.contains('t_per') === true ? 'p' : 'c';
-                    e.currentTarget.classList.add('active');
-                    btnTabs[idx].setAttribute('tabindex', '0');
-                    e.currentTarget.setAttribute('aria-selected', true);
-                    changeMemberContent(loginTab.value);
-                    removeIllegalAttemptInput();
-                    break;
-             }
-        }));
-        btnTabs.forEach((el,idx) => el.addEventListener('click', e => {
-            const target = e.currentTarget;
-            loginTab.value = target.classList.contains('t_per') === true ? 'p' : 'c';
-            btnTabs.forEach((el,idx) => {
-                btnTabs[idx].classList.remove('active');
-                setAttributes(el, nonActAttributes);
-            })
-            target.classList.add('active');
-            btnTabs[idx].setAttribute('tabindex', '0');
-            target.setAttribute('aria-selected', true);
-            changeMemberContent(loginTab.value);
-            toolTipControl(loginTab.value);
-            removeIllegalAttemptInput();
-        }))
-    }
-
-    const removeIllegalAttemptInput = () => {
-        const comBox = document.querySelector('#confirm_com_input_box');
-        if (comBox) {
-            comBox.remove();
-        }
-    };
-
-    const toolTipClass = document.getElementsByClassName('social_tooltip');
-    let fadeEffect = null,
-        fadeTimeout = null;
-
-    const toolTipControl = (memGb) => {
-        if (toolTipClass.length == 0) {
-            return;
-        }
-
-        const fadeTarget = toolTipClass[0];
-        if (memGb == 'p') {
-            fadeTarget.style.display = "block";
-            fadeTarget.style.opacity = 1;
-            clearInterval(fadeEffect);
-            clearTimeout(fadeTimeout);
-            hideSocialTooltip();
-        } else {
-            fadeTarget.style.display = "none";
-        }
-    }
-
-    const startToolTipInterval = function () {
-        const fadeTarget = toolTipClass[0];
-        fadeEffect = setInterval(function () {
-            if (!fadeTarget.style.opacity) {
-                fadeTarget.style.opacity = 1;
+        /**
+         * 로그인 모달 창 첫 포커스 element인 로그인 유지에 tab+shift일때 닫기 버튼으로 포커스이동
+         */
+        addEvent("ly_autologin", "keydown", function (e) {
+            var keycode = e.keyCode;
+            if(keycode === 9) {
+                if(e.shiftKey && e.target) {
+                    e.preventDefault();
+                    document.querySelector('#pop_login_layer_close').focus();
+                }
             }
-            if (fadeTarget.style.opacity > 0) {
-                fadeTarget.style.opacity -= 0.1;
-            } else {
-                clearInterval(fadeEffect);
-            }
-        }, 20);
-    };
-
-    const hideSocialTooltip = function () {
-        fadeTimeout = setTimeout(function () {
-            startToolTipInterval();
-        }, 5000);
-    };
-
-
-    const socialLoginFn = () => {
-        const socialLinks = document.querySelectorAll('#wrap_social_login li a');
-        socialLinks.forEach(el => el.addEventListener('click', e => {
-            e.preventDefault();
-            e.stopPropagation();
-
-            const tabFlagElement = document.querySelector('.t_com').classList.contains('active') ? 'c' : 'p';
-
-            const link =  e.currentTarget.href,
-                provider = e.currentTarget.dataset.provider,
-                label = tabFlagElement === 'c' ? 'com_login_'+provider :  'per_login_'+provider;
-            loggingEventAndTagManager(['login','pc_login_page',label,''],['ga_lead','login','pc_login_page',label]);
-            window.open(link+'&login_type='+ tabFlagElement, '_blank', (!e.currentTarget.classList.contains('sl_phone') ? 'width=480,height=640' : ''));
-        }));
-    }
-
-
-    /**
-     *
-     * @param memberType
-     */
-    const tabInitActive = (memberType) => {
-        const tabBtns = document.querySelectorAll('.tab_member_type .btn_tab');
-        tabBtns.forEach(el => {
-            setAttributes(el, nonActAttributes);
-        })
-        if(memberType === 'p' || memberType === '') {
-            tabBtns[0].classList.add('active');
-            setAttributes(tabBtns[0], actAttributes);
-        } else {
-            tabBtns[1].classList.add('active');
-            setAttributes(tabBtns[1], actAttributes);
-        }
-    }
-
-
-    /**
-     * 페이지 들어왔을때 쿠키 값 체크해서 활성화 컨텐츠 체크
-     * @param lognTabDefault {string}
-     */
-
-    const checkShowContents = (lognTabDefault) => {
-        memberActive = getCookieValue(lognTabDefault) || 'p';
-        changeMemberContent(memberActive);
-        tabInitActive(memberActive);
-    }
-
-    /**
-     * 회원 컨텐츠 show/hide
-     * @param memberType {string}
-     */
-
-    const changeMemberContent = (memberType) => {
-        const linkPartnerLogin = document.querySelector('.link_rater');
-        const companyContents = document.querySelector('.wrap_member_info');
-        const companyBanner = document.querySelector('.login_banner_wrap.company');
-        const personBanner = document.querySelector('.login_banner_wrap.person');
-
-        if(memberType === 'c') {
-            linkPartnerLogin.style.display = 'block';
-            companyContents && (companyContents.style.display = 'block');
-            personBanner.style.display = 'none';
-            companyBanner.style.display = companyBanner.querySelector('a') ? 'block' : 'none';
-        } else {
-            linkPartnerLogin.style.display = 'none';
-            companyContents && (companyContents.style.display = 'none');
-            companyBanner.style.display = 'none';
-            personBanner.style.display = personBanner.querySelector('a') ? 'block' : 'none';
-        }
-    }
-
-    /**
-     * 쿠키값 가져오기 함수
-     * @param key
-     * @returns {string}
-     */
-    function getCookieValue(key) {
-        const cookieKey = key + "=";
-        let result = "";
-        const cookieArr = document.cookie.split(";");
-
-        for(var i = 0; i < cookieArr.length; i++) {
-            if(cookieArr[i][0] === " ") {
-                cookieArr[i] = cookieArr[i].substring(1);
-            }
-
-            if(cookieArr[i].indexOf(cookieKey) === 0) {
-                result = cookieArr[i].slice(cookieKey.length, cookieArr[i].length);
-                return result;
-            }
-        }
-        return result;
-    }
-
-    /**
-     * 폼이벤트 기존에 있던 부분
-     * @param form
-     * @returns {boolean}
-     */
-    function check(form){
-        if(form.id.value==""){
-            alert("아이디를 입력하세요");
-            form.id.focus();
-            return false;
-        }
-        if(form.id.value.indexOf(" ")>0){
-            alert("아이디에 공백에 있습니다. 공백을 제거해주세요");
-            form.id.focus();
-            return false;
-        }
-        if(form.id.value.length<4){
-            alert("아이디는 4자이상이어야 합니다");
-            form.id.focus();
-            return false;
-        }
-        if(form.password.value==""){
-            alert("비밀번호를 입력하세요");
-            form.password.focus();
-            return false;
-        }
-        if(form.password.value.length < 4 || form.password.value.length > 32){
-            alert("비밀번호는 영문,숫자,특수문자 조합 6~32자 입니다.");
-            form.password.focus();
-            return false;
-        }
-
-        const label = document.querySelector('#login_tab').value === 'c' ? 'com_login': 'per_login';
-        loggingEventAndTagManager(['login','pc_login_page',label,''],['ga_lead','login','pc_login_page',label]);
-
+        });
         
-        if (form['ssl_login'].checked) {
-            SecureLogin.encrypt(form);
+
+        //폼  체크
+        function loginCheckMainLayer(form) {
+            if (form.id.value === "") {
+                alert("아이디를 입력하세요.");
+                form.id.focus();
+                return false;
+            }
+            if (form.id.value.indexOf(" ") > 0) {
+                alert("아이디에 공백에 있습니다. 공백을 제거해주세요");
+                form.id.focus();
+                return false;
+            }
+            if (form.id.value.length < 4) {
+                alert("아이디는 4자이상이어야 합니다");
+                form.id.focus();
+                return false;
+            }
+            if (form.password.value === "") {
+                alert("비밀번호를 입력하세요");
+                form.password.focus();
+                return false;
+            }
+            if (form.password.value.length < 4 || form.password.value.length > 32) {
+                alert("비밀번호는 영문,숫자,특수문자 조합 6~32자 입니다.");
+                form.password.focus();
+                return false;
+            }
+
+            if (form['ly_ssl_login'].checked) {
+                SecureLogin.encrypt(form);
+            }
+
+            return true;
         }
 
-        return true;
-    }
+        //페이지 로딩시 초기화 시켜 준다.
+        setTimeout(function () {
+            var idInPut = getId('ly_id');
+            var pwInput = getId('ly_password');
+            if (!getId('ly_id').value) {
+                idInPut.value = '';
+                idInPut.blur();
+            }
+            pwInput.value = '';
+            pwInput.blur();
+        }, 50);
 
-    function init() {
-        checkShowContents('saramin_login_tab_default');
-        socialLoginFn();
-        tabEvent();
-        bindEvt();
-        toolTipControl(memberActive);
-    }
-    if(document.querySelector('.link_rater') !== null) {
-        init();
-    }
-    window.check = check;
+        /**
+         *
+         * @param name
+         * @param value
+         * @param expiredays
+         */
+        function setHoursCookie(name, value, expiredays) {
+            var todayDate = new Date();
+            todayDate.setHours(todayDate.getHours() + expiredays);
+            document.cookie = name + "=" + escape(value) + "; path=/; expires=" + todayDate.toGMTString() + ";";
+        }
 
-    })
-    
-	
-	//-->
-	</script>
+
+        (document.addEventListener('DOMContentLoaded', function (e) {
+
+            var socialLoginBtnList = document.querySelectorAll('#pop_login_layer .social_login li a');
+
+            [].forEach.call(socialLoginBtnList, function(socialLoginBtn){
+                socialLoginBtn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    var link = e.currentTarget.href,
+                        provider = e.currentTarget.dataset.provider,
+                        isCompany = '',
+                        label = isCompany ? 'com_login_' : 'per_login_';
+
+                    label += provider;
+                    loggingEventAndTagManager(['login','pc_login_layer', label,''],['ga_lead','login','pc_login_layer', label]);
+
+                    //소셜 버튼을 누를때 쿠키를 만들어 주고 소셜 회원 가입 완료 페이지에서 사용 한다.
+                    setHoursCookie('login_referer_url', encodeURIComponent(location.href.replace(/.*\/\/[^\/]*/, '')), 1);
+
+                    if((navigator.userAgent.toLowerCase().indexOf("msie") !== -1) && provider === 'apple'){
+                        if(confirm('IE10이하 버전의 인터넷 익스플로러에서는 Apple 로그인이 정상 작동하지 않을 수 있습니다.\n' +
+                            '인터넷 익스플로러를 최신 버전으로 업데이트 해주세요'))
+                        {
+                            window.open(link, '_blank', 'width=480,height=640');
+                        }
+                        return;
+                    }
+                    window.open(link, '_blank', 'width=480,height=640');
+                });
+            });
+
+            var isCompany = '';
+            var toolTipClass = document.getElementsByClassName('social_tooltip');
+
+            if (toolTipClass.length > 0 && isCompany) {
+                toolTipClass[0].style.display = "none";
+            }
+
+            var popLoginLayer = document.getElementById('pop_login_layer');
+            if (toolTipClass.length > 0 && !isCompany) {
+                var fadeTarget = toolTipClass[0],
+                    fadeEffect = null,
+                    fadeTimeOut = null;
+
+                var startToolTipInterval = function () {
+                    fadeEffect = setInterval(function () {
+                        if (!fadeTarget.style.opacity) {
+                            fadeTarget.style.opacity = 1;
+                        }
+                        if (fadeTarget.style.opacity > 0) {
+                            fadeTarget.style.opacity -= 0.1;
+                        } else {
+                            clearInterval(fadeEffect);
+                        }
+                    }, 20);
+                };
+
+                var hideSocialTooltip = function () {
+                    fadeTimeOut = setTimeout(function () {
+                        startToolTipInterval();
+                    }, 5000);
+                };
+            }
+
+            var respondToVisibility = function(element, callback) {
+                var options = {
+                    root: document
+                };
+
+                var observer = new IntersectionObserver(function (entries, observer){
+                    entries.forEach(function (entry){
+                        callback(entry.intersectionRatio > 0);
+                    });
+                }, options);
+
+                observer.observe(element);
+            };
+
+            respondToVisibility(popLoginLayer, function(visible){
+                if(visible) {
+                    if (toolTipClass.length > 0 && !isCompany) {
+                        fadeTarget.style.display = 'block';
+                        fadeTarget.style.opacity = 1;
+                        clearInterval(fadeEffect);
+                        clearTimeout(fadeTimeOut);
+                        hideSocialTooltip();
+                    }
+
+                    document.getElementsByTagName('html')[0].style.overflow = 'hidden';
+                    document.getElementsByTagName('html')[0].style.height = '100%';
+                    document.getElementsByTagName('body')[0].style.height = '100%';
+                } else {
+                    document.getElementsByTagName('html')[0].style.overflow = '';
+                    document.getElementsByTagName('html')[0].style.height = '';
+                    document.getElementsByTagName('body')[0].style.height = '';
+                }
+            });
+
+        }))
+    </script>
+	</div>
 	<script type="text/javascript">
     //<!--
     
@@ -1432,6 +2066,8 @@ window.addEventListener('DOMContentLoaded', () => {
 </script>
 	<script type="text/javascript"
 		src="/js/search/search-auto-complete.js?v=20231130103248"></script>
+	<script type="text/javascript"
+		src="/js/layout/right-wing.js?v=20231130103248"></script>
 	<script type="text/javascript">
 (function() {
   var pszProto = (("https:" == document.location.protocol) ? "https://www.saramin.co.kr/js/" : "//www.saraminimage.co.kr/js/");
@@ -1636,7 +2272,7 @@ wcs_do(_nasa);
 	<div id="_sticky_warp" role="complementary"></div>
 
 
- 
+
 
 
 	<div style="display: none; visibility: hidden;">
@@ -1652,7 +2288,7 @@ wcs_do(_nasa);
 	<div id="criteo-tags-div" style="display: none;"></div>
 	<iframe height="0" width="0" title="Criteo DIS iframe"
 		style="display: none;"></iframe>
-
+	<iframe src="https://www.google.com/recaptcha/api2/aframe" width="0"
+		height="0" style="display: none;"></iframe>
 </body>
-
 </html>
