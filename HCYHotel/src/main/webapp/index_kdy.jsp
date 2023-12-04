@@ -27,7 +27,7 @@ $(function(){
 	<li><a href="user/dining/dining_info.do">다이닝 상세</a></li>
 	<li><a href="user/notice/user_notice.do">공zㅣ</a></li>
 	<li><a href="user/notice/user_notice_detail.do">공zㅣ상세</a></li>
-	<li><a href="user/qna/user_qna.do">문희문희</a></li>
+	<li><a href="user/qna/user_qna_list.do">문희문희</a></li>
 </ul>
 </body>
 </html>

@@ -339,7 +339,7 @@ googletag.cmd.push(function() {
         <div id="sri_wrap">
             <div id="content">
                 <div class="wrap_title_recruit">
-    <h1 class="title_common">고객센터</h1>
+    <h1 class="title_common">공지사항</h1>
 </div>
 
 <div class="wrap_board">
