@@ -24,5 +24,10 @@
 	<context:component-scan base-package="kr.co.sist" />
 	
 	
-	
+	<interceptors>
+		<interceptor>
+			<mapping path="/admin/**"/>
+			<beans:bean class="kr.co.sist.admin.interceptor.LoginCheckInterceptor" id="lci"/>
+		</interceptor>
+	</interceptors>
 </beans:beans>

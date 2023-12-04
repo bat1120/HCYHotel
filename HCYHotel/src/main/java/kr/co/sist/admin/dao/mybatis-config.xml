@@ -6,7 +6,7 @@
 <properties resource="properties/database.properties"/>
 <typeAliases>
 <typeAlias type="kr.co.sist.admin.login.LoginVO" alias="lVO"/>
-<typeAlias type="kr.co.sist.admin.login.DashboardDomain" alias="dd"/>
+<typeAlias type="kr.co.sist.admin.dashboard.DashboardDomain" alias="dd"/>
 </typeAliases>
   <environments default="development">
     <environment id="development">
@@ -21,6 +21,7 @@
   </environments>
   
 <mappers>
-<mapper resource="kr/co/sist/admin/mapper/loginMapper.xml"></mapper>
+<mapper resource="kr/co/sist/admin/mapper/loginMapper.xml"/>
+<mapper resource="kr/co/sist/admin/mapper/dashboardMapper.xml"/>
   </mappers>
 </configuration>

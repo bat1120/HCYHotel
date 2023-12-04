@@ -2,27 +2,7 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="kr.co.sist.admin.loginMapper">
-<!-- 로그인 체크 -->
-  <select id="selectChechLogin" resultType="String" parameterType="kr.co.sist.admin.login.LoginVO">
-<![CDATA[
-    select id 
-    from admin 
-    where id = #{id}
-    and password = #{pass}
-]]>
-  </select>
-  
-<!--   <resultMap type="dd" id="dd">
-  	<result property="weeklyVisitor" column=""/>
-  	<result property="weeklyBusVisitor" column=""/>
-  	<result property="weeklyMemVisitor" column=""/>
-  	<result property="dailyVisitor" column=""/>
-  	<result property="newHotel" column=""/>
-  	<result property="newDining" column=""/>
-  	<result property="newReview" column=""/>
-  </resultMap> -->
-  
+<mapper namespace="kr.co.sist.admin.dashboardMapper">
   <!-- 대시보드 내용 불러오기 -->
   <select id="selectDashboard" resultType="dd">
   <![CDATA[
