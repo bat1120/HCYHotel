@@ -13,7 +13,7 @@ public class HotelSearchController {
 	
 	@GetMapping("/user/hotel/hotelSearch/user_hotel_search_map.do")
 	public String hotelMapSearch() {
-		return "user/hotel/hotelSearch/user_hotel_search_map";  
+		return "user/hotel/hotelSearch/user_hotel_search_map";   
 	}//hotelMapSearch
 
 }
