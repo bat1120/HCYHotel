@@ -36,8 +36,11 @@ public class BusinessManageController {
 //		list=HotelManageService.getInstance().searchBookingList(session.getAttribute("id").toString());
 		
 		CreateJson cj=new CreateJson();
+		SearchHotelVO shVO=new SearchHotelVO();
+		shVO.setDate(request.getParameter("inputdate"));
+		shVO.setHotelName(request.getParameter("selectedValue"));
 		
-		JSONObject jsonObj=cj.createJson(session, request.getParameter("inputdate"));
+		JSONObject jsonObj=cj.createJson(session, shVO);
 		
 //		model.addAttribute("jsonObj",jsonObj.toJSONString());
 		return jsonObj.toJSONString();

@@ -33,12 +33,13 @@ public class HotelManageDAO {
 	}//selectHotelList
 	
 //	public List<BusinessHotelDomain> searchBookingHotel(BusinessHotelVO bhVO){
-		public List<BusinessHotelDomain> selectBookingHotel(String date){
+		public List<BusinessHotelDomain> selectBookingHotel(SearchHotelVO shVO){
 		List<BusinessHotelDomain> list=new ArrayList<BusinessHotelDomain>();
 		MyBatiseHandler mbh=MyBatiseHandler.getInstance();
 		SqlSession ss=mbh.getMyBatisHandler(false);
-		list=ss.selectList("kr.co.sist.business.hotelMapper.searchReservation",date);
+		list=ss.selectList("kr.co.sist.business.hotelMapper.searchReservation",shVO);
 		mbh.closeHandler(ss);
+		System.out.println(list);
 		return list;
 	}//searchBookingHotel
 //	public static void main(String[] arg) {

@@ -9,11 +9,13 @@ select hotelname
 from   hotel
 where  id=#{id}
 </select>
- <select id="searchReservation" resultType="bhd" parameterType="String">
-    select roomcode, id, bookingname, status, pplCnt, checkin, checkout
-    from roombooking
-    where checkin &lt;= #{selectdate}
-    and checkout &gt;= #{selectdate}
+ <select id="searchReservation" resultType="bhd" parameterType="shVO">
+   select r.roomname,rb.roomcode,rb.checkin,rb.checkout,rb.pplcnt,rb.status,rb.id,rb.bookingname
+from roombooking rb , hotel h, room r
+    where checkin &lt;= #{date}
+    and checkout &gt;= #{date}
+    and h.hotelname=#{hotelName}
+and (h.hotelcode(+)=r.hotelcode and r.roomcode=rb.roomcode)
 </select>
 
 </mapper>

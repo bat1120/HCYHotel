@@ -1912,9 +1912,10 @@ th, td {
 							<div role="button" class="dDYU-off-screen" tabindex="0"></div>
 						</div>
 					</div>
+						<form id="frm" name="frm">
 					<div
 						style="display: flex; justify-content: center; align-items: center;">
-						<select id="hotelSelect">
+						<select id="hotelSelect" onchange="sendSelectedValue()">
 							<option selected="selected">---선택---</option>
 							<c:forEach var="hotel" items="${ hotelName }">
 								<option>
@@ -1923,6 +1924,7 @@ th, td {
 							</c:forEach>
 						</select>
 					</div>
+					</form>
 					<div id='calendar'></div>
 					<script
 						src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
@@ -1938,35 +1940,53 @@ th, td {
 					            // info.dateStr을 사용하여 클릭한 날짜에 대한 정보 가져오기
 					            var clickedDate = info.dateStr;
 
-					            // AJAX를 사용하여 해당 날짜에 대한 정보를 가져옴
+					            // select 요소에서 선택된 값을 가져오기
+					            var selectValue = document.getElementById('hotelSelect').value;
+
+					            // AJAX를 사용하여 해당 날짜와 select 값에 대한 정보를 가져옴
 					            $.ajax({
 					                url: "use_ajax.do",
 					                type: "GET",
-					                data: { "inputdate": clickedDate },
+					                data: {
+					                    "inputdate": clickedDate,
+					                    "selectedValue": selectValue // 선택된 값도 함께 전송
+					                },
 					                dataType: "json",
 					                error: function(xhr) {
-					                	console.log(xhr.status);
+					                    console.log(xhr.status);
 					                },
 					                success: function(jsonObj) {
 					                    // AJAX 요청이 성공했을 때 클릭한 날짜에 해당하는 정보를 jsonObj로 받음
 					                    // 받은 정보를 HTML에 추가하거나 처리
 					                    // 예: 정보를 모달 창이나 특정 요소에 보여주기
 					                    console.log(jsonObj);
-					                	 var output="<table class='table'><tr><th>객실명</th><th>아이디</th><th>예약자명</th><th>예약기간</th><th>예약상태</th></tr>";
-					    				if(jsonObj.dataLength==0){
-					    					output+="<tr><td colspan='5'>제품이 없습니다.</td></tr>";
-					    				} 
-					    				 $.each(jsonObj.data,function(ind,jsonTemp){
-					    					output+="<tr>";
-					    					output+="<td>"+jsonTemp.roomcode+"</td>";
-					    					output+="<td>"+jsonTemp.id+"</td>";
-					    					output+="<td>"+jsonTemp.bookingname+"</td>";
-					    					output+="<td>"+jsonTemp.checkin+" ~ "+jsonTemp.checkout +"</td>";
-					    					output+="<td>"+jsonTemp.status+"</td>";
-					    					output+="</tr>";
-					    				})
-					    				output+="</table>";
-					    				$("#output").html(output);
+					                    var output = "<table class='table table-striped' style='text-align:center;'><tr><th>객실명</th><th>아이디</th><th>예약자명</th><th>예약기간</th><th>예약상태</th></tr>";
+					                    if (jsonObj.dataLength == 0) {
+					                        output += "<tr><td colspan='5'>제품이 없습니다.</td></tr>";
+					                    }
+					                    $.each(jsonObj.data, function(ind, jsonTemp) {
+					                        output += "<tr>";
+					                        output += "<td>" + jsonTemp.roomname + "</td>";
+					                        output += "<td>" + jsonTemp.id + "</td>";
+					                        output += "<td>" + jsonTemp.bookingname + "</td>";
+					                        output += "<td>" + jsonTemp.checkin + " ~ " + jsonTemp.checkout + "</td>";
+					                        if (jsonTemp.status === "Y") {
+					                            output += "<td>" + "<input type='button' class='btn btn-danger' name='btn' value='예약취소'>" + "<input type='hidden' class='hiddenValue' name='" + jsonTemp.roomcode + "' value='"+jsonTemp.roomcode+"'>" + "</td>";
+					                        } else if (jsonTemp.status === "N") {
+					                            output += "<td>예약 가능</td>";
+					                        } else {
+					                            output += "<td>상태 알 수 없음</td>";
+					                        }
+					                        output += "</tr>";
+					                    });
+					                    output += "</table>";
+					                    $("#output").html(output);
+
+					                    // 수정된 부분: 클래스(btn)로 이벤트 리스너 연결
+					                    $(".btn").click(function(){
+					                        var hiddenValue = $(this).siblings('.hiddenValue').val();
+					                        alert(hiddenValue);                 
+					                    });
 					                }
 					            });
 					        }
@@ -1975,7 +1995,7 @@ th, td {
 					    calendar.render();
 					});
 
- 					 
+				
 </script>
 					<div
 						style="display: flex; justify-content: center; align-items: center; height: 200px;" id="output">

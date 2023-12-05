@@ -1,7 +1,5 @@
 package kr.co.sist.business.manage;
 
-import java.sql.Date;
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,8 +11,6 @@ import lombok.ToString;
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
-public class BusinessHotelDomain {
-	private String roomcode,id,bookingname,status,roomname;
-	private int pplCnt;
-	private Date checkin,checkout;
+public class SearchHotelVO {
+private String date,hotelName;
 }

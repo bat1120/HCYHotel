@@ -25,9 +25,10 @@ public class HotelManageService {
 		
 		return list;
 	}//searchHotelList
-	public List<BusinessHotelDomain> searchBookingList(String date){
+	public List<BusinessHotelDomain> searchBookingList(SearchHotelVO shVO){
 		List<BusinessHotelDomain> list=new ArrayList<BusinessHotelDomain>();
-		list=HotelManageDAO.getInstance().selectBookingHotel(date);
+		list=HotelManageDAO.getInstance().selectBookingHotel(shVO);
+		
 		return list;
 	}//searchBookingList
 	

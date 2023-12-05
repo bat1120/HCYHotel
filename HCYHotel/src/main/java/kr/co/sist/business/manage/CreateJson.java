@@ -11,15 +11,16 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 public class CreateJson {
- public JSONObject createJson(HttpSession session,String date) {
+ public JSONObject createJson(HttpSession session,SearchHotelVO shVO) {
 	 JSONObject jsonObj=new JSONObject();
 	 JSONArray jsonArr=new JSONArray();
 	 
-	 List<BusinessHotelDomain> list=HotelManageService.getInstance().searchBookingList(date);
+	 List<BusinessHotelDomain> list=HotelManageService.getInstance().searchBookingList(shVO);
 	 JSONObject json = null;
 		for (BusinessHotelDomain bmd : list) {
 			json = new JSONObject();
 			json.put("bookingname", bmd.getBookingname());
+			json.put("roomname", bmd.getRoomname());
 			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 			json.put("checkin", sdf.format(bmd.getCheckin()));
 			json.put("checkout", sdf.format(bmd.getCheckout()));
