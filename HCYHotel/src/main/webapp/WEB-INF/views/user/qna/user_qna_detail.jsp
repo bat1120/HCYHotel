@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page info="공지사항 상세" %>
+<%@ page info="문의사항 상세" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <html lang="ko"><head>
@@ -267,7 +267,7 @@ googletag.cmd.push(function() {
         <div id="sri_wrap">
             <div id="content">
                 <div class="wrap_title_recruit">
-    <h1 class="title_common">공지사항</h1>
+    <h1 class="title_common">문의사항</h1>
 </div>
 <div class="wrap_board_view">
   <div class="wrap_content_view">

@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page info="다연다연" %>
+<%@ page info="" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
@@ -21,15 +21,7 @@ $(function(){
 });//ready
 </script>
 </head>
-<body> 
-<ul>
-	<li><a href="user/dining/dining_main.do">다이닝 메인</a></li>
-	<li><a href="user/dining/dining_info.do">다이닝 상세</a></li>
-	<li><a href="user/notice/user_notice.do">공zㅣ</a></li>
-	<li><a href="user/notice/user_notice_detail.do">공zㅣ상세</a></li>
-	<li><a href="user/qna/user_qna_list.do">문희문희</a></li>
-	<li><a href="user/qna/user_qna_detail.do">문의상세</a></li>
-	<li><a href="user/qna/user_qna_write.do">문의작성</a></li>
-</ul>
+<body>
+
 </body>
 </html>
