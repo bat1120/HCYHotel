@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.co.sist.business.hotelModifyMapper">
+
+<select id="searchhotelInfo" resultType="hld" parameterType="String">
+select h.hotelname,h.hotelcode,h.hoteladdress, h.inputdate
+from hotel h, room r, roombooking rb
+, roomreview rv
+where h.id=#{id}
+ and r.roomcode(+)=rb.roomcode and rb.bookingcode(+)=rv.bookingcode
+</select>
+<select id="searchHotelSido" resultType="hld" parameterType="String">
+select loc.sido
+from hotel h, location loc
+where h.loccode=loc.loccode
+and id=#{id}
+order by h.hotelcode
+</select>
+<select id="searchhotelRate" resultType="hld" parameterType="String">
+select sum(rv.rating)
+from hotel h, room r, roombooking rb,roomreview rv
+where h.hotelcode(+)=r.hotelcode and r.roomcode(+)=rb.roomcode and rb.bookingcode=rv.bookingcode
+and h.id=#{id}
+order by h.hotelcode
+</select>
+</mapper>
