@@ -4,10 +4,10 @@
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="kr.co.sist.user.sjh.loginMapper">
 
-<select id="selectMem" resultType="" parameterType="">
-
+<select id="selectMember" resultType="" parameterType="">
+select
 </select>
- <select id="searchBusiness" resultType="" parameterType="">
+ <select id="" resultType="" parameterType="">
 
 </select>
 
