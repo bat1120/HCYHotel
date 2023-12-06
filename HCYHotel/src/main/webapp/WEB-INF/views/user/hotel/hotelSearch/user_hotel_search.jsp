@@ -1448,13 +1448,19 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																			<div>
 																				<div role="button" tabindex="-1" class="IirT-header-container">
 																					<h3 class="IirT-header">토요코인 서울영등포점</h3>
-																					<div class="IirT-stars-container">
+																					<div class="">
 																						<div class="O3Yc O3Yc-sp-default" role="img" aria-label="2성급">
 																							<span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
 																										<path d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
 																										<path d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span>
 																						</div>
 																					</div>
+																					
+																					
+																					<input type="button" name="호텔 상세보기" value="호텔 상세보기">
+																					
+																					
+																					
 																				</div>
 																				<button class="IirT-location-container" aria-label="토요코인 서울영등포점 호텔을 지도에서 보려면 클릭하세요.">
 																					<span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 16px; height: 16px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" class="IirT-location-icon" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
@@ -1498,7 +1504,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																				<div>
 																					<div role="button" tabindex="-1" class="IirT-header-container">
 																						<h3 class="IirT-header">토요코인 서울영등포점</h3>
-																						<div class="IirT-stars-container">
+																						<div class="">
 																							<div class="O3Yc O3Yc-sp-default" role="img" aria-label="2성급">
 																								<span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
 																											<path d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
@@ -1653,7 +1659,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																			<div>
 																				<div role="button" tabindex="-1" class="IirT-header-container">
 																					<h3 class="IirT-header">토요코인 서울영등포점</h3>
-																					<div class="IirT-stars-container">
+																					<div class="">
 																						<div class="O3Yc O3Yc-sp-default" role="img" aria-label="2성급">
 																							<span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
 																										<path d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
@@ -1703,7 +1709,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																				<div>
 																					<div role="button" tabindex="-1" class="IirT-header-container">
 																						<h3 class="IirT-header">토요코인 서울영등포점</h3>
-																						<div class="IirT-stars-container">
+																						<div class="">
 																							<div class="O3Yc O3Yc-sp-default" role="img" aria-label="2성급">
 																								<span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
 																											<path d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
@@ -2192,7 +2198,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																	<div>
 																		<div role="button" tabindex="-1" class="IirT-header-container">
 																			<h3 class="IirT-header">파라스파라 서울</h3>
-																			<div class="IirT-stars-container">
+																			<div class="">
 																				<div class="O3Yc O3Yc-sp-default" role="img" aria-label="5성급">
 																					<span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span class="O3Yc-circle"></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span class="O3Yc-circle"></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span class="O3Yc-circle"></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span class="O3Yc-circle"></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span class="O3Yc-circle"></span></span>
 																				</div>
@@ -2257,7 +2263,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																		<div>
 																			<div role="button" tabindex="-1" class="IirT-header-container">
 																				<h3 class="IirT-header">파라스파라 서울</h3>
-																				<div class="IirT-stars-container">
+																				<div class="">
 																					<div class="O3Yc O3Yc-sp-default" role="img" aria-label="5성급">
 																						<span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span class="O3Yc-circle"></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span class="O3Yc-circle"></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span class="O3Yc-circle"></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span class="O3Yc-circle"></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span class="O3Yc-circle"></span></span>
 																					</div>
@@ -2471,7 +2477,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																	<div>
 																		<div role="button" tabindex="-1" class="IirT-header-container">
 																			<h3 class="IirT-header">토요코인 서울영등포점</h3>
-																			<div class="IirT-stars-container">
+																			<div class="">
 																				<div class="O3Yc O3Yc-sp-default" role="img" aria-label="2성급">
 																					<span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
 																								<path d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
@@ -2538,7 +2544,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																		<div>
 																			<div role="button" tabindex="-1" class="IirT-header-container">
 																				<h3 class="IirT-header">토요코인 서울영등포점</h3>
-																				<div class="IirT-stars-container">
+																				<div class="">
 																					<div class="O3Yc O3Yc-sp-default" role="img" aria-label="2성급">
 																						<span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
 																									<path d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
@@ -2767,7 +2773,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																	<div>
 																		<div role="button" tabindex="-1" class="IirT-header-container">
 																			<h3 class="IirT-header">서울 올림픽 파크텔</h3>
-																			<div class="IirT-stars-container">
+																			<div class="">
 																				<div class="O3Yc O3Yc-sp-default" role="img" aria-label="4성급">
 																					<span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span class="O3Yc-circle"></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span class="O3Yc-circle"></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span class="O3Yc-circle"></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span class="O3Yc-circle"></span></span>
 																				</div>
@@ -2832,7 +2838,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																		<div>
 																			<div role="button" tabindex="-1" class="IirT-header-container">
 																				<h3 class="IirT-header">서울 올림픽 파크텔</h3>
-																				<div class="IirT-stars-container">
+																				<div class="">
 																					<div class="O3Yc O3Yc-sp-default" role="img" aria-label="4성급">
 																						<span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span class="O3Yc-circle"></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span class="O3Yc-circle"></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span class="O3Yc-circle"></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span class="O3Yc-circle"></span></span>
 																					</div>
@@ -3078,7 +3084,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																	<div>
 																		<div role="button" tabindex="-1" class="IirT-header-container">
 																			<h3 class="IirT-header">글래드 강남 코엑스센터</h3>
-																			<div class="IirT-stars-container">
+																			<div class="">
 																				<div class="O3Yc O3Yc-sp-default" role="img" aria-label="3성급">
 																					<span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
 																								<path d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
@@ -3146,7 +3152,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																		<div>
 																			<div role="button" tabindex="-1" class="IirT-header-container">
 																				<h3 class="IirT-header">글래드 강남 코엑스센터</h3>
-																				<div class="IirT-stars-container">
+																				<div class="">
 																					<div class="O3Yc O3Yc-sp-default" role="img" aria-label="3성급">
 																						<span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
 																									<path d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
@@ -3375,7 +3381,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																	<div>
 																		<div role="button" tabindex="-1" class="IirT-header-container">
 																			<h3 class="IirT-header">글래드 여의도</h3>
-																			<div class="IirT-stars-container">
+																			<div class="">
 																				<div class="O3Yc O3Yc-sp-default" role="img" aria-label="4성급">
 																					<span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
 																								<path d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
@@ -3444,7 +3450,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																		<div>
 																			<div role="button" tabindex="-1" class="IirT-header-container">
 																				<h3 class="IirT-header">글래드 여의도</h3>
-																				<div class="IirT-stars-container">
+																				<div class="">
 																					<div class="O3Yc O3Yc-sp-default" role="img" aria-label="4성급">
 																						<span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
 																									<path d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
@@ -3658,7 +3664,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																	<div>
 																		<div role="button" tabindex="-1" class="IirT-header-container">
 																			<h3 class="IirT-header">서머셋 팰리스 서울</h3>
-																			<div class="IirT-stars-container">
+																			<div class="">
 																				<div class="O3Yc O3Yc-sp-default" role="img" aria-label="4성급">
 																					<span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span class="O3Yc-circle"></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span class="O3Yc-circle"></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span class="O3Yc-circle"></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span class="O3Yc-circle"></span></span>
 																				</div>
@@ -3723,7 +3729,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																		<div>
 																			<div role="button" tabindex="-1" class="IirT-header-container">
 																				<h3 class="IirT-header">서머셋 팰리스 서울</h3>
-																				<div class="IirT-stars-container">
+																				<div class="">
 																					<div class="O3Yc O3Yc-sp-default" role="img" aria-label="4성급">
 																						<span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span class="O3Yc-circle"></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span class="O3Yc-circle"></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span class="O3Yc-circle"></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span class="O3Yc-circle"></span></span>
 																					</div>
@@ -3938,7 +3944,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																	<div>
 																		<div role="button" tabindex="-1" class="IirT-header-container">
 																			<h3 class="IirT-header">나인트리 프리미어 호텔 인사동</h3>
-																			<div class="IirT-stars-container">
+																			<div class="">
 																				<div class="O3Yc O3Yc-sp-default" role="img" aria-label="4성급">
 																					<span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
 																								<path d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
@@ -4007,7 +4013,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																		<div>
 																			<div role="button" tabindex="-1" class="IirT-header-container">
 																				<h3 class="IirT-header">나인트리 프리미어 호텔 인사동</h3>
-																				<div class="IirT-stars-container">
+																				<div class="">
 																					<div class="O3Yc O3Yc-sp-default" role="img" aria-label="4성급">
 																						<span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
 																									<path d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
@@ -4230,7 +4236,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																	<div>
 																		<div role="button" tabindex="-1" class="IirT-header-container">
 																			<h3 class="IirT-header">롯데 호텔 월드</h3>
-																			<div class="IirT-stars-container">
+																			<div class="">
 																				<div class="O3Yc O3Yc-sp-default" role="img" aria-label="5성급">
 																					<span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
 																								<path d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
@@ -4300,7 +4306,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																		<div>
 																			<div role="button" tabindex="-1" class="IirT-header-container">
 																				<h3 class="IirT-header">롯데 호텔 월드</h3>
-																				<div class="IirT-stars-container">
+																				<div class="">
 																					<div class="O3Yc O3Yc-sp-default" role="img" aria-label="5성급">
 																						<span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
 																									<path d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
@@ -4537,7 +4543,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																	<div>
 																		<div role="button" tabindex="-1" class="IirT-header-container">
 																			<h3 class="IirT-header">메이필드 호텔 서울</h3>
-																			<div class="IirT-stars-container">
+																			<div class="">
 																				<div class="O3Yc O3Yc-sp-default" role="img" aria-label="5성급">
 																					<span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
 																								<path d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
@@ -4607,7 +4613,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																		<div>
 																			<div role="button" tabindex="-1" class="IirT-header-container">
 																				<h3 class="IirT-header">메이필드 호텔 서울</h3>
-																				<div class="IirT-stars-container">
+																				<div class="">
 																					<div class="O3Yc O3Yc-sp-default" role="img" aria-label="5성급">
 																						<span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
 																									<path d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
@@ -4844,7 +4850,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																	<div>
 																		<div role="button" tabindex="-1" class="IirT-header-container">
 																			<h3 class="IirT-header">신라스테이 광화문</h3>
-																			<div class="IirT-stars-container">
+																			<div class="">
 																				<div class="O3Yc O3Yc-sp-default" role="img" aria-label="3성급">
 																					<span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
 																								<path d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
@@ -4912,7 +4918,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																		<div>
 																			<div role="button" tabindex="-1" class="IirT-header-container">
 																				<h3 class="IirT-header">신라스테이 광화문</h3>
-																				<div class="IirT-stars-container">
+																				<div class="">
 																					<div class="O3Yc O3Yc-sp-default" role="img" aria-label="3성급">
 																						<span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
 																									<path d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
@@ -5141,7 +5147,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																	<div>
 																		<div role="button" tabindex="-1" class="IirT-header-container">
 																			<h3 class="IirT-header">호텔 파크하비오</h3>
-																			<div class="IirT-stars-container">
+																			<div class="">
 																				<div class="O3Yc O3Yc-sp-default" role="img" aria-label="3성급">
 																					<span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
 																								<path d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
@@ -5209,7 +5215,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																		<div>
 																			<div role="button" tabindex="-1" class="IirT-header-container">
 																				<h3 class="IirT-header">호텔 파크하비오</h3>
-																				<div class="IirT-stars-container">
+																				<div class="">
 																					<div class="O3Yc O3Yc-sp-default" role="img" aria-label="3성급">
 																						<span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
 																									<path d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
@@ -5448,7 +5454,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																	<div>
 																		<div role="button" tabindex="-1" class="IirT-header-container">
 																			<h3 class="IirT-header">로이넷호텔 서울 마포</h3>
-																			<div class="IirT-stars-container">
+																			<div class="">
 																				<div class="O3Yc O3Yc-sp-default" role="img" aria-label="3성급">
 																					<span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
 																								<path d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
@@ -5516,7 +5522,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																		<div>
 																			<div role="button" tabindex="-1" class="IirT-header-container">
 																				<h3 class="IirT-header">로이넷호텔 서울 마포</h3>
-																				<div class="IirT-stars-container">
+																				<div class="">
 																					<div class="O3Yc O3Yc-sp-default" role="img" aria-label="3성급">
 																						<span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
 																									<path d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
@@ -5735,7 +5741,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																	<div>
 																		<div role="button" tabindex="-1" class="IirT-header-container">
 																			<h3 class="IirT-header">서울신라호텔</h3>
-																			<div class="IirT-stars-container">
+																			<div class="">
 																				<div class="O3Yc O3Yc-sp-default" role="img" aria-label="5성급">
 																					<span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
 																								<path d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
@@ -5805,7 +5811,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																		<div>
 																			<div role="button" tabindex="-1" class="IirT-header-container">
 																				<h3 class="IirT-header">서울신라호텔</h3>
-																				<div class="IirT-stars-container">
+																				<div class="">
 																					<div class="O3Yc O3Yc-sp-default" role="img" aria-label="5성급">
 																						<span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
 																									<path d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
@@ -6039,7 +6045,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																	<div>
 																		<div role="button" tabindex="-1" class="IirT-header-container">
 																			<h3 class="IirT-header">호텔 아트리움 종로</h3>
-																			<div class="IirT-stars-container">
+																			<div class="">
 																				<div class="O3Yc O3Yc-sp-default" role="img" aria-label="3성급">
 																					<span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
 																								<path d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
@@ -6107,7 +6113,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																		<div>
 																			<div role="button" tabindex="-1" class="IirT-header-container">
 																				<h3 class="IirT-header">호텔 아트리움 종로</h3>
-																				<div class="IirT-stars-container">
+																				<div class="">
 																					<div class="O3Yc O3Yc-sp-default" role="img" aria-label="3성급">
 																						<span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
 																									<path d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
@@ -6314,7 +6320,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																	<div>
 																		<div role="button" tabindex="-1" class="IirT-header-container">
 																			<h3 class="IirT-header">시그니엘 서울</h3>
-																			<div class="IirT-stars-container">
+																			<div class="">
 																				<div class="O3Yc O3Yc-sp-default" role="img" aria-label="5성급">
 																					<span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
 																								<path d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
@@ -6384,7 +6390,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																		<div>
 																			<div role="button" tabindex="-1" class="IirT-header-container">
 																				<h3 class="IirT-header">시그니엘 서울</h3>
-																				<div class="IirT-stars-container">
+																				<div class="">
 																					<div class="O3Yc O3Yc-sp-default" role="img" aria-label="5성급">
 																						<span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
 																									<path d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
@@ -6621,7 +6627,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																	<div>
 																		<div role="button" tabindex="-1" class="IirT-header-container">
 																			<h3 class="IirT-header">신라스테이 서대문</h3>
-																			<div class="IirT-stars-container">
+																			<div class="">
 																				<div class="O3Yc O3Yc-sp-default" role="img" aria-label="3성급">
 																					<span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
 																								<path d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
@@ -6689,7 +6695,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																		<div>
 																			<div role="button" tabindex="-1" class="IirT-header-container">
 																				<h3 class="IirT-header">신라스테이 서대문</h3>
-																				<div class="IirT-stars-container">
+																				<div class="">
 																					<div class="O3Yc O3Yc-sp-default" role="img" aria-label="3성급">
 																						<span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
 																									<path d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
@@ -6918,7 +6924,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																	<div>
 																		<div role="button" tabindex="-1" class="IirT-header-container">
 																			<h3 class="IirT-header">신라스테이 서초</h3>
-																			<div class="IirT-stars-container">
+																			<div class="">
 																				<div class="O3Yc O3Yc-sp-default" role="img" aria-label="3성급">
 																					<span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
 																								<path d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
@@ -6986,7 +6992,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																		<div>
 																			<div role="button" tabindex="-1" class="IirT-header-container">
 																				<h3 class="IirT-header">신라스테이 서초</h3>
-																				<div class="IirT-stars-container">
+																				<div class="">
 																					<div class="O3Yc O3Yc-sp-default" role="img" aria-label="3성급">
 																						<span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
 																									<path d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
@@ -7209,7 +7215,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																	<div>
 																		<div role="button" tabindex="-1" class="IirT-header-container">
 																			<h3 class="IirT-header">토요코인 서울강남점</h3>
-																			<div class="IirT-stars-container">
+																			<div class="">
 																				<div class="O3Yc O3Yc-sp-default" role="img" aria-label="3성급">
 																					<span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span class="O3Yc-circle"></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span class="O3Yc-circle"></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span class="O3Yc-circle"></span></span>
 																				</div>
@@ -7274,7 +7280,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																		<div>
 																			<div role="button" tabindex="-1" class="IirT-header-container">
 																				<h3 class="IirT-header">토요코인 서울강남점</h3>
-																				<div class="IirT-stars-container">
+																				<div class="">
 																					<div class="O3Yc O3Yc-sp-default" role="img" aria-label="3성급">
 																						<span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span class="O3Yc-circle"></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span class="O3Yc-circle"></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span class="O3Yc-circle"></span></span>
 																					</div>
@@ -7500,7 +7506,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																	<div>
 																		<div role="button" tabindex="-1" class="IirT-header-container">
 																			<h3 class="IirT-header">이비스 앰배서더 인사동</h3>
-																			<div class="IirT-stars-container">
+																			<div class="">
 																				<div class="O3Yc O3Yc-sp-default" role="img" aria-label="3성급">
 																					<span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
 																								<path d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
@@ -7568,7 +7574,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																		<div>
 																			<div role="button" tabindex="-1" class="IirT-header-container">
 																				<h3 class="IirT-header">이비스 앰배서더 인사동</h3>
-																				<div class="IirT-stars-container">
+																				<div class="">
 																					<div class="O3Yc O3Yc-sp-default" role="img" aria-label="3성급">
 																						<span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
 																									<path d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
@@ -7781,7 +7787,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																	<div>
 																		<div role="button" tabindex="-1" class="IirT-header-container">
 																			<h3 class="IirT-header">더퍼스트스테이 호텔</h3>
-																			<div class="IirT-stars-container">
+																			<div class="">
 																				<div class="O3Yc O3Yc-sp-default" role="img" aria-label="4성급">
 																					<span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span class="O3Yc-circle"></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span class="O3Yc-circle"></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span class="O3Yc-circle"></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span class="O3Yc-circle"></span></span>
 																				</div>
@@ -7846,7 +7852,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																		<div>
 																			<div role="button" tabindex="-1" class="IirT-header-container">
 																				<h3 class="IirT-header">더퍼스트스테이 호텔</h3>
-																				<div class="IirT-stars-container">
+																				<div class="">
 																					<div class="O3Yc O3Yc-sp-default" role="img" aria-label="4성급">
 																						<span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span class="O3Yc-circle"></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span class="O3Yc-circle"></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span class="O3Yc-circle"></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span class="O3Yc-circle"></span></span>
 																					</div>
