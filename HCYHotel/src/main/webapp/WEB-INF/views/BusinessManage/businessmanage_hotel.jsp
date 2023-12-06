@@ -1876,6 +1876,15 @@ th, td {
 			</div>
 		</div>
 	</div>
+	<script
+						src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$("#newHotelBtn").click(function(){
+			
+		})
+	})
+	</script>
 	<link rel="stylesheet" type="text/css"
 		href="https://content.r9cdn.net/res/combined.css?v=5f13d1a23f67c3c1e65d620402b9ce4212e9d413-14pre-flipped&amp;cluster=5&amp;tag=ui/personalization/ContextualFrontDoorContent">
 	<script async="" src="https://accounts.google.com/gsi/client"></script>
