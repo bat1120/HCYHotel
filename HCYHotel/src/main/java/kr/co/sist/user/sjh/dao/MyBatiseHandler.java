@@ -1,4 +1,4 @@
-package kr.co.sist.dao;
+package kr.co.sist.user.sjh.dao;
 
 import java.io.IOException;
 import java.io.Reader;
@@ -38,7 +38,7 @@ private SqlSessionFactory myBatisBuilder(String configFile) {
 public SqlSession getMyBatisHandler(boolean autoCommit) {
 	SqlSession ss = null;
 	
-	ss= myBatisBuilder("kr/co/sist/dao/mybatis-config.xml").openSession(autoCommit);
+	ss= myBatisBuilder("kr/co/sist/user/sjh/dao/mybatis-config.xml").openSession(autoCommit);
 	
 	return ss;
 }//getMyBatisHandler
