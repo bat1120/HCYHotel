@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.co.sist.admin.manageMemMapper">
+<!-- 맴버 로드 -->
+<select id="selectMem" resultType="md">
+<![CDATA[
+SELECT ID, NAME, EMAIL, (SELECT count(*) from ROOMBOOKING r where m.ID = r.ID) bookingCnt
+FROM MEMBER m
+]]>
+</select>
+<!-- 사업자 로드 -->
+<select id="selectBus" resultType="bd">
+<![CDATA[
+SELECT ID, NAME, (select HOTELNAME from HOTEL h where h.ID = b.id and rownum = 1) rephotel, (SELECT count(*) from ROOMBOOKING r where r.ROOMCODE = (select ROOMCODE from ROOM r where r.HOTELCODE=(select HOTELCODE from HOTEL h where h.ID = b.id and rownum = 1)) and CHECKIN > sysdate-7 and CHECKIN < sysdate and STATUS = 'Y' ) bookingCnt
+FROM  BUSINESS b
+]]>
+</select>
+  
+</mapper>

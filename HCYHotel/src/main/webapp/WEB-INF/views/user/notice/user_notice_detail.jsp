@@ -267,23 +267,10 @@ googletag.cmd.push(function() {
         <div id="sri_wrap">
             <div id="content">
                 <div class="wrap_title_recruit">
-    <h1 class="title_common">고객센터</h1>
+    <h1 class="title_common">공지사항</h1>
 </div>
 <div class="wrap_board_view">
-    <div class="navigation_help_depth2">
-    <ul>
-        <li class=""><a href="/zf_user/help/help-word/main" data-nav-track="ga_lead|section-gnb|help|help"><span class="txt">무엇을 도와드릴까요?</span></a></li>
-        <li class="selected"><a href="/zf_user/help/live?listType=notice" data-nav-track="ga_lead|section-gnb|help|notice"><span class="txt">공지/이벤트</span></a></li>
-        <li class=""><a href="/zf_user/help/terms-of-service" data-nav-track="ga_lead|section-gnb|help|privacy"><span class="txt">개인정보 보호</span></a></li>
-        <li class=""><a href="/zf_user/guide/mobile/about/ns/mobile-web" data-nav-track="ga_lead|section-gnb|help|mobile_service"><span class="txt">모바일서비스</span></a></li>
-    </ul>
-</div>
-<div class="navigation_help_depth3">
-    <ul>
-                <li><a class="selected" href="/zf_user/help/live?listType=notice" data-nav-track="ga_lead|section-gnb|help|notice_notice"><span>공지사항</span></a></li>
-        <li><a class="" href="/zf_user/help/live?category=3" data-nav-track="ga_lead|section-gnb|help|notice_event"><span>이벤트 / 혜택</span></a></li>
-            </ul>
-</div>    <div class="wrap_content_view">
+  <div class="wrap_content_view">
         <div class="area_tit">
             <h1 class="content_tit">
                 [사전안내] 기업회원 휴면해제 안내            </h1>

@@ -71,8 +71,8 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>회원관리</a>
                         <div class="dropdown-menu bg-transparent border-0">
-                            <a href="button.html" class="dropdown-item">사업자</a>
-                            <a href="typography.html" class="dropdown-item">개인</a>
+                            <a href="goManageMem.do" class="dropdown-item">사업자</a>
+                            <a href="goManageMem.do?memFlag=mem" class="dropdown-item">개인</a>
                         </div>
                     </div>
                     <a href="widget.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>공지사항관리</a>
