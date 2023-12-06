@@ -30,6 +30,8 @@ $(function(){
 	<li><a href="user/qna/user_qna_list.do">문희문희</a></li>
 	<li><a href="user/qna/user_qna_detail.do">문의상세</a></li>
 	<li><a href="user/qna/user_qna_write.do">문의작성</a></li>
+	<br>
+	
 </ul>
 </body>
 </html>

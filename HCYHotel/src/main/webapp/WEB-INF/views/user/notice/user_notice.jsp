@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ page info="문의사항 목록"%>
+<%@ page info="공지사항 목록"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <html lang="ko" class="noIE">
@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=1280">
 <meta name="format-detection" content="telephone=no">
 
-<title>공지사항 &lt; 고객센터 | 휘닉스 호텔앤드리조트</title>
+<title>공지사항 | HCYCombined</title>
 
 <link rel="shortcut icon" href="/system/images/favicon.ico">
 <link rel="apple-touch-icon" href="/system/images/favicon.ico">
@@ -166,9 +166,10 @@
 					<fieldset>
 						<legend>게시물검색</legend>
 						<span class="form-wrap"><label for="searchKeyword"
-							class="hide">검색어</label> <input type="text" id="searchKeyword"
-							placeholder="검색어를 입력하세요." class="txt keyword">
-							<button type="button" class="btn-submit">검색</button></span>
+							class="hide">검색어</label> 
+							<input type="text" id="searchKeyword" placeholder="검색어를 입력하세요." class="txt keyword">
+							<input type="button" class="btn btn-dark btn-sm" value="검색"/>
+							<!-- <button type="button" class="btn-submit">검색</button> --></span>
 					</fieldset>
 				</form>
 			</div>
