@@ -8,6 +8,7 @@
  <typeAlias type="kr.co.sist.business.manage.BusinessHotelDomain" alias="bhd"/>
  <typeAlias type="kr.co.sist.business.manage.BusinessHotelVO" alias="bhVO"/>
  <typeAlias type="kr.co.sist.business.manage.SearchHotelVO" alias="shVO"/>
+ <typeAlias type="kr.co.sist.business.hotel.HotelListDomain" alias="hld"/>
 </typeAliases>
   <environments default="development">
     <environment id="development">
@@ -23,5 +24,6 @@
   
 <mappers>
 <mapper resource="kr/co/sist/business/mapper/hotelMapper.xml"></mapper>
+<mapper resource="kr/co/sist/business/mapper/hotelModifyMapper.xml"></mapper>
   </mappers>
 </configuration>
