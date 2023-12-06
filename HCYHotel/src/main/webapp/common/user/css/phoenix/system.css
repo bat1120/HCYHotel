@@ -1,0 +1,3333 @@
+[v-cloak] {
+    display: none;
+}
+
+.common-content > div:first-child {
+    max-width: 1200px;
+}
+
+.common-content > div img {
+    max-width: 100%;
+}
+
+.common-content > div table {
+    max-width: 100%;
+}
+
+.board-flag-cate.type3 {
+    color: #003CA0;
+}
+
+/* Custom NProgress */
+#nprogress .bar {
+    height: 3px !important;
+    background: #003CA0;
+}
+
+.ajax-loading-true {
+    cursor: wait;
+    display: none;
+}
+
+/* 공통 Alert, Confirm 스타일 */
+div.common-message-box-pop-body > div.common-message-box-pop-content {
+    text-align: center;
+    font-weight: 300;
+    font-size: 20px;
+    color: #666;
+}
+
+a.common-message-box-close {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    width: 60px;
+    height: 0;
+    max-height: 60px;
+    padding-top: 60px;
+    position: absolute;
+    overflow: hidden;
+}
+
+a.common-message-box-close:after {
+    background-image: url(/images/ko/sprite/ico.png);
+    background-position: -96px -115px;
+    width: 21px;
+    height: 21px;
+    content: '';
+    display: block;
+    margin: -10.5px 0 0 -10.5px;
+    position: absolute;
+    top: 50%;
+    left: 50%
+}
+
+/* 사진 slide 를 제거하기위한 class */
+.common-photo-slider.js-photo-slider .slider-list {
+    display: flex;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* 사진 slide 를 제거하기위한 class */
+.common-photo-slider .slider-list {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* 마이 휘닉스 - 나의 이용내역 - 시즌권 관리 시작 */
+.mypage-history-season .season-pass-wrap .photo {
+    margin: 407px 0 0 10px;
+    box-sizing: border-box;
+    width: 180px;
+    height: 185px;
+    border: 1px solid #ddd;
+    float: left;
+}
+
+.mypage-history-season .season-pass-wrap .info {
+    margin: 407px 0px 0px 20px;
+    padding: 0px;
+    text-align: center;
+    float: left;
+    width: 160px;
+}
+
+.mypage-history-season .season-pass-wrap .info .height {
+    float: none;
+}
+
+.mypage-history-season .season-pass-wrap .btn-area {
+    position: absolute;
+    top: 349px;
+    left: 30px;
+    text-align: center;
+    margin-top: 10px;
+    width: 0;
+}
+
+/* 마이 휘닉스 - 나의 이용내역 - 시즌권 관리 끝 */
+/*-------------운영에서 사용될 css -------------*/
+/*-------------본문 스타일 */
+.tt01 {
+    padding: 20px 0 10px;
+    color: #232323;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.tt02 {
+    padding: 20px 0 10px;
+    color: #232323;
+    font-size: 18px;
+}
+
+.tt03 {
+    padding: 10px 0 20px;
+    color: #666;
+    font-size: 16px;
+}
+
+.li17 {
+    line-height: 1.7;
+}
+
+.stt {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.4;
+}
+
+.stt2 {
+    padding-left: 20px;
+    font-size: 13px;
+    color: #999;
+    line-height: 1.4;
+}
+
+/* 테이블 */
+.tablebox {
+    position: relative;
+}
+
+.tablebox.padding-left {
+    padding-left: 50%;
+}
+
+.tablebox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*mobile 용*/
+.pk_img {
+    width: 100%;
+}
+
+/*padding*/
+.pt30 {
+    padding-top: 30px;
+}
+
+.pt80 {
+    padding-top: 80px;
+}
+
+.pt40 {
+    padding-top: 40px;
+}
+
+.pt0 {
+    padding-top: 0 !important;
+}
+
+.h3title {
+    line-height: 1.2;
+    text-align: left;
+    font-weight: 500;
+    font-size: 36px;
+    color: inherit;
+}
+
+/*bgcolor*/
+.bg01 td {
+    background-color: #f8f9fb !important;
+}
+
+/*fontcolor*/
+.fc01 th,.fc01 td {
+    color: #666 !important;
+}
+
+.fc01 {
+    color: #666 !important;
+}
+
+.fc02 {
+    color: #232323 !important;
+}
+
+.fc03 {
+    color: #8b8b8b !important;
+}
+
+.fc04 {
+    color: #ff4444 !important;
+}
+
+/*-------------패키지 스타일 */
+/*평창*/
+.listinfo {
+    position: relative;
+}
+
+.listinfo:after {
+    content: '.';
+    display: block;
+    font-size: 0;
+    height: 0px;
+    line-height: 0;
+    clear: both;
+}
+
+.listinfo .box {
+    float: left;
+}
+
+.listinfo .box:after {
+    content: '.';
+    display: block;
+    font-size: 0;
+    height: 0px;
+    line-height: 0;
+    clear: both;
+}
+
+.listinfo.pp .box .item {
+    float: left;
+    border: 1px solid #777;
+    position: relative;
+}
+
+.listinfo.pp .box .item .arrow {
+    position: absolute;
+    top: 50%;
+    right: -22px;
+    width: 28px;
+    height: 28px;
+    margin-top: -14px;
+    background: url('/images/ko/package/icon_arrow.png') no-repeat;
+    z-index: 999;
+}
+
+.listinfo.pp .box .item .arrow.n01 {
+    margin-top: -131px;
+}
+
+.listinfo.pp .box .item .arrow.n02 {
+    margin-top: -37px;
+}
+
+.listinfo.pp .box .item .arrow.n03 {
+    margin-top: 87px;
+}
+
+.listinfo.pp .box .item dl {
+    text-align: center;
+    line-height: 1.6;
+}
+
+.listinfo.pp .box .item dl dt {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.listinfo.pp .box .item dl dd.n01 {
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.listinfo.pp .box.col .item {
+    width: 200px;
+    margin-right: 15px;
+}
+
+.listinfo.pp .box.col .item.n01 {
+    height: 240px;
+    padding-top: 84px;
+    width: 180px;
+}
+
+.listinfo.pp .box.col .item.n02 {
+    height: 220px;
+    padding-top: 104px;
+}
+
+.listinfo.pp .box.col .item.n03 {
+    height: 220px;
+    padding-top: 104px;
+}
+
+.listinfo.pp .box.col .item.n04 {
+    height: 240px;
+    padding-top: 84px;
+    width: 270px;
+}
+
+.listinfo.pp .box.row {
+    width: 280px;
+}
+
+.listinfo.pp .box.row .item {
+    width: 100%;
+}
+
+.listinfo.pp .box.row .item.n05 {
+    padding: 15px 0;
+    margin-bottom: 15px;
+}
+
+.listinfo.pp .box.row .item.n06 {
+    padding: 15px 0;
+    margin-bottom: 15px;
+}
+
+.listinfo.pp .box.row .item.n07 {
+    padding: 15px 0;
+}
+
+/*제주*/
+.listinfo.pj .box.row {
+    width: 286px;
+}
+
+.listinfo.pj .box .item {
+    float: left;
+    position: relative;
+    width: 286px;
+    border: 1px solid #777;
+    margin-left: 15px;
+}
+
+.listinfo.pj .box .item .arrow {
+    position: absolute;
+    top: 50%;
+    right: -22px;
+    width: 28px;
+    height: 28px;
+    margin-top: -14px;
+    background: url('/images/ko/package/icon_arrow.png') no-repeat;
+    z-index: 999;
+}
+
+.listinfo.pj .box .item .arrow.n01 {
+    margin-top: -131px;
+}
+
+.listinfo.pj .box .item .arrow.n02 {
+    margin-top: -37px;
+}
+
+.listinfo.pj .box .item .arrow.n03 {
+    margin-top: 87px;
+}
+
+.listinfo.pj .box .item.n01 {
+    height: 65px;
+    padding-top: 28px;
+    margin-left: 0;
+    margin-bottom: 15px;
+}
+
+.listinfo.pj .box .item.n02 {
+    height: 77px;
+    padding-top: 16px;
+    margin-left: 0;
+}
+
+.listinfo.pj .box .item.n03 {
+    height: 143px;
+    padding-top: 60px;
+}
+
+.listinfo.pj .box .item.n04 {
+    height: 158px;
+    padding-top: 45px;
+}
+
+.listinfo.pj .box .item.n05 {
+    height: 193px;
+    padding-top: 10px;
+}
+
+.listinfo.pj .box .item.n03.nu1 {
+    height: 143px;
+    padding-top: 60px;
+    margin-left: 0;
+}
+
+.listinfo.pj .box .item.n06 {
+    height: 163px;
+    padding-top: 40px;
+}
+
+.listinfo.pj .box .item dl {
+    text-align: center;
+    line-height: 1.6;
+}
+
+.listinfo.pj .box .item dl dt {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.listinfo.pj .box .item dl dd.n01 {
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+/*제주 패키지 스타일 2*/
+.pg_st01 {
+    padding: 50px 39px;
+    border-top: 1px solid #222;
+    background-color: #f5f5f5;
+}
+
+.pg_st01 ul {
+    display: table;
+    padding: 58px 0;
+    border: 1px solid #e8e8e8;
+    background-color: #fff;
+}
+
+.pg_st01 ul:after {
+    content: '.';
+    display: block;
+    font-size: 0;
+    height: 0px;
+    line-height: 0;
+    clear: both;
+}
+
+.pg_st01 ul li {
+    display: table-cell;
+    letter-spacing: -0.04em;
+    vertical-align: middle;
+}
+
+.pg_st01 ul li:nth-child(1) {
+    width: 300px;
+    height: 51px;
+    line-height: 1.7;
+    border-right: 1px solid #bfbfbf;
+    color: #004ea2;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.pg_st01 ul li:nth-child(2) {
+    padding: 0 48px;
+    font-size: 20px;
+    color: #232323;
+    line-height: 1.7;
+}
+
+.imglistbox ul:after {
+    content: '.';
+    display: block;
+    font-size: 0;
+    height: 0px;
+    line-height: 0;
+    clear: both;
+}
+
+/*.imglistbox ul li{float:left; padding-bottom:29px;}
+.imglistbox ul li:nth-child(1){padding-right:50px;}
+.imglistbox ul li:nth-child(3){padding-right:50px;}*/
+.imglistbox ul li {
+    float: left;
+    width: calc(50% - 25px);
+    padding-bottom: 29px;
+}
+
+.imglistbox ul li:nth-child(odd) {
+    padding-right: 25px;
+}
+
+.imglistbox ul li:nth-child(even) {
+    padding-left: 25px;
+}
+
+.imglistbox ul li img {
+    display: block;
+    width: 100%;
+    max-width: 575px;
+}
+
+.imglistbox ul li span {
+    display: block;
+    color: #232323;
+    font-size: 20px;
+    letter-spacing: -0.05em;
+    line-height: 44px;
+}
+
+.imglistbox ul li span em {
+    color: #004ea2;
+    font-style: normal;
+}
+
+.imglistbox ul.col3 li {
+    float: left;
+    width: calc(33% - 15px);
+    padding: 0 0 29px 10px;
+}
+
+.imglistbox ul.col3 li:nth-child(1) {
+    padding-left: 0;
+}
+
+.imglistbox ul.col3 li img {
+    display: block;
+    width: 100%;
+    max-width: 575px;
+}
+
+.imglistbox ul.col3 li p {
+    line-height: 1.4;
+}
+
+/*190826 activity index*/
+.bgf5 {
+    background-color: #fcfcfc !important;
+}
+
+.actlist li {
+    display: inline-block;
+}
+
+.actlist li span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+}
+
+.actlist li .dot01 {
+    background-color: #fecb09;
+}
+
+.actlist li .dot02 {
+    background-color: #f46e21;
+}
+
+.actlist li .dot03 {
+    background-color: #0a9edf;
+}
+
+.titlebox {
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.titlebox h5 {
+    color: #232323;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+}
+
+.titlebox .actlist.box {
+    position: absolute;
+    top: -3px;
+    right: 250px;
+    display: block;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+}
+
+.titlebox .actlist.box li {
+    padding-left: 25px;
+    font-size: 16px;
+}
+
+.titlebox .actlist.box li:first-child {
+    padding-left: 0;
+}
+
+.titlebox .btn {
+    position: absolute;
+    top: -2px;
+    right: 0;
+    width: 224px;
+    height: 41px;
+}
+
+.fontsiz15 td {
+    font-size: 15px !important;
+}
+
+.actindexarea:after {
+    content: '.';
+    display: block;
+    font-size: 0;
+    height: 0px;
+    line-height: 0;
+    clear: both;
+}
+
+.actindexarea .box {
+    float: left;
+    width: 380px;
+    margin-right: 30px;
+    margin-bottom: 40px;
+}
+
+.actindexarea .box.last {
+    margin-right: 0;
+}
+
+.actindexarea .box img {
+    width: 380px;
+    height: 200px;
+}
+
+.actindexarea .box dl {
+}
+
+.actindexarea .box dl dt {
+    padding-top: 27px;
+    color: #232323;
+    font-size: 18px;
+    letter-spacing: -0.025em;
+    font-weight: 700;
+}
+
+.actindexarea .box dl dd {
+    padding-top: 17px;
+    padding-bottom: 18px;
+    min-height: 45px;
+    color: #666666;
+    font-size: 16px;
+    letter-spacing: -0.05em;
+    font-weight: 300;
+    border-bottom: 1px solid #ddd;
+}
+
+.actindexarea .box .btn {
+    float: right;
+    margin-top: 13px;
+    text-align: right;
+}
+
+/*19.10.25 리스트 추가*/
+.list_pm {
+    padding: 0 10px 30px;
+}
+
+.list_pm .time {
+    padding-bottom: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #232323;
+}
+
+.list_pm ul {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.list_pm ul li {
+    display: inline-block;
+}
+
+.list_pm ul li span {
+    display: block;
+    padding-bottom: 10px;
+    font-size: 20px;
+    color: #232323;
+    font-weight: bold;
+}
+
+.list_pm ul li p {
+    display: block;
+    font-size: 20px;
+    color: 3666666;
+}
+
+.list_pm ul li.img {
+    width: 40%;
+    max-width: 265px;
+}
+
+.list_pm ul li.img img {
+    width: 100%;
+}
+
+.list_pm ul li.text {
+    width: 60%;
+    padding-left: 15px;
+}
+
+/*20.02.14 객실패키지혜택타입 추가*/
+.privilege ul {
+    width: 100%;
+}
+
+.privilege ul:after {
+    content: '.';
+    display: block;
+    font-size: 0;
+    height: 0px;
+    line-height: 0;
+    clear: both;
+}
+
+.privilege ul li {
+    float: left;
+    width: 25%;
+}
+
+.privilege ul li .img {
+    padding: 10px 0;
+    border-left: 1px solid #dddddd;
+}
+
+.privilege ul li:first-child {
+    border: 0;
+}
+
+.privilege ul li img {
+    display: block;
+    width: 80px;
+    margin: auto;
+}
+
+.privilege ul li p {
+    padding: 30px 20px;
+    color: #666666;
+    font-size: 16px;
+    letter-spacing: -0.05em;
+    text-align: center;
+}
+
+/*21.12.28 아티클페이지*/
+.article_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.article_list .item {
+    position: relative;
+    width: 588px;
+    height: 340px;
+    margin-top: 24px;
+    overflow: hidden;
+}
+
+.article_list .item>a {
+    display: block;
+}
+
+.article_list .item img {
+    width: 588px;
+    height: 340px;
+    position: relative;
+    z-index: 1;
+}
+
+.article_list .item .inb {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    z-index: 11;
+    color: #fff;
+}
+
+.article_list .item .inb .stxt {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+    letter-spacing: -0.36px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.article_list .item .inb .mtxt {
+    font-size: 33px;
+    font-weight: 900;
+    letter-spacing: -0.66px;
+    line-height: 48px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.article_list .item .tagbx {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    z-index: 10;
+    color: #fff;
+}
+
+.article_list .item .tagbx:after {
+    content: '.';
+    display: block;
+    font-size: 0;
+    height: 0px;
+    line-height: 0;
+    clear: both;
+}
+
+.article_list .item .tagbx li {
+    float: left;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+
+.article_list .item .tagbx li span {
+    display: block;
+    padding: 5px 18px 7px;
+    color: #D1D1D1;
+    line-height: 27px;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+
+.article_list .item img {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: All 0.5s linear;
+    -moz-transition: All 0.5s linear;
+    -ms-transition: All 0.5s linear;
+    -o-transition: All 0.5s linear;
+    transition: All 0.5s linear;
+}
+
+.article_list .item:hover img {
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+.article_list .item .dem {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    z-index: 9;
+    background-color: rgba(0, 0, 0, 1);
+    -webkit-transition: All 0.5s linear;
+    -moz-transition: All 0.5s linear;
+    -ms-transition: All 0.5s linear;
+    -o-transition: All 0.5s linear;
+    transition: All 0.5s linear;
+}
+
+.article_list .item:hover .dem {
+    opacity: 0.7;
+}
+
+/*mobile 용*/
+/*320 이상 768 이하*/
+@media screen and (max-width: 767px) {
+    .tt02 {
+        padding:20px 0 10px;
+        color: #232323;
+        font-size: 14px;
+    }
+
+    .tt03 {
+        padding: 10px 0 20px;
+        color: #666;
+        font-size: 14px;
+    }
+
+    .stt {
+        font-size: 12px;
+        color: #888;
+        line-height: 1.4;
+    }
+
+    .stt2 {
+        padding-left: 15px;
+        font-size: 12px;
+        color: #999;
+        line-height: 1.3;
+    }
+
+    .pk_img {
+        width: 100%;
+    }
+
+    h3.head-sub {
+        margin-top: 30px;
+    }
+
+    .tablebox img {
+        width: 100%
+    }
+
+    .h3title {
+        line-height: 1.2;
+        text-align: left;
+        font-weight: 500;
+        font-size: 23px;
+        color: inherit;
+    }
+
+    .listinfo.pj .box {
+        width: 100%;
+    }
+
+    .listinfo.pj .box.row {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .listinfo.pj .box.row .item {
+        box-sizing: border-box;
+        width: calc((100% - 10px)/ 2);
+        vertical-align: middle;
+    }
+
+    .listinfo.pj .box .item {
+        height: auto !important;
+        width: 100%;
+        padding: 10px 0 10px;
+        border: 1px solid #777;
+        margin: 0 0 15px 0;
+        position: relative;
+    }
+
+    .listinfo.pj .box .item .arrow {
+        position: absolute;
+        top: auto;
+        bottom: -23px;
+        left: 50%;
+        width: 28px;
+        height: 28px;
+        margin-left: -14px;
+        background: url('/images/ko/package/icon_arrow_m.png') no-repeat;
+        background-size: 28px 28px;
+        z-index: 999;
+    }
+
+    .listinfo.pj .box .item dl {
+        text-align: center;
+        line-height: 1.6;
+    }
+
+    .listinfo.pj .box .item dl dt {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    .listinfo.pj .box .item dl dd.n01 {
+        margin-top: 10px;
+        font-size: 12px;
+    }
+
+    .listinfo.pj .box .item.n03 {
+        padding: 10px 0;
+    }
+
+    .listinfo.pj .box .item.n02 {
+        padding: 10px 0;
+        height: auto;
+    }
+
+    .listinfo.pj .box .item.n03.nu1 {
+        padding: 10px 0;
+        height: auto;
+    }
+
+    .listinfo.pj .box .item.n06 {
+        padding: 10px 0;
+        height: auto;
+    }
+
+    /*제주 패키지 스타일 2*/
+    .pg_st01 {
+        padding: 20px 15px;
+    }
+
+    .pg_st01 ul {
+        display: block;
+        padding: 22px 15px;
+    }
+
+    .pg_st01 ul li {
+        display: block;
+    }
+
+    .pg_st01 ul li:nth-child(1) {
+        width: auto;
+        height: auto;
+        line-height: 1.5;
+        border-right: 0;
+        font-size: 19px;
+        text-align: left;
+    }
+
+    .pg_st01 ul li:nth-child(2) {
+        padding: 0;
+        font-size: 14px;
+        color: #232323;
+        line-height: 1.5;
+    }
+
+    .imglistbox ul li {
+        width: calc(50% - 7px);
+        padding-bottom: 10px;
+    }
+
+    .imglistbox ul li:nth-child(odd) {
+        padding-right: 7px;
+    }
+
+    .imglistbox ul li:nth-child(even) {
+        padding-left: 7px;
+    }
+
+    .imglistbox ul li span {
+        display: block;
+        min-height: 45px;
+        padding-top: 5px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    /*190826 activity index mobile*/
+    .titlebox {
+        position: relative;
+    }
+
+    .titlebox h5 {
+        color: #232323;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: -0.05em;
+    }
+
+    .actbtn {
+        display: block;
+        margin-bottom: 30px;
+        height: 35px;
+        line-height: 35px;
+        text-align: center;
+        font-size: 14px;
+        border: 1px solid #232323;
+        color: #232323;
+    }
+
+    .actindexarea_m .box {
+        margin-top: 15px;
+    }
+
+    .actindexarea_m .box img {
+        width: 100%;
+    }
+
+    .actindexarea_m .box dl dt {
+        height: 42px;
+        line-height: 42px;
+        color: #232323;
+        font-size: 16px;
+        letter-spacing: -0.025em;
+        font-weight: 700;
+        background: url('images/link_arrow.png') 100% 50% no-repeat;
+        background-size: 7px 12px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .actindexarea_m .box .btn {
+        float: right;
+        margin-top: 13px;
+        text-align: right;
+    }
+
+    .inbox:after {
+        content: '.';
+        display: block;
+        font-size: 0;
+        height: 0px;
+        line-height: 0;
+        clear: both;
+    }
+
+    .actlist.m {
+        float: right;
+        margin-bottom: 20px;
+        display: block;
+        padding: 8px 12px;
+        border: 1px solid #ddd;
+    }
+
+    .actlist.m li {
+        padding-left: 25px;
+        font-size: 15px;
+        color: #666;
+    }
+
+    .actlist.m li:first-child {
+        padding-left: 0;
+    }
+
+    /*19.10.25 리스트 추가*/
+    .list_pm .time {
+        padding-bottom: 8px;
+        font-size: 15px;
+    }
+
+    .list_pm ul {
+        display: table;
+        width: 100%;
+    }
+
+    .list_pm ul li {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .list_pm ul li span {
+        padding-bottom: 5px;
+        font-size: 14px;
+    }
+
+    .list_pm ul li p {
+        font-size: 14px;
+    }
+
+    .list_pm ul li.img {
+        max-width: auto;
+    }
+
+    .list_pm ul li.text {
+        padding-left: 10px;
+    }
+
+    /*20.02.14 객실패키지혜택타입 추가*/
+    .privilege ul li {
+        float: left;
+        width: 50%;
+    }
+
+    .privilege ul li .img {
+        padding: 5px 0;
+        border: 0;
+    }
+
+    .privilege ul li:nth-child(even) .img {
+        border-left: 1px solid #dddddd;
+    }
+
+    .privilege ul li img {
+        width: 64.5px;
+    }
+
+    .privilege ul li p {
+        font-size: 12px;
+    }
+
+    /*21.12.28 아티클페이지*/
+    .article_list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .article_list .item {
+        position: relative;
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        margin-top: 15px;
+    }
+
+    .article_list .item>a {
+        display: block;
+    }
+
+    .article_list .item img {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        Transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+
+    .article_list .item:hover img {
+        transform: translate(-50%, -50%);
+    }
+
+    .article_list .item .inb {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 15px;
+        z-index: 11;
+        color: #fff;
+    }
+
+    .article_list .item .inb .stxt {
+        padding-bottom: 5px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: -0.28px;
+    }
+
+    .article_list .item .inb .mtxt {
+        font-size: 19px;
+        font-weight: 900;
+        line-height: 32px;
+        letter-spacing: -0.48px;
+    }
+
+    .article_list .item .tagbx {
+        position: absolute;
+        bottom: 5px;
+        left: 5px;
+        height: 39px;
+        right: 10px;
+        z-index: 10;
+        color: #fff;
+        overflow: hidden;
+    }
+
+    .article_list .item .tagbx:after {
+        content: '.';
+        display: block;
+        font-size: 0;
+        height: 0px;
+        line-height: 0;
+        clear: both;
+    }
+
+    .article_list .item .tagbx li {
+        float: left;
+        margin-left: 5px;
+        margin-bottom: 10px;
+    }
+
+    .article_list .item .tagbx li span {
+        display: block;
+        padding: 4px 12px 5px;
+        color: #D1D1D1;
+        line-height: 20px;
+        font-size: 14px;
+        font-weight: 500;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 20px;
+    }
+}
+
+/* 모바일 - 스키버스 */
+.bus-ski-popup .common-pop-content {
+    padding-bottom: 75px;
+}
+
+.bus-ski-popup .foot-sticky-action {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.hide,.blind {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    visibility: hidden;
+    font-size: 0;
+    line-height: 0;
+}
+
+#j_f_point {
+    position: relative;
+    width: 100%;
+}
+
+#j_f_point .inwrap {
+    position: relative;
+    width: 1200px;
+    padding: 0 40px;
+    margin: auto;
+}
+
+#j_f_point .inwrap:after {
+    content: '.';
+    display: block;
+    font-size: 0;
+    height: 0px;
+    line-height: 0;
+    clear: both;
+}
+
+/*-- header -------------------------------*/
+#j_f_point .header {
+    position: relative;
+    width: 100%;
+    height: 106px;
+    z-index: 99;
+    background-color: #2a2a2a;
+}
+
+#j_f_point .header .top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 36px;
+    border-bottom: 1px solid #3b3b3b;
+    background-color: #2a2a2a;
+    z-index: 9;
+}
+
+#j_f_point .header .top h1 {
+    width: 126px;
+    height: 36px;
+}
+
+#j_f_point .header .top h1 a {
+    display: block;
+    width: 126px;
+    height: 36px;
+    background: url('/images/ko/join/header_logo.png') 0 50% no-repeat;
+}
+
+#j_f_point .header .top .profile {
+    position: absolute;
+    top: 0;
+    right: 40px;
+}
+
+#j_f_point .header .top .profile:after {
+    content: '.';
+    display: block;
+    font-size: 0;
+    height: 0px;
+    line-height: 0;
+    clear: both;
+}
+
+#j_f_point .header .top .profile li {
+    float: left;
+    height: 36px;
+    line-height: 34px;
+    color: #eceaea;
+    font-size: 14px;
+}
+
+#j_f_point .header .top .profile .n01 {
+    padding-right: 12px;
+}
+
+#j_f_point .header .top .profile .n02 {
+    padding-right: 6px;
+}
+
+#j_f_point .header .top .profile .n03 {
+    padding: 0 10px 0 8px;
+    background: url('/images/ko/join/line_01.png') 0 50% no-repeat;
+}
+
+#j_f_point .header .top .profile .n04 {
+    font-weight: bold;
+    color: #fec36e;
+}
+
+#j_f_point .header .top .profile .n04 span {
+    color: #fff;
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+#j_f_point .header .title {
+    position: relative;
+    padding-top: 37px;
+    height: 69px;
+    z-index: 1;
+}
+
+#j_f_point .header .title a {
+    display: block;
+    position: absolute;
+    top: 37px;
+    left: 50%;
+    width: 208px;
+    height: 69px;
+    margin-left: -104px;
+    background: url('/images/ko/join/header_title.png') 50% 50% no-repeat;
+}
+
+#j_f_point .header.fix .inwrap:after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 180px;
+    width: 127px;
+    height: 15px;
+    background: url('/images/ko/join/header_title.png') 0 0 no-repeat;
+    background-size: 127px 15px;
+    z-index: 99;
+}
+
+/* 다국어 ko/en */
+.new_lang li {
+    display: inline-block;
+    position: relative;
+    color: #fff;
+    font-size: 14px;
+    opacity: 0.5;
+}
+
+.new_lang li.on {
+    opacity: 1;
+}
+
+.new_lang li:first-child {
+    padding-right: 8px;
+    margin-right: 8px;
+}
+
+.new_lang li:first-child:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: 0;
+    width: 1px;
+    height: 11px;
+    background-color: #fff;
+}
+
+/*모바일 ko/en */
+.new_lang_m {
+    background: #eaebed;
+}
+
+.new_lang_m ul {
+    border-bottom: 1px solid #fff;
+    height: 35px;
+    line-height: 33px;
+    padding: 0 25px;
+    margin-bottom: 10px;
+}
+
+.new_lang_m ul li {
+    display: inline-block;
+    position: relative;
+    color: #232323;
+    font-size: 12px;
+    opacity: 0.5;
+}
+
+.new_lang_m ul li.on {
+    opacity: 1;
+}
+
+.new_lang_m ul li:first-child {
+    padding-right: 8px;
+    margin-right: 8px;
+}
+
+.new_lang_m ul li:first-child:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 12px;
+    right: 0;
+    width: 1px;
+    height: 8px;
+    background-color: #c1c2c3;
+}
+
+/*20230120 단지안내도 리뉴얼 pc*/
+.ppbBlockNew * {
+    box-sizing: border-box;
+}
+
+.ppbBlockNew.pc {
+    padding-top: 10px;
+}
+
+.ppbBlockNew.pc .tabBox {
+    margin-bottom: 32px;
+    cursor: pointer;
+}
+
+.ppbBlockNew.pc .tabBox ul {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #E2E2E2;
+}
+
+.ppbBlockNew.pc .tabBox ul li {
+    width: 11.1111%;
+    margin-bottom: -1px;
+}
+
+.ppbBlockNew.pc .tabBox ul li a {
+    position: relative;
+    display: block;
+    height: 125px;
+    padding-top: 69px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.015em;
+    color: #666;
+    font-weight: 400;
+    background-repeat: no-repeat;
+    background-size: 44px 44px;
+    background-position: 50% 0;
+}
+
+.ppbBlockNew.pc .tabBox ul li:hover a,.ppbBlockNew.pc .tabBox ul li.act a {
+    color: #00AA3C;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.ppbBlockNew.pc .tabBox ul li:hover a:after,.ppbBlockNew.pc .tabBox ul li.act a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: #00AA3C;
+    border-radius: 3px;
+}
+
+.ppbBlockNew.pc .tabBox ul li.tab01 a {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/blocktab_01.png');
+}
+
+.ppbBlockNew.pc .tabBox ul li.tab02 a {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/blocktab_02.png');
+}
+
+.ppbBlockNew.pc .tabBox ul li.tab03 a {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/blocktab_03.png');
+}
+
+.ppbBlockNew.pc .tabBox ul li.tab04 a {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/blocktab_04.png');
+}
+
+.ppbBlockNew.pc .tabBox ul li.tab05 a {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/blocktab_05.png');
+}
+
+.ppbBlockNew.pc .tabBox ul li.tab06 a {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/blocktab_06.png');
+}
+
+.ppbBlockNew.pc .tabBox ul li.tab07 a {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/blocktab_07.png');
+}
+
+.ppbBlockNew.pc .tabBox ul li.tab08 a {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/blocktab_08.png');
+}
+
+.ppbBlockNew.pc .tabBox ul li.tab09 a {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/blocktab_09.png');
+}
+
+.ppbBlockNew.pc .tabBox ul li.tab01.act a,.ppbBlockNew.pc .tabBox ul li.tab01:hover a {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/blocktab_01_on.png');
+}
+
+.ppbBlockNew.pc .tabBox ul li.tab02.act a,.ppbBlockNew.pc .tabBox ul li.tab02:hover a {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/blocktab_02_on.png');
+}
+
+.ppbBlockNew.pc .tabBox ul li.tab03.act a,.ppbBlockNew.pc .tabBox ul li.tab03:hover a {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/blocktab_03_on.png');
+}
+
+.ppbBlockNew.pc .tabBox ul li.tab04.act a,.ppbBlockNew.pc .tabBox ul li.tab04:hover a {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/blocktab_04_on.png');
+}
+
+.ppbBlockNew.pc .tabBox ul li.tab05.act a,.ppbBlockNew.pc .tabBox ul li.tab05:hover a {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/blocktab_05_on.png');
+}
+
+.ppbBlockNew.pc .tabBox ul li.tab06.act a,.ppbBlockNew.pc .tabBox ul li.tab06:hover a {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/blocktab_06_on.png');
+}
+
+.ppbBlockNew.pc .tabBox ul li.tab07.act a,.ppbBlockNew.pc .tabBox ul li.tab07:hover a {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/blocktab_07_on.png');
+}
+
+.ppbBlockNew.pc .tabBox ul li.tab08.act a,.ppbBlockNew.pc .tabBox ul li.tab08:hover a {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/blocktab_08_on.png');
+}
+
+.ppbBlockNew.pc .tabBox ul li.tab09.act a,.ppbBlockNew.pc .tabBox ul li.tab09:hover a {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/blocktab_09_on.png');
+}
+
+.ppbBlockNew.pc .mapWrap {
+    position: relative;
+    width: 1200px;
+    height: 600px;
+    overflow: hidden;
+}
+
+.ppbBlockNew.pc .mapWrap .mapImg {
+    position: relative;
+}
+
+.ppbBlockNew.pc .mapWrap .mapImg .allMap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1200px;
+    height: 600px;
+    z-index: 2;
+}
+
+.ppbBlockNew.pc .mapWrap .mapImg .mapIn {
+    position: relative;
+    width: 1200px;
+    height: 600px;
+    z-index: 1;
+}
+
+.ppbBlockNew.pc .mapWrap .zoom {
+    position: absolute;
+    bottom: 33px;
+    right: 33px;
+    width: 44px;
+    height: 44px;
+    background: #fff url('/images/ko/guide/pyeongchang/operation/reNew2023/zoom_in.png') 50% no-repeat;
+    border-radius: 22px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.ppbBlockNew.pc .mapWrap .zoom.act {
+    background: #fff url('/images/ko/guide/pyeongchang/operation/reNew2023/zoom_out.png') 50% no-repeat;
+}
+
+.ppbBlockNew.pc .icoBox {
+    position: absolute;
+    width: 1200px;
+    height: 600px;
+    top: 0;
+    left: 0;
+    z-index: 4;
+}
+
+.ppbBlockNew.pc .icoBox .icoM {
+    position: absolute;
+    padding: 0 0 0 37px;
+    height: 36px;
+    border: 2px solid transparent;
+    border-radius: 18px;
+    background-size: 26px 26px;
+    background-repeat: no-repeat;
+    background-position: 5px 3px;
+    z-index: 5;
+    cursor: pointer;
+}
+
+.ppbBlockNew.pc .icoBox .icoM span {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 32px;
+    color: #232323;
+    padding-right: 7px;
+}
+
+.ppbBlockNew.pc .icoBox .icoM:hover, .ppbBlockNew.pc .icoBox .icoM.act {
+    border: 2px solid #003CA0;
+    background-color: rgba(255,255,255,0.7);
+}
+
+.ppbBlockNew.pc .icoBox .icoM.not {
+    cursor: default;
+}
+
+.ppbBlockNew.pc .icoBox .icoM.not:hover, .ppbBlockNew.pc .icoBox .icoM.not.act {
+    border: 2px solid transparent;
+    background-color: transparent;
+}
+
+.ppbBlockNew.pc .icoBox .icoM.ic00 {
+    width: 66px;
+    height: 24px;
+    padding: 0 0 0 29px;
+    border: 0;
+    background: #00AA3C url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_00.png') 9px 4px no-repeat;
+    border-radius: 12px;
+}
+
+.ppbBlockNew.pc .icoBox .icoM.ic00 span {
+    padding: 0;
+    line-height: 24px;
+    color: #fff;
+    font-size: 10px;
+}
+
+.ppbBlockNew.pc .icoBox .icoM.ic01 {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_01.png');
+}
+
+.ppbBlockNew.pc .icoBox .icoM.ic02 {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_02.png');
+}
+
+.ppbBlockNew.pc .icoBox .icoM.ic03 {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_03.png');
+}
+
+.ppbBlockNew.pc .icoBox .icoM.ic04 {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_04.png');
+}
+
+.ppbBlockNew.pc .icoBox .icoM.ic05 {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_05.png');
+}
+
+.ppbBlockNew.pc .icoBox .icoM.ic06 {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_06.png');
+}
+
+.ppbBlockNew.pc .icoBox .icoM.ic07 {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_07.png');
+}
+
+.ppbBlockNew.pc .icoBox .icoM.ic08 {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_08.png');
+}
+
+.ppbBlockNew.pc .icoBox .icoM.ic09 {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_09.png');
+}
+
+.ppbBlockNew.pc .icoBox .icoM.ic10 {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_10.png');
+}
+
+.ppbBlockNew.pc .icoBox .icoM.ic11 {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_11.png');
+}
+
+.ppbBlockNew.pc .icoBox .icoM.ic12 {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_12.png');
+}
+
+.ppbBlockNew.pc .icoBox .icoM.ic13 {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_13.png');
+}
+
+.ppbBlockNew.pc .icoBox .icoM.ic14 {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_14.png');
+}
+
+.ppbBlockNew.pc .icoBox .icoM.ic15 {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_15.png');
+}
+
+.ppbBlockNew.pc .icoBox .icoM.ic16 {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_16.png');
+}
+
+.ppbBlockNew.pc .icoBox .icoM.ic01:hover,.ppbBlockNew.pc .icoBox .icoM.ic01.act {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_01_on.png');
+}
+
+.ppbBlockNew.pc .icoBox .icoM.ic02:hover,.ppbBlockNew.pc .icoBox .icoM.ic02.act {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_02_on.png');
+}
+
+.ppbBlockNew.pc .icoBox .icoM.ic03:hover,.ppbBlockNew.pc .icoBox .icoM.ic03.act {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_03_on.png');
+}
+
+.ppbBlockNew.pc .icoBox .icoM.ic04:hover,.ppbBlockNew.pc .icoBox .icoM.ic04.act {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_04_on.png');
+}
+
+.ppbBlockNew.pc .icoBox .icoM.ic05:hover,.ppbBlockNew.pc .icoBox .icoM.ic05.act {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_05_on.png');
+}
+
+.ppbBlockNew.pc .icoBox .icoM.ic06:hover,.ppbBlockNew.pc .icoBox .icoM.ic06.act {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_06_on.png');
+}
+
+.ppbBlockNew.pc .icoBox .icoM.ic07:hover,.ppbBlockNew.pc .icoBox .icoM.ic07.act {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_07_on.png');
+}
+
+.ppbBlockNew.pc .icoBox .icoM.ic08:hover,.ppbBlockNew.pc .icoBox .icoM.ic08.act {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_08_on.png');
+}
+
+.ppbBlockNew.pc .icoBox .icoM.ic09:hover,.ppbBlockNew.pc .icoBox .icoM.ic09.act {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_09_on.png');
+}
+
+.ppbBlockNew.pc .icoBox .icoM.ic10:hover,.ppbBlockNew.pc .icoBox .icoM.ic10.act {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_10_on.png');
+}
+
+.ppbBlockNew.pc .icoBox .icoM.ic11:hover,.ppbBlockNew.pc .icoBox .icoM.ic11.act {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_11_on.png');
+}
+
+.ppbBlockNew.pc .icoBox .icoM.ic12:hover,.ppbBlockNew.pc .icoBox .icoM.ic12.act {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_12_on.png');
+}
+
+.ppbBlockNew.pc .icoBox .icoM.ic13:hover,.ppbBlockNew.pc .icoBox .icoM.ic13.act {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_13_on.png');
+}
+
+.ppbBlockNew.pc .icoBox .icoM.ic14:hover,.ppbBlockNew.pc .icoBox .icoM.ic14.act {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_14_on.png');
+}
+
+.ppbBlockNew.pc .icoBox .icoM.ic15:hover,.ppbBlockNew.pc .icoBox .icoM.ic15.act {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_15_on.png');
+}
+
+.ppbBlockNew.pc .icoBox .icoM.ic16:hover,.ppbBlockNew.pc .icoBox .icoM.ic16.act {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_16_on.png');
+}
+
+.ppbBlockNew.pc .icoBox .icoM.ic01s {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_01s.png');
+}
+
+.ppbBlockNew.pc .icoBox .icoM.ic02s {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_02s.png');
+}
+
+.ppbBlockNew.pc .icoBox .icoM.ic03s {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_03s.png');
+}
+
+.ppbBlockNew.pc .icoBox .icoM.ic06s {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_06s.png');
+}
+
+.ppbBlockNew.pc .icoBox .icoM.ic10s {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_10s.png');
+}
+
+.ppbBlockNew.pc .icoBox .icoM.ic14s {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_14s.png');
+}
+
+.ppbBlockNew.pc .icoBox .icoM.ic15s {
+    background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_15s.png');
+}
+
+.ppbBlockNew.pc .viewBox {
+    position: absolute;
+    top: 33px;
+    right: 33px;
+    width: 324px;
+    height: 476px;
+    z-index: 5;
+}
+
+.ppbBlockNew.pc .viewBox:after {
+    position: absolute;
+    width: 324px;
+    height: 476px;
+    background-color: transparent;
+    z-index: 2;
+    content: "";
+}
+
+.ppbBlockNew.pc .viewBox .view {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    width: 324px;
+    height: 476px;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 6px;
+    z-index: 1;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -ms-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+}
+
+.ppbBlockNew.pc .viewBox .view.act {
+    z-index: 3;
+    opacity: 1;
+    left: 0;
+}
+
+.ppbBlockNew.pc .viewBox .view .bimg {
+    width: 324px;
+    height: 204px;
+    margin-bottom: 24px;
+}
+
+.ppbBlockNew.pc .viewBox .view>ul {
+    padding: 0 24px;
+}
+
+.ppbBlockNew.pc .viewBox .view>ul li:nth-child(1) {
+    font-size: 14px;
+    font-weight: 400;
+    color: #949494;
+    line-height: 20px;
+}
+
+.ppbBlockNew.pc .viewBox .view>ul li:nth-child(2) {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+    line-height: 26px;
+    margin-bottom: 12px;
+}
+
+.ppbBlockNew.pc .viewBox .view>ul li:nth-child(3) {
+    font-size: 15px;
+    font-weight: 400;
+    color: #787878;
+    line-height: 24px;
+}
+
+.ppbBlockNew.pc .viewBox .view>ul li:nth-child(4) {
+    position: relative;
+    margin-top: 12px;
+    padding-left: 36px;
+    font-size: 15px;
+    line-height: 24px;
+    color: #494949;
+    font-weight: 400;
+}
+
+.ppbBlockNew.pc .viewBox .view>ul li:nth-child(4) span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 36px;
+    display: block;
+}
+
+.ppbBlockNew.pc .viewBox .view>ul li p {
+    color: #000;
+}
+
+.ppbBlockNew.pc .viewBox .view .link {
+    position: absolute;
+    bottom: 23px;
+    right: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: right;
+}
+
+.ppbBlockNew.pc .viewBox .view .link a {
+    display: block;
+    margin-left: 16px;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 400;
+    text-decoration: underline;
+    color: #444745;
+}
+
+.ppbBlockNew.pc .road {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1200px;
+    height: 600px;
+    z-index: 2;
+}
+
+.ppbBlockNew.pc .road li {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1200px;
+    height: 600px;
+}
+
+.ppbBlockNew.pc .road li.act {
+    display: block;
+}
+
+.ppbBlockNew.pc .road .po {
+    position: absolute;
+    display: block;
+}
+
+.ppbBlockNew.pc .road .po .fnt1 {
+    font-size: 12px;
+    line-height: 17px;
+    font-weight: 500;
+    color: #EF5C5C;
+    display: block;
+    position: absolute;
+    top: 46px;
+    left: 40px;
+    word-break: keep-all;
+    width: 110px;
+}
+
+.ppbBlockNew.pc .itemBox {
+    position: absolute;
+    z-index: 2;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.ppbBlockNew.pc .itemBox:after {
+    content: "";
+    position: absolute;
+}
+
+.ppbBlockNew.pc .itemBox.it01:after {
+    top: 15px;
+    right: -52px;
+    width: 52px;
+    height: 8px;
+    background: url('/images/ko/guide/pyeongchang/operation/reNew2023/road/item_it01.png') no-repeat;
+}
+
+.ppbBlockNew.pc .itemBox.it02:after {
+    top: 5px;
+    right: -54px;
+    width: 54px;
+    height: 10px;
+    background: url('/images/ko/guide/pyeongchang/operation/reNew2023/road/item_it02.png') no-repeat;
+}
+
+.ppbBlockNew.pc .itemBox.it03:after {
+    bottom: -104px;
+    left: 0;
+    width: 91px;
+    height: 104px;
+    background: url('/images/ko/guide/pyeongchang/operation/reNew2023/road/item_it03.png') no-repeat;
+}
+
+.ppbBlockNew.pc .itemBox.it04:after {
+    top: 128px;
+    right: 16px;
+    width: 137px;
+    height: 147px;
+    background: url('/images/ko/guide/pyeongchang/operation/reNew2023/road/item_it04.png') no-repeat;
+}
+
+.ppbBlockNew.pc .itemBox.it05:after {
+    bottom: 38px;
+    left: 141px;
+    width: 137px;
+    height: 80px;
+    background: url('/images/ko/guide/pyeongchang/operation/reNew2023/road/item_it05.png') no-repeat;
+}
+
+.ppbBlockNew.pc .itemBox.it06:after {
+    top: 0px;
+    left: -75px;
+    width: 75px;
+    height: 87px;
+    background: url('/images/ko/guide/pyeongchang/operation/reNew2023/road/item_it06.png') no-repeat;
+}
+
+.ppbBlockNew.pc .itemBox.it07:after {
+    top: -10px;
+    right: -53px;
+    width: 53px;
+    height: 37px;
+    background: url('/images/ko/guide/pyeongchang/operation/reNew2023/road/item_it07.png') no-repeat;
+}
+
+.ppbBlockNew.pc .itemBox .tit {
+    height: 33px;
+    line-height: 33px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #666;
+    background-color: rgba(214, 214, 214, 0.7);
+    text-align: center;
+}
+
+.ppbBlockNew.pc .itemBox ul {
+    padding: 12px;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.ppbBlockNew.pc .itemBox ul li.icoM {
+    position: relative;
+}
+
+.ppbBlockNew.pc .itemBox2 {
+    position: absolute;
+    z-index: 2;
+    padding: 16px 24px;
+    background-color: #fff;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+}
+
+.ppbBlockNew.pc .itemBox2 .tit {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #000;
+}
+
+.ppbBlockNew.pc .itemBox2 ul {
+    padding-top: 15px;
+}
+
+.ppbBlockNew.pc .itemBox2 ul li {
+    margin-bottom: 4px;
+    padding-left: 29px;
+    background: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_check_off.png') 0 50% no-repeat;
+    cursor: pointer;
+}
+
+.ppbBlockNew.pc .itemBox2 ul li span {
+    position: relative;
+    display: block;
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: 400;
+    padding-right: 45px;
+}
+
+.ppbBlockNew.pc .itemBox2 ul li span:after {
+    position: absolute;
+    content: "";
+    top: 3px;
+    left: 55px;
+    min-width: 34px;
+    height: 17px;
+}
+
+.ppbBlockNew.pc .itemBox2 ul li.lvl1 span:after {
+    background: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/slope01.png') 0 50% no-repeat;
+}
+
+.ppbBlockNew.pc .itemBox2 ul li.lvl2 span:after {
+    background: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/slope02.png') 0 50% no-repeat;
+}
+
+.ppbBlockNew.pc .itemBox2 ul li.lvl3 span:after {
+    background: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/slope03.png') 0 50% no-repeat;
+}
+
+.ppbBlockNew.pc .itemBox2 ul li.lvl4 span:after {
+    background: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/slope04.png') 0 50% no-repeat;
+}
+
+.ppbBlockNew.pc .itemBox2 ul li.lvl5 span:after {
+    background: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/slope05.png') 0 50% no-repeat;
+}
+
+.ppbBlockNew.pc .itemBox2 ul li.act {
+    background: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_check_on.png') no-repeat;
+}
+
+.ppbBlockNew.pc .itemBox2 ul li:last-child {
+    margin-bottom: 0;
+}
+
+.ppbBlockNew.pc .slopeBox {
+    position: relative;
+    width: 1200px;
+    height: 600px;
+    z-index: 1;
+}
+
+.ppbBlockNew.pc .slopeBox .soloBg {
+    position: absolute;
+    z-index: 1;
+}
+
+.ppbBlockNew.pc .slopeBox .soloBg.sb01 {
+    width: 477px;
+    height: 540px
+}
+
+.ppbBlockNew.pc .slopeBox .slopeRoad {
+    display: none;
+    position: absolute;
+    width: 1200px;
+    height: 600px;
+    z-index: 2;
+}
+
+.ppbBlockNew.pc .slopeBox .slopeRoad.act {
+    display: block;
+}
+
+.ppbBlockNew.pc .slopeBox .slopeRoad>img {
+    position: absolute;
+    z-index: 1;
+}
+
+.ppbBlockNew.pc .slopeBox .slopeRoad .ligo {
+    position: absolute;
+    z-index: 2;
+}
+
+.ppbBlockNew.pc .slopeBox .slopeRoad .ligo span {
+    position: absolute;
+    min-width: 22px;
+    min-height: 22px;
+    word-break: break-all;
+    display: block;
+    top: 50%;
+    left: 50%;
+    font-size: 11px;
+    line-height: 11px;
+    padding-top: 25px;
+    background: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_17.png') 50% 0 no-repeat;
+    Transform: translate(-50%, -50%);
+    color: #232323;
+}
+
+.ppbBlockNew.pc .slopeBox .slopeRoad .ligo.lift01 {
+    width: 20px;
+    height: 147px;
+    background: url('/images/ko/guide/pyeongchang/operation/reNew2023/slope/lift01.png') no-repeat;
+    background-size: 20px 147px;
+}
+
+.ppbBlockNew.pc .slopeBox .slopeRoad .ligo.lift01 span {
+    top: 35%
+}
+
+.ppbBlockNew.pc .slopeBox .slopeRoad .ligo.lift02 {
+    width: 75px;
+    height: 334px;
+    background: url('/images/ko/guide/pyeongchang/operation/reNew2023/slope/lift02.png') no-repeat;
+    background-size: 75px 334px;
+}
+
+.ppbBlockNew.pc .slopeBox .slopeRoad .ligo.lift03 {
+    width: 158px;
+    height: 150px;
+    background: url('/images/ko/guide/pyeongchang/operation/reNew2023/slope/lift03.png') no-repeat;
+    background-size: 158px 150px;
+}
+
+.ppbBlockNew.pc .slopeBox .slopeRoad .ligo.lift04 {
+    width: 199px;
+    height: 189px;
+    background: url('/images/ko/guide/pyeongchang/operation/reNew2023/slope/lift04.png') no-repeat;
+    background-size: 199px 189px;
+}
+
+.ppbBlockNew.pc .slopeBox .slopeRoad .ligo.lift05 {
+    width: 103px;
+    height: 173px;
+    background: url('/images/ko/guide/pyeongchang/operation/reNew2023/slope/lift05.png') no-repeat;
+    background-size: 103px 173px;
+}
+
+.ppbBlockNew.pc .slopeBox .slopeRoad .ligo.lift06 {
+    width: 244px;
+    height: 162px;
+    background: url('/images/ko/guide/pyeongchang/operation/reNew2023/slope/lift06.png') no-repeat;
+    background-size: 244px 162px;
+}
+
+.ppbBlockNew.pc .slopeBox .slopeRoad .ligo.lift06 span {
+    top: 55%
+}
+
+.ppbBlockNew.pc .slopeBox .slopeRoad .ligo.lift07 {
+    width: 7px;
+    height: 362px;
+    background: url('/images/ko/guide/pyeongchang/operation/reNew2023/slope/lift07.png') no-repeat;
+    background-size: 7px 362px;
+}
+
+.ppbBlockNew.pc .slopeBox .slopeRoad .ligo.gondola {
+    width: 335px;
+    height: 495px;
+    background: url('/images/ko/guide/pyeongchang/operation/reNew2023/slope/gondola.png') no-repeat;
+    background-size: 335px 495px;
+}
+
+.ppbBlockNew.pc .slopeBox .slopeRoad .ligo.gondola span {
+    background: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_18.png') 50% 0 no-repeat;
+}
+
+.ppbBlockNew.pc .slopeBox .slopeRoad .point {
+    position: absolute;
+    font-size: 12px;
+    line-height: 17px;
+    padding: 6px 8px 6px 24px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    color: #000;
+    font-weight: 500;
+    z-index: 3;
+}
+
+.ppbBlockNew.pc .slopeBox .slopeRoad .point.lvl1 {
+    background: #fff url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/slope01.png') 8px 50% no-repeat;
+}
+
+.ppbBlockNew.pc .slopeBox .slopeRoad .point.lvl2 {
+    background: #fff url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/slope02.png') 8px 50% no-repeat;
+}
+
+.ppbBlockNew.pc .slopeBox .slopeRoad .point.lvl3 {
+    background: #fff url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/slope03.png') 8px 50% no-repeat;
+}
+
+.ppbBlockNew.pc .slopeBox .slopeRoad .point.lvl4 {
+    padding-left: 45px;
+    background: #fff url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/slope04.png') 8px 50% no-repeat;
+}
+
+.ppbBlockNew.pc .slopeBox .slopeRoad .point.lvl5 {
+    background: #fff url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/slope05.png') 8px 50% no-repeat;
+}
+
+/*mobile 용*/
+@media screen and (max-width: 767px) {
+    .mb0 {
+        margin-bottom:0;
+    }
+
+    .ma0 {
+        margin: 0;
+    }
+
+    .ppbBlockNew.mo {
+    }
+
+    .ppbBlockNew.mo .tabBox {
+        margin-bottom: 16px;
+        overflow-x: scroll;
+        position: sticky;
+        top: 0px;
+        z-index: 5;
+        background: white;
+    }
+
+    .ppbBlockNew.mo .tabBox ul {
+        display: flex;
+        flex-wrap: nowrap;
+        width: 576px;
+        border-bottom: 1px solid #E2E2E2;
+    }
+
+    .ppbBlockNew.mo .tabBox ul li {
+        width: 64px;
+        margin-bottom: -1px;
+    }
+
+    .ppbBlockNew.mo .tabBox ul li a {
+        position: relative;
+        display: block;
+        height: 80px;
+        padding-top: 44px;
+        text-align: center;
+        font-size: 10px;
+        line-height: 24px;
+        letter-spacing: -0.015em;
+        color: #666;
+        font-weight: 400;
+        background-repeat: no-repeat;
+        background-size: 32px 32px;
+        background-position: 50% 12px;
+    }
+
+    .ppbBlockNew.mo .tabBox ul li:hover a,.ppbBlockNew.mo .tabBox ul li.act a {
+        color: #00AA3C;
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+    .ppbBlockNew.mo .tabBox ul li:hover a:after,.ppbBlockNew.mo .tabBox ul li.act a:after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        content: "";
+        width: 100%;
+        height: 3px;
+        background-color: #00AA3C;
+        border-radius: 3px;
+    }
+
+    .ppbBlockNew.mo .tabBox ul li.tab01 a {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/blocktab_01.png');
+    }
+
+    .ppbBlockNew.mo .tabBox ul li.tab02 a {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/blocktab_02.png');
+    }
+
+    .ppbBlockNew.mo .tabBox ul li.tab03 a {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/blocktab_03.png');
+    }
+
+    .ppbBlockNew.mo .tabBox ul li.tab04 a {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/blocktab_04.png');
+    }
+
+    .ppbBlockNew.mo .tabBox ul li.tab05 a {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/blocktab_05.png');
+    }
+
+    .ppbBlockNew.mo .tabBox ul li.tab06 a {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/blocktab_06.png');
+    }
+
+    .ppbBlockNew.mo .tabBox ul li.tab07 a {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/blocktab_07.png');
+    }
+
+    .ppbBlockNew.mo .tabBox ul li.tab08 a {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/blocktab_08.png');
+    }
+
+    .ppbBlockNew.mo .tabBox ul li.tab09 a {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/blocktab_09.png');
+    }
+
+    .ppbBlockNew.mo .tabBox ul li.tab01.act a,.ppbBlockNew.mo .tabBox ul li.tab01:hover a {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/blocktab_01_on.png');
+    }
+
+    .ppbBlockNew.mo .tabBox ul li.tab02.act a,.ppbBlockNew.mo .tabBox ul li.tab02:hover a {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/blocktab_02_on.png');
+    }
+
+    .ppbBlockNew.mo .tabBox ul li.tab03.act a,.ppbBlockNew.mo .tabBox ul li.tab03:hover a {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/blocktab_03_on.png');
+    }
+
+    .ppbBlockNew.mo .tabBox ul li.tab04.act a,.ppbBlockNew.mo .tabBox ul li.tab04:hover a {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/blocktab_04_on.png');
+    }
+
+    .ppbBlockNew.mo .tabBox ul li.tab05.act a,.ppbBlockNew.mo .tabBox ul li.tab05:hover a {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/blocktab_05_on.png');
+    }
+
+    .ppbBlockNew.mo .tabBox ul li.tab06.act a,.ppbBlockNew.mo .tabBox ul li.tab06:hover a {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/blocktab_06_on.png');
+    }
+
+    .ppbBlockNew.mo .tabBox ul li.tab07.act a,.ppbBlockNew.mo .tabBox ul li.tab07:hover a {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/blocktab_07_on.png');
+    }
+
+    .ppbBlockNew.mo .tabBox ul li.tab08.act a,.ppbBlockNew.mo .tabBox ul li.tab08:hover a {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/blocktab_08_on.png');
+    }
+
+    .ppbBlockNew.mo .tabBox ul li.tab09.act a,.ppbBlockNew.mo .tabBox ul li.tab09:hover a {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/blocktab_09_on.png');
+    }
+
+    .ppbBlockNew.mo .mapWrap {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 160px;
+    }
+
+    .ppbBlockNew.mo .mapWrap .mapImg {
+        position: relative;
+        padding-top: 600px;
+    }
+
+    .ppbBlockNew.mo .mapWrap .mapImg .allMap {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+    }
+
+    /*
+    .ppbBlockNew.mo .mapWrap .mapImg .allMap .scBox{display:flex; justify-content:center; align-items:center; position:relative; min-width:1200px;}
+    .ppbBlockNew.mo .mapWrap .mapImg .allMap .map{width:100%; height:100%; vertical-align:middle;}*/
+    .ppbBlockNew.mo .mapWrap .mapImg .mapIn {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        overflow: auto;
+    }
+
+    .ppbBlockNew.mo .mapWrap .mapImg .mapIn .scBox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        min-width: 1200px;
+    }
+
+    .ppbBlockNew.mo .mapWrap .mapImg .mapIn .map {
+        width: 100%;
+        height: 100%;
+        vertical-align: middle;
+    }
+
+    .ppbBlockNew.mo .mapWrap .zoom {
+        position: absolute;
+        top: 33px;
+        right: 33px;
+        width: 44px;
+        height: 44px;
+        background: #fff url('/images/ko/guide/pyeongchang/operation/reNew2023/zoom_in.png') 50% no-repeat;
+        border-radius: 22px;
+        cursor: pointer;
+        z-index: 3;
+    }
+
+    .ppbBlockNew.mo .mapWrap .zoom.act {
+        background: #fff url('/images/ko/guide/pyeongchang/operation/reNew2023/zoom_out.png') 50% no-repeat;
+    }
+
+    .ppbBlockNew.mo .icoBox {
+        position: absolute;
+        width: 1200px;
+        height: 600px;
+        top: 0;
+        left: 0;
+        z-index: 4;
+    }
+
+    .ppbBlockNew.mo .icoBox .icoM {
+        position: absolute;
+        padding: 0 0 0 37px;
+        height: 36px;
+        border: 2px solid transparent;
+        border-radius: 18px;
+        background-size: 26px 26px;
+        background-repeat: no-repeat;
+        background-position: 5px 3px;
+        z-index: 5;
+        cursor: pointer;
+    }
+
+    .ppbBlockNew.mo .icoBox .icoM span {
+        display: block;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 32px;
+        color: #232323;
+        padding-right: 7px;
+    }
+
+    .ppbBlockNew.mo .icoBox .icoM:hover, .ppbBlockNew.mo .icoBox .icoM.act {
+        border: 2px solid #003CA0;
+        background-color: rgba(255,255,255,0.7);
+    }
+
+    .ppbBlockNew.mo .icoBox .icoM.not {
+        cursor: default;
+    }
+
+    .ppbBlockNew.mo .icoBox .icoM.not:hover, .ppbBlockNew.mo .icoBox .icoM.not.act {
+        border: 2px solid transparent;
+        background-color: transparent;
+    }
+
+    .ppbBlockNew.mo .icoBox .icoM.ic00 {
+        width: 66px;
+        height: 24px;
+        padding: 0 0 0 29px;
+        border: 0;
+        background: #00AA3C url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_00.png') 9px 4px no-repeat;
+        border-radius: 12px;
+    }
+
+    .ppbBlockNew.mo .icoBox .icoM.ic00 span {
+        padding: 0;
+        line-height: 24px;
+        color: #fff;
+        font-size: 10px;
+    }
+
+    .ppbBlockNew.mo .icoBox .icoM.ic01 {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_01.png');
+    }
+
+    .ppbBlockNew.mo .icoBox .icoM.ic02 {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_02.png');
+    }
+
+    .ppbBlockNew.mo .icoBox .icoM.ic03 {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_03.png');
+    }
+
+    .ppbBlockNew.mo .icoBox .icoM.ic04 {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_04.png');
+    }
+
+    .ppbBlockNew.mo .icoBox .icoM.ic05 {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_05.png');
+    }
+
+    .ppbBlockNew.mo .icoBox .icoM.ic06 {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_06.png');
+    }
+
+    .ppbBlockNew.mo .icoBox .icoM.ic07 {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_07.png');
+    }
+
+    .ppbBlockNew.mo .icoBox .icoM.ic08 {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_08.png');
+    }
+
+    .ppbBlockNew.mo .icoBox .icoM.ic09 {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_09.png');
+    }
+
+    .ppbBlockNew.mo .icoBox .icoM.ic10 {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_10.png');
+    }
+
+    .ppbBlockNew.mo .icoBox .icoM.ic11 {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_11.png');
+    }
+
+    .ppbBlockNew.mo .icoBox .icoM.ic12 {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_12.png');
+    }
+
+    .ppbBlockNew.mo .icoBox .icoM.ic13 {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_13.png');
+    }
+
+    .ppbBlockNew.mo .icoBox .icoM.ic14 {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_14.png');
+    }
+
+    .ppbBlockNew.mo .icoBox .icoM.ic15 {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_15.png');
+    }
+
+    .ppbBlockNew.mo .icoBox .icoM.ic16 {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_16.png');
+    }
+
+    .ppbBlockNew.mo .icoBox .icoM.ic01:hover,.ppbBlockNew.mo .icoBox .icoM.ic01.act {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_01_on.png');
+    }
+
+    .ppbBlockNew.mo .icoBox .icoM.ic02:hover,.ppbBlockNew.mo .icoBox .icoM.ic02.act {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_02_on.png');
+    }
+
+    .ppbBlockNew.mo .icoBox .icoM.ic03:hover,.ppbBlockNew.mo .icoBox .icoM.ic03.act {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_03_on.png');
+    }
+
+    .ppbBlockNew.mo .icoBox .icoM.ic04:hover,.ppbBlockNew.mo .icoBox .icoM.ic04.act {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_04_on.png');
+    }
+
+    .ppbBlockNew.mo .icoBox .icoM.ic05:hover,.ppbBlockNew.mo .icoBox .icoM.ic05.act {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_05_on.png');
+    }
+
+    .ppbBlockNew.mo .icoBox .icoM.ic06:hover,.ppbBlockNew.mo .icoBox .icoM.ic06.act {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_06_on.png');
+    }
+
+    .ppbBlockNew.mo .icoBox .icoM.ic07:hover,.ppbBlockNew.mo .icoBox .icoM.ic07.act {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_07_on.png');
+    }
+
+    .ppbBlockNew.mo .icoBox .icoM.ic08:hover,.ppbBlockNew.mo .icoBox .icoM.ic08.act {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_08_on.png');
+    }
+
+    .ppbBlockNew.mo .icoBox .icoM.ic09:hover,.ppbBlockNew.mo .icoBox .icoM.ic09.act {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_09_on.png');
+    }
+
+    .ppbBlockNew.mo .icoBox .icoM.ic10:hover,.ppbBlockNew.mo .icoBox .icoM.ic10.act {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_10_on.png');
+    }
+
+    .ppbBlockNew.mo .icoBox .icoM.ic11:hover,.ppbBlockNew.mo .icoBox .icoM.ic11.act {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_11_on.png');
+    }
+
+    .ppbBlockNew.mo .icoBox .icoM.ic12:hover,.ppbBlockNew.mo .icoBox .icoM.ic12.act {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_12_on.png');
+    }
+
+    .ppbBlockNew.mo .icoBox .icoM.ic13:hover,.ppbBlockNew.mo .icoBox .icoM.ic13.act {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_13_on.png');
+    }
+
+    .ppbBlockNew.mo .icoBox .icoM.ic14:hover,.ppbBlockNew.mo .icoBox .icoM.ic14.act {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_14_on.png');
+    }
+
+    .ppbBlockNew.mo .icoBox .icoM.ic15:hover,.ppbBlockNew.mo .icoBox .icoM.ic15.act {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_15_on.png');
+    }
+
+    .ppbBlockNew.mo .icoBox .icoM.ic16:hover,.ppbBlockNew.mo .icoBox .icoM.ic16.act {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_16_on.png');
+    }
+
+    .ppbBlockNew.mo .icoBox .icoM.ic01s {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_01s.png');
+    }
+
+    .ppbBlockNew.mo .icoBox .icoM.ic02s {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_02s.png');
+    }
+
+    .ppbBlockNew.mo .icoBox .icoM.ic03s {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_03s.png');
+    }
+
+    .ppbBlockNew.mo .icoBox .icoM.ic06s {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_06s.png');
+    }
+
+    .ppbBlockNew.mo .icoBox .icoM.ic10s {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_10s.png');
+    }
+
+    .ppbBlockNew.mo .icoBox .icoM.ic14s {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_14s.png');
+    }
+
+    .ppbBlockNew.mo .icoBox .icoM.ic15s {
+        background-image: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_15s.png');
+    }
+
+    .ppbBlockNew.mo .viewBox {
+        display: block;
+        position: fixed;
+        bottom: calc(-100% + 115px);
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        background-color: #fff;
+        border-radius: 12px 12px 0 0;
+    }
+
+    .ppbBlockNew.mo .viewBox .viewCk {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 45px;
+        background: url('/images/ko/guide/pyeongchang/operation/reNew2023/arrow down.png') 50% no-repeat;
+        background-size: 22px 14px;
+        z-index: 8;
+    }
+
+    .ppbBlockNew.mo .viewBox.actTop .viewCk {
+        top: 84px;
+        transform: rotate(180deg)
+    }
+
+    .ppbBlockNew.mo .viewBox.actTop {
+        bottom: 0;
+    }
+
+    .ppbBlockNew.mo .viewBox.actTop .dim {
+        display: block;
+    }
+
+    .ppbBlockNew.mo .viewBox.actTop .view {
+        height: calc(100% - 84px);
+    }
+
+    .ppbBlockNew.mo .viewBox .dim {
+        display: none;
+        background-color: rgba(0, 0, 0, 0.6);
+        width: 100%;
+        height: 100%;
+    }
+
+    .ppbBlockNew.mo .viewBox .view {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 45px 0 0;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        background-color: #fff;
+        border-radius: 12px 12px 0 0;
+        z-index: 1;
+        opacity: 0;
+    }
+
+    .ppbBlockNew.mo .viewBox .view.act {
+        z-index: 3;
+        opacity: 1;
+    }
+
+    .ppbBlockNew.mo .viewBox .view .bimg {
+        display: block;
+        width: auto;
+        max-height: 211px;
+        margin: auto;
+    }
+
+    .ppbBlockNew.mo .viewBox .view>ul {
+        padding: 0 20px;
+    }
+
+    .ppbBlockNew.mo .viewBox .view>ul li:nth-child(1) {
+        padding-bottom: 3px;
+        font-size: 14px;
+        font-weight: 400;
+        color: #949494;
+        line-height: 20px;
+    }
+
+    .ppbBlockNew.mo .viewBox .view>ul li:nth-child(2) {
+        padding-bottom: 20px;
+        font-size: 24px;
+        font-weight: 700;
+        color: #000;
+        line-height: 34px;
+    }
+
+    .ppbBlockNew.mo .viewBox .view>ul li:nth-child(3) {
+        padding-bottom: 20px;
+    }
+
+    .ppbBlockNew.mo .viewBox .view>ul li:nth-child(4) {
+        font-size: 16px;
+        font-weight: 400;
+        color: #666;
+        line-height: 24px;
+    }
+
+    .ppbBlockNew.mo .viewBox .view>ul li:nth-child(5) {
+        position: relative;
+        margin-top: 20px;
+        padding-left: 36px;
+        font-size: 16px;
+        line-height: 24px;
+        color: #494949;
+        font-weight: 400;
+    }
+
+    .ppbBlockNew.mo .viewBox .view>ul li:nth-child(5) span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40px;
+        display: block;
+    }
+
+    .ppbBlockNew.mo .viewBox .view .link {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 0 20px 20px 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .ppbBlockNew.mo .viewBox .view .link2 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 0 20px 20px 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .ppbBlockNew.mo .viewBox .view .link a {
+        display: block;
+        width: calc(100% - 2px);
+        height: 52px;
+        line-height: 50px;
+        border-radius: 6px;
+        background-color: #232323;
+        color: #fff;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    .ppbBlockNew.mo .viewBox .view .link2 a {
+        display: block;
+        width: calc(50% - 4px);
+        height: 52px;
+        line-height: 50px;
+        border-radius: 6px;
+        background-color: #232323;
+        color: #fff;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    .ppbBlockNew.mo .viewBox .view .link a[disabled] {
+        background-color: #ccc;
+        color: #666;
+    }
+
+    .ppbBlockNew.mo .viewBox .view .link2 a[disabled] {
+        background-color: #ccc;
+        color: #666;
+    }
+
+    .ppbBlockNew.mo .road {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1200px;
+        height: 600px;
+        z-index: 2;
+    }
+
+    .ppbBlockNew.mo .road li {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1200px;
+        height: 600px;
+    }
+
+    .ppbBlockNew.mo .road li.act {
+        display: block;
+    }
+
+    .ppbBlockNew.mo .road .po {
+        position: absolute;
+        display: block;
+    }
+
+    .ppbBlockNew.mo .road .po .fnt1 {
+        font-size: 12px;
+        line-height: 17px;
+        font-weight: 500;
+        color: #EF5C5C;
+        display: block;
+        position: absolute;
+        top: 46px;
+        left: 40px;
+        word-break: keep-all;
+        width: 110px;
+    }
+
+    .ppbBlockNew.mo .itemBox {
+        position: absolute;
+        z-index: 2;
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .ppbBlockNew.mo .itemBox:after {
+        content: "";
+        position: absolute;
+    }
+
+    .ppbBlockNew.mo .itemBox.it01:after {
+        top: 15px;
+        right: -52px;
+        width: 52px;
+        height: 8px;
+        background: url('/images/ko/guide/pyeongchang/operation/reNew2023/road/item_it01.png') no-repeat;
+    }
+
+    .ppbBlockNew.mo .itemBox.it02:after {
+        top: 5px;
+        right: -54px;
+        width: 54px;
+        height: 10px;
+        background: url('/images/ko/guide/pyeongchang/operation/reNew2023/road/item_it02.png') no-repeat;
+    }
+
+    .ppbBlockNew.mo .itemBox.it03:after {
+        bottom: -104px;
+        left: 0;
+        width: 91px;
+        height: 104px;
+        background: url('/images/ko/guide/pyeongchang/operation/reNew2023/road/item_it03.png') no-repeat;
+    }
+
+    .ppbBlockNew.mo .itemBox.it04:after {
+        top: 128px;
+        right: 16px;
+        width: 137px;
+        height: 147px;
+        background: url('/images/ko/guide/pyeongchang/operation/reNew2023/road/item_it04.png') no-repeat;
+    }
+
+    .ppbBlockNew.mo .itemBox.it05:after {
+        bottom: 38px;
+        left: 141px;
+        width: 137px;
+        height: 80px;
+        background: url('/images/ko/guide/pyeongchang/operation/reNew2023/road/item_it05.png') no-repeat;
+    }
+
+    .ppbBlockNew.mo .itemBox.it06:after {
+        top: 0px;
+        left: -75px;
+        width: 75px;
+        height: 87px;
+        background: url('/images/ko/guide/pyeongchang/operation/reNew2023/road/item_it06.png') no-repeat;
+    }
+
+    .ppbBlockNew.mo .itemBox.it07:after {
+        top: -10px;
+        right: -53px;
+        width: 53px;
+        height: 37px;
+        background: url('/images/ko/guide/pyeongchang/operation/reNew2023/road/item_it07.png') no-repeat;
+    }
+
+    .ppbBlockNew.mo .itemBox .tit {
+        height: 33px;
+        line-height: 33px;
+        font-size: 12px;
+        font-weight: 700;
+        color: #666;
+        background-color: rgba(214, 214, 214, 0.7);
+        text-align: center;
+    }
+
+    .ppbBlockNew.mo .itemBox ul {
+        padding: 12px;
+        background-color: rgba(255, 255, 255, 0.6);
+    }
+
+    .ppbBlockNew.mo .itemBox ul li.icoM {
+        position: relative;
+    }
+
+    .ppbBlockNew.mo .itemBox2 {
+        position: absolute;
+        z-index: 2;
+        padding: 16px 24px;
+        background-color: #fff;
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+        border-radius: 6px;
+    }
+
+    .ppbBlockNew.mo .itemBox2 .tit {
+        font-size: 17px;
+        font-weight: 500;
+        line-height: 24px;
+        color: #000;
+    }
+
+    .ppbBlockNew.mo .itemBox2 ul {
+        padding-top: 15px;
+    }
+
+    .ppbBlockNew.mo .itemBox2 ul li {
+        margin-bottom: 4px;
+        padding-left: 29px;
+        background: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_check_off.png') 0 50% no-repeat;
+        cursor: pointer;
+    }
+
+    .ppbBlockNew.mo .itemBox2 ul li span {
+        position: relative;
+        display: block;
+        line-height: 24px;
+        font-size: 16px;
+        font-weight: 400;
+        padding-right: 45px;
+    }
+
+    .ppbBlockNew.mo .itemBox2 ul li span:after {
+        position: absolute;
+        content: "";
+        top: 3px;
+        left: 55px;
+        min-width: 34px;
+        height: 17px;
+    }
+
+    .ppbBlockNew.mo .itemBox2 ul li.lvl1 span:after {
+        background: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/slope01.png') 0 50% no-repeat;
+    }
+
+    .ppbBlockNew.mo .itemBox2 ul li.lvl2 span:after {
+        background: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/slope02.png') 0 50% no-repeat;
+    }
+
+    .ppbBlockNew.mo .itemBox2 ul li.lvl3 span:after {
+        background: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/slope03.png') 0 50% no-repeat;
+    }
+
+    .ppbBlockNew.mo .itemBox2 ul li.lvl4 span:after {
+        background: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/slope04.png') 0 50% no-repeat;
+    }
+
+    .ppbBlockNew.mo .itemBox2 ul li.lvl5 span:after {
+        background: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/slope05.png') 0 50% no-repeat;
+    }
+
+    .ppbBlockNew.mo .itemBox2 ul li.act {
+        background: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_check_on.png') no-repeat;
+    }
+
+    .ppbBlockNew.mo .itemBox2 ul li:last-child {
+        margin-bottom: 0;
+    }
+
+    .ppbBlockNew.mo .slopeBox {
+        position: relative;
+        width: 1200px;
+        height: 600px;
+        z-index: 1;
+    }
+
+    .ppbBlockNew.mo .slopeBox .soloBg {
+        position: absolute;
+        z-index: 1;
+    }
+
+    .ppbBlockNew.mo .slopeBox .soloBg.sb01 {
+        width: 477px;
+        height: 540px
+    }
+
+    .ppbBlockNew.mo .slopeBox .slopeRoad {
+        display: none;
+        position: absolute;
+        width: 1200px;
+        height: 600px;
+        z-index: 2;
+    }
+
+    .ppbBlockNew.mo .slopeBox .slopeRoad.act {
+        display: block;
+    }
+
+    .ppbBlockNew.mo .slopeBox .slopeRoad>img {
+        position: absolute;
+        z-index: 1;
+    }
+
+    .ppbBlockNew.mo .slopeBox .slopeRoad .ligo {
+        position: absolute;
+        z-index: 2;
+    }
+
+    .ppbBlockNew.mo .slopeBox .slopeRoad .ligo span {
+        position: absolute;
+        min-width: 22px;
+        min-height: 22px;
+        word-break: break-all;
+        display: block;
+        top: 50%;
+        left: 50%;
+        font-size: 11px;
+        line-height: 11px;
+        padding-top: 25px;
+        background: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_17.png') 50% 0 no-repeat;
+        Transform: translate(-50%, -50%);
+        color: #232323;
+    }
+
+    .ppbBlockNew.mo .slopeBox .slopeRoad .ligo.lift01 {
+        width: 20px;
+        height: 147px;
+        background: url('/images/ko/guide/pyeongchang/operation/reNew2023/slope/lift01.png') no-repeat;
+        background-size: 20px 147px;
+    }
+
+    .ppbBlockNew.mo .slopeBox .slopeRoad .ligo.lift01 span {
+        top: 35%
+    }
+
+    .ppbBlockNew.mo .slopeBox .slopeRoad .ligo.lift02 {
+        width: 75px;
+        height: 334px;
+        background: url('/images/ko/guide/pyeongchang/operation/reNew2023/slope/lift02.png') no-repeat;
+        background-size: 75px 334px;
+    }
+
+    .ppbBlockNew.mo .slopeBox .slopeRoad .ligo.lift03 {
+        width: 158px;
+        height: 150px;
+        background: url('/images/ko/guide/pyeongchang/operation/reNew2023/slope/lift03.png') no-repeat;
+        background-size: 158px 150px;
+    }
+
+    .ppbBlockNew.mo .slopeBox .slopeRoad .ligo.lift04 {
+        width: 199px;
+        height: 189px;
+        background: url('/images/ko/guide/pyeongchang/operation/reNew2023/slope/lift04.png') no-repeat;
+        background-size: 199px 189px;
+    }
+
+    .ppbBlockNew.mo .slopeBox .slopeRoad .ligo.lift05 {
+        width: 103px;
+        height: 173px;
+        background: url('/images/ko/guide/pyeongchang/operation/reNew2023/slope/lift05.png') no-repeat;
+        background-size: 103px 173px;
+    }
+
+    .ppbBlockNew.mo .slopeBox .slopeRoad .ligo.lift06 {
+        width: 244px;
+        height: 162px;
+        background: url('/images/ko/guide/pyeongchang/operation/reNew2023/slope/lift06.png') no-repeat;
+        background-size: 244px 162px;
+    }
+
+    .ppbBlockNew.mo .slopeBox .slopeRoad .ligo.lift06 span {
+        top: 55%
+    }
+
+    .ppbBlockNew.mo .slopeBox .slopeRoad .ligo.lift07 {
+        width: 7px;
+        height: 362px;
+        background: url('/images/ko/guide/pyeongchang/operation/reNew2023/slope/lift07.png') no-repeat;
+        background-size: 7px 362px;
+    }
+
+    .ppbBlockNew.mo .slopeBox .slopeRoad .ligo.gondola {
+        width: 335px;
+        height: 495px;
+        background: url('/images/ko/guide/pyeongchang/operation/reNew2023/slope/gondola.png') no-repeat;
+        background-size: 335px 495px;
+    }
+
+    .ppbBlockNew.mo .slopeBox .slopeRoad .ligo.gondola span {
+        background: url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/ico_map_18.png') 50% 0 no-repeat;
+    }
+
+    .ppbBlockNew.mo .slopeBox .slopeRoad .point {
+        position: absolute;
+        font-size: 12px;
+        line-height: 17px;
+        padding: 6px 8px 6px 24px;
+        border: 1px solid #ccc;
+        border-radius: 50px;
+        color: #000;
+        font-weight: 500;
+        z-index: 3;
+    }
+
+    .ppbBlockNew.mo .slopeBox .slopeRoad .point.lvl1 {
+        background: #fff url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/slope01.png') 8px 50% no-repeat;
+    }
+
+    .ppbBlockNew.mo .slopeBox .slopeRoad .point.lvl2 {
+        background: #fff url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/slope02.png') 8px 50% no-repeat;
+    }
+
+    .ppbBlockNew.mo .slopeBox .slopeRoad .point.lvl3 {
+        background: #fff url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/slope03.png') 8px 50% no-repeat;
+    }
+
+    .ppbBlockNew.mo .slopeBox .slopeRoad .point.lvl4 {
+        padding-left: 45px;
+        background: #fff url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/slope04.png') 8px 50% no-repeat;
+    }
+
+    .ppbBlockNew.mo .slopeBox .slopeRoad .point.lvl5 {
+        background: #fff url('/images/ko/guide/pyeongchang/operation/reNew2023/ico/slope05.png') 8px 50% no-repeat;
+    }
+}

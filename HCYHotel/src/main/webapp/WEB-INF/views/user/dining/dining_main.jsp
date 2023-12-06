@@ -4,7 +4,7 @@
 
 <html lang="ko-kr" dir="ltr">
 
-<jsp:include page="../header.jsp"/>
+<jsp:include page="../include/header.jsp"/>
 
 			<div
 				class="JjjA-main JjjA-withDrawer JjjA-moved JjjA-new-nav-breakpoints"
@@ -458,7 +458,7 @@
 				</main>
 			</div>
 		<!-- footer -->
-		<jsp:include page="../footer.jsp"/>
+		<jsp:include page="../include/footer.jsp"/>
 		</div>
 	</div>
 	<link rel="stylesheet" type="text/css"

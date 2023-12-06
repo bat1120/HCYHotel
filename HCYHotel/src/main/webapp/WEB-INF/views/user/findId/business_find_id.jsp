@@ -796,7 +796,7 @@ googletag.cmd.push(function() {
 
 		</div>
 	</header> -->
-	<jsp:include page="header.jsp"/>
+	<jsp:include page="../include/header.jsp"/>
 
 	<div id="srch_wrap" class="wrap_search">
 		<form id="AKCFrm" name="search" action="/zf_user/search">
@@ -934,7 +934,7 @@ googletag.cmd.push(function() {
 		<div id="sri_wrap">
 			<div id="content">
 				<div class="wrap_title_recruit">
-					<h1 class="title_common">개인회원 아이디 찾기</h1>
+					<h1 class="title_common">사업자 아이디 찾기</h1>
 				</div>
 				<div class="help_find" id="person_find">
 
@@ -951,7 +951,7 @@ googletag.cmd.push(function() {
 								value="helpdesk/person-find-id-list"> <input
 								type="hidden" id="seq" name="seq" value="seq1701416239">
 							<fieldset>
-								<legend class="blind">개인회원 아이디 찾기 입력 폼</legend>
+								<legend class="blind">사업자 아이디 찾기 입력 폼</legend>
 								<p class="desc_find">회원정보에 등록된 정보로 아이디를 찾을 수 있습니다.</p>
 								<ul class="list_find">
 									<li>
@@ -1021,7 +1021,7 @@ googletag.cmd.push(function() {
 
 									<li>
 										<div class="wrap_lab">
-											<label for="findCite" class="lab_find">생년월일</label>
+											<label for="findCite" class="lab_find">사업자 번호</label>
 										</div>
 										<div class="wrap_input">
 											<span class="box_input"> <input type="text"
@@ -1110,7 +1110,7 @@ googletag.cmd.push(function() {
 				</div>
 			</div>
 		</div>
-		<jsp:include page="footer.jsp"/>
+		<jsp:include page="../include/header.jsp"/>
 <!-- 		<footer id="sri_footer" class="sri_footer">
 			<div class="wrap_footer">
 				<div class="links" role="navigation" aria-label="사람인 서비스 정책 및 이용문의">

@@ -14,7 +14,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 public class BusinessHotelDomain {
-	private String roomcode,id,bookingname;
+	private String roomcode,id,bookingname,status,roomname;
 	private int pplCnt;
 	private Date checkin,checkout;
 }

@@ -1,30 +1,43 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page info="" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>   
+<%@ page info="문의사항 상세" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <html lang="ko"><head>
-        <title>사람인</title>    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <title>[사전안내] 기업회원 휴면해제 안내 - 사람인</title>    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="Content-Language" content="ko-KR">
 <meta name="naver-site-verification" content="86455485e27cab6986d130e4c3b90c5b516820d1">
-<meta name="naver" content="nosublinks">    <meta property="og:title" content="사람인">
-<meta property="og:image" content="//www.saraminimage.co.kr/logo/saraminsnslogo.png">
+<meta name="title" content="[사전안내] 기업회원 휴면해제 안내 - 사람인">
+<meta name="writer" content="사람인">
+<meta name="keywords" content="사람인, 사람인공지사항, 사람인이벤트, 공지">
+<meta name="description" content="[사전안내] 기업회원 휴면해제 안내|새로운 이벤트, 뉴스, 소식, 채용공고 등을 사람인에서 확인해보세요!">
+<meta name="naver" content="nosublinks">    <meta property="og:title" content="[사전안내] 기업회원 휴면해제 안내 - 사람인">
 <meta property="og:site_name" content="사람인">
+<meta property="og:url" content="https://www.saramin.co.kr/zf_user/help/live/view?idx=109227">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ko_KR">
-<meta property="fb:app_id" content="1593727887570039">
+<meta property="og:image" content="http://www.saraminimage.co.kr/logo/saraminsnslogo.png">
 <meta property="og:image:width" content="200">
-<meta property="og:image:height" content="200">    <link href="/sri_css/sticky_assist.css?v=20231130163301" media="all" rel="stylesheet" type="text/css">
-<link href="/sri_css/layout.css?v=20231130163301" media="all" rel="stylesheet" type="text/css">
-<link href="/sri_css/pattern.css?v=20231130163301" media="all" rel="stylesheet" type="text/css">
-<link href="/sri_css/header_default.css?v=20231130163301" media="all" rel="stylesheet" type="text/css">
-<link href="/sri_css/gnb_default_override.css?v=20231130163301" media="all" rel="stylesheet" type="text/css">
-<link href="/sri_css/common_ui_keeping.css?v=20231130163301" media="all" rel="stylesheet" type="text/css">
-<link href="/sri_css/components.css?v=20231130163301" media="all" rel="stylesheet" type="text/css">
-<link href="/sri_css/help.css?v=20231130163301" media="all" rel="stylesheet" type="text/css">
+<meta property="og:image:height" content="200">
+<meta property="og:description" content="[사전안내] 기업회원 휴면해제 안내|새로운 이벤트, 뉴스, 소식, 채용공고 등을 사람인에서 확인해보세요!">
+<meta property="fb:app_id" content="1593727887570039">    <link href="android-app://kr.co.saramin.brandapp/https/m.saramin.co.kr/live-job/view?idx=109227" rel="alternate">
+<link href="http://localhost/HCYHotel/common/user/css/sticky_assist.css" media="all" rel="stylesheet" type="text/css">
+<link href="ios-app://739013038/https/m.saramin.co.kr/live-job/view?idx=109227" rel="alternate">
+<link href="https://m.saramin.co.kr/live-job/view?idx=109227" rel="alternate" type="text/html" title="mobile optimized version" media="only screen and (max-width: 640px)">
+<link href="http://localhost/HCYHotel/common/user/css/layout.css" media="all" rel="stylesheet" type="text/css">
+<link href="http://localhost/HCYHotel/common/user/css/pattern.css" media="all" rel="stylesheet" type="text/css">
+<link href="http://localhost/HCYHotel/common/user/css/header_default.css" media="all" rel="stylesheet" type="text/css">
+<link href="http://localhost/HCYHotel/common/user/css/gnb_default_override.css" media="all" rel="stylesheet" type="text/css">
+<link href="http://localhost/HCYHotel/common/user/css/common_ui_keeping.css" media="all" rel="stylesheet" type="text/css">
+<link href="http://localhost/HCYHotel/common/user/css/component.css" media="all" rel="stylesheet" type="text/css">
+<link href="http://localhost/HCYHotel/common/user/css/help.css" media="all" rel="stylesheet" type="text/css">
+<link href="http://feeds.feedburner.com/live-job" rel="alternate" type="application/rss+xml" title="취업 생중계 RSS Feed">
+<link href="http://feeds.feedburner.com/live-jobs-atom" rel="alternate" type="application/atom+xml" title="취업 생중계 Atom Feed">
+<link href="https://www.saramin.co.kr/zf_user/help/live/view?idx=109227" rel="canonical">
 <link href="/favicon.ico?ver=3" rel="favicon">
 <link href="/favicon.ico?ver=3" rel="icon" type="image/x-icon">
-<link href="/favicon.ico?ver=3" rel="shortcut icon" type="image/x-icon">        <script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-GR2XRGQ0FK&amp;l=dataLayer&amp;cx=c"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MK2GBBH"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/gtm/js?id=GTM-KN35GK2&amp;cid=1713712516.1694412036"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/plugins/ua/linkid.js"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="//static.airbridge.io/sdk/latest/airbridge.min.js"></script><script type="text/javascript" src="//www.saraminimage.co.kr/js/libs/jquery-1.11.1.min.js"></script>
+<link href="/favicon.ico?ver=3" rel="shortcut icon" type="image/x-icon">        <script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-GR2XRGQ0FK&amp;l=dataLayer&amp;cx=c"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MK2GBBH"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/gtm/js?id=GTM-KN35GK2&amp;cid=130649473.1701420491"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/plugins/ua/linkid.js"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="//static.airbridge.io/sdk/latest/airbridge.min.js"></script><script type="text/javascript" src="//www.saraminimage.co.kr/js/libs/jquery-1.11.1.min.js"></script>
     <script type="text/javascript">var $j = jQuery.noConflict();</script>
     <script type="text/javascript" src="/js/libs/saramin/common.js?v=20231130103248"></script>
     <!--[if lt IE 9]> <script type="text/javascript" src="//www.saramin.co.kr/js/html5shiv.min.js"></script><![endif]-->
@@ -42,7 +55,7 @@ var useSSL = 'https:' == document.location.protocol;
 var src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
 document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
 })();
-</script><script src="https://www.googletagservices.com/tag/js/gpt.js"></script><meta http-equiv="origin-trial" content="As0hBNJ8h++fNYlkq8cTye2qDLyom8NddByiVytXGGD0YVE+2CEuTCpqXMDxdhOMILKoaiaYifwEvCRlJ/9GcQ8AAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="AgRYsXo24ypxC89CJanC+JgEmraCCBebKl8ZmG7Tj5oJNx0cmH0NtNRZs3NB5ubhpbX/bIt7l2zJOSyO64NGmwMAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A/ERL66fN363FkXxgDc6F1+ucRUkAhjEca9W3la6xaLnD2Y1lABsqmdaJmPNaUKPKVBRpyMKEhXYl7rSvrQw+AkAAACNeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A6OdGH3fVf4eKRDbXb4thXA4InNqDJDRhZ8U533U/roYjp4Yau0T3YSuc63vmAs/8ga1cD0E3A7LEq6AXk1uXgsAAACTeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><script src="https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202311150101/pubads_impl.js" id="gpt-impl-0.28297083576971116" nonce=""></script>
+</script><script src="https://www.googletagservices.com/tag/js/gpt.js"></script><meta http-equiv="origin-trial" content="As0hBNJ8h++fNYlkq8cTye2qDLyom8NddByiVytXGGD0YVE+2CEuTCpqXMDxdhOMILKoaiaYifwEvCRlJ/9GcQ8AAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="AgRYsXo24ypxC89CJanC+JgEmraCCBebKl8ZmG7Tj5oJNx0cmH0NtNRZs3NB5ubhpbX/bIt7l2zJOSyO64NGmwMAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A/ERL66fN363FkXxgDc6F1+ucRUkAhjEca9W3la6xaLnD2Y1lABsqmdaJmPNaUKPKVBRpyMKEhXYl7rSvrQw+AkAAACNeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A6OdGH3fVf4eKRDbXb4thXA4InNqDJDRhZ8U533U/roYjp4Yau0T3YSuc63vmAs/8ga1cD0E3A7LEq6AXk1uXgsAAACTeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><script src="https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202311280101/pubads_impl.js" id="gpt-impl-0.35010684194326736" nonce=""></script>
 
 <script type="text/javascript">
 googletag.cmd.push(function() {
@@ -136,499 +149,9 @@ googletag.cmd.push(function() {
         <a href="#sri_section">본문 바로가기</a>
     </div>
     <!--// skip navi -->
-    <header id="sri_header" class="simple bubble">
-    <div class="wrap_header">
-        <a href="/" class="bi" aria-label="사람인" data-nav-track="ga_lead|section-gnb|global_menu|ci">
-            <span class="frame">
-                <svg aria-hidden="true" focusable="false"><use xlink:href="#svg_saramin_ci"></use></svg>
-            </span>
-        </a>
-
-        <div class="search">
-            <button class="btn_search" type="button" data-nav-track="ga_lead|section-gnb|global_menu|search">
-                <svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#svg_gnb_search"></use></svg>
-                <span class="keyword static">
-                    땡큐 베리 매치, 사람인!
-                </span>
-                <span class="keyword fixed">
-                    땡큐 베리 매치, 사람인!
-                </span>
-            </button>
-        </div>
-
-        <div class="utility">
-            <div class="sign">
-    <a href="/zf_user/auth" data-nav-track="ga_lead|section-gnb|layer_sign|signin" class="btn_sign signin">로그인</a>
-    <hr>
-    <a href="/zf_user/member/registration/join" data-nav-track="ga_lead|section-gnb|layer_sign|join" class="btn_sign signup">회원가입</a>
-</div>
-
-<a class="btn_profile add" href="/zf_user/resume/resume-manage?t_ref=main" data-nav-track="ga_lead|section-gnb|profile|registration">
-    <svg aria-hidden="true" focusable="false"><use xlink:href="#svg_gnb_plus"></use></svg>
-    프로필 등록
-</a>
-
-<div class="wrap_service">
-    <button class="btn_service" type="button" aria-expanded="false">
-        기업서비스
-        <svg aria-hidden="true" focusable="false"><use xlink:href="#svg_gnb_profile_bracket"></use></svg>
-    </button>
-    <div class="layer_member">
-        <ul class="services">
-            <li class="half_col">
-                <a href="/zf_user/auth?ut=c" data-nav-track="ga_lead|section-gnb|layer_comp_service|signin_comp">로그인</a>
-                <a href="/zf_user/member/registration/join?ut=c" data-nav-track="ga_lead|section-gnb|layer_comp_service|company_join">회원가입</a>
-            </li>
-            <li><a href="/zf_user/memcom/index/main" data-nav-track="ga_lead|section-gnb|layer_comp_service|musthome">기업홈</a></li>
-            <li><a href="/zf_user/memcom/recruit/select-recruit-type" data-nav-track="ga_lead|section-gnb|layer_comp_service|recruit-add">공고 등록</a></li>
-            <li><a href="/zf_user/company/recruit-manage?gnb_main=y" data-nav-track="ga_lead|section-gnb|layer_comp_service|recruit-manage">지원자 관리</a></li>
-            <li><a href="/zf_user/memcom/talent-pool/main/search" data-nav-track="ga_lead|section-gnb|layer_comp_service|talent_matching">인재풀</a></li>
-            <li><a href="/zf_user/memcom/ai-recruit/introduce" data-nav-track="ga_lead|section-gnb|layer_comp_service|smart_recruiter">스마트 리크루터</a></li>
-            <li><a href="/zf_user/memcom/preview/custom-guide" data-nav-track="ga_lead|section-gnb|layer_comp_service|verification">인적성 · 평가도구</a></li>
-            <li><a href="/zf_user/hr-magazine/list" data-nav-track="ga_lead|section-gnb|layer_comp_service|hr-magazine">HR매거진</a></li>
-            <li><a href="/zf_user/service/products" data-nav-track="ga_lead|section-gnb|layer_comp_service|products">채용상품</a></li>
-        </ul>
-    </div>
-</div>
-        </div>
-
-        <div class="navigation">
-            <button type="button" class="btn_menu" aria-haspopup="true" aria-expanded="false" data-nav-track="ga_lead|section-gnb|total_menu|open">
-                <svg aria-hidden="true" focusable="false"><use xlink:href="#svg_gnb_total_off"></use></svg>
-                <svg aria-hidden="true" focusable="false"><use xlink:href="#svg_gnb_total_on"></use></svg>
-                <span class="blind">전체메뉴</span>
-            </button>
-            <div class="wrap_gnb">
-                
-    <div class="major recruit">
-        <a class="depth1" href="/zf_user/jobs/list/domestic" data-nav-track="ga_lead|section-gnb|recruit|recruit">
-                            <span class="txt">채용정보</span>
-                    </a>
-                    <ul class="depth2">
-                                    <li class="">
-                        <a href="/zf_user/jobs/list/domestic" data-nav-track="ga_lead|section-gnb|recruit|area">
-                                                            <span class="txt">지역별</span>
-                                                    </a>
-                    </li>
-                                    <li class="">
-                        <a href="/zf_user/jobs/list/job-category" data-nav-track="ga_lead|section-gnb|recruit|job">
-                                                            <span class="txt">직업별</span>
-                                                    </a>
-                    </li>
-                                    <li class="">
-                        <a href="/zf_user/jobs/hot100" data-nav-track="ga_lead|section-gnb|recruit|hot100">
-                                                            <span class="txt">HOT100</span>
-                                                    </a>
-                    </li>
-                                    <li class="">
-                        <a href="/zf_user/jobs/list/headhunting" data-nav-track="ga_lead|section-gnb|recruit|headhunting">
-                                                            <span class="txt">헤드헌팅</span>
-                                                    </a>
-                    </li>
-                                    <li class="">
-                        <a href="/zf_user/jobs/theme/it-headhunting" data-nav-track="ga_lead|section-gnb|recruit|acceptance">
-                                                            <span class="txt">취업축하금</span>
-                                                    </a>
-                    </li>
-                                    <li class="">
-                        <a href="/zf_user/jobs/list/industry" data-nav-track="ga_lead|section-gnb|recruit|upjong">
-                                                            <span class="txt">산업별</span>
-                                                    </a>
-                    </li>
-                                    <li class="">
-                        <a href="/zf_user/jobs/theme/main" data-nav-track="ga_lead|section-gnb|recruit|theme">
-                                                            <span class="txt">채용관</span>
-                                                    </a>
-                    </li>
-                                    <li class="">
-                        <a href="/zf_user/curation" data-nav-track="ga_lead|section-gnb|recruit|curation">
-                                                            <span class="txt">큐레이션</span>
-                                                    </a>
-                    </li>
-                                    <li class="">
-                        <a href="/zf_user/jobs/list/dispatch" data-nav-track="ga_lead|section-gnb|recruit|dispatch">
-                                                            <span class="txt">파견대행</span>
-                                                    </a>
-                    </li>
-                                    <li class="">
-                        <a href="//gig.saramin.co.kr/search/project?utm_source=saramin&amp;utm_medium=menu&amp;utm_campaign=PC_job&amp;utm=term=gig_project_search&amp;_ga=2.96279324.1436692926.1687132560-325923010.1657504937" target="_blank" data-nav-track="ga_lead|section-gnb|recruit|gig">
-                                                            <span class="txt">프리랜서</span>
-                                                    </a>
-                    </li>
-                            </ul>
-            </div>
-    <div class="major">
-        <a class="depth1" href="/zf_user/service/talent-pool" data-nav-track="ga_lead|section-gnb|talent|talent">
-            <span class="cosmetic_link"><span class="baloon tag">연봉 UP은</span>포지션<span class="img">MATCH</span></span>        </a>
-                    <ul class="depth2">
-                                    <li class="">
-                        <a href="/zf_user/service/talent-pool" data-nav-track="ga_lead|section-gnb|talent|talent-pool">
-                                                            <span class="txt">홈</span>
-                                                    </a>
-                    </li>
-                                    <li class="">
-                        <a href="/zf_user/member/suggest/status-list" data-nav-track="ga_lead|section-gnb|talent|talent_status-list">
-                                                            <span class="txt">받은 제안</span>
-                                                    </a>
-                    </li>
-                                    <li class="">
-                        <a href="/zf_user/member/resume-manage/lookup-status" data-nav-track="ga_lead|section-gnb|talent|talent_resume_lookup">
-                                                            <span class="txt">이력서 열람 현황</span>
-                                                    </a>
-                    </li>
-                                    <li class="">
-                        <a href="/zf_user/memcom/talent-pool/main/search" data-nav-track="ga_lead|section-gnb|talent|talent_person">
-                                                            <span class="txt">인재풀</span>
-                                                    </a>
-                    </li>
-                            </ul>
-            </div>
-    <div class="major">
-        <a class="depth1" href="/zf_user/jobs/public/home" data-nav-track="ga_lead|section-gnb|recruit|public">
-                            <span class="txt">신입·인턴</span>
-                    </a>
-                    <ul class="depth2">
-                                    <li class="">
-                        <a href="/zf_user/jobs/public/home" data-nav-track="ga_lead|section-gnb|recruit|public_home">
-                                                            <span class="txt">홈</span>
-                                                    </a>
-                    </li>
-                                    <li class="">
-                        <a href="/zf_user/jobs/public/list" data-nav-track="ga_lead|section-gnb|recruit|public_list">
-                                                            <span class="txt">실시간 공고</span>
-                                                    </a>
-                    </li>
-                                    <li class="">
-                        <a href="/zf_user/jobs/public/top-group" data-nav-track="ga_lead|section-gnb|recruit|public_top-group">
-                                                            <span class="txt">그룹사별 채용</span>
-                                                    </a>
-                    </li>
-                                    <li class="">
-                        <a href="/zf_user/calendar" data-nav-track="ga_lead|section-gnb|recruit|public_calendar">
-                                                            <span class="txt">채용달력</span>
-                                                    </a>
-                    </li>
-                                    <li class="">
-                        <a href="/zf_user/public-recruit/schedule" data-nav-track="ga_lead|section-gnb|recruit|public_schedule">
-                                                            <span class="txt">공채예상일정</span>
-                                                    </a>
-                    </li>
-                                    <li class="">
-                        <a href="/zf_user/jobs/public/public-organization-recruitment-schedule" data-nav-track="ga_lead|section-gnb|recruit|public_organization_schedule">
-                                                            <span class="txt">공공기관 채용일정</span>
-                                                    </a>
-                    </li>
-                                    <li class="">
-                        <a href="/zf_user/public-recruit/job-fair-schedule" data-nav-track="ga_lead|section-gnb|recruit|public_jobfair_schedule">
-                                                            <span class="txt">채용설명회</span>
-                                                    </a>
-                    </li>
-                            </ul>
-            </div>
-    <div class="major">
-        <a class="depth1" href="/zf_user/company-review" data-nav-track="ga_lead|section-gnb|company_info|company_info">
-                            <span class="txt">기업·연봉</span>
-                    </a>
-                    <ul class="depth2">
-                                    <li class="">
-                        <a href="/zf_user/company-review" data-nav-track="ga_lead|section-gnb|company_info|review">
-                                                            <span class="txt">기업리뷰</span>
-                                                    </a>
-                    </li>
-                                    <li class="">
-                        <a href="/zf_user/salaries/total-salary/list" data-nav-track="ga_lead|section-gnb|company_info|salary">
-                                                            <span class="txt">연봉정보</span>
-                                                    </a>
-                    </li>
-                                    <li class="">
-                        <a href="/zf_user/interview-review" data-nav-track="ga_lead|section-gnb|company_info|interview">
-                                                            <span class="txt">면접후기</span>
-                                                    </a>
-                    </li>
-                                    <li class="">
-                        <a href="/zf_user/companylab" data-nav-track="ga_lead|section-gnb|company_info|company_lab">
-                                                            <span class="txt">기업연구소</span>
-                                                    </a>
-                    </li>
-                                    <li class="">
-                        <a href="/zf_user/company-info/sri-certification?seq=108" data-nav-track="ga_lead|section-gnb|company_info|certification">
-                                                            <span class="txt">기업큐레이션</span>
-                                                    </a>
-                    </li>
-                            </ul>
-            </div>
-    <div class="major">
-        <a class="depth1" href="/zf_user/careerplus" data-nav-track="ga_lead|section-gnb|contents|contents">
-                            <span class="txt">커리어성장</span>
-                    </a>
-                    <ul class="depth2">
-                                    <li class="">
-                        <a href="/zf_user/careerplus" data-nav-track="ga_lead|section-gnb|contents|home">
-                                                            <span class="txt">클래스</span>
-                                                    </a>
-                    </li>
-                                    <li class="">
-                        <a href="https://mentor-match.saramin.co.kr/" target="_blank" data-nav-track="ga_lead|section-gnb|contents|mentoring">
-                                                            <span class="txt">멘토링매치</span>
-                                                    </a>
-                    </li>
-                                    <li class="">
-                        <a href="/zf_user/tools/personal-statement-coaching-service" data-nav-track="ga_lead|section-gnb|contents|tool_personal-statement-coaching-service">
-                                                            <span class="txt">Ai자소서 코칭</span>
-                                                    </a>
-                    </li>
-                                    <li class="">
-                        <a href="/zf_user/company-section/road-map" data-nav-track="ga_lead|section-gnb|contents|roadmap">
-                                                            <span class="txt">이직로드맵</span>
-                                                    </a>
-                    </li>
-                                    <li class="">
-                        <a href="/zf_user/white-paper/office" data-nav-track="ga_lead|section-gnb|contents|white-paper">
-                                                            <span class="txt">JOB스토리</span>
-                                                    </a>
-                    </li>
-                                    <li class="">
-                        <a href="/zf_user/tools/character-counter" data-nav-track="ga_lead|section-gnb|contents|tool">
-                                                            <span class="txt">취업TOOL</span>
-                                                    </a>
-                    </li>
-                                    <li class="">
-                        <a href="/zf_user/help/live?category=10" data-nav-track="ga_lead|section-gnb|contents|jobdata_jobnews">
-                                                            <span class="txt">취업뉴스</span>
-                                                    </a>
-                    </li>
-                                    <li class="">
-                        <a href="/zf_user/pds-resume/resume-download" data-nav-track="ga_lead|section-gnb|contents|jobdata_resume-download">
-                                                            <span class="txt">이력서 양식</span>
-                                                    </a>
-                    </li>
-                                    <li class="">
-                        <a href="/zf_user/hr-magazine/list" data-nav-track="ga_lead|section-gnb|contents|hr-magazine">
-                                                            <span class="txt">HR매거진</span>
-                                                    </a>
-                    </li>
-                            </ul>
-            </div>
-    <div class="major">
-        <a class="depth1" href="/zf_user/company-review-qst-and-ans" data-nav-track="ga_lead|section-gnb|qst-and-ans|qst-and-ans">
-                            <span class="txt">커뮤니티</span>
-                    </a>
-                    <ul class="depth2">
-                                    <li class="">
-                        <a href="/zf_user/company-review-qst-and-ans" data-nav-track="ga_lead|section-gnb|qst-and-ans|qst_home">
-                                                            <span class="txt">홈</span>
-                                                    </a>
-                    </li>
-                                    <li class="">
-                        <a href="/zf_user/career-information/senior-list" data-nav-track="ga_lead|section-gnb|qst-and-ans|qst_careerinfo">
-                                                            <span class="txt">현직자 인터뷰</span>
-                                                    </a>
-                    </li>
-                                    <li class="">
-                        <a href="/zf_user/company-review-qst-and-ans/influencer-intro" data-nav-track="ga_lead|section-gnb|qst-and-ans|qst_expert">
-                                                            <span class="txt">프로 전문가</span>
-                                                    </a>
-                    </li>
-                            </ul>
-            </div>
-
-            </div>
-            <div class="familysite">
-                <a class="depth1 txt familysite_map" href="//gig.saramin.co.kr/?utm_source=saramin&amp;utm_medium=menu&amp;utm_campaign=PC_main_gnb&amp;utm=term=gig_project_search" target="_blank" rel="noreferrer" data-nav-track="ga_lead|section-gnb|menu|gig">혹시, <b>프리랜서</b>인가요?</a>
-<ul class="depth2">
-            <li class="gig">
-            <a href="//gig.saramin.co.kr/?utm_source=saramin&amp;utm_medium=menu&amp;utm_campaign=PC_main_gnb_sub&amp;utm=term=gig" target="_blank" rel="noreferrer" data-nav-track="ga_lead|section-gnb|menu|gig_sub">
-                프리랜서 N잡은                <span class="logo_family_service gig"><span class="blind">긱 로고</span></span>
-                <svg class="arrow" aria-hidden="true" focusable="false"><use xlink:href="#svg_gnb_profile_bracket"></use></svg>
-            </a>
-        </li>
-            <li class="jumpit">
-            <a href="https://www.jumpit.co.kr/" target="_blank" rel="noreferrer" data-nav-track="ga_lead|section-gnb|menu|jumpit_sub">
-                개발자 커리어는                <span class="logo_family_service jumpit"><span class="blind">점핏 로고</span></span>
-                <svg class="arrow" aria-hidden="true" focusable="false"><use xlink:href="#svg_gnb_profile_bracket"></use></svg>
-            </a>
-        </li>
-    </ul>            </div>
-        </div>
-    </div>
-    <div class="navi_total">
-        <div id="sri_index">
-    <div class="panel_menu menu">
-                <div class="major recruit">
-                            <span class="copy">공고를 찾는다면</span>
-                            <span class="depth1"><span class="txt">채용정보</span></span>
-                            <ul class="depth2">
-                                            <li><a href="/zf_user/jobs/list/domestic" data-nav-track="ga_lead|section-gnb|total_menu|recruit_area"><span class="txt">지역별</span></a></li>
-                                            <li><a href="/zf_user/jobs/list/job-category" data-nav-track="ga_lead|section-gnb|total_menu|recruit_job"><span class="txt">직업별</span></a></li>
-                                            <li><a href="/zf_user/jobs/hot100" data-nav-track="ga_lead|section-gnb|total_menu|recruit_hot100"><span class="txt">HOT100</span></a></li>
-                                            <li><a href="/zf_user/jobs/list/headhunting" data-nav-track="ga_lead|section-gnb|total_menu|recruit_headhunting"><span class="txt">헤드헌팅</span></a></li>
-                                            <li><a href="/zf_user/jobs/theme/it-headhunting" data-nav-track="ga_lead|section-gnb|total_menu|recruit_acceptance"><span class="txt">취업축하금</span></a></li>
-                                            <li><a href="/zf_user/jobs/list/industry" data-nav-track="ga_lead|section-gnb|total_menu|recruit_upjong"><span class="txt">산업별</span></a></li>
-                                            <li><a href="/zf_user/jobs/theme/main" data-nav-track="ga_lead|section-gnb|total_menu|recruit_theme"><span class="txt">채용관</span></a></li>
-                                            <li><a href="/zf_user/curation" data-nav-track="ga_lead|section-gnb|total_menu|recruit_curation"><span class="txt">큐레이션</span></a></li>
-                                            <li><a href="/zf_user/jobs/list/dispatch" data-nav-track="ga_lead|section-gnb|total_menu|recruit_dispatch"><span class="txt">파견대행</span></a></li>
-                                            <li><a href="//gig.saramin.co.kr/search/project?utm_source=saramin&amp;utm_medium=menu&amp;utm_campaign=PC_job&amp;utm=term=gig_project_search&amp;_ga=2.96279324.1436692926.1687132560-325923010.1657504937" data-nav-track="ga_lead|section-gnb|total_menu|recruit_gig"><span class="txt">프리랜서</span></a></li>
-                                    </ul>
-                    </div>
-                <div class="major">
-                            <span class="copy">제안을 받고싶다면</span>
-                            <span class="depth1"><span class="txt">포지션MATCH</span></span>
-                            <ul class="depth2">
-                                            <li><a href="/zf_user/service/talent-pool" data-nav-track="ga_lead|section-gnb|total_menu|talent-pool"><span class="txt">홈</span></a></li>
-                                            <li><a href="/zf_user/member/suggest/status-list" data-nav-track="ga_lead|section-gnb|total_menu|talent_status-list"><span class="txt">받은 제안</span></a></li>
-                                            <li><a href="/zf_user/member/resume-manage/lookup-status" data-nav-track="ga_lead|section-gnb|total_menu|talent_resume_lookup"><span class="txt">이력서 열람 현황</span></a></li>
-                                            <li><a href="/zf_user/memcom/talent-pool/main/search" data-nav-track="ga_lead|section-gnb|total_menu|talent_person"><span class="txt">인재풀</span></a></li>
-                                    </ul>
-                    </div>
-                <div class="major">
-                            <span class="depth1"><span class="txt">신입·인턴</span></span>
-                            <ul class="depth2">
-                                            <li><a href="/zf_user/jobs/public/home" data-nav-track="ga_lead|section-gnb|total_menu|public_home"><span class="txt">홈</span></a></li>
-                                            <li><a href="/zf_user/jobs/public/list" data-nav-track="ga_lead|section-gnb|total_menu|public_list"><span class="txt">실시간 공고</span></a></li>
-                                            <li><a href="/zf_user/jobs/public/top-group" data-nav-track="ga_lead|section-gnb|total_menu|public_top-group"><span class="txt">그룹사별 채용</span></a></li>
-                                            <li><a href="/zf_user/calendar" data-nav-track="ga_lead|section-gnb|total_menu|public_calendar"><span class="txt">채용달력</span></a></li>
-                                            <li><a href="/zf_user/public-recruit/schedule" data-nav-track="ga_lead|section-gnb|total_menu|public_schedule"><span class="txt">공채예상일정</span></a></li>
-                                            <li><a href="/zf_user/jobs/public/public-organization-recruitment-schedule" data-nav-track="ga_lead|section-gnb|total_menu|public_organization_schedule"><span class="txt">공공기관 채용일정</span></a></li>
-                                            <li><a href="/zf_user/public-recruit/job-fair-schedule" data-nav-track="ga_lead|section-gnb|total_menu|public_jobfair_schedule"><span class="txt">채용설명회</span></a></li>
-                                    </ul>
-                    </div>
-                <div class="major">
-                            <span class="depth1"><span class="txt">기업·연봉</span></span>
-                            <ul class="depth2">
-                                            <li><a href="/zf_user/company-review" data-nav-track="ga_lead|section-gnb|total_menu|company_review"><span class="txt">기업리뷰</span></a></li>
-                                            <li><a href="/zf_user/salaries/total-salary/list" data-nav-track="ga_lead|section-gnb|total_menu|company_salary"><span class="txt">연봉정보</span></a></li>
-                                            <li><a href="/zf_user/interview-review" data-nav-track="ga_lead|section-gnb|total_menu|company_interview"><span class="txt">면접후기</span></a></li>
-                                            <li><a href="/zf_user/companylab" data-nav-track="ga_lead|section-gnb|total_menu|companylab"><span class="txt">기업연구소</span></a></li>
-                                            <li><a href="/zf_user/company-info/sri-certification?seq=108" data-nav-track="ga_lead|section-gnb|total_menu|company_certification"><span class="txt">기업큐레이션</span></a></li>
-                                    </ul>
-                    </div>
-                <div class="major">
-                            <span class="depth1"><span class="txt">커리어성장</span></span>
-                            <ul class="depth2">
-                                            <li><a href="/zf_user/careerplus" data-nav-track="ga_lead|section-gnb|total_menu|contents"><span class="txt">클래스</span></a></li>
-                                            <li><a href="https://mentor-match.saramin.co.kr/" data-nav-track="ga_lead|section-gnb|total_menu|mentoring"><span class="txt">멘토링매치</span></a></li>
-                                            <li><a href="/zf_user/tools/personal-statement-coaching-service" data-nav-track="ga_lead|section-gnb|total_menu|contents_unemp-calculator"><span class="txt">Ai자소서 코칭</span></a></li>
-                                            <li><a href="/zf_user/company-section/road-map" data-nav-track="ga_lead|section-gnb|total_menu|contents_roadmap"><span class="txt">이직로드맵</span></a></li>
-                                            <li><a href="/zf_user/white-paper/office" data-nav-track="ga_lead|section-gnb|total_menu|contents_white-paper"><span class="txt">JOB스토리</span></a></li>
-                                            <li><a href="/zf_user/tools/character-counter" data-nav-track="ga_lead|section-gnb|total_menu|contents_tool"><span class="txt">취업TOOL</span></a></li>
-                                            <li><a href="/zf_user/help/live?category=10" data-nav-track="ga_lead|section-gnb|total_menu|contents_jobnews"><span class="txt">취업뉴스</span></a></li>
-                                            <li><a href="/zf_user/pds-resume/resume-download" data-nav-track="ga_lead|section-gnb|total_menu|contents_resume-download"><span class="txt">이력서 양식</span></a></li>
-                                    </ul>
-                    </div>
-                <div class="major">
-                            <span class="depth1"><span class="txt">커뮤니티</span></span>
-                            <ul class="depth2">
-                                            <li><a href="/zf_user/company-review-qst-and-ans" data-nav-track="ga_lead|section-gnb|total_menu|qst-and-ans"><span class="txt">홈</span></a></li>
-                                            <li><a href="/zf_user/career-information/senior-list" data-nav-track="ga_lead|section-gnb|total_menu|qst_careerinfo"><span class="txt">현직자 인터뷰</span></a></li>
-                                            <li><a href="/zf_user/company-review-qst-and-ans/influencer-intro" data-nav-track="ga_lead|section-gnb|total_menu|qst_expert"><span class="txt">프로 전문가</span></a></li>
-                                    </ul>
-                    </div>
-                <div class="minor">
-            <ul class="items">
-                <li><a href="/zf_user/help/help-word/main" data-nav-track="ga_lead|section-gnb|total_menu|help"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#svg_gnb_cs"></use></svg>고객센터</a></li>
-                <li><a href="/zf_user/help/live?listType=notice&amp;mem_type=a" data-nav-track="ga_lead|section-gnb|total_menu|notice"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#svg_gnb_notice"></use></svg>공지사항</a></li>
-                <li><a href="/zf_user/help/live?category=3" data-nav-track="ga_lead|section-gnb|total_menu|event"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="#svg_gnb_event"></use></svg>이벤트</a></li>
-            </ul>
-
-        </div>
-        <div class="personalize">
-                        <a href="/zf_user/member/persons/main" class="myhome" data-nav-track="ga_lead|section-gnb|total_menu|myhome">MY<svg class="arrow" aria-hidden="true" focusable="false"><use xlink:href="#svg_gnb_profile_bracket"></use></svg></a>
-            <ul class="items">
-                <li><a href="/zf_user/resume/resume-manage" data-nav-track="ga_lead|section-gnb|total_menu|resume-manage">이력서 관리</a></li>
-                <li><a href="/zf_user/persons/scrap-recruit" data-nav-track="ga_lead|section-gnb|total_menu|scrap">스크랩</a></li>
-                <li><a href="/zf_user/persons/apply-status-list" data-nav-track="ga_lead|section-gnb|total_menu|apply_list">지원현황</a></li>
-                <li><a href="/zf_user/jobs/read-jobs" data-nav-track="ga_lead|section-gnb|total_menu|recent">최근본</a></li>
-            </ul>
-                    </div>
-        <a href="//gig.saramin.co.kr/?utm_source=saramin&amp;utm_medium=menu&amp;utm_campaign=PC_main_gnb_total&amp;utm=term=gig" target="_blank" rel="noreferrer" class="extra extra1" data-nav-track="ga_lead|section-gnb|total_menu|gig">
-            <span class="txt">IT프리랜서는</span>
-            <span class="blind">사람인 긱</span>
-            <span class="logo">
-                <span class="logo_family_service gig"></span>
-            </span>
-        </a>
-        <a href="https://www.jumpit.co.kr/" target="_blank" rel="noreferrer" class="extra extra2" data-nav-track="ga_lead|section-gnb|total_menu|jumpit">
-            <span class="txt">개발자 커리어는</span>
-            <span class="blind">점핏</span>
-            <span class="logo">
-                <span class="logo_family_service jumpit"></span>
-            </span>
-        </a>
-        <a href="/zf_user/event/iam-ground-app/app-intro" target="_blank" rel="noreferrer" class="extra extra3" data-nav-track="ga_lead|section-gnb|total_menu|imground">
-            <span class="txt">인적성 면접준비는</span>
-            <span class="blind">아이엠그라운드 더 레디</span>
-            <span class="logo">
-                <span class="logo_family_service iamground"></span>
-            </span>
-        </a>
-    </div>
-    <div class="panel_menu links">
-                    <span class="copy">사람인에 처음왔다면</span>
-            <ul class="items_normal">
-                                <li>
-                    <a href="https://mentor-match.saramin.co.kr/" target="_blank" data-nav-track="ga_lead|section-gnb|total_menu|mentoring_side">
-                        <span class="icon">
-                            <svg aria-hidden="true" focusable="false"><use xlink:href="#svg_gnb_link6"></use></svg>
-                        </span>
-                        <span class="title">멘토링매치<svg class="arrow" aria-hidden="true" focusable="false"><use xlink:href="#svg_gnb_profile_bracket"></use></svg></span>
-                        <span class="text">현직자에게 취업 상담 받으세요</span>
-                    </a>
-                </li>
-                                <li>
-                    <a href="/zf_user/member/avatar/list" data-nav-track="ga_lead|section-gnb|total_menu|service_aimatch">
-                        <span class="icon">
-                            <svg aria-hidden="true" focusable="false"><use xlink:href="#svg_gnb_link2"></use></svg>
-                        </span>
-                        <span class="title">Ai매치<svg class="arrow" aria-hidden="true" focusable="false"><use xlink:href="#svg_gnb_profile_bracket"></use></svg></span>
-                        <span class="text">내게 딱 맞는 공고만 보세요</span>
-                    </a>
-                </li>
-                                <li>
-                    <a href="/zf_user/service/talent-pool" data-nav-track="ga_lead|section-gnb|total_menu|service_talent-pool">
-                        <span class="icon">
-                            <svg aria-hidden="true" focusable="false"><use xlink:href="#svg_gnb_link3"></use></svg>
-                        </span>
-                        <span class="title">포지션매치<svg class="arrow" aria-hidden="true" focusable="false"><use xlink:href="#svg_gnb_profile_bracket"></use></svg></span>
-                        <span class="text">지원하기 전에 제안 받아보세요</span>
-                    </a>
-                </li>
-                                <li>
-                    <a href="/zf_user/careerplus" data-nav-track="ga_lead|section-gnb|total_menu|service_tip">
-                        <span class="icon">
-                            <svg aria-hidden="true" focusable="false"><use xlink:href="#svg_gnb_link5"></use></svg>
-                        </span>
-                        <span class="title">커리어성장<svg class="arrow" aria-hidden="true" focusable="false"><use xlink:href="#svg_gnb_profile_bracket"></use></svg></span>
-                        <span class="text">클래스 듣고 직무역량 키워봐요</span>
-                    </a>
-                </li>
-                                <li>
-                    <a href="/zf_user/member/webvq/self-exam" data-nav-track="ga_lead|section-gnb|total_menu|service_verification_person">
-                        <span class="icon">
-                            <svg aria-hidden="true" focusable="false"><use xlink:href="#svg_gnb_link1"></use></svg>
-                        </span>
-                        <span class="title">직무적합도<svg class="arrow" aria-hidden="true" focusable="false"><use xlink:href="#svg_gnb_profile_bracket"></use></svg></span>
-                        <span class="text">무료로 내 장단점을 확인해보세요</span>
-                    </a>
-                </li>
-                
-            </ul>
-            </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </div>
-</header>
+    
+    <!-- header -->
+	<jsp:include page="../include/header.jsp"/>
 
     <div id="srch_wrap" class="wrap_search">
         <form id="AKCFrm" name="search" action="/zf_user/search">
@@ -660,8 +183,7 @@ googletag.cmd.push(function() {
         <div class="list-keyword">
             <div class="list-keyword-recent" style="display:block;">
                 <span id="recentlySearchWordTitle" class="title">최근검색어</span>
-                <ul id="listKeyword">
-                </ul>
+                <ul id="listKeyword"></ul>
             </div>
         </div>
         <div class="list-recruitment">
@@ -744,143 +266,163 @@ googletag.cmd.push(function() {
     <div id="sri_section" class="  has_banner">
         <div id="sri_wrap">
             <div id="content">
-                    <div class="wrap_title_recruit">
-        <h1 class="title_common">개인회원 아이디 찾기</h1>
-    </div>
-        <div class="help_find help_find_type2">
-        <h2 class="blind">개인회원 아이디 찾기 결과</h2>
-        <div class="cont_find">
-            <p class="desc_find">송지하님의 아이디가 <em class="emph_txt">1건</em> 검색되었습니다.</p>
-            <table class="tbl_find">
-                <colgroup>
-                    <col width="190">
-                    <col width="288">
-                    <col width="190">
-                    <col width="289">
-                </colgroup>
-                <thead>
-                <tr>
-                    <th scope="col">구분</th>
-                    <th scope="col">아이디</th>
-                    <th scope="col">가입일</th>
-                    <th scope="col">소셜계정 연동 정보</th>
-                </tr>
-                </thead>
-                <tbody>
-                                <tr>
-                    <th scope="row">사람인</th>
-                    <td>sjh0930</td>
-                    <td>2023-11-13</td>
-                    <td>
-                                            </td>
-                </tr>
-                                </tbody>
-            </table>
-            <div class="wrap_link">
-                <a href="/zf_user/auth" class="btn_biggest_type01">로그인</a>
-                <a href="/zf_user/helpdesk/person-find-password" class="btn_biggest_type03">비밀번호 찾기</a>
-            </div>
-        </div>
-        <div class="find_method">
-            <ul class="list_method">
-                <li>소셜로 가입하신 경우, 사용중인 소셜 계정으로 로그인 해주시기 바랍니다.<a href="/zf_user/helpdesk/id-pw-find-social" class="link_snslogin">간편로그인 아이디 찾기</a></li>
-                <li>사람인 아이디와 소셜 계정을 연동하셨다면 아래 2가지 방법으로 로그인이 가능합니다.
-                    <ul class="list_info">
-                        <li>1) 사람인 아이디와 비밀번호로 로그인</li>
-                        <li>2) 연동된 소셜 계정으로 간편하게 로그인<span class="txt_method">(ex. 간편로그인 클릭 &gt; 해당 소셜 아이디와 비밀번호로 로그인)</span> </li>
-                    </ul>
-                </li>
-                <li>찾으시는 아이디가 아니신가요? 다시 한 번 <u><a href="/zf_user/helpdesk/person-find-id" class="link_method">아이디 찾기</a></u>를 이용해보세요.</li>
-            </ul>
-        </div>
-    </div>                                    <div id="div-gpt-ad-1400664864294-7-wrapper" class="google-adsense doctype">
-            <div class="google-standby-banner">
-                                                            <a href="http://www.saramin.co.kr/avatar-branding/?inner_source=saramin&amp;inner_medium=banner&amp;inner_campaign=Sub_bottomBanner&amp;inner_term=avatar_introduce" target="_blank"><img src="https://www.saraminbanner.co.kr/adserver/default/2018/09/pekadn_4fza-2rxelk_728x90.png" alt="방문자수 1위 사람인"></a>
-                                                </div>
-            <div id="div-gpt-ad-1400664864294-7-inner" style="display: none;">
-                <div id="div-gpt-ad-1400664864294-7" data-google-query-id="COH52J_l7YIDFVhPDwIdpb0F7Q">
-                    <script type="text/javascript">
-                        googletag.cmd.push(function () {
-                            googletag.display('div-gpt-ad-1400664864294-7');
-                        });
-                    </script><iframe src="https://956bfb386a2c7f9c12726fecff28da53.safeframe.googlesyndication.com/safeframe/1-0-40/html/container.html" style="visibility: hidden; display: none;"></iframe><div id="google_ads_iframe_/61280259/CS_728x90_0__container__" style="border: 0pt none; width: 728px; height: 0px;"></div>
-                </div>
-            </div>
-        </div>
-                </div>
-        </div>
-                    <div id="sri_banner">
-        <div id="sri_banner_fixed" style="display: none;">
-        <div class="data_list">
-        <strong class="tit_data">최근본 공고<a href="/zf_user/jobs/read-jobs" class="num track_event" data-track_event="ADs|Click-116C" title="최근 본 공고로 이동" onmousedown="try{dataLayer.push({'event' : 'ga_lead', 'category': 'job_pg','event-flow': 'right_wing','event-label': 'recent_go'})}catch(e){}"><em id="recently-recruit-count">0</em><span class="blind">건 이상</span></a></strong>
-        <ul class="list_data" id="right_wing_lately_read_job_list" style="display: none">
-        </ul>
-        <a href="/zf_user/jobs/read-jobs" class="link_more lately_read_job_list_more_btn" style="display: none" onmousedown="try{dataLayer.push({'event' : 'ga_lead', 'category': 'job_pg','event-flow': 'right_wing','event-label': 'recent_more'})}catch(e){}">더보기</a>
-    </div>
-                <div class="data_list" id="right_wing_recommend_job_list" style="display: none">
-        </div>
-        <a href="#sri_section" id="btn_go_top" class="sri_lnb_icon btn_go_top"><span class="blind">브라우저상단으로 이동</span></a>
+                <div class="wrap_title_recruit">
+    <h1 class="title_common">문의사항</h1>
 </div>
-<div id="sri_banner_scrolled" style="margin-top: 15px; display: none;">
-        <div>
-<a href="https://saramin.co.kr/zf_user/event/writing-promo?inner_source=saramin&amp;inner_medium=banner&amp;inner_campaign=pc_wings&amp;inner_term=writing-promo" target="_blank" class="app-setup-btn">
-    <img src="https://www.saraminbanner.co.kr/mobile_sv/rbc/2023/12/s4yo04_kroh-1bqufdt_3PC.jpg" alt="2023 사람인 다시보기 10글자로 말해요" id="rightwing_banner_img">
-</a>
-</div>                        <div id="div-gpt-ad-1400664864294-6-wrapper" class="google-adsense doctype">
-            <div class="google-standby-banner" style="display: none;">
-                                                            <img src="https://www.saraminbanner.co.kr/adserver/default/2021/06/qv2zp2_wj96-2so1pt_PC120600.png" alt="">
-                                                </div>
-            <div id="div-gpt-ad-1400664864294-6-inner" style="">
-                <div id="div-gpt-ad-1400664864294-6" data-google-query-id="CPrU2p_l7YIDFc9HDwIdoygG-w">
-                    <div id="google_ads_iframe_/61280259/CS_120x600_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/61280259/CS_120x600_0" name="google_ads_iframe_/61280259/CS_120x600_0" title="3rd party ad content" width="120" height="600" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" role="region" aria-label="Advertisement" tabindex="0" allow="attribution-reporting" data-load-complete="true" data-google-container-id="2" style="border: 0px; vertical-align: bottom;"></iframe></div>
-                </div>
-            </div>
+<div class="wrap_board_view">
+  <div class="wrap_content_view">
+        <div class="area_tit">
+            <h1 class="content_tit">
+                [사전안내] 기업회원 휴면해제 안내            </h1>
+            <dl class="content_info">
+                <dt>등록일 :</dt>
+                <dd>2023.11.21</dd>
+                <dt>조회수 :</dt>
+                <dd>363</dd>
+            </dl>
         </div>
-    </div>
-    </div>
-        <footer id="sri_footer" class="sri_footer">
-    <div class="wrap_footer">
-        <div class="links" role="navigation" aria-label="사람인 서비스 정책 및 이용문의">
-    <ul>
-        <li class="first"><a href="//www.saraminhr.co.kr/" target="_blank" rel="noopener" title="회사소개 새창열기">회사소개</a></li>
-        <li><a href="//saraminhr.team" target="_blank" rel="noopener" title="인재채용 새창열기">인재채용</a></li>
-        <li><a href="/zf_user/help/terms-of-service" title="회원약관 바로가기">회원약관</a></li>
-        <li class="bold"><a href="/zf_user/help/privacy" title="개인정보처리방침 바로가기">개인정보처리방침</a></li>
-        <li><a href="https://www.saramin.co.kr/zf_user/popup/email-refuse" onclick="window.open(this.href, '이메일무단수집거부', 'width=380,height=200,left=0,top=0'); return false;" rel="noopener" title="이메일무단수집거부 바로가기">이메일무단수집거부</a></li>
-        <li><a href="https://oapi.saramin.co.kr/" target="_blank" rel="noopener" title="채용정보 API">채용정보 API</a></li>
-        <li><a href="/zf_user/help/inquery/partnership-inquiry-write" target="_self" rel="noopener" title="제휴문의">제휴문의</a></li>
-        <li><a href="http://www.saramin.co.kr/zf_user/help" title="고객센터 바로가기">고객센터</a></li>
-    </ul>
-</div>
-        <div class="copyright">
-    <div class="help_list">
-        <dl>
-            <dt>사람인 고객센터</dt>
-            <dd>02-2025-4733 (평일 09:00~19:00, 주말공휴일 휴무)</dd>
-        </dl>
-        <dl>
-            <dt>이메일</dt>
-            <dd><a href="mailto:help@saramin.co.kr" target="_blank" title="이메일 바로가기">help@saramin.co.kr</a></dd>
-        </dl>
-        <dl>
-            <dt>FAX</dt>
-            <dd>02-6937-0039</dd>
-        </dl>
-    </div>
-    <div class="link_channel">
-        <a href="/zf_user/company-review-qst-and-ans" target="_blank" title="커뮤니티 바로가기" class="link_cont">프로들과 이야기하자! <strong>커뮤니티</strong></a>
-        <dl>
-            <dt>사람인 공식채널</dt>
-            <dd><a href="https://www.instagram.com/saramin_official/?hl=ko" target="_blank"><span class="blind">사람인 인스타그램</span></a></dd>
-            <dd><a href="https://blog.naver.com/saraminapp" target="_blank"><span class="blind">사람인 네이버 블로그</span></a></dd>
-            <dd><a href="https://post.naver.com/my.nhn?memberNo=5661329" target="_blank"><span class="blind">사람인 네이버 포스트</span></a></dd>
-            <dd><a href="https://ko-kr.facebook.com/saramin.dream/" target="_blank"><span class="blind">사람인 페이스북</span></a></dd>
-            <dd><a href="https://www.youtube.com/@saramindream" target="_blank"><span class="blind">사람인 유튜브</span></a></dd>
-        </dl>
-    </div>
+        <div class="area_content">
+            <div class="inner">
+                <!-- 공지 컨텐츠 -->
+                <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
+                        <tbody><tr>
+                          
+                            
+                        </tr>
+                        <tr>
+                            <td style="background:#fff;border-radius:10px;padding:40px 27px">
+                                <table width="100%" style="margin:0;padding:0;font-family:AppleSDGothicNeo-Regular,Malgun Gothic, '맑은고딕', '돋움', dotum, sans-serif;" border="0" cellpadding="0" cellspacing="0">
+                                    <tbody><tr>
+                                        <td style="text-align:center;margin:0;padding-bottom:8px;font-size:20px;line-height:28px;letter-spacing:-1px;color:#292e41;font-family:AppleSDGothicNeo-Regular,Malgun Gothic, '맑은고딕', '돋움', dotum, sans-serif;"><p>
+                                            사람인&nbsp;<span style="color: rgb(72, 118, 239);">기업회원 - 휴면해제&nbsp;</span>사전안내</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center;margin:0;padding-bottom:30px;font-size:14px;line-height:18px;letter-spacing:-1px;color:#475067;font-family:AppleSDGothicNeo-Regular,Malgun Gothic, '맑은고딕', '돋움', dotum, sans-serif;border-bottom:1px solid #e6e6e6">
+                                            ‘개인정보 보호법’ 개정에 따른 사람인&nbsp; 서비스의 변경 사항에 대해 안내드립니다.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left" style="padding:20px 0 0;">
+                                            <strong style="display:block;margin:0 0 10px 0;font-size:15px;font-weight:400;line-height:22px;font-family:AppleSDGothicNeo-Regular,Malgun Gothic, '맑은고딕', '돋움', dotum, sans-serif;letter-spacing:-1px;color:#292e41;">1. 서비스 변경 사항</strong>
+                                            <p style="margin:0 0 32px;font-size:14px;line-height:20px;color:#475067;font-family:AppleSDGothicNeo-Regular,Malgun Gothic, '맑은고딕', '돋움', dotum, sans-serif;letter-spacing:-1px;">개인정보보호법 내 ‘개인정보의 파기에 대한 특례‘ 조항이 삭제됨에 따라 해당 조항에 근거한 분리보관 등  휴면 처리 정책 폐지 및 기존 휴면 회원에 대한 휴면 해제 처리 (개정 시행일자 : 2023.09.15)</p>
 
-</div>    </div>
-</footer>
+                                            <strong style="display:block;margin:0 0 10px 0;font-size:15px;font-weight:400;line-height:22px;font-family:AppleSDGothicNeo-Regular,Malgun Gothic, '맑은고딕', '돋움', dotum, sans-serif;letter-spacing:-1px;color:#292e41;">2. 휴면 해제 처리</strong>
+                                            <ol style="margin:0 0 30px;padding:0;list-style-type:none">
+                                                <li style="font-size:14px;line-height:20px;color:#475067;font-family:AppleSDGothicNeo-Regular,Malgun Gothic, '맑은고딕', '돋움', dotum, sans-serif;letter-spacing:-1px;">1) 대상 : 최근 2년 이내 휴면상태로 전환 된 기업 중 휴폐업 상태가 아닌 기업회원</li>
+                                                <li style="font-size:14px;line-height:20px;color:#475067;font-family:AppleSDGothicNeo-Regular,Malgun Gothic, '맑은고딕', '돋움', dotum, sans-serif;letter-spacing:-1px;">2) 일정 : 2023년 11월 29일부터 순차적으로 해제</li>
+                                            </ol>
+                                            <ul style="margin:0 0 4px;padding:0;list-style-type:none">
+                                                <li style="font-size:14px;line-height:20px;color:#475067;font-family:AppleSDGothicNeo-Regular,Malgun Gothic, '맑은고딕', '돋움', dotum, sans-serif;letter-spacing:-1px;">- 서비스 이용을 원치 않으시면,  언제든지 회원 탈퇴가 가능합니다.</li>
+                                                <li style="font-size:14px;line-height:20px;color:#475067;font-family:AppleSDGothicNeo-Regular,Malgun Gothic, '맑은고딕', '돋움', dotum, sans-serif;letter-spacing:-1px;">- 거부의사를 표시하지 않은 경우, 서비스 변경에 동의한 것으로 봅니다.</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody></table></td></tr></tbody></table>                <!-- // 공지 컨텐츠 -->
+            </div>
+            
+        </div>
+        <div class="box_pagination">
+            
+        
+    <a href="/zf_user/help/live?listType=notice&amp;mem_type=a&amp;keyword=&amp;page=1" class="btn_basic_type01 btn_list" title="이전 목록 바로가기">
+        목록
+    </a>
+</div>
+    </div>
+</div>
+<script>
+(function($) {
+    $(document).ready(function() {
+        // WMG-33719 사람인 X 로앤컴퍼니[로톡] 제휴 이벤트 종료 후 삭제
+        var memGb = '';
+        var btnRawtalkClickEvent = function (eventFlow, eventLabel) {
+            try {
+                dataLayer.push({
+                    'event': 'ga_lead',
+                    'category': 'LawTalk',
+                    'event-flow': eventFlow,
+                    'event-label': eventLabel
+                });
+            } catch (e) {}
+        };
+
+        $('.btnRawtalkP').on('click', function () {
+            event.preventDefault();
+            if (memGb == 'p') {
+                btnRawtalkClickEvent('btnLawTalkP', 'help_live');
+                window.open('http://www.lawtalk.co.kr/api/afpbc/사람인_구직자/631168e54d1e51006f993b96');
+            } else {
+                btnRawtalkClickEvent('btnLawTalkP', 'help_live_login');
+                if (confirm('개인회원 로그인 후 이용하실 수 있습니다. 로그인하시겠습니까?')) {
+                    var redirectUrl = encodeURIComponent(location.href);
+                    location.href = '/zf_user/auth?ut=p&url=' + redirectUrl;
+                }
+            }
+        });
+
+        $('.btnRawtalkC').on('click', function () {
+            event.preventDefault();
+            if (memGb == 'c') {
+                btnRawtalkClickEvent('btnLawTalkC', 'help_live');
+                window.open('http://www.lawtalk.co.kr/api/afpbc/사람인_기업회원/6311686c4d1e51006f993a70');
+            } else {
+                btnRawtalkClickEvent('btnLawTalkC', 'help_live_login');
+                if (confirm('기업회원 로그인 후 이용하실 수 있습니다. 로그인하시겠습니까?')) {
+                    var redirectUrl = encodeURIComponent(location.href);
+                    location.href = '/zf_user/auth?ut=c&url=' + redirectUrl;
+                }
+            }
+        });
+
+        // 링크 연결 설정
+        $('.open_window_browser').on('click', function () {
+            var url = $(this).data('url');
+
+            window.open(url);
+        });
+
+        //WMG-36201 면접관 교육 신청 URL 연결조건 설정 요청
+        $('.btnApplyInterviewerTraining').on('click', function () {
+            event.preventDefault();
+
+            $.ajax({
+                type: 'GET',
+                url: '/zf_user/help/live/check-apply-interviewer-training-condition-ajax',
+                success: function (response) {
+                    if (!!!response.status || !!!response.message) {
+                        alert('면접관 교육 신청 중 문제가 발생했습니다. 잠시 후 다시 시도해주세요.');
+                        return;
+                    }
+
+                    if (response.status === 'needLogin') {
+                        if (confirm('기업회원 로그인 후 이용하실 수 있습니다. 로그인하시겠습니까?')) {
+                            var redirectUrl = encodeURIComponent(location.href);
+                            window.location.href = '/zf_user/auth?ut=c&url=' + redirectUrl;
+                        }
+                        return;
+                    }
+
+                    if (response.status !== 'target') {
+                        alert(response.message);
+                        return;
+                    }
+
+                    window.open('https://forms.gle/7zpaGkAxGf7syXQMA');
+                },
+                error: function () {
+                    alert('면접관 교육 신청 중 문제가 발생했습니다. 잠시 후 다시 시도해주세요.');
+                }
+            });
+        });
+    });
+})(jQuery);
+</script>                            </div>
+        </div>
+                    
+       
+       <!-- footer -->
+       <jsp:include page="../include/footer.jsp"/>
+       
     </div>
 <div id="dimmed" class="sri_dimmed" style="display:none"></div>
 <div class="img_svg_layout">
@@ -1251,7 +793,7 @@ var setApplyReload = function (flag) {
     <iframe src="about:blank" id="quick_apply_layer_frame" name="quick_apply_layer_frame" style="display:none;position: fixed;right:34px;bottom:0;z-index: 150;width: 448px;height: 740px;border:0;border-radius: 20px;border-bottom-left-radius:0;border-bottom-right-radius:0;box-sizing: border-box;box-shadow: 0 2px 30px 0 rgba(0, 0, 0, 0.15);"></iframe>
 </div>
 <script src="/js/apply/QuickApply.js?v=20231130103248"></script>
-<link href="/sri_css/login.css?v=20231130163301" rel="stylesheet" type="text/css">
+<link href="http://localhost/HCYHotel/common/user/css/login.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="/js/libs/secure/rsa.min.js"></script>
 <script type="text/javascript" src="/js/libs/secure/secure-login.js?v=131018"></script>
 
@@ -1259,7 +801,7 @@ var setApplyReload = function (flag) {
 <div id="pop_login_layer" class="pop_login_layer" style="display: none; position: absolute; top: 280px;" role="dialog" aria-labelledby="login_title">
     <div class="outer">
         <form name="loginFrm" id="loginFrm" action="https://www.saramin.co.kr/zf_user/auth/login" method="post" onsubmit="return loginCheckMainLayer(this);">
-            <input type="hidden" name="page_url" id="page_url" value="L3pmX3VzZXIvaGVscGRlc2svcGVyc29uLWZpbmQtaWQtbGlzdA==">
+            <input type="hidden" name="page_url" id="page_url" value="L3pmX3VzZXIvaGVscC9saXZlL3ZpZXc/aWR4PTEwOTIyNyZsaXN0X2lkeD0xMCZsaXN0VHlwZT1ub3RpY2Uma2V5d29yZD0mbWVudT0xJm1lbV90eXBlPWEmcGFnZT0x">
             <input type="hidden" name="url" value="">
             <input type="hidden" name="allowType" value="">
             <input type="hidden" name="ut" value="">
@@ -1305,11 +847,11 @@ var setApplyReload = function (flag) {
                     <p class="tit">소셜 계정으로 간편 로그인</p>
                 </div>
                 <ul class="social_login" id="wrap_social_login"><li class="login_naver">
-                            <a href="/zf_user/auth/sign-in-with?provider=naver.com&amp;display=popup&amp;url=%2Fzf_user%2Fhelpdesk%2Fperson-find-id-list&amp;login_type=p" class="sl_naver ga_data_layer" data-provider="naver"><span class="wrap_icon"><svg class="icon"><use xlink:href="#icon_login_naver"></use></svg></span></a></li><li class="login_kakao">
-                            <a href="/zf_user/auth/sign-in-with?provider=kakao.com&amp;display=popup&amp;url=%2Fzf_user%2Fhelpdesk%2Fperson-find-id-list&amp;login_type=p" class="sl_kakao ga_data_layer" data-provider="kakao"><span class="wrap_icon"><svg class="icon"><use xlink:href="#icon_login_kakao"></use></svg></span></a></li><li class="login_google">
-                            <a href="/zf_user/auth/sign-in-with?provider=google.com&amp;display=popup&amp;url=%2Fzf_user%2Fhelpdesk%2Fperson-find-id-list&amp;login_type=p" class="sl_google ga_data_layer" data-provider="google"><span class="wrap_icon"><svg class="icon"><use xlink:href="#icon_login_google"></use></svg></span></a></li><li class="login_facebook">
-                            <a href="/zf_user/auth/sign-in-with?provider=facebook.com&amp;display=popup&amp;url=%2Fzf_user%2Fhelpdesk%2Fperson-find-id-list&amp;login_type=p" class="sl_facebook ga_data_layer" data-provider="facebook"><span class="wrap_icon"><svg class="icon"><use xlink:href="#icon_login_facebook"></use></svg></span></a></li><li class="login_apple">
-                            <a href="/zf_user/auth/sign-in-with?provider=apple.com&amp;display=popup&amp;url=%2Fzf_user%2Fhelpdesk%2Fperson-find-id-list&amp;login_type=p" class="sl_apple ga_data_layer" data-provider="apple"><span class="wrap_icon"><svg class="icon"><use xlink:href="#icon_login_apple"></use></svg></span></a></li></ul>            </fieldset>
+                            <a href="/zf_user/auth/sign-in-with?provider=naver.com&amp;display=popup&amp;url=%2Fzf_user%2Fhelp%2Flive%2Fview%3Fidx%3D109227%26list_idx%3D10%26listType%3Dnotice%26keyword%3D%26menu%3D1%26mem_type%3Da%26page%3D1&amp;login_type=p" class="sl_naver ga_data_layer" data-provider="naver"><span class="wrap_icon"><svg class="icon"><use xlink:href="#icon_login_naver"></use></svg></span></a></li><li class="login_kakao">
+                            <a href="/zf_user/auth/sign-in-with?provider=kakao.com&amp;display=popup&amp;url=%2Fzf_user%2Fhelp%2Flive%2Fview%3Fidx%3D109227%26list_idx%3D10%26listType%3Dnotice%26keyword%3D%26menu%3D1%26mem_type%3Da%26page%3D1&amp;login_type=p" class="sl_kakao ga_data_layer" data-provider="kakao"><span class="wrap_icon"><svg class="icon"><use xlink:href="#icon_login_kakao"></use></svg></span></a></li><li class="login_google">
+                            <a href="/zf_user/auth/sign-in-with?provider=google.com&amp;display=popup&amp;url=%2Fzf_user%2Fhelp%2Flive%2Fview%3Fidx%3D109227%26list_idx%3D10%26listType%3Dnotice%26keyword%3D%26menu%3D1%26mem_type%3Da%26page%3D1&amp;login_type=p" class="sl_google ga_data_layer" data-provider="google"><span class="wrap_icon"><svg class="icon"><use xlink:href="#icon_login_google"></use></svg></span></a></li><li class="login_facebook">
+                            <a href="/zf_user/auth/sign-in-with?provider=facebook.com&amp;display=popup&amp;url=%2Fzf_user%2Fhelp%2Flive%2Fview%3Fidx%3D109227%26list_idx%3D10%26listType%3Dnotice%26keyword%3D%26menu%3D1%26mem_type%3Da%26page%3D1&amp;login_type=p" class="sl_facebook ga_data_layer" data-provider="facebook"><span class="wrap_icon"><svg class="icon"><use xlink:href="#icon_login_facebook"></use></svg></span></a></li><li class="login_apple">
+                            <a href="/zf_user/auth/sign-in-with?provider=apple.com&amp;display=popup&amp;url=%2Fzf_user%2Fhelp%2Flive%2Fview%3Fidx%3D109227%26list_idx%3D10%26listType%3Dnotice%26keyword%3D%26menu%3D1%26mem_type%3Da%26page%3D1&amp;login_type=p" class="sl_apple ga_data_layer" data-provider="apple"><span class="wrap_icon"><svg class="icon"><use xlink:href="#icon_login_apple"></use></svg></span></a></li></ul>            </fieldset>
         </form>
         <button class="pop_login_layer_close" id="pop_login_layer_close">닫기</button>
     </div>
@@ -1346,7 +888,7 @@ var setApplyReload = function (flag) {
             }
         })();
 
-        var page_url = 'L3pmX3VzZXIvaGVscGRlc2svcGVyc29uLWZpbmQtaWQtbGlzdA==';
+        var page_url = 'L3pmX3VzZXIvaGVscC9saXZlL3ZpZXc/aWR4PTEwOTIyNyZsaXN0X2lkeD0xMCZsaXN0VHlwZT1ub3RpY2Uma2V5d29yZD0mbWVudT0xJm1lbV90eXBlPWEmcGFnZT0x';
 
 
         function addEvent(ele, eventType, func) {
@@ -1783,4 +1325,4 @@ wcs_do(_nasa);
 
 <script type="text/javascript">window.criteo_q=window.criteo_q||[];var deviceType=/iPad/.test(navigator.userAgent)?"t":/Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Silk/.test(navigator.userAgent)?"m":"d";window.criteo_q.push({event:"setAccount",account:96026},{event:"setEmail",email:""},{event:"setZipcode",zipcode:""},{event:"setSiteType",type:deviceType},{event:"viewHome"});</script>
 
-</div><div id="criteo-tags-div" style="display: none;"></div><iframe src="https://www.google.com/recaptcha/api2/aframe" width="0" height="0" style="display: none;"></iframe></body></html>
+</div><div id="criteo-tags-div" style="display: none;"></div><iframe name="google_ads_top_frame" id="google_ads_top_frame" style="display: none; position: fixed; left: -999px; top: -999px; width: 0px; height: 0px;"></iframe><iframe height="0" width="0" title="Criteo DIS iframe" style="display: none;"></iframe><iframe src="https://www.google.com/recaptcha/api2/aframe" width="0" height="0" style="display: none;"></iframe></body></html>
