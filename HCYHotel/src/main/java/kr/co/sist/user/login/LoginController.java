@@ -17,7 +17,7 @@ public class LoginController {
 	public String login(Model model,LoginVO lVO) {
 		
 		return "user/home/user_home";
-	}//login
+	}//login 
 	
 	
 	public String logOut(SessionStatus ss) {
