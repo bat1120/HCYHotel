@@ -106,13 +106,13 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    	<c:forEach var="memList" items="${memList }" varStatus="i">
+                                    	<c:forEach var="busList" items="${busList }" varStatus="i">
 	                                        <tr>
 	                                            <th scope="row">${i.count}</th>
-	                                            <td>${memList.id }</td>
-	                                            <td>${memList.name }</td>
-	                                            <td>${memList.bookingCnt }</td>
-	                                            <td>${memList.email }</td>
+	                                            <td>${busList.id }</td>
+	                                            <td>${busList.name }</td>
+	                                            <td>${busList.repHotel }</td>
+	                                            <td>${busList.bookingCnt }</td>
 	                                        </tr>
                                         </c:forEach>
                                     </tbody>
