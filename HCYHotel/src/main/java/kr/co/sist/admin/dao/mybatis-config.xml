@@ -9,6 +9,8 @@
 <typeAlias type="kr.co.sist.admin.dashboard.DashboardDomain" alias="dd"/>
 <typeAlias type="kr.co.sist.admin.manageMem.MemberDomain" alias="md"/>
 <typeAlias type="kr.co.sist.admin.manageMem.BusinessDomain" alias="bd"/>
+<typeAlias type="kr.co.sist.admin.paging.pagingDomain" alias="pd"/>
+<typeAlias type="kr.co.sist.admin.paging.pagingSearchVO" alias="pVO"/>
 </typeAliases>
   <environments default="development">
     <environment id="development">
@@ -26,5 +28,6 @@
 <mapper resource="kr/co/sist/admin/mapper/loginMapper.xml"/>
 <mapper resource="kr/co/sist/admin/mapper/dashboardMapper.xml"/>
 <mapper resource="kr/co/sist/admin/mapper/manageMemMapper.xml"/>
+<mapper resource="kr/co/sist/admin/mapper/pagingMapper.xml"/>
   </mappers>
 </configuration>

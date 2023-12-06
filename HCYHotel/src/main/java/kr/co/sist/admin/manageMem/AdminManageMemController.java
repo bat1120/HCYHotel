@@ -9,14 +9,15 @@ public class AdminManageMemController {
 	
 	@GetMapping("/admin/goManageMem.do")
 	public String goManageMem(Model model, String memFlag) {
+		AdminManageMemService amms = AdminManageMemService.getInstance();
 		
 		
 		if("mem".equals(memFlag)) {
-			AdminManageMemService amms = AdminManageMemService.getInstance();
 			model.addAttribute("memList",amms.loadMem());
 			return "admin/manageMem/manageMem"; 
 		}//if
 		
+		model.addAttribute("busList",amms.loadBus());
 		return "admin/manageMem/manageBus"; 
 	}//goManageMem
 }//class
