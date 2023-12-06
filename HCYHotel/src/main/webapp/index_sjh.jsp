@@ -38,6 +38,9 @@ $(function(){
 <li><a href="user/findId/business_result_id.do">사업자 아이디 찾기결과</a></li>
 <li><a href="user/findPass/business_find_pass.do">사업자 비밀번호 찾기</a></li>
 <li><a href="user/findPass/business_result_pass.do">사업자 비밀번호 재설정</a></li>
+<hr>
+<li><a href="user/hotel/hotelSearch/user_hotel_search.do">호텔 상세</a></li>
+<li><a href="user/hotel/hotelSearch/user_hotel_search_map.do">호텔지도 상세</a></li>
 </ul>
 </body>
 </html>
