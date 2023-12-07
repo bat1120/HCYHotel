@@ -1,0 +1,188 @@
+:root {
+  /* Color System */
+  /* gray-color variables */
+  --white:             #fff;
+  --gray-100:          #f0f0f2;
+  --gray-200:          #f8f8f9;
+  --gray-300:          #d8d8d8;
+  --gray-400:          #ccc;
+  --gray-500:          #aaa;
+  --gray-600:          #999;
+  --gray-700:          #666;
+  --gray-800:          #444;
+  --gray-900:          #222;
+  --black:             #000;
+
+  --gray  :              var(--gray-600);
+  --gray-dark:           var(--gray-700);
+
+  /* color variables */
+  --blue  :            #000f30;
+  --purple:            #8c42b8;
+  --red   :            #ff0000;
+  --orange:            #FF7300;
+  --yellow:            #f2ab20;
+  --green :            #9cc127;
+
+  /* theme-color variables */
+  --primary:             var(--gray-900);
+  --secondary:           var(--gray-600);
+  
+  --yeouido :            var(--blue);
+  --live    :            var(--purple);
+  --mapo    :            var(--green);
+  --jeju    :            var(--orange);
+
+  --error   :            var(--red);
+
+  --light   :            var(--gray-200);
+  --dark    :            var(--gray-900);
+
+  --body-bg :            var(--white);
+  --body-color:          var(--dark);
+
+  --container-padding-x: 60px;
+
+  --link-color:            var(--dark);
+
+  --border:                var(--gray-400);
+  --border-width:          1px;
+  --border-color:          var(--gray-400);
+
+  /* box-shadow-variables */
+  --box-shadow:            0 .5rem 1rem rgba(0,0,0, .15);
+  --box-shadow-sm:         0 .125rem .25rem rgba(0,0,0, .075);
+  --box-shadow-lg:         0 1.25rem 2.5rem rgba(0,0,0, .05);
+  --box-shadow-inset:inset 0 1px 2px rgba(0,0,0, .075);
+
+  /* font-variables */
+  --font-family-sans-serif:  system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-family-spoqaHanSansNeo: 'Spoqa Han Sans Neo', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, 'Liberation Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-family-proximaNova: 'proxima-nova', 'Spoqa Han Sans Neo', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, 'Liberation Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-family-base:        var(--font-family-spoqaHanSansNeo);
+  
+  --font-size-base:      1rem;
+  --font-size-xs:        calc(var(--font-size-base) * .75); /* 12px */
+  --font-size-sm:        calc(var(--font-size-base) * .8125); /* 13px */
+  --font-size-md:        calc(var(--font-size-base) * .9375); /* 15px */
+  --font-size-lg:        calc(var(--font-size-base) * 1.25); /* 20px */
+
+  --font-weight-lighter:        lighter;
+  --font-weight-light:          300;
+  --font-weight-normal:         400;
+  --font-weight-bold:           700;
+  --font-weight-bolder:         bolder;
+
+  --font-weight-base:         var(--font-weight-normal);
+  
+  --h1-font-size:64px;
+  --h2-font-size:52px;
+  --h3-font-size:48px;
+  --h4-font-size:40px;
+  --h5-font-size:36px;
+  --h6-font-size:30px;
+  --h7-font-size:26px;
+  --h8-font-size:24px;
+  --body1-font-size:20px;
+  --body2-font-size:18px;
+  --body3-font-size:17px;
+  --body4-font-size:16px;
+  --body5-font-size:14px;
+  --caption1-font-size:13px;
+  --caption2-font-size:12px;
+  --caption3-font-size:11px;
+  
+  /* Font */
+  --h1-font:64px/72px var(--font-family-base);
+  --h2-font:52px/64px var(--font-family-base);
+  --h3-font:48px/60px var(--font-family-base);
+  --h4-font:40px/52px var(--font-family-base);
+  --h5-font:36px/48px var(--font-family-base);
+  --h6-font:30px/40px var(--font-family-base);
+  --h7-font:26px/36px var(--font-family-base);
+  --h8-font:24px/36px var(--font-family-base);
+  --body1-font:20px/28px var(--font-family-base);
+  --body2-font:18px/28px var(--font-family-base);
+  --body3-font:17px/28px var(--font-family-base);
+  --body4-font:16px/28px var(--font-family-base);
+  --body5-font:14px/24px var(--font-family-base);
+  --caption1-font:normal 13px/24px var(--font-family-base);
+  --caption2-font:normal 12px/18px var(--font-family-base);
+  --caption3-font:normal 11px/18px var(--font-family-base);
+
+  /* Letter Spacing */
+  --h1-letter-spacing:-3.14px;
+  --h2-letter-spacing:-2.55px;
+  --h3-letter-spacing:-1.78px;
+  --h4-letter-spacing:-1.67px;
+  --h5-letter-spacing:-1.57px;
+  --h6-letter-spacing:-1.57px;
+  --h7-letter-spacing:-1.06px;
+  --h8-letter-spacing:-.98px;
+  --body1-letter-spacing:-.98px;
+  --body2-letter-spacing:-.85px;
+  --body3-letter-spacing:-.85px;
+  --body4-letter-spacing:-.5px;
+  --body5-letter-spacing:-.5px;
+  --caption1-letter-spacing:-.2px;
+  --caption2-letter-spacing:-.2px;
+  --caption3-letter-spacing:-.18px;
+
+
+  --text-muted:var(--gray-600);
+
+  --zindex-dropdown:       1000;
+  --zindex-sticky:         1020;
+  --zindex-fixed:          1030;
+  --zindex-offcanvas:      1040;
+  --zindex-modal-backdrop: 1050;
+  --zindex-modal:          1060;
+  --zindex-popover:        1070;
+  --zindex-tooltip:        1080;
+
+  /* table-variables*/
+  --table-cell-padding-y:       .5rem;
+  --table-cell-padding-x:       .5rem;
+  --table-cell-padding-y-sm:    .25rem;
+  --table-cell-padding-x-sm:    .25rem;
+
+  /* Buttons + Forms */
+  --input-btn-padding-y:        5px;
+  --input-btn-padding-x:        8px;
+  --input-btn-font-family:      var(--font-family-base);
+  --input-btn-font-size:        1rem;
+  --input-btn-line-height:      1.75;
+
+  /* btn-variables */
+  --btn-padding-y:              var(--input-btn-padding-y);
+  --btn-padding-x:              var(--input-btn-padding-x);
+  --btn-font-family:            var(--input-btn-font-family);
+  --btn-font-size:              var(--input-btn-font-size);
+  --btn-line-height:            var(--input-btn-line-height);
+
+  --btn-transition:             color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  
+  --input-bg:                             var(--white);
+  --input-disabled-bg:                    var(--gray-200);
+  --input-disabled-border-color:          var(--gray-500);
+
+  --input-color: var(--gray-200);
+  --input-border-color: var(--gray-400);
+
+  --input-border-radius: 0;
+
+  --input-padding-y:                      var(--input-btn-padding-y);
+  --input-padding-x:                      var(--input-btn-padding-x);
+  --input-font-family:                    var(--input-btn-font-family);
+  --input-font-size:                      var(--input-btn-font-size);
+  --input-font-weight:                    var(--font-weight-base);
+  --input-line-height:                    var(--input-btn-line-height);
+
+  --input-focus-bg: var(--input-bg);
+  --input-focus-border-color: var(--dark);
+
+  --input-placeholder-color:              var(--gray);
+  --input-plaintext-color:                var(--body-color);
+
+  --input-transition:                     border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}

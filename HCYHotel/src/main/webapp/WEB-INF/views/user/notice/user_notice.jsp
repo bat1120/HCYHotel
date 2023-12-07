@@ -82,7 +82,7 @@
     NProgress.configure({
         showSpinner: false
     });
-</script>
+</script> 
 
 <script>
     (function (i, s, o, g, r, a, m) {
