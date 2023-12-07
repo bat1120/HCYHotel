@@ -16,6 +16,11 @@ public class JoinMemberController {
 		return "user/join/user_join_check";
 	}
 	
+	@GetMapping("/user/join/business_join_check.do")
+	public String businessCheck() {
+		return "user/join/business_join_check";
+	}
+	
 	@GetMapping("/user/join/user_join.do")
 	public String userJoin() {
 		return "user/join/user_join";
