@@ -4,22 +4,12 @@ import java.io.UnsupportedEncodingException;
 import java.security.GeneralSecurityException;
 import java.security.NoSuchAlgorithmException;
 
+import org.springframework.stereotype.Component;
+
 import kr.co.sist.util.cipher.DataDecrypt;
 import kr.co.sist.util.cipher.DataEncrypt;
-
+@Component
 public class Encryption {
-	private static Encryption e;
-
-	private Encryption() {
-	}
-
-	public static Encryption getInstance() {
-		if (e == null) {
-			e = new Encryption();
-		} // if
-
-		return e;
-	}// getInstance
 
 	public String encryption(String plan)
 			throws NoSuchAlgorithmException, UnsupportedEncodingException, GeneralSecurityException {

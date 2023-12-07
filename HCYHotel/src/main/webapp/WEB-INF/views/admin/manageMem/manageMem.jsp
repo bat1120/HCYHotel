@@ -17,6 +17,11 @@
     $(function(){
     	
     })//ready
+    function memDetail( id ){
+    	alert("hi")
+    	$("#hidId").val(id)
+    	$("#hidFrm").submit()
+    }//memDetail
     </script>
 </head>
 
@@ -102,6 +107,7 @@
                                             <th scope="col">이름</th>
                                             <th scope="col">예매 수</th>
                                             <th scope="col">이메일</th>
+                                            <th scope="col">상세보기</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -112,12 +118,17 @@
 	                                            <td>${memList.name }</td>
 	                                            <td>${memList.bookingCnt }</td>
 	                                            <td>${memList.email }</td>
+	                                            <td><input type="button" value="상세보기" class="btn btn-info btn-sm" onclick="memDetail('${ memList.id }')"></td>
 	                                        </tr>
                                         </c:forEach>
                                     </tbody>
                                 </table>
                             </div>
                         </div>
+                         <form action="memDetail.do" id="hidFrm">
+                        <input type="hidden" name="id" id="hidId"/>
+                        <input type="hidden" name="memFlag" value="${param.memFlag }"/>
+                        </form>
             
 
             <c:import url="../common/import/footer.jsp"/>

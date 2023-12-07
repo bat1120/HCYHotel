@@ -7,20 +7,11 @@ import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
-
+import org.springframework.stereotype.Component;
+@Component
 public class MyBatiseHandler {
-private static MyBatiseHandler mbh;
 private static SqlSessionFactory ssf;
 
-private MyBatiseHandler() {
-	org.apache.ibatis.logging.LogFactory.useLog4JLogging();
-}//constructor
-
-public static MyBatiseHandler getInstance() {
-	if(mbh == null) {mbh = new MyBatiseHandler();}
-	
-	return mbh;
-}//getInstance
 
 private SqlSessionFactory myBatisBuilder(String configFile) {
 	if(ssf==null) {

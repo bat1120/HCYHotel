@@ -7,7 +7,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>사업자회원관리</title>
+    <title>공지사항 관리</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -17,11 +17,6 @@
     $(function(){
     	
     })//ready
-    function memDetail( id ){
-    	alert("hi")
-    	$("#hidId").val(id)
-    	$("#hidFrm").submit()
-    }//memDetail
     </script>
 </head>
 
@@ -108,29 +103,22 @@
                                             <th scope="col">이름</th>
                                             <th scope="col">대표호텔</th>
                                             <th scope="col">주간 예매 수</th>
-                                            <th scope="col">상세보기</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    	<c:forEach var="busList" items="${ busList }" varStatus="i">
+                                    	<c:forEach var="busList" items="${busList }" varStatus="i">
 	                                        <tr>
-	                                            <th scope="row"><c:out value="${ i.count}"/></th>
-	                                            <td><c:out value="${ busList.id }"/></td>
-	                                            <td><c:out value="${ busList.name }"/></td>
-	                                            <td><c:out value="${ busList.repHotel }"/></td>
-	                                            <td><c:out value="${ busList.bookingCnt }"/></td>
-	                                            <td><input type="button" value="상세보기" class="btn btn-info btn-sm" onclick="memDetail('${ busList.id }')"></td>
+	                                            <th scope="row">${i.count}</th>
+	                                            <td>${busList.id }</td>
+	                                            <td>${busList.name }</td>
+	                                            <td>${busList.repHotel }</td>
+	                                            <td>${busList.bookingCnt }</td>
 	                                        </tr>
                                         </c:forEach>
                                     </tbody>
                                 </table>
                             </div>
                         </div>
-                        
-                        <form action="memDetail.do" id="hidFrm">
-                        <input type="hidden" name="id" id="hidId"/>
-                        <input type="hidden" name="memFlag" value="${memFlag }"/>
-                        </form>
 
             <c:import url="../common/import/footer.jsp"/>
         </div>
