@@ -31,6 +31,7 @@ $(function(){
 	<li><a href="user/qna/user_qna_detail.do">문의상세</a></li>
 	<li><a href="user/qna/user_qna_write.do">문의작성</a></li>
 	<br>
+	<li><a href="user/review/myreview/mydiningreview_list.do">다이닝리뷰목록(마페)</a></li>
 	
 	
 </ul>
