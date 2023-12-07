@@ -25,6 +25,7 @@ $(function(){
 <body>
 <ul>
 <li><a href="user/home/user_home.do">사용자 홈</a></li>
+<li><a href="user/login/user_login.do">로그인</a></li>
 <li><a href="user/join/join_check.do">회원 가입대상 확인</a></li>
 <li><a href="user/join/user_join_check.do">사용자 중복확인</a></li>
 <li><a href="user/join/business_join_check.do">사업자 중복확인</a></li>
