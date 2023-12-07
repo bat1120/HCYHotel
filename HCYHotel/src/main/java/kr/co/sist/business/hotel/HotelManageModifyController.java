@@ -13,8 +13,11 @@ public class HotelManageModifyController {
 	@GetMapping("/BusinessManage/businessHotel.do")
 	public String goManageHotel(HttpSession session, Model model) {
 		session.setAttribute("id", "sajang1");
-		
-		
+		String id=(String)session.getAttribute("id");
+
+		HotelManageModifySevice hmms=HotelManageModifySevice.getInstance();
+
+		model.addAttribute("hotelList",hmms.loadHotelList(id));
 		
 		return "BusinessManage/businessmanage_hotel";
 	}

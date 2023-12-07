@@ -5,11 +5,16 @@
 <mapper namespace="kr.co.sist.business.hotelModifyMapper">
 
 <select id="searchhotelInfo" resultType="hld" parameterType="String">
-SELECT h.hotelcode, h.hotelname, r.roomcode, rt.hotelrate, l.sido,h.inputdate
+SELECT h.hotelcode, h.hotelname, bk.booking_count, rt.total_rating, l.sido, h.inputdate, bk.booking_count
 FROM hotel h
 LEFT JOIN room r ON h.hotelcode = r.hotelcode
 LEFT JOIN (
-    SELECT r.hotelcode, SUM(rv.rating)/count(rv.rating) AS hotelrate
+    SELECT rb.roomcode, COUNT(rb.bookingcode) AS booking_count
+    FROM roombooking rb
+    GROUP BY rb.roomcode
+) bk ON r.roomcode = bk.roomcode
+LEFT JOIN (
+    SELECT r.hotelcode, SUM(rv.rating) AS total_rating
     FROM room r
     LEFT JOIN roombooking rb ON r.roomcode = rb.roomcode
     LEFT JOIN roomreview rv ON rb.bookingcode = rv.bookingcode

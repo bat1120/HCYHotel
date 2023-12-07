@@ -1851,6 +1851,9 @@ th, td {
 					<div style="position: absolute; left: 500px">
 					<select>
 					<option>객실선택</option>
+					<c:forEach var="hotelList" items="${hotelList }">
+					<option><c:out value="${hotelList.hotelname }"/></option>
+					</c:forEach>
 					</select>
 					</div>
 					<div style="position: absolute; left: 623px">
@@ -1868,14 +1871,16 @@ th, td {
 								<th>한달예약건수</th>
 								<th>버튼</th>
 							</tr>
+							<c:forEach var="roomList" items="${ roomList }" varStatus="i">
 							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td><input type="button" value="수정" class="btn btn-info btn-sm" id="roomModifyBtn"></td>
+							<th><c:out value="${roomList.roomname }" /></th>
+							<th><c:out value="${roomList.typename }" /></th>
+							<th><c:out value="${roomList.average_rating }" /></th>
+							<th><c:out value="${roomList.price }" /></th>
+							<th><c:out value="${roomList.reservation_count }" /></th>
+							<th><input type="button" value="수정" class="btn btn-info btn-sm" id="roomModifyBtn"><input type="hidden" value="${roomList.roomcode }" id="roomCodeHidden"></th>
 							</tr>
+							</c:forEach>
 						</table>
 					</div>
 				</main>
