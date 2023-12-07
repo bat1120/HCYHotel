@@ -28,15 +28,13 @@ public class HotelManageModifyDAO {
 		MyBatiseHandler mbh=MyBatiseHandler.getInstance();
 		SqlSession ss=mbh.getMyBatisHandler(false);	
 		list=ss.selectList("kr.co.sist.business.hotelModifyMapper.searchhotelInfo",id);
-		list=ss.selectList("kr.co.sist.business.hotelModifyMapper.searchHotelSido",id);
-		list=ss.selectList("kr.co.sist.business.hotelModifyMapper.searchhotelRate",id);
 		mbh.closeHandler(ss);
 		
 		return list;
 	}
 	
-	public static void main(String[] args) {
-		List<HotelListDomain> list=new HotelManageModifyDAO().selectHotelList("sajang1");
-		System.out.println(list);
-	}
+//	public static void main(String[] args) {
+//		List<HotelListDomain> list=new HotelManageModifyDAO().selectHotelList("sajang1");
+//		System.out.println(list);
+//	}
 }

@@ -14,6 +14,7 @@ import lombok.ToString;
 @NoArgsConstructor
 public class HotelListDomain {
 private String hotelCode,hotelName,sido;
-private int hotelRate,monthlyBooking;
+private int monthlyBooking;
+private double hotelRate;
 private Date date;
 }
