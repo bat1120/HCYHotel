@@ -9,8 +9,8 @@
 <typeAlias type="kr.co.sist.admin.dashboard.DashboardDomain" alias="dd"/>
 <typeAlias type="kr.co.sist.admin.manageMem.MemberDomain" alias="md"/>
 <typeAlias type="kr.co.sist.admin.manageMem.BusinessDomain" alias="bd"/>
-<typeAlias type="kr.co.sist.admin.paging.pagingDomain" alias="pd"/>
-<typeAlias type="kr.co.sist.admin.paging.pagingSearchVO" alias="pVO"/>
+<typeAlias type="kr.co.sist.admin.paging.PagingDomain" alias="pd"/>
+<typeAlias type="kr.co.sist.admin.paging.PagingSearchVO" alias="pVO"/>
 </typeAliases>
   <environments default="development">
     <environment id="development">
