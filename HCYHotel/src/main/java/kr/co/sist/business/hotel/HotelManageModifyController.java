@@ -11,8 +11,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class HotelManageModifyController {
 
 	@GetMapping("/BusinessManage/businessHotel.do")
-	public String goManageHotel(HttpSession session) {
-		session.setAttribute("id", "bat1120");
+	public String goManageHotel(HttpSession session, Model model) {
+		session.setAttribute("id", "sajang1");
+		
+		
 		
 		return "BusinessManage/businessmanage_hotel";
 	}
