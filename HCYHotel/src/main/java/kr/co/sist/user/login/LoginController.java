@@ -7,7 +7,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.support.SessionStatus;
 
 @Controller
@@ -33,12 +32,15 @@ public class LoginController {
 		}else {
 			model.addAttribute("loginerror","로그인 정보를 다시 확인해주세요");
 			return "user/login/login_error";
-		}
+		}//end else
 		
 	}//login 
 	
-	 @RequestMapping("/user_logout.do")
-	public String logOut(SessionStatus ss) {
+	@RequestMapping("/user_logout.do")
+	public String logOut(SessionStatus ss,HttpSession session) {
+		
+		session.invalidate();
+		System.out.println("왓니?");
 		
 		ss.setComplete();
 		

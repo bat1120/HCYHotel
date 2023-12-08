@@ -326,6 +326,16 @@ googletag.cmd.push(function() {
 		<div id="searchAutoCompleteTemplate" style="display: none"></div>
 	</div>
 
+	<script>
+	function setMemberFlag(flag){
+		document.getElementById("memberFlag").value=flag;
+		console.log("Member Flag:", $("#memberFlag").val());
+	}//setMemberFlag
+	
+	</script>
+	<%System.out.println("memberFlag:"); %>
+
+
 	<div id="sri_section" class="  ">
 		<div id="sri_wrap">
 			<div id="content">
@@ -336,21 +346,22 @@ googletag.cmd.push(function() {
 						<form id="login_frm" name="login_frm" class="login_frm"
 							method="post"
 							action="user_login_process.do"
-							onsubmit="try {return check(this);} catch (e) {};">
+							onsubmit="try {return check(this);} catch (e) {};"> 
 							<input type="hidden" name="m_code" value="0"> <input
 								type="hidden" name="page_url" value=""> <input
 								type="hidden" name="url" value=""> <input type="hidden"
 								name="FrameKey" value=""> <input type="hidden"
 								name="login_tab" value="p" id="login_tab">
+								<input type="hidden" name="memberFlag" value="1" id="memberFlag">
 							<div class="login_input_wrap">
 								<!-- text 알림 -->
 								<ul class="tab_member_type" role="tablist">
 									<li role="none"><button type="button"
 											class="btn_tab t_per active" role="tab" tabindex="0"
-											aria-selected="true">사용자</button></li>
+											aria-selected="true" onclick="setMemberFlag(1)">사용자</button></li>
 									<li role="none"><button type="button"
 											class="btn_tab t_com" role="tab" tabindex="-1"
-											aria-selected="false">사업자</button></li>
+											aria-selected="false" onclick="setMemberFlag(2)">사업자</button></li>
 								</ul>
 								<div class="tab_panel" role="tabpanel" aria-label="개인회원">
 									<div class="setting">
@@ -384,7 +395,7 @@ googletag.cmd.push(function() {
 										<a id="a_join" href="http://localhost/HCYHotel/user/join/join_check.do"
 											class="sign_up"
 											onmousedown="try{n_trackEvent('login', 'pc_login_page' , 'join', '');}catch(e){}">회원가입</a>
-										<a href="/zf_user/helpdesk/idpw-find" class="forgotten"
+										<a href="http://localhost/HCYHotel/user/findId/user_find_id.do" class="forgotten"
 											onmousedown="try{n_trackEvent('login', 'pc_login_page' , 'find', '');}catch(e){}">아이디/비밀번호
 											찾기</a> <a href="/zf_user/applicant/rater/login-form"
 											target="_blank" class="link_rater" style="display: none;">

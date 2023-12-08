@@ -949,8 +949,8 @@ googletag.cmd.push(function() {
 					<p class="desc_find">회원가입 대상확인</p>
 					<div class="cont_find">
 						<ul class="list_idpwd">
-							<li><strong class="tit_idpwd"><a href="#void">개인회원</a></strong></li>
-							<li><strong class="tit_idpwd"><a href="#void">사업자 회원</a></strong></li>
+							<li><strong class="tit_idpwd"><a href="http://localhost/HCYHotel/user/join/user_join_check.do">개인회원</a></strong></li>
+							<li><strong class="tit_idpwd"><a href="http://localhost/HCYHotel/user/join/business_join_check.do">사업자 회원</a></strong></li>
 						</ul>
 					</div>
 
