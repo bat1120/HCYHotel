@@ -22,6 +22,10 @@ $(function(){
 </script>
 </head>
 <body>
+<!-- header -->
+<jsp:include page="../../include/header.jsp"/>
 
+<!-- footer -->
+<jsp:include page="../../include/footer.jsp"/>
 </body>
 </html>
