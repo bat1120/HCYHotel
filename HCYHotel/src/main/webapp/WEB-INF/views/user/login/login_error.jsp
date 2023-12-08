@@ -15,10 +15,19 @@
 <style type="text/css">
 
 </style>
+<style type="text/css">
+  /* 알림 창을 가운데로 위치시키기 */
+  .center-alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+</style>
 <script type="text/javascript">
 $(function(){
 	alert("${loginerror}");
-	window.location.href="user/login/user_login.do";
+	window.location.href="http://localhost/HCYHotel/user/login/user_login.do";
 });//ready
 </script>
 

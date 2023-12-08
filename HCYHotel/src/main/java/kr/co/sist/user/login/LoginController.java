@@ -6,6 +6,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.support.SessionStatus;
 
 @Controller
@@ -18,24 +20,29 @@ public class LoginController {
 	
 	
 	@PostMapping("/user/login/user_login_process.do")
-	public String login(Model model,LoginVO lVO,HttpSession session) {
+	public String login(Model model,LoginVO lVO, HttpSession session) {
+		
 		LoginService ls=LoginService.getInstance();
+		
+		
 		if(ls.checkLogin(lVO)) {
 			session.setAttribute("id",lVO.getId());	
 			
 			return "user/home/user_home";
-		}//end if
+			
+		}else {
+			model.addAttribute("loginerror","로그인 정보를 다시 확인해주세요");
+			return "user/login/login_error";
+		}
 		
-		model.addAttribute("loginerror","로그인 정보를 다시 확인해주세요");
-		return "user/login/login_error";
 	}//login 
 	
-	
+	 @RequestMapping("/user_logout.do")
 	public String logOut(SessionStatus ss) {
 		
 		ss.setComplete();
 		
-		return "redirect:/user/home/user_home";
+		return "user/home/user_home";
 	}//logOut
 
 }//class

@@ -6,6 +6,8 @@
 <properties resource="properties/database.properties"/>
 <typeAliases>
 <typeAlias type="kr.co.sist.user.login.LoginVO" alias="lVO"/>
+<typeAlias type="kr.co.sist.user.login.findid.FindIdVO" alias="FIVO"/>
+<typeAlias type="kr.co.sist.user.login.findpassword.FindPassVO" alias="FPVO"/>
 </typeAliases>
   <environments default="development">
     <environment id="development">
@@ -21,5 +23,6 @@
   
 <mappers>
 <mapper resource="kr/co/sist/user/sjh/mapper/loginMapper.xml"></mapper>
+<mapper resource="kr/co/sist/user/sjh/mapper/joinMapper.xml"></mapper>
   </mappers>
 </configuration>

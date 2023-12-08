@@ -335,7 +335,7 @@ googletag.cmd.push(function() {
 					<div class="login_page_wrap">
 						<form id="login_frm" name="login_frm" class="login_frm"
 							method="post"
-							action="https://www.saramin.co.kr/zf_user/auth/login"
+							action="user_login_process.do"
 							onsubmit="try {return check(this);} catch (e) {};">
 							<input type="hidden" name="m_code" value="0"> <input
 								type="hidden" name="page_url" value=""> <input
@@ -381,7 +381,7 @@ googletag.cmd.push(function() {
 										<button type="submit" class="btn-login BtnType SizeML">로그인</button>
 									</div>
 									<div class="signup-forgotten" style="text-align: right">
-										<a id="a_join" href="/zf_user/member/registration/join"
+										<a id="a_join" href="http://localhost/HCYHotel/user/join/join_check.do"
 											class="sign_up"
 											onmousedown="try{n_trackEvent('login', 'pc_login_page' , 'join', '');}catch(e){}">회원가입</a>
 										<a href="/zf_user/helpdesk/idpw-find" class="forgotten"

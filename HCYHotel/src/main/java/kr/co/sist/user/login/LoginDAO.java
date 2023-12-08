@@ -19,12 +19,10 @@ public class LoginDAO {
 	
 	public String selectCheckLogin(LoginVO lVO) {
 		
-		String selectCheckLogin=null;
 		MyBatiseHandler mbh=MyBatiseHandler.getInstance();
 		SqlSession ss=mbh.getMyBatisHandler(false);
 		
-		selectCheckLogin=ss.selectOne("kr.co.sist.user.sjh.loginMapper.selectLogin",lVO);
-		
+		String selectCheckLogin=ss.selectOne("kr.co.sist.user.sjh.loginMapper.selectLogin",lVO);
 		return selectCheckLogin;
 	}//selectCheckLogin
 	

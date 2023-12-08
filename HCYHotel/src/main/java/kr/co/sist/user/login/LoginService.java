@@ -21,7 +21,8 @@ public class LoginService {
 		if(loginId!=null) {
 			flag=true;
 		}//end if
-		
+		 System.out.println("Flag :" + flag);
+
 		return flag;
 		
 	}//checkLogin
