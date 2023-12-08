@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.co.sist.business.roomModifyMapper">
+
+<select id="selectHotel" resultType="hldRoom" parameterType="String">
+select hotelname,hotelcode
+from hotel
+where id=#{id}
+</select>
+
+<select id="selectAllRoomList" resultType="rld" parameterType="String">
+SELECT r.roomcode, r.roomname, rt.typename, AVG(rr.rating) AS average_rating, rt.price, COUNT(rr.reviewcode) AS reservation_count
+FROM room r
+JOIN roomtype rt ON r.typecode = rt.typecode
+LEFT JOIN roombooking rb ON r.roomcode = rb.roomcode AND rb.bookingdate BETWEEN sysdate-30 and sysdate
+LEFT JOIN roomreview rr ON rb.bookingcode = rr.bookingcode
+JOIN hotel h ON r.hotelcode = h.hotelcode
+WHERE h.id = #{id}
+GROUP BY r.roomcode, r.roomname, rt.typename, rt.price
+</select>
+
+<select id="selectRoomList" resultType="rld" parameterType="srVO">
+SELECT r.roomcode, r.roomname, rt.typename, AVG(rr.rating) AS average_rating, rt.price, COUNT(rr.reviewcode) AS reservation_count
+FROM room r
+JOIN roomtype rt ON r.typecode = rt.typecode
+LEFT JOIN roombooking rb ON r.roomcode = rb.roomcode AND rb.bookingdate BETWEEN sysdate-30 and sysdate
+LEFT JOIN roomreview rr ON rb.bookingcode = rr.bookingcode
+JOIN hotel h ON r.hotelcode = h.hotelcode
+WHERE h.id = #{id}
+and r.hotelcode=#{hotelcode}
+GROUP BY r.roomcode, r.roomname, rt.typename, rt.price
+</select>
+
+</mapper>

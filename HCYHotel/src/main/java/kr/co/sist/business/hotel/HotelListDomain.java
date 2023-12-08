@@ -13,8 +13,8 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 public class HotelListDomain {
-private String hotelCode,hotelName,sido;
-private int monthlyBooking;
-private double hotelRate;
-private Date date;
+private String hotelCode,hotelName,sido,status;
+private int monthlyBooking,booking_count;
+private double total_rating;
+private Date inputdate;
 }
