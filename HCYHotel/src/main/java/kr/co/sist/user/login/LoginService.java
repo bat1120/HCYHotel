@@ -21,9 +21,20 @@ public class LoginService {
 		if(loginId!=null) {
 			flag=true;
 		}//end if
-		 System.out.println("Flag :" + flag);
+//		 System.out.println("Flag :" + flag);
 
 		return flag;
-		
 	}//checkLogin
+	
+	public boolean checkBusLogin(LoginVO lVO)  {
+		boolean flag=false;
+		
+		String loginId=LoginDAO.getInstance().selectBusCheckLogin(lVO);
+		if(loginId!=null) {
+			flag=true;
+		}//end if
+//		 System.out.println("Flag :" + flag);
+		
+		return flag;
+	}//checkBusLogin
 }//class

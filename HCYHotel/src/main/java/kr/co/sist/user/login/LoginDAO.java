@@ -26,4 +26,13 @@ public class LoginDAO {
 		return selectCheckLogin;
 	}//selectCheckLogin
 	
+	public String selectBusCheckLogin(LoginVO lVO) {
+		
+		MyBatiseHandler mbh=MyBatiseHandler.getInstance();
+		SqlSession ss=mbh.getMyBatisHandler(false);
+		
+		String selectBusCheckLogin=ss.selectOne("kr.co.sist.user.sjh.loginMapper.selectBusLogin",lVO);
+		return selectBusCheckLogin;
+	}//selectBusCheckLogin
+	
 }//class

@@ -23,24 +23,35 @@ public class LoginController {
 		
 		LoginService ls=LoginService.getInstance();
 		
-		
-		if(ls.checkLogin(lVO)) {
-			session.setAttribute("id",lVO.getId());	
-			
-			return "user/home/user_home";
-			
-		}else {
-			model.addAttribute("loginerror","로그인 정보를 다시 확인해주세요");
-			return "user/login/login_error";
-		}//end else
-		
+		if("1".equals(lVO.getMemberFlag())){
+			if(ls.checkLogin(lVO)) {
+				session.setAttribute("id",lVO.getId());	
+				System.out.println("**사용자"+lVO.getMemberFlag());
+				return "user/home/user_home";
+			}else {
+				model.addAttribute("loginerror","로그인 정보를 다시 확인해주세요");
+				return "user/login/login_error";
+			}//end else
+		}else if("2".equals(lVO.getMemberFlag())) {
+			if(ls.checkBusLogin(lVO)) {
+				session.setAttribute("id",lVO.getId());	
+				System.out.println("**사업자"+lVO.getMemberFlag());
+				return "user/home/user_home";
+				
+			}else {
+				model.addAttribute("loginerror","로그인 정보를 다시 확인해주세요");
+				return "user/login/login_error";
+			}//end else
+		}
+		model.addAttribute("loginerror","로그인 정보를 다시 확인해주세요");
+		return "user/login/login_error";
 	}//login 
 	
 	@RequestMapping("/user_logout.do")
 	public String logOut(SessionStatus ss,HttpSession session) {
 		
 		session.invalidate();
-		System.out.println("왓니?");
+		//System.out.println("왓니?");
 		
 		ss.setComplete();
 		

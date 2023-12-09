@@ -24,6 +24,7 @@
 <meta property="fb:app_id" content="1593727887570039">
 <meta property="og:image:width" content="200">
 <meta property="og:image:height" content="200"> 
+
 <link href="http://localhost/HCYHotel/common/user/css/sticky_assist.css" media="all"
 	rel="stylesheet" type="text/css">
 <link href="https://www.saramin.co.kr/zf_user/auth" rel="canonical">
@@ -69,6 +70,7 @@
 <script type="text/javascript"
 	src="/js/layout/default-layout.js?v=20231130103248"></script>
 <script type="text/javascript">
+
 var googleSlotList = {};
 
 var googletag = googletag || {};
@@ -80,6 +82,8 @@ var src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gp
 document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
 })();
 </script>
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="https://www.googletagservices.com/tag/js/gpt.js"></script>
 <meta http-equiv="origin-trial"
 	content="As0hBNJ8h++fNYlkq8cTye2qDLyom8NddByiVytXGGD0YVE+2CEuTCpqXMDxdhOMILKoaiaYifwEvCRlJ/9GcQ8AAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ==">
@@ -329,11 +333,10 @@ googletag.cmd.push(function() {
 	<script>
 	function setMemberFlag(flag){
 		document.getElementById("memberFlag").value=flag;
-		console.log("Member Flag:", $("#memberFlag").val());
+		alert($("#memberFlag").val());
 	}//setMemberFlag
 	
 	</script>
-	<%System.out.println("memberFlag:"); %>
 
 
 	<div id="sri_section" class="  ">
@@ -356,10 +359,13 @@ googletag.cmd.push(function() {
 							<div class="login_input_wrap">
 								<!-- text 알림 -->
 								<ul class="tab_member_type" role="tablist">
-									<li role="none"><button type="button"
+									<li role="none">
+									
+									<button type="button"
 											class="btn_tab t_per active" role="tab" tabindex="0"
 											aria-selected="true" onclick="setMemberFlag(1)">사용자</button></li>
-									<li role="none"><button type="button"
+									<li role="none">
+									<button type="button"
 											class="btn_tab t_com" role="tab" tabindex="-1"
 											aria-selected="false" onclick="setMemberFlag(2)">사업자</button></li>
 								</ul>

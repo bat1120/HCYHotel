@@ -10,6 +10,12 @@ from member
 where id=#{id}and password=#{password}
 </select>
 
+<select id="selectBusLogin" resultType="String" parameterType="kr.co.sist.user.login.LoginVO">
+select id
+from business
+where id=#{id}and password=#{password}
+</select>
+
 <!-- <select id="selectMemId" resultType="String" parameterType="kr.co.sist.user.login.findid.FindIdVO">
 sele.builder.ct id
 from member
