@@ -4,13 +4,42 @@
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="kr.co.sist.user.sjh.joinMapper">
 
-<!-- <select id="selectLogin" resultType="String" parameterType="kr.co.sist.user.login.LoginVO">
-select id
+<select id="selectCheck" resultType="String" parameterType="kr.co.sist.user.join.CheckMemberVO">
+select name
 from member
-where id=#{id}and password=#{password} 
-</select> -->
+where name=#{name} and identifier=#{identifier} and tel=#{tel}
+</select>
 
+<select id="selectCheckBus" resultType="String" parameterType="kr.co.sist.user.join.CheckMemberVO">
+select name
+from business
+where name=#{name} and identifier=#{identifier} and tel=#{tel}
+</select>
 
+<insert id="insertMem" parameterType="kr.co.sist.user.join.JoinMemberVO">
+insert into member(id,password,name,identifier,tel,email,status)
+values(
+	#{id},
+	#{password},
+	#{name},
+	#{identifier},
+	#{tel},
+	#{email},
+	'Y'
+)
+</insert>
+
+<insert id="insertBus">
+insert into member(id,password,name,identifier,tel,email)
+values(
+	#{id},
+	#{password},
+	#{name},
+	#{identifier},
+	#{tel},
+	#{email}
+)
+</insert>
 
 
 

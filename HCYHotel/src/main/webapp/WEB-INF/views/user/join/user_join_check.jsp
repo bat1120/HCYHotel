@@ -942,7 +942,7 @@ googletag.cmd.push(function() {
 
 					<div class="cont_find">
 						<form
-							action="https://www.saramin.co.kr/zf_user/helpdesk/person-find-secure"
+							action="user_join_check.do"
 							method="post" id="find_form">
 							<input type="hidden" id="confirm_complete"
 								name="confirm_complete" value="n"> <input type="hidden"
@@ -970,11 +970,11 @@ googletag.cmd.push(function() {
 
 									<li id="li_cell">
 										<div class="wrap_lab">
-											<label for="cell" class="lab_find">휴대폰 번호</label>
+											<label for="tel" class="lab_find">휴대폰 번호</label>
 										</div>
 										<div class="wrap_input">
 											<span class="box_input"> <input type="text"
-												name="cell" id="cell" class="inp_find"
+												name="tel" id="tel" class="inp_find"
 												placeholder="‘-’없이 입력">
 											</span>
 											<p class="message_find" id="msg_cell" style="display: none;">휴대폰번호를
@@ -986,7 +986,7 @@ googletag.cmd.push(function() {
 										</div>
 									</li>
 
-									<li id="li_mail" style="display: none;">
+									<!-- <li id="li_mail" style="display: none;">
 										<div class="wrap_lab">
 											<label for="email" class="lab_find">이메일 주소</label>
 										</div>
@@ -1018,15 +1018,15 @@ googletag.cmd.push(function() {
 											<button type="button" id="btn_cert_mail"
 												class="btn_basic2 type03 btn_cert">인증번호 발송</button>
 										</div>
-									</li>
+									</li> -->
 
 									<li>
 										<div class="wrap_lab">
-											<label for="findCite" class="lab_find">생년월일</label>
+											<label for="identifier" class="lab_find">생년월일</label>
 										</div>
 										<div class="wrap_input">
 											<span class="box_input"> <input type="text"
-												name="findCite" id="findCite" class="inp_find"> <span
+												name="identifier" id="identifier" class="inp_find"> <span
 												class="message_find time_find" style="display: none;">남은
 													시간 (3:00)</span>
 											</span>
@@ -1040,7 +1040,7 @@ googletag.cmd.push(function() {
 								<div class="wrap_link">
 								</div>
 							</fieldset>
-							<button type="button" class="btn btn-info" style=width:150px;margin-left:600px>다음</button>
+							<input type="submit" class="btn btn-info" style="width:150px;margin-left:600px" value="다음">
 						</form>
 					</div>
 

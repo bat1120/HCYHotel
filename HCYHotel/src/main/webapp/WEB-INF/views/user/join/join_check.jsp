@@ -74,6 +74,7 @@
 <script type="text/javascript"
 	src="/js/layout/default-layout.js?v=20231130103248"></script>
 <script type="text/javascript">
+
 var googleSlotList = {};
 
 var googletag = googletag || {};
@@ -85,6 +86,8 @@ var src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gp
 document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
 })();
 </script>
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="https://www.googletagservices.com/tag/js/gpt.js"></script>
 <meta http-equiv="origin-trial"
 	content="As0hBNJ8h++fNYlkq8cTye2qDLyom8NddByiVytXGGD0YVE+2CEuTCpqXMDxdhOMILKoaiaYifwEvCRlJ/9GcQ8AAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ==">
@@ -949,12 +952,24 @@ googletag.cmd.push(function() {
 					<p class="desc_find">회원가입 대상확인</p>
 					<div class="cont_find">
 						<ul class="list_idpwd">
-							<li><strong class="tit_idpwd"><a href="http://localhost/HCYHotel/user/join/user_join_check.do">개인회원</a></strong></li>
-							<li><strong class="tit_idpwd"><a href="http://localhost/HCYHotel/user/join/business_join_check.do">사업자 회원</a></strong></li>
+							<li><strong class="tit_idpwd"><a href="http://localhost/HCYHotel/user/join/user_join_check.do" onclick="setMemberFlag(1)">개인회원</a></strong></li>
+							<li><strong class="tit_idpwd"><a href="http://localhost/HCYHotel/user/join/business_join_check.do" onclick="setMemberFlag(2)">사업자 회원</a></strong></li>
+							<input type="hidden" id="memberFlag" name="memberFlag" value="1">
 						</ul>
 					</div>
 
 				</div>
+				<script>
+				function setMemberFlag(flag){
+					document.getElementById("memberFlag").value=flag;
+					alert("mem"+$("#memberFlag").val());
+					if (flag === 1) {
+				        location.href = "http://localhost/HCYHotel/user/join/user_join_check.do";
+				    } else if (flag === 2) {
+				        location.href = "http://localhost/HCYHotel/user/join/business_join_check.do";
+				    }
+				}
+				</script>
 				<!-- //help_find -->
 			</div>
 		</div>

@@ -8,5 +8,5 @@ import lombok.ToString;
 @Setter
 @ToString
 public class CheckMemberVO {
-	private String name,identifyNum,tel,memberFlag;
+	private String name,identifier,tel,memberFlag;
 }//class
