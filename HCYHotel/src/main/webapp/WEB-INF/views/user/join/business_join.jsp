@@ -154,68 +154,8 @@
 			<div id="join_wrapper" class="join_cont_wrap">
 				<div id="member_personal" class="member_cate">
 					<form name="frm" id="frm" method="post"
-						action="https://www.saramin.co.kr/zf_user/member/registration/submit-personal">
-						<input type="hidden" name="seq" value="seq1701683852" id="seq"><input
-							type="hidden" name="reject_tailor" value="on" id="reject_tailor"><input
-							type="hidden" name="reject_email_sokbo" value="on"
-							id="reject_email_sokbo"><input type="hidden"
-							name="reject_email_certificate" value="on"
-							id="reject_email_certificate"><input type="hidden"
-							name="reject_public" value="on" id="reject_public"><input
-							type="hidden" name="reject_avatar" value="on" id="reject_avatar"><input
-							type="hidden" name="reject_albain_tailor" value="on"
-							id="reject_albain_tailor"><input type="hidden"
-							name="reject_event" value="" id="reject_event"><input
-							type="hidden" name="reject_survey" value="" id="reject_survey"><input
-							type="hidden" name="agree_tos" value="" id="agree_tos"><input
-							type="hidden" name="agree_pp" value="" id="agree_pp"><input
-							type="hidden" name="agree_3p" value="" id="agree_3p"><input
-							type="hidden" name="tel" value="" id="tel"><input
-							type="hidden" name="tel1" value="" id="tel1"><input
-							type="hidden" name="tel2" value="" id="tel2"><input
-							type="hidden" name="tel3" value="" id="tel3"><input
-							type="hidden" name="sex" value="" id="sex"><input
-							type="hidden" name="birth_year" value="" id="birth_year"><input
-							type="hidden" name="birth_month" value="" id="birth_month"><input
-							type="hidden" name="birth_day" value="" id="birth_day"><input
-							type="hidden" name="national" value="" id="national"><input
-							type="hidden" name="confirm_method" value="7" id="confirm_method"><input
-							type="hidden" name="email_chk_ok" value="0" id="email_chk_ok"><input
-							type="hidden" name="id_chk_ok" value="0" id="id_chk_ok"><input
-							type="hidden" name="jikjong_code" value="" id="jikjong_code"><input
-							type="hidden" name="welfare_code" value="" id="welfare_code"><input
-							type="hidden" name="job_type_code" value="" id="job_type_code"><input
-							type="hidden" name="channel" value="sms" id="channel"><input
-							type="hidden" name="cell" value="" id="cell"><input
-							type="hidden" name="cell1" value="" id="cell1"><input
-							type="hidden" name="cell2" value="" id="cell2"><input
-							type="hidden" name="cell3" value="" id="cell3"><input
-							type="hidden" name="zipcode" value="" id="zipcode"><input
-							type="hidden" name="address" value="" id="address"><input
-							type="hidden" name="email" value="" id="email"><input
-							type="hidden" name="confirm_status" value="ready"
-							id="confirm_status"><input type="hidden"
-							name="join_path2" value="99" id="join_path2"><input
-							type="hidden" name="tc_1_fl" value="n" id="tc_1_fl"><input
-							type="hidden" name="tc_2_fl" value="n" id="tc_2_fl"><input
-							type="hidden" name="location_based_fl" value="n"
-							id="location_based_fl"><input type="hidden"
-							name="overseas_fl" value="0" id="overseas_fl"><input
-							type="hidden" name="old_address" value="" id="old_address"><input
-							type="hidden" name="old_zipcode" value="" id="old_zipcode"><input
-							type="hidden" name="old_address_details" value=""
-							id="old_address_details"><input type="hidden"
-							name="new_address" value="" id="new_address"><input
-							type="hidden" name="new_zipcode" value="" id="new_zipcode"><input
-							type="hidden" name="new_address_details" value=""
-							id="new_address_details"><input type="hidden"
-							name="new_address_extra" value="" id="new_address_extra"><input
-							type="hidden" name="address_sido" value="" id="address_sido"><input
-							type="hidden" name="address_sigungu" value=""
-							id="address_sigungu"><input type="hidden"
-							name="x_coordinate" value="" id="x_coordinate"><input
-							type="hidden" name="y_coordinate" value="" id="y_coordinate"><input
-							type="hidden" name="zip_use_type" value="J" id="zip_use_type">
+						action="business_join.do">
+						
 						<fieldset>
 
 							<div class="cont_division">
@@ -321,7 +261,7 @@
 										<div class="TypoBox">
 											<input type="text" name="user_nm" id="user_nm"
 												class="Typo SizeL defalt" style="ime-mode: active"
-												autocapitalize="off" placeholder="'-'빼고 숫자만 입력">
+												autocapitalize="off" placeholder="">
 										</div>
 										<em class="msgInvalid" id="user_nm_msg" name="user_nm_msg"
 											style="display: none">이름은 필수 입력 정보 입니다.</em>
@@ -440,15 +380,7 @@
 										<p class="alert_column good_txt" id="mail_msg_good"
 											style="display: none">인증이 완료되었습니다.</p>
 
-										<!-- 해외거주 -->
-										<p class="wrap_collection_basis">
-											<span class="InpBox"> <span class="Chk"> <input
-													type="checkbox" id="ignore_cell_1"> <label
-													class="Lbl" for="ignore_cell_1"
-													onclick="set_overseas_selective();"> 해외 거주자입니다. </label>
-											</span>
-											</span>
-										</p>
+										
 									</div>
 
 									<div class="item identify_mail" id="phone_certi_list"
