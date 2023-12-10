@@ -81,6 +81,8 @@
   ga('send', 'pageview');
 
 </script>
+
+
 	<%-- <header id="sri_header" class="join_header">
 		<div class="area_logo">
 			<a href="/zf_user" class="link_saramin_logo" aria-label="사람인"> <svg

@@ -2,6 +2,7 @@ package kr.co.sist.user.join;
 
 
 import org.springframework.stereotype.Controller;
+
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -51,31 +52,39 @@ public class JoinMemberController {
 //			System.out.println("+++++++++++++++++++++++++++++");
 			model.addAttribute("joinerror", "이미 가입된 회원입니다");
 			return "user/join/join_error";
-		}
+		}//end if
 //		System.out.println("----------------------------");
 		return "user/join/user_join";
-	}//checkMember
+	}//checkMemberExist
 	
-	@GetMapping("/business_join_check.do")
-	public String checkBusiness() {
-		return "user/join/business_join_check";
-	}//checkBusiness
+	@PostMapping("/business_join_check.do")
+	public String checkBusinessExist(Model model, CheckMemberVO cmVO) {
+		
+		JoinMemberService jms=JoinMemberService.getInstance();
+		System.out.println("???");
+		if(!jms.checkBus(cmVO)) {
+			model.addAttribute("joinerror","이미 가입된 사업자입니다.");
+		}//end if
+		
+		return "user/join/business_join";
+	}//checkBusinessExist
 	
-	@GetMapping("/user_join.do")
-	public String joinMember() {
-		return "user/join/user_join";
-	}//joinMember
+	
 	
 	@PostMapping("/user_join.do")
-	public String joinMemberInsert(JoinMemberVO jmVO) {
+	public String joinMemberInsert(JoinMemberVO jmVO,Model model) {
 		JoinMemberService.getInstance().insertMem(jmVO);
+		
+		// 회원가입 성공 메시지를 설정
+	    model.addAttribute("successMessage", "회원가입이 완료되었습니다. 로그인 해주십시오.");
+		
 		return "user/join/user_join";
-	}//joinMember
+	}//joinMemberInsert
 	
-	@GetMapping("/business_join.do")
-	public String joinBuisiness() {
+	@PostMapping("/business_join.do")
+	public String joinBuisinessInsert() {
 		return "user/join/business_join";
-	}//joinBuisiness
+	}//joinBuisinessInsert
 	
 	public String idDup(String id, Model model) {
 		String idDup="";
