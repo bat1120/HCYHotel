@@ -38,7 +38,7 @@ private SqlSessionFactory myBatisBuilder(String configFile) {
 public SqlSession getMyBatisHandler(boolean autoCommit) {
 	SqlSession ss = null;
 	
-	ss= myBatisBuilder("kr/co/sist/dao/mybatis-config.xml").openSession(autoCommit);
+	ss= myBatisBuilder("kr/co/sist/user/kdy/dao/mybatis-config.xml").openSession(autoCommit);
 	
 	return ss;
 }//getMyBatisHandler

@@ -4,8 +4,14 @@
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="kr.co.sist.user.kdy.noticeMapper">
 
-<select id="selectAllNoticeList" resultType="" parameterType="">
-select
+<select id="selectAllNoticeList" resultType="nd">
+SELECT noticecode, title, to_char(inputdate, 'yyyy-mm-dd') inputdate
+from notice
 </select>
 
+<select id="selectNoticeDetail" parameterType="String" resultType="nd">
+select noticecode, title, content, to_char(inputdate, 'yyyy-mm-dd') inputdate, viewcnt
+from notice
+where noticecode=#{ noticeCode }
+</select>
 </mapper>
