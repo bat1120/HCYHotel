@@ -16,6 +16,12 @@ from business
 where name=#{name} and identifier=#{identifier} and tel=#{tel}
 </select>
 
+<select id="selectIdDup" resultType="String" parameterType="String">
+select id
+from member
+where id=#{id}
+</select>
+
 <insert id="insertMem" parameterType="kr.co.sist.user.join.JoinMemberVO">
 insert into member(id,password,name,identifier,tel,email,status)
 values(

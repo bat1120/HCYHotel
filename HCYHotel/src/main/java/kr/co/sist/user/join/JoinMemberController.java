@@ -7,6 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 
 @Controller
@@ -16,31 +17,14 @@ public class JoinMemberController {
 	@GetMapping("/join_check.do")
 	public String goJoinCheck(CheckMemberVO cmVO) {
 		
-//		if("1".equals(cmVO.getMemberFlag())) {
-//			return "user/join/user_join_check";
-//		}//end if
-//		
-//		return "user/join/business_join_check";
+
 		return "user/join/join_check";
 	}//goJoinCheck
 	
 	@GetMapping("/user_join_check.do")
 	public String checkMember(Model model, CheckMemberVO cmVO) {
 		
-//		System.out.println("con"+cmVO.getMemberFlag());
-//		JoinMemberService jms=JoinMemberService.getInstance();
-//		
-//		if("1".equals(cmVO.getMemberFlag())) {
-//			if(jms.checkMem(cmVO)) {
-//				return "user/join/user_join";
-//			}//end if
-//		}else if("2".equals(cmVO.getMemberFlag())){
-//			if(jms.checkBus(cmVO)) {
-//				return "user/join/business_join";
-//			}//end if
-//		}//end if
-//		model.addAttribute("joinerror","가입 정보를 다시 확인해주세요");
-//		return "user/login/login_error";
+
 		return "user/join/user_join_check";
 	}//checkMember
 	
@@ -74,6 +58,16 @@ public class JoinMemberController {
 		return "user/join/business_join";
 	}//checkBusinessExist
 	
+	@PostMapping("/user_idDup.do")
+	@ResponseBody
+	public String idDup(String id, Model model) {
+	    JoinMemberService jms = JoinMemberService.getInstance();
+	    if (!jms.checkIdDup(id)) {
+	        return "중복"; // 중복된 아이디
+	    }
+
+	    return "사용가능"; // 중복되지 않은 아이디
+	}
 	
 	
 	@PostMapping("/user_join.do")
@@ -93,10 +87,5 @@ public class JoinMemberController {
 		return "user/join/business_join";
 	}//joinBuisinessInsert
 	
-	public String idDup(String id, Model model) {
-		String idDup="";
-		
-		return idDup;
-	}//idDup
 	
 }//class

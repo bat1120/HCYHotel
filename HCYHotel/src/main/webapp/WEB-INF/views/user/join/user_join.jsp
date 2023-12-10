@@ -54,6 +54,8 @@
 	content="AwnOWg2dzaxHPelVjqOT/Y02cSxnG2FkjXO7DlX9VZF0eyD0In8IIJ9fbDFZGXvxNvn6HaF51qFHycDGLOkj1AUAAACAeyJvcmlnaW4iOiJodHRwczovL2NyaXRlby5jb206NDQzIiwiZmVhdHVyZSI6IlByaXZhY3lTYW5kYm94QWRzQVBJcyIsImV4cGlyeSI6MTY5NTE2Nzk5OSwiaXNTdWJkb21haW4iOnRydWUsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0=">
 </head>
 <body cz-shortcut-listen="true">
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<script>
     (function(a_,i_,r_,_b,_r,_i,_d,_g,_e){if(!a_[_b]){var d={queue:[]};_r.concat(_i).forEach(function(a){var i_=a.split("."),a_=i_.pop();i_.reduce(function(a,i_){return a[i_]=a[i_]||{}},d)[a_]=function(){d.queue.push([a,arguments])}});a_[_b]=d;a_=i_.getElementsByTagName(r_)[0];i_=i_.createElement(r_);i_.onerror=function(){d.queue.filter(function(a){return 0<=_i.indexOf(a[0])}).forEach(function(a){a=a[1];a=a[a.length-1];"function"===typeof a&&a("error occur when load airbridge")})};i_.async=1;i_.src="//static.airbridge.io/sdk/latest/airbridge.min.js";a_.parentNode.insertBefore(i_,a_)}})(window,document,"script","airbridge","init fetchResource setBanner setDownload setDownloads openDeeplink setDeeplinks sendWeb setUserAgent setUserAlias addUserAlias setMobileAppData setUserId setUserEmail setUserPhone setUserAttributes clearUser setDeviceIFV setDeviceIFA setDeviceGAID events.send events.signIn events.signUp events.signOut events.purchased events.addedToCart events.productDetailsViewEvent events.homeViewEvent events.productListViewEvent events.searchResultViewEvent".split(" "),["events.wait"]);
     var airbridgeWebKey = 'ca79046f9e144d959f976fe69cdcb672';
@@ -150,6 +152,169 @@
 	</header> --%>
 	<!-- header -->
 	<jsp:include page="../include/header.jsp"/>
+	
+  <script>
+    $(document).ready(function() {
+      $("#frm").submit(function(event) {
+        var idValue = $("#id").val().trim();
+        var idMessage = $("#idCheckMsg1");
+
+        var passwordValue = $("#password").val();
+        var passwordMessage = $("#password1_warning_txt");
+
+        var nameValue = $("#name").val().trim();
+        var nameMessage = $("#user_nm_msg");
+
+        var birthDateValue = $("#identifier").val().trim();
+        var birthDateMessage = $("#cyr_msg");
+
+        var telValue = $("#tel").val().replace(/\s/g, "");
+        var telMessage = $("#msg_cell");
+
+        var emailValue = $("#sms_email_id").val().trim();
+        var emailMessage = $("#sms_msg_email1");
+
+        var agreeAllChecked = $("#agreeAllPersonal").prop("checked");
+        var agree1Checked = $("#agree_rule1").prop("checked");
+        var agree2Checked = $("#agree_take1").prop("checked");
+
+       
+
+        // 아이디 유효성 검사
+        if (!/^[a-zA-Z0-9_]{4,20}$/.test(idValue)) {
+          $("#idCheckMsg1").show();
+          event.preventDefault();
+          return;
+        } else {
+          $("#idCheckMsg1").hide();
+        }
+
+        // 비밀번호 유효성 검사
+        if (
+          !/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,16}$/.test(
+            passwordValue
+          )
+        ) {
+          $("#password1_warning_txt").show();
+          event.preventDefault();
+          return;
+        } else {
+          $("#password1_warning_txt").hide();
+        }
+
+        // 이름 유효성 검사
+        if (!/^[가-힣]+$/.test(nameValue)) {
+          $("#user_nm_msg").show();
+          event.preventDefault();
+          return;
+        } else {
+          $("#user_nm_msg").hide();
+        }
+
+        // 생년월일 유효성 검사
+        if (!/^\d{8}$/.test(birthDateValue)) {
+          $("#cyr_msg").show();
+          event.preventDefault();
+          return;
+        } else {
+          $("#cyr_msg").hide();
+        }
+
+        // 휴대폰 번호 유효성 검사
+        if (!/^\d{3}-\d{4}-\d{4}$/.test(telValue)) {
+          $("#msg_cell").show();
+          event.preventDefault();
+          return;
+        } else {
+          $("#msg_cell").hide();
+        }
+        
+        // 이메일 유효성 검사
+        if (!/^[a-zA-Z]+@[a-zA-Z]+/.test(emailValue)) {
+          $("#sms_msg_email1").show();
+          event.preventDefault();
+          return;
+        } else {
+          $("#sms_msg_email1").hide();
+        }
+
+        // 전체 동의 및 필수 약관 동의 검사
+        if (!agreeAllChecked && (!agree1Checked || !agree2Checked)) {
+          alert("모든 약관에 동의해주세요.");
+          event.preventDefault();
+          return;
+        }
+
+        // 모든 유효성 검사를 통과하면 폼 제출
+        this.submit();
+      });
+
+      // 전체 동의 체크박스 변경 이벤트 핸들러
+      $("#agreeAllPersonal").change(function() {
+        var isChecked = $(this).prop("checked");
+        $("#agree_rule1, #agree_take1").prop("checked", isChecked);
+      });
+
+      // 각 약관 체크박스 변경 이벤트 핸들러
+      $("#agreeAllPersonal, #agree_rule1, #agree_take1").change(function() {
+        var agreeAllChecked = $("#agreeAllPersonal").prop("checked");
+        var agree1Checked = $("#agree_rule1").prop("checked");
+        var agree2Checked = $("#agree_take1").prop("checked");
+
+        if (agreeAllChecked) {
+          $("#agree_rule1, #agree_take1").prop("checked", true);
+        } else {
+          if (agree1Checked && agree2Checked) {
+            $("#agreeAllPersonal").prop("checked", true);
+          } else {
+            $("#agreeAllPersonal").prop("checked", false);
+          }
+        }
+      });
+    });
+  </script>
+  <script>
+  // successMessage 속성이 설정되어 있다면 알림 창을 띄우고 페이지를 리다이렉트
+  var successMessage = "${successMessage}";
+  if (successMessage) {
+    alert(successMessage);
+    // 원하는 로그인 페이지 URL로 변경
+    window.location.href = "http://localhost/HCYHotel/user/login/user_login.do";
+  }
+</script>
+<script>
+$(document).ready(function() {
+    $("#id").blur(function() {
+        var inputId = $("#id").val();
+
+        // Ajax로 서버에 중복 확인 요청
+        $.ajax({
+            type: "POST",
+            url: "/user_idDup.do", // 중복 확인을 처리하는 서버의 URL
+            data: {id: inputId},
+            success: function(data) {
+                if (data === "중복") {
+                    // 중복된 아이디일 경우 메시지 표시
+                    $("#idCheckMsg1").hide();
+                    $("#idCheckMsg2").hide();
+                    $("#idCheckMsg1").text("이미 사용 중인 아이디입니다.").show();
+                } else {
+                    // 중복되지 않은 아이디일 경우 메시지 표시
+                    $("#idCheckMsg1").hide();
+                    $("#idCheckMsg2").text("사용 가능한 아이디에요.").show();
+                }
+            },
+            error: function() {
+                // 에러 처리
+                console.error("중복 확인 요청 중 에러 발생");
+            }
+        });
+    });
+});
+
+</script>
+	
+	
 	<div id="sri_section">
 		<div id="sri_wrap">
 
@@ -173,9 +338,9 @@
 												placeholder="4~20자리 / 영문, 숫자, 특수문자 '_'사용가능">
 										</div>
 										<p class="alert_column focus_txt" id="idFocusMsg"
-											style="display: none">4 ~ 20자의 영문, 숫자와 특수문자'_'만 사용해주세요.</p>
+											style="display: none">4 ~ 20자의 영문, 숫자와 특수문자 '_'만 사용해주세요.</p>
 										<em class="msgInvalid" id="idCheckMsg1" style="display: none">4~20자의
-											영문, 숫자와 특수문자'_'만 사용해주세요.</em>
+											영문, 숫자와 특수문자 '_'만 사용해주세요.</em>
 										<!-- 오류 시 텍스트 -->
 										<p class="alert_column good_txt" id="idCheckMsg2"
 											style="display: none">사용가능한 아이디에요.</p>
@@ -184,10 +349,10 @@
 
 									<!-- 비밀번호 -->
 									<div class="item">
-										<label for="password1"><strong>비밀번호</strong></label>
+										<label for="password"><strong>비밀번호</strong></label>
 										<div class="TypoBox pass_box">
 											<input autocapitalize="off" name="password"
-												class="Typo SizeL defalt" id="password1" type="password"
+												class="Typo SizeL defalt" id="password" type="password"
 												maxlength="16" autocomplete="off"
 												placeholder="8~16자리/영문 대소문자, 숫자, 특수문자 조합">
 											<button type="button" toggle="#password1"
@@ -197,11 +362,11 @@
 
 										<p class="alert_column focus_txt" id="password1FocusMsg"
 											style="display: none">8~16자리 영문 대소문자, 숫자, 특수문자 중 3가지 이상
-											조합으로 만들어주세요.</p>
+											조합으로 올바르게 입력하세요</p>
 										<!-- focus 시 텍스트 -->
 										<em class="msgInvalid" id="password1_warning_txt"
 											style="display: none"><span>8~16자리 영문 대소문자, 숫자,
-												특수문자 중 3가지 이상 조합으로 만들어주세요.</span></em>
+												특수문자 중 3가지 이상 조합으로 올바르게 입력하세요</span></em>
 										<p class="alert_column good_txt" id="password1_good_txt"
 											style="display: none"></p>
 										<p class="pass_safety" id="pw_strnegth_level"
@@ -210,21 +375,21 @@
 
 									<!-- 이름 -->
 									<div class="item">
-										<label for="user_nm"><strong>이름</strong></label>
+										<label for="name"><strong>이름</strong></label>
 										<div class="TypoBox">
-											<input type="text" name="name" id="user_nm"
+											<input type="text" name="name" id="name"
 												class="Typo SizeL defalt" style="ime-mode: active"
 												autocapitalize="off" placeholder="이름 입력">
 										</div>
 										<em class="msgInvalid" id="user_nm_msg" name="user_nm_msg"
-											style="display: none">이름은 필수 입력 정보 입니다.</em>
+											style="display: none">이름을 올바르게 입력하세요</em>
 									</div>
 
 									<!-- 생년월일 -->
 									<div class="item">
-										<label for="birth_date"><strong>생년월일</strong></label>
+										<label for="identifier"><strong>생년월일</strong></label>
 										<div class="TypoBox">
-											<input type="number" name="identifier" id="birth_date"
+											<input type="number" name="identifier" id="identifier"
 												maxlength="8" autocapitalize="off" placeholder="YYYYMMDD"
 												class="Typo SizeL defalt">
 										</div>
@@ -259,14 +424,13 @@
 									<!-- 휴대폰 인증 -->
 
 										<div class="item">
-										<label for="user_nm"><strong>휴대폰</strong></label>
+										<label for="tel"><strong>휴대폰</strong></label>
 										<div class="TypoBox">
-											<input type="text" name="tel" id="user_nm"
+											<input type="text" name="tel" id="tel"
 												class="Typo SizeL defalt" style="ime-mode: active"
-												autocapitalize="off" placeholder="">
+												autocapitalize="off" placeholder="010-0000-0000">
 										</div>
-										<em class="msgInvalid" id="user_nm_msg" name="user_nm_msg"
-											style="display: none">이름은 필수 입력 정보 입니다.</em>
+												<em class="msgInvalid" id="msg_cell" style="display: none;">잘못된 휴대폰 번호입니다. 휴대폰 번호를 정확하게 입력해주세요.</em>
 									</div>
 										<!-- <div class="input_collect TypoBox">
 											<input type="hidden" name="sms_confirm_complete" value="n"
@@ -276,36 +440,14 @@
 												class="Typo SizeL join_input defalt">
 										</div> -->
 										
-										 
-										
-										
-										
-										
-
-									<!-- 휴대폰 인증시 이메일 -->
+								<!-- 휴대폰 인증시 이메일 -->
 									<li class="item identify_phone"><label for="sms_email_id"><strong>이메일</strong></label>
 										<div class="TypoBox">
 											<input type="text" id="sms_email_id" name="email"
 												style="ime-mode: inactive" class="Typo SizeL defalt"
 												placeholder="email@hotel.co.kr">
 										</div> <!-- 자동리스트 영역 -->
-										<ul class="auto_list_area email_list" style="display: none;">
-											<li class="auto_list"><a href="javascript:;"
-												onclick="return false;" class="email_domain"><strong
-													class="txt_input"></strong>@naver.com</a></li>
-											<li class="auto_list"><a href="javascript:;"
-												onclick="return false;" class="email_domain"><strong
-													class="txt_input"></strong>@gmail.com</a></li>
-											<li class="auto_list"><a href="javascript:;"
-												onclick="return false;" class="email_domain"><strong
-													class="txt_input"></strong>@daum.net</a></li>
-											<li class="auto_list"><a href="javascript:;"
-												onclick="return false;" class="email_domain"><strong
-													class="txt_input"></strong>@nate.com</a></li>
-											<li class="auto_list"><a href="javascript:;"
-												onclick="return false;" class="email_domain"><strong
-													class="txt_input"></strong>@outlook.com</a></li>
-										</ul> <em class="msgInvalid" id="sms_msg_email1" name="msg_email1"
+										 <em class="msgInvalid" id="sms_msg_email1" name="email"
 										style="display: none">이메일 주소를 입력해주세요.</em>
 										<p class="alert_column good_txt" id="msg_email2"
 											style="display: none">인증되었습니다</p>
@@ -313,98 +455,16 @@
 
 									<!-- 이메일 인증 -->
 									<div class="item identify_mail" style="display: none;">
-										<label for="sms_email_id"><strong>이메일</strong></label>
-										<p class="txt_move identify_select">
-											휴대폰 인증을 원하시면,
-											<button type="button" class="btn_identify"
-												id="identify_phone">휴대폰 인증하기</button>
-										</p>
-										<div class="input_collect TypoBox">
-											<input type="hidden" name="mail_confirm_complete" value="n"
-												id="mail_confirm_complete"> <input type="text"
-												id="mail_email_id" name="tmp_email_id"
-												style="ime-mode: inactive"
-												class="Typo SizeL join_input defalt"
-												placeholder="email@saramin.co.kr">
-										</div>
-										<button type="button" id="mail_send_code"
-											class="BtnType SizeL defalt btn_cert_pop" disabled="">
-											<span>인증요청</span>
-										</button>
-										<button type="button" id="mail_re_send_code"
-											class="BtnType SizeL colorBlueReverse" style="display: none"
-											onclick="sendCodeAction()">
-											<span>재발송</span>
-										</button>
-										<!-- 자동리스트 영역 -->
-										<ul class="auto_list_area email_list ScrollBar">
-											<li class="auto_list"><a href="javascript:;"
-												onclick="return false;" class="email_domain"><strong
-													class="txt_input"></strong>@naver.com</a></li>
-											<li class="auto_list"><a href="javascript:;"
-												onclick="return false;" class="email_domain"><strong
-													class="txt_input"></strong>@gmail.com</a></li>
-											<li class="auto_list"><a href="javascript:;"
-												onclick="return false;" class="email_domain"><strong
-													class="txt_input"></strong>@daum.net</a></li>
-											<li class="auto_list"><a href="javascript:;"
-												onclick="return false;" class="email_domain"><strong
-													class="txt_input"></strong>@nate.com</a></li>
-											<li class="auto_list"><a href="javascript:;"
-												onclick="return false;" class="email_domain"><strong
-													class="txt_input"></strong>@outlook.com</a></li>
-										</ul>
-										<em class="msgInvalid" id="mail_msg_email1" name="msg_email1"
+										<label for="email"><strong>이메일</strong></label>
+									
+								
+									
+										<em class="msgInvalid" id="mail_msg_email1" name="email"
 											style="display: none">이메일 주소를 입력해주세요.</em>
 
-										<div class="input_collect " id="mail_confirm_wrap"
-											style="display: none;">
-											<label for="sms_code" class="blind">인증번호 입력</label>
-											<div class="TypoBox email_box">
-												<input type="number" id="email_code" name="email_code"
-													placeholder="인증번호를 입력해주세요"
-													class="Typo SizeL join_input defalt" maxlength="6"
-													pattern="\d*" autocomplete="on">
-											</div>
-
-											<button type="button"
-												class="BtnType SizeL defalt confirm-action person ga_data_layer"
-												data-ga_data_layer="ga_lead|member_join|join_pc|step_1"
-												disabled="">
-												<span>확인</span>
-											</button>
-										</div>
-										<em class="msgInvalid" id="confirm_remain_mail_time_area"
-											style="display: none;"><span>남은 시간 03:00</span></em> <em
-											class="msgInvalid" id="email_confirm_msg"
-											style="display: none"><span>인증번호가 일치하지 않습니다. 다시
-												확인해 주세요.</span></em>
-										<p class="alert_column good_txt" id="mail_msg_good"
-											style="display: none">인증이 완료되었습니다.</p>
-
-										<!-- 해외거주 -->
-										<p class="wrap_collection_basis">
-											<span class="InpBox"> <span class="Chk"> <input
-													type="checkbox" id="ignore_cell_1"> <label
-													class="Lbl" for="ignore_cell_1"
-													onclick="set_overseas_selective();"> 해외 거주자입니다. </label>
-											</span>
-											</span>
-										</p>
 									</div>
 
-									<div class="item identify_mail" id="phone_certi_list"
-										name="phone_certi_list" style="display: none;">
-										<!-- 이메일 인증시 휴대폰 -->
-										<label for="mail_cellnum"><strong>휴대폰</strong></label>
-										<div class="TypoBox">
-											<input type="text" id="mail_cellnum" name="tmp_cellnum"
-												placeholder="'-'빼고 숫자만 입력" class="Typo SizeL defalt">
-										</div>
-										<em class="msgInvalid" id="mail_phone_msg"
-											style="display: none"><span>잘못된 휴대폰 번호입니다. 휴대폰
-												번호를 정확하게 입력해주세요.</span></em>
-									</div>
+									
 								</div>
 
 								<!-- 약관 -->
@@ -438,10 +498,10 @@
 														</span>
 
 													</div>
-												</div> <a href="/zf_user/help/terms-of-service/person"
+												</div> <!-- <a href="/zf_user/help/terms-of-service/person"
 												class="view_indetail" target="_blank"> <span
 													class="blind">개인회원 약관 상세보기</span>
-											</a>
+											</a> -->
 											</li>
 											<li>
 												<div class="agree_desc">
@@ -454,14 +514,12 @@
 														</span>
 
 													</div>
-												</div> <a id="popupClausePrivacyPerson"
+												</div> <!-- <a id="popupClausePrivacyPerson"
 												href="/zf_user/popup/privacy-policy?category=person_privacy_req"
 												class="view_indetail popup_clause_open" target="_blank">
 													<span class="blind">개인정보 수집 및 이용에 동의 약관 상세보기</span>
-											</a>
+											</a> -->
 											</li>
-
-
 
 										</ul>
 									</div>

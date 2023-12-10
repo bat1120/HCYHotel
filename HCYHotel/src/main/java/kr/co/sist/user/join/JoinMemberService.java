@@ -44,5 +44,16 @@ public class JoinMemberService {
 		
 	}//plusMember
 	
+	public boolean checkIdDup(String id) {
+		boolean flag=false;
+		
+		String checkIdDup=JoinMemberDAO.getInstance().selectIdDup(id);
+		if(checkIdDup==null) {
+			flag=true;
+		}//end if
+		return flag;
+				
+	}//checkIdDup
+	
 	
 }//class

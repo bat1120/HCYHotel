@@ -37,11 +37,19 @@ private static JoinMemberDAO jmDAO;
 		return selectCheckBus;
 	}//selectCheckBus
 	
+	public String selectIdDup(String id) {
+		MyBatiseHandler mbh=MyBatiseHandler.getInstance();
+		SqlSession ss=mbh.getMyBatisHandler(false);
+		
+		String selectIdDup=ss.selectOne("kr.co.sist.user.sjh.joinMapper.selectIdDup",id);
+		return selectIdDup;
+	}
+	
 	public void insertMem(JoinMemberVO jmVO) {
 		
 		MyBatiseHandler mbh=MyBatiseHandler.getInstance();
 		SqlSession ss=mbh.getMyBatisHandler(true);
-//		System.out.println("jmVO=======================" + jmVO);
+		System.out.println("jmVO=======================" + jmVO);
 		
 		ss.insert("kr.co.sist.user.sjh.joinMapper.insertMem",jmVO);
 	

@@ -380,15 +380,7 @@
 										<p class="alert_column good_txt" id="mail_msg_good"
 											style="display: none">인증이 완료되었습니다.</p>
 
-										<!-- 해외거주 -->
-										<p class="wrap_collection_basis">
-											<span class="InpBox"> <span class="Chk"> <input
-													type="checkbox" id="ignore_cell_1"> <label
-													class="Lbl" for="ignore_cell_1"
-													onclick="set_overseas_selective();"> 해외 거주자입니다. </label>
-											</span>
-											</span>
-										</p>
+										
 									</div>
 
 									<div class="item identify_mail" id="phone_certi_list"
