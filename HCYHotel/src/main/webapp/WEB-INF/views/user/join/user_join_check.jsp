@@ -67,6 +67,8 @@
 <script type="text/javascript"
 	src="/js/layout/default-layout.js?v=20231130103248"></script>
 <script src="/js/apply/QuickApply.js?v=20231130103248"></script>
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script type="text/javascript">
 var googleSlotList = {};
 
@@ -932,6 +934,59 @@ googletag.cmd.push(function() {
 		<div id="searchAutoCompleteTemplate" style="display: none"></div>
 	</div>
 
+<script>
+  $(document).ready(function() {
+    $("#find_form").submit(function(event) {
+      // 이름 유효성 검사
+      var nameValue = $("#name").val().trim();
+      var nameMessage = $("#msg_name");
+
+      //휴대폰 번호 유효성 검사
+      var telValue = $("#tel").val().replace(/\s/g, ""); // 공백 제거
+      var telMessage = $("#msg_cell");
+
+      // 생년월일 유효성 검사
+      var identifierValue = $("#identifier").val().trim();
+      var identifierMessage = $("#msg_cert_num");
+
+   	  //이름에는 한글만
+      if (!/^[가-힣]+$/.test(nameValue)) {
+        nameMessage.show();
+      } else {
+        nameMessage.hide();
+      }
+
+      // 생년월일에는 숫자 8자리만 입력
+      if (!/^\d{8}$/.test(identifierValue)) {
+        identifierMessage.show();
+      } else {
+        identifierMessage.hide();
+      }
+
+      // 휴대폰 번호 유효성 검사
+      if (!/^\d{3}-\d{4}-\d{4}$/.test(telValue)) {
+        telMessage.show();
+      } else {
+        telMessage.hide();
+      }
+
+      // 모든 필드가 비어있지 않고 유효성 검사를 통과한 경우
+      if (/^[가-힣]+$/.test(nameValue) && /^\d{8}$/.test(identifierValue) && /^\d{3}-\d{4}-\d{4}$/.test(telValue)) {
+        // 오류 메시지 숨김
+        nameMessage.hide();
+        telMessage.hide();
+        identifierMessage.hide();
+
+        // 폼 제출
+        this.submit();
+      } else {
+        event.preventDefault();
+      }
+    });
+  });
+</script>
+
+
 	<div id="sri_section" class="  has_banner">
 		<div id="sri_wrap">
 			<div id="content">
@@ -942,7 +997,7 @@ googletag.cmd.push(function() {
 
 					<div class="cont_find">
 						<form
-							action="user_join_check.do"
+							action="user_join_exist.do"
 							method="post" id="find_form">
 							<input type="hidden" id="confirm_complete"
 								name="confirm_complete" value="n"> <input type="hidden"
@@ -975,7 +1030,7 @@ googletag.cmd.push(function() {
 										<div class="wrap_input">
 											<span class="box_input"> <input type="text"
 												name="tel" id="tel" class="inp_find"
-												placeholder="‘-’없이 입력">
+												placeholder="">
 											</span>
 											<p class="message_find" id="msg_cell" style="display: none;">휴대폰번호를
 												정확하게 입력해주세요.</p>
@@ -1031,7 +1086,7 @@ googletag.cmd.push(function() {
 													시간 (3:00)</span>
 											</span>
 											<p class="message_find" id="msg_cert_num"
-												style="display: none;">입력시간이 만료되었습니다. 인증번호를 다시 발송해주세요.</p>
+												style="display: none;">생년월일을 올바르게 입력해주세요</p>
 											<p class="message_find ok" style="display: none;">인증 성공.
 												잠시만 기다려주세요.</p>
 										</div>

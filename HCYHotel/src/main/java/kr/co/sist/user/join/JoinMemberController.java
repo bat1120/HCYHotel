@@ -44,7 +44,12 @@ public class JoinMemberController {
 		return "user/join/user_join_check";
 	}//checkMember
 	
-	@PostMapping("/user_join_check.do")
+	@GetMapping("/business_join_check.do")
+	public String checkBusiness(Model model, CheckMemberVO cmVO) {
+		return "user/join/business_join_check";
+	}
+	
+	@PostMapping("/user_join_exist.do")
 	public String checkMemberExist(Model model, CheckMemberVO cmVO) {
 		
 		JoinMemberService jms=JoinMemberService.getInstance();
@@ -57,15 +62,15 @@ public class JoinMemberController {
 		return "user/join/user_join";
 	}//checkMemberExist
 	
-	@PostMapping("/business_join_check.do")
+	@PostMapping("/business_join_exist.do")
 	public String checkBusinessExist(Model model, CheckMemberVO cmVO) {
 		
+		System.out.println("사업자요");
 		JoinMemberService jms=JoinMemberService.getInstance();
-		System.out.println("???");
 		if(!jms.checkBus(cmVO)) {
 			model.addAttribute("joinerror","이미 가입된 사업자입니다.");
+			return "user/join/join_error";
 		}//end if
-		
 		return "user/join/business_join";
 	}//checkBusinessExist
 	
@@ -73,7 +78,7 @@ public class JoinMemberController {
 	
 	@PostMapping("/user_join.do")
 	public String joinMemberInsert(JoinMemberVO jmVO,Model model) {
-		JoinMemberService.getInstance().insertMem(jmVO);
+		JoinMemberService.getInstance().plusMem(jmVO);
 		
 		// 회원가입 성공 메시지를 설정
 	    model.addAttribute("successMessage", "회원가입이 완료되었습니다. 로그인 해주십시오.");
@@ -82,7 +87,9 @@ public class JoinMemberController {
 	}//joinMemberInsert
 	
 	@PostMapping("/business_join.do")
-	public String joinBuisinessInsert() {
+	public String joinBuisinessInsert(JoinMemberVO jmVO,Model model) {
+		JoinMemberService.getInstance().plusBus(jmVO);
+		
 		return "user/join/business_join";
 	}//joinBuisinessInsert
 	

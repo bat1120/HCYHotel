@@ -34,10 +34,13 @@ public class JoinMemberService {
 		return flag;
 	}//checkBus
 	
-	public void insertMem(JoinMemberVO jmVO) {
-		
+	public void plusMem(JoinMemberVO jmVO) {
 		JoinMemberDAO.getInstance().insertMem(jmVO);
 		
+	}//plusMember
+	
+	public void plusBus(JoinMemberVO jmVO) {
+		JoinMemberDAO.getInstance().insertBus(jmVO);
 		
 	}//plusMember
 	

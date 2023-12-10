@@ -47,6 +47,16 @@ private static JoinMemberDAO jmDAO;
 	
 	}//insertMem
 	
+	public void insertBus(JoinMemberVO jmVO) {
+		
+		MyBatiseHandler mbh=MyBatiseHandler.getInstance();
+		SqlSession ss=mbh.getMyBatisHandler(true);
+//		System.out.println("jmVO=======================" + jmVO);
+		
+		ss.insert("kr.co.sist.user.sjh.joinMapper.insertBus",jmVO);
+		
+	}//insertMem
+	
 	
 	
 	

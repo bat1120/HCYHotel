@@ -29,15 +29,16 @@ values(
 )
 </insert>
 
-<insert id="insertBus">
-insert into member(id,password,name,identifier,tel,email)
+<insert id="insertBus" parameterType="kr.co.sist.user.join.JoinMemberVO">
+insert into member(id,password,name,identifier,tel,email,status)
 values(
 	#{id},
 	#{password},
 	#{name},
 	#{identifier},
 	#{tel},
-	#{email}
+	#{email},
+	'Y'
 )
 </insert>
 

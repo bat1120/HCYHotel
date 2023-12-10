@@ -263,7 +263,7 @@
 										<div class="TypoBox">
 											<input type="text" name="tel" id="user_nm"
 												class="Typo SizeL defalt" style="ime-mode: active"
-												autocapitalize="off" placeholder="'-'빼고 숫자만 입력">
+												autocapitalize="off" placeholder="">
 										</div>
 										<em class="msgInvalid" id="user_nm_msg" name="user_nm_msg"
 											style="display: none">이름은 필수 입력 정보 입니다.</em>
