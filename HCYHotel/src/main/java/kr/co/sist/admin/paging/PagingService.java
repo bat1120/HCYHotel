@@ -1,18 +1,14 @@
 package kr.co.sist.admin.paging;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+@Component
 public class PagingService {
-	private static PagingService p;
-	private PagingService() {
-	}//PagingService
-	
-	public static PagingService getInstance() {
-		if(p==null) {p=new PagingService();}
-		return p;
-	}//getInstance
+	@Autowired
+	private PagingDAO pDAO;
 	
 	public PagingDomain getPDomain(PagingSearchVO psVO) {
 		PagingDomain pd = new PagingDomain();
-		PagingDAO pDAO = PagingDAO.getInstance();
 		int totalCnt = pDAO.selectTotalCnt(psVO);
 		pd.setTotalPage(totalCnt/psVO.getPageScale());
 		pd.setStartNum(psVO.getPageScale()*(psVO.getCurrentPage()-1)+1);

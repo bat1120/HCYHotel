@@ -17,5 +17,64 @@ SELECT ID, NAME, (select HOTELNAME from HOTEL h where h.ID = b.id and rownum = 1
 FROM  BUSINESS b
 ]]>
 </select>
+
+<select id="selectMemInfo" resultType="mid" parameterType="miVO">
+select ID, NAME, EMAIL, TEL ,
+<choose>
+	<when test="memFlag eq 'mem'">
+(SELECT count(*) from ROOMBOOKING r where m.ID = r.ID and r.id = #{id} ) bookingCnt
+from
+	MEMBER m
+	</when>
+	<otherwise>
+	(select count(*)
+from
+(select *
+from room r, hotel h, ROOMBOOKING rb
+where r.HOTELCODE = h.HOTELCODE(+) and rb.ROOMCODE = r.ROOMCODE(+) and h.id = #{id})) bookingCnt
+	from
+	BUSINESS b
+	</otherwise>
+</choose>
+where id = #{id}
+</select>
+  <!-- 룸 리뷰 리스트 -->
+  <select id="selectRoomReview" resultType="rrd" parameterType="miVO">
+<![CDATA[
+select HOTELNAME, ROOMNAME, CONTENT, INPUTDATE, RATING
+from (SELECT rownum r, h.HOTELNAME , r.ROOMNAME, rv.CONTENT, rv.INPUTDATE, rv.RATING
+FROM ROOMREVIEW rv, ROOM r , HOTEL h ,ROOMBOOKING rb
+WHERE rv.BOOKINGCODE = rb.BOOKINGCODE(+) and rb.ROOMCODE = r.ROOMCODE(+) and r.HOTELCODE = h.HOTELCODE(+) and rb.ID = #{id})
+]]>
+<where>
+<if test="startNum neq 0">
+<![CDATA[
+r >= #{startNum} and r <= #{endNum}
+]]>
+</if>
+</where>
+  </select>
+  <!-- 다이닝 리뷰 리스트 -->
+  <select id="selectDiningReview" resultType="drd" parameterType="miVO">
+<![CDATA[
+select HOTELNAME , DININGNAME, CONTENT, INPUTDATE, RATING
+from (SELECT rownum r, h.HOTELNAME , d.DININGNAME, dv.CONTENT, dv.INPUTDATE, dv.RATING
+FROM DININGREVIEW dv, DINING d , HOTEL h ,DININGBOOKING db, DININGSCHEDULE ds
+WHERE dv.BOOKINGCODE = db.BOOKINGCODE(+) and db.SCHEDULECODE = ds.SCHEDULECODE(+) and  ds.DININGCODE = d.DININGCODE(+) and d.HOTELCODE = h.HOTELCODE(+) and db.ID = #{id})
+]]>
+<where>
+<if test="startNum neq 0">
+<![CDATA[
+r >= #{startNum} and r <= #{endNum}
+]]>
+</if>
+</where>
+  </select>
   
+  <select id="deleteMem" parameterType="dmVO">
+  <![CDATA[
+DELETE ${memFlag}
+where ID =  #{id}
+  ]]>
+  </select>
 </mapper>
