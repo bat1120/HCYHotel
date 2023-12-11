@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=1280">
 <meta name="format-detection" content="telephone=no">
 
-<title>공지사항 &lt; 고객센터 | 휘닉스 호텔앤드리조트</title>
+<title>문의사항 | HCYCombined</title>
 
 <link rel="shortcut icon" href="/system/images/favicon.ico">
 <link rel="apple-touch-icon" href="/system/images/favicon.ico">
@@ -165,7 +165,8 @@
 
 
 	<!-- content-main : 본문 페이지 영역 // -->
-	<div id="content-main" class="content-main" style="margin-top: 4%; margin-bottom: 8%">
+	<div id="content-main" class="content-main"
+		style="margin-top: 4%; margin-bottom: 8%">
 		<!-- #BREADCRUMB -->
 		<div class="common-content customer-notice">
 			<h3 class="content-main-title">문의사항</h3>
@@ -173,235 +174,23 @@
 			<div class="board-detail">
 				<div class="detail-header">
 					<h4 class="detail-tit">
-						<span class="board-flag-cate type1"> 평창</span> <span
-							class="tit-text">[태기산CC] 2023년 폐장 안내</span>
+						<span class="tit-text">제목자리</span>
 					</h4>
-					<div class="detail-info">등록일 : 2023-10-08</div>
+					<div class="detail-info">등록일같은거 뜨는 자리</div>
 				</div>
 				<div class="detail-content" style="overflow: auto;">
-					<p></p>
-					<p class="0"
-						style="background: rgb(255, 255, 255); line-height: 180%;">
-						<span
-							style="font-weight: bold; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; color: rgb(0, 0, 0); font-family: 돋움;">안녕하십니까</span>
-					</p>
-					<p class="0"
-						style="background: rgb(255, 255, 255); line-height: 180%;">
-						<span
-							style="letter-spacing: 0pt; font-weight: bold; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; color: rgb(0, 0, 0); font-family: 돋움;">23년
-							태기산CC의 운영 종료 일정을 안내드립니다.</span>
-					</p>
-					<br>
-
-					<p class="0"
-						style="background: rgb(255, 255, 255); line-height: 180%;">
-						<span
-							style="letter-spacing: 0pt; font-weight: bold; font-size: 12pt; color: rgb(0, 0, 255); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 돋움;">&lt;</span><span
-							style="font-weight: bold; font-size: 12pt; color: rgb(0, 0, 255); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 돋움;">운영
-							일정</span><span
-							style="letter-spacing: 0pt; font-weight: bold; font-size: 12pt; color: rgb(0, 0, 255); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 돋움;">&gt;</span>
-					</p>
-					<p class="0"
-						style="background: rgb(255, 255, 255); line-height: 180%;">
-						<span
-							style="letter-spacing: 0pt; font-weight: bold; font-size: 12pt; color: rgb(255, 0, 0); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 돋움;">•
-						</span><span
-							style="font-weight: bold; font-size: 12pt; color: rgb(255, 0, 0); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 돋움;">폐장일
-							: 2023년 11월 6일(월)</span>
-					</p>
-					<p class="0"
-						style="background: rgb(255, 255, 255); line-height: 180%;">
-						<span
-							style="font-weight: bold; font-size: 12pt; color: rgb(255, 0, 0); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"></span><span
-							style="letter-spacing: 0pt; font-weight: bold; font-size: 12pt; color: rgb(255, 0, 0); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 돋움;">-
-							11월 5일(일)까지 운영</span>
-					</p>
-					<p class="0"
-						style="background: rgb(255, 255, 255); line-height: 180%;">
-						<span
-							style="letter-spacing: 0pt; font-weight: bold; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; color: rgb(0, 0, 0); font-family: 돋움;">•
-						</span><span
-							style="letter-spacing: 0pt; font-weight: bold; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; color: rgb(0, 0, 0); font-family: 돋움;">10H
-							정상운영</span>
-					</p>
-					<p class="0"
-						style="background: rgb(255, 255, 255); line-height: 180%;">
-						<span
-							style="letter-spacing: 0pt; font-weight: bold; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; color: rgb(0, 0, 0); font-family: 돋움;">※
-							위 일정은 상황에 따라 변동될 수 있습니다.</span>
-					</p>
-					<br>
-
-					<p class="0"
-						style="background: rgb(255, 255, 255); line-height: 180%;">
-						<span
-							style="letter-spacing: 0pt; font-weight: bold; font-size: 12pt; color: rgb(0, 0, 255); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 돋움;">&lt;</span><span
-							style="font-weight: bold; font-size: 12pt; color: rgb(0, 0, 255); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 돋움;">예약
-							방법</span><span
-							style="letter-spacing: 0pt; font-weight: bold; font-size: 12pt; color: rgb(0, 0, 255); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 돋움;">&gt;</span>
-					</p>
-					<p class="0"
-						style="background: rgb(255, 255, 255); line-height: 180%;">
-						<span
-							style="letter-spacing: 0pt; font-weight: bold; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; color: rgb(0, 0, 0); font-family: 돋움;">•
-						</span><span
-							style="letter-spacing: 0pt; font-weight: bold; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-size: 12pt; color: rgb(0, 0, 0); font-family: 돋움;">9H(10H)
-							/ 18H(10H*2) 선택제</span>
-					</p>
-					<p class="0"
-						style="background: rgb(255, 255, 255); line-height: 180%;">
-						<span
-							style="letter-spacing: 0pt; font-weight: bold; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; color: rgb(0, 0, 0); font-family: 돋움;">•
-						</span><span
-							style="letter-spacing: 0pt; font-weight: bold; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; color: rgb(0, 0, 0); font-family: 돋움;">3주전(수)
-							9시 선착순 예약</span>
-					</p>
-					<p class="0"
-						style="background: rgb(255, 255, 255); line-height: 180%;">
-						<span
-							style="letter-spacing: 0pt; font-weight: bold; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; color: rgb(0, 0, 0); font-family: 돋움;">•
-						</span><span
-							style="font-weight: bold; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; color: rgb(0, 0, 0); font-family: 돋움;">전화
-							/ 인터넷 예약 가능</span>
-					</p>
-					<p class="0"
-						style="background: rgb(255, 255, 255); line-height: 180%;">
-						<span
-							style="letter-spacing: 0pt; font-weight: bold; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; color: rgb(0, 0, 0); font-family: 돋움;">&nbsp;-
-						</span><span
-							style="font-weight: bold; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; color: rgb(0, 0, 0); font-family: 돋움;">전화예약
-							: 예약실(주중 09:00~17:00, 주말/공휴일 미운영)</span>
-					</p>
-					<p class="0"
-						style="background: rgb(255, 255, 255); line-height: 180%;">
-						<span
-							style="letter-spacing: 0pt; font-weight: bold; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; color: rgb(0, 0, 0); font-family: 돋움;">&nbsp;-
-						</span><span
-							style="font-weight: bold; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; color: rgb(0, 0, 0); font-family: 돋움;">인터넷예약
-							: 휘닉스평창 홈페이지</span>
-					</p>
-					<p class="0"
-						style="background: rgb(255, 255, 255); line-height: 180%;">
-						<span
-							style="letter-spacing: 0pt; font-weight: bold; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; color: rgb(0, 0, 0); font-family: 돋움;">※
-							예약 변경 및 취소는 예약일기준 주중 3일전 / 주말 4일전 17시까지이며, 이후 취소 시 위약 규정이 적용됩니다.</span>
-					</p>
-					<p class="0"
-						style="background: rgb(255, 255, 255); line-height: 180%;">
-						<span
-							style="letter-spacing: 0pt; font-weight: bold; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; color: rgb(0, 0, 0); font-family: 돋움;">※
-							무작위예약 및 노쇼방지를 위하여 위약기간은 차년도로 이월되오니, 위약규정을 준수하여 주시기 바랍니다.</span>
-					</p>
-					<br>
-
-					<p class="0"
-						style="background: rgb(255, 255, 255); line-height: 180%;">
-						<span
-							style="letter-spacing: 0pt; font-weight: bold; font-size: 12pt; color: rgb(0, 0, 255); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 돋움;">&lt;</span><span
-							style="font-weight: bold; font-size: 12pt; color: rgb(0, 0, 255); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 돋움;">이벤트
-							운영</span><span
-							style="letter-spacing: 0pt; font-weight: bold; font-size: 12pt; color: rgb(0, 0, 255); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 돋움;">&gt;</span>
-					</p>
-					<p class="0"
-						style="background: rgb(255, 255, 255); line-height: 180%;">
-						<span
-							style="letter-spacing: 0pt; font-weight: bold; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; color: rgb(0, 0, 0); font-family: 돋움;">•
-						</span><span
-							style="font-weight: bold; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; color: rgb(0, 0, 0); font-family: 돋움;">현재
-							시행중인 이벤트는 폐장일까지 동일하게 적용됩니다</span><span
-							style="letter-spacing: 0pt; font-weight: bold; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; color: rgb(0, 0, 0); font-family: 돋움;">.</span>
-					</p>
-					<p class="0"
-						style="background: rgb(255, 255, 255); line-height: 180%;">
-						<span
-							style="font-size: 12pt; color: rgb(0, 0, 0); font-family: 돋움;">
-							&nbsp; </span>
-					</p>
-					<p class="0"
-						style="background: rgb(255, 255, 255); line-height: 180%;">
-						<span
-							style="letter-spacing: 0pt; font-weight: bold; font-size: 12pt; color: rgb(0, 0, 255); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 돋움;">&lt;</span><span
-							style="font-weight: bold; font-size: 12pt; color: rgb(0, 0, 255); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 돋움;">식음
-							운영</span><span
-							style="letter-spacing: 0pt; font-weight: bold; font-size: 12pt; color: rgb(0, 0, 255); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 돋움;">&gt;</span>
-					</p>
-					<p class="0"
-						style="background: rgb(255, 255, 255); line-height: 180%;">
-						<span
-							style="letter-spacing: 0pt; font-weight: bold; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; color: rgb(0, 0, 0); font-family: 돋움;">•
-						</span><span
-							style="letter-spacing: 0pt; font-weight: bold; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; color: rgb(0, 0, 0); font-family: 돋움;">11월1일(수)부터&nbsp;식음
-							운영 축소에 따라 식사류는 컵라면과 주먹밥만 가능하며, 커피/음료/스낵류는 모두 가능하오니 이용에 착오 없으시기
-							바랍니다.</span>
-					</p>
-					<br>
-
-					<p class="0"
-						style="background: rgb(255, 255, 255); line-height: 180%;">
-						<span
-							style="letter-spacing: 0pt; font-weight: bold; font-size: 12pt; color: rgb(0, 0, 255); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 돋움;">&lt;</span><span
-							style="font-weight: bold; font-size: 12pt; color: rgb(0, 0, 255); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 돋움;">기타
-							사항</span><span
-							style="letter-spacing: 0pt; font-weight: bold; font-size: 12pt; color: rgb(0, 0, 255); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 돋움;">&gt;</span>
-					</p>
-					<p class="0"
-						style="background: rgb(255, 255, 255); line-height: 180%;">
-						<span
-							style="letter-spacing: 0pt; font-weight: bold; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; color: rgb(0, 0, 0); font-family: 돋움;">•
-						</span><span
-							style="font-weight: bold; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; color: rgb(0, 0, 0); font-family: 돋움;">기온하강에
-							따라 코스 및 카트도로의 결빙구간이 예상되오니 안전에 유의하여 주시기 바랍니다.</span>
-					</p>
-					<p class="0"
-						style="background: rgb(255, 255, 255); line-height: 180%;">
-						<span
-							style="letter-spacing: 0pt; font-weight: bold; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; color: rgb(0, 0, 0); font-family: 돋움;">•
-						</span><span
-							style="font-weight: bold; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; color: rgb(0, 0, 0); font-family: 돋움;">진행요원의
-							안내에 따라 경기규정 및 주의사항을 준수하여 안전한 플레이하시기 바랍니다.</span>
-					</p>
-					<br>
-
-					<p class="0"
-						style="background: rgb(255, 255, 255); line-height: 180%;">
-						<span
-							style="letter-spacing: 0pt; font-weight: bold; font-size: 12pt; color: rgb(0, 0, 255); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 돋움;">&lt;</span><span
-							style="font-weight: bold; font-size: 12pt; color: rgb(0, 0, 255); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 돋움;">예약
-							문의</span><span
-							style="letter-spacing: 0pt; font-weight: bold; font-size: 12pt; color: rgb(0, 0, 255); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: 돋움;">&gt;</span>
-					</p>
-					<p class="0"
-						style="background: rgb(255, 255, 255); line-height: 180%;">
-						<span
-							style="letter-spacing: 0pt; font-weight: bold; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; color: rgb(0, 0, 0); font-family: 돋움;">•
-						</span><span
-							style="letter-spacing: 0pt; font-weight: bold; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; color: rgb(0, 0, 0); font-family: 돋움;">1577-0755
-							#2(1-예약실, 2-프런트, 3-진행실)</span>
-					</p>
-					<br>
-
-					<p class="0"
-						style="background: rgb(255, 255, 255); line-height: 180%;">
-						<span
-							style="font-weight: bold; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; color: rgb(0, 0, 0); font-family: 돋움;">올
-							한해도 변함없는 성원에 진심으로 감사드리며, 내년에는 더욱 발전 된 모습으로 다시 찾아뵙겠습니다.</span>
-					</p>
-					<br>
-
-					<p class="0"
-						style="background: rgb(255, 255, 255); line-height: 180%;">
-						<span
-							style="font-weight: bold; font-size: 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; color: rgb(0, 0, 0); font-family: 돋움;">감사합니다.</span>
-					</p>
-					<p></p>
+				내용1
+					<!-- 내용 들어가는 자리 -->
 				</div>
+				<div class="detail-content" style="overflow: auto;">
+				내용2	<!-- 내용 들어가는 자리 -->
+				</div>
+				
 			</div>
 
 			<div class="page-foot">
-			<input type="button" id="btn_list" value="목록" class="btn btn-dark btn-sm"/>
-			<!-- 	<a
-					href="/page/customer/notice?q%5BhmpgDivCd%5D=&amp;page=1&amp;size=10"
-					class="btn-action light primary">목록</a> -->
+				<input type="button" id="btn_list" value="목록"
+					class="btn btn-dark btn-sm" />
 			</div>
 		</div>
 	</div>
