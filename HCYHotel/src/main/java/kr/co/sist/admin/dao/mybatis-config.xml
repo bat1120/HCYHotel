@@ -4,6 +4,7 @@
   "https://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 <properties resource="properties/database.properties"/>
+
 <typeAliases>
 <typeAlias type="kr.co.sist.admin.login.LoginVO" alias="lVO"/>
 <typeAlias type="kr.co.sist.admin.dashboard.DashboardDomain" alias="dd"/>
@@ -16,7 +17,12 @@
 <typeAlias type="kr.co.sist.admin.manageMem.RoomReviewDomain" alias="rrd"/>
 <typeAlias type="kr.co.sist.admin.manageMem.DiningReviewDomain" alias="drd"/>
 <typeAlias type="kr.co.sist.admin.manageMem.DeleteMemVO" alias="dmVO"/>
+<typeAlias type="kr.co.sist.admin.notice.LoadNoticeDomain" alias="lnd"/>
+<typeAlias type="kr.co.sist.admin.notice.NoticeInfoDomain" alias="nid"/>
+<typeAlias type="kr.co.sist.admin.notice.NoticeInfoVO" alias="niVO"/>
+<typeAlias type="kr.co.sist.admin.notice.NoticePagingVO" alias="npVO"/>
 </typeAliases>
+
   <environments default="development">
     <environment id="development">
       <transactionManager type="JDBC"/>
@@ -34,5 +40,6 @@
 <mapper resource="kr/co/sist/admin/mapper/dashboardMapper.xml"/>
 <mapper resource="kr/co/sist/admin/mapper/manageMemMapper.xml"/>
 <mapper resource="kr/co/sist/admin/mapper/pagingMapper.xml"/>
+<mapper resource="kr/co/sist/admin/mapper/noticeMapper.xml"/>
   </mappers>
 </configuration>

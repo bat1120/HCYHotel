@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.co.sist.admin.notice">
+
+<!-- 공지사항 목록 셀렉 -->
+<select id="selectNotice" resultType="lnd" parameterType="npVO">
+<![CDATA[
+select NOTICECODE, TITLE, INPUTDATE, VIEWCNT
+from(SELECT rownum r,NOTICECODE, TITLE, INPUTDATE, VIEWCNT
+FROM NOTICE)
+where r >= #{startNum} and r <= #{endNum}
+]]>
+</select>
+
+<!-- 공지사항 디테일 보기 -->
+<select id="selectNoticeDetail" resultType="nid" parameterType="String">
+<![CDATA[
+SELECT NOTICECODE, TITLE, INPUTDATE, VIEWCNT, CONTENT
+FROM NOTICE
+where NOTICECODE = #{noticeCode}
+]]>
+</select>
+
+<!-- 공지사항 삭제 -->
+<delete id="deleteNotice" parameterType="String">
+<![CDATA[
+DELETE NOTICE
+where NOTICECODE = #{noticeCode}
+]]>
+</delete>
+
+<!-- 공지사항 수정 -->
+<update id="updateNotice" parameterType="niVO" >
+<![CDATA[
+UPDATE NOTICE SET TITLE  = #{title}, CONTENT = #{content} 
+WHERE NOTICECODE = #{noticeCode}
+]]>
+</update>
+
+</mapper>

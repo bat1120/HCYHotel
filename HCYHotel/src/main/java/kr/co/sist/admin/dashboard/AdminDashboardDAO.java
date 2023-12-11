@@ -2,7 +2,6 @@ package kr.co.sist.admin.dashboard;
 
 import org.apache.ibatis.session.SqlSession;
 
-import kr.co.sist.admin.dao.MyBatiseHandler;
 import kr.co.sist.admin.dao.MyBatiseHandlerAdmin;
 
 public class AdminDashboardDAO {

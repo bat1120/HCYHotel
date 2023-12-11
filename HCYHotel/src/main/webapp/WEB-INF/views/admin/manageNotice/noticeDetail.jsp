@@ -4,83 +4,47 @@
     <%@ include file="/common/admin/jsp/common_url.jsp" %>
 <!DOCTYPE html>
 <html lang="en">
-<% pageContext.setAttribute("currentPage", 1); %>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
 <head>
     <meta charset="utf-8">
     <title>공지사항 관리</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
-    <style type="text/css">
-    .custom-link {
-      font-family: Arial, sans-serif; /* 원하는 폰트 패밀리 지정 */
-      font-size: 16px; /* 글자 크기 */
-      font-weight: bold; /* 글자 두께 */
-      text-decoration: none; /* 밑줄 제거 */
-      color: #007bff; /* 링크 색상 */
-    }
-
-    /* 호버 시 스타일 변경 */
-    .custom-link:hover {
-      color: #0056b3; /* 호버 시 변경할 색상 */
-    }
-    </style>
 
     <c:import url="../common/import/header.jsp"/>
     <script type="text/javascript">
     $(function(){
-    })//ready
-    
-    function goNoticeDetail(nc){
-    	$("#noticeCode").val(nc)
-    	$("#detailFrm").submit()
-    }//goNoticeDetail
-    
-    function paging(page){
-    	if(page == $("#curruntPage").val()){
-    		return;
-    	}//if
-    	$(".none").attr("class","custom-link")
-    	$("#"+page+"page").attr("class","none")
-    	$("#curruntPage").val(page)
+    	//디테일 버튼
+    	$("#btnList").click(function(){
+    		$("#hidFrm").attr("action","goManageNotice.do")
+    		$("#hidFrm").submit()
+    	})//btnList
+    	$("#btnDelete").click(function(){
+    		$("#hidFrm").attr("action",'eraseNotice.do')
+    		$("#hidFrm").submit()
+    	})//btnDelete
+    	$("#btnModify").click(function(){
+    		$("#title").removeAttr("readonly")
+    		$("#content").removeAttr("readonly")
+    		$("#modifyBtn").attr("style",'')
+    		$("#detailBtn").attr("style",'display:none')
+    	})//btnModify
     	
-    	var data = {"currentPage":page}
-    	$.ajax({
-            url : "noticePagingAjax.do",
-            type : "post",
-            data : data,
-            dataType : "json",
-            error(xhr){
-                console.log(xhr.status)
-            },
-            success(jsonArr){
-                
-	                var output = "";
-                $.each(jsonArr.noticeList,function(idx,element){
-                    output += "<tr>"
-                    output += "<th scope='row'>"
-                    output += (idx+1)
-                    output += "</th>"
-                    output += "<td>"
-                    output += element.title
-                    output += "</td>"
-                    output += "<td>"
-                    output += element.inputDate
-                    output += "</td>"
-                    output += "<td>"
-                    output += element.viewCnt
-                    output += "</td>"
-                    output += "<td><input type='button' onclick='goNoticeDetail"
-                    output += "('"
-                    output += element.noticeCode
-                    output += "')' value='상세보기' class='btn btn-info btn-sm'></td>"
-                    output += "</tr>"
-                })//each
-                $("#tbody").html(output)
-            }//success
-        })//ajax
-    }//paging
+    	//수정 버튼
+    	$("#btnSave").click(function(){
+    		$("#hidContent").val($("#content").val())
+    		$("#hidTitle").val($("#title").val())
+    		$("#hidFrm").attr("action",'modifyNotice.do')
+    		$("#hidFrm").submit()
+    	})//btnSave
+    	$("#btnCancel").click(function(){
+    		$("#title").attr("readonly","readonly")
+    		$("#content").attr("readonly","readonly")
+    		$("#detailBtn").attr("style",'')
+    		$("#modifyBtn").attr("style",'display:none')
+    	})//btnCancel
+    })//ready
     </script>
 </head>
 
@@ -156,42 +120,33 @@
             <!-- Navbar End -->
 
 
-            <div class="bg-light rounded h-100 p-4">
-                            <h6 class="mb-4">공지사항 관리</h6>
-                            <div class="table-responsive">
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">번호</th>
-                                            <th scope="col">제목</th>
-                                            <th scope="col">게시일</th>
-                                            <th scope="col">조회수</th>
-                                            <th scope="col">자세히보기</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="tbody">
-                                    	<c:forEach var="noticeList" items="${noticeList }" varStatus="i">
-	                                        <tr>
-	                                            <th scope="row">${paging.startNum+i.index}</th>
-	                                            <td>${noticeList.title }</td>
-	                                            <td>${noticeList.inputDate }</td>
-	                                            <td>${noticeList.viewCnt }</td>
-	                                            <td><input type="button" onclick="goNoticeDetail('${noticeList.noticeCode}')" value="상세보기" class="btn btn-info btn-sm"></td>
-	                                        </tr>
-                                        </c:forEach>
-                                    </tbody>
-                                </table>
-                                <div style="margin: auto; text-align: center;">
-                                <c:forEach var="i" begin="1" end="${paging.totalPage }">
-                                <a style="text" id="${i }page" onclick="paging('${i}')" class="${i==1?'none':'custom-link' }">&lt;${i}&gt;</a>&nbsp;
-                                </c:forEach>
-                                </div>
+            <div class="col-12">
+                        <div class="bg-light rounded h-100 p-4">
+                            <h6 class="mb-4">공지사항 상세보기</h6>
+                            <div class="form-floating mb-3">
+                               <h3 class="mb-4">제목</h3> <input type="text" class="form-control" id="title" value="${noticeDetail.title }" readonly="readonly">
                             </div>
+                            <div class="form-floating">
+                               <h3 class="mb-4">내용</h3><textarea class="form-control" id="content" style="height: 150px;" readonly="readonly" ><c:out value="${noticeDetail.content }"/></textarea>
+                            </div>
+                            <div id="detailBtn">
+                            <input type="button" id="btnModify" value="수정" class="btn btn-warning btn-sm">
+                            <input type="button" id="btnDelete" value="삭제" class="btn btn-danger btn-sm">
+                            <input type="button" id="btnList" value="목록으로" class="btn btn-secondary btn-sm">
+                            </div>
+                            <div id="modifyBtn" style="display:none">
+                            <input type="button" id="btnSave" value="저장" class="btn btn-success btn-sm">
+                            <input type="button" id="btnCancel" value="취소" class="btn btn-secondary btn-sm">
+                            </div>
+                            
                         </div>
-                        <form action="goNoticeDetail.do" method="post" id="detailFrm">
-                        <input type="hidden" name="noticeCode" id="noticeCode">
-                        <input type="hidden" name="curruntPage" id="curruntPage" value="1">
-                        </form>
+                    </div>
+                    
+                    <form id="hidFrm" method="post">
+                    <input type="hidden" name="noticeCode" value="${noticeDetail.noticeCode }">
+                    <input type="hidden" id="hidContent" name="content" >
+                    <input type="hidden" id="hidTitle" name="title" >
+                    </form>
 
             <c:import url="../common/import/footer.jsp"/>
         </div>

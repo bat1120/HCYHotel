@@ -60,7 +60,7 @@
                             <a href="goManageMem.do?memFlag=mem" class="dropdown-item">개인</a>
                         </div>
                     </div>
-                    <a href="widget.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>공지사항관리</a>
+                    <a href="goManageNotice.do" class="nav-item nav-link"><i class="fa fa-th me-2"></i>공지사항관리</a>
                     <a href="form.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>문의사항관리</a>
                     <a href="table.html" class="nav-item nav-link"><i class="fa fa-table me-2"></i>호텔관리</a>
                     <a href="chart.html" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>다이닝관리</a>
