@@ -40,7 +40,7 @@ where password=#{password}
 update business
 set password=#{password}
 where password=#{password}
-</update>
+</update> 
 
 
 
