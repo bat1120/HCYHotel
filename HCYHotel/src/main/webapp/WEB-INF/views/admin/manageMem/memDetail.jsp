@@ -58,8 +58,8 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle active show" data-bs-toggle="dropdown" aria-expanded="true"><i class="fa fa-laptop me-2"></i>회원관리</a>
                         <div class="dropdown-menu bg-transparent border-0 show" data-bs-popper="none">
-                            <a href="goManageMem.do" class="dropdown-item active">사업자</a>
-                            <a href="goManageMem.do?memFlag=mem" class="dropdown-item">개인</a>
+                            <a href="goManageMem.do" class="dropdown-item${param.memFlag eq 'mem' ? '':' active' }">사업자</a>
+                            <a href="goManageMem.do?memFlag=mem" class="dropdown-item${param.memFlag ne 'mem' ? '':' active' }">개인</a>
                         </div>
                     </div>
                     <a href="widget.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>공지사항관리</a>
@@ -128,9 +128,9 @@
                         </div>
                         </div>
                         
-            <div class="row g-4">
+<c:if test="${param.memFlag eq 'mem' }">
                     
-                        <div class="col-sm-12 col-xl-6">
+                        <div class="col-12">
                         <div class="bg-light rounded h-100 p-4">
                             <h6 class="mb-4">작성한 호텔 리뷰</h6>
                             <table class="table table-hover">
@@ -145,7 +145,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                <c:forEach var="review" items="${ hotelReviewList }" varStatus="i">
+                                <c:forEach var="review" items="${ mem.roomReviewList }" varStatus="i">
                                     <tr>
                                         <th scope="row"><c:out value="${ i.count }"/></th>
                                         <td><c:out value="${ review.hotelName }"/></td>
@@ -159,7 +159,7 @@
                             </table>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-xl-6">
+                    <div class="col-12">
                         <div class="bg-light rounded h-100 p-4">
                             <h6 class="mb-4">작성한 다이닝 리뷰</h6>
                             <table class="table table-hover">
@@ -174,7 +174,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                <c:forEach var="review" items="${ diningReviewList }" varStatus="i">
+                                <c:forEach var="review" items="${ mem.diningReviewList }" varStatus="i">
                                     <tr>
                                         <th scope="row"><c:out value="${ i.count }"/></th>
                                         <td><c:out value="${ review.hotelName }"/></td>
@@ -188,8 +188,7 @@
                             </table>
                         </div>
                     </div>
-                    </div>
-
+</c:if>
             <c:import url="../common/import/footer.jsp"/>
         </div>
         <!-- Content End -->

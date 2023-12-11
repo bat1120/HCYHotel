@@ -1935,7 +1935,7 @@ th, td {
 										<th><c:out value="${ hotelList.booking_count}" /></th>
 										<th><c:out value="${ hotelList.inputdate}" /></th>
 										<c:choose>
-											<c:when test="${hotelList.status eq Y }">
+											<c:when test="${hotelList.status eq 'Y' }">
 												<th><input type="button" value="객실타입목록"
 													id="${hotelList.status }" class="btn btn-success"></th>
 											</c:when>

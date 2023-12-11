@@ -1862,13 +1862,15 @@ th, td {
 								<th>한달예약건수</th>
 								<th>버튼</th>
 							</tr>
+							<c:forEach var="diningList" items="${diningList }">
 							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td><input type="button" value="수정" class="btn btn-info btn-sm" id="roomModifyBtn"></td>
+							<td><a href="businessDiningSchedule.do?diningcode=${diningList.diningcode} "><c:out value="${diningList.dining }"/></a></td>
+							<td><c:out value="${diningList.hotel }"/></td>
+							<td><c:out value="${diningList.rating_avg }"/></td>
+							<td><c:out value="${diningList.ppl }"/></td>
+							<td><input type="button" value="수정" id="diningModifybtn" class="btn btn-success"><input type="hidden" value="${hotelcode }" id="hotelcode"></td>
 							</tr>
+							</c:forEach>
 						</table>
 					</div>
 				</main>

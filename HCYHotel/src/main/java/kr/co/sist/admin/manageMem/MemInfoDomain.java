@@ -11,7 +11,7 @@ import lombok.ToString;
 @ToString
 public class MemInfoDomain {
 	private String id, name, email, tel;
-	private int bookingCnt;
+	private int bookingCnt, roomTotalPage, diningTotalPage;
 	private List<RoomReviewDomain> roomReviewList;
 	private List<DiningReviewDomain> diningReviewList;
 }//class
