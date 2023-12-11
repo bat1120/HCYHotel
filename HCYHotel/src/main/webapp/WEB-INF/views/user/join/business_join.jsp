@@ -338,7 +338,7 @@ $(document).ready(function() {
 						<fieldset>
 
 							<div class="cont_division">
-								<div class="write_base">
+								<div class="write_base"> 
 									<!-- 아이디 -->
 									<div class="item">
 										<label for="id"><strong>아이디</strong></label>

@@ -8,5 +8,5 @@ import lombok.ToString;
 @Setter
 @ToString
 public class FindPassVO {
-	private String name,id,identifyNum,memberFlag;
+	private String name,id,identifier,memberFlag;
 }//class
