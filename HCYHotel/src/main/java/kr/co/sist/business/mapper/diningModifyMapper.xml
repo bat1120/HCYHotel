@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.co.sist.business.diningModifyMapper">
+
+<select id="selectDining" resultType="bdd2" parameterType="String">
+SELECT h.hotelname AS hotel, d.diningname AS dining, ROUND(AVG(r.rating), 2) AS rating_avg, COUNT(b.bookingcode) AS ppl,h.hotelcode,d.diningcode
+FROM hotel h
+LEFT JOIN dining d ON h.hotelcode = d.hotelcode
+LEFT JOIN diningschedule s ON d.diningcode = s.diningcode
+LEFT JOIN diningbooking b ON s.schedulecode = b.schedulecode
+LEFT JOIN diningreview r ON b.bookingcode = r.bookingcode
+WHERE b.bookingdate BETWEEN SYSDATE - 30 AND SYSDATE
+AND h.id = #{id}
+GROUP BY h.hotelname, d.diningname,h.hotelcode,d.diningcode
+ORDER BY h.hotelname, d.diningname,h.hotelcode,d.diningcode
+</select>
+
+
+</mapper>

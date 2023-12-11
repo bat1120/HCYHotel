@@ -14,6 +14,9 @@
  <typeAlias type="kr.co.sist.business.room.SelectRoomVO" alias="srVO"/>
  <typeAlias type="kr.co.sist.business.diningregister.DiningSearchDomain" alias="dsd"/>
  <typeAlias type="kr.co.sist.business.diningregister.BusinessDiningDomain" alias="bdd"/>
+ <typeAlias type="kr.co.sist.business.dining.BusinessDiningDomain" alias="bdd2"/>
+ <typeAlias type="kr.co.sist.business.diningschedule.DiningSearchVO" alias="dsVO"/>
+ <typeAlias type="kr.co.sist.business.diningschedule.DiningScheduleListDomain" alias="dsld"/>
 </typeAliases>
   <environments default="development">
     <environment id="development">
@@ -32,5 +35,7 @@
 <mapper resource="kr/co/sist/business/mapper/hotelModifyMapper.xml"></mapper>
 <mapper resource="kr/co/sist/business/mapper/roomModifyMapper.xml"></mapper>
 <mapper resource="kr/co/sist/business/mapper/diningReservationMapper.xml"></mapper>
+<mapper resource="kr/co/sist/business/mapper/diningModifyMapper.xml"></mapper>
+<mapper resource="kr/co/sist/business/mapper/diningScheduleMapper.xml"></mapper>
   </mappers>
 </configuration>

@@ -1848,12 +1848,15 @@ th, td {
 							<div role="button" class="dDYU-off-screen" tabindex="0"></div>
 						</div>
 					</div>
-					<div style="position: absolute; left: 623px">
-					
-						<input type="button" value="스케쥴 등록" class="btn btn-info btn-sm" id="newHotelBtn">
-					</div>
 					<div
-						style="display: flex; justify-content: center; align-items: center; height: 200px;">
+						style="display: flex; flex-direction: column; align-items: center;">
+						<div
+							style="display: flex; justify-content: flex-start; width: 900px;">
+							<input type="button" value="스케쥴 등록" class="btn btn-info btn-sm"
+								id="newHotelBtn">
+						</div>
+						<div
+							style="display: flex; justify-content: center; align-items: center; height: 200px;">
 						<table style="width: 900px; bolder: 1;">
 							<tr>
 								<th>스케쥴종류</th>
@@ -1863,15 +1866,18 @@ th, td {
 								<th>한달예약건수</th>
 								<th>버튼</th>
 							</tr>
-							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td><input type="button" value="수정" class="btn btn-info btn-sm" id="roomModifyBtn"></td>
-							</tr>
+							<c:forEach var="scheduleList" items="${scheduleList }">
+								<tr>
+								<td><c:out value="${scheduleList.category }"/></td>
+								<td><c:out value="${scheduleList.price }"/></td>
+								<td><c:out value="${scheduleList.scheduledate }"/></td>
+								<td><c:out value="${scheduleList.rating }"/></td>
+								<td><c:out value="${scheduleList.ppl }"/></td>
+								<td><input type="button" value="수정" class="btn btn-success" id="scheduleBtn"><input type="hidden" value="${ scheduleList.schedulecode}" id="codehid"></td>
+								</tr>							
+							</c:forEach>
 						</table>
+					</div>
 					</div>
 				</main>
 			</div>
