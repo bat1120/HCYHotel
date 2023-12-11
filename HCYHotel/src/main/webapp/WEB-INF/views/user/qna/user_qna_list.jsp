@@ -181,109 +181,34 @@
 			</div>
 			<table border="1" class="board-list">
 				<caption>
-					<strong>문의사항 목록 테이블</strong><br> 번호, 분류, 제목, 등록일 항목으로 구성
+					<strong>문의사항 목록 테이블</strong>
 				</caption>
 				<colgroup>
 					<col style="width: 120px;">
-					<col style="width: 120px;">
 					<col style="width: 300px;">
+					<col style="width: 120px;">
 					<col style="width: 150px;">
 				</colgroup>
 				<thead>
 					<tr>
 						<th scope="col">번호</th>
-						<th scope="col">분류</th>
 						<th scope="col">제목</th>
+						<th scope="col">작성자</th>
 						<th scope="col">등록일</th>
 					</tr>
 				</thead>
 				<tbody>
-					<tr class="strong">
-						<td>중요</td>
-						<td><span class="board-flag-cate type3"> 공통 </span></td>
-						<td class="title"><a
-							href="/page/customer/notice/14215??q%5BhmpgDivCd%5D=&amp;page=1&amp;size=10"
-							class="title-link ellipsis"> 2023년 회원 객실이용 및 요금안내 </a></td>
-						<td>2023.02.01</td>
+				<c:forEach var="qnaList" varStatus="i" items="${ qnaList }">
+					<tr>
+						<td><c:out value="${ i.count }"/></td>
+						<td><c:out value="${ qnaList.title }"/></td>
+						<td><c:out value="${ qnaList.id }"/></td>
+						<td><c:out value="${ qnaList.inputDate }"/></td>
 					</tr>
-					<tr class="strong">
-						<td>중요</td>
-						<td><span class="board-flag-cate type2"> 아일랜드 </span></td>
-						<td class="title"><a
-							href="/page/customer/notice/13962??q%5BhmpgDivCd%5D=&amp;page=1&amp;size=10"
-							class="title-link ellipsis"> 유아용품 대여 서비스 안내 </a></td>
-						<td>2019.04.03</td>
-					</tr>
-					<tr class="">
-						<td>107</td>
-						<td><span class="board-flag-cate type1"> 파크 </span></td>
-						<td class="title"><a
-							href="/page/customer/notice/14311??q%5BhmpgDivCd%5D=&amp;page=1&amp;size=10"
-							class="title-link ellipsis"> 23/24 슬로프/스노우 빌리지 운영 일정 </a></td>
-						<td>2023.11.21</td>
-					</tr>
-					<tr class="">
-						<td>106</td>
-						<td><span class="board-flag-cate type1"> 파크 </span></td>
-						<td class="title"><a
-							href="/page/customer/notice/14308??q%5BhmpgDivCd%5D=&amp;page=1&amp;size=10"
-							class="title-link ellipsis"> 스키하우스 CU편의점 무인운영 안내 </a></td>
-						<td>2023.11.03</td>
-					</tr>
-					<tr class="">
-						<td>105</td>
-						<td><span class="board-flag-cate type1"> 파크 </span></td>
-						<td class="title"><a
-							href="/page/customer/notice/14307??q%5BhmpgDivCd%5D=&amp;page=1&amp;size=10"
-							class="title-link ellipsis"> [루지랜드] 시즌 종료 안내 </a></td>
-						<td>2023.10.29</td>
-					</tr>
-					<tr class="">
-						<td>104</td>
-						<td><span class="board-flag-cate type1"> 파크 </span></td>
-						<td class="title"><a
-							href="/page/customer/notice/14305??q%5BhmpgDivCd%5D=&amp;page=1&amp;size=10"
-							class="title-link ellipsis"> 23/24 동계시즌 콘도추첨 결과발표 및 예약안내 </a></td>
-						<td>2023.10.12</td>
-					</tr>
-					<tr class="">
-						<td>103</td>
-						<td><span class="board-flag-cate type1"> 파크 </span></td>
-						<td class="title"><a
-							href="/page/customer/notice/14304??q%5BhmpgDivCd%5D=&amp;page=1&amp;size=10"
-							class="title-link ellipsis"> [태기산CC] 2023년 폐장 안내 </a></td>
-						<td>2023.10.08</td>
-					</tr>
-					<tr class="">
-						<td>102</td>
-						<td><span class="board-flag-cate type1"> 파크 </span></td>
-						<td class="title"><a
-							href="/page/customer/notice/14303??q%5BhmpgDivCd%5D=&amp;page=1&amp;size=10"
-							class="title-link ellipsis"> 23/24 동계시즌 콘도추첨안내 </a></td>
-						<td>2023.09.25</td>
-					</tr>
-					<tr class="">
-						<td>101</td>
-						<td><span class="board-flag-cate type1"> 파크 </span></td>
-						<td class="title"><a
-							href="/page/customer/notice/14302??q%5BhmpgDivCd%5D=&amp;page=1&amp;size=10"
-							class="title-link ellipsis"> [휘닉스 파크] 투숙객 전용 서비스 </a></td>
-						<td>2023.09.21</td>
-					</tr>
-					<tr class="">
-						<td>100</td>
-						<td><span class="board-flag-cate type1"> 파크 </span></td>
-						<td class="title"><a
-							href="/page/customer/notice/14301??q%5BhmpgDivCd%5D=&amp;page=1&amp;size=10"
-							class="title-link ellipsis"> [휘닉스 평창]사우나 휴장 안내(9/4
-								~9/6),(9/15~20) </a></td>
-						<td>2023.08.19</td>
-					</tr>
-					<!---->
-					<!---->
+				</c:forEach>
 				</tbody>
 			</table>
-			<div class="paging-container">
+			<!-- <div class="paging-container">
 				<div class="paging-common">
 					<a href="javascript:;" class="page-btn first gray">처음</a> <a
 						href="javascript:;" class="page-btn prev gray">이전</a> <span
@@ -294,7 +219,7 @@
 						class="page-btn next">다음</a> <a href="javascript:;"
 						class="page-btn last">마지막</a>
 				</div>
-			</div>
+			</div> -->
 		</div>
 	</div>
 	<!-- // content-main -->
