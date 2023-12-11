@@ -9,6 +9,11 @@
  <typeAlias type="kr.co.sist.business.manage.BusinessHotelVO" alias="bhVO"/>
  <typeAlias type="kr.co.sist.business.manage.SearchHotelVO" alias="shVO"/>
  <typeAlias type="kr.co.sist.business.hotel.HotelListDomain" alias="hld"/>
+ <typeAlias type="kr.co.sist.business.room.HotelListDomain" alias="hldRoom"/>
+ <typeAlias type="kr.co.sist.business.room.RoomListDomain" alias="rld"/>
+ <typeAlias type="kr.co.sist.business.room.SelectRoomVO" alias="srVO"/>
+ <typeAlias type="kr.co.sist.business.diningregister.DiningSearchDomain" alias="dsd"/>
+ <typeAlias type="kr.co.sist.business.diningregister.BusinessDiningDomain" alias="bdd"/>
 </typeAliases>
   <environments default="development">
     <environment id="development">
@@ -25,5 +30,7 @@
 <mappers>
 <mapper resource="kr/co/sist/business/mapper/hotelMapper.xml"></mapper>
 <mapper resource="kr/co/sist/business/mapper/hotelModifyMapper.xml"></mapper>
+<mapper resource="kr/co/sist/business/mapper/roomModifyMapper.xml"></mapper>
+<mapper resource="kr/co/sist/business/mapper/diningReservationMapper.xml"></mapper>
   </mappers>
 </configuration>

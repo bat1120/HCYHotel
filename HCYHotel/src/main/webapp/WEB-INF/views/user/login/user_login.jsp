@@ -24,6 +24,7 @@
 <meta property="fb:app_id" content="1593727887570039">
 <meta property="og:image:width" content="200">
 <meta property="og:image:height" content="200"> 
+
 <link href="http://localhost/HCYHotel/common/user/css/sticky_assist.css" media="all"
 	rel="stylesheet" type="text/css">
 <link href="https://www.saramin.co.kr/zf_user/auth" rel="canonical">
@@ -69,6 +70,7 @@
 <script type="text/javascript"
 	src="/js/layout/default-layout.js?v=20231130103248"></script>
 <script type="text/javascript">
+
 var googleSlotList = {};
 
 var googletag = googletag || {};
@@ -80,6 +82,8 @@ var src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gp
 document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
 })();
 </script>
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="https://www.googletagservices.com/tag/js/gpt.js"></script>
 <meta http-equiv="origin-trial"
 	content="As0hBNJ8h++fNYlkq8cTye2qDLyom8NddByiVytXGGD0YVE+2CEuTCpqXMDxdhOMILKoaiaYifwEvCRlJ/9GcQ8AAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ==">
@@ -326,6 +330,15 @@ googletag.cmd.push(function() {
 		<div id="searchAutoCompleteTemplate" style="display: none"></div>
 	</div>
 
+	<script>
+	function setMemberFlag(flag){
+		document.getElementById("memberFlag").value=flag;
+		alert($("#memberFlag").val());
+	}//setMemberFlag
+	
+	</script>
+
+
 	<div id="sri_section" class="  ">
 		<div id="sri_wrap">
 			<div id="content">
@@ -335,22 +348,26 @@ googletag.cmd.push(function() {
 					<div class="login_page_wrap">
 						<form id="login_frm" name="login_frm" class="login_frm"
 							method="post"
-							action="https://www.saramin.co.kr/zf_user/auth/login"
-							onsubmit="try {return check(this);} catch (e) {};">
+							action="user_login_process.do"
+							onsubmit="try {return check(this);} catch (e) {};"> 
 							<input type="hidden" name="m_code" value="0"> <input
 								type="hidden" name="page_url" value=""> <input
 								type="hidden" name="url" value=""> <input type="hidden"
 								name="FrameKey" value=""> <input type="hidden"
 								name="login_tab" value="p" id="login_tab">
+								<input type="hidden" name="memberFlag" value="1" id="memberFlag">
 							<div class="login_input_wrap">
 								<!-- text 알림 -->
 								<ul class="tab_member_type" role="tablist">
-									<li role="none"><button type="button"
+									<li role="none">
+									
+									<button type="button"
 											class="btn_tab t_per active" role="tab" tabindex="0"
-											aria-selected="true">사용자</button></li>
-									<li role="none"><button type="button"
+											aria-selected="true" onclick="setMemberFlag(1)">사용자</button></li>
+									<li role="none">
+									<button type="button"
 											class="btn_tab t_com" role="tab" tabindex="-1"
-											aria-selected="false">사업자</button></li>
+											aria-selected="false" onclick="setMemberFlag(2)">사업자</button></li>
 								</ul>
 								<div class="tab_panel" role="tabpanel" aria-label="개인회원">
 									<div class="setting">
@@ -381,10 +398,10 @@ googletag.cmd.push(function() {
 										<button type="submit" class="btn-login BtnType SizeML">로그인</button>
 									</div>
 									<div class="signup-forgotten" style="text-align: right">
-										<a id="a_join" href="/zf_user/member/registration/join"
+										<a id="a_join" href="http://localhost/HCYHotel/user/join/join_check.do"
 											class="sign_up"
 											onmousedown="try{n_trackEvent('login', 'pc_login_page' , 'join', '');}catch(e){}">회원가입</a>
-										<a href="/zf_user/helpdesk/idpw-find" class="forgotten"
+										<a href="http://localhost/HCYHotel/user/findId/user_find_id.do" class="forgotten"
 											onmousedown="try{n_trackEvent('login', 'pc_login_page' , 'find', '');}catch(e){}">아이디/비밀번호
 											찾기</a> <a href="/zf_user/applicant/rater/login-form"
 											target="_blank" class="link_rater" style="display: none;">
