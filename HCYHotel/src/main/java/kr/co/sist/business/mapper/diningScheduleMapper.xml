@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.co.sist.business.diningScheduleMapper">
+
+<select id="selectSchedule" resultType="dsld" parameterType="dsVO">
+SELECT ds.category, ds.price, ds.scheduledate, AVG(dr.rating) AS rating, COUNT(DISTINCT db.bookingcode) AS ppl, ds.schedulecode
+FROM diningschedule ds
+LEFT JOIN diningbooking db ON ds.schedulecode = db.schedulecode
+LEFT JOIN diningreview dr ON db.bookingcode = dr.bookingcode
+JOIN hotel h ON h.id = #{id}
+WHERE (ds.diningcode = #{diningcode} OR ds.diningcode IS NULL)
+GROUP BY ds.category, ds.price, ds.scheduledate, ds.schedulecode
+</select>
+
+
+</mapper>

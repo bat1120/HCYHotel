@@ -156,8 +156,8 @@
   <script>
     $(document).ready(function() {
       $("#frm").submit(function(event) {
-        var idValue = $("#id").val().trim();
-        var idMessage = $("#idCheckMsg1");
+        /* var idValue = $("#id").val().trim();
+        var idMessage = $("#idCheckMsg1"); */
 
         var passwordValue = $("#password").val();
         var passwordMessage = $("#password1_warning_txt");
@@ -180,14 +180,14 @@
 
        
 
-        // 아이디 유효성 검사
+        /* // 아이디 유효성 검사
         if (!/^[a-zA-Z0-9_]{4,20}$/.test(idValue)) {
           $("#idCheckMsg1").show();
           event.preventDefault();
           return;
         } else {
           $("#idCheckMsg1").hide();
-        }
+        } */
 
         // 비밀번호 유효성 검사
         if (
@@ -285,32 +285,44 @@
 <script>
 $(document).ready(function() {
     $("#id").blur(function() {
-        var inputId = $("#id").val();
+        var idValue = $("#id").val().trim();
 
-        // Ajax로 서버에 중복 확인 요청
+        // 아이디 유효성 검사
+        if (!/^[a-zA-Z0-9_]{4,20}$/.test(idValue)) {
+          $("#idCheckMsg1").text("4~20자의 영문, 숫자와 특수문자 '_'만 사용해주세요.").show();
+          $("#idCheckMsg2").hide();
+          return;
+        } else {
+          $("#idCheckMsg1").hide();
+        }
+
+        // 아이디 중복 확인
         $.ajax({
             type: "POST",
-            url: "/user_idDup.do", // 중복 확인을 처리하는 서버의 URL
-            data: {id: inputId},
+            url: "user_idDup.do", 
+            data: {"id": idValue},
+            dataType:"text",
             success: function(data) {
-                if (data === "중복") {
-                    // 중복된 아이디일 경우 메시지 표시
-                    $("#idCheckMsg1").hide();
-                    $("#idCheckMsg2").hide();
-                    $("#idCheckMsg1").text("이미 사용 중인 아이디입니다.").show();
-                } else {
-                    // 중복되지 않은 아이디일 경우 메시지 표시
-                    $("#idCheckMsg1").hide();
-                    $("#idCheckMsg2").text("사용 가능한 아이디에요.").show();
-                }
+            	if (!data) {
+                    console.error("서버로부터 응답이 비어있습니다.");
+                    return;
+                }//end if
+            	if (data === "중복") {
+            	    /* alert("중복된 아이디입니다."); */
+            	    $("#idCheckMsg2").hide();
+            	    $("#idCheckMsg1").text("이미 사용중인 ID입니다.").show();  
+            	} else {
+            		/* alert("사용가능한 아이디입니다."); */
+            		$("#idCheckMsg1").hide();
+             	    $("#idCheckMsg2").text("사용가능한 아이디에요.").show();
+            	}//end else
             },
             error: function() {
-                // 에러 처리
                 console.error("중복 확인 요청 중 에러 발생");
-            }
-        });
-    });
-});
+            }//error
+        });//ajax
+    });//blur
+});//ready
 
 </script>
 	
@@ -339,18 +351,17 @@ $(document).ready(function() {
 										</div>
 										<p class="alert_column focus_txt" id="idFocusMsg"
 											style="display: none">4 ~ 20자의 영문, 숫자와 특수문자 '_'만 사용해주세요.</p>
-										<em class="msgInvalid" id="idCheckMsg1" style="display: none">4~20자의
-											영문, 숫자와 특수문자 '_'만 사용해주세요.</em>
+										<em class="msgInvalid" id="idCheckMsg1" style="display: none">이미 사용중인 ID입니다.</em>
 										<!-- 오류 시 텍스트 -->
 										<p class="alert_column good_txt" id="idCheckMsg2"
 											style="display: none">사용가능한 아이디에요.</p>
-										<!-- 완료 시 텍스트 -->
 									</div>
 
 									<!-- 비밀번호 -->
 									<div class="item">
 										<label for="password"><strong>비밀번호</strong></label>
 										<div class="TypoBox pass_box">
+					
 											<input autocapitalize="off" name="password"
 												class="Typo SizeL defalt" id="password" type="password"
 												maxlength="16" autocomplete="off"

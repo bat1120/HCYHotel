@@ -55,5 +55,16 @@ public class JoinMemberService {
 				
 	}//checkIdDup
 	
+	public boolean checkIdDupBusiness(String id) {
+		boolean flag=false;
+		
+		String checkIdDup=JoinMemberDAO.getInstance().selectIdDupBusiness(id);
+		if(checkIdDup==null) {
+			flag=true;
+		}//end if
+		return flag;
+		
+	}//checkIdDupBusiness
+	
 	
 }//class

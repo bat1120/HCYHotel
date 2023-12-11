@@ -32,6 +32,16 @@ public class BusinessRoomModifyDAO {
 		return list;
 	}
 	
+	public List<RoomListDomain> selectRoomList(SelectRoomVO srVO){
+List<RoomListDomain> list=new ArrayList<RoomListDomain>();
+		
+		MyBatiseHandler mbh=MyBatiseHandler.getInstance();
+		SqlSession ss=mbh.getMyBatisHandler(false);
+		list=ss.selectList("kr.co.sist.business.roomModifyMapper.selectRoomList",srVO);
+		
+		return list;
+	}
+	
 	public List<HotelListDomain> selectAllHotelList(String id){
 		List<HotelListDomain> list=new ArrayList<HotelListDomain>();
 		

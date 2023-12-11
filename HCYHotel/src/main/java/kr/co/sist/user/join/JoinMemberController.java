@@ -7,6 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 
@@ -58,16 +59,31 @@ public class JoinMemberController {
 		return "user/join/business_join";
 	}//checkBusinessExist
 	
-	@PostMapping("/user_idDup.do")
+	@RequestMapping(value="/user_idDup.do",method=RequestMethod.POST,
+			produces ="application/json;charset=UTF-8")
 	@ResponseBody
 	public String idDup(String id, Model model) {
 	    JoinMemberService jms = JoinMemberService.getInstance();
 	    if (!jms.checkIdDup(id)) {
+	    	System.out.println("중복된 아이디"+id);
 	        return "중복"; // 중복된 아이디
-	    }
-
+	    }//end if
+	    System.out.println("사용가능"+id);
 	    return "사용가능"; // 중복되지 않은 아이디
-	}
+	}//idDup
+	
+	@RequestMapping(value="/business_idDup.do",method=RequestMethod.POST,
+			produces ="application/json;charset=UTF-8")
+	@ResponseBody
+	public String idDupBusiness(String id, Model model) {
+		JoinMemberService jms = JoinMemberService.getInstance();
+		if (!jms.checkIdDupBusiness(id)) {
+			System.out.println("중복된 아이디"+id);
+			return "중복"; // 중복된 아이디
+		}//end if
+		System.out.println("사용가능"+id);
+		return "사용가능"; // 중복되지 않은 아이디
+	}//idDupBusiness
 	
 	
 	@PostMapping("/user_join.do")
@@ -84,6 +100,7 @@ public class JoinMemberController {
 	public String joinBuisinessInsert(JoinMemberVO jmVO,Model model) {
 		JoinMemberService.getInstance().plusBus(jmVO);
 		
+		model.addAttribute("successMessage", "회원가입이 완료되었습니다. 로그인 해주십시오.");
 		return "user/join/business_join";
 	}//joinBuisinessInsert
 	

@@ -8,5 +8,5 @@ import lombok.ToString;
 @Setter
 @ToString
 public class FindIdVO {
-	private String name,tel,identifyNum,memberFlag;
+	private String name,tel,identifier,memberFlag;
 }//class
