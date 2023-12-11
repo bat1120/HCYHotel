@@ -18,7 +18,6 @@
     	
     })//ready
     function memDetail( id ){
-    	alert("hi")
     	$("#hidId").val(id)
     	$("#hidFrm").submit()
     }//memDetail

@@ -11,6 +11,11 @@
 <typeAlias type="kr.co.sist.admin.manageMem.BusinessDomain" alias="bd"/>
 <typeAlias type="kr.co.sist.admin.paging.PagingDomain" alias="pd"/>
 <typeAlias type="kr.co.sist.admin.paging.PagingSearchVO" alias="pVO"/>
+<typeAlias type="kr.co.sist.admin.manageMem.MemInfoDomain" alias="mid"/>
+<typeAlias type="kr.co.sist.admin.manageMem.MemDtailPagingVO" alias="miVO"/>
+<typeAlias type="kr.co.sist.admin.manageMem.RoomReviewDomain" alias="rrd"/>
+<typeAlias type="kr.co.sist.admin.manageMem.DiningReviewDomain" alias="drd"/>
+<typeAlias type="kr.co.sist.admin.manageMem.DeleteMemVO" alias="dmVO"/>
 </typeAliases>
   <environments default="development">
     <environment id="development">

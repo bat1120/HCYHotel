@@ -8,8 +8,17 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.springframework.stereotype.Component;
+
+import lombok.NoArgsConstructor;
 @Component
-public class MyBatiseHandler {
+public class MyBatiseHandlerAdmin {
+private static MyBatiseHandlerAdmin mbh;
+private MyBatiseHandlerAdmin() {
+}
+public static MyBatiseHandlerAdmin getInstance() {
+	if(mbh==null) {mbh=new MyBatiseHandlerAdmin();}
+	return mbh;
+}//getInstance
 private static SqlSessionFactory ssf;
 
 
@@ -27,6 +36,7 @@ private SqlSessionFactory myBatisBuilder(String configFile) {
 }//myBatisBuilder
 
 public SqlSession getMyBatisHandler(boolean autoCommit) {
+	if(mbh==null) {mbh=new MyBatiseHandlerAdmin();}
 	SqlSession ss = null;
 	
 	ss= myBatisBuilder("kr/co/sist/admin/dao/mybatis-config.xml").openSession(autoCommit);

@@ -2,6 +2,7 @@ package kr.co.sist.admin.manageMem;
 
 import java.util.List;
 
+import org.apache.ibatis.exceptions.PersistenceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -36,9 +37,9 @@ public class AdminManageMemService {
 	public List<BusinessDomain> loadBus(){
 		List<BusinessDomain> list = null;
 		list = ammDAO.selectBus();
-//		for(MemberDomain md : list) {
+//		for(BusinessDomain bd : list) {
 //			try {
-//				md.setName(e.decryption(md.getName()));
+//				md.setName(e.decryption(bd.getName()));
 //			} catch (NoSuchAlgorithmException e1) {
 //				e1.printStackTrace();
 //			} catch (UnsupportedEncodingException e2) {
@@ -51,12 +52,11 @@ public class AdminManageMemService {
 		return list;
 	}//loadMem
 	
-	public List<MemInfoDomain> loadMemInfo(){
-		List<MemInfoDomain> list = null;
-		list = ammDAO.;
-//		for(MemberDomain md : list) {
+	public MemInfoDomain loadMemInfo(MemDtailPagingVO mVO){
+		MemInfoDomain mid = null;
+		mid = ammDAO.selectMemInfo(mVO);
 //			try {
-//				md.setName(e.decryption(md.getName()));
+//				mid.setName(e.decryption(mid.getName()));
 //			} catch (NoSuchAlgorithmException e1) {
 //				e1.printStackTrace();
 //			} catch (UnsupportedEncodingException e2) {
@@ -64,8 +64,48 @@ public class AdminManageMemService {
 //			} catch (GeneralSecurityException e3) {
 //				e3.printStackTrace();
 //			}//catch
-//		}//for
+
+		if("mem".equals(mVO.getMemFlag())) {
+			List<RoomReviewDomain> roomList = ammDAO.selectRoomReview(mVO);
+			for(RoomReviewDomain roomReview : roomList) {
+				String content = roomReview.getContent();
+				if(content.length() > 20) {
+				roomReview.setContent(content.substring(0, 20)+"...");
+				}//if
+			}//for
+			mid.setRoomReviewList(roomList);
+			
+			List<DiningReviewDomain> diningList = ammDAO.selectDiningReview(mVO);
+			for(DiningReviewDomain diningReview : diningList) {
+				String content = diningReview.getContent();
+				if(content.length() > 20) {
+					diningReview.setContent(content.substring(0, 20)+"...");
+				}//if
+			}//for
+			mid.setDiningReviewList(diningList);
+		}//if
 		
-		return list;
+		return mid;
 	}//loadMem
+	
+	public MemInfoDomain loadMemReview(MemDtailPagingVO mVO){
+		MemInfoDomain mid = new MemInfoDomain();
+
+		if("room".equals(mVO.getReviewFlag())) {
+			mid.setRoomReviewList(ammDAO.selectRoomReview(mVO));
+			return mid;
+		}//if
+		mid.setDiningReviewList(ammDAO.selectDiningReview(mVO));
+		return mid;
+	}//loadMem
+	
+	public void eliMem(DeleteMemVO dmVO)  throws PersistenceException {
+		if("mem".equals(dmVO.getMemFlag())) {
+			dmVO.setMemFlag("MEMBER");
+			ammDAO.deleteMem(dmVO);
+			return;
+		}//if
+		dmVO.setMemFlag("BUSINESS");
+		ammDAO.deleteMem(dmVO);
+	}//eliMem
 }//class
