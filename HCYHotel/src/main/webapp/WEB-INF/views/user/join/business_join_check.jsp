@@ -941,7 +941,7 @@ googletag.cmd.push(function() {
       var nameValue = $("#name").val().trim();
       var nameMessage = $("#msg_name");
 
-      //휴대폰 번호 유효성 검사
+      // 휴대폰 번호 유효성 검사
       var telValue = $("#tel").val().replace(/\s/g, ""); // 공백 제거
       var telMessage = $("#msg_cell");
 
@@ -949,21 +949,12 @@ googletag.cmd.push(function() {
       var identifierValue = $("#identifier").val().trim();
       var identifierMessage = $("#msg_cert_num");
 
-   	  //이름에는 한글만
+      // 이름에는 한글만
       if (!/^[가-힣]+$/.test(nameValue)) {
         nameMessage.show();
       } else {
         nameMessage.hide();
       }
-
-      // 사업자 번호 유효성 검사
-      if (!/^\d{3}-\d{2}-\d{5}$/.test(identifierValue)) {
-        identifierMessage.show();
-      } else {
-        identifierMessage.hide();
-      }
-      
-      
 
       // 휴대폰 번호 유효성 검사
       if (!/^\d{3}-\d{4}-\d{4}$/.test(telValue)) {
@@ -972,8 +963,15 @@ googletag.cmd.push(function() {
         telMessage.hide();
       }
 
+      // 사업자 번호 000-00-00000
+      if (!/^\d{3}-\d{2}-\d{5}$/.test(identifierValue)) {
+        identifierMessage.show();
+      } else {
+        identifierMessage.hide();
+      }
+
       // 모든 필드가 비어있지 않고 유효성 검사를 통과한 경우
-      if (/^[가-힣]+$/.test(nameValue) && (/^\d{3}-\d{2}-\d{5}$/.test(identifierValue) && /^\d{3}-\d{4}-\d{4}$/.test(telValue)) {
+      if (/^[가-힣]+$/.test(nameValue) && /^\d{3}-\d{4}-\d{4}$/.test(telValue) && /^\d{3}-\d{2}-\d{5}$/.test(identifierValue)) {
         // 오류 메시지 숨김
         nameMessage.hide();
         telMessage.hide();
@@ -982,13 +980,12 @@ googletag.cmd.push(function() {
         // 폼 제출
         this.submit();
       } else {
-        	alert(nameValue+telValue+identifierValue);
-    	  event.preventDefault();
-        
+        event.preventDefault();
       }
     });
   });
 </script>
+
 
 
 	<div id="sri_section" class="  has_banner">
@@ -1022,8 +1019,8 @@ googletag.cmd.push(function() {
 											<span class="box_input"> <input type="text"
 												name="name" id="name" class="inp_find">
 											</span>
-											<p class="message_find" id="msg_name" style="display: none;">이름에
-												특수문자, 숫자는 사용하실 수 없습니다.</p>
+											<p class="message_find" id="msg_name" style="display: none;">이름은
+												한글 외에 사용하실 수 없습니다.</p>
 										</div>
 									</li>
 

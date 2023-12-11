@@ -43,7 +43,15 @@ private static JoinMemberDAO jmDAO;
 		
 		String selectIdDup=ss.selectOne("kr.co.sist.user.sjh.joinMapper.selectIdDup",id);
 		return selectIdDup;
-	}
+	}//selectIdDup
+	
+	public String selectIdDupBusiness(String id) {
+		MyBatiseHandler mbh=MyBatiseHandler.getInstance();
+		SqlSession ss=mbh.getMyBatisHandler(false);
+		
+		String selectIdDupBusiness=ss.selectOne("kr.co.sist.user.sjh.joinMapper.selectIdDupBusiness",id);
+		return selectIdDupBusiness;
+	}//selectIdDupBusiness
 	
 	public void insertMem(JoinMemberVO jmVO) {
 		
@@ -63,7 +71,7 @@ private static JoinMemberDAO jmDAO;
 		
 		ss.insert("kr.co.sist.user.sjh.joinMapper.insertBus",jmVO);
 		
-	}//insertMem
+	}//insertBus
 	
 	
 	

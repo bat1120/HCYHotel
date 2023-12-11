@@ -22,6 +22,12 @@ from member
 where id=#{id}
 </select>
 
+<select id="selectIdDupBusiness" resultType="String" parameterType="String">
+select id
+from business
+where id=#{id}
+</select>
+
 <insert id="insertMem" parameterType="kr.co.sist.user.join.JoinMemberVO">
 insert into member(id,password,name,identifier,tel,email,status)
 values(
@@ -36,7 +42,7 @@ values(
 </insert>
 
 <insert id="insertBus" parameterType="kr.co.sist.user.join.JoinMemberVO">
-insert into member(id,password,name,identifier,tel,email,status)
+insert into business(id,password,name,identifier,tel,email,status)
 values(
 	#{id},
 	#{password},
