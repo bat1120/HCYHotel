@@ -6,8 +6,8 @@
 
 
 
-<select id="selectMemId" resultType="String" parameterType="kr.co.sist.user.login.findid.FindIdVO">
-select id
+<select id="selectMemId" resultType="fIVO" parameterType="kr.co.sist.user.login.findid.FindIdVO">
+select name,id,inputdate
 from member
 where name=#{name} and tel=#{tel} and identifier=#{identifier}
 </select>
