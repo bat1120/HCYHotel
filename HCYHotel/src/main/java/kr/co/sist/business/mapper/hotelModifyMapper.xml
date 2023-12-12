@@ -24,4 +24,19 @@ LEFT JOIN location l ON h.loccode = l.loccode
 WHERE h.id = #{id}
 </select>
 
+ <select id="hotelInfo" resultType="hid" parameterType="String">
+SELECT h.hotelname, h.hoteladdress, h.hotelrate, h.description
+FROM hotel h
+WHERE h.hotelcode = #{hotelcode}
+</select>
+
+<select id="fileList" resultType="fld" parameterType="String">
+select filename,filecode
+from infofile
+where hotelcode = #{hotelcode}
+</select>
+
+<!--<insert id="insertHotel">
+insert
+</insert> -->
 </mapper>

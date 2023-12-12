@@ -49,4 +49,6 @@ public class BusinessManageController {
 	public String cancelBooking(HttpSession session,String hotelCode) {
 		return "";
 	}//cancelBooking
+	
+	
 }//class

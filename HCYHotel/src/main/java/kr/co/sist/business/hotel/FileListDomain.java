@@ -1,32 +1,32 @@
 package kr.co.sist.business.hotel;
 
 public class FileListDomain {
-   private String fileName;
-   private String fileCode;
+   private String filename;
+   private String filecode;
 
-   public String getFileName() {
-      return this.fileName;
+   public String getFilename() {
+      return this.filename;
    }
 
-   public String getFileCode() {
-      return this.fileCode;
+   public String getFilecode() {
+      return this.filecode;
    }
 
-   public void setFileName(String fileName) {
-      this.fileName = fileName;
+   public void setFilename(String filename) {
+      this.filename = filename;
    }
 
-   public void setFileCode(String fileCode) {
-      this.fileCode = fileCode;
+   public void setFilecode(String filecode) {
+      this.filecode = filecode;
    }
 
    public String toString() {
-      return "FileListDomain(fileName=" + this.getFileName() + ", fileCode=" + this.getFileCode() + ")";
+      return "FileListDomain(filename=" + this.getFilename() + ", filecode=" + this.getFilecode() + ")";
    }
 
-   public FileListDomain(String fileName, String fileCode) {
-      this.fileName = fileName;
-      this.fileCode = fileCode;
+   public FileListDomain(String filename, String filecode) {
+      this.filename = filename;
+      this.filecode = filecode;
    }
 
    public FileListDomain() {
