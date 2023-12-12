@@ -136,13 +136,13 @@
 	                            </div>
                             </c:when>
                             <c:otherwise>
-                            <c:forEach var="file" items="${files }" varStatus="i">
 	                            <div class="owl-carousel testimonial-carousel">
+                            <c:forEach var="file" items="${files }" varStatus="i">
 	                                <div class="testimonial-item text-center">
 	                                    <img class="img-fluid rounded-circle mx-auto mb-4" src="http://localhost/HCYHotel/common/business/img/${file}.jpg" style="width: 100%; height: 100%;">
 	                                </div>
-	                            </div>
                             </c:forEach>
+	                            </div>
                             </c:otherwise>
                             </c:choose>
                         </div>
