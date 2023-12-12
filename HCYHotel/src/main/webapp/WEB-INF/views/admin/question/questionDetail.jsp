@@ -7,7 +7,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>사업자회원관리</title>
+    <title>무의사항 상세</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -15,12 +15,17 @@
     <c:import url="../common/import/header.jsp"/>
     <script type="text/javascript">
     $(function(){
-    	
+    	//디테일 버튼
+    	$("#btnList").click(function(){
+    		$("#hidFrm").attr("action","goQuestion.do")
+    		$("#hidFrm").submit()
+    	})//btnList
+    	$("#btnAnswer").click(function(){
+    		$("#hidAnswer").val($("#answer").val())
+    		$("#hidFrm").attr("action",'answer.do')
+    		$("#hidFrm").submit()
+    	})//btnAnswer
     })//ready
-    function memDetail( id ){
-    	$("#hidId").val(id)
-    	$("#hidFrm").submit()
-    }//memDetail
     </script>
 </head>
 
@@ -54,13 +59,13 @@
                 <div class="navbar-nav w-100">
                     <a href="goDashboard.do" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>대시보드</a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle active show" data-bs-toggle="dropdown" aria-expanded="true"><i class="fa fa-laptop me-2"></i>회원관리</a>
-                        <div class="dropdown-menu bg-transparent border-0 show" data-bs-popper="none">
-                            <a href="goManageMem.do" class="dropdown-item active">사업자</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>회원관리</a>
+                        <div class="dropdown-menu bg-transparent border-0">
+                            <a href="goManageMem.do" class="dropdown-item">사업자</a>
                             <a href="goManageMem.do?memFlag=mem" class="dropdown-item">개인</a>
                         </div>
                     </div>
-                    <a href="goManageNotice.do" class="nav-item nav-link"><i class="fa fa-th me-2"></i>공지사항관리</a>
+                    <a href="goManageNotice.do" class="nav-item nav-link active"><i class="fa fa-th me-2"></i>공지사항관리</a>
                     <a href="goQuestion.do" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>문의사항관리</a>
                     <a href="table.html" class="nav-item nav-link"><i class="fa fa-table me-2"></i>호텔관리</a>
                     <a href="chart.html" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>다이닝관리</a>
@@ -96,40 +101,30 @@
             <!-- Navbar End -->
 
 
-            <div class="bg-light rounded h-100 p-4">
-                            <h6 class="mb-4">사업자 회원 관리</h6>
-                            <div class="table-responsive">
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">번호</th>
-                                            <th scope="col">ID</th>
-                                            <th scope="col">이름</th>
-                                            <th scope="col">대표호텔</th>
-                                            <th scope="col">주간 예매 수</th>
-                                            <th scope="col">상세보기</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                    	<c:forEach var="busList" items="${ busList }" varStatus="i">
-	                                        <tr>
-	                                            <th scope="row"><c:out value="${ i.count}"/></th>
-	                                            <td><c:out value="${ busList.id }"/></td>
-	                                            <td><c:out value="${ busList.name }"/></td>
-	                                            <td><c:out value="${ busList.repHotel }"/></td>
-	                                            <td><c:out value="${ busList.bookingCnt }"/></td>
-	                                            <td><input type="button" value="상세보기" class="btn btn-info btn-sm" onclick="memDetail('${ busList.id }')"></td>
-	                                        </tr>
-                                        </c:forEach>
-                                    </tbody>
-                                </table>
+            <div class="col-12">
+                        <div class="bg-light rounded h-100 p-4">
+                            <h6 class="mb-4">문의사항 상세보기</h6>
+                            <div class="form-floating mb-3">
+                               <h3 class="mb-4">제목</h3><h6 align="right">작성자 :<c:out value="${questionInfo.id }"/> &nbsp;&nbsp;작성일 :<c:out value="${questionInfo.inputDate }"/></h6>
+                                <input type="text" class="form-control" id="title" value="${questionInfo.title }" readonly="readonly">
                             </div>
+                            <div class="form-floating">
+                               <h3 class="mb-4">내용</h3><textarea class="form-control" id="content" style="height: 150px;" readonly="readonly" ><c:out value="${questionInfo.content }"/></textarea>
+                            </div><br><br>
+                            <div class="form-floating">
+                               <h3 class="mb-4">답변</h3><textarea class="form-control" id="answer" style="height: 150px;" ></textarea>
+                            </div>
+                            <div>
+                            <input type="button" id="btnAnswer" value="답변" class="btn btn-warning btn-sm">
+                            <input type="button" id="btnList" value="목록으로" class="btn btn-secondary btn-sm">
                         </div>
-                        
-                        <form action="memDetail.do" id="hidFrm">
-                        <input type="hidden" name="id" id="hidId"/>
-                        <input type="hidden" name="memFlag" value="${memFlag }"/>
-                        </form>
+                    </div>
+                    
+                    <form id="hidFrm" method="post">
+                    <input type="hidden" name="noticeCode" value="${questionInfo.noticeCode }">
+                    <input type="hidden" id="hidAnswer" name="answer" >
+                    <input type="hidden" id="hidTitle" name="title" >
+                    </form>
 
             <c:import url="../common/import/footer.jsp"/>
         </div>
