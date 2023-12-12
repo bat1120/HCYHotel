@@ -23,9 +23,10 @@ WHERE QUESTIONCODE = #{questionCode}
 ]]>
 </select>
 
-<update id="updateAnswer" parameterType="String">
+<update id="updateAnswer" parameterType="uaVO">
 <![CDATA[
 UPDATE QUESTION SET ANSWER = #{answer}, ANSWERDATE = sysdate
+where questioncode = #{questionCode}
 ]]>
 </update>
 </mapper>

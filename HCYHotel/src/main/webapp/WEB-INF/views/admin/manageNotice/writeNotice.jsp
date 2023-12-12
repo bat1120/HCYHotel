@@ -7,7 +7,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>문의사항 상세</title>
+    <title>공지사항 작성</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -15,16 +15,16 @@
     <c:import url="../common/import/header.jsp"/>
     <script type="text/javascript">
     $(function(){
-    	//디테일 버튼
-    	$("#btnList").click(function(){
-    		$("#hidFrm").attr("action","goQuestion.do")
+    	$("#btnSave").click(function(){
+    		$("#hidContent").val($("#content").val())
+    		$("#hidTitle").val($("#title").val())
+    		$("#hidFrm").attr("action",'newNotice.do')
     		$("#hidFrm").submit()
-    	})//btnList
-    	$("#btnAnswer").click(function(){
-    		$("#hidAnswer").val($("#answer").val())
-    		$("#hidFrm").attr("action",'answer.do')
+    	})//btnSave
+    	$("#btnCancel").click(function(){
+    		$("#hidFrm").attr("action",'goManageNotice.do')
     		$("#hidFrm").submit()
-    	})//btnAnswer
+    	})//btnCancel
     })//ready
     </script>
 </head>
@@ -65,8 +65,8 @@
                             <a href="goManageMem.do?memFlag=mem" class="dropdown-item">개인</a>
                         </div>
                     </div>
-                    <a href="goManageNotice.do" class="nav-item nav-link"><i class="fa fa-th me-2"></i>공지사항관리</a>
-                    <a href="goQuestion.do" class="nav-item nav-link active"><i class="fa fa-keyboard me-2"></i>문의사항관리</a>
+                    <a href="goManageNotice.do" class="nav-item nav-link active"><i class="fa fa-th me-2"></i>공지사항관리</a>
+                    <a href="goQuestion.do" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>문의사항관리</a>
                     <a href="table.html" class="nav-item nav-link"><i class="fa fa-table me-2"></i>호텔관리</a>
                     <a href="chart.html" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>다이닝관리</a>
                 </div>
@@ -103,26 +103,20 @@
 
             <div class="col-12">
                         <div class="bg-light rounded h-100 p-4">
-                            <h6 class="mb-4">문의사항 상세보기</h6>
+                            <h6 class="mb-4">공지사항 작성</h6>
                             <div class="form-floating mb-3">
-                               <h3 class="mb-4">제목</h3><h6 align="right">작성자 :<c:out value="${questionInfo.id }"/> &nbsp;&nbsp;작성일 :<c:out value="${questionInfo.inputDate }"/></h6>
-                                <input type="text" class="form-control" id="title" value="${questionInfo.title }" readonly="readonly">
+                               <h3 class="mb-4">제목</h3> <input type="text" class="form-control" id="title">
                             </div>
                             <div class="form-floating">
-                               <h3 class="mb-4">내용</h3><textarea class="form-control" id="content" style="height: 150px;" readonly="readonly" ><c:out value="${questionInfo.content }"/></textarea>
-                            </div><br><br>
-                            <div class="form-floating">
-                               <h3 class="mb-4">답변</h3><textarea class="form-control" id="answer" style="height: 150px;" ><c:out value="${questionInfo.answer} "/></textarea>
+                               <h3 class="mb-4">내용</h3><textarea class="form-control" id="content" style="height: 150px;" ></textarea>
                             </div>
-                            <div>
-                            <input type="button" id="btnAnswer" value="답변저장" class="btn btn-warning btn-sm">
-                            <input type="button" id="btnList" value="목록으로" class="btn btn-secondary btn-sm">
+                            <input type="button" id="btnSave" value="저장" class="btn btn-success btn-sm">
+                            <input type="button" id="btnCancel" value="취소" class="btn btn-secondary btn-sm">
                         </div>
                     </div>
                     
                     <form id="hidFrm" method="post">
-                    <input type="hidden" name="questionCode" value="${questionInfo.questionCode }">
-                    <input type="hidden" id="hidAnswer" name="answer" >
+                    <input type="hidden" id="hidContent" name="content" >
                     <input type="hidden" id="hidTitle" name="title" >
                     </form>
 

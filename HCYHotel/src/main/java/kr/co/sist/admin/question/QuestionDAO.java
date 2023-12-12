@@ -28,10 +28,10 @@ public class QuestionDAO {
 		return qid;
 	}//selectQuestionInfo
 	
-	public int updateAnswer(String Answer) {
+	public int updateAnswer(UpdateAnswerVO uaVO) {
 		MyBatiseHandlerAdmin mbha = MyBatiseHandlerAdmin.getInstance();
 		SqlSession ss = mbha.getMyBatisHandler(true);
-		int flag = ss.update("kr.co.sist.admin.question.updateAnswer");
+		int flag = ss.update("kr.co.sist.admin.question.updateAnswer",uaVO);
 		return flag;
 	}//updateAnswer
 }//class

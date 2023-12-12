@@ -46,8 +46,8 @@ public class QuestionController {
 	}//goQuestionDetail
 	
 	@PostMapping("/admin/answer.do")
-	public String answerQuestion(Model model, String answer) {
-		if(qs.writeAnswer(answer)) {
+	public String answerQuestion(Model model, UpdateAnswerVO uaVO) {
+		if(qs.writeAnswer(uaVO)) {
 			model.addAttribute("msg","답변이 등록되었습니다.");
 			model.addAttribute("url","goQuestion.do");
 			return "forward:msg.do";
@@ -56,5 +56,6 @@ public class QuestionController {
 		model.addAttribute("url","goQuestion.do");
 		return "forward:msg.do";
 	}//answerQuestion
+	
 
 }//class

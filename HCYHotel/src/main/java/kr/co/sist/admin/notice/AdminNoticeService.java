@@ -36,4 +36,8 @@ public class AdminNoticeService {
 		if(flag==0) {return false;}
 		return true;
 	}//fixNoticeInfo
+	
+	public void writeNotice(WriteNoticeVO wnVO) {
+		anDAO.insertNotice(wnVO);
+	}//writeNotice
 }//class

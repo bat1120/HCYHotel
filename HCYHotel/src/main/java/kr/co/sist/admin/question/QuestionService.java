@@ -29,8 +29,8 @@ private QuestionDAO qDAO;
 		return qid;
 	}//loadQuestionInfo
 	
-	public boolean writeAnswer(String answer) {
-		boolean flag = qDAO.updateAnswer(answer)==1;
+	public boolean writeAnswer(UpdateAnswerVO uaVO) {
+		boolean flag = qDAO.updateAnswer(uaVO)==1;
 		return flag;
 	}//writeAnswer
 }//class

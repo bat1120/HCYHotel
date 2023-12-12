@@ -81,6 +81,10 @@
             }//success
         })//ajax
     }//paging
+    
+    function writeNotice(){
+    	location.href="goNewNotice.do"
+    }//writeNotice
     </script>
 </head>
 
@@ -158,6 +162,7 @@
 
             <div class="bg-light rounded h-100 p-4">
                             <h6 class="mb-4">공지사항 관리</h6>
+                            <div align="right"><input type="button" value="글작성" class="btn btn-warning btn-sm" onclick="writeNotice()"></div>
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>

@@ -22,8 +22,10 @@
 <typeAlias type="kr.co.sist.admin.notice.NoticeInfoDomain" alias="nid"/>
 <typeAlias type="kr.co.sist.admin.notice.NoticeInfoVO" alias="niVO"/>
 <typeAlias type="kr.co.sist.admin.notice.NoticePagingVO" alias="npVO"/>
+<typeAlias type="kr.co.sist.admin.notice.WriteNoticeVO" alias="wnVO"/>
 <typeAlias type="kr.co.sist.admin.question.QuestionDomain" alias="qd"/>
 <typeAlias type="kr.co.sist.admin.question.QuestionInfoDomain" alias="qid"/>
+<typeAlias type="kr.co.sist.admin.question.UpdateAnswerVO" alias="uaVO"/>
 </typeAliases>
 
   <environments default="development">
