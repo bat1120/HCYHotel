@@ -7,7 +7,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>회원 정보</title>
+    <title>다이닝 정보</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -17,11 +17,13 @@
     $(function(){
     	
     })//ready
-    function removeMem( id ){
-    	location.href="goManageMem.do"
+    function removeDining( dc ){
+    	$("#diningCode").val(dc)
+    	$("#hidFrm").attr("action","removeDining.do")
+    	$("#hidFrm").submit()
     }//removeMem
     function goList(){
-    	location.href="goManageMem.do?memFlag=${param.memFlag}"
+    	location.href="goManageDining.do"
     }//goList
     </script>
 </head>
@@ -56,16 +58,16 @@
                 <div class="navbar-nav w-100">
                     <a href="goDashboard.do" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>대시보드</a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle active show" data-bs-toggle="dropdown" aria-expanded="true"><i class="fa fa-laptop me-2"></i>회원관리</a>
-                        <div class="dropdown-menu bg-transparent border-0 show" data-bs-popper="none">
-                            <a href="goManageMem.do" class="dropdown-item${param.memFlag eq 'mem' ? '':' active' }">사업자</a>
-                            <a href="goManageMem.do?memFlag=mem" class="dropdown-item${param.memFlag ne 'mem' ? '':' active' }">개인</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>회원관리</a>
+                        <div class="dropdown-menu bg-transparent border-0">
+                            <a href="goManageMem.do" class="dropdown-item">사업자</a>
+                            <a href="goManageMem.do?memFlag=mem" class="dropdown-item">개인</a>
                         </div>
                     </div>
                     <a href="widget.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>공지사항관리</a>
                     <a href="goQuestion.do" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>문의사항관리</a>
                     <a href="goManageHotel.do" class="nav-item nav-link"><i class="fa fa-table me-2"></i>호텔관리</a>
-                    <a href="goManageDining.do" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>다이닝관리</a>
+                    <a href="goManageDining.do" class="nav-item nav-link active"><i class="fa fa-chart-bar me-2"></i>다이닝관리</a>
                 </div>
             </nav>
         </div>
@@ -100,27 +102,58 @@
                         <div class="bg-light rounded h-100 p-4">
                             <h6 class="mb-4">상세정보</h6>
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control" value="${mem.id }" readonly="readonly">
-                                <label for="floatingInput">id</label>
+                                <input type="text" class="form-control" value="${diningInfo.diningName }" readonly="readonly">
+                                <label for="floatingInput">다이닝 이름</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control" readonly="readonly" value="${mem.name }">
-                                <label for="floatingPassword">이름</label>
+                                <input type="text" class="form-control" readonly="readonly" value="${diningInfo.hotelName }">
+                                <label for="floatingPassword">호텔이름</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control" readonly="readonly" value="${mem.tel }">
-                                <label for="floatingPassword">전화번호</label>
+                                <input type="text" class="form-control" readonly="readonly" value="${diningInfo.operatingTime }">
+                                <label for="floatingPassword">서비스시간</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control" readonly="readonly" value="${mem.email }">
-                                <label for="floatingPassword">이메일</label>
+                                <input type="text" class="form-control" readonly="readonly" value="${diningInfo.capacity }">
+                                <label for="floatingPassword">수용인원</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control" readonly="readonly" value="${mem.bookingCnt }">
-                                <label for="floatingPassword">예약 수</label>
+                                <input type="text" class="form-control" readonly="readonly" value="${diningInfo.information }">
+                                <label for="floatingPassword">정보</label>
                             </div>
+                            <div class="form-floating">
+                               <h3 class="mb-4">상세설명</h3><textarea class="form-control" id="content" style="height: 150px;" readonly="readonly" ><c:out value="${diningInfo.description }"/></textarea>
+                            </div>
+                            
+                            <!-- 사진 -->
+                            <div class="col-12">
+                        <div class="bg-light rounded h-100 p-4">
+                            <h6 class="mb-4">사진</h6>
+                            <c:choose>
+                            <c:when test="${empty files }">
+	                            <div class="owl-carousel testimonial-carousel">
+	                                <div class="testimonial-item text-center">
+	                                    <img class="img-fluid rounded-circle mx-auto mb-1" src="http://localhost/HCYHotel/common/business/img/noImage.png" style="width: 100%; height: 100%;">
+	                                    <h5 class="mb-1">사진 없음</h5>
+	                                </div>
+	                            </div>
+                            </c:when>
+                            <c:otherwise>
+                            <c:forEach var="file" items="${files }" varStatus="i">
+	                            <div class="owl-carousel testimonial-carousel">
+	                                <div class="testimonial-item text-center">
+	                                    <img class="img-fluid rounded-circle mx-auto mb-4" src="http://localhost/HCYHotel/common/business/img/${file}.jpg" style="width: 100%; height: 100%;">
+	                                </div>
+	                            </div>
+                            </c:forEach>
+                            </c:otherwise>
+                            </c:choose>
+                        </div>
+                    </div>
+                            <!--  -->
+                            
                             <div class="form-floating mb-3">
-                                <input type="button" class="btn btn-danger btn-sm" value="탈퇴" onclick="removeMem(${mem.id})"/>
+                                <input type="button" class="btn btn-danger btn-sm" value="다이닝삭제" onclick="removeDining('${param.diningCode}')"/>
                                 <input type="button" class="btn btn-secondary btn-sm" value="목록으로" onclick="goList()"/>
                                 
                             </div>
@@ -128,28 +161,24 @@
                         </div>
                         </div>
                         
-<c:if test="${param.memFlag eq 'mem' }">
-                    
                         <div class="col-12">
                         <div class="bg-light rounded h-100 p-4">
-                            <h6 class="mb-4">작성한 호텔 리뷰</h6>
+                            <h6 class="mb-4">작성된 다이닝 리뷰</h6>
                             <table class="table table-hover">
                                 <thead>
                                     <tr>
                                         <th scope="col">번호</th>
-                                        <th scope="col">호텔명</th>
-                                        <th scope="col">방이름</th>
-                                        <th scope="col">리뷰내용</th>
+                                        <th scope="col">작성자</th>
+                                        <th scope="col">내용</th>
                                         <th scope="col">평점</th>
                                         <th scope="col">리뷰작성일</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                <c:forEach var="review" items="${ mem.roomReviewList }" varStatus="i">
+                                <c:forEach var="review" items="${ reviewList }" varStatus="i">
                                     <tr>
                                         <th scope="row"><c:out value="${ i.count }"/></th>
-                                        <td><c:out value="${ review.hotelName }"/></td>
-                                        <td><c:out value="${ review.roomName }"/></td>
+                                        <td><c:out value="${ review.id }"/></td>
                                         <td><c:out value="${ review.content }"/></td>
                                         <td><c:out value="${ review.rating }"/></td>
                                         <td><c:out value="${ review.inputDate }"/></td>
@@ -159,41 +188,15 @@
                             </table>
                         </div>
                     </div>
-                    <div class="col-12">
-                        <div class="bg-light rounded h-100 p-4">
-                            <h6 class="mb-4">작성한 다이닝 리뷰</h6>
-                            <table class="table table-hover">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">번호</th>
-                                        <th scope="col">호텔명</th>
-                                        <th scope="col">다이닝명</th>
-                                        <th scope="col">리뷰내용</th>
-                                        <th scope="col">평점</th>
-                                        <th scope="col">리뷰작성일</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                <c:forEach var="review" items="${ mem.diningReviewList }" varStatus="i">
-                                    <tr>
-                                        <th scope="row"><c:out value="${ i.count }"/></th>
-                                        <td><c:out value="${ review.hotelName }"/></td>
-                                        <td><c:out value="${ review.diningName }"/></td>
-                                        <td><c:out value="${ review.content }"/></td>
-                                        <td><c:out value="${ review.rating }"/></td>
-                                        <td><c:out value="${ review.inputDate }"/></td>
-                                    </tr>
-                                </c:forEach>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-</c:if>
+                    
+                    
             <c:import url="../common/import/footer.jsp"/>
         </div>
         <!-- Content End -->
 
-
+<form id="hidFrm" method="post">
+	<input type="hidden" id="diningCode" name="diningCode">
+</form>
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>

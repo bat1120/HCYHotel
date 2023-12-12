@@ -29,6 +29,9 @@
 <typeAlias type="kr.co.sist.admin.manageHotel.HotelDomain" alias="hd"/>
 <typeAlias type="kr.co.sist.admin.manageHotel.HotelInfoDomain" alias="hid"/>
 <typeAlias type="kr.co.sist.admin.manageHotel.HotelReviewDomain" alias="hrd"/>
+<typeAlias type="kr.co.sist.admin.manageDining.DiningDomain" alias="dind"/>
+<typeAlias type="kr.co.sist.admin.manageDining.DiningInfoDomain" alias="dinid"/>
+<typeAlias type="kr.co.sist.admin.manageDining.DiningReviewDomain" alias="dinrd"/>
 </typeAliases>
 
   <environments default="development">
@@ -51,5 +54,6 @@
 <mapper resource="kr/co/sist/admin/mapper/noticeMapper.xml"/>
 <mapper resource="kr/co/sist/admin/mapper/questionMapper.xml"/>
 <mapper resource="kr/co/sist/admin/mapper/hotelMapper.xml"/>
+<mapper resource="kr/co/sist/admin/mapper/diningMapper.xml"/>
   </mappers>
 </configuration>

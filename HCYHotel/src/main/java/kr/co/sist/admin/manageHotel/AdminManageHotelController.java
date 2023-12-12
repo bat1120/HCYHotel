@@ -25,9 +25,9 @@ public String goManageHotel(Model model) {
 
 @PostMapping("/admin/hotelDetail.do")
 public String goHotelDetail(String hotelCode, Model model) {
-	System.out.println("아니"+hotelCode); 
 	model.addAttribute("hotelDetail",amhs.loadHotelDetail(hotelCode));
 	model.addAttribute("reviewList",amhs.loadHotelReview(hotelCode));
+	model.addAttribute("files",amhs.loadHotelFiles(hotelCode));
 	return "admin/manageHotel/hotelDetail";
 }//goHotelDetail
 

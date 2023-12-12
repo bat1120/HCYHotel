@@ -29,4 +29,10 @@ public List<HotelReviewDomain> loadHotelReview(String hotelCode){
 public void expungeHotel(String hotelCode) {
 	amhDAO.deleteHotel(hotelCode);
 }//expungeHotel
+
+
+public List<String> loadHotelFiles(String hotelCode){
+	List<String> list = amhDAO.selectHotelFiles(hotelCode);
+	return list;
+}//loadHotelFiles
 }//class
