@@ -26,6 +26,9 @@
 <typeAlias type="kr.co.sist.admin.question.QuestionDomain" alias="qd"/>
 <typeAlias type="kr.co.sist.admin.question.QuestionInfoDomain" alias="qid"/>
 <typeAlias type="kr.co.sist.admin.question.UpdateAnswerVO" alias="uaVO"/>
+<typeAlias type="kr.co.sist.admin.manageHotel.HotelDomain" alias="hd"/>
+<typeAlias type="kr.co.sist.admin.manageHotel.HotelInfoDomain" alias="hid"/>
+<typeAlias type="kr.co.sist.admin.manageHotel.HotelReviewDomain" alias="hrd"/>
 </typeAliases>
 
   <environments default="development">
@@ -47,5 +50,6 @@
 <mapper resource="kr/co/sist/admin/mapper/pagingMapper.xml"/>
 <mapper resource="kr/co/sist/admin/mapper/noticeMapper.xml"/>
 <mapper resource="kr/co/sist/admin/mapper/questionMapper.xml"/>
+<mapper resource="kr/co/sist/admin/mapper/hotelMapper.xml"/>
   </mappers>
 </configuration>

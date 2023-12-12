@@ -4,83 +4,23 @@
     <%@ include file="/common/admin/jsp/common_url.jsp" %>
 <!DOCTYPE html>
 <html lang="en">
-<% pageContext.setAttribute("currentPage", 1); %>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
 <head>
     <meta charset="utf-8">
-    <title>문의사항 관리</title>
+    <title>일반회원관리</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
-    <style type="text/css">
-    .custom-link {
-      font-family: Arial, sans-serif; /* 원하는 폰트 패밀리 지정 */
-      font-size: 16px; /* 글자 크기 */
-      font-weight: bold; /* 글자 두께 */
-      text-decoration: none; /* 밑줄 제거 */
-      color: #007bff; /* 링크 색상 */
-    }
-
-    /* 호버 시 스타일 변경 */
-    .custom-link:hover {
-      color: #0056b3; /* 호버 시 변경할 색상 */
-    }
-    </style>
 
     <c:import url="../common/import/header.jsp"/>
     <script type="text/javascript">
     $(function(){
-    })//ready
-    
-    function goQuestionDetail(qc){
-    	$("#questionCode").val(qc)
-    	$("#detailFrm").submit()
-    }//goNoticeDetail
-    
-    function paging(page){
-    	if(page == $("#curruntPage").val()){
-    		return;
-    	}//if
-    	$(".none").attr("class","custom-link")
-    	$("#"+page+"page").attr("class","none")
-    	$("#curruntPage").val(page)
     	
-    	var data = {"currentPage":page}
-    	$.ajax({
-            url : "noticePagingAjax.do",
-            type : "post",
-            data : data,
-            dataType : "json",
-            error(xhr){
-                console.log(xhr.status)
-            },
-            success(jsonArr){
-                
-	                var output = "";
-                $.each(jsonArr.noticeList,function(idx,element){
-                    output += "<tr>"
-                    output += "<th scope='row'>"
-                    output += (idx+1)
-                    output += "</th>"
-                    output += "<td>"
-                    output += element.title
-                    output += "</td>"
-                    output += "<td>"
-                    output += element.inputDate
-                    output += "</td>"
-                    output += "<td>"
-                    output += element.viewCnt
-                    output += "</td>"
-                    output += "<td><input type='button' onclick='goNoticeDetail"
-                    output += "('"
-                    output += element.noticeCode
-                    output += "')' value='상세보기' class='btn btn-info btn-sm'></td>"
-                    output += "</tr>"
-                })//each
-                $("#tbody").html(output)
-            }//success
-        })//ajax
-    }//paging
+    })//ready
+    function hotelDetail( hc ){
+    	$("#hidHotelCode").val(hc)
+    	$("#hidFrm").submit()
+    }//memDetail
     </script>
 </head>
 
@@ -121,8 +61,8 @@
                         </div>
                     </div>
                     <a href="goManageNotice.do" class="nav-item nav-link"><i class="fa fa-th me-2"></i>공지사항관리</a>
-                    <a href="goQuestion.do" class="nav-item nav-link active"><i class="fa fa-keyboard me-2"></i>문의사항관리</a>
-                    <a href="goManageHotel.do" class="nav-item nav-link"><i class="fa fa-table me-2"></i>호텔관리</a>
+                    <a href="goQuestion.do" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>문의사항관리</a>
+                    <a href="goManageHotel.do" class="nav-item nav-link active"><i class="fa fa-table me-2"></i>호텔관리</a>
                     <a href="chart.html" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>다이닝관리</a>
                 </div>
             </nav>
@@ -155,44 +95,39 @@
             </nav>
             <!-- Navbar End -->
 
-
-            <div class="bg-light rounded h-100 p-4">
-                            <h6 class="mb-4">문의사항 관리</h6>
+			<div class="bg-light rounded h-100 p-4">
+                            <h6 class="mb-4">일반 회원 관리</h6>
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
                                         <tr>
                                             <th scope="col">번호</th>
-                                            <th scope="col">제목</th>
-                                            <th scope="col">아이디</th>
-                                            <th scope="col">문의일자</th>
-                                            <th scope="col">답변여부</th>
+                                            <th scope="col">호텔이름</th>
+                                            <th scope="col">사장님 ID</th>
+                                            <th scope="col">전주 대비 예매율</th>
+                                            <th scope="col">주간 리뷰 수</th>
+                                            <th scope="col">상세보기</th>
                                         </tr>
                                     </thead>
-                                    <tbody id="tbody">
-                                    	<c:forEach var="questionList" items="${questionList }" varStatus="i">
+                                    <tbody>
+                                    	<c:forEach var="hotel" items="${hotelList }" varStatus="i">
 	                                        <tr>
-	                                            <th scope="row">${paging.startNum+i.index}</th>
-	                                            <td>${questionList.title }</td>
-	                                            <td>${questionList.id }</td>
-	                                            <td>${questionList.inputDate }</td>
-	                                            <td><input type="button" onclick="goQuestionDetail('${questionList.questionCode}')" value="${questionList.answerFlag eq 'false'?'미작성':'완료'}"
-	                                             class="btn btn-${questionList.answerFlag eq 'false'?'warning':'success'} btn-sm"></td>
+	                                            <th scope="row">${i.count}</th>
+	                                            <td>${hotel.hotelName }</td>
+	                                            <td>${hotel.id }</td>
+	                                            <td>${hotel.useRatio<0?'-'+hotel.useRatio:hotel.useRatio }%</td>
+	                                            <td>${hotel.reviewCnt }</td>
+	                                            <td><input type="button" value="상세보기" class="btn btn-info btn-sm" onclick="hotelDetail('${ hotel.hotelCode }')"></td>
 	                                        </tr>
                                         </c:forEach>
                                     </tbody>
                                 </table>
-                                <div style="margin: auto; text-align: center;">
-                                <c:forEach var="i" begin="1" end="${paging.totalPage }">
-                                <a style="text" id="${i }page" onclick="paging('${i}')" class="${i==1?'none':'custom-link' }">&lt;${i}&gt;</a>&nbsp;
-                                </c:forEach>
-                                </div>
                             </div>
                         </div>
-                        <form action="goQuestionDetail.do" method="post" id="detailFrm">
-                        <input type="hidden" name="questionCode" id="questionCode">
-                        <input type="hidden" name="curruntPage" id="curruntPage" value="1">
+                         <form action="hotelDetail.do" id="hidFrm" method="post">
+                        <input type="hidden" name="hotelCode" id="hidHotelCode"/>
                         </form>
+            
 
             <c:import url="../common/import/footer.jsp"/>
         </div>

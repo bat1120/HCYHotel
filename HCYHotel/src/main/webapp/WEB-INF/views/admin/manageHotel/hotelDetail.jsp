@@ -7,7 +7,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>공지사항 관리</title>
+    <title>호텔 정보</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -15,36 +15,16 @@
     <c:import url="../common/import/header.jsp"/>
     <script type="text/javascript">
     $(function(){
-    	//디테일 버튼
-    	$("#btnList").click(function(){
-    		$("#hidFrm").attr("action","goManageNotice.do")
-    		$("#hidFrm").submit()
-    	})//btnList
-    	$("#btnDelete").click(function(){
-    		$("#hidFrm").attr("action",'eraseNotice.do')
-    		$("#hidFrm").submit()
-    	})//btnDelete
-    	$("#btnModify").click(function(){
-    		$("#title").removeAttr("readonly")
-    		$("#content").removeAttr("readonly")
-    		$("#modifyBtn").attr("style",'')
-    		$("#detailBtn").attr("style",'display:none')
-    	})//btnModify
     	
-    	//수정 버튼
-    	$("#btnSave").click(function(){
-    		$("#hidContent").val($("#content").val())
-    		$("#hidTitle").val($("#title").val())
-    		$("#hidFrm").attr("action",'modifyNotice.do')
-    		$("#hidFrm").submit()
-    	})//btnSave
-    	$("#btnCancel").click(function(){
-    		$("#title").attr("readonly","readonly")
-    		$("#content").attr("readonly","readonly")
-    		$("#detailBtn").attr("style",'')
-    		$("#modifyBtn").attr("style",'display:none')
-    	})//btnCancel
     })//ready
+    function removeHotel( hc ){
+    	$("#hotelCode").val(hc)
+    	$("#hidFrm").attr("action","removeHotel.do")
+    	$("#hidFrm").submit()
+    }//removeMem
+    function goList(){
+    	location.href="goManageHotel.do"
+    }//goList
     </script>
 </head>
 
@@ -84,9 +64,9 @@
                             <a href="goManageMem.do?memFlag=mem" class="dropdown-item">개인</a>
                         </div>
                     </div>
-                    <a href="goManageNotice.do" class="nav-item nav-link active"><i class="fa fa-th me-2"></i>공지사항관리</a>
+                    <a href="widget.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>공지사항관리</a>
                     <a href="goQuestion.do" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>문의사항관리</a>
-                    <a href="goManageHotel.do" class="nav-item nav-link"><i class="fa fa-table me-2"></i>호텔관리</a>
+                    <a href="goManageHotel.do" class="nav-item nav-link active"><i class="fa fa-table me-2"></i>호텔관리</a>
                     <a href="chart.html" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>다이닝관리</a>
                 </div>
             </nav>
@@ -118,41 +98,73 @@
                 </div>
             </nav>
             <!-- Navbar End -->
-
-
-            <div class="col-12">
+					<div class="col-12">
                         <div class="bg-light rounded h-100 p-4">
-                            <h6 class="mb-4">공지사항 상세보기</h6>
+                            <h6 class="mb-4">상세정보</h6>
                             <div class="form-floating mb-3">
-                               <h3 class="mb-4">제목</h3> <input type="text" class="form-control" id="title" value="${noticeDetail.title }" readonly="readonly">
+                                <input type="text" class="form-control" value="${hotelDetail.hotelName }" readonly="readonly">
+                                <label for="floatingInput">호텔이름</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" readonly="readonly" value="${hotelDetail.id }">
+                                <label for="floatingPassword">사장님 ID</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" readonly="readonly" value="${hotelDetail.hotelAddress }">
+                                <label for="floatingPassword">호텔 주소</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" readonly="readonly" value="${hotelDetail.tel }">
+                                <label for="floatingPassword">전화번호</label>
                             </div>
                             <div class="form-floating">
-                               <h3 class="mb-4">내용</h3><textarea class="form-control" id="content" style="height: 150px;" readonly="readonly" ><c:out value="${noticeDetail.content }"/></textarea>
+                               <h3 class="mb-4">상세설명</h3><textarea class="form-control" id="content" style="height: 150px;" readonly="readonly" ><c:out value="${hotelDetail.description }"/></textarea>
                             </div>
-                            <div id="detailBtn">
-                            <input type="button" id="btnModify" value="수정" class="btn btn-warning btn-sm">
-                            <input type="button" id="btnDelete" value="삭제" class="btn btn-danger btn-sm">
-                            <input type="button" id="btnList" value="목록으로" class="btn btn-secondary btn-sm">
-                            </div>
-                            <div id="modifyBtn" style="display:none">
-                            <input type="button" id="btnSave" value="저장" class="btn btn-success btn-sm">
-                            <input type="button" id="btnCancel" value="취소" class="btn btn-secondary btn-sm">
+                            <div class="form-floating mb-3">
+                                <input type="button" class="btn btn-danger btn-sm" value="호텔삭제" onclick="removeHotel(${param.hotelCode})"/>
+                                <input type="button" class="btn btn-secondary btn-sm" value="목록으로" onclick="goList()"/>
+                                
                             </div>
                             
                         </div>
+                        </div>
+                        
+                        <div class="col-12">
+                        <div class="bg-light rounded h-100 p-4">
+                            <h6 class="mb-4">작성된 호텔 리뷰</h6>
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">번호</th>
+                                        <th scope="col">작성자</th>
+                                        <th scope="col">내용</th>
+                                        <th scope="col">평점</th>
+                                        <th scope="col">리뷰작성일</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                <c:forEach var="review" items="${ reviewList }" varStatus="i">
+                                    <tr>
+                                        <th scope="row"><c:out value="${ i.count }"/></th>
+                                        <td><c:out value="${ review.id }"/></td>
+                                        <td><c:out value="${ review.content }"/></td>
+                                        <td><c:out value="${ review.rating }"/></td>
+                                        <td><c:out value="${ review.inputDate }"/></td>
+                                    </tr>
+                                </c:forEach>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                     
-                    <form id="hidFrm" method="post">
-                    <input type="hidden" name="noticeCode" value="${noticeDetail.noticeCode }">
-                    <input type="hidden" id="hidContent" name="content" >
-                    <input type="hidden" id="hidTitle" name="title" >
-                    </form>
-
+                    
             <c:import url="../common/import/footer.jsp"/>
         </div>
         <!-- Content End -->
 
-
+<form action="" id="hidFrm" method="post">
+	<input type="hidden" id="hotelCode" name="hotelCode">
+</form>
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
