@@ -81,6 +81,10 @@
             }//success
         })//ajax
     }//paging
+    
+    function writeNotice(){
+    	location.href="goNewNotice.do"
+    }//writeNotice
     </script>
 </head>
 
@@ -121,9 +125,9 @@
                         </div>
                     </div>
                     <a href="goManageNotice.do" class="nav-item nav-link active"><i class="fa fa-th me-2"></i>공지사항관리</a>
-                    <a href="form.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>문의사항관리</a>
-                    <a href="table.html" class="nav-item nav-link"><i class="fa fa-table me-2"></i>호텔관리</a>
-                    <a href="chart.html" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>다이닝관리</a>
+                    <a href="goQuestion.do" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>문의사항관리</a>
+                    <a href="goManageHotel.do" class="nav-item nav-link"><i class="fa fa-table me-2"></i>호텔관리</a>
+                    <a href="goManageDining.do" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>다이닝관리</a>
                 </div>
             </nav>
         </div>
@@ -158,6 +162,7 @@
 
             <div class="bg-light rounded h-100 p-4">
                             <h6 class="mb-4">공지사항 관리</h6>
+                            <div align="right"><input type="button" value="글작성" class="btn btn-warning btn-sm" onclick="writeNotice()"></div>
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>

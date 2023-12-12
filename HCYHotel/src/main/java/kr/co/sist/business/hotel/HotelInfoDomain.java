@@ -4,7 +4,7 @@ import java.util.List;
 
 public class HotelInfoDomain {
    private String hotelName;
-   private String hotelAddr;
+   private String hotelAddress;
    private String hotelRate;
    private String description;
    private List<FileListDomain> fileList;
@@ -14,7 +14,7 @@ public class HotelInfoDomain {
    }
 
    public String getHotelAddr() {
-      return this.hotelAddr;
+      return this.hotelAddress;
    }
 
    public String getHotelRate() {
@@ -33,8 +33,8 @@ public class HotelInfoDomain {
       this.hotelName = hotelName;
    }
 
-   public void setHotelAddr(String hotelAddr) {
-      this.hotelAddr = hotelAddr;
+   public void setHotelAddr(String hotelAddress) {
+      this.hotelAddress = hotelAddress;
    }
 
    public void setHotelRate(String hotelRate) {
@@ -53,9 +53,9 @@ public class HotelInfoDomain {
       return "HotelInfoDomain(hotelName=" + this.getHotelName() + ", hotelAddr=" + this.getHotelAddr() + ", hotelRate=" + this.getHotelRate() + ", description=" + this.getDescription() + ", fileList=" + this.getFileList() + ")";
    }
 
-   public HotelInfoDomain(String hotelName, String hotelAddr, String hotelRate, String description, List<FileListDomain> fileList) {
+   public HotelInfoDomain(String hotelName, String hotelAddress, String hotelRate, String description, List<FileListDomain> fileList) {
       this.hotelName = hotelName;
-      this.hotelAddr = hotelAddr;
+      this.hotelAddress = hotelAddress;
       this.hotelRate = hotelRate;
       this.description = description;
       this.fileList = fileList;

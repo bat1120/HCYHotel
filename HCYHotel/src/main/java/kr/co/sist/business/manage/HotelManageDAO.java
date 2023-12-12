@@ -42,6 +42,8 @@ public class HotelManageDAO {
 		System.out.println(list);
 		return list;
 	}//searchBookingHotel
+		
+		
 //	public static void main(String[] arg) {
 //		List<BusinessHotelDomain> list=new ArrayList<BusinessHotelDomain>();
 //		list=HotelManageDAO.getInstance().selectBookingHotel("member1");

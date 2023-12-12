@@ -1929,7 +1929,7 @@ th, td {
 								<c:forEach var="hotelList" items="${hotelList }" varStatus="i">
 									<tr>
 										<th><c:out value="${ i.count}" /></th>
-										<th><c:out value="${ hotelList.hotelName}" /></th>
+										<th><a href="businessHotelGoModify.do?hotelcode=${hotelList.hotelCode }"><c:out value="${ hotelList.hotelName}" /></a></th>
 										<th><c:out value="${ hotelList.total_rating}" /></th>
 										<th><c:out value="${ hotelList.sido}" /></th>
 										<th><c:out value="${ hotelList.booking_count}" /></th>

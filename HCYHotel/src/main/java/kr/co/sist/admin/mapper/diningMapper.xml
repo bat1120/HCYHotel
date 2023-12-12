@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.co.sist.admin.dining">
+
+<!-- 다이닝 목록 불러오기 -->
+<select id="selectDining" resultType="dind">
+<![CDATA[
+SELECT
+ DININGCODE,
+  (select HOTELNAME from HOTEL ho where ho.HOTELCODE = ht.HOTELCODE) hotelName,
+  DININGNAME,
+  NVL(
+    (
+      (SELECT COUNT(*)
+       FROM DININGBOOKING r ,(
+         SELECT SCHEDULECODE
+         FROM DININGSCHEDULE ro ,(
+           SELECT DININGCODE
+           FROM DINING ho
+           WHERE ho.DININGCODE = ht.DININGCODE
+         ) dc
+         WHERE ro.DININGCODE(+) = dc.DININGCODE AND SCHEDULEDATE > SYSDATE - 7 AND SCHEDULEDATE < SYSDATE
+       ) sc
+       WHERE r.SCHEDULECODE(+) = sc.SCHEDULECODE AND STATUS = 'Y'
+      )
+      /
+      NULLIF(
+        (SELECT COUNT(*)
+       FROM DININGBOOKING r,(
+         SELECT SCHEDULECODE
+         FROM DININGSCHEDULE ro ,(
+           SELECT DININGCODE
+           FROM DINING ho
+           WHERE ho.DININGCODE = ht.DININGCODE
+         ) dc
+         WHERE ro.DININGCODE(+) = dc.DININGCODE AND SCHEDULEDATE > SYSDATE - 15 AND SCHEDULEDATE < SYSDATE - 6
+       ) sc
+       WHERE r.SCHEDULECODE(+) = sc.SCHEDULECODE AND STATUS = 'Y'
+      )
+      , 0) - 100
+    ), 0
+  ) AS useratio ,
+ ( select count(*)
+  from DININGREVIEW dr, (SELECT BOOKINGCODE
+       FROM DININGBOOKING r, (
+         SELECT SCHEDULECODE
+         FROM DININGSCHEDULE ro, (
+           SELECT DININGCODE
+           FROM DINING ho
+           WHERE ho.DININGCODE = ht.DININGCODE
+         ) dc
+         WHERE ro.DININGCODE(+) = dc.DININGCODE AND ro.SCHEDULEDATE > SYSDATE - 7 AND ro.SCHEDULEDATE < SYSDATE
+       ) sc
+       WHERE r.SCHEDULECODE(+) = sc.SCHEDULECODE  AND STATUS = 'Y'
+      ) bc
+	where dr.BOOKINGCODE(+) = bc.BOOKINGCODE )  revieCnt
+FROM DINING ht
+]]>
+</select>
+
+<!-- 다이닝 디테일 불러오기 -->
+<select id="selectDiningDetail" resultType="dinid" parameterType="String">
+<![CDATA[
+SELECT h.HOTELNAME, d.DININGNAME, d.OPERATINGTIME, d.CAPACITY, d.INFORMATION, d.DESCRIPTION 
+FROM DINING d,HOTEL h
+where d.HOTELCODE = h.HOTELCODE and d.DININGCODE = #{dingCode}
+]]>
+</select>
+
+<!-- 다이닝 리뷰 불러오기 -->
+<select id="selectDiningReview" parameterType="String" resultType="dinrd">
+<![CDATA[
+SELECT rb.ID , rv.CONTENT, rv.RATING, rv.INPUTDATE
+FROM DININGREVIEW rv, DININGSCHEDULE r, DININGBOOKING rb
+where rv.BOOKINGCODE = rb.BOOKINGCODE(+) 
+and  rb.SCHEDULECODE = r.SCHEDULECODE(+) 
+and r.DININGCODE = #{diningCode} 
+and rv.INPUTDATE > sysdate-7
+]]>
+</select>
+
+<!-- 다이닝 사진 불러오기 -->
+<select id="selectDiningFile" parameterType="String" resultType="String">
+<![CDATA[
+SELECT FILENAME  
+FROM INFOFILE 
+WHERE DININGCODE = #{diningCode} 
+]]>
+</select>
+
+<!-- 다이닝 삭제 -->
+<delete id="deleteDining" parameterType="String">
+<![CDATA[
+DELETE DINING
+WHERE DININGCODE = #{diningCode} 
+]]>
+</delete>
+</mapper>

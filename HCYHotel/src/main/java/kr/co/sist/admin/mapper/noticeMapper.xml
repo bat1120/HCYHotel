@@ -9,7 +9,8 @@
 <![CDATA[
 select NOTICECODE, TITLE, INPUTDATE, VIEWCNT
 from(SELECT rownum r,NOTICECODE, TITLE, INPUTDATE, VIEWCNT
-FROM NOTICE)
+FROM NOTICE
+ORDER BY NOTICECODE desc)
 where r >= #{startNum} and r <= #{endNum}
 ]]>
 </select>
@@ -38,5 +39,13 @@ UPDATE NOTICE SET TITLE  = #{title}, CONTENT = #{content}
 WHERE NOTICECODE = #{noticeCode}
 ]]>
 </update>
+
+<insert id="insertNotice" parameterType="wnVO">
+<![CDATA[
+INSERT 
+INTO NOTICE(NOTICECODE,TITLE, CONTENT) 
+VALUES('N' || LPAD(SEQ_NOTICECODE.NEXTVAL, 6, '0'),#{title},#{content})
+]]>
+</insert>
 
 </mapper>

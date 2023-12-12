@@ -9,6 +9,7 @@ import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -105,4 +106,17 @@ public class AdminNoticeController {
 		model.addAttribute("url","goNoticeDetail.do");
 		return "forward:msg.do";
 	}//modifyNotice
+	
+	@GetMapping("/admin/goNewNotice.do")
+	public String goNewNotice() {
+		return "admin/manageNotice/writeNotice";
+	}//goNewNotice
+	
+	@PostMapping("/admin/newNotice.do")
+	public String newNotice(WriteNoticeVO wnVO, Model model) {
+		ans.writeNotice(wnVO);
+		model.addAttribute("msg","성공적으로 저장하였습니다.");
+		model.addAttribute("url","goManageNotice.do");
+		return "forward:msg.do";
+	}//newNotice
 }//class

@@ -42,4 +42,10 @@ public class AdminNoticeDAO {
 		int count = ss.update("kr.co.sist.admin.notice.updateNotice",niVO);
 		return count;
 	}//modifyNotice
+	
+	public void insertNotice(WriteNoticeVO wnVO) {
+		MyBatiseHandlerAdmin mbha = MyBatiseHandlerAdmin.getInstance();
+		SqlSession ss = mbha.getMyBatisHandler(true);
+		ss.insert("kr.co.sist.admin.notice.insertNotice",wnVO);
+	}//insertNotice
 }//class

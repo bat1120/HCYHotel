@@ -27,4 +27,29 @@ public class HotelManageModifyDAO {
       mbh.closeHandler(ss);
       return list;
    }
+   
+   public HotelInfoDomain selectHotelInfo(String hotelcode){
+	   HotelInfoDomain hid=new HotelInfoDomain();
+	   MyBatiseHandlerBusiness mbh=MyBatiseHandlerBusiness.getInstance();
+	   SqlSession ss=mbh.getMyBatisHandler(false);
+	   System.out.println(hotelcode);
+	   hid=ss.selectOne("kr.co.sist.business.hotelModifyMapper.hotelInfo",hotelcode);
+	   mbh.closeHandler(ss);
+	   
+	   return hid;
+   }
+
+   public List<FileListDomain> selectFileList(String hotelcode){
+	   List<FileListDomain> list=new ArrayList<FileListDomain>();
+	   
+	   MyBatiseHandlerBusiness mbh=MyBatiseHandlerBusiness.getInstance();
+	   SqlSession ss=mbh.getMyBatisHandler(false);
+	   System.out.println(hotelcode);
+	   list=ss.selectList("kr.co.sist.business.hotelModifyMapper.fileList",hotelcode);
+	   System.out.println(list);
+	   mbh.closeHandler(ss);
+	   
+	   return list;
+   }
+   
 }

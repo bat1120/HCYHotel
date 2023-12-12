@@ -9,6 +9,8 @@
  <typeAlias type="kr.co.sist.business.manage.BusinessHotelVO" alias="bhVO"/>
  <typeAlias type="kr.co.sist.business.manage.SearchHotelVO" alias="shVO"/>
  <typeAlias type="kr.co.sist.business.hotel.HotelListDomain" alias="hld"/>
+ <typeAlias type="kr.co.sist.business.hotel.HotelInfoDomain" alias="hid"/>
+ <typeAlias type="kr.co.sist.business.hotel.FileListDomain" alias="fld"/>
  <typeAlias type="kr.co.sist.business.room.HotelListDomain" alias="hldRoom"/>
  <typeAlias type="kr.co.sist.business.room.RoomListDomain" alias="rld"/>
  <typeAlias type="kr.co.sist.business.room.SelectRoomVO" alias="srVO"/>

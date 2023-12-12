@@ -23,4 +23,17 @@ public class HotelManageModifySevice {
       List<HotelListDomain> list = hmmDAO.selectHotelList(id);
       return list;
    }
+   
+   public HotelInfoDomain loadHotelInfo(String hotelcode) {
+	   HotelInfoDomain hid=new HotelInfoDomain();
+	   
+	   hid=HotelManageModifyDAO.getInstance().selectHotelInfo(hotelcode);
+	   System.out.println(hid);
+	   return hid;
+   }
+   public List<FileListDomain> loadFileList(String id) {
+	      HotelManageModifyDAO hmmDAO = HotelManageModifyDAO.getInstance();
+	      List<FileListDomain> list = hmmDAO.selectFileList(id);
+	      return list;
+	   }
 }

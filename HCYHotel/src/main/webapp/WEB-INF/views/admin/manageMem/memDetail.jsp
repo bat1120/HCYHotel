@@ -18,7 +18,8 @@
     	
     })//ready
     function removeMem( id ){
-    	location.href="goManageMem.do"
+    	$("#hidId").val(id)
+    	$("#removeMemFrm").submit()
     }//removeMem
     function goList(){
     	location.href="goManageMem.do?memFlag=${param.memFlag}"
@@ -63,9 +64,9 @@
                         </div>
                     </div>
                     <a href="widget.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>공지사항관리</a>
-                    <a href="form.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>문의사항관리</a>
-                    <a href="table.html" class="nav-item nav-link"><i class="fa fa-table me-2"></i>호텔관리</a>
-                    <a href="chart.html" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>다이닝관리</a>
+                    <a href="goQuestion.do" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>문의사항관리</a>
+                    <a href="goManageHotel.do" class="nav-item nav-link"><i class="fa fa-table me-2"></i>호텔관리</a>
+                    <a href="goManageDining.do" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>다이닝관리</a>
                 </div>
             </nav>
         </div>
@@ -120,7 +121,7 @@
                                 <label for="floatingPassword">예약 수</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="button" class="btn btn-danger btn-sm" value="탈퇴" onclick="removeMem(${mem.id})"/>
+                                <input type="button" class="btn btn-danger btn-sm" value="탈퇴" onclick="removeMem('${mem.id}')"/>
                                 <input type="button" class="btn btn-secondary btn-sm" value="목록으로" onclick="goList()"/>
                                 
                             </div>
@@ -193,7 +194,11 @@
         </div>
         <!-- Content End -->
 
+<form action="memWithdraw.do" id="removeMemFrm">
+<input type="hidden" id="hidId" name="id">
+<input type="hidden" id="hidMemFlag" name="memFlag" value="${memFlag}">
 
+</form>
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>

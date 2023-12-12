@@ -70,7 +70,7 @@ r >= #{startNum} and r <= #{endNum}
 </if>
 </where>
   </select>
-  
+  <!-- 사용자 탈퇴 -->
   <select id="deleteMem" parameterType="dmVO">
   <![CDATA[
 DELETE ${memFlag}
