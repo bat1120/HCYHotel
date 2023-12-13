@@ -8,5 +8,5 @@ import lombok.ToString;
 @Setter
 @ToString
 public class ChangePassVO {
-	private String id,pass;
+	private String id,password,passwordConfirm;
 }//class

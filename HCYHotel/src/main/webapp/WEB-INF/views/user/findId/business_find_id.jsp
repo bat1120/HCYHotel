@@ -1095,7 +1095,7 @@ googletag.cmd.push(function() {
 								<div class="wrap_link">
 								</div>
 							</fieldset>
-							<input type="submit" class="btn btn-info" style="width:150px;margin-left:600px" value="다음">
+							<input type="submit" class="btn btn-info" style="width:200px;margin-left:550px;height:60px;" value="아이디 찾기">
 						</form>
 					</div>
 
