@@ -94,7 +94,11 @@ document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
 <script
 	src="https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202311280101/pubads_impl.js"
 	id="gpt-impl-0.5201353332358343" nonce=""></script>
-
+<!-- bootstrap CDN-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
 <script type="text/javascript">
 googletag.cmd.push(function() {
                         googleSlotList['div-gpt-ad-1400664864294-23'] = googletag.defineSlot('/61280259/recruit-view_728x90', [728, 90], 'div-gpt-ad-1400664864294-23').addService(googletag.pubads());
@@ -935,6 +939,62 @@ googletag.cmd.push(function() {
 		</div>
 		<div id="searchAutoCompleteTemplate" style="display: none"></div>
 	</div>
+	<script>
+	$(document).ready(function() {
+	    $("#find_form").submit(function(event) {
+	        // 아이디 유효성 검사
+	        var idValue = $("#id").val().trim();
+	        var idMessage = $("#msg_id");
+	
+	        // 이름 유효성 검사
+	        var nameValue = $("#name").val().trim();
+	        var nameMessage = $("#msg_name");
+	
+	        // 생년월일 유효성 검사
+	        var identifierValue = $("#identifier").val().trim();
+	        var identifierMessage = $("#msg_cell");
+	
+	        // 아이디는 4~20자의 영문, 숫자와 특수문자 '_'만 사용 가능
+	        if (!/^[a-zA-Z0-9_]{4,20}$/.test(idValue)) {
+	            idMessage.show();
+	        } else {
+	            idMessage.hide();
+	        }
+	
+	        // 이름에는 한글만
+	        if (!/^[가-힣]+$/.test(nameValue)) {
+	            nameMessage.show();
+	        } else {
+	            nameMessage.hide();
+	        }
+	
+	        // 생년월일에는 숫자 8자리만 입력
+	        if (!/^\d{8}$/.test(identifierValue)) {
+	            identifierMessage.show();
+	        } else {
+	            identifierMessage.hide();
+	        }
+	
+	        // 모든 필드가 비어있지 않고 유효성 검사를 통과한 경우
+	        if (/^[a-zA-Z0-9_]{4,20}$/.test(idValue) && /^[가-힣]+$/.test(nameValue) && /^\d{8}$/.test(identifierValue)) {
+	            // 오류 메시지 숨김
+	            idMessage.hide();
+	            nameMessage.hide();
+	            identifierMessage.hide();
+	
+	            // 폼 제출
+	            return true;
+	        } else {
+	            // 폼 제출 방지
+	            event.preventDefault();
+	            return false;
+	        }
+	    });
+	});
+</script>
+
+
+
 
 	<div id="sri_section" class="  has_banner">
 		<div id="sri_wrap">
@@ -949,7 +1009,7 @@ googletag.cmd.push(function() {
 					</ul>
 					<div class="cont_find">
 						<form id="find_form"
-							action="https://www.saramin.co.kr/zf_user/helpdesk/person-find-secure"
+							action="user_result_pass.do"
 							method="post">
 							<input type="hidden" id="confirm_complete"
 								name="confirm_complete" value="n"> <input type="hidden"
@@ -972,7 +1032,7 @@ googletag.cmd.push(function() {
 												id="id" class="inp_find" maxlength="20">
 											</span>
 											<p class="message_find" id="msg_id" style="display: none;">아이디를
-												정확하게 입력해주세요..</p>
+												정확하게 입력해주세요</p>
 										</div>
 									</li>
 									<li>
@@ -994,7 +1054,7 @@ googletag.cmd.push(function() {
 										</div>
 										<div class="wrap_input">
 											<span class="box_input"> <input type="text"
-												name="cell" id="cell" class="inp_find">
+												name="identifier" id="identifier" class="inp_find">
 											</span>
 											<p class="message_find" id="msg_cell" style="display: none;">휴대폰번호를
 												정확하게 입력해주세요.</p>
@@ -1043,9 +1103,7 @@ googletag.cmd.push(function() {
 
 								</ul>
 								<div class="wrap_link">
-									<button type="button" class="btn_biggest_type01"
-										id="btn_cert_complete">비밀번호 찾기</button>
-									<!--                        <button type="button" class="btn_biggest_type01" id="btn_next" style="display: none">다음</button>-->
+									<input type="submit" class="btn btn-info" style="width:200px;margin-left:540px;height:60px;" value="비밀번호 찾기">
 								</div>
 							</fieldset>
 						</form>

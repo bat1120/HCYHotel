@@ -6,8 +6,10 @@
 <properties resource="properties/database.properties"/>
 <typeAliases>
 <typeAlias type="kr.co.sist.user.login.LoginVO" alias="lVO"/>
+<typeAlias type="kr.co.sist.user.login.findid.FindIdVO" alias="FIVO"/>
 <typeAlias type="kr.co.sist.user.login.findid.FindIdDomain" alias="FID"/>
 <typeAlias type="kr.co.sist.user.login.findpassword.FindPassVO" alias="FPVO"/>
+<typeAlias type="kr.co.sist.user.login.findpassword.ChangePassVO" alias="CPVO"/>
 </typeAliases>
   <environments default="development">
     <environment id="development">
