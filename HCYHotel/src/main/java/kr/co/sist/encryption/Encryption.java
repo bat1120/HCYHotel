@@ -14,7 +14,7 @@ public class Encryption {
 	public String encryption(String plan)
 			throws NoSuchAlgorithmException, UnsupportedEncodingException, GeneralSecurityException {
 		String result = "";
-
+ 
 		DataEncrypt de = new DataEncrypt("1120020301311126");
 		result = de.encryption(plan);
 

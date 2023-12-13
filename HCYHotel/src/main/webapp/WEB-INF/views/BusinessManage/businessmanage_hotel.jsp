@@ -1883,7 +1883,6 @@ th, td {
 								</div>
 							</div>
 						</div>
-						<div class="C4-Q-search-form-spacer"></div>
 					</div>
 					<div class="EoVr-search-form-dialog-wrapper">
 						<div aria-hidden="true"
@@ -1907,16 +1906,29 @@ th, td {
 							<div role="button" class="dDYU-off-screen" tabindex="0"></div>
 						</div>
 					</div>
-					<div
-						style="display: flex; flex-direction: column; align-items: center;">
-						<div
-							style="display: flex; justify-content: flex-start; width: 900px;">
-							<input type="button" value="호텔 등록" class="btn btn-info btn-sm"
-								id="newHotelBtn">
-						</div>
-						<div
-							style="display: flex; justify-content: center; align-items: center; height: 200px;">
-							<table style="width: 900px; border: 1px solid black;">
+					<script
+						src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
+    var alertMessage = "${alertMessage}"; // alertMessage는 모델에 추가된 속성명입니다.
+
+    if (alertMessage !== null && alertMessage !== "") {
+        alert(alertMessage); // alert 창 표시
+        window.history.back(); // 뒤로 이동
+    }
+    $(function(){
+    	 $("#newHotelBtn").click(function(){
+    		 location.href = "businessHotelInsert.do";
+    	    });
+    	 
+    });
+
+</script>
+					<div style="display: flex; flex-direction: column; align-items: center;">
+    <div style="display: flex; justify-content: flex-start; width: 900px;">
+        <input type="button" value="호텔 등록" class="btn btn-info btn-sm" id="newHotelBtn">
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center;">
+        <table style="width: 900px; border: 1px solid black;">
 								<tr>
 									<th>번호</th>
 									<th>호텔이름</th>
@@ -1934,15 +1946,7 @@ th, td {
 										<th><c:out value="${ hotelList.sido}" /></th>
 										<th><c:out value="${ hotelList.booking_count}" /></th>
 										<th><c:out value="${ hotelList.inputdate}" /></th>
-										<c:choose>
-											<c:when test="${hotelList.status eq 'Y' }">
-												<th><input type="button" value="객실타입목록"
-													id="${hotelList.status }" class="btn btn-success"></th>
-											</c:when>
-											<c:otherwise>
-												<th>없음</th>
-											</c:otherwise>
-										</c:choose>
+												<th><a href="businessroomType.do?hotelcode=${hotelList.hotelCode }">타입목록</a></th>
 
 									</tr>
 								</c:forEach>

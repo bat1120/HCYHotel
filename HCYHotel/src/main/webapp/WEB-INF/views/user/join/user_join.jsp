@@ -274,11 +274,10 @@
     });
   </script>
   <script>
-  // successMessage 속성이 설정되어 있다면 알림 창을 띄우고 페이지를 리다이렉트
   var successMessage = "${successMessage}";
   if (successMessage) {
     alert(successMessage);
-    // 원하는 로그인 페이지 URL로 변경
+    // 로그인으로 이동
     window.location.href = "http://localhost/HCYHotel/user/login/user_login.do";
   }
 </script>

@@ -26,7 +26,17 @@ public class FindIdDAO {
 		
 		fid=ss.selectOne("kr.co.sist.user.sjh.findIdPassMapper.selectMemId",fiVO);
 		
-		
 		return fid;
 	}//selectCheckId
+	
+	public FindIdDomain selectCheckIdBus(FindIdVO fiVO) {
+		FindIdDomain fid=null;
+		
+		MyBatiseHandler mbh=MyBatiseHandler.getInstance();
+		SqlSession ss=mbh.getMyBatisHandler(false);
+		
+		fid=ss.selectOne("kr.co.sist.user.sjh.findIdPassMapper.selectBusId",fiVO);
+		
+		return fid;
+	}//selectCheckIdBus
 }//class

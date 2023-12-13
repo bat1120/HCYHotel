@@ -1253,16 +1253,17 @@ th, td {
 													</svg>
 													<div class="dJtn-menu-item-title">다이닝예약 관리</div></a></li>
 
-											<li><a href="#" aria-label="렌터카 검색 "
-												class="dJtn dJtn-active dJtn-expanded dJtn-mod-variant-accordion"
+											<li><a href="business_room_modify.do"
+												aria-label="렌터카 검색 "
+												class="dJtn dJtn-expanded dJtn-mod-variant-accordion"
 												aria-current="false"><img
 													src="http://localhost/HCYHotel/common/business/img/room.png"
 													style="padding-right: 12px; padding-left: 12px;"> <path
 														d="M165 160h-10c-7.2 0-13.2-5.1-14.7-11.9c-26.8 2.5-53.9 2.5-80.6 0c-1.5 6.8-7.5 11.9-14.7 11.9H35c-8.3 0-15-6.7-15-15v-43.7c-2.1-.5-4.2-1-6.2-1.5c-2.7-.7-4.3-3.4-3.6-6.1c.7-2.7 3.4-4.3 6.1-3.6c1.6.4 3.2.8 4.7 1.1l12.4-37.7C34.9 49 39.2 45 44.7 44c30-5.3 80.7-5.3 110.6 0c5.5 1 9.8 4.9 11.4 9.7L179 91.4c1.6-.4 3.1-.8 4.7-1.2c2.7-.7 5.4.9 6.1 3.6c.7 2.7-.9 5.4-3.6 6.1c-2.1.5-4.2 1.1-6.3 1.6v43.6c.1 8.2-6.6 14.9-14.9 14.9zm-15-17.4v2.4c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5v-19.2c-11 1.6-26.2 3.5-34.6 4.2c-2.8.2-5.2-1.8-5.4-4.6c-.2-2.8 1.8-5.2 4.6-5.4c8.4-.7 24.6-2.8 35.4-4.3v-12.1c-43.8 8.7-94.9 8.7-140-.1v12.2c10.8 1.6 27 3.7 35.4 4.3c2.8.2 4.8 2.6 4.6 5.4c-.2 2.8-2.6 4.8-5.4 4.6c-8.4-.7-23.6-2.6-34.6-4.2V145c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5v-2.4c0-2.9 2.5-5.3 5.5-5c29.5 3.2 59.4 3.2 88.9 0c3.1-.3 5.6 2.1 5.6 5zM30.8 93.4c44.6 8.9 95.3 8.9 138.5.1l-12-36.7c-.6-1.6-2-2.7-3.6-3c-29-5.1-78.1-5.1-107.2 0c-1.7.3-3.1 1.4-3.6 3L30.8 93.4zm74.4-4c-2.4-1.4-3.2-4.4-1.9-6.8C107.7 74.8 116 70 125 70s17.1 4.7 21.6 12.5c1.4 2.4.6 5.4-1.8 6.8c-2.4 1.4-5.4.6-6.8-1.8c-2.7-4.7-7.6-7.5-13-7.5s-10.3 2.9-12.9 7.5c-1.4 2.4-4.5 3.2-6.9 1.9z"></path>
 													</svg>
 													<div class="dJtn-menu-item-title">객실관리</div></a></li>
-											<li><a href="businessHotel.do" aria-label="렌터카 검색 "
-												class="dJtn dJtn-expanded dJtn-mod-variant-accordion"
+											<li><a href="#" aria-label="렌터카 검색 "
+												class="dJtn dJtn-active dJtn-expanded dJtn-mod-variant-accordion"
 												aria-current="false"><img
 													src="http://localhost/HCYHotel/common/business/img/hotel.png"
 													style="padding-right: 12px; padding-left: 12px;"> <path
@@ -1907,91 +1908,68 @@ th, td {
 					</div>
 					<script
 						src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-					<script type="text/javascript">
-        $(document).ready(function() {
-            $("#hotelSelect").change(function() {
-                var selectedValue = $(this).val();
+<script type="text/javascript">
+    var alertMessage = "${alertMessage}"; // alertMessage는 모델에 추가된 속성명입니다.
 
-                $.ajax({
-                    url: "use_ajax_room_modify.do",
-                    method: "GET",
-                    data: { hotelCode: selectedValue },
-                    dataType: "json",
-                    error: function(xhr, status, error) {
-                        console.error(error); // 오류 콘솔에 출력
-                    },
-                    success: function(jsonObj) {
-                        console.log(jsonObj); // 콘솔에 응답 데이터 출력
-                        var output = "<table style='width: 900px; bolder: 1';><tr><th>호수</th><th>객실타입</th><th>평점</th><th>예약자명</th><th>한달 예약건수</th><th>버튼</th></tr>";
-	                    if (jsonObj.dataLength == 0) {
-	                        output += "<tr><td colspan='6'>제품이 없습니다.</td></tr>";
-	                    }
-	                    $.each(jsonObj.data, function(ind, jsonTemp) {
-	                        output += "<tr>";
-	                        output += "<td>" + jsonTemp.roomname + "</td>";
-	                        output += "<td>" + jsonTemp.typename + "</td>";
-	                        output += "<td>" + jsonTemp.average_rating + "</td>";
-	                        output += "<td>" + jsonTemp.price+ "</td>";
-	                        output += "<td>" + jsonTemp.reservation_count+ "</td>";
-	                        output += "<td><input type='button' value='수정'class='btn btn-info btn-sm' id='roomModifyBtn'><input type='hidden' value="+jsonTemp.roomcode+"id='roomCodeHidden'></td>";
-	                        output += "</tr>";
-	                    });
-	                        output += "</table>";
-	                        $("#output").html(output);
-	                   
-
-                    }
-                  
-                    
-                });
-            });
-        });
-    </script>
-
-					<div style="position: absolute; left: 500px">
-						<select id="hotelSelect">
-							<option>객실선택</option>
-							<c:forEach var="hotelList" items="${hotelList }">
-								<option value="${hotelList.hotelcode }"><c:out
-										value="${hotelList.hotelname }" /></option>
-							</c:forEach>
-						</select>
-					</div>
-					<div style="position: absolute; left: 623px">
-
-						<input type="button" value="객실 등록" class="btn btn-info btn-sm"
-							id="newHotelBtn">
-					</div>
-					<div
-						style="display: flex; justify-content: center; align-items: center; height: 200px;" id="output">
-						<table style="width: 900px; bolder: 1;">
-							<tr>
-								<th>호수</th>
-								<th>객실타입</th>
-								<th>평점</th>
-								<th>가격</th>
-								<th>한달예약건수</th>
-								<th>버튼</th>
-							</tr>
-							<c:forEach var="roomList" items="${ roomList }" varStatus="i">
+    if (alertMessage !== null && alertMessage !== "") {
+        alert(alertMessage); // alert 창 표시
+        window.history.back(); // 뒤로 이동
+    }
+    $(function(){
+    	 $("#newHotelBtn").click(function(){
+    		 location.href = "businessHotelInsert.do";
+    	    });
+    	 $("#typeBtn").click(function(){
+    		 location.href = "businessroomType.do";
+    	 })
+    });
+   
+</script>
+					<div style="display: flex; flex-direction: column; align-items: center;">
+    <div style="display: flex; justify-content: flex-start; width: 900px;">
+        <input type="button" value="호텔 등록" class="btn btn-info btn-sm" id="newHotelBtn">
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center;">
+        <table style="width: 900px; border: 1px solid black;">
 								<tr>
-									<th><c:out value="${roomList.roomname }" /></th>
-									<th><c:out value="${roomList.typename }" /></th>
-									<th><c:out value="${roomList.average_rating }" /></th>
-									<th><c:out value="${roomList.price }" /></th>
-									<th><c:out value="${roomList.reservation_count }" /></th>
-									<th><input type="button" value="수정"
-										class="btn btn-info btn-sm" id="roomModifyBtn"><input
-										type="hidden" value="${roomList.roomcode }"
-										id="roomCodeHidden"></th>
+									<th>번호</th>
+									<th>호텔이름</th>
+									<th>평점</th>
+									<th>주소</th>
+									<th>한달예약건수</th>
+									<th>등록일</th>
+									<th>객실타입</th>
 								</tr>
-							</c:forEach>
-						</table>
+								<c:forEach var="hotelList" items="${hotelList }" varStatus="i">
+									<tr>
+										<th><c:out value="${ i.count}" /></th>
+										<th><a href="businessHotelGoModify.do?hotelcode=${hotelList.hotelCode }"><c:out value="${ hotelList.hotelName}" /></a></th>
+										<th><c:out value="${ hotelList.total_rating}" /></th>
+										<th><c:out value="${ hotelList.sido}" /></th>
+										<th><c:out value="${ hotelList.booking_count}" /></th>
+										<th><c:out value="${ hotelList.inputdate}" /></th>
+												<th><input type="button" value="객실타입목록"
+													id="typeBtn" class="btn btn-success"><input type="hidden" value="${hotelList.hotelCode }" name="codeHide" id="codeHid"></th>
+
+									</tr>
+								</c:forEach>
+
+							</table>
+						</div>
 					</div>
 				</main>
 			</div>
 		</div>
 	</div>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$("#newHotelBtn").click(function(){
+			
+		})
+	})
+	</script>
 	<link rel="stylesheet" type="text/css"
 		href="https://content.r9cdn.net/res/combined.css?v=5f13d1a23f67c3c1e65d620402b9ce4212e9d413-14pre-flipped&amp;cluster=5&amp;tag=ui/personalization/ContextualFrontDoorContent">
 	<script async="" src="https://accounts.google.com/gsi/client"></script>

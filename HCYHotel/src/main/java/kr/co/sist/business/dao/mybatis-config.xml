@@ -11,9 +11,13 @@
  <typeAlias type="kr.co.sist.business.hotel.HotelListDomain" alias="hld"/>
  <typeAlias type="kr.co.sist.business.hotel.HotelInfoDomain" alias="hid"/>
  <typeAlias type="kr.co.sist.business.hotel.FileListDomain" alias="fld"/>
+ <typeAlias type="kr.co.sist.business.hotel.LocVO" alias="lVO"/>
+ <typeAlias type="kr.co.sist.business.hotel.FileVO" alias="fVO"/>
+ <typeAlias type="kr.co.sist.business.hotel.HotelVO" alias="hVO"/>
  <typeAlias type="kr.co.sist.business.room.HotelListDomain" alias="hldRoom"/>
  <typeAlias type="kr.co.sist.business.room.RoomListDomain" alias="rld"/>
  <typeAlias type="kr.co.sist.business.room.SelectRoomVO" alias="srVO"/>
+ <typeAlias type="kr.co.sist.business.room.RoomTypeDomain" alias="rtd"/>
  <typeAlias type="kr.co.sist.business.diningregister.DiningSearchDomain" alias="dsd"/>
  <typeAlias type="kr.co.sist.business.diningregister.BusinessDiningDomain" alias="bdd"/>
  <typeAlias type="kr.co.sist.business.dining.BusinessDiningDomain" alias="bdd2"/>

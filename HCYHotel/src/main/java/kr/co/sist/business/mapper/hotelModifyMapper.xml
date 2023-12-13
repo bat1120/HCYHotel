@@ -5,7 +5,7 @@
 <mapper namespace="kr.co.sist.business.hotelModifyMapper">
 
 <select id="searchhotelInfo" resultType="hld" parameterType="String">
-SELECT h.hotelcode, h.hotelname, bk.booking_count, rt.total_rating, l.sido, h.inputdate, bk.booking_count
+SELECT h.hotelcode, h.hotelname, bk.booking_count, rt.total_rating, l.sido, h.inputdate, bk.booking_count,r.roomcode
 FROM hotel h
 LEFT JOIN room r ON h.hotelcode = r.hotelcode
 LEFT JOIN (
@@ -25,7 +25,7 @@ WHERE h.id = #{id}
 </select>
 
  <select id="hotelInfo" resultType="hid" parameterType="String">
-SELECT h.hotelname, h.hoteladdress, h.hotelrate, h.description
+SELECT h.hotelname, h.hoteladdress, h.hotelrate, h.description,h.tel,h.BREACKFASTPRICE
 FROM hotel h
 WHERE h.hotelcode = #{hotelcode}
 </select>
@@ -36,6 +36,32 @@ from infofile
 where hotelcode = #{hotelcode}
 </select>
 
+<select id="searchHotelcode" resultType="String">
+SELECT hotelcode FROM (SELECT hotelcode FROM hotel ORDER BY hotelcode DESC) WHERE ROWNUM = 1
+</select>
+<select id="searchFilecode" resultType="String">
+SELECT filecode FROM (SELECT filecode FROM infofile ORDER BY filecode DESC) WHERE ROWNUM = 1
+</select>
+
+<delete id="deleteHotel" parameterType="String">
+delete from hotel where hotelcode=#{hotelcode}
+</delete>
+
+<select id="searchLoccode" resultType="String" parameterType="lVO">
+select loccode
+from location
+where sido=#{sido}
+and gugun=#{gugun}
+</select>
+
+<insert id="insertFile" parameterType="fVO">
+insert into INFOFILE(FILECODE, HOTELCODE, FILENAME)
+values('F'||to_char(lpad(seq_filecode.nextval, 6, '0')),#{hotelcode},#{filename})
+</insert>
+<insert id="insertHotel" parameterType="hVO">
+insert into hotel(HOTELCODE, ID, LOCCODE, HOTELNAME, HOTELADDRESS, LONGITUDE, LATITUDE, BREACKFASTPRICE, TEL, HOTELRATE, DESCRIPTION, INPUTDATE)
+values('H'||to_char(lpad(seq_hotel.nextval, 6, '0')),#{id},#{loccode},#{hotelname},#{hoteladdress},#{longitude},#{latitude},#{breackfastprice},#{tel},#{hotelrate},#{description},sysdate)
+</insert>
 <!--<insert id="insertHotel">
 insert
 </insert> -->

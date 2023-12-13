@@ -15,21 +15,24 @@
 <style type="text/css">
 
 </style>
+<style type="text/css">
+  /* 알림 창을 가운데로 위치시키기 */
+  .center-alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+</style>
 <script type="text/javascript">
 $(function(){
-	
+	alert("${finderror}");
+	window.location.href="http://localhost/HCYHotel/user/login/user_login.do";
 });//ready
 </script>
- 
+
 </head>
 <body>
-<ul>
-<li><a href="user/home/user_home.do">사용자 홈</a></li>
-<li><a href="user/login/user_login.do">로그인</a></li>
-<hr>
-<li><a href="user/hotel/hotelSearch/user_hotel_search.do">호텔 검색</a></li>
-<li><a href="user/hotel/hotelSearch/user_hotel_search_map.do">호텔검색 지도상세</a></li>
-<li><a href="user/hotel/hotelInfo/user_hotel_info.do">호텔 상세</a></li>
-</ul>
+
 </body>
 </html>

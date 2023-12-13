@@ -1,7 +1,20 @@
 package kr.co.sist.user.join;
 
+import java.io.UnsupportedEncodingException;
+import java.security.GeneralSecurityException;
+import java.security.NoSuchAlgorithmException;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import kr.co.sist.encryption.Encryption;
+
+@Service
 public class JoinMemberService {
 	private static JoinMemberService jms;
+	
+	@Autowired
+	private Encryption encryption;
 	
 	private JoinMemberService() {
 	}//constructor
@@ -34,7 +47,14 @@ public class JoinMemberService {
 		return flag;
 	}//checkBus
 	
-	public void plusMem(JoinMemberVO jmVO) {
+	public void plusMem(JoinMemberVO jmVO) throws NoSuchAlgorithmException, UnsupportedEncodingException, GeneralSecurityException {
+		
+		System.out.println(jmVO.getPassword());
+		
+		String enPassword=encryption.directEncryption(jmVO.getPassword());
+		
+		jmVO.setPassword(enPassword);
+//		System.out.println(enPassword);
 		JoinMemberDAO.getInstance().insertMem(jmVO);
 		
 	}//plusMember

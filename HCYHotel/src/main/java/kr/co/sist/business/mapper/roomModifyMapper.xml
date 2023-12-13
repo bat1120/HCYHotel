@@ -32,5 +32,9 @@ WHERE h.id = #{id}
 and r.hotelcode=#{hotelcode}
 GROUP BY r.roomcode, r.roomname, rt.typename, rt.price
 </select>
-
+<select id="roomtype" resultType="rtd" parameterType="String">
+select typename,price,basiccapacity, maxcapacity, typecode
+from roomtype
+where hotelcode=#{hotelcode}
+</select>
 </mapper>

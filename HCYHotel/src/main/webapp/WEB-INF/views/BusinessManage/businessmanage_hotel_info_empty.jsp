@@ -300,6 +300,7 @@ xhr.send('');
 	rel="stylesheet"
 	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
 	crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 <style id="react-styles-dialog">
 @
@@ -1079,7 +1080,14 @@ table {
 th, td {
 	border: 1px solid black; /* 테이블 셀의 테두리 스타일과 두께 설정 */
 	padding: 8px; /* 셀 안의 여백 설정 (예시로 추가한 스타일) */
-	text-align: center;
+}
+
+.roomTable th {
+	width: 180px;
+}
+
+.roomTable td {
+	width: 180px;
 }
 </style>
 <meta http-equiv="origin-trial"
@@ -1236,25 +1244,24 @@ th, td {
 								<div class="pRB0-nav-items">
 									<nav class="HtHs" aria-label="홈">
 										<ul class="HtHs-nav-list">
-											<li><a href="businessHotelMain.do" aria-label="호텔 검색 "
+											<li><a href="#" aria-label="호텔 검색 "
 												class="dJtn dJtn-expanded dJtn-mod-variant-accordion"
 												aria-current="false"><img
 													src="http://localhost/HCYHotel/common/business/img/hotelReservation.png"
-													style="padding-right: 12px; padding-left: 12px;"> <path
-														d="M175 170a5 5 0 0 1-5-5v-5H30v5a5 5 0 1 1-10 0v-43.092c0-8.176 3.859-15.462 10-20.027V65c0-13.785 11.215-25 25-25h90c13.785 0 25 11.215 25 25v36.98c6.093 4.613 10 11.922 10 19.928V165a5 5 0 0 1-5 5zM30 150h140v-10H30v10zm0-20h140v-8.092c0-7.342-5.486-13.707-12.762-14.806c-40.216-6.077-73.399-6.207-114.477 0C35.415 108.21 30 114.4 30 121.908V130zm120-34.027c2.877.382 9.581 1.381 10 1.467V65c0-8.271-6.729-15-15-15H55c-8.271 0-15 6.729-15 15v32.438c.418-.084 7.123-1.083 10-1.465V85c0-8.271 6.729-15 15-15h25a14.94 14.94 0 0 1 10 3.829A14.943 14.943 0 0 1 110 70h25c8.271 0 15 6.729 15 15v10.973zm-45-3.45c11.463.167 22.988.912 35 2.233V85c0-2.757-2.243-5-5-5h-25c-2.757 0-5 2.243-5 5v7.523zM65 80c-2.757 0-5 2.243-5 5v9.756c12.012-1.321 23.537-2.065 35-2.232V85c0-2.757-2.243-5-5-5H65z"></path>
-													</svg>
+													style="padding-right: 12px; padding-left: 12px;">
 													<div class="dJtn-menu-item-title">호텔예약 관리</div></a></li>
 											<li><a href="businessDiningMain.do" aria-label="항공권 검색 "
 												class="dJtn dJtn-expanded dJtn-mod-variant-accordion"
-												aria-current="page"><img
+												aria-current="false"><img
 													src="http://localhost/HCYHotel/common/business/img/dining.png"
 													style="padding-right: 12px; padding-left: 12px;"> <path
 														d="M140.448 177.069l-19.846-43.661c-2.877-6.328-7.998-11.612-12.447-14.676a1029.409 1029.409 0 0 1-14.935 12.983c-4.045 3.618-5.452 9.494-3.67 15.347l2.733 8.981a4.997 4.997 0 0 1-1.248 4.991l-10 10c-2.267 2.268-6.043 1.838-7.754-.851l-14.154-22.241l-10.592 10.592a5 5 0 1 1-7.071-7.07l10.593-10.593l-22.242-14.153c-2.695-1.716-3.112-5.493-.851-7.754l10-10a5 5 0 0 1 4.992-1.248l8.981 2.733c5.85 1.777 11.728.375 15.348-3.671c4.269-5.007 8.599-9.988 12.983-14.935c-3.063-4.449-8.349-9.571-14.676-12.447L22.931 59.552c-3.563-1.619-3.965-6.539-.705-8.712l11.53-7.687a15.083 15.083 0 0 1 11.333-2.213l60.319 12.364c6.006 1.33 14.836-3.512 20.984-9.246c6.775-6.625 13.831-12.567 25.684-17.738c5.899-2.573 12.876-1.07 17.773 3.828l.003.002c4.898 4.897 6.401 11.874 3.828 17.773c-5.171 11.853-11.111 18.909-17.735 25.682c-5.736 6.148-10.583 14.976-9.266 20.906l12.382 60.4a15.1 15.1 0 0 1-2.215 11.332l-7.687 11.53c-2.182 3.276-7.096 2.849-8.711-.704zm-24.66-65.169c5.789 4.467 10.925 10.784 13.918 17.369l16.123 35.472l2.697-4.045a5.034 5.034 0 0 0 .738-3.778L136.9 96.6a19.235 19.235 0 0 1-.445-3.891a1041.686 1041.686 0 0 1-20.667 19.191zm-49.416 28.799l12 18.857l3.471-3.471l-1.86-6.111c-2.938-9.652-.396-19.525 6.631-25.767l.077-.066c23.665-20.174 47.419-42.531 62.016-57.438c6.149-6.558 10.969-11.688 15.808-22.779c1.113-2.552-.165-5.136-1.733-6.703l-.003-.002c-1.567-1.568-4.151-2.846-6.704-1.734c-10.394 4.535-15.439 8.933-22.782 15.811c-15.335 15.027-37.539 38.676-57.433 62.013l-.067.076c-6.242 7.028-16.115 9.567-25.767 6.631l-6.111-1.859l-3.471 3.471l18.858 12l7.164-7.163a5 5 0 1 1 7.071 7.07l-7.165 7.164zM35.258 54.17l35.471 16.124c6.585 2.993 12.903 8.128 17.37 13.918a1045.845 1045.845 0 0 1 19.202-20.678a19.358 19.358 0 0 1-3.982-.452L43.081 50.735a5.039 5.039 0 0 0-3.778.738l-4.045 2.697z"></path>
 													</svg>
 													<div class="dJtn-menu-item-title">다이닝예약 관리</div></a></li>
 
-											<li><a href="#" aria-label="렌터카 검색 "
-												class="dJtn dJtn-active dJtn-expanded dJtn-mod-variant-accordion"
+											<li><a href="business_room_modify.do"
+												aria-label="렌터카 검색 "
+												class="dJtn dJtn-expanded dJtn-mod-variant-accordion"
 												aria-current="false"><img
 													src="http://localhost/HCYHotel/common/business/img/room.png"
 													style="padding-right: 12px; padding-left: 12px;"> <path
@@ -1262,7 +1269,7 @@ th, td {
 													</svg>
 													<div class="dJtn-menu-item-title">객실관리</div></a></li>
 											<li><a href="businessHotel.do" aria-label="렌터카 검색 "
-												class="dJtn dJtn-expanded dJtn-mod-variant-accordion"
+												class="dJtn dJtn-active dJtn-expanded dJtn-mod-variant-accordion"
 												aria-current="false"><img
 													src="http://localhost/HCYHotel/common/business/img/hotel.png"
 													style="padding-right: 12px; padding-left: 12px;"> <path
@@ -1905,89 +1912,165 @@ th, td {
 							<div role="button" class="dDYU-off-screen" tabindex="0"></div>
 						</div>
 					</div>
+					
+					
 					<script
 						src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-					<script type="text/javascript">
-        $(document).ready(function() {
-            $("#hotelSelect").change(function() {
-                var selectedValue = $(this).val();
+					<script>
+					
+				
+</script>
+<form id="frm" action="businessHotelModify_insert.do" enctype="multipart/form-data" method="post">
+    <legend>호텔등록</legend>
+    <div class="mb-3">
+      <label for="disabledTextInput" class="form-label">호텔이름</label>
+      <input type="text" id="hotelname" name="hotelname" class="form-control" placeholder="호텔이름">
+    </div>
+    <div class="mb-3">
+      <label for="disabledTextInput" class="form-label">호텔주소</label>
+      		 	<input type="hidden" class="form-control" id="sample6_postcode" placeholder="우편번호">
+				<input type="button" class="btn btn-primary" onclick="sample6_execDaumPostcode()" value="우편번호 찾기"><br/>
+				<input type="text" class="form-control" id="sample6_address" name="sample6_address" placeholder="주소" readonly="readonly"><br/>
+				<input type="hidden" class="form-control" id="sample6_detailAddress" placeholder="상세주소">
+				<input type="hidden" class="form-control" id="sample6_extraAddress" placeholder="참고항목">
 
-                $.ajax({
-                    url: "use_ajax_room_modify.do",
-                    method: "GET",
-                    data: { hotelCode: selectedValue },
-                    dataType: "json",
-                    error: function(xhr, status, error) {
-                        console.error(error); // 오류 콘솔에 출력
-                    },
-                    success: function(jsonObj) {
-                        console.log(jsonObj); // 콘솔에 응답 데이터 출력
-                        var output = "<table style='width: 900px; bolder: 1';><tr><th>호수</th><th>객실타입</th><th>평점</th><th>예약자명</th><th>한달 예약건수</th><th>버튼</th></tr>";
-	                    if (jsonObj.dataLength == 0) {
-	                        output += "<tr><td colspan='6'>제품이 없습니다.</td></tr>";
-	                    }
-	                    $.each(jsonObj.data, function(ind, jsonTemp) {
-	                        output += "<tr>";
-	                        output += "<td>" + jsonTemp.roomname + "</td>";
-	                        output += "<td>" + jsonTemp.typename + "</td>";
-	                        output += "<td>" + jsonTemp.average_rating + "</td>";
-	                        output += "<td>" + jsonTemp.price+ "</td>";
-	                        output += "<td>" + jsonTemp.reservation_count+ "</td>";
-	                        output += "<td><input type='button' value='수정'class='btn btn-info btn-sm' id='roomModifyBtn'><input type='hidden' value="+jsonTemp.roomcode+"id='roomCodeHidden'></td>";
-	                        output += "</tr>";
-	                    });
-	                        output += "</table>";
-	                        $("#output").html(output);
-	                   
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	
 
+
+<script>
+    function sample6_execDaumPostcode() {
+        new daum.Postcode({
+            oncomplete: function(data) {
+                // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+
+                // 각 주소의 노출 규칙에 따라 주소를 조합한다.
+                // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+                var addr = ''; // 주소 변수
+                var extraAddr = ''; // 참고항목 변수
+
+                //사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
+                if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
+                    addr = data.roadAddress;
+                } else { // 사용자가 지번 주소를 선택했을 경우(J)
+                    addr = data.jibunAddress;
+                }
+
+                // 사용자가 선택한 주소가 도로명 타입일때 참고항목을 조합한다.
+                if(data.userSelectedType === 'R'){
+                    // 법정동명이 있을 경우 추가한다. (법정리는 제외)
+                    // 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
+                    if(data.bname !== '' && /[동|로|가]$/g.test(data.bname)){
+                        extraAddr += data.bname;
                     }
-                  
-                    
-                });
-            });
+                    // 건물명이 있고, 공동주택일 경우 추가한다.
+                    if(data.buildingName !== '' && data.apartment === 'Y'){
+                        extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+                    }
+                    // 표시할 참고항목이 있을 경우, 괄호까지 추가한 최종 문자열을 만든다.
+                    if(extraAddr !== ''){
+                        extraAddr = ' (' + extraAddr + ')';
+                    }
+                    // 조합된 참고항목을 해당 필드에 넣는다.
+                    document.getElementById("sample6_extraAddress").value = extraAddr;
+                
+                } else {
+                    document.getElementById("sample6_extraAddress").value = '';
+                }
+
+                // 우편번호와 주소 정보를 해당 필드에 넣는다.
+                document.getElementById('sample6_postcode').value = data.zonecode;
+                document.getElementById("sample6_address").value = addr;
+                // 커서를 상세주소 필드로 이동한다.
+                document.getElementById("sample6_detailAddress").focus();
+            }
+        }).open();
+    }
+    var Latitude;//위도
+    var longitude;//경도
+    function getLatLngAndSubmitForm() {
+        var address = document.getElementById('sample6_address').value;
+        var apiUrl = 'https://dapi.kakao.com/v2/local/search/address.json?query=' + address;
+
+        $.ajax({
+            url: apiUrl,
+            type: 'GET',
+            headers: {
+                'Authorization': 'KakaoAK b21745ab56bc7c20138bdf94c92fe0c4'
+            },
+            success: function(data) {
+                var Latitude = data.documents[0].y;
+                var longitude = data.documents[0].x;
+
+                var region_1depth_name = data.documents[0].address.region_1depth_name; // 시 정보
+                var region_2depth_name = data.documents[0].address.region_2depth_name; // 구/군 정보
+
+                
+                var files = $("#hotelfile")[0].files;
+                var fileName = "";
+                for (var i = 0; i < files.length; i++) {
+                    fileName += files[i].name + "/";
+                }
+                alert(longitude);
+				$("#filename").val(fileName);
+                $("#sido").val(region_1depth_name);
+                $("#gugun").val(region_2depth_name);
+                
+                $("#longitude").val(longitude);
+                $("#Latitude").val(Latitude);
+                $("#frm").submit();
+            },
+            error: function(error) {
+                console.error('Error:', error);
+            }
         });
-    </script>
+    }
 
-					<div style="position: absolute; left: 500px">
-						<select id="hotelSelect">
-							<option>객실선택</option>
-							<c:forEach var="hotelList" items="${hotelList }">
-								<option value="${hotelList.hotelcode }"><c:out
-										value="${hotelList.hotelname }" /></option>
-							</c:forEach>
-						</select>
-					</div>
-					<div style="position: absolute; left: 623px">
-
-						<input type="button" value="객실 등록" class="btn btn-info btn-sm"
-							id="newHotelBtn">
-					</div>
-					<div
-						style="display: flex; justify-content: center; align-items: center; height: 200px;" id="output">
-						<table style="width: 900px; bolder: 1;">
-							<tr>
-								<th>호수</th>
-								<th>객실타입</th>
-								<th>평점</th>
-								<th>가격</th>
-								<th>한달예약건수</th>
-								<th>버튼</th>
-							</tr>
-							<c:forEach var="roomList" items="${ roomList }" varStatus="i">
-								<tr>
-									<th><c:out value="${roomList.roomname }" /></th>
-									<th><c:out value="${roomList.typename }" /></th>
-									<th><c:out value="${roomList.average_rating }" /></th>
-									<th><c:out value="${roomList.price }" /></th>
-									<th><c:out value="${roomList.reservation_count }" /></th>
-									<th><input type="button" value="수정"
-										class="btn btn-info btn-sm" id="roomModifyBtn"><input
-										type="hidden" value="${roomList.roomcode }"
-										id="roomCodeHidden"></th>
-								</tr>
-							</c:forEach>
-						</table>
-					</div>
+    function test() {
+        getLatLngAndSubmitForm();
+    }
+</script>
+    </div>
+    <div class="mb-3">
+      <label for="disabledTextInput" class="form-label">호텧등급</label>
+      <select class="form-select form-select-sm" aria-label="Small select example" id="selectRate" name="selectRate">
+ <option value="1" ${hotelrate eq 1 ? 'selected="selected"' : ''}>1</option>
+ <option value="2" ${hotelrate eq 2 ? 'selected="selected"' : ''}>2</option>
+ <option value="3" ${hotelrate eq 3 ? 'selected="selected"' : ''}>3</option>
+ <option value="4" ${hotelrate eq 4 ? 'selected="selected"' : ''}>4</option>
+ <option value="5" ${hotelrate eq 5 ? 'selected="selected"' : ''}>5</option>
+</select>
+    </div>
+    <div class="mb-3">
+      <label for="disabledTextInput" class="form-label">호텔설명</label>
+      <input type="text" id="description" name="description" class="form-control" placeholder="호텔설명">
+    </div>
+    <div class="mb-3">
+      <label for="disabledTextInput" class="form-label">전화번호</label>
+      <input type="text" id="tel" name="tel" class="form-control" placeholder="전화번호">
+    </div>
+    <div class="mb-3">
+      <label for="disabledTextInput" class="form-label">조식가격</label>
+      <input type="text" id="breakfast" name="breakfast" class="form-control" placeholder="조식가격">
+    </div>
+    <div>
+    <input type="file" id="hotelfile" name="hotelfile" multiple="multiple">
+	    <input type="hidden" id="longitude" name="longitude">
+	    <input type="hidden" id="Latitude" name="Latitude">
+	    <input type="hidden" id="sido" name="sido">
+	    <input type="hidden" id="gugun" name="gugun">
+	    <input type="hidden" id="filename" name="filename">
+    
+    </div>
+    <div>
+    </div>
+    <button type="button" class="btn btn-primary" id="save" onclick="test()">저장</button>
+</form>
+				
+			
+					
 				</main>
 			</div>
 		</div>

@@ -6,45 +6,42 @@
 
 
 
-<select id="selectMemId" resultType="fIVO" parameterType="kr.co.sist.user.login.findid.FindIdVO">
-select name,id,inputdate
-from member
+<select id="selectMemId" resultType="FID" parameterType="FIVO">
+  SELECT name, id, inputdate
+  FROM member
+  WHERE name=#{name} AND tel=#{tel} AND identifier=#{identifier}
+</select>
+
+<select id="selectBusId" resultType="FID" parameterType="FIVO">
+select id,name,inputdate
+from business
 where name=#{name} and tel=#{tel} and identifier=#{identifier}
 </select>
 
-<select id="selectBusId" resultType="String" parameterType="kr.co.sist.user.login.findid.FindIdVO">
+<select id="selectMemPassword" resultType="String" parameterType="FPVO">
+select id
+from member
+where id=#{id} and name=#{name} and identifier=#{identifier}
+</select>
+
+<select id="selectBusPassword" resultType="String" parameterType="FPVO">
 select id
 from business
-where name=#{name} and tel=#{tel} and identifier=#{identifier}
-</select>
-
-<select id="selectMemPassword" resultType="String" parameterType="kr.co.sist.user.login.findpassword.FindPassVO">
-select password
-from member
 where id=#{id} and name=#{name} and identifier=#{identifier}
 </select>
 
-<select id="selectBusPassword" resultType="String" parameterType="kr.co.sist.user.login.findpassword.FindPassVO">
-select password
-from business
-where id=#{id} and name=#{name} and identifier=#{identifier}
-</select>
 
-<update id="updateMemPassword" parameterType="kr.co.sist.user.login.findpassword.FindPassVO">
+<update id="updateMemPassword" parameterType="CPVO">
 update member
 set password=#{password}
-where password=#{password}
+where id=#{id}
 </update>
 
-<update id="updateBusPassword" parameterType="kr.co.sist.user.login.findpassword.FindPassVO">
+<update id="updateBusPassword" parameterType="CPVO">
 update business
 set password=#{password}
-where password=#{password}
+where id=#{id}
 </update> 
-
-
-
-
 
 
 

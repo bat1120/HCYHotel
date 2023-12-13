@@ -20,6 +20,14 @@ public class FindIdService {
 		fid=FindIdDAO.getInstance().selectCheckId(fiVO);
 		
 		return fid;
-		
 	}//checkId
+	
+	public FindIdDomain checkIdBus(FindIdVO fiVO) {
+		
+		FindIdDomain fid=null;
+		
+		fid=FindIdDAO.getInstance().selectCheckIdBus(fiVO);
+		
+		return fid;
+	}//checkIdBus
 }//class
