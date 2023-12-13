@@ -930,42 +930,37 @@ googletag.cmd.push(function() {
 		<div id="sri_wrap">
 			<div id="content">
 				<div class="wrap_title_recruit">
-					<h1 class="title_common">사업자 아이디 찾기</h1>
+					<h1 class="title_common">사업자회원 아이디 찾기</h1>
 				</div>
 				<div class="help_find help_find_type2">
-					<h2 class="blind">사업자 아이디 찾기 결과</h2>
+					<h2 class="blind">사업자회원 아이디 찾기 결과</h2>
 					<div class="cont_find">
 						<p class="desc_find">
-							송지하님의 아이디가 <em class="emph_txt">1건</em> 검색되었습니다.
+							${name }님의 아이디가 <em class="emph_txt">1건</em> 검색되었습니다.
 						</p>
-						<table class="tbl_find">
+						<table class="tbl_find" style="text-align:center">
 							<colgroup>
-								<col width="190">
-								<col width="288">
-								<col width="190">
-								<col width="289">
+								<col width="350">
+								<col width="350">
+								<col width="350">
 							</colgroup>
 							<thead>
 								<tr>
-									<th scope="col">구분</th>
-									<th scope="col">아이디</th>
-									<th scope="col">가입일</th>
-									<th scope="col">소셜계정 연동 정보</th>
+									<th scope="col"><strong>이름</strong></th>
+									<th scope="col"><strong>아이디</strong></th>
+									<th scope="col"><strong>가입일</strong></th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<th scope="row">사람인</th>
-									<td>sjh0930</td>
-									<td>2023-11-13</td>
-									<td></td>
+									<th scope="row">${name }</th>
+									<td>${id }</td>
+									<td>${inputdate }</td>
 								</tr>
 							</tbody>
 						</table>
 						<div class="wrap_link">
-							<a href="/zf_user/auth" class="btn_biggest_type01">로그인</a> <a
-								href="/zf_user/helpdesk/person-find-password"
-								class="btn_biggest_type03">비밀번호 찾기</a>
+							<a href="/HCYHotel/user/login/user_login.do" class="btn_biggest_type01">로그인</a> 
 						</div>
 					</div>
 
