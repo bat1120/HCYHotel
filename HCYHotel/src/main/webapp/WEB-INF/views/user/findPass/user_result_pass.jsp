@@ -357,7 +357,7 @@ googletag.cmd.push(function() {
         $("#msg_password1").show();
         event.preventDefault();
         return;
-      } else {
+      } else { 
         $("#msg_password1").hide();
       }
 
