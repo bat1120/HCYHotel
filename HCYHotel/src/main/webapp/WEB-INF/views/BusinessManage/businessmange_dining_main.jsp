@@ -1828,7 +1828,6 @@ th, td {
 								</div>
 							</div>
 						</div>
-						<div class="C4-Q-search-form-spacer"></div>
 					</div>
 					<div class="EoVr-search-form-dialog-wrapper">
 						<div aria-hidden="true"

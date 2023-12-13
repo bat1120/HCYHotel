@@ -25,7 +25,7 @@ WHERE h.id = #{id}
 </select>
 
  <select id="hotelInfo" resultType="hid" parameterType="String">
-SELECT h.hotelname, h.hoteladdress, h.hotelrate, h.description
+SELECT h.hotelname, h.hoteladdress, h.hotelrate, h.description,h.tel,h.BREACKFASTPRICE
 FROM hotel h
 WHERE h.hotelcode = #{hotelcode}
 </select>

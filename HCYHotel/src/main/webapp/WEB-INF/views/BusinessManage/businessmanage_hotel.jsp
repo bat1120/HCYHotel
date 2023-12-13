@@ -1883,7 +1883,6 @@ th, td {
 								</div>
 							</div>
 						</div>
-						<div class="C4-Q-search-form-spacer"></div>
 					</div>
 					<div class="EoVr-search-form-dialog-wrapper">
 						<div aria-hidden="true"
@@ -1907,6 +1906,14 @@ th, td {
 							<div role="button" class="dDYU-off-screen" tabindex="0"></div>
 						</div>
 					</div>
+<script type="text/javascript">
+    var alertMessage = "${alertMessage}"; // alertMessage는 모델에 추가된 속성명입니다.
+
+    if (alertMessage !== null && alertMessage !== "") {
+        alert(alertMessage); // alert 창 표시
+        window.history.back(); // 뒤로 이동
+    }
+</script>
 					<div
 						style="display: flex; flex-direction: column; align-items: center;">
 						<div

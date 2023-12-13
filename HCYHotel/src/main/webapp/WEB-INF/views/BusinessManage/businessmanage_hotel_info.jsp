@@ -1889,7 +1889,6 @@ th, td {
 								</div>
 							</div>
 						</div>
-						<div class="C4-Q-search-form-spacer"></div>
 					</div>
 					<div class="EoVr-search-form-dialog-wrapper">
 						<div aria-hidden="true"
@@ -1921,7 +1920,7 @@ th, td {
 					
 				
 </script>
-<form id="frm" action="businessHotelModify_update.do">
+<form id="frm" action="businessHotelModify_update.do" enctype="multipart/form-data" method="post">
     <legend>호텔등록</legend>
     <div class="mb-3">
       <label for="disabledTextInput" class="form-label">호텔이름</label>
@@ -2005,13 +2004,19 @@ th, td {
                 var Latitude = data.documents[0].y;
                 var longitude = data.documents[0].x;
 
+                var region_1depth_name = data.documents[0].address.region_1depth_name; // 시 정보
+                var region_2depth_name = data.documents[0].address.region_2depth_name; // 구/군 정보
+
+                
                 var files = $("#hotelfile")[0].files;
                 var fileName = "";
                 for (var i = 0; i < files.length; i++) {
                     fileName += files[i].name + "/";
-                    alert(fileName);
                 }
-
+				$("#filename").val(fileName);
+                $("#sido").val(region_1depth_name);
+                $("#gugun").val(region_2depth_name);
+                
                 $("#longitude").val(longitude);
                 $("#Latitude").val(Latitude);
                 $("#frm").submit();
@@ -2043,16 +2048,20 @@ th, td {
     </div>
     <div class="mb-3">
       <label for="disabledTextInput" class="form-label">전화번호</label>
-      <input type="text" id="tel" name="tel" class="form-control" value="${hoteldes }">
+      <input type="text" id="tel" name="tel" class="form-control" value="${hoteltel }">
     </div>
     <div class="mb-3">
       <label for="disabledTextInput" class="form-label">조식가격</label>
-      <input type="text" id="breakfast" name="breakfast" class="form-control" value="${hoteldes }">
+      <input type="text" id="breakfast" name="breakfast" class="form-control" value="${breakfastprice }">
     </div>
     <div>
-    <input type="file" id="hotelfile" multiple="multiple">
+    <input type="file" id="hotelfile" name="hotelfile" multiple="multiple">
     <input type="hidden" id="longitude" name="longitude">
     <input type="hidden" id="Latitude" name="Latitude">
+    <input type="hidden" id="sido" name="sido">
+    <input type="hidden" id="gugun" name="gugun">
+    <input type="hidden" id="filename" name="filename">
+    
     </div>
     <div>
     <c:forEach var="filelist" items="${filelist }">
