@@ -7,7 +7,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>일반회원관리</title>
+    <title>호텔관리</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -63,7 +63,7 @@
                     <a href="goManageNotice.do" class="nav-item nav-link"><i class="fa fa-th me-2"></i>공지사항관리</a>
                     <a href="goQuestion.do" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>문의사항관리</a>
                     <a href="goManageHotel.do" class="nav-item nav-link active"><i class="fa fa-table me-2"></i>호텔관리</a>
-                    <a href="chart.html" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>다이닝관리</a>
+                    <a href="goManageDining.do" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>다이닝관리</a>
                 </div>
             </nav>
         </div>
@@ -115,7 +115,7 @@
 	                                            <th scope="row">${i.count}</th>
 	                                            <td>${hotel.hotelName }</td>
 	                                            <td>${hotel.id }</td>
-	                                            <td>${hotel.useRatio<0?'-'+hotel.useRatio:hotel.useRatio }%</td>
+	                                            <td>${hotel.useRatio}%</td>
 	                                            <td>${hotel.reviewCnt }</td>
 	                                            <td><input type="button" value="상세보기" class="btn btn-info btn-sm" onclick="hotelDetail('${ hotel.hotelCode }')"></td>
 	                                        </tr>

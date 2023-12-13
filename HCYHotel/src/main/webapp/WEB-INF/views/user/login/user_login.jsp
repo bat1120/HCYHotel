@@ -401,11 +401,9 @@ googletag.cmd.push(function() {
 										<a id="a_join" href="http://localhost/HCYHotel/user/join/join_check.do"
 											class="sign_up"
 											onmousedown="try{n_trackEvent('login', 'pc_login_page' , 'join', '');}catch(e){}">회원가입</a>
-										<a href="http://localhost/HCYHotel/user/findId/user_find_id.do" class="forgotten"
+										<a href="http://localhost/HCYHotel/user/findId/findIdPass_check.do" class="forgotten"
 											onmousedown="try{n_trackEvent('login', 'pc_login_page' , 'find', '');}catch(e){}">아이디/비밀번호
-											찾기</a> <a href="/zf_user/applicant/rater/login-form"
-											target="_blank" class="link_rater" style="display: none;">
-											</a>
+											찾기</a> 
 									</div>
 
 								</div>

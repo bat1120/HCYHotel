@@ -7,7 +7,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>공지사항 작성</title>
+    <title>다이닝관리</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -15,17 +15,12 @@
     <c:import url="../common/import/header.jsp"/>
     <script type="text/javascript">
     $(function(){
-    	$("#btnSave").click(function(){
-    		$("#hidContent").val($("#content").val())
-    		$("#hidTitle").val($("#title").val())
-    		$("#hidFrm").attr("action",'newNotice.do')
-    		$("#hidFrm").submit()
-    	})//btnSave
-    	$("#btnCancel").click(function(){
-    		$("#hidFrm").attr("action",'goManageNotice.do')
-    		$("#hidFrm").submit()
-    	})//btnCancel
+    	
     })//ready
+    function diningDetail( dc ){
+    	$("#hidDiningCode").val(dc)
+    	$("#hidFrm").submit()
+    }//memDetail
     </script>
 </head>
 
@@ -65,10 +60,10 @@
                             <a href="goManageMem.do?memFlag=mem" class="dropdown-item">개인</a>
                         </div>
                     </div>
-                    <a href="goManageNotice.do" class="nav-item nav-link active"><i class="fa fa-th me-2"></i>공지사항관리</a>
+                    <a href="goManageNotice.do" class="nav-item nav-link"><i class="fa fa-th me-2"></i>공지사항관리</a>
                     <a href="goQuestion.do" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>문의사항관리</a>
                     <a href="goManageHotel.do" class="nav-item nav-link"><i class="fa fa-table me-2"></i>호텔관리</a>
-                    <a href="goManageDining.do" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>다이닝관리</a>
+                    <a href="goManageDining.do" class="nav-item nav-link active"><i class="fa fa-chart-bar me-2"></i>다이닝관리</a>
                 </div>
             </nav>
         </div>
@@ -100,25 +95,39 @@
             </nav>
             <!-- Navbar End -->
 
-
-            <div class="col-12">
-                        <div class="bg-light rounded h-100 p-4">
-                            <h6 class="mb-4">공지사항 작성</h6>
-                            <div class="form-floating mb-3">
-                               <h3 class="mb-4">제목</h3> <input type="text" class="form-control" id="title">
+			<div class="bg-light rounded h-100 p-4">
+                            <h6 class="mb-4">다이닝 관리</h6>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">번호</th>
+                                            <th scope="col">호텔이름</th>
+                                            <th scope="col">다이닝명</th>
+                                            <th scope="col">전주 대비 예매율</th>
+                                            <th scope="col">주간 리뷰 수</th>
+                                            <th scope="col">상세보기</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    	<c:forEach var="dining" items="${diningList }" varStatus="i">
+	                                        <tr>
+	                                            <th scope="row">${i.count}</th>
+	                                            <td>${dining.hotelName }</td>
+	                                            <td>${dining.diningName }</td>
+	                                            <td>${dining.useRatio }%</td>
+	                                            <td>${dining.reviewCnt }</td>
+	                                            <td><input type="button" value="상세보기" class="btn btn-info btn-sm" onclick="diningDetail('${ dining.diningCode }')"></td>
+	                                        </tr>
+                                        </c:forEach>
+                                    </tbody>
+                                </table>
                             </div>
-                            <div class="form-floating">
-                               <h3 class="mb-4">내용</h3><textarea class="form-control" id="content" style="height: 150px;" ></textarea>
-                            </div>
-                            <input type="button" id="btnSave" value="저장" class="btn btn-success btn-sm">
-                            <input type="button" id="btnCancel" value="취소" class="btn btn-secondary btn-sm">
                         </div>
-                    </div>
-                    
-                    <form id="hidFrm" method="post">
-                    <input type="hidden" id="hidContent" name="content" >
-                    <input type="hidden" id="hidTitle" name="title" >
-                    </form>
+                         <form action="diningDetail.do" id="hidFrm" method="post">
+                        <input type="hidden" name="diningCode" id="hidDiningCode"/>
+                        </form>
+            
 
             <c:import url="../common/import/footer.jsp"/>
         </div>

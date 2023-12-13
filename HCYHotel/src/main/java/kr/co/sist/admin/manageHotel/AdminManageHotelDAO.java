@@ -39,4 +39,11 @@ public class AdminManageHotelDAO {
 		ss.delete("kr.co.sist.admin.hotel.deleteHotel",hotelCode);
 		
 	}//deleteHotel
+	
+	public List<String> selectHotelFiles(String hotelCode){
+		MyBatiseHandlerAdmin mbha = MyBatiseHandlerAdmin.getInstance();
+		SqlSession ss = mbha.getMyBatisHandler(true);
+		List<String> list = ss.selectList("kr.co.sist.admin.hotel.selectHotelFile",hotelCode);
+		return list;
+	}//selectHotelFiles
 }//class

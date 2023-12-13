@@ -6,14 +6,14 @@
 
 
 
-<select id="selectMemId" resultType="String" parameterType="kr.co.sist.user.login.findid.FindIdVO">
-select id
-from member
-where name=#{name} and tel=#{tel} and identifier=#{identifier}
+<select id="selectMemId" resultType="FID" parameterType="kr.co.sist.user.login.findid.FindIdVO">
+  SELECT name, id, inputdate
+  FROM member
+  WHERE name=#{name} AND tel=#{tel} AND identifier=#{identifier}
 </select>
 
-<select id="selectBusId" resultType="String" parameterType="kr.co.sist.user.login.findid.FindIdVO">
-select id
+<select id="selectBusId" resultType="FID" parameterType="kr.co.sist.user.login.findid.FindIdVO">
+select id,name,inputdate
 from business
 where name=#{name} and tel=#{tel} and identifier=#{identifier}
 </select>

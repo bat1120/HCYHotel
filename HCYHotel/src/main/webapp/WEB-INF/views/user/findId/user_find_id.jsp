@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ page info=""%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+    pageEncoding="UTF-8"%>
+<%@ page info="" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>   
 <html lang="ko">
 <head>
 <title>사람인</title>
@@ -42,6 +42,8 @@
 <link href="/favicon.ico?ver=3" rel="favicon">
 <link href="/favicon.ico?ver=3" rel="icon" type="image/x-icon">
 <link href="/favicon.ico?ver=3" rel="shortcut icon" type="image/x-icon">
+<!-- bootstrap CDN-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <script type="text/javascript" async=""
 	src="https://www.googletagmanager.com/gtag/js?id=G-GR2XRGQ0FK&amp;l=dataLayer&amp;cx=c"></script>
 <script type="text/javascript" async=""
@@ -65,6 +67,8 @@
 <script type="text/javascript"
 	src="/js/layout/default-layout.js?v=20231130103248"></script>
 <script src="/js/apply/QuickApply.js?v=20231130103248"></script>
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script type="text/javascript">
 var googleSlotList = {};
 
@@ -930,6 +934,59 @@ googletag.cmd.push(function() {
 		<div id="searchAutoCompleteTemplate" style="display: none"></div>
 	</div>
 
+<script>
+  $(document).ready(function() {
+    $("#find_form").submit(function(event) {
+      // 이름 유효성 검사
+      var nameValue = $("#name").val().trim();
+      var nameMessage = $("#msg_name");
+
+      //휴대폰 번호 유효성 검사
+      var telValue = $("#tel").val().replace(/\s/g, ""); // 공백 제거
+      var telMessage = $("#msg_cell");
+
+      // 생년월일 유효성 검사
+      var identifierValue = $("#identifier").val().trim();
+      var identifierMessage = $("#msg_cert_num");
+
+   	  //이름에는 한글만
+      if (!/^[가-힣]+$/.test(nameValue)) {
+        nameMessage.show();
+      } else {
+        nameMessage.hide();
+      }
+
+      // 생년월일에는 숫자 8자리만 입력
+      if (!/^\d{8}$/.test(identifierValue)) {
+        identifierMessage.show();
+      } else {
+        identifierMessage.hide();
+      }
+
+      // 휴대폰 번호 유효성 검사
+      if (!/^\d{3}-\d{4}-\d{4}$/.test(telValue)) {
+        telMessage.show();
+      } else {
+        telMessage.hide();
+      }
+
+      // 모든 필드가 비어있지 않고 유효성 검사를 통과한 경우
+      if (/^[가-힣]+$/.test(nameValue) && /^\d{8}$/.test(identifierValue) && /^\d{3}-\d{4}-\d{4}$/.test(telValue)) {
+        // 오류 메시지 숨김
+        nameMessage.hide();
+        telMessage.hide();
+        identifierMessage.hide();
+
+        // 폼 제출
+        this.submit();
+      } else {
+        event.preventDefault();
+      }
+    });
+  });
+</script>
+
+
 	<div id="sri_section" class="  has_banner">
 		<div id="sri_wrap">
 			<div id="content">
@@ -940,7 +997,7 @@ googletag.cmd.push(function() {
 
 					<div class="cont_find">
 						<form
-							action="https://www.saramin.co.kr/zf_user/helpdesk/person-find-secure"
+							action="user_id_result.do"
 							method="post" id="find_form">
 							<input type="hidden" id="confirm_complete"
 								name="confirm_complete" value="n"> <input type="hidden"
@@ -952,7 +1009,6 @@ googletag.cmd.push(function() {
 								type="hidden" id="seq" name="seq" value="seq1701416239">
 							<fieldset>
 								<legend class="blind">개인회원 아이디 찾기 입력 폼</legend>
-								<p class="desc_find">회원정보에 등록된 정보로 아이디를 찾을 수 있습니다.</p>
 								<ul class="list_find">
 									<li>
 										<div class="wrap_lab">
@@ -969,12 +1025,12 @@ googletag.cmd.push(function() {
 
 									<li id="li_cell">
 										<div class="wrap_lab">
-											<label for="cell" class="lab_find">휴대폰 번호</label>
+											<label for="tel" class="lab_find">휴대폰 번호</label>
 										</div>
 										<div class="wrap_input">
 											<span class="box_input"> <input type="text"
-												name="cell" id="cell" class="inp_find"
-												placeholder="‘-’없이 입력">
+												name="tel" id="tel" class="inp_find"
+												placeholder="">
 											</span>
 											<p class="message_find" id="msg_cell" style="display: none;">휴대폰번호를
 												정확하게 입력해주세요.</p>
@@ -985,7 +1041,7 @@ googletag.cmd.push(function() {
 										</div>
 									</li>
 
-									<li id="li_mail" style="display: none;">
+									<!-- <li id="li_mail" style="display: none;">
 										<div class="wrap_lab">
 											<label for="email" class="lab_find">이메일 주소</label>
 										</div>
@@ -1017,31 +1073,29 @@ googletag.cmd.push(function() {
 											<button type="button" id="btn_cert_mail"
 												class="btn_basic2 type03 btn_cert">인증번호 발송</button>
 										</div>
-									</li>
+									</li> -->
 
 									<li>
 										<div class="wrap_lab">
-											<label for="findCite" class="lab_find">생년월일</label>
+											<label for="identifier" class="lab_find">생년월일</label>
 										</div>
 										<div class="wrap_input">
 											<span class="box_input"> <input type="text"
-												name="findCite" id="findCite" class="inp_find"> <span
+												name="identifier" id="identifier" class="inp_find"> <span
 												class="message_find time_find" style="display: none;">남은
 													시간 (3:00)</span>
 											</span>
 											<p class="message_find" id="msg_cert_num"
-												style="display: none;">입력시간이 만료되었습니다. 인증번호를 다시 발송해주세요.</p>
+												style="display: none;">생년월일을 올바르게 입력해주세요</p>
 											<p class="message_find ok" style="display: none;">인증 성공.
 												잠시만 기다려주세요.</p>
 										</div>
 									</li>
 								</ul>
 								<div class="wrap_link">
-									<button type="button" class="btn_biggest_type01"
-										id="btn_cert_complete">아이디 찾기</button>
-									<!--                        <button type="button" class="btn_biggest_type01" id="btn_next" style="display: none">다음</button>-->
 								</div>
 							</fieldset>
+							<input type="submit" class="btn btn-info" style="width:150px;margin-left:600px" value="다음">
 						</form>
 					</div>
 

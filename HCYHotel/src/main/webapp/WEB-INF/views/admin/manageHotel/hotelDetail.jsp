@@ -67,7 +67,7 @@
                     <a href="widget.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>공지사항관리</a>
                     <a href="goQuestion.do" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>문의사항관리</a>
                     <a href="goManageHotel.do" class="nav-item nav-link active"><i class="fa fa-table me-2"></i>호텔관리</a>
-                    <a href="chart.html" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>다이닝관리</a>
+                    <a href="goManageDining.do" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>다이닝관리</a>
                 </div>
             </nav>
         </div>
@@ -120,8 +120,37 @@
                             <div class="form-floating">
                                <h3 class="mb-4">상세설명</h3><textarea class="form-control" id="content" style="height: 150px;" readonly="readonly" ><c:out value="${hotelDetail.description }"/></textarea>
                             </div>
+                            
+                            
+                              <!-- 사진 -->
+                            <div class="col-12">
+                        <div class="bg-light rounded h-100 p-4">
+                            <h6 class="mb-4">사진</h6>
+                            <c:choose>
+                            <c:when test="${empty files }">
+	                            <div class="owl-carousel testimonial-carousel">
+	                                <div class="testimonial-item text-center">
+	                                    <img class="img-fluid rounded-circle mx-auto mb-1" src="http://localhost/HCYHotel/common/business/img/noImage.png" style="width: 100%; height: 100%;">
+	                                    <h5 class="mb-1">사진 없음</h5>
+	                                </div>
+	                            </div>
+                            </c:when>
+                            <c:otherwise>
+	                            <div class="owl-carousel testimonial-carousel">
+                            <c:forEach var="file" items="${files }" varStatus="i">
+	                                <div class="testimonial-item text-center">
+	                                    <img class="img-fluid rounded-circle mx-auto mb-4" src="http://localhost/HCYHotel/common/business/img/${file}.jpg" style="width: 100%; height: 100%;">
+	                                </div>
+                            </c:forEach>
+	                            </div>
+                            </c:otherwise>
+                            </c:choose>
+                        </div>
+                    </div>
+                            <!--  -->
+                            
                             <div class="form-floating mb-3">
-                                <input type="button" class="btn btn-danger btn-sm" value="호텔삭제" onclick="removeHotel(${param.hotelCode})"/>
+                                <input type="button" class="btn btn-danger btn-sm" value="호텔삭제" onclick="removeHotel('${param.hotelCode}')"/>
                                 <input type="button" class="btn btn-secondary btn-sm" value="목록으로" onclick="goList()"/>
                                 
                             </div>

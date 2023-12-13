@@ -14,48 +14,48 @@ SELECT
   NVL(
     (
       (SELECT COUNT(*)
-       FROM ROOMBOOKING r
-       WHERE r.ROOMCODE = (
+       FROM ROOMBOOKING r, (
          SELECT ROOMCODE
-         FROM ROOM ro
-         WHERE ro.HOTELCODE = (
+         FROM ROOM ro, (
            SELECT HOTELCODE
            FROM HOTEL ho
-           WHERE ho.ID = ht.id AND ROWNUM = 1
-         )
-       ) AND CHECKIN > SYSDATE - 7 AND CHECKIN < SYSDATE AND STATUS = 'Y'
+           WHERE ho.ID = ht.id
+         ) hc
+         WHERE ro.HOTELCODE(+) = hc.HOTELCODE
+       ) rc
+       WHERE r.ROOMCODE(+) = rc.ROOMCODE AND CHECKIN > SYSDATE - 7 AND CHECKIN < SYSDATE AND STATUS = 'Y'
       )
       /
       NULLIF(
         (SELECT COUNT(*)
-         FROM ROOMBOOKING r
-         WHERE r.ROOMCODE = (
+         FROM ROOMBOOKING r, (
            SELECT ROOMCODE
-           FROM ROOM ro
-           WHERE ro.HOTELCODE = (
+           FROM ROOM ro, (
              SELECT HOTELCODE
              FROM HOTEL ho
-             WHERE ho.ID = ht.id AND ROWNUM = 1
-           )
-         ) AND CHECKIN > SYSDATE - 15 AND CHECKIN < SYSDATE - 8 AND STATUS = 'Y'
+             WHERE ho.ID = ht.id
+           ) hc
+           WHERE ro.HOTELCODE(+) = hc.HOTELCODE
+         ) rc
+         WHERE r.ROOMCODE(+) = rc.ROOMCODE AND CHECKIN > SYSDATE - 15 AND CHECKIN < SYSDATE - 8 AND STATUS = 'Y'
         )
       , 0) - 100
     ), 0
   ) AS useratio ,
  ( select count(*)
-  from ROOMREVIEW
-	where BOOKINGCODE = (SELECT BOOKINGCODE
+  from ROOMREVIEW rv, (SELECT BOOKINGCODE
        FROM ROOMBOOKING r
        WHERE r.ROOMCODE = (
          SELECT ROOMCODE
-         FROM ROOM ro
-         WHERE ro.HOTELCODE = (
+         FROM ROOM ro, (
            SELECT HOTELCODE
            FROM HOTEL ho
-           WHERE ho.ID = ht.id AND ROWNUM = 1
-         )
+           WHERE ho.ID = ht.id
+         )hc
+         WHERE ro.HOTELCODE = hc.HOTELCODE
        ) AND CHECKIN > SYSDATE - 7 AND CHECKIN < SYSDATE AND STATUS = 'Y'
-      ))  revieCnt
+      ) bc
+	where rv.BOOKINGCODE = bc.BOOKINGCODE )  revieCnt
 FROM HOTEL ht
 ]]>
 </select>
@@ -77,6 +77,14 @@ where rv.BOOKINGCODE = rb.BOOKINGCODE(+)
 and  rb.ROOMCODE = r.ROOMCODE(+) 
 and r.HOTELCODE = #{hotelCode} 
 and rv.INPUTDATE > sysdate-7
+]]>
+</select>
+<!-- 호텔 사진 불러오기 -->
+<select id="selectHotelFile" parameterType="String" resultType="String">
+<![CDATA[
+SELECT FILENAME  
+FROM INFOFILE 
+WHERE HOTELCODE = #{hotelCode} 
 ]]>
 </select>
 
