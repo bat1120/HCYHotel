@@ -20,6 +20,10 @@
 <link rel="stylesheet"
 	href="http://localhost/HCYHotel/common/user/css/phoenix/contents.min.css">
 
+<!-- bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <!-- js -->
 <script type="text/javascript" async=""
 	src="https://www.googletagmanager.com/gtag/js?id=G-1J0VYQ4NSJ&amp;cx=c&amp;_slc=1"></script>
@@ -70,19 +74,6 @@
 <script type="text/javascript"
 	src="https://pg.easypay.co.kr/webpay/EasypayCard_Web.js"></script>
 
-<script type="text/javascript">
-	/* (DEVELOP ONLY) Enable Vue devtools */
-	Vue.prototype._ssrNode = function() {
-		return null;
-	};
-	Vue.config.debug = true;
-	Vue.config.devtools = true;
-
-	/* NProgress Config */
-	NProgress.configure({
-		showSpinner : false
-	});
-</script>
 
 <script>
 	(function(i, s, o, g, r, a, m) {
@@ -174,16 +165,18 @@
 			<div class="board-detail">
 				<div class="detail-header">
 					<h4 class="detail-tit">
-						<span class="tit-text">제목자리</span>
+						<span class="tit-text"><c:out value="${ qna.title }"/></span>
 					</h4>
-					<div class="detail-info">등록일같은거 뜨는 자리</div>
+					<div class="detail-info">문의등록일 : <c:out value="${ qna.inputDate }"/></div>
 				</div>
 				<div class="detail-content" style="overflow: auto;">
-				내용1
-					<!-- 내용 들어가는 자리 -->
+				<!-- 내용 들어가는 자리 : 문의 -->
+				<c:out value="${ qna.content }"/>
 				</div>
+				<div class="detail-info">답변일 : <c:out value="${ qna.answerDate }"/></div>
 				<div class="detail-content" style="overflow: auto;">
-				내용2	<!-- 내용 들어가는 자리 -->
+				<!-- 내용 들어가는 자리 : 답변-->
+				<c:out value="${ qna.answer }"/>
 				</div>
 				
 			</div>

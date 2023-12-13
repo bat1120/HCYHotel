@@ -23,7 +23,7 @@ public class NoticeDAO {
 		return nDAO;
 	}//getInstance
 	
-	public List<NoticeDomain> selectAllNoticeList()  throws PersistenceException {
+	public List<NoticeDomain> selectDiscoverNotice()  throws PersistenceException {
 		List<NoticeDomain> list=null;
 		
 		 MyBatiseHandler mbh=MyBatiseHandler.getInstance(); 
@@ -48,12 +48,11 @@ public class NoticeDAO {
 		
 	}//selectNoticeDetail
 	
-	public static void main(String[] args) {
-		nDAO=new NoticeDAO();
-				
-		nDAO.selectNoticeDetail("N000007");
-	}//main
-	
+	/*
+	 * public static void main(String[] args) { nDAO=new NoticeDAO();
+	 * 
+	 * nDAO.selectNoticeDetail("N000007"); }//main
+	 */	
 	
 
 	/*

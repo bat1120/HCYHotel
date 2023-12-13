@@ -21,11 +21,11 @@ public class NoticeService {
 		return ns;
 	}//getInstance
 	
-	public List<NoticeDomain> showAllNoticeList(){
+	public List<NoticeDomain> discoverNotice(){
 		List<NoticeDomain> list=new ArrayList<NoticeDomain>();
 		
 		NoticeDAO nDAO=NoticeDAO.getInstance();
-		list=nDAO.selectAllNoticeList();
+		list=nDAO.selectDiscoverNotice();
 		
 		return list;
 	}//showAllNoticeList

@@ -9,4 +9,19 @@ SELECT questioncode, id, title, to_char(inputdate, 'yyyy-mm-dd') inputdate
 from question
 </select>
 
+<select id="selectQnaDetail" parameterType="String" resultType="qd">
+SELECT questioncode, id, title, to_char(inputdate, 'yyyy-mm-dd') inputdate, CONTENT, ANSWER, ANSWERDATE
+from question
+where questioncode = #{ questionCode }
+</select>
+
+<select id="sdf" parameterType="String" resultType="qd">
+
+</select>
+
+<insert id="insertQna" parameterType="wqVO">
+insert into question (questioncode, ID, TITLE, CONTENT)
+values ('Q'||to_char(lpad(seq_question.nextval, 6, '0'), #{ id }, #{ title } #{ content })
+</insert>
+
 </mapper>
