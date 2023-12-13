@@ -12,7 +12,6 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 public class HotelVO {
-private String hotelCode,hotelName,hotelAddress,description;
-private String[] fileName,fileCode;
-private int hotelRate;
+private String hotelname,hoteladdress,description,loccode,id,longitude,latitude,tel;
+private int hotelrate, breackfastprice;
 }

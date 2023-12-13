@@ -3,6 +3,7 @@ package kr.co.sist.business.hotel;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class HotelManageModifySevice {
    private static HotelManageModifySevice hmms;
 
@@ -36,4 +37,33 @@ public class HotelManageModifySevice {
 	      List<FileListDomain> list = hmmDAO.selectFileList(id);
 	      return list;
 	   }
+   public String searchHotelcode() {
+	   HotelManageModifyDAO hmmDAO = HotelManageModifyDAO.getInstance();
+	   String hotelcode=hmmDAO.selectHotelCode();
+	   return hotelcode;
+   }
+   public void deleteHotel(String hotelcode) {
+	   HotelManageModifyDAO hmmDAO = HotelManageModifyDAO.getInstance();
+	   hmmDAO.deleteHotel(hotelcode);
+   }
+   
+   public String searchLoccode(LocVO lVO) {
+	   HotelManageModifyDAO hmmDAO = HotelManageModifyDAO.getInstance();
+	   String loccode=hmmDAO.selectLoccode(lVO);
+	   return loccode;
+   }
+   public void insertFile(FileVO fVO) {
+	   HotelManageModifyDAO hmmDAO = HotelManageModifyDAO.getInstance();
+	   hmmDAO.insertFile(fVO);
+   }
+   public String searchFilecode() {
+	   HotelManageModifyDAO hmmDAO = HotelManageModifyDAO.getInstance();
+	   String filecode=hmmDAO.selectFilecode();
+	   return filecode;
+   }
+   public void insertHotel(HotelVO hVO) {
+	   HotelManageModifyDAO hmmDAO = HotelManageModifyDAO.getInstance();
+	   hmmDAO.insertHotel(hVO);
+	  
+   }
 }

@@ -47,4 +47,12 @@ public class BusinessRoomModifyController {
 		return json.toJSONString();
 	}
 	
+	@GetMapping("/BusinessManage/businessroomType.do")
+	public String roomTypeList(HttpSession session,HttpServletRequest request,Model model) {
+		request.getParameter("codeHid");
+		System.out.println(request.getParameter("hotelcode"));
+		
+		return "/BusinessManage/businessmanage_room_type";
+	}
+	
 }

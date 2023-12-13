@@ -11,8 +11,17 @@ public class HotelListDomain {
    private int booking_count;
    private double total_rating;
    private Date inputdate;
+   private String roomcode;
 
-   public String getHotelCode() {
+   public String getRoomcode() {
+	return roomcode;
+}
+
+public void setRoomcode(String roomcode) {
+	this.roomcode = roomcode;
+}
+
+public String getHotelCode() {
       return this.hotelCode;
    }
 
@@ -76,21 +85,29 @@ public class HotelListDomain {
       this.inputdate = inputdate;
    }
 
-   public String toString() {
-      return "HotelListDomain(hotelCode=" + this.getHotelCode() + ", hotelName=" + this.getHotelName() + ", sido=" + this.getSido() + ", status=" + this.getStatus() + ", monthlyBooking=" + this.getMonthlyBooking() + ", booking_count=" + this.getBooking_count() + ", total_rating=" + this.getTotal_rating() + ", inputdate=" + this.getInputdate() + ")";
-   }
+ 
 
-   public HotelListDomain(String hotelCode, String hotelName, String sido, String status, int monthlyBooking, int booking_count, double total_rating, Date inputdate) {
-      this.hotelCode = hotelCode;
-      this.hotelName = hotelName;
-      this.sido = sido;
-      this.status = status;
-      this.monthlyBooking = monthlyBooking;
-      this.booking_count = booking_count;
-      this.total_rating = total_rating;
-      this.inputdate = inputdate;
-   }
+   public HotelListDomain(String hotelCode, String hotelName, String sido, String status, int monthlyBooking,
+		int booking_count, double total_rating, Date inputdate, String roomcode) {
+	super();
+	this.hotelCode = hotelCode;
+	this.hotelName = hotelName;
+	this.sido = sido;
+	this.status = status;
+	this.monthlyBooking = monthlyBooking;
+	this.booking_count = booking_count;
+	this.total_rating = total_rating;
+	this.inputdate = inputdate;
+	this.roomcode = roomcode;
+}
 
-   public HotelListDomain() {
+@Override
+public String toString() {
+	return "HotelListDomain [hotelCode=" + hotelCode + ", hotelName=" + hotelName + ", sido=" + sido + ", status="
+			+ status + ", monthlyBooking=" + monthlyBooking + ", booking_count=" + booking_count + ", total_rating="
+			+ total_rating + ", inputdate=" + inputdate + ", roomcode=" + roomcode + "]";
+}
+
+public HotelListDomain() {
    }
 }

@@ -1919,9 +1919,11 @@ th, td {
     	 $("#newHotelBtn").click(function(){
     		 location.href = "businessHotelInsert.do";
     	    });
-    	 
+    	 $("#typeBtn").click(function(){
+    		 location.href = "businessroomType.do";
+    	 })
     });
-
+   
 </script>
 					<div style="display: flex; flex-direction: column; align-items: center;">
     <div style="display: flex; justify-content: flex-start; width: 900px;">
@@ -1946,7 +1948,8 @@ th, td {
 										<th><c:out value="${ hotelList.sido}" /></th>
 										<th><c:out value="${ hotelList.booking_count}" /></th>
 										<th><c:out value="${ hotelList.inputdate}" /></th>
-												<th><a href="businessroomType.do?hotelcode=${hotelList.hotelCode }">타입목록</a></th>
+												<th><input type="button" value="객실타입목록"
+													id="typeBtn" class="btn btn-success"><input type="hidden" value="${hotelList.hotelCode }" name="codeHide" id="codeHid"></th>
 
 									</tr>
 								</c:forEach>
