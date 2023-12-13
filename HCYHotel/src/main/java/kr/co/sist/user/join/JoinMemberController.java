@@ -1,6 +1,10 @@
 package kr.co.sist.user.join;
 
 
+import java.io.UnsupportedEncodingException;
+import java.security.GeneralSecurityException;
+import java.security.NoSuchAlgorithmException;
+
 import org.springframework.stereotype.Controller;
 
 import org.springframework.ui.Model;
@@ -87,7 +91,7 @@ public class JoinMemberController {
 	
 	
 	@PostMapping("/user_join.do")
-	public String joinMemberInsert(JoinMemberVO jmVO,Model model) {
+	public String joinMemberInsert(JoinMemberVO jmVO,Model model) throws NoSuchAlgorithmException, UnsupportedEncodingException, GeneralSecurityException {
 		JoinMemberService.getInstance().plusMem(jmVO);
 		
 		// 회원가입 성공 메시지를 설정
