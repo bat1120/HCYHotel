@@ -51,4 +51,5 @@ List<RoomListDomain> list=new ArrayList<RoomListDomain>();
 		
 		return list;
 	}
+	public List<>
 }

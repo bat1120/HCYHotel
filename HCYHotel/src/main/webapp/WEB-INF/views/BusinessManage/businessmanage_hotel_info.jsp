@@ -2013,6 +2013,7 @@ th, td {
                 for (var i = 0; i < files.length; i++) {
                     fileName += files[i].name + "/";
                 }
+                alert(longitude);
 				$("#filename").val(fileName);
                 $("#sido").val(region_1depth_name);
                 $("#gugun").val(region_2depth_name);
@@ -2034,7 +2035,7 @@ th, td {
     </div>
     <div class="mb-3">
       <label for="disabledTextInput" class="form-label">호텧등급</label>
-      <select class="form-select form-select-sm" aria-label="Small select example">
+      <select class="form-select form-select-sm" aria-label="Small select example" id="selectRate" name="selectRate">
  <option value="1" ${hotelrate eq 1 ? 'selected="selected"' : ''}>1</option>
  <option value="2" ${hotelrate eq 2 ? 'selected="selected"' : ''}>2</option>
  <option value="3" ${hotelrate eq 3 ? 'selected="selected"' : ''}>3</option>
@@ -2056,17 +2057,17 @@ th, td {
     </div>
     <div>
     <input type="file" id="hotelfile" name="hotelfile" multiple="multiple">
-    <input type="hidden" id="longitude" name="longitude">
-    <input type="hidden" id="Latitude" name="Latitude">
-    <input type="hidden" id="sido" name="sido">
-    <input type="hidden" id="gugun" name="gugun">
-    <input type="hidden" id="filename" name="filename">
+	    <input type="hidden" id="longitude" name="longitude">
+	    <input type="hidden" id="Latitude" name="Latitude">
+	    <input type="hidden" id="sido" name="sido">
+	    <input type="hidden" id="gugun" name="gugun">
+	    <input type="hidden" id="filename" name="filename">
     
     </div>
     <div>
     <c:forEach var="filelist" items="${filelist }">
     <input type="checkbox" id="filecheck" name="filecheck">
-<img src="http://localhost/HCYHotel/common/business/img/${filelist.filename }.jpg" class="img-thumbnail" alt="..." style="width:100px;height:100px">
+<img src="http://localhost/sist/common/business/img/${filelist.filename }.jpg" class="img-thumbnail" alt="..." style="width:100px;height:100px">
 </c:forEach>
     </div>
     <button type="button" class="btn btn-primary" id="save" onclick="test()">저장</button>
