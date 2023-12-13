@@ -160,6 +160,20 @@
 	<!-- header -->
 	<jsp:include page="../include/header.jsp" />
 
+<script type="text/javascript">
+$(function(){
+
+});// ready
+
+function detail( noticeCode ){
+	alert("바부야");
+	$("#noticeCode").val( noticeCode );
+	$("#noticeCodeFrm").submit();
+};//detail
+
+
+</script>
+
 	<!-- content-main : 본문 페이지 영역 // -->
 	<div id="content-main" class="content-main">
 		<div class="common-content customer-notice">
@@ -197,16 +211,18 @@
 				<tbody>
 				
 				<c:forEach varStatus="i" var="noticeList" items="${ noticeList }">
-				<tr>
+				<tr onclick="detail('${ noticeList.noticeCode }')">
 				<td><c:out value="${ i.count }"/></td>
 				<td><c:out value="${ noticeList.title }"/></td>
 				<td><c:out value="${ noticeList.inputDate }"/></td>  
 				</tr>
 				</c:forEach>
-					
 				</tbody>
 			</table>
-			<div class="paging-container">
+				<form id="noticeCodeFrm" action="user_notice_detail.do" method="get">
+                    <input type="hidden" name="noticeCode" id="noticeCode">
+				</form>	
+			<!-- <div class="paging-container">
 				<div class="paging-common">
 					<a href="javascript:;" class="page-btn first gray">처음</a> <a
 						href="javascript:;" class="page-btn prev gray">이전</a> <span
@@ -216,7 +232,7 @@
 						href="javascript:;" class=""> 5 </a></span> <a href="javascript:;"
 						class="page-btn next">다음</a> <a href="javascript:;"
 						class="page-btn last">마지막</a>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>

@@ -14,8 +14,8 @@ import lombok.ToString;
 @Setter
 @Getter
 public class QnADomain {
-
-	private String questionCode, title, content;
-	private Date inputDate;
+	
+	private String questionCode, title, content, id, answer;
+	private Date inputDate, answerDate;
 	
 }//class

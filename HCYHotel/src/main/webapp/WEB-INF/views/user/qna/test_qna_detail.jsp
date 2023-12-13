@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=1280">
 <meta name="format-detection" content="telephone=no">
 
-<title>공지사항 | HCYCombined</title>
+<title>문희씨 테스트 | HCYCombined</title>
 
 <link rel="shortcut icon" href="/system/images/favicon.ico">
 <link rel="apple-touch-icon" href="/system/images/favicon.ico">
@@ -173,17 +173,17 @@
 		style="margin-top: 4%; margin-bottom: 8%">
 		<!-- #BREADCRUMB -->
 		<div class="common-content customer-notice">
-			<h3 class="content-main-title">공지사항</h3>
+			<h3 class="content-main-title">문의사항</h3>
 
 			<div class="board-detail">
 				<div class="detail-header">
 					<h4 class="detail-tit">
-						<span class="tit-text"><c:out value="${ notice.title }"/></span>
+						<span class="tit-text"><c:out value="${ qna.title }"/></span>
 					</h4>
-					<div class="detail-info">작성일 <c:out value="${ notice.inputDate }"/>&nbsp;&nbsp;&nbsp;조회수 <c:out value="${ notice.viewCnt }"/></div>
+					<div class="detail-info">작성일 <c:out value="${ qna.inputDate }"/></div>
 				</div>
 				<div class="detail-content" style="overflow: auto;">
-				<c:out value="${ notice.content }"/>
+				<c:out value="${ qna.content }"/>
 				</div>
 			</div>
 

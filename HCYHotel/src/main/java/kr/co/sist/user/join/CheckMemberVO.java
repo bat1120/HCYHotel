@@ -6,7 +6,7 @@ import lombok.ToString;
 
 @Getter
 @Setter
-@ToString
+@ToString 
 public class CheckMemberVO {
-	private String name,identifier,tel,memberFlag;
+	private String name,identifier,tel,memberFlag; 
 }//class

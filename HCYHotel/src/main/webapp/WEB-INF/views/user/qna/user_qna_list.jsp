@@ -73,19 +73,6 @@
 <script type="text/javascript"
 	src="https://pg.easypay.co.kr/webpay/EasypayCard_Web.js"></script>
 
-<script type="text/javascript">
-    /* (DEVELOP ONLY) Enable Vue devtools */
-    Vue.prototype._ssrNode = function() {
-        return null;
-    };
-    Vue.config.debug = true;
-    Vue.config.devtools = true;
-
-    /* NProgress Config */
-    NProgress.configure({
-        showSpinner: false
-    });
-</script>
 
 <script>
     (function (i, s, o, g, r, a, m) {
@@ -110,8 +97,6 @@
 
   gtag('config', 'AW-796355633');
 </script>
-
-
 
 <script type="text/javascript" async=""
 	src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/796355633/?random=1701769204151&amp;cv=11&amp;fst=1701769204151&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45be3bt0&amp;gcd=11l1l1l1l1&amp;dma=0&amp;u_w=1920&amp;u_h=1080&amp;url=https%3A%2F%2Fphoenixhnr.co.kr%2Fpage%2Fcustomer%2Fnotice%3Fq%255BhmpgDivCd%255D%3D%26page%3D1%26size%3D10&amp;ref=https%3A%2F%2Fwww.google.com%2F&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=%EA%B3%B5%EC%A7%80%EC%82%AC%ED%95%AD%20%3C%20%EA%B3%A0%EA%B0%9D%EC%84%BC%ED%84%B0%20%7C%20%ED%9C%98%EB%8B%89%EC%8A%A4%20%ED%98%B8%ED%85%94%EC%95%A4%EB%93%9C%EB%A6%AC%EC%A1%B0%ED%8A%B8&amp;auid=1184424877.1701769204&amp;fledge=1&amp;uaa=x86&amp;uab=64&amp;uafvl=Google%2520Chrome%3B119.0.6045.200%7CChromium%3B119.0.6045.200%7CNot%253FA_Brand%3B24.0.0.0&amp;uamb=0&amp;uap=Windows&amp;uapv=10.0.0&amp;uaw=0&amp;data=event%3Dgtag.config&amp;rfmt=3&amp;fmt=4"></script>
@@ -159,6 +144,18 @@
 
 	<!-- header -->
 	<jsp:include page="../include/header.jsp" />
+	
+	<script type="text/javascript">
+	$(function(){
+		
+	});//ready
+	
+	function detail( questionCode ){
+		alert("누우가 바나나향 핸드워시를 만들었냐 진짜 나빴다");
+		$("#questionCode").val(questionCode);
+		$("#questionCodeFrm").submit();
+	};//detail
+	</script>
 
 	<!-- content-main : 본문 페이지 영역 // -->
 	<div id="content-main" class="content-main">
@@ -176,8 +173,8 @@
 					</fieldset>
 				</form>
 			</div>
-			<div style="justify-content: flex-end">
-			<input type="button" value="글쓰기" id="btn_write" class="btn btn-primary" />
+			<div>
+			<input type="button" value="글쓰기" id="btn_write" class="btn btn-primary" style="margin-bottom: 10px;"/>
 			</div>
 			<table border="1" class="board-list">
 				<caption>
@@ -190,7 +187,7 @@
 					<col style="width: 150px;">
 				</colgroup>
 				<thead>
-					<tr>
+					<tr >
 						<th scope="col">번호</th>
 						<th scope="col">제목</th>
 						<th scope="col">작성자</th>
@@ -199,7 +196,7 @@
 				</thead>
 				<tbody>
 				<c:forEach var="qnaList" varStatus="i" items="${ qnaList }">
-					<tr>
+					<tr onclick="detail('${ qnaList.questionCode }')">
 						<td><c:out value="${ i.count }"/></td>
 						<td><c:out value="${ qnaList.title }"/></td>
 						<td><c:out value="${ qnaList.id }"/></td>
@@ -208,6 +205,9 @@
 				</c:forEach>
 				</tbody>
 			</table>
+			<form id="questionCodeFrm" action="user_qna_detail.do" method="get">
+			<input type="hidden" name="questionCode" id="questionCode"/>
+			</form>
 			<!-- <div class="paging-container">
 				<div class="paging-common">
 					<a href="javascript:;" class="page-btn first gray">처음</a> <a
@@ -225,37 +225,7 @@
 	<!-- // content-main -->
 	</section>
 
-	<script type="text/javascript">
-		(function(Vue, $system) {
-			window.vm = new Vue({
-				el: '#content-main',
-				extends: $system.components.board,
-				data: function() {
-					return {
-						uri: '/customer/notice',
-					};
-				},
-				methods: {
-					fnGetHmpgDivCd : function(hmpgDivCd) {
-						this.board.params.hmpgDivCd = hmpgDivCd;
-						this.fnList(1);
-					}
-				},
-				created: function() {
-					this.fnInit();
-				},
-				mounted: function() {
-				    
-					// 기본 전체 조회
-					if(!this.board.params.hmpgDivCd){
-						this.board.params.hmpgDivCd = '';
-					}
-                    
-					this.fnList();
-				},
-			});
-		})(Vue, window.$system);
-	</script>
+
 
 	<!-- footer -->
 	<jsp:include page="../include/footer.jsp" />
