@@ -20,7 +20,7 @@ public class FindPassController {
 	}//searchMemberPass
 	
 	@GetMapping("/business_find_pass.do")
-	public String searchBusinessPass() {
+	public String searchBusinessPass() { 
 		return "user/findPass/business_find_pass";
 	}//searchBusinessPass
 	
