@@ -1,9 +1,16 @@
 package kr.co.sist.user.login.findpassword;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import kr.co.sist.encryption.Encryption;
 import kr.co.sist.user.login.findid.FindIdService;
 
-	public class FindPassService {
+@Service
+public class FindPassService {
 	private static FindPassService fps;
+	@Autowired
+	private Encryption encryption;
 	
 	private FindPassService() {
 	}//constuctor
@@ -36,23 +43,56 @@ import kr.co.sist.user.login.findid.FindIdService;
 	}//checkBusiness
 	
 	public boolean changePass(ChangePassVO cpVO) {
-		boolean flag=false;
-		
-		int cnt=FindPassDAO.getInstance().updatePass(cpVO);
-		if(cnt>0) {
-			flag=true;
-		}//end if
-		return flag;
+	    boolean flag = false;
+
+	    try {
+	        encryption = new Encryption();
+	        
+	        String enPassword = encryption.directEncryption(cpVO.getPassword());
+	        String enPasswordConfirm = encryption.directEncryption(cpVO.getPasswordConfirm());
+	        
+	        cpVO.setPassword(enPassword);
+	        cpVO.setPasswordConfirm(enPasswordConfirm);
+
+
+	        int cnt = FindPassDAO.getInstance().updatePass(cpVO);
+	        if (cnt > 0) {
+	            flag = true;
+	        }//end if
+	    } catch (Exception e) {
+	        // 예외 처리
+	        e.printStackTrace(); 
+	        flag = false; 
+	    }//end catch
+
+	    return flag;
 	}//changePass
+
 	
 	public boolean changeBusinessPass(ChangePassVO cpVO) {
-		boolean flag=false;
-		
-		int cnt=FindPassDAO.getInstance().updatePassBusiness(cpVO);
-		if(cnt>0) {
-			flag=true;
-		}//end if
-		return flag;
+		 boolean flag = false;
+
+		    try {
+		        encryption = new Encryption();
+		        
+		        String enPassword = encryption.directEncryption(cpVO.getPassword());
+		        String enPasswordConfirm = encryption.directEncryption(cpVO.getPasswordConfirm());
+		        
+		        cpVO.setPassword(enPassword);
+		        cpVO.setPasswordConfirm(enPasswordConfirm);
+
+
+		        int cnt = FindPassDAO.getInstance().updatePassBusiness(cpVO);
+		        if (cnt > 0) {
+		            flag = true;
+		        }//end if
+		    } catch (Exception e) {
+		        // 예외 처리
+		        e.printStackTrace(); 
+		        flag = false; 
+		    }//end catch
+
+		    return flag;
 	}//changeBusinessPass
 	
 }//class

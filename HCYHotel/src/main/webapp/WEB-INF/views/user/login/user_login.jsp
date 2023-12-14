@@ -330,13 +330,31 @@ googletag.cmd.push(function() {
 		<div id="searchAutoCompleteTemplate" style="display: none"></div>
 	</div>
 
-	<script>
-	function setMemberFlag(flag){
-		document.getElementById("memberFlag").value=flag;
-		alert($("#memberFlag").val());
-	}//setMemberFlag
-	
-	</script>
+<script>
+    function setMemberFlag(flag) {
+        document.getElementById("memberFlag").value = flag;
+        
+        // 모든 버튼의 클래스를 초기화
+        document.querySelectorAll('.btn_tab').forEach(function (btn) {
+            btn.classList.remove('active');
+        });
+
+        //flag에 따라 버튼 active활성화 
+        var selectedBtn;
+        if (flag === 1) {
+            selectedBtn = document.querySelector('.btn_tab.t_per');
+        } else if (flag === 2) {
+            selectedBtn = document.querySelector('.btn_tab.t_com');
+        }
+
+        if (selectedBtn) {
+            selectedBtn.classList.add('active');
+        }
+
+        alert($("#memberFlag").val());
+    }
+</script>
+
 
 
 	<div id="sri_section" class="  ">
