@@ -401,7 +401,7 @@ googletag.cmd.push(function() {
 												아이디 저장 </label>
 										</span>
 
-									</div>
+									</div> 
 									<div class="login-form">
 										<div class="id-input-box">
 											<input type="text" id="id" name="id" class="txt_tool"
