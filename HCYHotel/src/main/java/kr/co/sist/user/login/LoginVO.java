@@ -10,6 +10,7 @@ import lombok.ToString;
 public class LoginVO {
 
 	private String id;
+	private String id_save;
 	private String password;
 	private String memberFlag;
 }

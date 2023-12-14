@@ -11,11 +11,11 @@
 				</div>
 				<div class="Su1_-privacy-menu-wrapper">
 					<div class="react-footer-privacy-menu">
-						<a href="#"
+						<a href="https://www.hotelscombined.co.kr/privacy"
 							class="ZT1E-anchor-reset react-footer-privacy-menu__link">개인
-							정보 보호 정책</a><a href="#"
+							정보 보호 정책</a><a href="https://www.hotelscombined.co.kr/privacy#trackingtools"
 							class="ZT1E-anchor-reset react-footer-privacy-menu__link">쿠키
-							정책</a><a href="#"
+							정책</a><a href="https://www.hotelscombined.co.kr/terms-of-use"
 							class="ZT1E-anchor-reset react-footer-privacy-menu__link">이용
 							약관</a><span class="react-footer-privacy-menu__copyright">©<!-- -->2023<!-- -->
 							<!-- -->HCYCombined

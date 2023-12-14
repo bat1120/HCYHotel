@@ -1,5 +1,8 @@
 package kr.co.sist.user.login;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,16 +25,26 @@ public class LoginService {
 		return ls;
 	}//getInstance
 	
+	public void setCookie(HttpServletResponse respons, String name,String value) {
+		Cookie flagCk = new Cookie(name,value);
+		flagCk.setMaxAge(60*60*24*30);
+		respons.addCookie(flagCk);
+	}//checkCookie
+	
+	public void removeCookie(HttpServletResponse respons, String name,String value) {
+		Cookie flagCk = new Cookie(name,value);
+		flagCk.setMaxAge(0);
+		respons.addCookie(flagCk);
+	}//checkCookie
+	
 	public boolean checkLogin(LoginVO lVO) {
 	    boolean flag = false;
 
 	    try {
-	    	System.out.println(lVO.getPassword());
 	        encryption = new Encryption();
 
 	        String enPassword = encryption.directEncryption(lVO.getPassword());
 	        lVO.setPassword(enPassword);
-	        System.out.println(enPassword);
 	        String loginId = LoginDAO.getInstance().selectCheckLogin(lVO);
 
 	        if (loginId != null) {
@@ -50,12 +63,10 @@ public class LoginService {
 	    boolean flag = false;
 
 	    try {
-	    	System.out.println(lVO.getPassword());
 	        encryption = new Encryption();
 
 	        String enPassword = encryption.directEncryption(lVO.getPassword());
 	        lVO.setPassword(enPassword);
-	        System.out.println(enPassword);
 	        String loginId = LoginDAO.getInstance().selectBusCheckLogin(lVO);
 
 	        if (loginId != null) {
