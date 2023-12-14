@@ -338,7 +338,7 @@ googletag.cmd.push(function() {
         document.querySelectorAll('.btn_tab').forEach(function (btn) {
             btn.classList.remove('active');
         });
-
+ 
         //flag에 따라 버튼 active활성화 
         var selectedBtn;
         if (flag === 1) {
