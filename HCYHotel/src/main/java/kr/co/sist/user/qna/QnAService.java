@@ -3,6 +3,8 @@ package kr.co.sist.user.qna;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.apache.ibatis.exceptions.PersistenceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -27,7 +29,7 @@ public class QnAService {
 		return list; 
 	}//searchWordQnA
 	
-	public QnADomain searchQnADetail( String questionCode ) {
+	public QnADomain searchQnADetail( String questionCode ){
 		
 		QnADomain qd=null;
 		
@@ -40,7 +42,7 @@ public class QnAService {
 		return qd;
 	}//searchQnADetail
 	
-	public void plusQnA( WriteQnAVO wqVO ) throws PersistenceException{
+	public void plusQnA( WriteQnAVO wqVO ){
 		
 		try {
 			
