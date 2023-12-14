@@ -30,11 +30,12 @@ public class JoinMemberService {
 	    boolean flag = false;
 
 	    try {
-	        String checkMem = JoinMemberDAO.getInstance().selectCheckMem(cmVO);
 
 	        encryption = new Encryption();
 	        String enTel = encryption.encryption(cmVO.getTel());
 	        cmVO.setTel(enTel);
+	        
+	        String checkMem = JoinMemberDAO.getInstance().selectCheckMem(cmVO);
 	        if (checkMem == null) {
 	            flag = true;
 	        }//end if
@@ -52,11 +53,11 @@ public class JoinMemberService {
 	    boolean flag = false;
 
 	    try {
-	        String checkBus = JoinMemberDAO.getInstance().selectCheckBus(cmVO);
 
 	        encryption = new Encryption();
 	        String enTel = encryption.encryption(cmVO.getTel());
 	        cmVO.setTel(enTel);
+	        String checkBus = JoinMemberDAO.getInstance().selectCheckBus(cmVO);
 	        if (checkBus == null) {
 	            flag = true;
 	        }//end if

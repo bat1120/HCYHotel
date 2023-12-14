@@ -62,12 +62,12 @@ public class LoginController {
 				session.setAttribute("id",lVO.getId());	
 				model.addAttribute("login","Y");
 				if("Y".equals(lVO.getId_save())) {
-					ls.setCookie(response, "idRememberFlag", "Y");
-					ls.setCookie(response, "id", lVO.getId());
+					ls.setCookie(response, "useridRememberFlag", "Y");
+					ls.setCookie(response, "userid", lVO.getId());
 					return "user/home/user_home";
 				}//if
-				ls.removeCookie(response, "idRememberFlag", "");
-				ls.removeCookie(response,"id", "");
+				ls.removeCookie(response, "useridRememberFlag", "");
+				ls.removeCookie(response,"userid", "");
 				return "user/home/user_home";
 				
 			}else {

@@ -44,7 +44,6 @@ public class FindPassService {
 	
 	public boolean changePass(ChangePassVO cpVO) {
 	    boolean flag = false;
-
 	    try {
 	        encryption = new Encryption();
 	        
@@ -53,7 +52,6 @@ public class FindPassService {
 	        
 	        cpVO.setPassword(enPassword);
 	        cpVO.setPasswordConfirm(enPasswordConfirm);
-
 
 	        int cnt = FindPassDAO.getInstance().updatePass(cpVO);
 	        if (cnt > 0) {
@@ -71,26 +69,23 @@ public class FindPassService {
 	
 	public boolean changeBusinessPass(ChangePassVO cpVO) {
 		 boolean flag = false;
-
-		    try {
-		        encryption = new Encryption();
+		 try {
+		     encryption = new Encryption();
 		        
-		        String enPassword = encryption.directEncryption(cpVO.getPassword());
-		        String enPasswordConfirm = encryption.directEncryption(cpVO.getPasswordConfirm());
+		     String enPassword = encryption.directEncryption(cpVO.getPassword());
+		     String enPasswordConfirm = encryption.directEncryption(cpVO.getPasswordConfirm());
 		        
-		        cpVO.setPassword(enPassword);
-		        cpVO.setPasswordConfirm(enPasswordConfirm);
-
-
-		        int cnt = FindPassDAO.getInstance().updatePassBusiness(cpVO);
-		        if (cnt > 0) {
-		            flag = true;
-		        }//end if
-		    } catch (Exception e) {
-		        // 예외 처리
-		        e.printStackTrace(); 
-		        flag = false; 
-		    }//end catch
+		     cpVO.setPassword(enPassword);
+		     cpVO.setPasswordConfirm(enPasswordConfirm);
+		     
+		     int cnt = FindPassDAO.getInstance().updatePassBusiness(cpVO);
+		     if (cnt > 0) {
+		         flag = true;
+		     }//end if
+		 } catch (Exception e) {
+		     e.printStackTrace(); 
+		     flag = false; 
+		 }//end catch
 
 		    return flag;
 	}//changeBusinessPass
