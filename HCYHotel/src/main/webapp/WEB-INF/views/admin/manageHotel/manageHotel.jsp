@@ -96,7 +96,7 @@
             <!-- Navbar End -->
 
 			<div class="bg-light rounded h-100 p-4">
-                            <h6 class="mb-4">일반 회원 관리</h6>
+                            <h6 class="mb-4">호텔관리</h6>
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>

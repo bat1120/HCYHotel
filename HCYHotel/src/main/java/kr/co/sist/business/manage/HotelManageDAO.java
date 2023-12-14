@@ -5,7 +5,7 @@ import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 
-import kr.co.sist.business.dao.MyBatiseHandler;
+import kr.co.sist.business.dao.MyBatiseHandlerBusiness;
 
 public class HotelManageDAO {
 
@@ -24,7 +24,7 @@ public class HotelManageDAO {
 	public List<String> selectHotelList(String id){
 		List<String> list=new ArrayList<String>();
 		
-		MyBatiseHandler mbh=MyBatiseHandler.getInstance();
+		MyBatiseHandlerBusiness mbh=MyBatiseHandlerBusiness.getInstance();
 		SqlSession ss=mbh.getMyBatisHandler(false);
 		list=ss.selectList("kr.co.sist.business.hotelMapper.searchHotel",id);
 		mbh.closeHandler(ss);
@@ -35,7 +35,7 @@ public class HotelManageDAO {
 //	public List<BusinessHotelDomain> searchBookingHotel(BusinessHotelVO bhVO){
 		public List<BusinessHotelDomain> selectBookingHotel(SearchHotelVO shVO){
 		List<BusinessHotelDomain> list=new ArrayList<BusinessHotelDomain>();
-		MyBatiseHandler mbh=MyBatiseHandler.getInstance();
+		MyBatiseHandlerBusiness mbh=MyBatiseHandlerBusiness.getInstance();
 		SqlSession ss=mbh.getMyBatisHandler(false);
 		list=ss.selectList("kr.co.sist.business.hotelMapper.searchReservation",shVO);
 		mbh.closeHandler(ss);
