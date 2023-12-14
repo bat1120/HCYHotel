@@ -170,15 +170,12 @@
 	<main class="page-container" id="mypage-review">
 		<!-- begin::subpage-intro -->
 		<form name="reviewListForm" id="reviewListForm" method="get">
-			<input type="hidden" id="page" name="page" value="1"> 
-			<input
+			<input type="hidden" id="page" name="page" value="1"> <input
 				type="hidden" id="searchSysCode" name="searchSysCode" value="GDMP">
 
-				<div class="page-component">
-						<h2 class="header-title">
-						나의 객실후기
-						</h2>
-				</div>
+			<div class="page-component">
+				<h2 class="header-title">나의 객실후기</h2>
+			</div>
 			<!-- end::subpage-intro -->
 			<!-- begin::subpage-body -->
 			<div class="subpage-body page-review">
@@ -191,10 +188,7 @@
 									<ul class="review-box">
 
 										<li>
-											<div class="review-item">
-
-												리뷰내용 들어와잇엇옹
-											</div>
+											<div class="review-item">리뷰내용 들어와잇엇옹</div>
 											<div class="review-rating">
 
 												<p class="rv-hotel">GLAD MAPO</p>
@@ -202,14 +196,14 @@
 												<p class="rv-point point10">5.0</p>
 												<!-- //클래스명 point0~10별점따라 이미지 변경됨 -->
 											</div>
-											
+
 										</li>
 
 									</ul>
 								</div>
 							</div>
 
-					<!-- 페이지네이션 있던 자리... -->
+							<!-- 페이지네이션 있던 자리... -->
 						</div>
 
 					</section>
@@ -224,7 +218,7 @@
 	</main>
 
 	<!-- footer -->
-	<jsp:include page="../../include/footer.jsp"/>
+	<jsp:include page="../../include/footer.jsp" />
 
 	<!-- page::script -->
 	<script type="text/javascript"

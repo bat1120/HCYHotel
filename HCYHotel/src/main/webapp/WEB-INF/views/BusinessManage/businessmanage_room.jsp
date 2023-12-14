@@ -1945,6 +1945,16 @@ th, td {
                     
                 });
             });
+            $("#newHotelBtn").click(function(){
+            	location.href="businessRomm_modify.do";
+            })
+            $("#roomModifyBtn").click(function(){
+            	var hid=$("#roomCodeHidden").val()
+            	var hidhotel=$("#hotelCodeHidden").val()
+            	var hidroom=$("#roomNameHidden").val()
+            	
+            	location.href="businessRoom_modify.do?roomcode="+hid+"&hotelcode="+hidhotel+"&roomname="+hidroom;
+            })
         });
     </script>
 
@@ -1983,7 +1993,10 @@ th, td {
 									<th><input type="button" value="수정"
 										class="btn btn-info btn-sm" id="roomModifyBtn"><input
 										type="hidden" value="${roomList.roomcode }"
-										id="roomCodeHidden"></th>
+										id="roomCodeHidden"><input
+										type="hidden" value="${roomList.roomname }"
+										id="roomNameHidden">
+										</th>
 								</tr>
 							</c:forEach>
 						</table>
