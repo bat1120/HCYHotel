@@ -300,7 +300,6 @@ xhr.send('');
 	rel="stylesheet"
 	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
 	crossorigin="anonymous">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 <style id="react-styles-dialog">
 @
@@ -310,6 +309,8 @@ keyframes CommonComponentsReactDialogSlideUp { 0% {
 }
 
 100
+
+
 
 
 
@@ -329,6 +330,8 @@ top
 
 
 
+
+
 :
 
 
@@ -338,7 +341,11 @@ top
 
 
 
+
+
 0
+
+
 
 
 
@@ -355,6 +362,8 @@ margin-top
 
 
 
+
+
 :
 
 
@@ -364,7 +373,11 @@ margin-top
 
 
 
+
+
 5vh
+
+
 
 
 
@@ -388,9 +401,13 @@ keyframes CommonComponentsReactDialogFloatingSlideUp { 0% {
 
 
 
+
+
 %
 {
 bottom
+
+
 
 
 
@@ -408,7 +425,11 @@ bottom
 
 
 
+
+
 0
+
+
 
 
 
@@ -432,9 +453,13 @@ keyframes CommonComponentsReactDialogFloatingSlideInFromRight { 0% {
 
 
 
+
+
 %
 {
 right
+
+
 
 
 
@@ -452,7 +477,11 @@ right
 
 
 
+
+
 0
+
+
 
 
 
@@ -476,9 +505,13 @@ keyframes CommonComponentsReactDialogFloatingSlideInFromLeft { 0% {
 
 
 
+
+
 %
 {
 left
+
+
 
 
 
@@ -496,7 +529,11 @@ left
 
 
 
+
+
 0
+
+
 
 
 
@@ -519,9 +556,13 @@ keyframes CommonComponentsReactDialogShadeFadeIn { 0% {
 
 
 
+
+
 %
 {
 background
+
+
 
 
 
@@ -539,6 +580,8 @@ background
 
 
 
+
+
 rgba
 
 
@@ -546,7 +589,11 @@ rgba
 
 
 
+
+
 (
+
+
 
 
 
@@ -568,6 +615,8 @@ rgba
 
 
 
+
+
 .6
 
 
@@ -577,7 +626,11 @@ rgba
 
 
 
+
+
 )
+
+
 
 
 
@@ -1080,14 +1133,7 @@ table {
 th, td {
 	border: 1px solid black; /* 테이블 셀의 테두리 스타일과 두께 설정 */
 	padding: 8px; /* 셀 안의 여백 설정 (예시로 추가한 스타일) */
-}
-
-.roomTable th {
-	width: 180px;
-}
-
-.roomTable td {
-	width: 180px;
+	text-align: center;
 }
 </style>
 <meta http-equiv="origin-trial"
@@ -1244,24 +1290,25 @@ th, td {
 								<div class="pRB0-nav-items">
 									<nav class="HtHs" aria-label="홈">
 										<ul class="HtHs-nav-list">
-											<li><a href="#" aria-label="호텔 검색 "
+											<li><a href="businessHotelMain.do" aria-label="호텔 검색 "
 												class="dJtn dJtn-expanded dJtn-mod-variant-accordion"
 												aria-current="false"><img
 													src="http://localhost/HCYHotel/common/business/img/hotelReservation.png"
-													style="padding-right: 12px; padding-left: 12px;">
+													style="padding-right: 12px; padding-left: 12px;"> <path
+														d="M175 170a5 5 0 0 1-5-5v-5H30v5a5 5 0 1 1-10 0v-43.092c0-8.176 3.859-15.462 10-20.027V65c0-13.785 11.215-25 25-25h90c13.785 0 25 11.215 25 25v36.98c6.093 4.613 10 11.922 10 19.928V165a5 5 0 0 1-5 5zM30 150h140v-10H30v10zm0-20h140v-8.092c0-7.342-5.486-13.707-12.762-14.806c-40.216-6.077-73.399-6.207-114.477 0C35.415 108.21 30 114.4 30 121.908V130zm120-34.027c2.877.382 9.581 1.381 10 1.467V65c0-8.271-6.729-15-15-15H55c-8.271 0-15 6.729-15 15v32.438c.418-.084 7.123-1.083 10-1.465V85c0-8.271 6.729-15 15-15h25a14.94 14.94 0 0 1 10 3.829A14.943 14.943 0 0 1 110 70h25c8.271 0 15 6.729 15 15v10.973zm-45-3.45c11.463.167 22.988.912 35 2.233V85c0-2.757-2.243-5-5-5h-25c-2.757 0-5 2.243-5 5v7.523zM65 80c-2.757 0-5 2.243-5 5v9.756c12.012-1.321 23.537-2.065 35-2.232V85c0-2.757-2.243-5-5-5H65z"></path>
+													</svg>
 													<div class="dJtn-menu-item-title">호텔예약 관리</div></a></li>
 											<li><a href="businessDiningMain.do" aria-label="항공권 검색 "
 												class="dJtn dJtn-expanded dJtn-mod-variant-accordion"
-												aria-current="false"><img
+												aria-current="page"><img
 													src="http://localhost/HCYHotel/common/business/img/dining.png"
 													style="padding-right: 12px; padding-left: 12px;"> <path
 														d="M140.448 177.069l-19.846-43.661c-2.877-6.328-7.998-11.612-12.447-14.676a1029.409 1029.409 0 0 1-14.935 12.983c-4.045 3.618-5.452 9.494-3.67 15.347l2.733 8.981a4.997 4.997 0 0 1-1.248 4.991l-10 10c-2.267 2.268-6.043 1.838-7.754-.851l-14.154-22.241l-10.592 10.592a5 5 0 1 1-7.071-7.07l10.593-10.593l-22.242-14.153c-2.695-1.716-3.112-5.493-.851-7.754l10-10a5 5 0 0 1 4.992-1.248l8.981 2.733c5.85 1.777 11.728.375 15.348-3.671c4.269-5.007 8.599-9.988 12.983-14.935c-3.063-4.449-8.349-9.571-14.676-12.447L22.931 59.552c-3.563-1.619-3.965-6.539-.705-8.712l11.53-7.687a15.083 15.083 0 0 1 11.333-2.213l60.319 12.364c6.006 1.33 14.836-3.512 20.984-9.246c6.775-6.625 13.831-12.567 25.684-17.738c5.899-2.573 12.876-1.07 17.773 3.828l.003.002c4.898 4.897 6.401 11.874 3.828 17.773c-5.171 11.853-11.111 18.909-17.735 25.682c-5.736 6.148-10.583 14.976-9.266 20.906l12.382 60.4a15.1 15.1 0 0 1-2.215 11.332l-7.687 11.53c-2.182 3.276-7.096 2.849-8.711-.704zm-24.66-65.169c5.789 4.467 10.925 10.784 13.918 17.369l16.123 35.472l2.697-4.045a5.034 5.034 0 0 0 .738-3.778L136.9 96.6a19.235 19.235 0 0 1-.445-3.891a1041.686 1041.686 0 0 1-20.667 19.191zm-49.416 28.799l12 18.857l3.471-3.471l-1.86-6.111c-2.938-9.652-.396-19.525 6.631-25.767l.077-.066c23.665-20.174 47.419-42.531 62.016-57.438c6.149-6.558 10.969-11.688 15.808-22.779c1.113-2.552-.165-5.136-1.733-6.703l-.003-.002c-1.567-1.568-4.151-2.846-6.704-1.734c-10.394 4.535-15.439 8.933-22.782 15.811c-15.335 15.027-37.539 38.676-57.433 62.013l-.067.076c-6.242 7.028-16.115 9.567-25.767 6.631l-6.111-1.859l-3.471 3.471l18.858 12l7.164-7.163a5 5 0 1 1 7.071 7.07l-7.165 7.164zM35.258 54.17l35.471 16.124c6.585 2.993 12.903 8.128 17.37 13.918a1045.845 1045.845 0 0 1 19.202-20.678a19.358 19.358 0 0 1-3.982-.452L43.081 50.735a5.039 5.039 0 0 0-3.778.738l-4.045 2.697z"></path>
 													</svg>
 													<div class="dJtn-menu-item-title">다이닝예약 관리</div></a></li>
 
-											<li><a href="business_room_modify.do"
-												aria-label="렌터카 검색 "
-												class="dJtn dJtn-expanded dJtn-mod-variant-accordion"
+											<li><a href="#" aria-label="렌터카 검색 "
+												class="dJtn dJtn-active dJtn-expanded dJtn-mod-variant-accordion"
 												aria-current="false"><img
 													src="http://localhost/HCYHotel/common/business/img/room.png"
 													style="padding-right: 12px; padding-left: 12px;"> <path
@@ -1269,7 +1316,7 @@ th, td {
 													</svg>
 													<div class="dJtn-menu-item-title">객실관리</div></a></li>
 											<li><a href="businessHotel.do" aria-label="렌터카 검색 "
-												class="dJtn dJtn-active dJtn-expanded dJtn-mod-variant-accordion"
+												class="dJtn dJtn-expanded dJtn-mod-variant-accordion"
 												aria-current="false"><img
 													src="http://localhost/HCYHotel/common/business/img/hotel.png"
 													style="padding-right: 12px; padding-left: 12px;"> <path
@@ -1912,74 +1959,100 @@ th, td {
 							<div role="button" class="dDYU-off-screen" tabindex="0"></div>
 						</div>
 					</div>
-					
-					
 					<script
 						src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-					<script>
+					<script type="text/javascript">
+        $(document).ready(function() {
+            $("#hotelSelect").change(function() {
+                var selectedValue = $(this).val();
+				alert("ASdfasdf");
+                $.ajax({
+                    url: "room_ajax.do",
+                    method: "GET",
+                    data: { typecode: selectedValue },
+                    dataType: "json",
+                    error: function(xhr) {
+                    	console.log(xhr); // 오류 콘솔에 출력
+                    },
+                    success: function(jsonObj) {
+                        console.log(jsonObj); // 콘솔에 응답 데이터 출력
+                        var output = "<select id='selectType'>";
+	                    if (jsonObj.dataLength == 0) {
+	                        output += "<option>타입이 없습니다</option>";
+	                    }
+	                    output += "<option>타입선택</option>"
+	                    $.each(jsonObj.data, function(ind, jsonTemp) {
+	                        output += "<option value='"+jsonTemp.typecode+"'>"+jsonTemp.typename+"</option>";
+	                    });
+	                        output += "</select>";
+	                        $("#output").html(output);
+	                        $("#selectType").change(function() {
+	                            var selectedType = $(this).val();
+
+	                            // 두 번째 AJAX 호출
+	                            $.ajax({
+	                                url: "second_ajax_call.do",
+	                                method: "GET",
+	                                data: { typecode: selectedType },
+	                                dataType: "json",
+	                                error: function(xhr, status, error) {
+	                                    console.error(error); // 오류 콘솔에 출력
+	                                },
+	                                success: function(secondJsonObj) {
+	                                	
+	                                    // 처리할 내용 작성
+	                                    var output2 = "<form id='frm' method='post' action='businessRoom_insert.do'><div class='mb-3'><label for='disabledTextInput' class='form-label'>타입명</label> <input type='text' id='typename' name='typename' class='form-control' readonly='readonly' value='" + secondJsonObj.typename + "'></div>";
+	                                    output2 += "<div class='mb-3'><label for='disabledTextInput' class='form-label'>가격</label> <input type='text' id='price' name='price' class='form-control' readonly='readonly' value='" + secondJsonObj.price + "'></div>";
+	                                    output2 += "<div class='mb-3'><label for='disabledTextInput' class='form-label'>추가금액</label> <input type='text' id='addprice' name='addprice' class='form-control' readonly='readonly' value='" + secondJsonObj.addprice + "'></div>";
+	                                    output2 += "<div class='mb-3'><label for='disabledTextInput' class='form-label'>기본인원</label> <input type='text' id='basiccapacity' name='basiccapacity' class='form-control' readonly='readonly' value='" + secondJsonObj.basiccapacity + "'></div>";
+	                                    output2 += "<div class='mb-3'><label for='disabledTextInput' class='form-label'>최대인원</label> <input type='text' id='maxcapacity' name='maxcapacity' class='form-control' readonly='readonly' value='" + secondJsonObj.maxcapacity + "'></div>";
+	                                    output2 += "<div class='mb-3'><label for='disabledTextInput' class='form-label'>객실정보</label> <input type='text' id='information' name='information' class='form-control' readonly='readonly' value='" + secondJsonObj.information + "'></div>";
+	                                    output2 += "<div class='mb-3'><label for='disabledTextInput' class='form-label'>어매니티</label> <input type='text' id='amenity' name='amenity' class='form-control' readonly='readonly' value='" + secondJsonObj.amenity + "'></div>";
+	                                    output2 += "<div class='mb-3'><label for='disabledTextInput' class='form-label'>어매니티</label> <input type='text' id='roomname' name='roomname' class='form-control' placeholder='호실'></div>";
+	                                    output2 += "<div class='mb-3'><label for='disabledTextInput' class='form-label'>서비스</label><select id='service' name='service'></select></div>";
+
+
+	                                    output2 += "<div class='mb-3'><input type='button' class='btn btn-primary' id='savebtn' name='savebtn' value='수정'>";
+	                                    output2 += "<input type='button' class='btn btn-primary' id='cancelbtn' name='cancelbtn' value='취소'></div></form>";
+	                                    $("#output2").html(output2);
+	                                    
+	                                    var sel=$("#service")[0];
+	                                    $.each(secondJsonObj.data2, function(ind, jsonTemp2) {
+	                                        // 각 option 태그를 생성하여 select 요소에 추가
+	                                        sel.options[ind]=new Option(  jsonTemp2.sname ,jsonTemp2.servicecode );
+	                                        option.setAttribute('name', 'servicecode');
+	                                    });
+	                                }
+	                            });
+	                        }); 
+                    }
+                  
+                    
+                });
+            });
+         
+        });
+        $(document).on("click", "#savebtn", function() {
+            $("#frm").submit();
+        });
+        </script>
+
+					<div class="mb-3">
+						<select id="hotelSelect">
+							<option>호텔선택</option>
+							<c:forEach var="hotellist" items="${hotellist }">
+								<option value="${hotellist.hotelcode }"><c:out
+										value="${hotellist.hotelname }" /></option>
+							</c:forEach>
+						</select>
+					</div>
 					
-				
-</script>
-<form id="frm" action="businessRoomType_update.do" method="post">
-
-    <legend>호텔등록</legend>
-    <div class="mb-3">
-      <label for="disabledTextInput" class="form-label">객실타입</label>
-      <input type="text" id="roomTypeName" name="roomTypeName" class="form-control" value="${rtid.typename }" readonly="readonly">
-    </div>
-  
-
-<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-	
-<script type="text/javascript">
-$(function(){
-$("#edit").click(function(){
-	
-    $("input, textarea").prop("readonly", false);
-    $("#edit").hide();
-    $("#complete").show();
-});
-});
-
-
-</script>
-    
-    <div class="mb-3">
-
-<label for="disabledTextInput" class="form-label">가격</label>
-      <input type="text" id="price" name="price" class="form-control" value="${rtid.price }" readonly="readonly">
-    </div>
-    <div class="mb-3">
-      <label for="disabledTextInput" class="form-label">추가요금</label>
-      <input type="text" id="addPrice" name="addPrice" class="form-control" value="${rtid.addprice }" readonly="readonly">
-    </div>
-    <div class="mb-3">
-      <label for="disabledTextInput" class="form-label">객실정보</label>
-      <input type="text" id="roomDes" name="roomDes" class="form-control" value="${rtid.information }" readonly="readonly">
-    </div>
-    <div class="mb-3">
-      <label for="disabledTextInput" class="form-label">기본인원수</label>
-      <input type="text" id="basic" name="basic" class="form-control" value="${rtid.basiccapacity }" readonly="readonly">
-    </div>
-    <div class="mb-3">
-      <label for="disabledTextInput" class="form-label">최대인원수</label>
-      <input type="text" id="max" name="max" class="form-control" value="${rtid.maxcapacity }" readonly="readonly">
-    </div>
-    <div class="mb-3">
-      <label for="disabledTextInput" class="form-label">어매니티</label>
-      <input type="text" id="amenity" name="amenity" class="form-control" value="${rtid.amenity }" readonly="readonly">
-    </div>
-    <input type="hidden" id="hotelcode" name="hotelcode">
-
-   <button type="button" class="btn btn-primary" id="edit">수정</button>
-    <button type="submit" class="btn btn-primary" id="complete" style="display: none;">완료</button>
-    <button type="button" class="btn btn-primary" id="cancel">취소</button>
-    <input type="hidden" id="typecode" name="typecode" value="${ rtid.typecode}">
-				
-			</form>
-					
+					<div class="mb-3" id="output">
+						
+					</div>
+					<div id="output2">
+						
+					</div>
 				</main>
 			</div>
 		</div>

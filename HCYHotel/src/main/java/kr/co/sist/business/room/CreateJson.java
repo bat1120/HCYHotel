@@ -52,4 +52,49 @@ public class CreateJson {
       this.jsonObj.put("data", this.jsonArr);
       return this.jsonObj;
    }
+   
+   public JSONObject roomType(String hotelcode) {
+	   List<RoomTypeCodeDomain> list = BusinessRoomModifyDAO.getInstance().selectRoomTypeCode(hotelcode);
+	    JSONObject json = new JSONObject();
+	    JSONArray jsonArray = new JSONArray();
+	    System.out.println(list);
+	    for (RoomTypeCodeDomain roomType : list) {
+	        JSONObject roomTypeJson = new JSONObject();
+	        roomTypeJson.put("typename", roomType.getTypename());
+	        roomTypeJson.put("typecode", roomType.getTypecode());
+	        // 나머지 필드도 유사하게 추가해주세요.
+
+	        jsonArray.add(roomTypeJson);
+	    }
+
+	    json.put("data", jsonArray);
+
+	    return json;
+   }
+   public JSONObject roomTypeInfo(String typecode) {
+	   RoomTypeInfoDomain rtid=BusinessRoomModifyDAO.getInstance().selectRoomTypeinfo(typecode);
+	   List<ServiceDomain> list=BusinessRoomModifyDAO.getInstance().selectService();
+	   JSONObject json=new JSONObject();
+	   JSONArray jsonArray = new JSONArray();
+	   System.out.println(list);
+	    for (ServiceDomain sd : list) {
+	        JSONObject roomTypeJson = new JSONObject();
+	        roomTypeJson.put("servicecode", sd.getServicecode());
+	        roomTypeJson.put("sname", sd.getSname());
+	        // 나머지 필드도 유사하게 추가해주세요.
+
+	        jsonArray.add(roomTypeJson);
+	    }
+	   json.put("typename", rtid.getTypename());
+	   json.put("amenity", rtid.getAmenity());
+	   json.put("information", rtid.getInformation());
+	   json.put("typecode", rtid.getTypecode());
+	   json.put("price", rtid.getPrice());
+	   json.put("addprice", rtid.getAddprice());
+	   json.put("basiccapacity", rtid.getBasiccapacity());
+	   json.put("maxcapacity", rtid.getMaxcapacity());
+	   json.put("data2", jsonArray);
+	   
+	   return json;
+   }
 }
