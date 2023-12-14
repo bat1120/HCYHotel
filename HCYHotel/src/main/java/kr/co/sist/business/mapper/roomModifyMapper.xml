@@ -37,4 +37,13 @@ select typename,price,basiccapacity, maxcapacity, typecode
 from roomtype
 where hotelcode=#{hotelcode}
 </select>
+<insert id="insertRoomType" parameterType="rtVO">
+  insert into roomtype(typecode, hotelcode, typename, price, addprice, basiccapacity, maxcapacity, amenity, information)
+values('T'||to_char(lpad(seq_roomtype.nextval, 6, '0')),#{hotelcode},#{typename},#{price},#{addprice},#{basiccapacity},#{maxcapacity},#{amenity},#{information})
+</insert>
+<select id="selectRoomTypeInfo" resultType="rtid" parameterType="String">
+select typename, price, addprice, basiccapacity, maxcapacity, amenity, information
+from roomtype
+where typecode=#{typecode}
+</select>
 </mapper>

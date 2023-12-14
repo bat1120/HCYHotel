@@ -27,42 +27,91 @@ public class JoinMemberService {
 	}//getInstance
 	
 	public boolean checkMem(CheckMemberVO cmVO) {
-		boolean flag=false;
-		System.out.println(cmVO);
-		String checkMem=JoinMemberDAO.getInstance().selectCheckMem(cmVO);
-		
-		if(checkMem==null) {
-			flag=true;
-		}//end if
-		return flag;
+	    boolean flag = false;
+
+	    try {
+
+	        encryption = new Encryption();
+	        String enTel = encryption.encryption(cmVO.getTel());
+	        cmVO.setTel(enTel);
+	        
+	        String checkMem = JoinMemberDAO.getInstance().selectCheckMem(cmVO);
+	        if (checkMem == null) {
+	            flag = true;
+	        }//end if
+	    } catch (Exception e) {
+	        // 예외 처리
+	        e.printStackTrace(); // 또는 로깅 등
+	        flag = false; // 예외 발생 시 체크 실패로 처리
+	    }//end catch
+
+	    return flag;
 	}//checkMem
+
 	
 	public boolean checkBus(CheckMemberVO cmVO) {
-		boolean flag=false;
-		
-		String checkBus=JoinMemberDAO.getInstance().selectCheckBus(cmVO);
-		if(checkBus==null) {
-			flag=true;
-		}//end if
-		return flag;
+	    boolean flag = false;
+
+	    try {
+
+	        encryption = new Encryption();
+	        String enTel = encryption.encryption(cmVO.getTel());
+	        cmVO.setTel(enTel);
+	        String checkBus = JoinMemberDAO.getInstance().selectCheckBus(cmVO);
+	        if (checkBus == null) {
+	            flag = true;
+	        }//end if
+	    } catch (Exception e) {
+	        // 예외 처리
+	        e.printStackTrace(); // 또는 로깅 등
+	        flag = false; // 예외 발생 시 체크 실패로 처리
+	    }//end catch
+
+	    return flag;
 	}//checkBus
 	
-	public void plusMem(JoinMemberVO jmVO) throws NoSuchAlgorithmException, UnsupportedEncodingException, GeneralSecurityException {
-		
-		System.out.println(jmVO.getPassword());
-		
-		String enPassword=encryption.directEncryption(jmVO.getPassword());
-		
-		jmVO.setPassword(enPassword);
-//		System.out.println(enPassword);
-		JoinMemberDAO.getInstance().insertMem(jmVO);
-		
-	}//plusMember
+	public void plusMem(JoinMemberVO jmVO) {
+	    try {
+//	        System.out.println("1111service~~~~~~~~~~~~~~~" + jmVO.getPassword());
+
+	        encryption = new Encryption();
+	        String enPassword = encryption.directEncryption(jmVO.getPassword());
+	        String enTel=encryption.encryption(jmVO.getTel());
+	        jmVO.setTel(enTel);
+	        jmVO.setPassword(enPassword);
+
+//	        System.out.println("222service~~~~~~~~~~~~~~~" + jmVO.getPassword());
+
+	        JoinMemberDAO.getInstance().insertMem(jmVO);
+	    } catch (Exception e) {
+	        // 예외 처리
+	        e.printStackTrace(); // 또는 로깅 등
+	        throw new RuntimeException("회원가입 중 오류가 발생했습니다.", e);
+	    }//end catch
+	}//plusMem
+
+
 	
 	public void plusBus(JoinMemberVO jmVO) {
-		JoinMemberDAO.getInstance().insertBus(jmVO);
 		
-	}//plusMember
+		try {
+//	        System.out.println("1111service~~~~~~~~~~~~~~~" + jmVO.getPassword());
+
+	        encryption = new Encryption();
+	        String enPassword = encryption.directEncryption(jmVO.getPassword());
+	        String enTel=encryption.encryption(jmVO.getTel());
+	        jmVO.setTel(enTel);
+	        jmVO.setPassword(enPassword);
+
+//	        System.out.println("222service~~~~~~~~~~~~~~~" + jmVO.getPassword());
+			
+			JoinMemberDAO.getInstance().insertBus(jmVO);
+		}catch(Exception e) {
+			e.printStackTrace();
+			throw new RuntimeException("회원가입 중 오류가 발생했습니다",e);
+		}
+		
+	}//plusBus
 	
 	public boolean checkIdDup(String id) {
 		boolean flag=false;

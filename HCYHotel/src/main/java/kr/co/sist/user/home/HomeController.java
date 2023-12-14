@@ -24,6 +24,6 @@ public class HomeController {
 	public String home() {
 		return "user/home/user_home"; 
 	}//home
-	
+	 
 	
 }

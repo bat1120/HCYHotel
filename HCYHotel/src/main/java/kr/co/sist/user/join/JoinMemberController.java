@@ -82,16 +82,17 @@ public class JoinMemberController {
 	public String idDupBusiness(String id, Model model) {
 		JoinMemberService jms = JoinMemberService.getInstance();
 		if (!jms.checkIdDupBusiness(id)) {
-			System.out.println("중복된 아이디"+id);
+//			System.out.println("중복된 아이디"+id);
 			return "중복"; // 중복된 아이디
 		}//end if
-		System.out.println("사용가능"+id);
+//		System.out.println("사용가능"+id);
 		return "사용가능"; // 중복되지 않은 아이디
 	}//idDupBusiness
 	
 	
 	@PostMapping("/user_join.do")
-	public String joinMemberInsert(JoinMemberVO jmVO,Model model) throws NoSuchAlgorithmException, UnsupportedEncodingException, GeneralSecurityException {
+	public String joinMemberInsert(JoinMemberVO jmVO,Model model)  {
+		
 		JoinMemberService.getInstance().plusMem(jmVO);
 		
 		// 회원가입 성공 메시지를 설정

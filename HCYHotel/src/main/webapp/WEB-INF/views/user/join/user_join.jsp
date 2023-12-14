@@ -229,14 +229,15 @@
           $("#msg_cell").hide();
         }
         
-        // 이메일 유효성 검사
-        if (!/^[a-zA-Z]+@[a-zA-Z]+/.test(emailValue)) {
+    	 // 이메일 유효성 검사
+        if (!/^[a-zA-Z0-9]+@[a-zA-Z]+/.test(emailValue)) {
           $("#sms_msg_email1").show();
           event.preventDefault();
           return;
         } else {
           $("#sms_msg_email1").hide();
         }
+
 
         // 전체 동의 및 필수 약관 동의 검사
         if (!agreeAllChecked && (!agree1Checked || !agree2Checked)) {

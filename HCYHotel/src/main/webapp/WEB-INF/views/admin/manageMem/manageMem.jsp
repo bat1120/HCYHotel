@@ -7,7 +7,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>호텔관리</title>
+    <title>일반 회원 관리</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
