@@ -357,7 +357,7 @@ googletag.cmd.push(function() {
 
 
 
-	<div id="sri_section" class="  ">
+	<div id="sri_section" class="">
 		<div id="sri_wrap">
 			<div id="content">
 
