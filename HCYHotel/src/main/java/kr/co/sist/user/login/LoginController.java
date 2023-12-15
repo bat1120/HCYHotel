@@ -26,21 +26,18 @@ public class LoginController {
 		
 		System.out.println(idRememberFlag);
 		System.out.println(id);
-		
+		LoginService ls=LoginService.getInstance();
+		model.addAttribute("idRememberFlag","N");
+		model.addAttribute("busidRememberFlag","N");
 		if("Y".equals(idRememberFlag)) {
 			model.addAttribute("idRememberFlag",idRememberFlag);
 			model.addAttribute("id",id);
-			return "user/login/user_login";
-		}else if("Y".equals(busidRememberFlag)) {
+		}
+		if("Y".equals(busidRememberFlag)) {
 			model.addAttribute("busidRememberFlag",busidRememberFlag);
 			model.addAttribute("busid",busid);
-			return "user/login/user_login";
 		}
-		LoginService ls=LoginService.getInstance();
-		ls.setCookie(respons,"useridRememberFlag","N");
-		ls.setCookie(respons,"busidRememberFlag","N");
-		model.addAttribute("idRememberFlag","N");
-		model.addAttribute("busidRememberFlag","N");
+		
 		return "user/login/user_login";
 	}//goLogin
 	

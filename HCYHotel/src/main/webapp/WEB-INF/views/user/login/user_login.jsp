@@ -339,19 +339,32 @@ googletag.cmd.push(function() {
             btn.classList.remove('active');
         });
  
-        //flag에 따라 버튼 active활성화 
+        // flag에 따라 버튼 active 활성화 
         var selectedBtn;
-        if (flag === 1) {
+        if (flag == 1) {
             selectedBtn = document.querySelector('.btn_tab.t_per');
-        } else if (flag === 2) {
+            if(${idRememberFlag=='Y'}){
+            $("#id_save").attr("checked","checked");
+                $("#id").val('${id}')
+            }else{
+                $("#id_save").removeAttr("checked");
+                $("#id").val('')
+            }//else
+        } else if (flag == 2) {
             selectedBtn = document.querySelector('.btn_tab.t_com');
-        }
+        	if(${busidRememberFlag=='Y'}){
+                $("#id_save").attr("checked",'checked');
+                $("#id").val('${busid}')
+                }else{
+                $("#id_save").removeAttr("checked");
+                $("#id").val('')
+                }//else
+        }//else if
 
         if (selectedBtn) {
             selectedBtn.classList.add('active');
         }
 
-        alert($("#memberFlag").val());
     }
 </script>
 
