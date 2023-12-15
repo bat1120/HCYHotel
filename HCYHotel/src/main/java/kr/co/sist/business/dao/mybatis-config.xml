@@ -29,6 +29,12 @@
  <typeAlias type="kr.co.sist.business.diningregister.DiningSearchDomain" alias="dsd"/>
  <typeAlias type="kr.co.sist.business.diningregister.BusinessDiningDomain" alias="bdd"/>
  <typeAlias type="kr.co.sist.business.dining.BusinessDiningDomain" alias="bdd2"/>
+ <typeAlias type="kr.co.sist.business.dining.BusinessHotelDomain" alias="bhd2"/>
+ <typeAlias type="kr.co.sist.business.dining.DiningVO" alias="dVO"/>
+ <typeAlias type="kr.co.sist.business.dining.FileDomain" alias="fd"/>
+ <typeAlias type="kr.co.sist.business.dining.DiningDomain" alias="dd"/>
+ <typeAlias type="kr.co.sist.business.dining.DiningUpdateVO" alias="duVO"/>
+ <typeAlias type="kr.co.sist.business.dining.FileVO" alias="fVO2"/>
  <typeAlias type="kr.co.sist.business.diningschedule.DiningSearchVO" alias="dsVO"/>
  <typeAlias type="kr.co.sist.business.diningschedule.DiningScheduleListDomain" alias="dsld"/>
 </typeAliases>

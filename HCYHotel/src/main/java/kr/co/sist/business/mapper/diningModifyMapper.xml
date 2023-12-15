@@ -5,17 +5,50 @@
 <mapper namespace="kr.co.sist.business.diningModifyMapper">
 
 <select id="selectDining" resultType="bdd2" parameterType="String">
-SELECT h.hotelname AS hotel, d.diningname AS dining, ROUND(AVG(r.rating), 2) AS rating_avg, COUNT(b.bookingcode) AS ppl,h.hotelcode,d.diningcode
+SELECT h.hotelname AS hotel, d.diningname AS dining, h.hotelcode, d.diningcode,
+    ROUND(AVG(r.rating), 2) AS rating_avg, COUNT(b.bookingcode) AS ppl
 FROM hotel h
-LEFT JOIN dining d ON h.hotelcode = d.hotelcode
+JOIN dining d ON h.hotelcode = d.hotelcode
 LEFT JOIN diningschedule s ON d.diningcode = s.diningcode
 LEFT JOIN diningbooking b ON s.schedulecode = b.schedulecode
 LEFT JOIN diningreview r ON b.bookingcode = r.bookingcode
-WHERE b.bookingdate BETWEEN SYSDATE - 30 AND SYSDATE
-AND h.id = #{id}
-GROUP BY h.hotelname, d.diningname,h.hotelcode,d.diningcode
-ORDER BY h.hotelname, d.diningname,h.hotelcode,d.diningcode
+WHERE h.id = #{id}
+GROUP BY h.hotelname, d.diningname, h.hotelcode, d.diningcode
 </select>
-
-
+<select id="selectHotel" resultType="bhd2" parameterType="String">
+select hotelcode,hotelname
+from hotel
+where id=#{id}
+</select>
+<insert id="insertDining" parameterType="dVO">
+insert into dining(diningcode, hotelcode, diningname, capacity, operatingtime, information, description, inputdate)
+values('D'||to_char(lpad(seq_dining.nextval, 6, '0')),#{hotelcode},#{diningname},#{capacity},#{operatingtime},#{information},#{description},sysdate)
+</insert>
+<select id="searchDiningcode" resultType="String">
+SELECT diningcode FROM (SELECT diningcode FROM dining ORDER BY diningcode DESC) WHERE ROWNUM = 1
+</select>
+<insert id="insertFile" parameterType="fVO2">
+insert into infofile(filecode,diningcode,filename)
+values('F'||to_char(lpad(seq_filecode.nextval, 6, '0')),#{diningcode},#{filename})
+</insert>
+<select id="selectDiningInfo" resultType="dd" parameterType="String">
+select diningcode, hotelcode, diningname, operatingtime, capacity, information, description
+from dining
+where diningcode=#{dinincode}
+</select>
+<select id="selectFilename" resultType="fd" parameterType="String">
+select filename,filecode
+from infofile
+where diningcode=#{diningcode}
+AND filename NOT LIKE '%pdf%'
+</select>
+<update id="updateDining" parameterType="duVO">
+update dining
+set diningname=#{diningname}
+, operatingtime=#{operatingtime}
+, capacity=#{capacity}
+, information=#{information}
+, description=#{description}
+where diningcode=#{diningcode}
+</update>
 </mapper>
