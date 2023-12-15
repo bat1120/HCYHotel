@@ -38,6 +38,26 @@ public class BusinessDiningScheduleModifyDAO {
 		
 		return list;
 	}
+	public void insertDiningSchedule(DiningScheduleVO dsVO) {
+		MyBatiseHandlerBusiness mbh=MyBatiseHandlerBusiness.getInstance();
+		SqlSession ss=mbh.getMyBatisHandler(true);
+		ss.insert("kr.co.sist.business.diningScheduleMapper.insertSchedule",dsVO);
+		mbh.closeHandler(ss);
+	}
+	public DiningScheduleInfoDomain selectSchedule(String schedulecode) {
+		MyBatiseHandlerBusiness mbh=MyBatiseHandlerBusiness.getInstance();
+		SqlSession ss=mbh.getMyBatisHandler(true);
+		DiningScheduleInfoDomain dsid=ss.selectOne("kr.co.sist.business.diningScheduleMapper.selectSchedule2",schedulecode);
+		mbh.closeHandler(ss);
+		return dsid;
+	}
+	public void updateSchedule(DiningScheduleVO dsVO) {
+		MyBatiseHandlerBusiness mbh=MyBatiseHandlerBusiness.getInstance();
+		SqlSession ss=mbh.getMyBatisHandler(true);
+		int cnt=ss.update("kr.co.sist.business.diningScheduleMapper.updateSchedule",dsVO);
+		System.out.println(cnt);
+		mbh.closeHandler(ss);
+	}
 //	public static void main(String[] args) {
 //		BusinessDiningScheduleModifyDAO bdsmDAO=new BusinessDiningScheduleModifyDAO();
 //		DiningSearchVO dsVO =new DiningSearchVO();
