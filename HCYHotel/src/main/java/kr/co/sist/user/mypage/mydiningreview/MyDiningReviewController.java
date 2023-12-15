@@ -16,10 +16,7 @@ public class MyDiningReviewController {
 	@GetMapping("user/review/myreview/mydiningreview_list.do")
 	public String myDiningReviewList( Model model ) {
 		
-		List<ReviewDomain> mydrd=mdrs.searchDiningReview();
-		
-		model.addAttribute("diningReivewList", mydrd);
-		
+		model.addAttribute("diningReviewList", mdrs.searchDiningReview());
 		
 		return "user/review/myreview/mydiningreview_list";
 	}//myDiningReviewList

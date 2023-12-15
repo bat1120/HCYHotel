@@ -15,4 +15,5 @@ and ds.diningcode(+)=d.diningcode
 and d.hotelcode(+)=h.hotelcode
 </select>
 
+
 </mapper>

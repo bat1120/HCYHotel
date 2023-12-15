@@ -153,16 +153,16 @@
 	
 	</script>
 	
-<div id="content-main">
+<div id="content-main" class="content-main">
 <div >
-<h3 class="content-main-title" style="margin-top:7%;">나의 다이닝리뷰</h3>
-<table>
-<c:forEach var="diningReviewList" varStatus="i" items=${ diningReviewList }>
-<tr>
-	<td colspan="3"><c:out value="${ diningReviewList.diningName }" /></td>
-	<td><c:out value="${ diningReviewList.hotelName }"/></td>
-	<td><c:out value="${ diningReviewList.rating }"/></td>
-	<td rowspan="2"><input type="button" class="btn btn-info btn-sm" value="삭제"/></td>
+<h3 class="content-main-title" style="margin-top:7%; ">나의 다이닝리뷰</h3>
+<table class="board-list" style="width: 1200px; margin-left:20%; margin-top:100px;">
+<c:forEach var="diningReviewList" varStatus="i" items="${ diningReviewList }">
+<tr style="font-family: ; color: ; ">
+	<td colspan="3">다이닝 <c:out value="${ diningReviewList.diningName }" /></td>
+	<td>호텔 <c:out value="${ diningReviewList.hotelName }"/></td>
+	<td>내 평점 <c:out value="${ diningReviewList.rating }"/></td>
+	<td rowspan="2"><input type="button" class="btn btn-dark btn-sm" value="삭제"/></td>
 </tr>
 <tr style="text-align: left;">
 	<td colspan="3"><c:out value="${ diningReviewList.content }"/></td>
@@ -172,92 +172,9 @@
 </c:forEach>
 </table>
 
-<%-- 
-<table class="board-list">
-<colgroup>
-<col style="width: 80px;">
-<col style="width: 300px;">
-<col style="width: 300px;">
-<col style="width: 80px;">
-</colgroup>
-<tr style="text-align: left;">
-	<td colspan="3"><c:out value="다이닝이름" /></td>
-	<td><c:out value="호텔이름"/></td>
-	<td><c:out value="평점."/></td>
-	<td rowspan="2"><input type="button" class="btn btn-info btn-sm" value="삭제"/></td>
-</tr>
-<tr style="text-align: left;">
-	<td colspan="3">내용 떠야댐</td>
-	<td></td>
-	<td></td>
-</tr>	
-<tr style="text-align: left;">
-	<td colspan="3"><c:out value="다이닝이름" /></td>
-	<td><c:out value="호텔이름"/></td>
-	<td><c:out value="평점."/></td>
-	<td rowspan="2"><input type="button" class="btn btn-info btn-sm" value="삭제"/></td>
-</tr>
-<tr style="text-align: left;">
-	<td colspan="3">내용 떠야댐</td>
-	<td></td>
-	<td></td>
-</tr>
-</table> --%>
 </div>
 </div>
-	<%-- <!-- content-main : 본문 페이지 영역 // -->
-	<div id="content-main" class="content-main">
-		<div class="common-content customer-notice">
-			<h3 class="content-main-title" style="margin-top:7%;">나의 다이닝 리뷰</h3>
-		
-			<table border="1" class="board-list">
-				<caption>
-					<strong>다이닝 리뷰 목록</strong>
-				</caption>
-				<colgroup>
-					<col style="width: 120px;">
-					<col style="width: 150px;">
-					<col style="width: 150px;">
-					<col style="width: 100px;">
-				</colgroup>
-			
-				<tbody>
-				<c:forEach var="qnaList" varStatus="i" items="${ qnaList }">
-					<tr >
-						<td colspan="3"><c:out value="평점"/></td>
-						<td><c:out value="호텔이름"/></td>
-						<td><c:out value="객실타입"/></td>
-						<td rowspan="2"><c:out value="버튼들어가는자리"/></td>
-					</tr>
-					<tr>
-						<td colspan="3" style="text-align: center;"><c:out value="내용나오는 자리"/></td>
-						<td></td>
-						<td></td>
-					</tr>
-				</c:forEach>
-				</tbody>
-			</table>
-			<form id="questionCodeFrm" action="user_qna_detail.do" method="get">
-			<input type="hidden" name="questionCode" id="questionCode"/>
-			</form>
-			<!-- <div class="paging-container">
-				<div class="paging-common">
-					<a href="javascript:;" class="page-btn first gray">처음</a> <a
-						href="javascript:;" class="page-btn prev gray">이전</a> <span
-						class="paging-num"><a href="javascript:;" class="on"> 1
-					</a><a href="javascript:;" class=""> 2 </a><a href="javascript:;"
-						class=""> 3 </a><a href="javascript:;" class=""> 4 </a><a
-						href="javascript:;" class=""> 5 </a></span> <a href="javascript:;"
-						class="page-btn next">다음</a> <a href="javascript:;"
-						class="page-btn last">마지막</a>
-				</div>
-			</div> -->
-		</div>
-	</div>
-	<!-- // content-main -->
-	</section> --%>
-
-
+	
 
 	<!-- footer -->
 	<jsp:include page="../../include/footer.jsp" />

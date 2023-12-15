@@ -36,7 +36,6 @@ public class LoginController {
 			model.addAttribute("busid",busid);
 			return "user/login/user_login";
 		}
-		System.out.println("asdfasdfasdfsa");
 		LoginService ls=LoginService.getInstance();
 		ls.setCookie(respons,"useridRememberFlag","N");
 		ls.setCookie(respons,"busidRememberFlag","N");
