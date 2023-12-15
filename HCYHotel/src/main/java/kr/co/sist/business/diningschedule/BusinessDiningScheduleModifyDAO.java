@@ -28,6 +28,16 @@ public class BusinessDiningScheduleModifyDAO {
 		
 		return list;
 	}
+	public List<DiningNameListDomain> selectDining(String hotelcode){
+		List<DiningNameListDomain> list=new ArrayList<DiningNameListDomain>();
+		
+		MyBatiseHandlerBusiness mbh=MyBatiseHandlerBusiness.getInstance();
+		SqlSession ss=mbh.getMyBatisHandler(false);
+		list=ss.selectList("kr.co.sist.business.diningScheduleMapper.selectDining",hotelcode);
+		mbh.closeHandler(ss);
+		
+		return list;
+	}
 //	public static void main(String[] args) {
 //		BusinessDiningScheduleModifyDAO bdsmDAO=new BusinessDiningScheduleModifyDAO();
 //		DiningSearchVO dsVO =new DiningSearchVO();
