@@ -75,7 +75,7 @@ public class LoginController {
 				}//if
 				ls.removeCookie(response, "busidRememberFlag", "");
 				ls.removeCookie(response,"busid", "");
-				return "user/home/user_home";
+				return "BusinessManage/businessmanage_hotel_main";
 				
 			}else {
 				model.addAttribute("loginerror","로그인 정보를 다시 확인해주세요");
