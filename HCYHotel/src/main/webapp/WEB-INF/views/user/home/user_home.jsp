@@ -8,6 +8,8 @@
 <meta name="r9-built" content="20231129.060225">
 <meta name="r9-rendered" content="20231130.081747.+00:00">
 <meta name="r9-build-number" content="40">
+<!-- bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <link rel="stylesheet"
 	href="https://content.r9cdn.net/res/combined.css?v=259002787c91da6abc39a703b751ab6c5a776d3d-14pre-flipped&amp;cluster=5">
 <link rel="stylesheet"
@@ -884,6 +886,7 @@ sentinel {
 	display: none;
 }
 </style>
+
 <style type="text/css" nonce="">
 iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 	{
@@ -990,6 +993,18 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 								</div>
 							</div>
 							<div class="fv-6-right-section">
+							 <select class="form-select" aria-label="Default select example" style="width:180px; text-align:center">
+								  <option value="selected">호텔 예약내역</option>
+								  <option value="1">다이닝 예약내역</option>
+								  <option value="2">회원정보 관리</option>
+								  <option value="3">나의 호텔 후기</option>
+								  <option value="4">나의 다이닝 후기</option>
+								  <option value="5">나의 문의내역</option>
+							</select>
+							
+							
+							
+							
 								<div>
 									<div
 										class="common-layout-react-HeaderAccountWrapper theme-dark account--collapsible">
@@ -1018,6 +1033,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 												<div class="menu-label__wrapper" >
 													<span class="menu-label">
 													<form id="logoutForm" action="/HCYHotel/user_logout.do" method="post">
+													 
 													<button role="button"
 															class="Iqt3 Iqt3-mod-bold Button-No-Standard-Style Iqt3-mod-variant-outline Iqt3-mod-theme-none Iqt3-mod-shape-rounded-small Iqt3-mod-shape-mod-default Iqt3-mod-spacing-default Iqt3-mod-size-default"
 															tabindex="0" aria-disabled="false">
@@ -1082,7 +1098,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 														<path
 															d="M140.448 177.069l-19.846-43.661c-2.877-6.328-7.998-11.612-12.447-14.676a1029.409 1029.409 0 0 1-14.935 12.983c-4.045 3.618-5.452 9.494-3.67 15.347l2.733 8.981a4.997 4.997 0 0 1-1.248 4.991l-10 10c-2.267 2.268-6.043 1.838-7.754-.851l-14.154-22.241l-10.592 10.592a5 5 0 1 1-7.071-7.07l10.593-10.593l-22.242-14.153c-2.695-1.716-3.112-5.493-.851-7.754l10-10a5 5 0 0 1 4.992-1.248l8.981 2.733c5.85 1.777 11.728.375 15.348-3.671c4.269-5.007 8.599-9.988 12.983-14.935c-3.063-4.449-8.349-9.571-14.676-12.447L22.931 59.552c-3.563-1.619-3.965-6.539-.705-8.712l11.53-7.687a15.083 15.083 0 0 1 11.333-2.213l60.319 12.364c6.006 1.33 14.836-3.512 20.984-9.246c6.775-6.625 13.831-12.567 25.684-17.738c5.899-2.573 12.876-1.07 17.773 3.828l.003.002c4.898 4.897 6.401 11.874 3.828 17.773c-5.171 11.853-11.111 18.909-17.735 25.682c-5.736 6.148-10.583 14.976-9.266 20.906l12.382 60.4a15.1 15.1 0 0 1-2.215 11.332l-7.687 11.53c-2.182 3.276-7.096 2.849-8.711-.704zm-24.66-65.169c5.789 4.467 10.925 10.784 13.918 17.369l16.123 35.472l2.697-4.045a5.034 5.034 0 0 0 .738-3.778L136.9 96.6a19.235 19.235 0 0 1-.445-3.891a1041.686 1041.686 0 0 1-20.667 19.191zm-49.416 28.799l12 18.857l3.471-3.471l-1.86-6.111c-2.938-9.652-.396-19.525 6.631-25.767l.077-.066c23.665-20.174 47.419-42.531 62.016-57.438c6.149-6.558 10.969-11.688 15.808-22.779c1.113-2.552-.165-5.136-1.733-6.703l-.003-.002c-1.567-1.568-4.151-2.846-6.704-1.734c-10.394 4.535-15.439 8.933-22.782 15.811c-15.335 15.027-37.539 38.676-57.433 62.013l-.067.076c-6.242 7.028-16.115 9.567-25.767 6.631l-6.111-1.859l-3.471 3.471l18.858 12l7.164-7.163a5 5 0 1 1 7.071 7.07l-7.165 7.164zM35.258 54.17l35.471 16.124c6.585 2.993 12.903 8.128 17.37 13.918a1045.845 1045.845 0 0 1 19.202-20.678a19.358 19.358 0 0 1-3.982-.452L43.081 50.735a5.039 5.039 0 0 0-3.778.738l-4.045 2.697z"></path></svg>
 													<div class="dJtn-menu-item-title">다이닝</div></a></li>
-											<li><a href="/cars" aria-label="렌터카 검색 "
+											<li><a href="BusinessManage/businessmanage_hotel_main.do" aria-label="렌터카 검색 "
 												class="dJtn dJtn-expanded dJtn-mod-variant-accordion"
 												aria-current="false"><svg viewBox="0 0 200 200"
 														width="1.25em" height="1.25em"
@@ -1707,7 +1723,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 									</div>
 								</div>
 								<div class="C4-Q-search-form">
-									<div id="main-search-form">
+									<div class="C4-Q-search-form" style="height:50px;">
 										<div class="J_T2">
 											<div class="J_T2-header"></div>
 											<div
@@ -1858,6 +1874,14 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 					<div class="Seuf"></div>
 					<div class="Seuf">
 						<section class="bDbo bDbo-spacing-bottom" role="group">
+						<script>
+						function diningreservation(){
+							window.location.href="http://localhost/HCYHotel/user/dining/dining_booking.do";
+						}
+						</script>
+						
+						<button type="button" class="btn btn-info">호텔 바로 예약하기</button>
+						<button type="button" class="btn btn-warning" onclick="diningreservation()">다이닝 바로 예약하기</button>
 							<div class="kml-layout edges-s snap">
 								<div></div>
 							</div>
@@ -1872,17 +1896,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 											<div class="KzeV-title">추천 호텔</div>
 											<div class="KzeV-description">12월 6일 수 - 12월 7일 목</div>
 										</div>
-										<div class="KzeV-button">
-											<a role="link"
-												href="/hotels/%EA%B2%BD%EC%A3%BC%2C%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD-c43930/2023-12-06/2023-12-07/2adults"
-												class="Iqt3 Iqt3-mod-bold Button-No-Standard-Style Iqt3-mod-variant-outline Iqt3-mod-theme-base Iqt3-mod-shape-rounded-small Iqt3-mod-shape-mod-default Iqt3-mod-spacing-default Iqt3-mod-size-small"
-												tabindex="0" aria-disabled="false"
-												aria-label="경주 인근 숙소​에 대한 자세한 정보를 보려면 여기를 누르세요"><div
-													class="Iqt3-button-container">
-													<div class="Iqt3-button-content">모두 보기</div>
-												</div>
-												<div class="Iqt3-button-focus-outline"></div></a>
-										</div>
+										
 									</div>
 								</header>
 								<div>
@@ -2236,17 +2250,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 											<div class="KzeV-title">다양한 숙소 둘러보기</div>
 											<div class="KzeV-description">경주 • 12월 6일 수 - 12월 7일 목</div>
 										</div>
-										<div class="KzeV-button">
-											<a role="link"
-												href="/hotels/%EA%B2%BD%EC%A3%BC%2C%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD-c43930/2023-12-06/2023-12-07/2adults"
-												class="Iqt3 Iqt3-mod-bold Button-No-Standard-Style Iqt3-mod-variant-outline Iqt3-mod-theme-base Iqt3-mod-shape-rounded-small Iqt3-mod-shape-mod-default Iqt3-mod-spacing-default Iqt3-mod-size-small"
-												tabindex="0" aria-disabled="false"
-												aria-label="다양한 숙소 둘러보기​에 대한 자세한 정보를 보려면 여기를 누르세요"><div
-													class="Iqt3-button-container">
-													<div class="Iqt3-button-content">모두 보기</div>
-												</div>
-												<div class="Iqt3-button-focus-outline"></div></a>
-										</div>
+									
 									</div>
 								</header>
 								<div>
