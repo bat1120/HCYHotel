@@ -36,6 +36,7 @@ $(function(){
 	<li><a href="user/review/myreview/mydiningreview_write.do">다이닝리뷰작성해야댐(마페)</a></li>
 	<li><a href="user/review/myreview/myroomreview_list.do">객실리뷰목록(마페)</a></li>
 	<li><a href="user/review/myreview/myroomreview_write.do">객실리뷰작성해야댐(마페)</a></li>
+	<li><a href="user/mypage/myhotelreservation.do">호텔 (객실) 예약내역</a></li>
 
 	
 	

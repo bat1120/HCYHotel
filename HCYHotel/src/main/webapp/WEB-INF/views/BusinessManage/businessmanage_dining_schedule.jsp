@@ -1847,12 +1847,23 @@ th, td {
 							<div role="button" class="dDYU-off-screen" tabindex="0"></div>
 						</div>
 					</div>
+					<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+					<script type="text/javascript">
+					$(function(){
+						$("#newScheduleBtn").click(function(){
+							var diningcode=$("#diningcode").val();
+							var hotelcode=$("#hotelcode").val();
+							alert(hotelcode);
+							location.href="businessDiningSchedule_new.do?diningcode="+diningcode+"&hotelcode="+hotelcode;
+						})
+					})
+					</script>
 					<div
 						style="display: flex; flex-direction: column; align-items: center;">
 						<div
 							style="display: flex; justify-content: flex-start; width: 900px;">
 							<input type="button" value="스케쥴 등록" class="btn btn-info btn-sm"
-								id="newHotelBtn">
+								id="newScheduleBtn">
 						</div>
 						<div
 							style="display: flex; justify-content: center; align-items: center; height: 200px;">
@@ -1872,7 +1883,10 @@ th, td {
 								<td><c:out value="${scheduleList.scheduledate }"/></td>
 								<td><c:out value="${scheduleList.rating }"/></td>
 								<td><c:out value="${scheduleList.ppl }"/></td>
-								<td><input type="button" value="수정" class="btn btn-success" id="scheduleBtn"><input type="hidden" value="${ scheduleList.schedulecode}" id="codehid"></td>
+								<td><input type="button" value="수정" class="btn btn-success" id="scheduleBtn">
+								<input type="hidden" value="${ scheduleList.schedulecode}" id="codehid">
+								<input type="hidden" value="${diningcode }" id="diningcode" name="diningcode">
+								<input type="hidden" value="${hotelcode }" id="hotelcode" name="hotelcode"></td>
 								</tr>							
 							</c:forEach>
 						</table>

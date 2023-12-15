@@ -19,10 +19,17 @@
 	href="http://localhost/HCYHotel/common/user/css/phoenix/common.min.css">
 <link rel="stylesheet"
 	href="http://localhost/HCYHotel/common/user/css/phoenix/contents.min.css">
-
+<!-- bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <!-- js -->
 <script type="text/javascript" async=""
 	src="https://www.googletagmanager.com/gtag/js?id=G-1J0VYQ4NSJ&amp;cx=c&amp;_slc=1"></script>
+	<!-- summernote  -->
+    <!-- include summernote css/js -->
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 <script async="" src="https://www.google-analytics.com/analytics.js"></script>
 <script src="/js/libs/jquery-3.3.1.min.js"></script>
 <script src="/js/libs/jquery-ui/jquery-ui.min.js"></script>
@@ -114,7 +121,28 @@
 
 	gtag('config', 'AW-796355633');
 </script>
-
+<script type="text/javascript">
+$(function(){
+	
+	$("#txtContent").summernote({
+        toolbar: [
+    // [groupName, [list of button]]
+    ['style', ['bold', 'italic', 'underline', 'clear']],
+    // ['font', ['strikethrough', 'superscript', 'subscript']],
+    ['fontsize', ['fontsize']],
+    ['color', ['color']],
+    ['para', ['ul', 'ol', 'paragraph']],
+    // ['height', ['height']]
+    ['table', ['table']],
+  ['insert', ['picture']]
+  ],
+  placeholder: '문의사항을 작성해주세요. ',
+    height: 300,
+    lang: 'ko-KR'
+   
+    });//summernote
+});//ready
+</script>
 
 
 <script type="text/javascript" async=""
@@ -179,8 +207,7 @@
 				</div>
 				<div class="detail-content" style="overflow: auto;">
 					<!-- 여기 써머노트 들어가면 될거같공~~ -->
-					
-					
+				<textarea id="txtContent" name="txtContent"/>	
 				</div>
 			</div>
 			<input type="button" class="btn btn-primary" value="문의제출" id="btn_write"/>

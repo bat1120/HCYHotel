@@ -87,4 +87,97 @@ public class BusinessRoomModifyController {
 		model.addAttribute("rtid",rtid);
 		return "/BusinessManage/businessmanage_room_type_info";
 	}
+	@PostMapping("/BusinessManage/businessRoomType_update.do")
+	public String roomTypeUpdate(HttpServletRequest request, HttpSession session) {
+		RoomTypeInfoVO rtiVO=new RoomTypeInfoVO();
+		rtiVO.setAddprice(Integer.parseInt(request.getParameter("addPrice")));
+		rtiVO.setAmenity(request.getParameter("amenity"));
+		rtiVO.setBasiccapacity(Integer.parseInt(request.getParameter("basic")));
+		rtiVO.setInformation(request.getParameter("roomDes"));
+		rtiVO.setPrice(Integer.parseInt(request.getParameter("price")));
+		rtiVO.setMaxcapacity(Integer.parseInt(request.getParameter("max")));
+		rtiVO.setTypecode(request.getParameter("typecode"));
+		rtiVO.setTypename(request.getParameter("roomTypeName"));
+		System.out.println(rtiVO);
+		BusinessRoomModifyService.getInstance().updateRoomTypeInfo(rtiVO);
+		
+		
+		return "/BusinessManage/businessmanage_hotel";
+	}
+	public String deleteRoomType() {
+		return "";
+	}
+	
+	@GetMapping("/BusinessManage/businessRomm_modify.do")
+	public String goRoomModify(HttpSession session,Model model) {
+		List<HotelListDomain> list=BusinessRoomModifyService.getInstance().loadAllHotelList((String)session.getAttribute("id"));
+		model.addAttribute("hotellist",list);
+		
+		return "/BusinessManage/businessmanage_room_modify_empty";
+	}
+	@ResponseBody
+	@GetMapping("/BusinessManage/room_ajax.do")
+	public String roomModifyAjax(HttpSession session,HttpServletRequest request,Model model) {
+		JSONObject json=new JSONObject();
+		String typecode = request.getParameter("typecode");
+		session.setAttribute("hotelcode", typecode);
+		System.out.println(typecode);
+		CreateJson cj = new CreateJson();
+		if (!("호텔선택".equals(typecode))) {
+			json =cj.roomType(typecode);
+		} 
+		return json.toJSONString();
+	}
+	@ResponseBody
+	@GetMapping("/BusinessManage/second_ajax_call.do")
+	public String roomTypeInfoAjax(HttpSession session,HttpServletRequest request,Model model){
+		JSONObject json=new JSONObject();
+		String typecode = request.getParameter("typecode");
+		session.setAttribute("typecode", typecode);
+		System.out.println(typecode);
+		CreateJson cj = new CreateJson();
+		if (!("타입선택".equals(typecode))) { 
+			json =cj.roomTypeInfo(typecode);
+		}
+		System.out.println("--------------------"+ json.toJSONString());
+		return json.toJSONString();
+	
+//	return "";
+	}
+	@PostMapping("/BusinessManage/businessRoom_insert.do")
+	public String insertRoom(HttpSession session,HttpServletRequest request,Model model) {
+		RoomVO rVO=new RoomVO();
+		rVO.setHotelcode((String)session.getAttribute("hotelcode"));
+		rVO.setTypecode((String)session.getAttribute("typecode"));
+		rVO.setServicecode(request.getParameter("service"));
+		rVO.setRoomname(request.getParameter("roomname"));
+		BusinessRoomModifyService.getInstance().insertRoom(rVO);
+		session.removeAttribute("hotelcode");
+		session.removeAttribute("typecode");
+		return "/BusinessManage/businessmanage_room";
+	}
+	@GetMapping("/BusinessManage/businessRoom_modify.do")
+	public String goRoomModify(HttpSession session,HttpServletRequest request,Model model) {
+		System.out.println(request.getParameter("roomcode"));
+		RoomInfoDomain rid=BusinessRoomModifyService.getInstance().searchRoom(request.getParameter("roomcode"));
+		List<ServiceDomain> list=BusinessRoomModifyDAO.getInstance().selectService();
+		System.out.println(rid);
+		System.out.println(list);
+		model.addAttribute("roominfo",rid);
+		model.addAttribute("servicelist",list);
+		
+		
+		return "/BusinessManage/businessmanage_room_modify";
+	}
+	@PostMapping("/BusinessManage/businessroom_update.do")
+	public String updateRoom(HttpSession session,HttpServletRequest request,Model model){
+		RoomUpdateVO ruVO=new RoomUpdateVO();
+		ruVO.setRoomcode(request.getParameter("roomcode"));
+		ruVO.setRoomname(request.getParameter("roomname"));
+		ruVO.setServicecode(request.getParameter("selectService"));
+		BusinessRoomModifyDAO.getInstance().updateRoom(ruVO);
+		
+		return "/BusinessManage/businessmanage_room";
+	}
+	
 }

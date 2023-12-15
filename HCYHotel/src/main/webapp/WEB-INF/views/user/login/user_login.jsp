@@ -330,16 +330,34 @@ googletag.cmd.push(function() {
 		<div id="searchAutoCompleteTemplate" style="display: none"></div>
 	</div>
 
-	<script>
-	function setMemberFlag(flag){
-		document.getElementById("memberFlag").value=flag;
-		alert($("#memberFlag").val());
-	}//setMemberFlag
-	
-	</script>
+<script>
+    function setMemberFlag(flag) {
+        document.getElementById("memberFlag").value = flag;
+        
+        // 모든 버튼의 클래스를 초기화
+        document.querySelectorAll('.btn_tab').forEach(function (btn) {
+            btn.classList.remove('active');
+        });
+ 
+        //flag에 따라 버튼 active활성화 
+        var selectedBtn;
+        if (flag === 1) {
+            selectedBtn = document.querySelector('.btn_tab.t_per');
+        } else if (flag === 2) {
+            selectedBtn = document.querySelector('.btn_tab.t_com');
+        }
+
+        if (selectedBtn) {
+            selectedBtn.classList.add('active');
+        }
+
+        alert($("#memberFlag").val());
+    }
+</script>
 
 
-	<div id="sri_section" class="  ">
+
+	<div id="sri_section" class="">
 		<div id="sri_wrap">
 			<div id="content">
 
@@ -375,19 +393,20 @@ googletag.cmd.push(function() {
 											id="autologin" class="setting_inp" name="autologin"
 											onmousedown="try{n_trackEvent('login', 'pc_login_page' , 'login_save', '');}catch(e){}">
 
-										</span> <span class="inpChk"> <input type="checkbox"
-											id="id_save" class="setting_inp" name="id_save"
+										</span> <span class="inpChk" style="weight:1000px"> <input type="checkbox"
+											id="id_save" class="setting_inp" name="id_save" value="Y" ${ idRememberFlag eq 'Y' ? 'checked="checked"' : ''}
 											onmousedown="try{n_trackEvent('login', 'pc_login_page' , 'id_save', '');}catch(e){}">
 											<label class="setting_label" for="id_save"
 											onmousedown="try{n_trackEvent('login', 'pc_login_page' , 'id_save', '');}catch(e){}">
 												아이디 저장 </label>
 										</span>
 
-									</div>
+									</div> 
 									<div class="login-form">
 										<div class="id-input-box">
 											<input type="text" id="id" name="id" class="txt_tool"
-												value="" required=""> <label id="id-label"
+												value="${idRememberFlag eq 'Y' ? id : ''}" required=""> 
+												<label id="id-label"
 												class="id-label" for="id">아이디</label>
 										</div>
 										<div class="pw-input-box">

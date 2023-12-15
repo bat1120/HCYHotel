@@ -8,6 +8,6 @@ import lombok.ToString;
 @Getter
 @ToString
 public class RoomTypeInfoDomain {
-	private String typename, amenity, information;
+	private String typename, amenity, information,typecode;
 	private int price, addprice, basiccapacity, maxcapacity;
 }

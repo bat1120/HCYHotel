@@ -1050,8 +1050,12 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 										aria-label="호텔스컴바인 홈페이지로 이동하기">
 										<div class="main-logo__logo has-compact-logo inverted-logo">
 
+
+
 										<!-- 헤더 로고부분 -->
 										<svg id="_레이어_1" data-name="레이어 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 136.04 15.76">
+  											
+  
   <defs>
     <style>
       .cls-1 {
@@ -1155,7 +1159,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 								<div class="pRB0-nav-items">
 									<nav class="HtHs" aria-label="홈">
 										<ul class="HtHs-nav-list">
-											<li><a href="/hotels" aria-label="호텔 검색 "
+											<li><a href="http://localhost/HCYHotel/user/home/user_home.do" aria-label="호텔 검색 "
 												class="dJtn dJtn-active dJtn-expanded dJtn-mod-variant-accordion"
 												aria-current="page"><svg viewBox="0 0 200 200"
 														width="1.25em" height="1.25em"

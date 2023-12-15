@@ -1920,6 +1920,8 @@ th, td {
 					
 				
 </script>
+<form id="frm" action="businessRoomType_update.do" method="post">
+
     <legend>호텔등록</legend>
     <div class="mb-3">
       <label for="disabledTextInput" class="form-label">객실타입</label>
@@ -1931,28 +1933,21 @@ th, td {
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 	
-
 <script type="text/javascript">
+$(function(){
 $("#edit").click(function(){
+	
     $("input, textarea").prop("readonly", false);
     $("#edit").hide();
     $("#complete").show();
 });
+});
 
-/* $("#complete").click(function(){
-    $("#frm").submit();
-}); */
+
 </script>
     
     <div class="mb-3">
-<%--       <label for="disabledTextInput" class="form-label">호텧등급</label>
-      <select class="form-select form-select-sm" aria-label="Small select example" id="selectRate" name="selectRate">
- <option value="1" ${hotelrate eq 1 ? 'selected="selected"' : ''}>1</option>
- <option value="2" ${hotelrate eq 2 ? 'selected="selected"' : ''}>2</option>
- <option value="3" ${hotelrate eq 3 ? 'selected="selected"' : ''}>3</option>
- <option value="4" ${hotelrate eq 4 ? 'selected="selected"' : ''}>4</option>
- <option value="5" ${hotelrate eq 5 ? 'selected="selected"' : ''}>5</option>
-</select> --%>
+
 <label for="disabledTextInput" class="form-label">가격</label>
       <input type="text" id="price" name="price" class="form-control" value="${rtid.price }" readonly="readonly">
     </div>
@@ -1978,10 +1973,12 @@ $("#edit").click(function(){
     </div>
     <input type="hidden" id="hotelcode" name="hotelcode">
 
-    <button type="button" class="btn btn-primary" id="insert">수정</button>
+   <button type="button" class="btn btn-primary" id="edit">수정</button>
+    <button type="submit" class="btn btn-primary" id="complete" style="display: none;">완료</button>
     <button type="button" class="btn btn-primary" id="cancel">취소</button>
+    <input type="hidden" id="typecode" name="typecode" value="${ rtid.typecode}">
 				
-			
+			</form>
 					
 				</main>
 			</div>

@@ -10,6 +10,8 @@
 <typeAlias type="kr.co.sist.user.qna.QnADomain" alias="qd"/>
 <typeAlias type="kr.co.sist.user.qna.WriteQnAVO" alias="wqVO"/>
 <typeAlias type="kr.co.sist.user.qna.QnAVO" alias="qVO"/>
+<typeAlias type="kr.co.sist.user.mypage.mydiningreview.ReviewDomain" alias="mydrd"/>
+<typeAlias type="kr.co.sist.user.mypage.mydiningreview.DeleteReviewVO" alias="drVO"/>
 </typeAliases>
   <environments default="development">
     <environment id="development">
@@ -26,6 +28,7 @@
 <mappers>
 <mapper resource="kr/co/sist/user/kdy/mapper/noticeMapper.xml"/>
 <mapper resource="kr/co/sist/user/kdy/mapper/qnaMapper.xml"/>
+<mapper resource="kr/co/sist/user/kdy/mapper/diningReviewMapper.xml"/>
 
   </mappers>
 </configuration>

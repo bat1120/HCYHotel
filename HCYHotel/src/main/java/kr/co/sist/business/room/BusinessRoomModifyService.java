@@ -47,4 +47,17 @@ public class BusinessRoomModifyService {
 		RoomTypeInfoDomain rtid=BusinessRoomModifyDAO.getInstance().selectRoomTypeinfo(typecode);
 		return rtid;
 	}
+	public void updateRoomTypeInfo(RoomTypeInfoVO rtiVO) {
+		BusinessRoomModifyDAO.getInstance().updateRoomType(rtiVO);
+	}
+	public void insertRoom(RoomVO rVO) {
+		BusinessRoomModifyDAO.getInstance().insertRoom(rVO);
+	}
+	public void updateRoom(RoomUpdateVO ruVO) {
+		BusinessRoomModifyService.getInstance().updateRoom(ruVO);
+	}
+	public RoomInfoDomain searchRoom(String roomcode) {
+		RoomInfoDomain rid=BusinessRoomModifyDAO.getInstance().selectRoom(roomcode);
+		return rid;
+	}
 }

@@ -30,22 +30,21 @@ public class QnAController {
 		
 		model.addAttribute("qna", qd);
 		
-		/* 	NoticeService ns=NoticeService.getInstance();
-		NoticeDomain nd=ns.searchNoticeDetail(noticeCode);
-		
-		model.addAttribute("notice", nd);
-		*/
 		return "user/qna/user_qna_detail";
 	}//searchQnADetail
 	
 	@GetMapping("/user/qna/user_qna_write.do")
-	public String goWriteQnA( HttpSession id ) {
+	public String goWriteQnA( HttpSession session ) {
+		
+		String id=(String)session.getAttribute("id");
 		
 		return "user/qna/user_qna_write";
-	}//userQnaList
+	}//WriteQnA
 	
 	@PostMapping("user/qna/user_qna_write")
 	public String writeQnA( WriteQnAVO wqVO ) {
+		
+		
 		
 		return "";
 	}//writeQnA

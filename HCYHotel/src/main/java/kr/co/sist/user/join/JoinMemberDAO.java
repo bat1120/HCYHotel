@@ -54,10 +54,10 @@ private static JoinMemberDAO jmDAO;
 	}//selectIdDupBusiness
 	
 	public void insertMem(JoinMemberVO jmVO) {
-		
+		System.out.println(jmVO);
 		MyBatiseHandler mbh=MyBatiseHandler.getInstance();
 		SqlSession ss=mbh.getMyBatisHandler(true);
-		System.out.println("jmVO=======================" + jmVO);
+//		System.out.println("jmVO=======================" + jmVO);
 		
 		ss.insert("kr.co.sist.user.sjh.joinMapper.insertMem",jmVO);
 	
@@ -65,6 +65,7 @@ private static JoinMemberDAO jmDAO;
 	
 	public void insertBus(JoinMemberVO jmVO) {
 		
+//		System.out.println(jmVO);
 		MyBatiseHandler mbh=MyBatiseHandler.getInstance();
 		SqlSession ss=mbh.getMyBatisHandler(true);
 //		System.out.println("jmVO=======================" + jmVO);

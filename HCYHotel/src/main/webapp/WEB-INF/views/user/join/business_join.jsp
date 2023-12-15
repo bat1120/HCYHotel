@@ -230,7 +230,7 @@
         }
         
         // 이메일 유효성 검사
-        if (!/^[a-zA-Z]+@[a-zA-Z]+/.test(emailValue)) {
+        if (!/^[a-zA-Z0-9]+@[a-zA-Z]+/.test(emailValue)) {
           $("#sms_msg_email1").show();
           event.preventDefault();
           return;

@@ -1847,10 +1847,22 @@ th, td {
 							<div role="button" class="dDYU-off-screen" tabindex="0"></div>
 						</div>
 					</div>
+					<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+					<script type="text/javascript">
+					$(function(){
+						$("#newHotelBtn").click(function(){
+							$("#frm").submit();
+						})
+					
+					})
+					</script>
+					<form id="frm" method="post" action="businessdining.do">
 					<div style="position: absolute; left: 623px">
 					
 						<input type="button" value="다이닝 등록" class="btn btn-info btn-sm" id="newHotelBtn">
+						
 					</div>
+					
 					<div
 						style="display: flex; justify-content: center; align-items: center; height: 200px;">
 						<table style="width: 900px; bolder: 1;">
@@ -1863,15 +1875,20 @@ th, td {
 							</tr>
 							<c:forEach var="diningList" items="${diningList }">
 							<tr>
-							<td><a href="businessDiningSchedule.do?diningcode=${diningList.diningcode} "><c:out value="${diningList.dining }"/></a></td>
+							<td><a href="businessDiningSchedule.do?diningcode=${diningList.diningcode}&hotelcode=${diningList.hotelcode } "><c:out value="${diningList.dining }"/></a></td>
 							<td><c:out value="${diningList.hotel }"/></td>
 							<td><c:out value="${diningList.rating_avg }"/></td>
-							<td><c:out value="${diningList.ppl }"/></td>
-							<td><input type="button" value="수정" id="diningModifybtn" class="btn btn-success"><input type="hidden" value="${hotelcode }" id="hotelcode"></td>
+							<td><c:out value="${diningList.ppl }"/>
+							</td>
+							
+							<td><a href="businessdining_modify.do?diningcode=${diningList.diningcode}">수정</a>
+							<input type="hidden" value="${hotelcode }" id="hotelcode" name="hotelcode">
+							</td>
 							</tr>
 							</c:forEach>
 						</table>
 					</div>
+					</form>
 				</main>
 			</div>
 		</div>
