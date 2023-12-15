@@ -1920,7 +1920,7 @@ th, td {
 					
 				
 </script>
-<form id="frm" action="businessdining_insert.do" enctype="multipart/form-data" method="post">
+<form id="frm" action="businessdiningschedule_insert.do" method="post">
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
@@ -1934,45 +1934,35 @@ $(function(){
 </script>
 
     <div class="mb-3">
-      <label for="disabledTextInput" class="form-label">나의 호텔</label>
+      <label for="disabledTextInput" class="form-label">나의 다이닝</label>
       <select class="form-select form-select-sm" aria-label="Small select example" id="selectHotel" name="selectHotel">
-		<c:forEach var="hotellist" items="${hotellist }">
-		<option value="${hotellist.hotelcode }"><c:out value="${hotellist.hotelname }"/></option>
+		<c:forEach var="dininglist" items="${dininglist }">
+		<option value="${dininglist.diningcode }"><c:out value="${dininglist.diningname }"/></option>
 		</c:forEach>
 </select>
     </div>
     <div class="mb-3">
-      <label for="disabledTextInput" class="form-label">다이닝이름</label>
-      <input type="text" id="diningname" name="diningname" class="form-control" placeholder="다이닝이름">
+      <label for="disabledTextInput" class="form-label">구분</label>
+      <select id="category">
+      <option value="조식">조식</option>
+      <option value="디너">디너</option>
+      <option value="런치">런치</option>
+    </select>
     </div>
     <div class="mb-3">
       <label for="disabledTextInput" class="form-label">수용인원</label>
-      <input type="text" id="capacity" name="capacity" class="form-control" placeholder="수용인원">
+      <input type="text" id="pplcnt" name="pplcnt" class="form-control" placeholder="수용인원">
     </div>
     <div class="mb-3">
-      <label for="disabledTextInput" class="form-label">운영시간정보</label>
-      <input type="text" id="operatingtime" name="operatingtime" class="form-control" placeholder="운영시간">
+      <label for="disabledTextInput" class="form-label">가격</label>
+      <input type="text" id="price" name="price" class="form-control" placeholder="가격">
     </div>
     <div class="mb-3">
-      <label for="disabledTextInput" class="form-label">정보</label>
-      <input type="text" id="information" name="information" class="form-control" placeholder="정보">
+      <label for="disabledTextInput" class="form-label">시간대</label>
+      <input type="text" id="scheduledate" name="scheduledate" class="form-control" placeholder="시간대(ex)12:00)">
     </div>
-    <div class="mb-3">
-      <label for="disabledTextInput" class="form-label">설명</label>
-      <input type="text" id="description" name="description" class="form-control" placeholder="설명">
-    </div>
-    <div>
-    <label for="disabledTextInput" class="form-label">메뉴파일</label>
-    <input type="file" id="menufile" name="menufile" multiple="multiple">
-
     
-    </div>
-    <div>
-<label for="disabledTextInput" class="form-label">다이닝사진</label>
-    <input type="file" id="diningfile" name="diningfile" multiple="multiple">
-
     
-    </div>
     <div>
     </div>
     <button type="button" class="btn btn-primary" id="save">저장</button>

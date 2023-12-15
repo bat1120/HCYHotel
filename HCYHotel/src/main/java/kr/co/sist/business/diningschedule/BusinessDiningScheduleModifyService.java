@@ -21,4 +21,8 @@ public class BusinessDiningScheduleModifyService {
 		
 		return list;
 	}
+	public List<DiningNameListDomain> selectDining(String hotelcode){
+		List<DiningNameListDomain> list=BusinessDiningScheduleModifyDAO.getInstance().selectDining(hotelcode);
+		return list;
+	}
 }

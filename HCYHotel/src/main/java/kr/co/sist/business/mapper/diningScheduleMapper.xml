@@ -13,6 +13,10 @@ JOIN hotel h ON h.id = #{id}
 WHERE (ds.diningcode = #{diningcode} OR ds.diningcode IS NULL)
 GROUP BY ds.category, ds.price, ds.scheduledate, ds.schedulecode
 </select>
-
+ <select id="selectDining" resultType="dnld" parameterType="String">
+select diningname,diningcode
+from dining
+where hotelcode=#{hotelcode}
+</select>
 
 </mapper>

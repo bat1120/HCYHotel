@@ -1875,7 +1875,7 @@ th, td {
 							</tr>
 							<c:forEach var="diningList" items="${diningList }">
 							<tr>
-							<td><a href="businessDiningSchedule.do?diningcode=${diningList.diningcode} "><c:out value="${diningList.dining }"/></a></td>
+							<td><a href="businessDiningSchedule.do?diningcode=${diningList.diningcode}&hotelcode=${diningList.hotelcode } "><c:out value="${diningList.dining }"/></a></td>
 							<td><c:out value="${diningList.hotel }"/></td>
 							<td><c:out value="${diningList.rating_avg }"/></td>
 							<td><c:out value="${diningList.ppl }"/>
