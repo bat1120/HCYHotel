@@ -1943,7 +1943,7 @@ $(function(){
     </div>
     <div class="mb-3">
       <label for="disabledTextInput" class="form-label">구분</label>
-      <select id="category">
+      <select id="category" name="category">
       <option value="조식">조식</option>
       <option value="디너">디너</option>
       <option value="런치">런치</option>
@@ -1958,8 +1958,8 @@ $(function(){
       <input type="text" id="price" name="price" class="form-control" placeholder="가격">
     </div>
     <div class="mb-3">
-      <label for="disabledTextInput" class="form-label">시간대</label>
-      <input type="text" id="scheduledate" name="scheduledate" class="form-control" placeholder="시간대(ex)12:00)">
+      <label for="disabledTextInput" class="form-label">날짜</label>
+      <input type="text" id="scheduledate" name="scheduledate" class="form-control" placeholder="년-월-일">
     </div>
     
     
