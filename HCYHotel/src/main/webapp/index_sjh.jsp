@@ -29,6 +29,8 @@ $(function(){
 <li><a href="user/hotel/hotelSearch/user_hotel_search.do">호텔 검색</a></li>
 <li><a href="user/hotel/hotelSearch/user_hotel_search_map.do">호텔검색 지도상세</a></li>
 <li><a href="user/hotel/hotelInfo/user_hotel_info.do">호텔 상세</a></li>
+<li><a href="user/hotel/room/user_room_list.do">객실 리스트</a></li>
+<li><a href="user/hotel/room/user_room_info.do">객실 상세</a></li>
 </ul>
 </body>
 </html>
