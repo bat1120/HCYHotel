@@ -24,7 +24,6 @@ $(function(){
 </head>
 <body>
 <ul>
-<li><a href="user/home/user_home.do">사용자 홈</a></li>
 <li><a href="user/login/user_login.do">로그인</a></li>
 <hr>
 <li><a href="user/hotel/hotelSearch/user_hotel_search.do">호텔 검색</a></li>
