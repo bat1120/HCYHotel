@@ -22,6 +22,31 @@ $(function(){
 </script>
 </head>
 <body>
-
+<table>
+	<thead>
+	<th>에약번호</th>
+	<th>에약날짜</th>
+	<th>호텔/객실정보</th>
+	<th>예약기간</th>
+	<th>예약자 성함</th>
+	<th>인원수</th>
+	<th>결제금액</th>
+	<th>예약상태</th>
+	<th></th>
+	</thead>
+	<tbody>
+	<tr>
+	<td>번호</td>
+	<td>번호</td>
+	<td>번호</td>
+	<td>번호</td>
+	<td>번호</td>
+	<td>번호</td>
+	<td>번호</td>
+	<td>번호</td>
+	<td>버튼</td>
+	</tr>
+	</tbody>
+</table>
 </body>
 </html>

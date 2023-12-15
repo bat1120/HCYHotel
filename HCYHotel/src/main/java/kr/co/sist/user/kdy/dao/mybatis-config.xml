@@ -28,7 +28,6 @@
 <mappers>
 <mapper resource="kr/co/sist/user/kdy/mapper/noticeMapper.xml"/>
 <mapper resource="kr/co/sist/user/kdy/mapper/qnaMapper.xml"/>
-<mapper resource="kr/co/sist/user/kdy/mapper/diningMapper.xml"/>
 <mapper resource="kr/co/sist/user/kdy/mapper/diningReviewMapper.xml"/>
 
   </mappers>
