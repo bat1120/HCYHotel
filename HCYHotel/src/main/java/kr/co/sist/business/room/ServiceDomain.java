@@ -7,6 +7,6 @@ import lombok.ToString;
 @Setter
 @Getter
 @ToString
-public class RoomVO {
-private String roomname,typecode,hotelcode,servicecode;
+public class ServiceDomain {
+private String servicecode,sname;
 }

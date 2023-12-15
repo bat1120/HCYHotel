@@ -17,12 +17,24 @@
  <typeAlias type="kr.co.sist.business.room.HotelListDomain" alias="hldRoom"/>
  <typeAlias type="kr.co.sist.business.room.RoomListDomain" alias="rld"/>
  <typeAlias type="kr.co.sist.business.room.SelectRoomVO" alias="srVO"/>
+ <typeAlias type="kr.co.sist.business.room.RoomUpdateVO" alias="ruVO"/>
+ <typeAlias type="kr.co.sist.business.room.RoomVO" alias="rVO"/>
+ <typeAlias type="kr.co.sist.business.room.RoomInfoDomain" alias="rid"/>
+ <typeAlias type="kr.co.sist.business.room.ServiceDomain" alias="sd"/>
  <typeAlias type="kr.co.sist.business.room.RoomTypeDomain" alias="rtd"/>
  <typeAlias type="kr.co.sist.business.room.RoomTypeInfoDomain" alias="rtid"/>
+ <typeAlias type="kr.co.sist.business.room.RoomTypeInfoVO" alias="rtiVO"/>
+ <typeAlias type="kr.co.sist.business.room.RoomTypeCodeDomain" alias="rtcd"/>
  <typeAlias type="kr.co.sist.business.room.RoomTypeVO" alias="rtVO"/>
  <typeAlias type="kr.co.sist.business.diningregister.DiningSearchDomain" alias="dsd"/>
  <typeAlias type="kr.co.sist.business.diningregister.BusinessDiningDomain" alias="bdd"/>
  <typeAlias type="kr.co.sist.business.dining.BusinessDiningDomain" alias="bdd2"/>
+ <typeAlias type="kr.co.sist.business.dining.BusinessHotelDomain" alias="bhd2"/>
+ <typeAlias type="kr.co.sist.business.dining.DiningVO" alias="dVO"/>
+ <typeAlias type="kr.co.sist.business.dining.FileDomain" alias="fd"/>
+ <typeAlias type="kr.co.sist.business.dining.DiningDomain" alias="dd"/>
+ <typeAlias type="kr.co.sist.business.dining.DiningUpdateVO" alias="duVO"/>
+ <typeAlias type="kr.co.sist.business.dining.FileVO" alias="fVO2"/>
  <typeAlias type="kr.co.sist.business.diningschedule.DiningSearchVO" alias="dsVO"/>
  <typeAlias type="kr.co.sist.business.diningschedule.DiningScheduleListDomain" alias="dsld"/>
 </typeAliases>

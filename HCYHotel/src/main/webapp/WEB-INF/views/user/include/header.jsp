@@ -1039,8 +1039,12 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 										aria-label="호텔스컴바인 홈페이지로 이동하기">
 										<div class="main-logo__logo has-compact-logo inverted-logo">
 
+
+
 										<!-- 헤더 로고부분 -->
 										<svg id="_레이어_1" data-name="레이어 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 136.04 15.76">
+  											
+  
   <defs>
     <style>
       .cls-1 {

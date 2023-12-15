@@ -393,7 +393,7 @@ googletag.cmd.push(function() {
 											id="autologin" class="setting_inp" name="autologin"
 											onmousedown="try{n_trackEvent('login', 'pc_login_page' , 'login_save', '');}catch(e){}">
 
-										</span> <span class="inpChk"> <input type="checkbox"
+										</span> <span class="inpChk" style="weight:1000px"> <input type="checkbox"
 											id="id_save" class="setting_inp" name="id_save" value="Y" ${ idRememberFlag eq 'Y' ? 'checked="checked"' : ''}
 											onmousedown="try{n_trackEvent('login', 'pc_login_page' , 'id_save', '');}catch(e){}">
 											<label class="setting_label" for="id_save"
@@ -401,11 +401,12 @@ googletag.cmd.push(function() {
 												아이디 저장 </label>
 										</span>
 
-									</div>
+									</div> 
 									<div class="login-form">
 										<div class="id-input-box">
 											<input type="text" id="id" name="id" class="txt_tool"
-												value="${idRememberFlag eq 'Y' ? id : ''}" required=""> <label id="id-label"
+												value="${idRememberFlag eq 'Y' ? id : ''}" required=""> 
+												<label id="id-label"
 												class="id-label" for="id">아이디</label>
 										</div>
 										<div class="pw-input-box">

@@ -1920,65 +1920,69 @@ th, td {
 					
 				
 </script>
-<form id="frm" action="businessRoomType_update.do" method="post">
-
-    <legend>호텔등록</legend>
-    <div class="mb-3">
-      <label for="disabledTextInput" class="form-label">객실타입</label>
-      <input type="text" id="roomTypeName" name="roomTypeName" class="form-control" value="${rtid.typename }" readonly="readonly">
-    </div>
-  
-
+<form id="frm" action="businessdining_update.do" enctype="multipart/form-data" method="post">
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 	
 <script type="text/javascript">
 $(function(){
-$("#edit").click(function(){
-	
-    $("input, textarea").prop("readonly", false);
-    $("#edit").hide();
-    $("#complete").show();
-});
-});
-
-
+	$("#save").click(function(){
+		$("#frm").submit();
+	})
+})
 </script>
+
+    <div class="mb-3">
+      <label for="disabledTextInput" class="form-label">나의 호텔</label>
+      <select class="form-select form-select-sm" aria-label="Small select example" id="selectHotel" name="selectHotel" disabled>
+		<c:forEach var="hotellist" items="${hotellist }">
+		<option value="${hotellist.hotelcode }"><c:out value="${hotellist.hotelname }"/></option>
+		</c:forEach>
+</select>
+    </div>
+    <div class="mb-3">
+      <label for="disabledTextInput" class="form-label">다이닝이름</label>
+      <input type="text" id="diningname" name="diningname" class="form-control" value="${diningname }">
+    </div>
+    <div class="mb-3">
+      <label for="disabledTextInput" class="form-label">수용인원</label>
+      <input type="text" id="capacity" name="capacity" class="form-control" value="${capacity }">
+    </div>
+    <div class="mb-3">
+      <label for="disabledTextInput" class="form-label">운영시간정보</label>
+      <input type="text" id="operatingtime" name="operatingtime" class="form-control" value="${operatingtime }">
+    </div>
+    <div class="mb-3">
+      <label for="disabledTextInput" class="form-label">정보</label>
+      <input type="text" id="information" name="information" class="form-control" value="${information }">
+    </div>
+    <div class="mb-3">
+      <label for="disabledTextInput" class="form-label">설명</label>
+      <input type="text" id="description" name="description" class="form-control" value="${description }">
+      <input type="hidden" id="diningcode" name="diningcode" value="${diningcode }">
+    </div>
+    <div>
+    <label for="disabledTextInput" class="form-label">메뉴파일</label>
+    <input type="file" id="menufile" name="menufile" multiple="multiple">
+
     
-    <div class="mb-3">
-
-<label for="disabledTextInput" class="form-label">가격</label>
-      <input type="text" id="price" name="price" class="form-control" value="${rtid.price }" readonly="readonly">
     </div>
-    <div class="mb-3">
-      <label for="disabledTextInput" class="form-label">추가요금</label>
-      <input type="text" id="addPrice" name="addPrice" class="form-control" value="${rtid.addprice }" readonly="readonly">
+    <div>
+<label for="disabledTextInput" class="form-label">다이닝사진</label>
+    <input type="file" id="diningfile" name="diningfile" multiple="multiple">
+    <c:forEach var="filelist" items="${filelist }">
+	<input type="checkbox" id="filecheck" name="filecheck" value="${filelist.filecode }">
+<img src="http://localhost/sist/common/business/img/${filelist.filename }.jpg" class="img-thumbnail" alt="..." style="width:100px;height:100px">
+    </c:forEach>
     </div>
-    <div class="mb-3">
-      <label for="disabledTextInput" class="form-label">객실정보</label>
-      <input type="text" id="roomDes" name="roomDes" class="form-control" value="${rtid.information }" readonly="readonly">
+    <div>
     </div>
-    <div class="mb-3">
-      <label for="disabledTextInput" class="form-label">기본인원수</label>
-      <input type="text" id="basic" name="basic" class="form-control" value="${rtid.basiccapacity }" readonly="readonly">
-    </div>
-    <div class="mb-3">
-      <label for="disabledTextInput" class="form-label">최대인원수</label>
-      <input type="text" id="max" name="max" class="form-control" value="${rtid.maxcapacity }" readonly="readonly">
-    </div>
-    <div class="mb-3">
-      <label for="disabledTextInput" class="form-label">어매니티</label>
-      <input type="text" id="amenity" name="amenity" class="form-control" value="${rtid.amenity }" readonly="readonly">
-    </div>
-    <input type="hidden" id="hotelcode" name="hotelcode">
-
-   <button type="button" class="btn btn-primary" id="edit">수정</button>
-    <button type="submit" class="btn btn-primary" id="complete" style="display: none;">완료</button>
+    <button type="button" class="btn btn-primary" id="save">수정</button>
     <button type="button" class="btn btn-primary" id="cancel">취소</button>
-    <input type="hidden" id="typecode" name="typecode" value="${ rtid.typecode}">
+</form>
 				
-			</form>
+			
 					
 				</main>
 			</div>

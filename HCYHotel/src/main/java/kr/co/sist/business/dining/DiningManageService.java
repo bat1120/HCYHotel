@@ -21,4 +21,29 @@ public class DiningManageService {
 		
 		return list;
 	}
+	public List<BusinessHotelDomain> searchHotel(String id){
+		List<BusinessHotelDomain> list=new ArrayList<BusinessHotelDomain>();
+		
+		list=DiningManageDAO.getInstance().selectHotel(id);
+		
+		return list;
+	}
+	public void insertDining(DiningVO dVO) {
+		DiningManageDAO.getInstance().insertDining(dVO);
+	}
+	public void insertFile(FileVO fVO) {
+		DiningManageDAO.getInstance().insertFile(fVO);
+	}
+	public String selectDiningcode() {
+		String diningcode=DiningManageDAO.getInstance().selectDiningCode();
+		return diningcode;
+	}
+	public DiningDomain selectDiningInfo(String diningcode) {
+		DiningDomain dd=DiningManageDAO.getInstance().selectDiningInfo(diningcode);
+		return dd;
+	}
+	public List<FileDomain> searchFile(String diningcode){
+		List<FileDomain> list=DiningManageDAO.getInstance().selectFilename(diningcode);
+		return list;
+	}
 }

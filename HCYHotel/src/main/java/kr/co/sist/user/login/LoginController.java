@@ -20,17 +20,27 @@ public class LoginController {
 	@GetMapping("/user/login/user_login.do")
 	public String goLogin(Model model,HttpServletResponse respons,
 			@CookieValue(value = "useridRememberFlag",defaultValue = "")String idRememberFlag, 
-			@CookieValue(value = "userid",defaultValue = "")String id) {
+			@CookieValue(value = "userid",defaultValue = "")String id,
+			@CookieValue(value = "busidRememberFlag",defaultValue = "")String busidRememberFlag, 
+			@CookieValue(value = "busid",defaultValue = "")String busid) {
+		
+		System.out.println(idRememberFlag);
+		System.out.println(id);
 		
 		if("Y".equals(idRememberFlag)) {
 			model.addAttribute("idRememberFlag",idRememberFlag);
 			model.addAttribute("id",id);
 			return "user/login/user_login";
-		}//if
-	
+		}else if("Y".equals(busidRememberFlag)) {
+			model.addAttribute("busidRememberFlag",busidRememberFlag);
+			model.addAttribute("busid",busid);
+			return "user/login/user_login";
+		}
 		LoginService ls=LoginService.getInstance();
 		ls.setCookie(respons,"useridRememberFlag","N");
+		ls.setCookie(respons,"busidRememberFlag","N");
 		model.addAttribute("idRememberFlag","N");
+		model.addAttribute("busidRememberFlag","N");
 		return "user/login/user_login";
 	}//goLogin
 	
@@ -62,12 +72,12 @@ public class LoginController {
 				session.setAttribute("id",lVO.getId());	
 				model.addAttribute("login","Y");
 				if("Y".equals(lVO.getId_save())) {
-					ls.setCookie(response, "useridRememberFlag", "Y");
-					ls.setCookie(response, "userid", lVO.getId());
+					ls.setCookie(response, "busidRememberFlag", "Y");
+					ls.setCookie(response, "busid", lVO.getId());
 					return "user/home/user_home";
 				}//if
-				ls.removeCookie(response, "useridRememberFlag", "");
-				ls.removeCookie(response,"userid", "");
+				ls.removeCookie(response, "busidRememberFlag", "");
+				ls.removeCookie(response,"busid", "");
 				return "user/home/user_home";
 				
 			}else {
