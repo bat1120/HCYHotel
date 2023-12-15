@@ -10,6 +10,6 @@ public class RoomInfoDAO {
 		if(riDAO==null) {
 			riDAO=new RoomInfoDAO();
 		}//end if
-		return riDAO;
+		return riDAO;  
 	}//getInstance
 }
