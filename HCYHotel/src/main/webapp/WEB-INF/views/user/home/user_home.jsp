@@ -8,6 +8,8 @@
 <meta name="r9-built" content="20231129.060225">
 <meta name="r9-rendered" content="20231130.081747.+00:00">
 <meta name="r9-build-number" content="40">
+<!-- bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <link rel="stylesheet"
 	href="https://content.r9cdn.net/res/combined.css?v=259002787c91da6abc39a703b751ab6c5a776d3d-14pre-flipped&amp;cluster=5">
 <link rel="stylesheet"
@@ -884,6 +886,7 @@ sentinel {
 	display: none;
 }
 </style>
+
 <style type="text/css" nonce="">
 iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 	{
@@ -1858,6 +1861,10 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 					<div class="Seuf"></div>
 					<div class="Seuf">
 						<section class="bDbo bDbo-spacing-bottom" role="group">
+						
+						
+						<button type="button" class="btn btn-info">호텔 바로 예약하기</button>
+						<button type="button" class="btn btn-warning">다이닝 바로 예약하기</button>
 							<div class="kml-layout edges-s snap">
 								<div></div>
 							</div>
