@@ -25,12 +25,12 @@ public class HotelSearchDAO {
 		SqlSession ss=mbh.getMyBatisHandler(false);
 		
 		return ss.selectList("kr.co.sist.user.sjh.hotelSearchMapper.getHotelBySearch", searchVO);
-	}
+	}//getHotelBySearch
 	
 	public List<RoomTypeDomain> getRoomTypeBySearch(SearchVO searchVO) {
 		MyBatiseHandler mbh=MyBatiseHandler.getInstance();
 		SqlSession ss=mbh.getMyBatisHandler(false);
 		
 		return ss.selectList("kr.co.sist.user.sjh.hotelSearchMapper.getRoomTypeBySearch", searchVO);
-	}
+	}//getRoomTypeBySearch
 }

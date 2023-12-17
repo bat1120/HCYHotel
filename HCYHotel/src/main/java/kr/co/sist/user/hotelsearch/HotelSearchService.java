@@ -18,6 +18,7 @@ public class HotelSearchService {
 		}//end if
 		return hss;
 	}//getInstance
+	;
 	
 	public List<HotelDomain> getHotelBySearch(SearchVO searchVO) {
 		
@@ -29,8 +30,8 @@ public class HotelSearchService {
 			searchVO.setHotelcode(hotel.getHotelcode());
 			List<RoomTypeDomain> roomTypeList = hDAO.getRoomTypeBySearch(searchVO);
 			hotel.setRoomtypes(roomTypeList);
-		}
+		}//end for
 
 		return hotels;
-	}
-}
+	}//getHotelBySearch
+}//class

@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ page info=""%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <html lang="ko-kr" dir="ltr"><head>
 <meta name="r9-version" content="R696a">
 <meta name="r9-built" content="20231204.060219">
@@ -1413,6 +1414,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																	<button class="L9ZF-skip-to-details" aria-label="결과 상세 페이지로 이동하려면 클릭하세요.">결과 상세
 																		정보로 이동</button>
 																</div>
+																<a href="http://localhost/HCYHotel/user/hotel/hotelInfo/user_hotel_info.do?hotelcode=${hotel.hotelcode}"><button type="button" class="btn btn-info">호텔 바로가기</button></a>
 																<div id="responsive-info-photo-container-1">
 																	<div class="IirT-photo-container" role="button" tabindex="-1">
 																		<div class="IirT-resultActionsMenuContainer IirT-alwaysVisible">
@@ -1435,7 +1437,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																		<div class="e9fk e9fk-pres-apac e9fk-mod-responsive">
 																			<div class="e9fk-photoContainer" data-index="2">
 																				<button class="e9fk-photoWrap">
-																					<img class="e9fk-photo" alt="토요코인 서울영등포점" src="https://content.r9cdn.net/rimg/himg/16/8e/b8/expediav2-6094950-29198e-711165.jpg?width=432&amp;height=432&amp;xhint=540&amp;yhint=333&amp;crop=true&amp;watermarkheight=28&amp;watermarkpadding=10" srcset="https://content.r9cdn.net/rimg/himg/16/8e/b8/expediav2-6094950-29198e-711165.jpg?width=216&amp;height=216&amp;xhint=540&amp;yhint=333&amp;crop=true&amp;watermarkheight=14&amp;watermarkpadding=5 1x, https://content.r9cdn.net/rimg/himg/16/8e/b8/expediav2-6094950-29198e-711165.jpg?width=432&amp;height=432&amp;xhint=540&amp;yhint=333&amp;crop=true&amp;watermarkheight=28&amp;watermarkpadding=10 2x" style="object-position: left center;">
+																					<img class="e9fk-photo" alt="토요코인 서울영등포점" src="/HCYHotel/common/business/img/${fn:split(hotel.filename,'.jpg')[0]}.jpg" srcset="https://content.r9cdn.net/rimg/himg/16/8e/b8/expediav2-6094950-29198e-711165.jpg?width=216&amp;height=216&amp;xhint=540&amp;yhint=333&amp;crop=true&amp;watermarkheight=14&amp;watermarkpadding=5 1x, https://content.r9cdn.net/rimg/himg/16/8e/b8/expediav2-6094950-29198e-711165.jpg?width=432&amp;height=432&amp;xhint=540&amp;yhint=333&amp;crop=true&amp;watermarkheight=28&amp;watermarkpadding=10 2x" style="object-position: left center;">
 																				</button>
 																			</div>
 																			<div class="e9fk-bannerRow e9fk-highBanners"></div>
@@ -1452,23 +1454,17 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																			<div>
 																				<div role="button" tabindex="-1" class="IirT-header-container">
 																					<h3 class="IirT-header">${hotel.hotelname}</h3>
-																					<div class="">
-																						<div class="O3Yc O3Yc-sp-default" role="img" aria-label="2성급">
-																							<span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
-																										<path d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
-																										<path d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span>
-																						</div>
-																					</div>
 																					
 																					
-																					<input type="button" name="호텔 상세보기" value="호텔 상세보기">
+																					
+																					<button type="button" class="btn btn-info">Info</button>
 																					
 																					
 																					
 																				</div>
 																				<button class="IirT-location-container" aria-label="토요코인 서울영등포점 호텔을 지도에서 보려면 클릭하세요.">
 																					<span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 16px; height: 16px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" class="IirT-location-icon" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
-																							<path d="M173.2 179.7c-.3-.1-26.4-9.7-73.2-9.7c-46.8 0-73 9.6-73.2 9.7c-2.6 1-5.5-.3-6.4-2.9c-1-2.6.3-5.5 2.9-6.4c1-.4 22.9-8.5 63.1-10.1C69.7 145.7 40 114.6 40 80c0-33.1 26.9-60 60-60s60 26.9 60 60c0 34.6-29.7 65.7-46.3 80.3c40.1 1.6 62.1 9.7 63.1 10.1c2.6 1 3.9 3.9 2.9 6.4c-1 2.6-3.9 3.8-6.5 2.9zM100 30c-27.6 0-50 22.4-50 50c0 36.1 38.9 69.8 50 78.7c11.1-8.9 50-42.6 50-78.7c0-27.6-22.4-50-50-50zm0 75c-13.8 0-25-11.2-25-25s11.2-25 25-25s25 11.2 25 25s-11.2 25-25 25zm0-40c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15z"></path></svg></span><span class="IirT-neighborhood">영등포구</span><span class="IirT-divider"></span>
+																							<path d="M173.2 179.7c-.3-.1-26.4-9.7-73.2-9.7c-46.8 0-73 9.6-73.2 9.7c-2.6 1-5.5-.3-6.4-2.9c-1-2.6.3-5.5 2.9-6.4c1-.4 22.9-8.5 63.1-10.1C69.7 145.7 40 114.6 40 80c0-33.1 26.9-60 60-60s60 26.9 60 60c0 34.6-29.7 65.7-46.3 80.3c40.1 1.6 62.1 9.7 63.1 10.1c2.6 1 3.9 3.9 2.9 6.4c-1 2.6-3.9 3.8-6.5 2.9zM100 30c-27.6 0-50 22.4-50 50c0 36.1 38.9 69.8 50 78.7c11.1-8.9 50-42.6 50-78.7c0-27.6-22.4-50-50-50zm0 75c-13.8 0-25-11.2-25-25s11.2-25 25-25s25 11.2 25 25s-11.2 25-25 25zm0-40c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15z"></path></svg></span><span class="IirT-neighborhood">${hotel.hoteladdress}</span><span class="IirT-divider"></span>
 																				</button>
 																			</div>
 																			<button class="IirT-rating-section" aria-label="토요코인 서울영등포점는 후기 2,322개개 평점에서 매우 좋음 8.5개를 받았습니다. 사용자 및 다른 상세 후기를 보려면 클릭하세요.">
@@ -1491,7 +1487,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																			<div class="e9fk e9fk-pres-apac e9fk-mod-responsive">
 																				<div class="e9fk-photoContainer" data-index="2">
 																					<button class="e9fk-photoWrap">
-																						<img class="e9fk-photo" alt="토요코인 서울영등포점" src="https://content.r9cdn.net/rimg/himg/16/8e/b8/expediav2-6094950-29198e-711165.jpg?width=432&amp;height=432&amp;xhint=540&amp;yhint=333&amp;crop=true&amp;watermarkheight=28&amp;watermarkpadding=10" srcset="https://content.r9cdn.net/rimg/himg/16/8e/b8/expediav2-6094950-29198e-711165.jpg?width=216&amp;height=216&amp;xhint=540&amp;yhint=333&amp;crop=true&amp;watermarkheight=14&amp;watermarkpadding=5 1x, https://content.r9cdn.net/rimg/himg/16/8e/b8/expediav2-6094950-29198e-711165.jpg?width=432&amp;height=432&amp;xhint=540&amp;yhint=333&amp;crop=true&amp;watermarkheight=28&amp;watermarkpadding=10 2x" style="object-position: left center;">
+																						<img class="e9fk-photo" alt="토요코인 서울영등포점" src="/HCYHotel/common/business/img/${fn:split(hotel.filename,'.jpg')[0]}.jpg"  style="object-position: left center;">
 																					</button>
 																				</div>
 																				<div class="e9fk-bannerRow e9fk-highBanners"></div>
@@ -1550,8 +1546,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																							<div class="D8J--freebie">
 																								<svg viewBox="0 0 200 200" width="16" height="16" xmlns="http://www.w3.org/2000/svg" role="img">
 																									<path d="M86.3 148.4l-45-49.3c-1.9-2-1.7-5.2.3-7.1c2-1.9 5.2-1.7 7.1.3l40.9 44.8l61.4-85c1.6-2.2 4.7-2.7 7-1.1c2.2 1.6 2.7 4.7 1.1 7l-65 90c-1.9 2.5-5.7 2.7-7.8.4z"></path></svg>
-																								<span class="D8J--freebie-text">${roomtype.typename}(객실
-																									이름 누르면 상세정보창)</span>
+																								<span class="D8J--freebie-text">${roomtype.typename}</span>
 																							</div>
 																						</div>
 																					</div>
@@ -1573,8 +1568,8 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																					</div>
 																				</div>
 																			</div>
-
 																		</c:forEach>	
+
 																	<!-- --------------------- -->
 																		</div>
 																	</div>
@@ -1584,8 +1579,8 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 														</div>
 													</div>
 
-												</c:forEach>
 <!-- --------------------------------------------------------------------------- -->
+												</c:forEach>
 
 
 												<div>
@@ -3473,7 +3468,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 															</div>
 														</div>
 														<div class="IirT-bottom-section">
-															<div id="responsive-info-photo-container-2">
+														<input type="button" value="ㅇㄹ">															<div id="responsive-info-photo-container-2">
 																<div class="IirT-photo-container" role="button" tabindex="-1">
 																	<div class="IirT-resultActionsMenuContainer IirT-alwaysVisible">
 																		<div class="dSkV dSkV-pres-hrp-over-image">

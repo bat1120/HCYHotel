@@ -14,4 +14,11 @@ public class HotelInfoService {
 		}//end if
 		return his;
 	}//getInstance
-}
+	
+	public HotelInfoDomain showHotelInfo(String hotelcode) {
+		HotelInfoDAO hiDAO=HotelInfoDAO.getInstance();
+		
+		HotelInfoDomain hid=hiDAO.selectHotelInfo(hotelcode);
+		return hid;
+	}//showHotelInfo
+}//class
