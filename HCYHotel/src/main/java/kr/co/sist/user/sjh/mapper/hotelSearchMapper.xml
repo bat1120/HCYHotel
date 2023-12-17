@@ -7,13 +7,15 @@
 
 <select id="getHotelBySearch" parameterType="kr.co.sist.user.hotelsearch.SearchVO" resultType="kr.co.sist.user.home.HotelDomain">
 
-select h.* from hotel h
+select h.*,f.filename from hotel h
+left outer join infofile f
+on h.hotelcode = f.hotelcode
 where 
 h.hoteladdress like '%' || #{searchAddress} || '%' and
 h.hotelcode
 in
 (
-select r.hotelcode from room r
+select r.hotelcode  from room r
 inner join roomtype t
 on  t.maxcapacity &gt;= #{searchCapacity}
 where r.roomcode not in (select r.roomcode from roombooking r where r.checkin &lt; #{searchCheckout} or r.checkout &gt; #{searchCheckin})
@@ -33,5 +35,12 @@ where  t.hotelcode=#{hotelcode} and t.maxcapacity &gt;= #{searchCapacity}
 </select>
 
 
+
+<select id="selectHotelDetail" parameterType="String" resultType="kr.co.sist.user.hotelinfo.HotelInfoDomain">
+   select h.*, i.filename
+   from hotel h
+   left outer join infofile i on h.hotelcode = i.hotelcode
+   where h.hotelcode = #{hotelcode}
+</select>
 
 </mapper>

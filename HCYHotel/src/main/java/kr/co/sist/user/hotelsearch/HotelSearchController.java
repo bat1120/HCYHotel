@@ -21,7 +21,7 @@ public class HotelSearchController {
 		System.out.println("-----------------");
 		System.out.println(hotelList);
 		return "user/hotel/hotelSearch/user_hotel_search"; 
-	}//hotelMain
+	}//hotelMainSearch
 	
 	@GetMapping("/user/hotel/hotelSearch/user_hotel_search_map.do")
 	public String hotelMapSearch() {

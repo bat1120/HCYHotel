@@ -2,9 +2,10 @@
 	pageEncoding="UTF-8"%>
 <%@ page info=""%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <html lang="ko">
 <head>
-<title>브랜드 소개 - 더 플라자 | 더 플라자 호텔 서울</title>
+<title>호텔 상세</title>
 
 
 
@@ -299,22 +300,23 @@
 						<div class="bg_inner">
 							<div class="tit_bg">
 								<div class="bg_img">
-								<img src="http://localhost/HCYHotel/common/user/img/tit_bg_service.png" alt="">
+								 <img src="http://localhost/HCYHotel/common/business/img/${fn:split(hotelInfo.fileName,'.jpg')[0]}.jpg" alt=""> 
 								</div>
 
 							</div>
 							<div class="section_inner fclear">
 								<div class="left_area">
 									<div class="sec_tit">
-										서울 플라자호텔
+										${hotelInfo.hotelName}
 									</div>
 								</div>
 								<div class="right_area cnt_inner">
 								<button type="button" class="btn btn-info">후기</button>
 								<button type="button" class="btn btn-warning">객실 둘러보기</button>
 									<p class="sub_tit_b">
-										늘 머무르는 곳처럼 편안한 느낌.<br> 낯선 곳에 대한 두려움을 설렘으로 바꿔 줄 '기대 그 이상의
-										서비스' 가 있기 때문입니다.
+									${hotelInfo.description}
+										<!-- 늘 머무르는 곳처럼 편안한 느낌.<br> 낯선 곳에 대한 두려움을 설렘으로 바꿔 줄 '기대 그 이상의
+										서비스' 가 있기 때문입니다. -->
 									</p>
 									<div class="clear_line"></div>
 									<div class="section_txt">
@@ -332,7 +334,6 @@
 										</p>
 
 									</div>
-
 
 								</div>
 							</div>
