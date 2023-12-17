@@ -38,6 +38,8 @@
  <typeAlias type="kr.co.sist.business.diningschedule.DiningSearchVO" alias="dsVO"/>
  <typeAlias type="kr.co.sist.business.diningschedule.DiningScheduleListDomain" alias="dsld"/>
  <typeAlias type="kr.co.sist.business.diningschedule.DiningNameListDomain" alias="dnld"/>
+ <typeAlias type="kr.co.sist.business.diningschedule.DiningScheduleVO" alias="dsVO2"/>
+ <typeAlias type="kr.co.sist.business.diningschedule.DiningScheduleInfoDomain" alias="dsid2"/>
 </typeAliases>
   <environments default="development">
     <environment id="development">

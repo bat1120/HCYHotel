@@ -1,5 +1,7 @@
 package kr.co.sist.business.diningschedule;
 
+import java.sql.Date;
+
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -8,5 +10,7 @@ import lombok.ToString;
 @Getter
 @ToString
 public class DiningScheduleVO {
-private String diningcode,pplcnt,price,scheduledate,category;
+private String diningcode,category,schedulecode;
+private int pplcnt,price;
+private Date scheduledate;
 }

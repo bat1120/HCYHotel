@@ -310,8 +310,7 @@
 									</div>
 								</div>
 								<div class="right_area cnt_inner">
-								<button type="button" class="btn btn-info">후기</button>
-								<button type="button" class="btn btn-warning">객실 둘러보기</button>
+								<button type="button" class="btn btn-info">예약하기</button>
 									<p class="sub_tit_b">
 										늘 머무르는 곳처럼 편안한 느낌.<br> 낯선 곳에 대한 두려움을 설렘으로 바꿔 줄 '기대 그 이상의
 										서비스' 가 있기 때문입니다.
