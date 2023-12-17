@@ -156,7 +156,7 @@
 <div id="content-main" class="content-main">
 <div >
 <h3 class="content-main-title" style="margin-top:7%; ">나의 다이닝리뷰</h3>
-<table class="board-list" style="width: 1200px; margin-left:20%; margin-top:100px;">
+<table class="board-list" style="width: 1200px; margin-left:20%; margin-top:100px; margin-bottom: 100px;">
 <c:forEach var="diningReviewList" varStatus="i" items="${ diningReviewList }">
 <tr style="font-family: ; color: ; ">
 	<td colspan="3">다이닝 <c:out value="${ diningReviewList.diningName }" /></td>
