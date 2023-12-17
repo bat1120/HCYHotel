@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.co.sist.user.sjh.hotelSearchMapper">
+
+
+<select id="getHotelBySearch" parameterType="kr.co.sist.user.hotelsearch.SearchVO" resultType="kr.co.sist.user.home.HotelDomain">
+
+select h.* from hotel h
+where 
+h.hoteladdress like '%' || #{searchAddress} || '%' and
+h.hotelcode
+in
+(
+select r.hotelcode from room r
+inner join roomtype t
+on  t.maxcapacity &gt;= #{searchCapacity}
+where r.roomcode not in (select r.roomcode from roombooking r where r.checkin &lt; #{searchCheckout} or r.checkout &gt; #{searchCheckin})
+group by r.hotelcode
+)
+
+</select>
+
+<select id="getRoomTypeBySearch" parameterType="kr.co.sist.user.hotelsearch.SearchVO" resultType="kr.co.sist.user.hotelsearch.RoomTypeDomain">
+
+select t.typecode, t.hotelcode, t.typename, t.price, t.basiccapacity, t.maxcapacity
+from roomtype t
+inner join room r
+on r.roomcode not in (select r.roomcode from roombooking r where r.checkin &lt; #{searchCheckout} or r.checkout &gt; #{searchCheckin})
+where  t.hotelcode=#{hotelcode} and t.maxcapacity &gt;= #{searchCapacity}
+
+</select>
+
+
+
+</mapper>
