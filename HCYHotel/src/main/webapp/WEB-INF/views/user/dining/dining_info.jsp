@@ -23,6 +23,9 @@ $(function(){
 <!-- header -->
 <jsp:include page="../include/header.jsp"/>
 
+
+
+
 <!-- footer -->
 <div id="footer">
 <jsp:include page="../include/footer.jsp"/>

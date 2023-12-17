@@ -173,7 +173,7 @@
 				<!-- 내용 들어가는 자리 : 문의 -->
 				<c:out value="${ qna.content }"/>
 				</div>
-				<div class="detail-info">답변일 : <c:out value="${ qna.answerDate }"/></div>
+				<div class="detail-info" style="margin-top:10px">답변일 : <c:out value="${ qna.answerDate }"/></div>
 				<div class="detail-content" style="overflow: auto;">
 				<!-- 내용 들어가는 자리 : 답변-->
 				<c:out value="${ qna.answer }"/>
@@ -190,7 +190,15 @@
 	<!-- // content-main -->
 	</section>
 	<!-- // section-container -->
+<script type="text/javascript">
+$(function(){
+	$("#btn_list").click(function(){
+		location.href="user_qna_list.do"
+	});//click
+	
 
+});//ready
+</script>
 
 	<!-- footer // -->
 	<jsp:include page="../include/footer.jsp" />

@@ -4,12 +4,30 @@
 
 <html lang="ko-kr" dir="ltr">
 
+<!-- bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
 <jsp:include page="../include/header.jsp"/>
 
+<script type="text/javascript">
+$(function(){
+	$("#btn_booking").click(function(){
+		location.href="dining_booking.do"
+	});//click
+	
+	
+});//ready
+
+
+
+</script>
 			<div
 				class="JjjA-main JjjA-withDrawer JjjA-moved JjjA-new-nav-breakpoints"
 				id="main">
 				<main class="EoVr">
+<input type="button" class="btn btn-dark" value="다이닝 예약" id="btn_booking" style="margin-left: 1300px; margin-top:30px;"/>
 					<div class="Seuf">
 						<section class="bDbo bDbo-spacing-bottom"
 							data-section-type="API_NEARBY_HOTELS" aria-label="추천 다이닝"
@@ -25,26 +43,10 @@
 								<div>
 									<div role="region" tabindex="0" aria-label="부여 인근 숙소 이미지 슬라이드"
 										class="c-5pd c-5pd-mod-sizing-quarter-wide c-5pd-mod-spacing-xsmall">
-										<div role="button" tabindex="-1" aria-disabled="true"
-											class="JRE_ JRE_-mod-direction-back JRE_-mod-size-large JRE_-mod-shape-square JRE_-mod-position-default JRE_-mod-disabled"
-											aria-label="뒤로" style="top: 135px;">
-											<svg viewBox="0 0 200 200" width="1.25em" height="1.25em"
-												xmlns="http://www.w3.org/2000/svg" class="JRE_-arrow-svg"
-												role="img">
-												<path
-													d="M120.002 160a4.987 4.987 0 0 1-3.702-1.637l-50-55a5 5 0 0 1 0-6.727l50-55a5 5 0 0 1 7.4 6.727L76.757 100l46.943 51.637a5 5 0 0 1-3.698 8.363z"></path></svg>
-										</div>
 										<div class="c-5pd-list">
 											<div class="c-5pd-inner">
 												<div role="group" aria-label="8개 중 1번째 항목">
-													<a
-														href="https://www.hotelscombined.co.kr/hotels/%EB%B6%80%EC%97%AC%2C%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD-c72568-h5978549/2023-12-07/2023-12-14/2adults"
-														class="FNY6 FNY6-pres-quarter FNY6-mod-variant-default FNY6-mod-fluid-stretch FNY6-mod-center FNY6-mod-shape-round FNY6-mod-transition-none"><div
-															role="figure" class="FNY6-image-container">
-															<div
-																class="ATNn FNY6-image FNY6-mod-image-position-center"
-																aria-label="힐링하우스 핑크장" style=""></div>
-														</div>
+													<img src="http://localhost/HCYHotel/WEB-INF/views/user/dining/img/dining_sevensquare.PNG"/>
 														<div
 															class="FNY6-content FNY6-mod-content-background-default">
 															<h5 class="FNY6-title">세븐스퀘어</h5>
@@ -100,15 +102,7 @@
 												</div>
 											</div>
 										</div>
-										<div role="button" tabindex="0"
-											class="JRE_ JRE_-mod-direction-forward JRE_-mod-size-large JRE_-mod-shape-square JRE_-mod-position-default"
-											aria-label="전송" style="top: 135px;">
-											<svg viewBox="0 0 200 200" width="1.25em" height="1.25em"
-												xmlns="http://www.w3.org/2000/svg" class="JRE_-arrow-svg"
-												role="img">
-												<path
-													d="M79.999 160a5 5 0 0 1-3.698-8.363L123.243 100L76.3 48.363a5 5 0 0 1 7.399-6.727l50 55a5.002 5.002 0 0 1 0 6.727l-50 55a4.986 4.986 0 0 1-3.7 1.637z"></path></svg>
-										</div>
+									
 									</div>
 								</div>
 							</div>
@@ -209,17 +203,16 @@
 						<div class="kml-layout edges-s snap">
 							<div class="c3OuA-links">
 								<div class="vJFP-container">
-									<h2 class="vJFP-title vJFP-mod-variant-text">인기 다이닝을 살펴보세요</h2>
+									<h2 class="vJFP-title vJFP-mod-variant-text"  style="margin-bottom: 20px;">인기 다이닝을 살펴보세요</h2>
 									<div
-										class="vJFP-links-wrapper vJFP-mod-columns-3 vJFP-mod-variant-text">
+										class="vJFP-links-wrapper vJFP-mod-columns-3 vJFP-mod-variant-text" >
 										<div>
 											<div>
 												<div class="P_Ok-wrapper">
 													<div class="P_Ok-header">
 														<div class="P_Ok-container">
 															<h3 class="P_Ok-title">
-																<a href="/Place/Yufu.htm" class="P_Ok-main-link">유후
-																	시 호텔</a>
+																<!-- a태그되어잇엇음 class="P_Ok-main-link"-->세븐스퀘어
 															</h3>
 														</div>
 														<div class="P_Ok-header-links"></div>
@@ -232,8 +225,7 @@
 													<div class="P_Ok-header">
 														<div class="P_Ok-container">
 															<h3 class="P_Ok-title">
-																<a href="/Place/Phu_Quoc.htm" class="P_Ok-main-link">푸꾸옥
-																	호텔</a>
+																라연
 															</h3>
 														</div>
 														<div class="P_Ok-header-links"></div>
@@ -246,8 +238,7 @@
 													<div class="P_Ok-header">
 														<div class="P_Ok-container">
 															<h3 class="P_Ok-title">
-																<a href="/Place/Sapporo.htm" class="P_Ok-main-link">삿포로
-																	호텔</a>
+																더 파크뷰
 															</h3>
 														</div>
 														<div class="P_Ok-header-links"></div>
@@ -260,8 +251,7 @@
 													<div class="P_Ok-header">
 														<div class="P_Ok-container">
 															<h3 class="P_Ok-title">
-																<a href="/Place/Kota_Kinabalu.htm"
-																	class="P_Ok-main-link">코타키나발루 호텔</a>
+																팔선
 															</h3>
 														</div>
 														<div class="P_Ok-header-links"></div>
@@ -274,8 +264,7 @@
 													<div class="P_Ok-header">
 														<div class="P_Ok-container">
 															<h3 class="P_Ok-title">
-																<a href="/Place/Tokyo_Prefecture.htm"
-																	class="P_Ok-main-link">도쿄도 호텔</a>
+																아리아께
 															</h3>
 														</div>
 														<div class="P_Ok-header-links"></div>
@@ -290,8 +279,7 @@
 													<div class="P_Ok-header">
 														<div class="P_Ok-container">
 															<h3 class="P_Ok-title">
-																<a href="/Place/London.htm" class="P_Ok-main-link">런던
-																	호텔</a>
+																콘티넨탈
 															</h3>
 														</div>
 														<div class="P_Ok-header-links"></div>
@@ -304,8 +292,7 @@
 													<div class="P_Ok-header">
 														<div class="P_Ok-container">
 															<h3 class="P_Ok-title">
-																<a href="/Place/Kyoto.htm" class="P_Ok-main-link">교토
-																	호텔</a>
+																온달
 															</h3>
 														</div>
 														<div class="P_Ok-header-links"></div>
@@ -318,8 +305,7 @@
 													<div class="P_Ok-header">
 														<div class="P_Ok-container">
 															<h3 class="P_Ok-title">
-																<a href="/Place/Ho_Chi_Minh_City.htm"
-																	class="P_Ok-main-link">호치민 호텔</a>
+																금룡
 															</h3>
 														</div>
 														<div class="P_Ok-header-links"></div>
@@ -332,8 +318,7 @@
 													<div class="P_Ok-header">
 														<div class="P_Ok-container">
 															<h3 class="P_Ok-title">
-																<a href="/Place/Boracay.htm" class="P_Ok-main-link">보라카이
-																	호텔</a>
+																더 파빌리온
 															</h3>
 														</div>
 														<div class="P_Ok-header-links"></div>
@@ -346,8 +331,7 @@
 													<div class="P_Ok-header">
 														<div class="P_Ok-container">
 															<h3 class="P_Ok-title">
-																<a href="/Place/Osaka_Prefecture.htm"
-																	class="P_Ok-main-link">오사카부 호텔</a>
+																르 파사쥬
 															</h3>
 														</div>
 														<div class="P_Ok-header-links"></div>
@@ -362,8 +346,7 @@
 													<div class="P_Ok-header">
 														<div class="P_Ok-container">
 															<h3 class="P_Ok-title">
-																<a href="/Place/Taipei.htm" class="P_Ok-main-link">타이베이
-																	호텔</a>
+																델리시픽
 															</h3>
 														</div>
 														<div class="P_Ok-header-links"></div>
@@ -376,8 +359,21 @@
 													<div class="P_Ok-header">
 														<div class="P_Ok-container">
 															<h3 class="P_Ok-title">
-																<a href="/Place/Cebu_City.htm" class="P_Ok-main-link">세부
-																	시티 호텔</a>
+																차오란
+															</h3>
+														</div>
+														<div class="P_Ok-header-links"></div>
+														<div class="P_Ok-container-padding"></div>
+													</div>
+												</div>
+											</div>
+											<div>
+												<div class="P_Ok-wrapper">
+													<div class="P_Ok-header">
+														<div class="P_Ok-container">
+														
+															<h3 class="P_Ok-title">
+																더 라운지 서울
 															</h3>
 														</div>
 														<div class="P_Ok-header-links"></div>
@@ -390,8 +386,7 @@
 													<div class="P_Ok-header">
 														<div class="P_Ok-container">
 															<h3 class="P_Ok-title">
-																<a href="/Place/New_York_City.htm"
-																	class="P_Ok-main-link">뉴욕 호텔</a>
+																라세느
 															</h3>
 														</div>
 														<div class="P_Ok-header-links"></div>
@@ -404,22 +399,7 @@
 													<div class="P_Ok-header">
 														<div class="P_Ok-container">
 															<h3 class="P_Ok-title">
-																<a href="/Place/Hanoi.htm" class="P_Ok-main-link">하노이
-																	호텔</a>
-															</h3>
-														</div>
-														<div class="P_Ok-header-links"></div>
-														<div class="P_Ok-container-padding"></div>
-													</div>
-												</div>
-											</div>
-											<div>
-												<div class="P_Ok-wrapper">
-													<div class="P_Ok-header">
-														<div class="P_Ok-container">
-															<h3 class="P_Ok-title">
-																<a href="/Place/Fukuoka_Prefecture.htm"
-																	class="P_Ok-main-link">후쿠오카현 호텔</a>
+																드림
 															</h3>
 														</div>
 														<div class="P_Ok-header-links"></div>
