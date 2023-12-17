@@ -15,8 +15,8 @@ public class HotelSearchController {
 	
 	@GetMapping("/user/hotel/hotelSearch/user_hotel_search.do")
 	public String hotelMainSearch(@ModelAttribute SearchVO searchVO, Model model) {
-		HotelSearchService hotelSearchService=HotelSearchService.getInstance();
-		List<HotelDomain> hotelList = hotelSearchService.getHotelBySearch(searchVO);
+		HotelSearchService hss=HotelSearchService.getInstance();
+		List<HotelDomain> hotelList = hss.getHotelBySearch(searchVO);
 		model.addAttribute("hotelList", hotelList);
 		System.out.println("-----------------");
 		System.out.println(hotelList);

@@ -1414,6 +1414,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																	<button class="L9ZF-skip-to-details" aria-label="결과 상세 페이지로 이동하려면 클릭하세요.">결과 상세
 																		정보로 이동</button>
 																</div>
+																<a href="http://localhost/HCYHotel/user/hotel/hotelInfo/user_hotel_info.do?hotelcode=${hotel.hotelcode}"><button type="button" class="btn btn-info">호텔 바로가기</button></a>
 																<div id="responsive-info-photo-container-1">
 																	<div class="IirT-photo-container" role="button" tabindex="-1">
 																		<div class="IirT-resultActionsMenuContainer IirT-alwaysVisible">
@@ -1453,16 +1454,10 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																			<div>
 																				<div role="button" tabindex="-1" class="IirT-header-container">
 																					<h3 class="IirT-header">${hotel.hotelname}</h3>
-																					<div class="">
-																						<div class="O3Yc O3Yc-sp-default" role="img" aria-label="2성급">
-																							<span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
-																										<path d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
-																										<path d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span>
-																						</div>
-																					</div>
 																					
 																					
-																					<input type="button" name="호텔 상세보기" value="호텔 상세보기">
+																					
+																					<button type="button" class="btn btn-info">Info</button>
 																					
 																					
 																					
@@ -1551,8 +1546,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																							<div class="D8J--freebie">
 																								<svg viewBox="0 0 200 200" width="16" height="16" xmlns="http://www.w3.org/2000/svg" role="img">
 																									<path d="M86.3 148.4l-45-49.3c-1.9-2-1.7-5.2.3-7.1c2-1.9 5.2-1.7 7.1.3l40.9 44.8l61.4-85c1.6-2.2 4.7-2.7 7-1.1c2.2 1.6 2.7 4.7 1.1 7l-65 90c-1.9 2.5-5.7 2.7-7.8.4z"></path></svg>
-																								<span class="D8J--freebie-text">${roomtype.typename}(객실
-																									이름 누르면 상세정보창)</span>
+																								<span class="D8J--freebie-text">${roomtype.typename}</span>
 																							</div>
 																						</div>
 																					</div>
@@ -1574,8 +1568,8 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																					</div>
 																				</div>
 																			</div>
-
 																		</c:forEach>	
+
 																	<!-- --------------------- -->
 																		</div>
 																	</div>
@@ -1585,8 +1579,8 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 														</div>
 													</div>
 
-												</c:forEach>
 <!-- --------------------------------------------------------------------------- -->
+												</c:forEach>
 
 
 												<div>
@@ -3474,7 +3468,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 															</div>
 														</div>
 														<div class="IirT-bottom-section">
-															<div id="responsive-info-photo-container-2">
+														<input type="button" value="ㅇㄹ">															<div id="responsive-info-photo-container-2">
 																<div class="IirT-photo-container" role="button" tabindex="-1">
 																	<div class="IirT-resultActionsMenuContainer IirT-alwaysVisible">
 																		<div class="dSkV dSkV-pres-hrp-over-image">

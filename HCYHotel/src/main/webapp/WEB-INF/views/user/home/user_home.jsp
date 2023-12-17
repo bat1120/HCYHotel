@@ -1790,7 +1790,7 @@ window.onload = function () {
 																		aria-label="시작 날짜">
 																		
 																		<div class="SVL4-button-content">
-																			<input type="text" id="datepicker" placeholer="OO월 OO일" name="searchCheckin">
+																			<input type="text" id="datepicker" placeholder="yyyy-mm-dd" name="searchCheckin">
 																		</div>
 																	</div>
 																	<div class="SVL4-date-arrows">
@@ -1806,7 +1806,7 @@ window.onload = function () {
 																		aria-label="종료 날짜">
 																		
 																		<div class="SVL4-button-content">
-																			<input type="text" id="datepicker2" placeholer="OO월 OO일" name="searchCheckout" value="">
+																			<input type="text" id="datepicker2" placeholder="yyyy-mm-dd" name="searchCheckout" value="">
 																		</div>
 																	</div>
 																	<div class="SVL4-date-arrows">
