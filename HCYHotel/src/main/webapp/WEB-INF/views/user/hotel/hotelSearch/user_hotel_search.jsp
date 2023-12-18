@@ -1335,7 +1335,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																				</div>
 																			</div>
 																			<div class="lNCO-inner">
-																			<input type="text" placeholder="숙소명">
+																			<input type="text" placeholder="숙소명" style="width:150px">
 																			</div>
 																		</div>
 																	</div>

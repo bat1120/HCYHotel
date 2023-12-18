@@ -1775,7 +1775,7 @@ window.onload = function () {
 															<input type="text"
 																class="NhpT NhpT-mod-radius-base NhpT-mod-corner-radius-all NhpT-mod-size-large NhpT-mod-state-default NhpT-mod-text-overflow-ellipsis NhpT-mod-theme-search NhpT-mod-validation-state-neutral NhpT-mod-validation-style-border"
 																value="서울" tabindex="0" id="searchAddress" name="searchAddress"
-																placeholder="지역명 입력해주세요"
+																placeholder="지역명을 입력해주세요"
 																aria-autocomplete="list" aria-haspopup="listbox">
 														</div>
 													</div>
@@ -1790,7 +1790,7 @@ window.onload = function () {
 																		aria-label="시작 날짜">
 																		
 																		<div class="SVL4-button-content">
-																			<input type="text" id="datepicker" placeholder="yyyy-mm-dd" name="searchCheckin">
+																			<input type="text" style="height:40px" id="datepicker" placeholder="yyyy-mm-dd" name="searchCheckin">
 																		</div>
 																	</div>
 																	<div class="SVL4-date-arrows">
@@ -1806,7 +1806,7 @@ window.onload = function () {
 																		aria-label="종료 날짜">
 																		
 																		<div class="SVL4-button-content">
-																			<input type="text" id="datepicker2" placeholder="yyyy-mm-dd" name="searchCheckout" value="">
+																			<input type="text" style="height:40px" id="datepicker2" placeholder="yyyy-mm-dd" name="searchCheckout" value="">
 																		</div>
 																	</div>
 																	<div class="SVL4-date-arrows">

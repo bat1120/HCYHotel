@@ -26,5 +26,10 @@ public class RoomInfoController {
 		return "user/hotel/room/user_room_info"; 
 	}//roomInfo
 	
+	@GetMapping("/user/hotel/room/user_room_reser.do")
+	public String roomReser() {
+		return "user/hotel/room/user_room_reser"; 
+	}//roomInfo
+	
 	
 }
