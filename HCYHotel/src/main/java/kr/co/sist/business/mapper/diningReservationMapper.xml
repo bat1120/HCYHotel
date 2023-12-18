@@ -19,4 +19,13 @@ INNER JOIN DININGBOOKING db ON ds.schedulecode = db.schedulecode
 INNER JOIN hotel h ON d.hotelcode = h.hotelcode
 WHERE h.id = #{id}
 </select>
+<select id="selectDiningRegister" resultType="dd2" parameterType="drVO">
+SELECT db.bookingcode, db.id, db.bookingname, db.pplcnt, ds.category, to_char(db.BOOKINGDATE,'YYYY-MM-DD') bookingdate, db.STATUS
+FROM DINING d
+INNER JOIN DININGSCHEDULE ds ON d.diningcode = ds.diningcode
+INNER JOIN DININGBOOKING db ON ds.schedulecode = db.schedulecode
+INNER JOIN hotel h ON d.hotelcode = h.hotelcode
+WHERE h.id = #{id}
+and d.diningcode=#{diningcode}
+</select>
 </mapper>

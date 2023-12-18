@@ -28,6 +28,8 @@
  <typeAlias type="kr.co.sist.business.room.RoomTypeVO" alias="rtVO"/>
  <typeAlias type="kr.co.sist.business.diningregister.DiningSearchDomain" alias="dsd"/>
  <typeAlias type="kr.co.sist.business.diningregister.BusinessDiningDomain" alias="bdd"/>
+ <typeAlias type="kr.co.sist.business.diningregister.DiningRegisterVO" alias="drVO"/>
+ <typeAlias type="kr.co.sist.business.diningregister.DiningDomain" alias="dd2"/>
  <typeAlias type="kr.co.sist.business.dining.BusinessDiningDomain" alias="bdd2"/>
  <typeAlias type="kr.co.sist.business.dining.BusinessHotelDomain" alias="bhd2"/>
  <typeAlias type="kr.co.sist.business.dining.DiningVO" alias="dVO"/>
