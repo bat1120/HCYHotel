@@ -502,7 +502,7 @@ $(document).ready(function() {
 								
 									
 										<em class="msgInvalid" id="mail_msg_email1" name="email"
-											style="display: none">이메일 주소를 입력해주세요.</em>
+											style="display: none">이메일 주소를 입력해주세요.</em> 
 
 									</div>
 
