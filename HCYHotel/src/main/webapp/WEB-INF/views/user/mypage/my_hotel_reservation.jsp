@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=1280">
 <meta name="format-detection" content="telephone=no">
 
-<title>나의 호텔예매내역 - 마이페이지 | HCYCombined</title>
+<title>나의 호텔예약내역 - 마이페이지 | HCYCombined</title>
 
 <link rel="shortcut icon" href="/system/images/favicon.ico">
 <link rel="apple-touch-icon" href="/system/images/favicon.ico">

@@ -1,36 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ page info="다이닝 상세"%>
+<%@ page info=""%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <html lang="ko">
 <head>
-<title>전체보기 - 객실 | 더 플라자 호텔 서울</title>
-
-
-
-
-
-
-
-
-
-
-
-
+<title>다이닝 | HCYCombined</title>
 
 <meta charset="utf-8">
 
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-
-
-
 
 <meta property="og:image"
 	content="https://www.hoteltheplaza.com/sp4/img/thumb.jpg">
 <meta property="og:image:type" content="image/jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="631">
-
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="더 플라자 호텔 서울">
@@ -39,7 +24,9 @@
 <meta property="fb:app_id" content="142078889760752">
 <link rel="shortcut icon" type="image/x-icon"
 	href="/_resource/favicon.ico">
-<link rel="stylesheet" type="text/css" href="http://localhost/HCYHotel/common/user/css/plaza/common.css">
+<link rel="stylesheet" type="text/css" href="http://localhost/HCYHotel/common/user/css/common.css">
+<!-- bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <script type="text/javascript" async=""
 	src="https://www.googletagmanager.com/gtag/js?id=G-C2XCVPTE5M&amp;l=dataLayer&amp;cx=c"></script>
 <script async=""
@@ -68,32 +55,29 @@
 </script>
 <!-- End Google Tag Manager -->
 
-
-<meta name="title" content="전체보기 - 객실 | 더 플라자 호텔 서울">
+<meta name="title" content="브랜드 소개 - 더 플라자 | 더 플라자 호텔 서울">
 <meta name="description"
-	content="럭셔리 부티크 호텔 인 더 플라자 호텔 서울에서 전통 고궁전경에서부터 서울 도심의 야경까지의 다양한 도시조망과 유니크한 디자인의 하이퀄리티침구류, 항알러지케어카페트 등 스타일리시한 가구 및 오브제로 다양한 객실과 서비스를 경험해보세요.">
-<meta name="keywords"
-	content="더플라자호텔서울객실,객실더플라자호텔서울,더플라자호텔객실서울,객실더플라자호텔">
-<meta property="og:title" content="전체보기 - 객실 | 더 플라자 호텔 서울">
+	content="럭셔리 부티크 호텔 더 플라자는 서울의 상장인 시청 맞은편에 위치, 비즈니스 및 관광에 최적의 위치를 제공하며, 총 408개 객실과 6개의 다양한 레스토랑&amp;바, 9개의 연회장, 휘트니스 및 스파 등을 갖춘 가장 현대적인 특급호텔 중 하나입니다.">
+<meta name="keywords" content="브랜드 소개, 브랜드 소게 더 플라자 호텔 서울">
+<meta property="og:title" content="브랜드 소개 - 더 플라자 | 더 플라자 호텔 서울">
 <meta property="og:description"
-	content="럭셔리 부티크 호텔 인 더 플라자 호텔 서울에서 전통 고궁전경에서부터 서울 도심의 야경까지의 다양한 도시조망과 유니크한 디자인의 하이퀄리티침구류, 항알러지케어카페트 등 스타일리시한 가구 및 오브제로 다양한 객실과 서비스를 경험해보세요.">
+	content="럭셔리 부티크 호텔 더 플라자는 서울의 상장인 시청 맞은편에 위치, 비즈니스 및 관광에 최적의 위치를 제공하며, 총 408개 객실과 6개의 다양한 레스토랑&amp;바, 9개의 연회장, 휘트니스 및 스파 등을 갖춘 가장 현대적인 특급호텔 중 하나입니다.">
 <meta property="og:url"
-	content="https://www.hoteltheplaza.com/kr/room/roomall.jsp">
+	content="https://www.hoteltheplaza.com/kr/about/brand.jsp">
 <link rel="alternate"
-	href="https://www.hoteltheplaza.com/m/kr/room/roomall.jsp">
+	href="https://www.hoteltheplaza.com/m/kr/about/brand.jsp">
 <link rel="canonical"
-	href="https://www.hoteltheplaza.com/kr/room/roomall.jsp">
+	href="https://www.hoteltheplaza.com/kr/about/brand.jsp">
 <link hreflang="en" rel="alternate"
-	href="https://www.hoteltheplaza.com/en/room/roomall.jsp">
+	href="https://www.hoteltheplaza.com/en/about/brand.jsp">
 <link hreflang="ja" rel="alternate"
-	href="https://www.hoteltheplaza.com/jp/room/roomall.jsp">
+	href="https://www.hoteltheplaza.com/jp/about/brand.jsp">
 <link hreflang="cn" rel="alternate"
-	href="https://www.hoteltheplaza.com/cn/room/roomall.jsp">
-<link rel="stylesheet" type="text/css" href="http://localhost/HCYHotel/common/user/css/plaza/room.css">
+	href="https://www.hoteltheplaza.com/cn/about/brand.jsp">
 
-
+<link rel="stylesheet" type="text/css" href="http://localhost/HCYHotel/common/user/css/about.css">
 <script>
-	var globalDepth1 = 3, globalDepth2 = 1;
+	var globalDepth1 = 1, globalDepth2 = 1;
 </script>
 
 <script type="application/ld+json">
@@ -111,36 +95,21 @@
 {	"@type": "ListItem",
 "position": 2,
 "item": {
- 	"@id": "https://www.hoteltheplaza.com/kr/room/roomall.jsp",
- 	"name": "객실"
+ 	"@id": "https://www.hoteltheplaza.com/kr/about/brand.jsp",
+ 	"name": "더 플라자"
 }  },
 {	"@type": "ListItem",
 "position": 3,
 "item": {
- 	"@id": "https://www.hoteltheplaza.com/kr/room/roomall.jsp",
- 	"name": "전체보기"
+ 	"@id": "https://www.hoteltheplaza.com/kr/about/brand.jsp",
+ 	"name": "브랜드 소개"
 }  }]
 }
 </script>
 
 </head>
 <body cz-shortcut-listen="true">
-
-
 	<div id="wrap">
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 		<!-- Google Tag Manager (noscript) -->
@@ -153,11 +122,25 @@
 			<a href="#gnb">메뉴 바로가기</a> <a href="#contents">본문 바로가기(skip to
 				content)</a>
 		</div>
-		
 		<!-- header -->
 		<jsp:include page="../include/header.jsp"/>
 		
 		
+
+		<form name="form_signup" method="post"
+			action="https://voc.hwhnr.com/voc/system/vocIndex">
+			<input type="hidden" name="channel_id" value="016"> <input
+				type="hidden" name="language" value="QMw6Owsyu8Ta6VkssmlXqg==">
+			<input type="hidden" name="user_id" value=""> <input
+				type="hidden" name="cust_name" value=""> <input
+				type="hidden" name="cust_tel" value=""> <input type="hidden"
+				name="cust_email" value="">
+		</form>
+		<form name="popForm">
+			<input type="hidden" name="title"> <input type="hidden"
+				name="ment"> <input type="hidden" name="img"> <input
+				type="hidden" name="link">
+		</form>
 		<script>
 			if (localStorage.getItem("email") != null) {
 				$(".login_email").val(localStorage.getItem("email"));
@@ -275,89 +258,67 @@
 			}
 		</script>
 		<div id="contents">
-			
-			<div class="room_content all">
+			<div class="about_content about ">
+
+				<div class="section_content">
+
+
+
+
+
+					<div class="section section_service active">
+						<div class="bg_inner">
+							<div class="tit_bg">
+								<div class="bg_img">
+								 <img src="http://localhost/HCYHotel/common/business/img/${fn:split(hotelInfo.fileName,'.jpg')[0]}.jpg" alt="" style="float: left; margin-right: 400px;" width="800" height="400">
+ 
+								</div>
+
+							</div>
+							<div class="section_inner fclear">
+								<div class="left_area">
+									<div class="sec_tit">
+										${hotelInfo.hotelName}
+									</div>
+								</div>
+								<div class="right_area cnt_inner">
+								<a href="http://localhost/HCYHotel/user/review/diningreview.do">
+								<button type="button" class="btn btn-secondary">후기</button></a>
+								<a href="http://localhost/HCYHotel/user/dining/dining_booking.do">
+								<button type="button" class="btn btn-dark">예약하기</button></a>
+									<p class="sub_tit_b">
+									${hotelInfo.description}
+										
+									</p>
+									<div class="clear_line"></div>
+									<div class="section_txt">
+									<a href="http://localhost/HCYHotel/user/hotel/room/user_room_list.do">
+								<button type="button" class="btn btn-secondary">메뉴보기</button></a>
+										<p>
+											호텔 전화번호 : ${hotelInfo.tel }<br>
+											호텔 주소 : ${hotelInfo.hotelAddress }<br>
+											경도 :${hotelInfo.longitude } <br>
+											위도 :${hotelInfo.latitude } <br>
+										</p>
+
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+
 				
-				<div class="room_list inmotion">
-					<h3>
-						<span>인기 좋은 다이닝</span>
-					</h3>
-					<ul>
-						<li><a href="/kr/room/deluxe.jsp">
-								<div class="room_img">
-									<img src="http://localhost/HCYHotel/WEB-INF/views/user/dining/img/dining_sevensquare.PNG"
-										alt="세븐스퀘어 나오냐">
-								</div>
-								<div class="room_text">
-									세븐스퀘어
-								</div>
-						</a></li>
-						<li><a href="/kr/room/premiersuite.jsp">
-								<div class="room_img">
-									<img src="/_resource/images/room/thumb_premier_suite.jpg"
-										alt="프리미어 스위트 이미지">
-								</div>
-								<div class="room_text">
-									프리미어 스위트 <span class="eng">PREMIER SUITE</span>
-								</div>
-						</a></li>
-						<li><a href="/kr/room/plazasuite.jsp">
-								<div class="room_img">
-									<img src="/_resource/images/room/thumb_plaza_suite.jpg"
-										alt="플라자 스위트 이미지">
-								</div>
-								<div class="room_text">
-									플라자 스위트 <span class="eng">PLAZA SUITE</span>
-								</div>
-						</a></li>
-						<li><a href="/kr/room/residentialsuite.jsp">
-								<div class="room_img">
-									<img src="/_resource/images/room/thumb_residential_suite.jpg"
-										alt="레지덴셜 스위트 이미지">
-								</div>
-								<div class="room_text">
-									레지덴셜 스위트 <span class="eng">RESIDENTIAL SUITE</span>
-								</div>
-						</a></li>
-						<li><a href="/kr/room/prestigesuite.jsp">
-								<div class="room_img">
-									<img src="/_resource/images/room/thumb_prestige_suite.jpg"
-										alt="프레스티지 스위트 이미지">
-								</div>
-								<div class="room_text">
-									프레스티지 스위트 <span class="eng">PRESTIGE SUITE</span>
-								</div>
-						</a></li>
-						<li><a href="/kr/room/presidentialsuite.jsp">
-								<div class="room_img">
-									<img src="/_resource/images/room/thumb_presidential_suite.jpg"
-										alt="프레지덴셜 스위트 이미지">
-								</div>
-								<div class="room_text">
-									프레지덴셜 스위트 <span class="eng">PRESIDENTIAL SUITE</span>
-								</div>
-						</a></li>
-						<li><a href="/kr/room/royalplazasuite.jsp">
-								<div class="room_img">
-									<img src="/_resource/images/room/thumb_royal_plaza_suite.jpg"
-										alt="로얄 플라자 스위트 이미지">
-								</div>
-								<div class="room_text">
-									로열 플라자 스위트 <span class="eng">ROYAL PLAZA SUITE</span>
-								</div>
-						</a></li>
-					</ul>
 				</div>
-				<div class="room_list inmotion"></div>
+
+
+
 			</div>
 
-			<div class="top_btn">
-				<a href="#">TOP</a>
-			</div>
 		</div>
+		<!-- footer  -->
+		<jsp:include page="../include/footer.jsp"/>
 
-<!-- footer -->
-<jsp:include page="../include/footer.jsp"/>
 
 
 		<script src="/_resource/js/common.js"></script>
@@ -375,15 +336,7 @@
 
 
 	</div>
-
-	<script>
-		$(function() {
-			setTimeout(function() {
-				$(".room_list").addClass("inmotion");
-			}, 300);
-		})
-	</script>
-
+	<script src="/_resource/js/about.js"></script>
 
 
 </body>

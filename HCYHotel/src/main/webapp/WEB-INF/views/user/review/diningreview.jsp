@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=1280">
 <meta name="format-detection" content="telephone=no">
 
-<title>호텔 리뷰 | HCYCombined</title>
+<title>다이닝 리뷰 | HCYCombined</title>
 
 <link rel="shortcut icon" href="/system/images/favicon.ico">
 <link rel="apple-touch-icon" href="/system/images/favicon.ico">
