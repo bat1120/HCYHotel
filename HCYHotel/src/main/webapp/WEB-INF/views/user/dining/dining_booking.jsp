@@ -232,14 +232,14 @@ function setCalendarControlDate(yyyy,mm,dd){
 function popCalendarLayerHide(){
 	$("#popCalendarDiv").attr("style","z-Index:99999;display:none;");
 }
-</script></head><body class="subBody joinBody" cz-shortcut-listen="true"><div id="popCalendarDiv" class="popCalendar" style="display:none"></div><link href="/css/mem/mainImages.css" rel="stylesheet" type="text/css">
-<link href="/css/mem/common.css" rel="stylesheet" type="text/css">
-<link href="/css/mem/title_ko.css" rel="stylesheet" type="text/css">
-<link href="/css/mem/common/print.css" rel="stylesheet" type="text/css" media="print">
-<link href="/css/mem/common/reserve_new.css" rel="stylesheet" type="text/css">
-<link href="/css/mem/btn.css" rel="stylesheet" type="text/css">
-<link href="/css/mem/common/lang-ko_N.css" rel="stylesheet" type="text/css">
-<link href="/css/common/swiper.min.css" rel="stylesheet" type="text/css">
+</script></head><body class="subBody joinBody" cz-shortcut-listen="true"><div id="popCalendarDiv" class="popCalendar" style="display:none"></div><link href="http://localhost/HCYHotel/common/user/css/shilla/mainImages.css" rel="stylesheet" type="text/css">
+<link href="http://localhost/HCYHotel/common/user/css/shilla/title_ko.css" rel="stylesheet" type="text/css">
+<link href="http://localhost/HCYHotel/common/user/css/shilla/print.css" rel="stylesheet" type="text/css" media="print">
+<link href="http://localhost/HCYHotel/common/user/css/shilla/mainImages.css" rel="stylesheet" type="text/css">
+<link href="http://localhost/HCYHotel/common/user/css/shilla/reserve_new.css" rel="stylesheet" type="text/css">
+<link href="http://localhost/HCYHotel/common/user/css/shilla/lang-ko_N.css" rel="stylesheet" type="text/css">
+<link href="http://localhost/HCYHotel/common/user/css/shilla/btn.css" rel="stylesheet" type="text/css">
+<link href="http://localhost/HCYHotel/common/user/css/shilla/swiper.min.css" rel="stylesheet" type="text/css">
 
 <script src="/js/json2.js" charset="UTF-8"></script>
 <script src="/js/jquery-1.8.3.js" charset="UTF-8"></script>
@@ -2083,7 +2083,7 @@ h6.titCType {
 
 </style>
 <script src="/js/fbr/netfunnel1_r.js" charset="UTF-8"></script>
-<link href="/css/netfunnel/common.css" rel="stylesheet" type="text/css">
+<link href="http://localhost/HCYHotel/common/user/css/shilla/net_common.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="/js/fbr/fbrSkin.js" charset="UTF-8"></script>
 <script type="text/javascript" src="/js/fbr/jquery.ad-gallery.js"></script>
 

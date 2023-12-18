@@ -232,13 +232,13 @@ function popCalendarLayerHide(){
 	$("#popCalendarDiv").attr("style","z-Index:99999;display:none;");
 }
 </script><meta http-equiv="origin-trial" content="A+xK4jmZTgh1KBVry/UZKUE3h6Dr9HPPioFS4KNCzify+KEoOii7z/goKS2zgbAOwhpZ1GZllpdz7XviivJM9gcAAACFeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiQXR0cmlidXRpb25SZXBvcnRpbmdDcm9zc0FwcFdlYiIsImV4cGlyeSI6MTcwNzI2Mzk5OSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><script attributionsrc="" type="text/javascript" async="" src="https://www.googleadservices.com/pagead/conversion/412555315/?random=1702536393478&amp;cv=11&amp;fst=1702536393478&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45He3bt0v832068102&amp;gcd=11l1l1l1l1&amp;dma=0&amp;u_w=1920&amp;u_h=1080&amp;url=https%3A%2F%2Fwww.shillahotels.com%2Fseoul%2Fresv%2Frpm%2FmemSetStep1.do&amp;ref=https%3A%2F%2Fwww.shillahotels.com%2Findex.do&amp;label=DOucCPG18fcBELOw3MQB&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=STEP1%20%EB%82%A0%EC%A7%9C%26%EC%9D%B8%EC%9B%90%20%EC%84%A0%ED%83%9D%20%7C%20%EA%B0%9D%EC%8B%A4%EC%98%88%EC%95%BD%20%7C%20The%20Shilla%20Hotels%20%26%20Resorts&amp;value=1&amp;currency_code=KRW&amp;bttype=purchase&amp;auid=1531661487.1699604787&amp;fledge=1&amp;capi=1&amp;uaa=x86&amp;uab=64&amp;uafvl=Not_A%2520Brand%3B8.0.0.0%7CChromium%3B120.0.6099.71%7CGoogle%2520Chrome%3B120.0.6099.71&amp;uamb=0&amp;uap=Windows&amp;uapv=10.0.0&amp;uaw=0&amp;rfmt=3&amp;fmt=4"></script></head><body class="subBody joinBody" cz-shortcut-listen="true"><div id="popCalendarDiv" class="popCalendar" style="display:none"></div><link href="/css/mem/common.css" rel="stylesheet" type="text/css">
-<link href="/css/mem/title_ko.css" rel="stylesheet" type="text/css">
-<link href="/css/mem/common/print.css" rel="stylesheet" type="text/css" media="print">
-<link href="/css/mem/mainImages_ko.css" rel="stylesheet" type="text/css">
-<link href="/css/mem/common/reserve_new.css" rel="stylesheet" type="text/css">
-<link href="/css/mem/common/lang-ko_N.css" rel="stylesheet" type="text/css">
-<link href="/css/mem/common/btn_ko.css" rel="stylesheet" type="text/css">
-<link href="/css/common/swiper.min.css" rel="stylesheet" type="text/css">
+<link href="http://localhost/HCYHotel/common/user/css/shilla/title_ko.css" rel="stylesheet" type="text/css">
+<link href="http://localhost/HCYHotel/common/user/css/shilla/print.css" rel="stylesheet" type="text/css" media="print">
+<link href="http://localhost/HCYHotel/common/user/css/shilla/mainImages.css" rel="stylesheet" type="text/css">
+<link href="http://localhost/HCYHotel/common/user/css/shilla/reserve_new.css" rel="stylesheet" type="text/css">
+<link href="http://localhost/HCYHotel/common/user/css/shilla/lang-ko_N.css" rel="stylesheet" type="text/css">
+<link href="http://localhost/HCYHotel/common/user/css/shilla/btn.css" rel="stylesheet" type="text/css">
+<link href="http://localhost/HCYHotel/common/user/css/shilla/swiper.min.css" rel="stylesheet" type="text/css">
 <script src="/js/json2.js" charset="UTF-8"></script>
 <script src="/js/jquery-1.8.3.js" charset="UTF-8"></script>
 <script src="/js/uniform.js" charset="UTF-8"></script>

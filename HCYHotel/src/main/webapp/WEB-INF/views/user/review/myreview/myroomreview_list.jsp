@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=1280">
 <meta name="format-detection" content="telephone=no">
 
-<title>나의 객실 리뷰 | HCYCombined</title>
+<title>나의 호텔 후기 | HCYCombined</title>
 
 <link rel="shortcut icon" href="/system/images/favicon.ico">
 <link rel="apple-touch-icon" href="/system/images/favicon.ico">
@@ -87,7 +87,7 @@
 	
 <div id="content-main" class="content-main">
 <div >
-<h3 class="content-main-title" style="margin-top:7%; ">나의 객실리뷰</h3>
+<h3 class="content-main-title" style="margin-top:7%; ">나의 호텔 후기</h3>
 <table class="board-list" style="width: 1200px; margin-left:20%; margin-top:100px; margin-bottom: 100px;">
 <%-- <c:forEach var="diningReviewList" varStatus="i" items="${ diningReviewList }"> --%>
 <tr style="font-family: ; color: ; ">
