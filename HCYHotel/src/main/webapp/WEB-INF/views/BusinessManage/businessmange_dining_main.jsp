@@ -1851,9 +1851,58 @@ th, td {
 							<div role="button" class="dDYU-off-screen" tabindex="0"></div>
 						</div>
 					</div>
+						<script
+						src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+					<script type="text/javascript">
+					$(function() {
+					    $("#diningselect").change(function() {
+					        $.ajax({
+					            url: 'dining_ajax.do', // 실제 서버 엔드포인트 URL을 입력하세요.
+					            type: 'GET', // HTTP 메소드를 선택하세요.
+					            data: {
+					                diningcode: $("#diningselect").val() // 선택된 값을 서버로 전달합니다.
+					            },
+					            dataType:"json",
+					            success: function(jsonObj) {
+					                var output = "<table style='width: 900px; border: 1px solid black;'><tr><th>예약번호</th><th>아이디</th><th>예약자명</th><th>예약인원</th><th>구분</th><th>예약시간</th><th>예약상태</th></tr>";
+
+					                // response를 파싱하여 JSON 객체로 변환합니다.
+									  if (jsonObj.dataLength == 0) {
+					                        output += "<tr><td colspan='5'>제품이 없습니다.</td></tr>";
+					                    }
+					                $.each(jsonObj.data, function(ind, jsonTemp) {
+					                	console.log(jsonTemp);
+					                    output += "<tr>";
+					                    output += "<td>" + jsonTemp.bookingcode + "</td>";
+					                    output += "<td>" + jsonTemp.id + "</td>";
+					                    output += "<td>" + jsonTemp.bookingname + "</td>";
+					                    output += "<td>" + jsonTemp.pplcnt + "</td>";
+					                    output += "<td>" + jsonTemp.category + "</td>";
+					                    output += "<td>" + jsonTemp.bookingdate + "</td>";
+					                    if (jsonTemp.status === "Y") {
+					                        output += "<td>" + "<input type='button' class='btn btn-danger' id='cancelbtn' name='cancelbtn' value='예약취소'>" + "<input type='hidden' class='hiddenValue' name='" + jsonTemp.bookingcode + "' value='" + jsonTemp.bookingcode + "'>" + "</td>";
+					                    } else if (jsonTemp.status === "N") {
+					                        output += "<td>예약 가능</td>";
+					                    } else {
+					                        output += "<td>상태 알 수 없음</td>";
+					                    }
+					                    output += "</tr>";
+					                });
+					                output += "</table>";
+					                $("#output").html(output);
+					            },
+					            error: function(xhr) {
+					                // 오류 발생 시 처리합니다.
+					                console.log(xhr.status)
+					            }
+					        });
+					    });
+					});
+
+					</script>
 	<div style="display: flex; flex-direction: column; align-items: center;">
     <div style="display: flex; justify-content: flex-start; width: 900px; margin-bottom: 10px;">
-    <select>
+    <select id="diningselect">
         <option>다이닝 선택</option>
         <c:forEach var="diningList" items="${diningList}">
             <option value="${diningList.diningcode}">
@@ -1862,7 +1911,7 @@ th, td {
         </c:forEach>
     </select>
 </div>
-    <div style="display: flex; justify-content: center;">
+    <div style="display: flex; justify-content: center;" id="output">
         <table style="width: 900px; border: 1px solid black;">
 									<tr>
 										<th>예약번호</th>
