@@ -19,14 +19,17 @@
 	content="user-scalable=yes, width=1200, target-densitydpi=medium-dpi">
 <link rel="stylesheet" type="text/css" href="http://localhost/HCYHotel/common/user/css/common2.css">
 <link rel="shortcut icon" href="/images/favicon.ico">
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script type="text/javascript" async=""
 	src="https://www.google-analytics.com/analytics.js"></script>
 	<!-- jQuery CDN 시작 -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <!-- jQuery CDN 끝 -->
+<!--  -->
+<link rel="stylesheet"
+	href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<!--  -->
 <script type="text/javascript" async=""
 	src="https://www.googletagmanager.com/gtag/js?id=G-W864BBGRD6&amp;l=dataLayer&amp;cx=c"></script>
 <script type="text/javascript" src="/js/jquery-1.9.1.min.js"></script>
@@ -308,8 +311,8 @@
 												<dt>
 												</dt>
 												<dd>
+													체크인<input type="text" style="height:40px" id="datepicker11" placeholder="yyyy-mm-dd" name="searchCheckin">
 													<div class="date_box">
-													<input type="text" style="height:40px" id="datepicker11" placeholder="yyyy-mm-dd" name="searchCheckin">
 														
 													</div>
 												</dd>
@@ -318,8 +321,8 @@
 												<dt>
 												</dt>
 												<dd>
+													체크아웃 <input type="text" style="height:40px" id="datepicker22" placeholder="yyyy-mm-dd" name="searchCheckout" value="">
 													<div class="date_box">
-													<input type="text" style="height:40px" id="datepicker22" placeholder="yyyy-mm-dd" name="searchCheckout" value="">
 													</div>
 												</dd>
 											</dl>
@@ -362,7 +365,7 @@
 												</dd>
 											</dl>
 										</div>
-										<button type="button" id="btn-search"
+										<button type="button" style="width:200px;height:50px" id="btn-search"
 											class="btn btn_db btn_check">조회</button>
 									</div>
 								</div>
@@ -474,7 +477,7 @@
 					$("#area_select").trigger("change");
 				}
 
-				$("#checkin").datepicker({
+				/* $("#checkin").datepicker({
 					dateFormat : 'yy-mm-dd',
 					minDate : 0
 				});
@@ -482,7 +485,7 @@
 				$("#checkout").datepicker({
 					dateFormat : 'yy-mm-dd',
 					minDate : 0
-				});
+				}); */
 
 				var html1 = "", html2 = "";
 				for (var i = 1; i <= 10; i++) {
@@ -1096,14 +1099,14 @@
 						}, 100);
 			}
 
-			$('#checkin').change(
+		/* 	$('#checkin').change(
 					function() {
 						var selectedDay = $('#checkin').datepicker('getDate');
 						var oneDay = new Date(selectedDay.getTime()
 								+ (86400000 * 1));
 						$('#checkout').val(
 								$.datepicker.formatDate('yy-mm-dd', oneDay));
-					});
+					}); */
 
 			function infoHotel(hotelNo) {
 
