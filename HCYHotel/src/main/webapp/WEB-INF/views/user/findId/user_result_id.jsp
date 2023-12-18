@@ -18,7 +18,7 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ko_KR">
 <meta property="fb:app_id" content="1593727887570039">
-<meta property="og:image:width" content="200">
+<meta property="og:image:width" content="200"> 
 <meta property="og:image:height" content="200">
 <link href="http://localhost/HCYHotel/common/user/css/sticky_assist.css" media="all"
 	rel="stylesheet" type="text/css">
