@@ -288,20 +288,13 @@
 		</script>
 		<div id="contents">
 			<div class="about_content about ">
-
 				<div class="section_content">
-
-
-
-
-
 					<div class="section section_service active">
 						<div class="bg_inner">
 							<div class="tit_bg">
 								<div class="bg_img">
 								<img src="http://localhost/HCYHotel/common/user/img/tit_bg_service.png" alt="">
 								</div>
-
 							</div>
 							<div class="section_inner fclear">
 								<div class="left_area">
@@ -329,16 +322,11 @@
 											세미나에 참석하며,<br> 세계 컨시어지 협회의 회원으로 활동하고 있습니다. 더 플라자만의 ‘기대 그
 											이상의 서비스’를 통해 고객님에게 잊지 못할 경험을<br> 제공하도록 하겠습니다.
 										</p>
-
 									</div>
-
-
 								</div>
 							</div>
 						</div>
 					</div>
-
-				
 				</div>
 
 

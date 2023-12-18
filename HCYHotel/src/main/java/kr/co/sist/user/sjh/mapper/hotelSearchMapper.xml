@@ -43,4 +43,5 @@ where  t.hotelcode=#{hotelcode} and t.maxcapacity &gt;= #{searchCapacity}
    where h.hotelcode = #{hotelcode}
 </select>
 
+
 </mapper>

@@ -268,7 +268,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <ul>
                 <li>
                     <a href="http://localhost/HCYHotel/user/hotel/room/user_room_info.do">
-                        <div class="room_img"><img src="http://localhost/HCYHotel/common/business/img/H000029_1.jpg" alt="디럭스룸 이미지" style="height:400px"></div>
+                        <div class="room_img"><img src="http://localhost/HCYHotel/common/business/img/gallery_deluxe7.jpg" alt="디럭스룸 이미지" style="height:400px"></div>
                         <div class="room_text">
                             디럭스 룸 <span class="eng">DELUXE ROOM</span>
                         </div>
@@ -276,7 +276,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </li>
                 <li>
                     <a href="/kr/room/premiersuite.jsp">
-                        <div class="room_img"><img src="http://localhost/HCYHotel/common/business/img/H000029_1.jpg" alt="프리미어 스위트 이미지" style="height:400px"></div>
+                        <div class="room_img"><img src="http://localhost/HCYHotel/common/business/img/2878-01-2000-acc-LTWO.jpg.thumb.768.768.jpg" alt="프리미어 스위트 이미지" style="height:400px"></div>
                         <div class="room_text">
                             프리미어 스위트 <span class="eng">PREMIER SUITE</span>
                         </div>
@@ -284,15 +284,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </li>
                 <li>
                     <a href="/kr/room/plazasuite.jsp">
-                        <div class="room_img"><img src="http://localhost/HCYHotel/common/business/img/H000029_1.jpg" alt="플라자 스위트 이미지" style="height:400px"></div>
+                        <div class="room_img"><img src="http://localhost/HCYHotel/common/business/img/image_readtop_2021_655383_16256232714708432.jpg" alt="플라자 스위트 이미지" style="height:400px"></div>
                         <div class="room_text">
-                            플라자 스위트 <span class="eng">PLAZA SUITE</span>
+                           스위트 <span class="eng">SUITE</span>
                         </div>
                     </a>
                 </li>
                 <li>
                     <a href="/kr/room/residentialsuite.jsp">
-                        <div class="room_img"><img src="http://localhost/HCYHotel/common/business/img/H000029_1.jpg" alt="레지덴셜 스위트 이미지" style="height:400px"></div>
+                        <div class="room_img"><img src="http://localhost/HCYHotel/common/business/img/3892-01-2000-roo-LTWO.jpg.thumb.768.768.jpg" alt="레지덴셜 스위트 이미지" style="height:400px"></div>
                         <div class="room_text">
                             레지덴셜 스위트 <span class="eng">RESIDENTIAL SUITE</span>
                         </div>
