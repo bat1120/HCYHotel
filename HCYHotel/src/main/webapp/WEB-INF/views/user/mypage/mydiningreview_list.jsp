@@ -75,7 +75,7 @@
 
 
 	<!-- header -->
-	<jsp:include page="../../include/header.jsp" />
+	<jsp:include page="../include/header.jsp" />
 	
 	<script type="text/javascript">
 	$(function(){
@@ -109,7 +109,7 @@
 	
 
 	<!-- footer -->
-	<jsp:include page="../../include/footer.jsp" />
+	<jsp:include page="../include/footer.jsp" />
 
 	</div>
 	<iframe allow="join-ad-interest-group" data-tagging-id="AW-796355633"
