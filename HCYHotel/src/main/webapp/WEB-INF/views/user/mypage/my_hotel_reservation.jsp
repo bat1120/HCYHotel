@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ page info="내가쓴다이닝리뷰목록띄우는거해야져"%>
+<%@ page info=""%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <html lang="ko" class="noIE">
@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=1280">
 <meta name="format-detection" content="telephone=no">
 
-<title>나의 다이닝 리뷰 | HCYCombined</title>
+<title>나의 호텔예매내역 - 마이페이지 | HCYCombined</title>
 
 <link rel="shortcut icon" href="/system/images/favicon.ico">
 <link rel="apple-touch-icon" href="/system/images/favicon.ico">
@@ -75,7 +75,7 @@
 
 
 	<!-- header -->
-	<jsp:include page="../../include/header.jsp" />
+	<jsp:include page="../include/header.jsp" />
 	
 	<script type="text/javascript">
 	$(function(){
@@ -87,29 +87,54 @@
 	
 <div id="content-main" class="content-main">
 <div >
-<h3 class="content-main-title" style="margin-top:7%; ">나의 다이닝리뷰</h3>
-<table class="board-list" style="width: 1200px; margin-left:20%; margin-top:100px; margin-bottom: 100px;">
-<c:forEach var="diningReviewList" varStatus="i" items="${ diningReviewList }">
-<tr style="font-family: ; color: ; ">
-	<td colspan="3" style="width: 400px;"><strong>다이닝 </strong><c:out value="${ diningReviewList.diningName }" /></td>
-	<td style="width: 400px"><strong>호텔 </strong><c:out value="${ diningReviewList.hotelName }"/></td>
-	<td style="width 300px;"><strong>내 평점 </strong><c:out value="${ diningReviewList.rating }"/> / 10.0</td>
-	<td rowspan="2" style="width: 100px;"><input type="button" class="btn btn-dark btn-sm" value="삭제"/></td>
-</tr>
-<tr style="text-align: left;">
-	<td colspan="3" width="1100px" ><c:out value="${ diningReviewList.content }"/></td>
-	<td></td>
-	<td></td> 
-</tr>	
-</c:forEach>
-</table>
+<h3 class="content-main-title" style="margin-top:7%; ">나의 호텔예약내역</h3>
+<table border="1" class="board-list" style="margin-bottom: 20px; width:1200px; margin-left: 360px;">
+				<caption>
+					
+				</caption>
+				<colgroup>
+					<col style="width: 100px;">
+					<col style="width: 200px;">
+					<col style="width: 200px;">
+					<col style="width: 200px;">
+					<col style="width: 100px;">
+					<col style="width: 80px;">
+					<col style="width: 120px;">
+					<col style="width: 80px;">
+					<col style="width: 100px;">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">에약번호</th>
+						<th scope="col">에약날짜</th>
+						<th scope="col">호텔/객실정보</th>
+						<th scope="col">예약기간</th>
+						<th scope="col">예약자 성함</th>
+						<th scope="col">인원수</th>
+						<th scope="col">결제금액</th>
+						<th scope="col">예약상태</th>
+						<th scope="col"></th>
+					</tr>
+				</thead>
+				<tbody>
+				<td>번호</td>
+				<td>번호</td>
+				<td>번호</td>
+				<td>번호</td>
+				<td>번호</td>
+				<td>번호</td>
+				<td>번호</td>
+				<td>번호</td>
+				<td><input type="button" class="btn btn-info btn" id="btn_review" value="리뷰쓰기"/></td>
+				</tbody>
+			</table>
 
 </div>
 </div>
 	
 
 	<!-- footer -->
-	<jsp:include page="../../include/footer.jsp" />
+	<jsp:include page="../include/footer.jsp" />
 
 	</div>
 	<iframe allow="join-ad-interest-group" data-tagging-id="AW-796355633"

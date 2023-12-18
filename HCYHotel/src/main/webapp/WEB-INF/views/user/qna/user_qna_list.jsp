@@ -147,11 +147,13 @@
 	
 	<script type="text/javascript">
 	$(function(){
+		$("#btn_write").click(function(){
+			location.href="user_qna_write.do";
+		});
 		
 	});//ready
 	
 	function detail( questionCode ){
-		alert("누우가 바나나향 핸드워시를 만들었냐 진짜 나빴다");
 		$("#questionCode").val(questionCode);
 		$("#questionCodeFrm").submit();
 	};//detail
@@ -169,14 +171,13 @@
 							class="hide">검색어</label> 
 						<input type="text" id="searchKeyword" placeholder="검색어를 입력하세요." class="txt keyword">
 						<input type="button" class="btn btn-dark btn-sm" value="검색"/>
-							<!-- <button type="button" class="btn-submit">검색</button> --></span>
 					</fieldset>
 				</form>
 			</div>
 			<div>
-			<input type="button" value="글쓰기" id="btn_write" class="btn btn-primary" style="margin-bottom: 10px;"/>
+			<input type="button" value="글쓰기" id="btn_write" class="btn btn-primary" style="margin-bottom: 10px; margin-left: 1135px"/>
 			</div>
-			<table border="1" class="board-list">
+			<table border="1" class="board-list" style="margin-bottom: 20px">
 				<caption>
 					<strong>문의사항 목록 테이블</strong>
 				</caption>

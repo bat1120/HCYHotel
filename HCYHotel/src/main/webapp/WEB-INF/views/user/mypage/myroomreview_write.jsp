@@ -5,7 +5,7 @@
 
 
 <html lang="ko"><head>
-    <title>문의하기 - 문의사항 | HCYCombined</title>
+    <title>나의 객실 리뷰 - 마이페이지 | HCYCombined</title>
 
 <meta charset="utf-8">
 
@@ -225,8 +225,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="about_content inquiries ">
            
             <div class="section_content room">
-                <h3>문의하기</h3>
-                <p>문의하신 내용은 최대한 빠른 시간 내에 답변 드리도록 노력하겠습니다.</p>
+                <h3>나의 객실 리뷰</h3>
 
                 <div class="content_inner">
                     <form method="post" name="frm_qna" id="frm_qna">
@@ -236,8 +235,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         
                         <div class="cnt_textarea">
                             <dl class="fclear" id="div_rm_inq">
-                                <dt class="inner_tit line2">제목</dt>
-                                <dd class="title"><textarea name="title" class="cntTextArea" id="titleTextArea" maxlength="50" style="height: 48px;" placeholder="제목"></textarea></dd>
+                                <dt class="inner_tit line2">평점</dt>
+                                <dd class="title"><textarea name="title" class="cntTextArea" id="titleTextArea" maxlength="50" style="height: 48px;" placeholder="경험에 대해 숫자로 평가해주세요. 0.5점 단위, 10.0점 만점 (예:9.5)"></textarea></dd>
                             </dl>
 							<dl class="fclear">
                                 <dt class="inner_tit line2">내용</dt>
@@ -247,7 +246,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
                        
                          <input type="button" value="문의등록" class="btn btn-primary" style="margin-left:340px; " id="btn_write"/>
-                         <input type="button" value="목록으로" class="btn btn-dark" style="margin-left: 450px" id="btn_backtolist"/>
+                         <input type="button" value="취소" class="btn btn-dark" style="margin-left: 450px" id="btn_backtolist"/>
                          
                     </form>
                 </div>
@@ -256,7 +255,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<script type="text/javascript">
 $(function(){
 	$("#btn_backtolist").click(function(){
-		location.href="user_qna_list.do";
+		location.href="myroomreview.do";
 	});//목록버튼
 	
 	$("#btn_write").click(function(){

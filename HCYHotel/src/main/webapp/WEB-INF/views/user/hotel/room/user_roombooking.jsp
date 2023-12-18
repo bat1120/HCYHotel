@@ -340,7 +340,7 @@ $(document).ready(function() {
 							<div class="cont_division">
 								<div class="write_base">
 									<!-- 아이디 -->
-									<div class="item">
+									<div class="item"> 
 										<label for="id"><strong>예약자 성함</strong></label>
 										<div class="TypoBox">
 											<input name="id" id="id" type="text"

@@ -7,8 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class MyPageController {
 
-	@GetMapping("")
-	public String goMyPage( Model model ) {
+	public String goMyPage( /* Model model */ ) {
 	
 		return "";
 	}//goMyPage

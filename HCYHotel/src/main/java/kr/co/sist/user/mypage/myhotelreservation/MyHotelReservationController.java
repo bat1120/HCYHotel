@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class MyHotelReservationController {
 
 	@GetMapping("user/mypage/myhotelreservation.do")
-	public String goHotelreservation( Model model ) {
+	public String goHotelreservation( /* Model model */ ) {
 		
-		return "user/mypage/myhotelreservation";
+		return "user/mypage/my_hotel_reservation";
 	}//myHotelReviewList
 	
 	@GetMapping("user/review/myreview/myhotelreview_list.do")
