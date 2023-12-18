@@ -26,11 +26,23 @@ group by r.hotelcode
 
 <select id="getRoomTypeBySearch" parameterType="kr.co.sist.user.hotelsearch.SearchVO" resultType="kr.co.sist.user.hotelsearch.RoomTypeDomain">
 
-select t.typecode, t.hotelcode, t.typename, t.price, t.basiccapacity, t.maxcapacity
-from roomtype t
-inner join room r
-on r.roomcode not in (select r.roomcode from roombooking r where r.checkin &lt; #{searchCheckout} or r.checkout &gt; #{searchCheckin})
-where  t.hotelcode=#{hotelcode} and t.maxcapacity &gt;= #{searchCapacity}
+    SELECT t.typecode, t.hotelcode, t.typename, t.price, t.basiccapacity, t.maxcapacity
+FROM roomtype t
+WHERE
+    t.hotelcode = #{hotelcode} 
+    AND t.maxcapacity &gt;= 2
+    AND NOT EXISTS (
+        SELECT 1
+        FROM roombooking rb
+        WHERE rb.roomcode IN (
+            SELECT r.roomcode
+            FROM room r
+            WHERE r.hotelcode = t.hotelcode
+              AND r.typecode = t.typecode
+        )
+        AND rb.checkin &lt;  #{searchCheckin}
+        AND rb.checkout &gt;  #{searchCheckout}
+    )
 
 </select>
 
