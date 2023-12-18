@@ -17,7 +17,7 @@ public class ModifyInfoController {
 	
 	@GetMapping("user/mypage/modify_info.do")
 	public String changeInfo() {
-		return "user/mypage/modify_info";
+		return "user/mypage/myhotelreservation";
 	}//changeInfo
 	
 	

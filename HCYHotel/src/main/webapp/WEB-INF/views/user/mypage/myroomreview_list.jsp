@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ page info="내가쓴다이닝리뷰목록띄우는거해야져"%>
+<%@ page info=""%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <html lang="ko" class="noIE">
@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=1280">
 <meta name="format-detection" content="telephone=no">
 
-<title>나의 호텔 후기 | HCYCombined</title>
+<title>나의 호텔 후기 - 마이페이지 | HCYCombined</title>
 
 <link rel="shortcut icon" href="/system/images/favicon.ico">
 <link rel="apple-touch-icon" href="/system/images/favicon.ico">
@@ -75,7 +75,7 @@
 
 
 	<!-- header -->
-	<jsp:include page="../../include/header.jsp" />
+	<jsp:include page="../include/header.jsp" />
 	
 	<script type="text/javascript">
 	$(function(){
@@ -109,7 +109,7 @@
 	
 
 	<!-- footer -->
-	<jsp:include page="../../include/footer.jsp" />
+	<jsp:include page="../include/footer.jsp" />
 
 	</div>
 	<iframe allow="join-ad-interest-group" data-tagging-id="AW-796355633"

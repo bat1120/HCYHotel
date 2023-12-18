@@ -12,4 +12,9 @@ public class MyQuestionController {
 		return "/user/mypage/my_qna_list";
 	}//searchQuestion
 	
+	@GetMapping("user/mypage/my_qna_detail.do")
+	public String questionDetail() {
+		return "/user/mypage/my_qna_detail";
+	}//
+	
 } //class

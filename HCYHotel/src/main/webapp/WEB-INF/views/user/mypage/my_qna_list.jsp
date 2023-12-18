@@ -162,20 +162,10 @@
 	<!-- content-main : 본문 페이지 영역 // -->
 	<div id="content-main" class="content-main">
 		<div class="common-content customer-notice">
-			<h3 class="content-main-title" style="margin-top:7%;">문의사항</h3>
+			<h3 class="content-main-title" style="margin-top:7%;">나의 문의내역</h3>
 			<div class="board-list-header">
-				<form action="about:blank" method="get" class="list-search-form">
-					<fieldset>
-						<legend>게시물검색</legend>
-						<span class="form-wrap"><label for="searchKeyword"
-							class="hide">검색어</label> 
-						<input type="text" id="searchKeyword" placeholder="검색어를 입력하세요." class="txt keyword">
-						<input type="button" class="btn btn-dark btn-sm" value="검색"/>
-					</fieldset>
-				</form>
 			</div>
 			<div>
-			<input type="button" value="글쓰기" id="btn_write" class="btn btn-primary" style="margin-bottom: 10px; margin-left: 1135px"/>
 			</div>
 			<table border="1" class="board-list" style="margin-bottom: 20px">
 				<caption>

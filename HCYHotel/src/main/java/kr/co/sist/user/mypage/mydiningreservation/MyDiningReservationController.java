@@ -12,16 +12,16 @@ public class MyDiningReservationController {
 		return "user/mypage/my_dining_reservation";
 	}//goDiningreservation
 	
-	@GetMapping("user/mypage/mydiningreview.do")
+	@GetMapping("user/mypage/mydiningreview_list.do")
 	public String goDiningReview( /* String id, Model model*/) {
 		
-		return "";
+		return "user/mypage/mydiningreview_list";
 	}//goDiningReview
 	
-	@GetMapping("user/review/myreview/mydiningreview_write.do")
+	@GetMapping("user/mypage/mydiningreview_write.do")
 	public String writeDiningReview(/*ReviewVO rVO, Model model*/) {
 		
-		return "user/review/myreview/mydiningreview_write";
+		return "user/mypage/mydiningreview_write";
 	}//writeDiningReview
 	
 }//class

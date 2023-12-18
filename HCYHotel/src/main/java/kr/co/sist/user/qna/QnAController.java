@@ -41,12 +41,12 @@ public class QnAController {
 		return "user/qna/user_qna_write";
 	}//WriteQnA
 	
-	@PostMapping("user/qna/user_qna_write")
+	@PostMapping("user/qna/user_qna_write.do")
 	public String writeQnA( WriteQnAVO wqVO ) {
 		
 		
 		
-		return "";
+		return "user/qna/user_qna_list";
 	}//writeQnA
 	
 }//class

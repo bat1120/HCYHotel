@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class MyHotelReviewController {
 
-	@GetMapping("/user/review/myreview/myroomreview_list.do")
+	@GetMapping("/user/mypage/myroomreview_list.do")
 	public String myHotelReviewList() {
-		return "user/review/myreview/myroomreview_list";
+		return "user/mypage/myroomreview_list";
 	}//myHotelReviewList
 
 

@@ -1109,8 +1109,8 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 									<option value="http://localhost/HCYHotel/user/mypage/myhotelreservation.do" >호텔 예약내역</option>
 									<option value="http://localhost/HCYHotel/user/mypage/mydiningreservation.do">다이닝 예약내역</option>
 									<option value="http://localhost/HCYHotel/user/mypage/check_to_modify.do">회원정보 관리</option>
-									<option value="http://localhost/HCYHotel/user/review/myreview/myroomreview_list.do">나의 호텔 후기</option>
-									<option value="http://localhost/HCYHotel/user/review/myreview/mydiningreview_list.do">나의 다이닝 후기</option>
+									<option value="http://localhost/HCYHotel/user/mypage/myroomreview_list.do">나의 호텔 후기</option>
+									<option value="http://localhost/HCYHotel/user/mypage/mydiningreview_list.do">나의 다이닝 후기</option>
 									<option value="http://localhost/HCYHotel/user/mypage/my_qna_list.do">나의 문의내역</option>
 								</select>
 
