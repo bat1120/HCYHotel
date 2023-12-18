@@ -2008,7 +2008,7 @@ window.onload = function () {
 						}
 						</script>
 
-							<button type="button" class="btn btn-info">호텔 바로 예약하기</button>
+							<a href="http://localhost/HCYHotel/user/hotel/room/user_room_reser.do"><button type="button" class="btn btn-info">호텔 바로 예약하기</button></a>
 							<button type="button" class="btn btn-warning"
 								onclick="diningreservation()">다이닝 바로 예약하기</button>
 							<div class="kml-layout edges-s snap">

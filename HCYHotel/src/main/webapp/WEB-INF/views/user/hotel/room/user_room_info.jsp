@@ -4,7 +4,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html lang="ko">
 <head>
-<title>브랜드 소개 - 더 플라자 | 더 플라자 호텔 서울</title>
+<title>객실 상세</title>
 
 
 

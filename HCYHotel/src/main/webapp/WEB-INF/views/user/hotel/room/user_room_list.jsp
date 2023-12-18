@@ -3,7 +3,7 @@
 <%@ page info="" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html lang="ko"><head>
-    <title>객실 상세</title>
+    <title>객실 리스트</title>
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta property="og:image" content="https://www.hoteltheplaza.com/sp4/img/thumb.jpg">

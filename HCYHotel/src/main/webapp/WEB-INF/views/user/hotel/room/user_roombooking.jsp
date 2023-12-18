@@ -4,7 +4,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html lang="ko">
 <head>
-<title>회원가입 - 사람인에 오신 것을 환영합니다! - 사람인</title>
+<title>객실예약</title>
 <meta name="naver-site-verification"
 	content="86455485e27cab6986d130e4c3b90c5b516820d1">
 <meta name="Description"
@@ -284,45 +284,27 @@
 </script>
 <script>
 $(document).ready(function() {
-    $("#id").blur(function() {
-        var idValue = $("#id").val().trim();
+    $('#btn_submit').on('click', function() {
+        // 필수 입력 필드들을 확인
+        var id = $('#id').val().trim();
+        var checkin = $('#password').val().trim();
+        var checkout = $('#password').val().trim();
+        var name = $('#name').val().trim();
 
-        // 아이디 유효성 검사
-        if (!/^[a-zA-Z0-9_]{4,20}$/.test(idValue)) {
-          $("#idCheckMsg1").text("4~20자의 영문, 숫자와 특수문자 '_'만 사용해주세요.").show();
-          $("#idCheckMsg2").hide();
-          return;
-        } else {
-          $("#idCheckMsg1").hide();
+        // 필수 입력 필드 중 하나라도 비어있으면 알림창을 띄움
+        if (!id || !checkin || !checkout || !name) {
+            alert('모든 필수 입력 항목을 작성해주세요.');
+            return;
         }
 
-        // 아이디 중복 확인
-        $.ajax({
-            type: "POST",
-            url: "user_idDup.do", 
-            data: {"id": idValue},
-            dataType:"text",
-            success: function(data) {
-            	if (!data) {
-                    console.error("서버로부터 응답이 비어있습니다.");
-                    return;
-                }//end if
-            	if (data === "중복") {
-            	    /* alert("중복된 아이디입니다."); */
-            	    $("#idCheckMsg2").hide();
-            	    $("#idCheckMsg1").text("이미 사용중인 ID입니다.").show();  
-            	} else {
-            		/* alert("사용가능한 아이디입니다."); */
-            		$("#idCheckMsg1").hide();
-             	    $("#idCheckMsg2").text("사용가능한 아이디에요.").show();
-            	}//end else
-            },
-            error: function() {
-                console.error("중복 확인 요청 중 에러 발생");
-            }//error
-        });//ajax
-    });//blur
-});//ready
+        // 여기에 추가적으로 필요한 입력 항목들을 확인할 수 있습니다.
+        // 예를 들어, 옵션사항, 카드종류 등
+
+        // 모든 필수 입력이 완료되었다면 예약을 완료하고 알림창을 띄움
+        alert('예약이 완료되었습니다.');
+        location.href="http://localhost/HCYHotel/user/home/user_home.do";
+    });
+});
 
 </script>
 	

@@ -4,7 +4,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html lang="ko">
 <head>
-<title>회원가입 - 사람인에 오신 것을 환영합니다! - 사람인</title>
+<title>회원가입</title>
 <meta name="naver-site-verification"
 	content="86455485e27cab6986d130e4c3b90c5b516820d1">
 <meta name="Description"

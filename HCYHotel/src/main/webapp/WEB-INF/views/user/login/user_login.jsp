@@ -5,7 +5,7 @@
 
 <html lang="ko">
 <head>
-<title>로그인 - 사람인</title>
+<title>로그인</title>
 	<jsp:include page="../include/header.jsp"/>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">

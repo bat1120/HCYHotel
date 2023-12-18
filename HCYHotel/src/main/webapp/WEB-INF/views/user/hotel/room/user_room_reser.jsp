@@ -5,7 +5,7 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
 <head>
-<title>베니키아 호텔 예약사이트</title>
+<title>객실 예약</title>
 <!-- <title>베니키아호텔 공식 예약사이트</title> -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -428,7 +428,6 @@
 									href="javascript:void(0);">이전</a></li>
 								<li data-lp="1" class="active"><a
 									href="javascript:void(0);">1</a></li>
-								<li data-lp="2"><a href="javascript:void(0);">2</a></li>
 								<li data-lp="2" class="next"><a href="javascript:void(0);">다음</a></li>
 							</ul>
 						</div>
