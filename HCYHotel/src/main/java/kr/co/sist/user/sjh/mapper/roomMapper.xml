@@ -5,13 +5,13 @@
 <mapper namespace="kr.co.sist.user.sjh.roomMapper">
 
 
-<select id="selectRoomType" parameterType="String" resultType="kr.co.sist.user.hotelsearch.RoomTypeDomain">
+<!-- <select id="selectRoomType" parameterType="String" resultType="kr.co.sist.user.hotelsearch.RoomTypeDomain">
 select r.*, h.*, i.filename, rt.*
 from room r
 left outer join hotel h on r.hotelcode = h.hotelcode
 left outer join infofile i on r.roomcode = i.roomcode
 left outer join roomtype rt on r.hotelcode = rt.hotelcode
 where r.hotelcode = #{hotelcode}
-</select>
+</select> -->
 
 </mapper>

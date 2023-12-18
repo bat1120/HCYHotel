@@ -3,7 +3,7 @@
 <%@ page info="" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html lang="ko"><head>
-    <title>전체보기 - 객실 | 더 플라자 호텔 서울</title>
+    <title>객실 상세</title>
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta property="og:image" content="https://www.hoteltheplaza.com/sp4/img/thumb.jpg">
@@ -267,7 +267,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <h3><span>룸 &amp; 스위트</span></h3>
             <ul>
                 <li>
-                    <a href="/kr/room/deluxe.jsp">
+                    <a href="http://localhost/HCYHotel/user/hotel/room/user_room_info.do">
                         <div class="room_img"><img src="http://localhost/HCYHotel/common/business/img/H000029_1.jpg" alt="디럭스룸 이미지" style="height:400px"></div>
                         <div class="room_text">
                             디럭스 룸 <span class="eng">DELUXE ROOM</span>

@@ -1469,7 +1469,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																			</div>
 																			<button class="IirT-rating-section" aria-label="토요코인 서울영등포점는 후기 2,322개개 평점에서 매우 좋음 8.5개를 받았습니다. 사용자 및 다른 상세 후기를 보려면 클릭하세요.">
 																				<div class="IirT-rating-category-and-count">
-																					<span class="IirT-rating-count">후기 2,322개</span>
+																					<span class="IirT-rating-count">후기 12개</span>
 																				</div>
 																				<div class="eddo eddo-pres-circular eddo-size-default eddo-positive-rating">
 																					<svg class="eddo-circular-svg">
@@ -1556,10 +1556,10 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																						</div>
 																						<span class="D8J--for-n-nights">1박 요금</span>
 																						<div class="D8J--view-deal-container">
-																							<button role="button" class="Iqt3 Iqt3-mod-stretch Iqt3-mod-bold Button-No-Standard-Style Iqt3-mod-variant-solid Iqt3-mod-theme-progress Iqt3-mod-shape-rounded-small Iqt3-mod-shape-mod-default Iqt3-mod-spacing-default Iqt3-mod-size-xsmall" tabindex="-1" aria-disabled="false">
+																							<button type="button" class="Iqt3 Iqt3-mod-stretch Iqt3-mod-bold Button-No-Standard-Style Iqt3-mod-variant-solid Iqt3-mod-theme-progress Iqt3-mod-shape-rounded-small Iqt3-mod-shape-mod-default Iqt3-mod-spacing-default Iqt3-mod-size-xsmall" tabindex="-1" aria-disabled="false">
 																								<div class="Iqt3-button-container">
 																									<div class="Iqt3-button-content">
-																										<span>객실 예약</span>
+																										<a href="http://localhost/HCYHotel/user/hotel/room/user_room_reser.do"><span>객실 예약</span></a>
 																									</div>
 																								</div>
 																								<div class="Iqt3-button-focus-outline"></div>

@@ -13,13 +13,13 @@ public class RoomInfoController {
 	
 	@GetMapping("/user/hotel/room/user_room_list.do")
 	public String roomList(Model model,String hotelcode) {
-		RoomInfoService ris=RoomInfoService.getInstance();
-		List<RoomTypeDomain>roomList=ris.showRoomList(hotelcode);
-		model.addAttribute("roomList",roomList);
-		System.out.println("룸 리스트"+roomList);
+//		RoomInfoService ris=RoomInfoService.getInstance();
+//		List<RoomTypeDomain>roomList=ris.showRoomList(hotelcode);
+//		model.addAttribute("roomList",roomList);
+//		System.out.println("룸 리스트"+roomList);
 		
 		return "user/hotel/room/user_room_list"; 
-	}//roomInfo
+	}//roomList
 	
 	@GetMapping("/user/hotel/room/user_room_info.do")
 	public String roomInfo() {
@@ -29,7 +29,7 @@ public class RoomInfoController {
 	@GetMapping("/user/hotel/room/user_room_reser.do")
 	public String roomReser() {
 		return "user/hotel/room/user_room_reser"; 
-	}//roomInfo
+	}//roomReser
 	
 	
 }
