@@ -306,11 +306,11 @@
 							<div class="section_inner fclear">
 								<div class="left_area">
 									<div class="sec_tit">
-										서울 플라자호텔
+										서울 골든 호텔
 									</div>
 								</div>
 								<div class="right_area cnt_inner">
-								<button type="button" class="btn btn-info">예약하기</button>
+								<a href="http://localhost/HCYHotel/user/hotel/room/user_room_reser.do"><button type="button" class="btn btn-info">예약하기</button></a>
 									<p class="sub_tit_b">
 										늘 머무르는 곳처럼 편안한 느낌.<br> 낯선 곳에 대한 두려움을 설렘으로 바꿔 줄 '기대 그 이상의
 										서비스' 가 있기 때문입니다.
@@ -318,7 +318,7 @@
 									<div class="clear_line"></div>
 									<div class="section_txt">
 										<p>
-											더 플라자는 ‘고객에게 기대, 그 이상의 서비스! 그리고 잊지 못할 경험’을 제공하기 위해 1:1 고객 맞춤형
+											골든 호텔은 ‘고객에게 기대, 그 이상의 서비스! 그리고 잊지 못할 경험’을 제공하기 위해 1:1 고객 맞춤형
 											서비스 제공,<br> 비즈니스 고객 특화 서비스 등의 더 플라자만의 감각적이고 섬세한 서비스를
 											제공하고 있습니다. 특히, 고객 개개인의 니즈를 고려하여<br> 섬세하게 디자인된 전문가들을 통해
 											고객님의 개인적인 업무를 처리함에 있어 불편함이 없도록 최선을 다하고 있습니다.<br> <br>
@@ -338,46 +338,7 @@
 						</div>
 					</div>
 
-					<div class="section section_service active">
-						<div class="bg_inner">
-							<div class="tit_bg">
-								<div class="bg_img"><img src="http://localhost/HCYHotel/common/user/img/tit_bg_service.png" alt="">
-								</div>
-
-							</div>
-							<div class="section_inner fclear">
-								<div class="left_area">
-									<div class="sec_tit">
-									위에 사진 위치에는 지도 맵 드가자
-									</div>
-								</div>
-								<div class="right_area cnt_inner">
-									<p class="sub_tit_b">
-										늘 머무르는 곳처럼 편안한 느낌.<br> 낯선 곳에 대한 두려움을 설렘으로 바꿔 줄 '기대 그 이상의
-										서비스' 가 있기 때문입니다.
-									</p>
-									<div class="clear_line"></div>
-									<div class="section_txt">
-										<p>
-											더 플라자는 ‘고객에게 기대, 그 이상의 서비스! 그리고 잊지 못할 경험’을 제공하기 위해 1:1 고객 맞춤형
-											서비스 제공,<br> 비즈니스 고객 특화 서비스 등의 더 플라자만의 감각적이고 섬세한 서비스를
-											제공하고 있습니다. 특히, 고객 개개인의 니즈를 고려하여<br> 섬세하게 디자인된 전문가들을 통해
-											고객님의 개인적인 업무를 처리함에 있어 불편함이 없도록 최선을 다하고 있습니다.<br> <br>
-											또한, 고객의 편의와 즐거움을 위해 관광, 호텔, 레스토랑, 항공 및 교통, 공연, 쇼핑 등 다양한 분야에
-											걸쳐 정보 제공과 요구에 맞게 추천 및<br> 예약을 해 주는 등의 전문적인 컨시어지팀을 운영하고
-											있습니다. 더 플라자컨시어지팀은 ‘Service through Friendship’이라는<br> 세계
-											컨시어지 협회의 슬로건 아래 전 세계 컨시어지들과 네트워킹을 가지고, 호텔 트렌드와 효과적인 서비스를 위한
-											세미나에 참석하며,<br> 세계 컨시어지 협회의 회원으로 활동하고 있습니다. 더 플라자만의 ‘기대 그
-											이상의 서비스’를 통해 고객님에게 잊지 못할 경험을<br> 제공하도록 하겠습니다.
-										</p>
-
-									</div>
-
-
-								</div>
-							</div>
-						</div>
-					</div>
+				
 				</div>
 
 

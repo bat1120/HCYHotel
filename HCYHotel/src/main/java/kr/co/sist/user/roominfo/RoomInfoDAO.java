@@ -20,10 +20,10 @@ public class RoomInfoDAO {
 		return riDAO;  
 	}//getInstance
 	
-	public List<RoomTypeDomain>selectRoomList(String hotelcode){
-		MyBatiseHandler mbh=MyBatiseHandler.getInstance();
-		SqlSession ss=mbh.getMyBatisHandler(false);
-		
-		return ss.selectList("kr.co.sist.user.sjh.roomMapper.selectRoomType", hotelcode);
-	}//selectRoomList
+//	public List<RoomTypeDomain>selectRoomList(String hotelcode){
+//		MyBatiseHandler mbh=MyBatiseHandler.getInstance();
+//		SqlSession ss=mbh.getMyBatisHandler(false);
+//		
+//		return ss.selectList("kr.co.sist.user.sjh.roomMapper.selectRoomType", hotelcode);
+//	}//selectRoomList
 }

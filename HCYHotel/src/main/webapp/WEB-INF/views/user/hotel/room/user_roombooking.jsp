@@ -332,11 +332,10 @@ $(document).ready(function() {
 
 			<div id="join_wrapper" class="join_cont_wrap">
 				<div id="member_personal" class="member_cate">
-					<form name="frm" id="frm" method="post"
+					<form name="frm" id="frm" method="get"
 						action="user/hotel/room/user_roombooking.do">
 
 						<fieldset>
-
 							<div class="cont_division">
 								<div class="write_base">
 									<!-- 아이디 -->
@@ -351,10 +350,10 @@ $(document).ready(function() {
 										</div>
 										<p class="alert_column focus_txt" id="idFocusMsg"
 											style="display: none">예약자 성함은 한글로 입력해주세요.</p>
-										<em class="msgInvalid" id="idCheckMsg1" style="display: none">이미 사용중인 ID입니다.</em>
+										<em class="msgInvalid" id="idCheckMsg1" style="display: none"></em>
 										<!-- 오류 시 텍스트 -->
 										<p class="alert_column good_txt" id="idCheckMsg2"
-											style="display: none">사용가능한 아이디에요.</p>
+											style="display: none"></p>
 									</div>
 
 									<!-- 체크인 -->
@@ -372,12 +371,10 @@ $(document).ready(function() {
 										</div>
 
 										<p class="alert_column focus_txt" id="password1FocusMsg"
-											style="display: none">8~16자리 영문 대소문자, 숫자, 특수문자 중 3가지 이상
-											조합으로 올바르게 입력하세요</p>
+											style="display: none"></p>
 										<!-- focus 시 텍스트 -->
 										<em class="msgInvalid" id="password1_warning_txt"
-											style="display: none"><span>8~16자리 영문 대소문자, 숫자,
-												특수문자 중 3가지 이상 조합으로 올바르게 입력하세요</span></em>
+											style="display: none"><span></span></em>
 										<p class="alert_column good_txt" id="password1_good_txt"
 											style="display: none"></p>
 										<p class="pass_safety" id="pw_strnegth_level"
@@ -399,12 +396,10 @@ $(document).ready(function() {
 										</div>
 
 										<p class="alert_column focus_txt" id="password1FocusMsg"
-											style="display: none">8~16자리 영문 대소문자, 숫자, 특수문자 중 3가지 이상
-											조합으로 올바르게 입력하세요</p>
+											style="display: none"></p>
 										<!-- focus 시 텍스트 -->
 										<em class="msgInvalid" id="password1_warning_txt"
-											style="display: none"><span>8~16자리 영문 대소문자, 숫자,
-												특수문자 중 3가지 이상 조합으로 올바르게 입력하세요</span></em>
+											style="display: none"><span></span></em>
 										<p class="alert_column good_txt" id="password1_good_txt"
 											style="display: none"></p>
 										<p class="pass_safety" id="pw_strnegth_level"
@@ -427,7 +422,7 @@ $(document).ready(function() {
 									<div class="item">
 										<label for="identifier"><strong>요청사항</strong></label>
 										<div class="TypoBox">
-											<input type="number" name="identifier" id="identifier"
+											<input type="text" name="identifier" id="identifier"
 												maxlength="8" autocapitalize="off" placeholder="요청사항을 입력해주세요"
 												class="Typo SizeL defalt">
 										</div>
@@ -477,7 +472,7 @@ $(document).ready(function() {
 												class="Typo SizeL defalt" style="ime-mode: active"
 												autocapitalize="off" placeholder="ex)우리은행">
 										</div>
-												<em class="msgInvalid" id="msg_cell" style="display: none;">옵션사항을 올바르게 기재해주세요.</em>
+												<em class="msgInvalid" id="msg_cell" style="display: none;">카드종류를 올바르게 기재해주세요.</em>
 									</div>
 										<!-- <div class="input_collect TypoBox">
 											<input type="hidden" name="sms_confirm_complete" value="n"
@@ -507,7 +502,7 @@ $(document).ready(function() {
 								
 									
 										<em class="msgInvalid" id="mail_msg_email1" name="email"
-											style="display: none">이메일 주소를 입력해주세요.</em>
+											style="display: none">이메일 주소를 입력해주세요.</em> 
 
 									</div>
 

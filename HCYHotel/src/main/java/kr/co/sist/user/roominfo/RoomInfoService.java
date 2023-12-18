@@ -18,10 +18,10 @@ public class RoomInfoService {
 		return ris;
 	}//getInstance
 	
-	public List<RoomTypeDomain> showRoomList(String hotelcode){
-		RoomInfoDAO riDAO=RoomInfoDAO.getInstance();
-		
-		List<RoomTypeDomain>showRoomList=riDAO.selectRoomList(hotelcode);
-		return showRoomList;
-	}//showRoomList
+//	public List<RoomTypeDomain> showRoomList(String hotelcode){
+//		RoomInfoDAO riDAO=RoomInfoDAO.getInstance();
+//		
+//		List<RoomTypeDomain>showRoomList=riDAO.selectRoomList(hotelcode);
+//		return showRoomList;
+//	}//showRoomList
 }//class

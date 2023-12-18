@@ -396,24 +396,24 @@
 								<li><div class="chh_thum" style="width:1000px;">
 										<div class="chh_img" onclick="infoHotel(1083)">
 											<img style="width: 280px;"
-												src="/ezstock/1083/hotel/1083_main_800_2.jpg"
+												src="http://localhost/HCYHotel/common/business/img/H000048_1.jpg"
 												alt="베니키아 스위스로젠 호텔">
 										</div>
 										<div class="chh_txt" onclick="infoHotel(1083)">
-											<strong>베니키아 스위스로젠 호텔</strong>
+											<strong>골든 호텔</strong>
 											<div
 												style="width: 470px; word-break: break-all; word-wrap: break-word;">
-												경상북도 경주시 보문로 465-37(신평동 242-19)</div>
+												서울 강남구 가로수길 5</div>
 											<ul class="chh_ul">
-												<li>등급<strong>3성</strong></li>
-												<li>객실수<strong>60</strong></li>
-												<li>추천<strong>18</strong></li>
-												<li>평점<strong>4.9</strong></li>
+												<li>등급<strong>5성</strong></li>
+												<li>기본 인원<strong>2</strong></li>
+												<li>최대 인원<strong>6</strong></li>
 												<li>후기<strong>16</strong></li>
 											</ul>
 										</div>
 										<div class="chh_price">
-											<span class="pr_txt">가격 </span><strong class="pr_red">₩84,000</strong>
+										<a href="http://localhost/HCYHotel/user/hotel/room/user_roombooking.do"><button type="button">결제하기</button></a>
+											<span class="pr_txt">가격 </span><strong class="pr_red">₩120,000</strong>
 											<span class="btn_reser_s"> 
 											<button type="button" class="btn btn-danger">예약하기</button>
 											</span>
