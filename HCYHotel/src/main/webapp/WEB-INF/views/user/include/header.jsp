@@ -1109,7 +1109,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 								</div>
 								<div
 									class="ui-layout-HeaderMainLogo normal-from-l-size main-logo--mobile">
-									<a class="main-logo__link" href="/"
+									<a class="main-logo__link" href="http://localhost/HCYHotel/user/home/user_home.do"
 										itemprop="https://schema.org/logo"
 										aria-label="호텔스컴바인 홈페이지로 이동하기">
 										<div class="main-logo__logo has-compact-logo inverted-logo">
