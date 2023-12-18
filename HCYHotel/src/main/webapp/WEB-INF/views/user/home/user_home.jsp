@@ -955,7 +955,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 								</div>
 								<div
 									class="ui-layout-HeaderMainLogo normal-from-l-size main-logo--mobile">
-									<a class="main-logo__link" href="/"
+									<a class="main-logo__link" href="http://localhost/HCYHotel/user/home/user_home.do"
 										itemprop="https://schema.org/logo"
 										aria-label="호텔스컴바인 홈페이지로 이동하기"><div
 											class="main-logo__logo has-compact-logo inverted-logo">
@@ -982,9 +982,11 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 														fill="#00AEF0"></path>
 													<path
 														d="M14.8 9.966H8.793c-.235.04-.353.203-.353.366 0 .082 0 .163.04.204.196.447.392.895.667 1.342.432.732.903 1.424 1.57 2.075.196.203.432.447.667.65a.715.715 0 00.432.163c.157 0 .314-.04.432-.163.235-.203.432-.406.667-.65.668-.651 1.139-1.343 1.57-2.075.236-.407.472-.854.668-1.342.04-.082.04-.163.04-.204a.47.47 0 00-.393-.366z"
-														fill="#2C4162"></path></g></svg></span><span
+														fill="#2C4162"></path></g></svg>
+														</span><span
 												style="transform: translate3d(0, 0, 0); vertical-align: middle; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; width: auto; height: auto"
-												class="logo-image-compact"><svg width="100%"
+												class="logo-image-compact">
+												<svg width="100%"
 													height="100%" viewBox="0 0 24 24"
 													xmlns="http://www.w3.org/2000/svg" role="img"
 													style="width: inherit; height: inherit; line-height: inherit; color: inherit">
@@ -1003,7 +1005,8 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 														fill="#00AEF0"></path>
 													<path
 														d="M15.12 9.727c-.012 0-.024-.006-.037-.006-.012 0-.025-.006-.043-.006H8.91a.11.11 0 00-.043.006c-.013 0-.025.006-.038.006-.224.045-.362.192-.356.397a.498.498 0 00.038.23c.193.474.424.935.687 1.377a9.68 9.68 0 001.622 2.138c.225.23.45.448.687.653.15.128.306.186.468.186a.705.705 0 00.468-.186 9.59 9.59 0 00.687-.653 9.83 9.83 0 001.623-2.138c.255-.442.486-.896.686-1.376a.498.498 0 00.038-.23c.006-.212-.125-.353-.356-.398z"
-														fill="#2C4162"></path></g></svg></span>
+														fill="#2C4162"></path></g></svg>
+														</span>
 										</div></a>
 								</div>
 							</div>

@@ -36,7 +36,7 @@ $(function(){
 	<li><a href="user/review/myreview/myroomreview_write.do">객실리뷰작성해야댐(마페)</a></li>
 	<li><a href="user/mypage/myhotelreservation.do">호텔 (객실) 예약내역</a></li>
 	<li><a href="user/mypage/mydiningreservation.do">다이닝 예약내역</a></li>
-	<li><a href="user/mypage/check_to_modify .do">회원정보수정-재확인</a></li>
+	<li><a href="user/mypage/check_to_ㅡㅐㅇ .do">회원정보수정-재확인</a></li>
 	<li><a href="user/mypage/modify_info.do">회원정보수정-수정창</a></li>
 
 	
