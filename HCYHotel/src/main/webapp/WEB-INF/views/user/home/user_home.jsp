@@ -2,14 +2,26 @@
 	pageEncoding="UTF-8"%>
 <%@ page info="메인"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+
 <html lang="ko-kr" dir="ltr">
 <head>
 <meta name="r9-version" content="R695c">
 <meta name="r9-built" content="20231129.060225">
 <meta name="r9-rendered" content="20231130.081747.+00:00">
 <meta name="r9-build-number" content="40">
+<!--  -->
+<link rel="stylesheet"
+	href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<!--  -->
 <!-- bootstrap -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
 <link rel="stylesheet"
 	href="https://content.r9cdn.net/res/combined.css?v=259002787c91da6abc39a703b751ab6c5a776d3d-14pre-flipped&amp;cluster=5">
 <link rel="stylesheet"
@@ -48,7 +60,7 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 <meta name="format-detection" content="telephone=no">
-<title>HotelsCombined: 호텔, 항공, 렌트카 비교 예약</title>
+<title>HCYCombined</title>
 <meta name="description"
 	content="국내외 주요 호텔 예약사이트의 실시간 특가를 HotelsCombined에서 한 눈에 비교하세요.">
 <link rel="preconnect" href="apis.google.com">
@@ -199,6 +211,14 @@ reject(xhr.response);
 })
 xhr.send('');
 </script>
+<script>
+  $( function() {
+	  $.datepicker.setDefaults($.datepicker.regional['ko']);
+    $( "#datepicker" ).datepicker({dateFormat: 'yy-mm-dd'});
+    $( "#datepicker2" ).datepicker({dateFormat: 'yy-mm-dd'});
+
+  } );
+  </script>
 <link rel="canonical" href="https://www.hotelscombined.co.kr">
 <link rel="alternate" hreflang="ar" href="https://ar.hotelscombined.com">
 <link rel="alternate" hreflang="es-ES"
@@ -298,28 +318,38 @@ keyframes CommonComponentsReactDialogSlideUp { 0% {
 100
 
 
+
+
 %
 {
 top
 
 
+
+
 :
+
+
 
 
 0
+
+
 ;
-
-
 margin-top
+
+
 
 
 :
 
 
+
+
 5vh
+
+
 ;
-
-
 }
 }
 @
@@ -330,18 +360,24 @@ keyframes CommonComponentsReactDialogFloatingSlideUp { 0% {
 100
 
 
+
+
 %
 {
 bottom
 
 
+
+
 :
 
 
+
+
 0
+
+
 ;
-
-
 }
 }
 @
@@ -352,18 +388,24 @@ keyframes CommonComponentsReactDialogFloatingSlideInFromRight { 0% {
 100
 
 
+
+
 %
 {
 right
 
 
+
+
 :
 
 
+
+
 0
+
+
 ;
-
-
 }
 }
 @
@@ -374,18 +416,24 @@ keyframes CommonComponentsReactDialogFloatingSlideInFromLeft { 0% {
 100
 
 
+
+
 %
 {
 left
 
 
+
+
 :
 
 
+
+
 0
+
+
 ;
-
-
 }
 }
 @
@@ -395,16 +443,26 @@ keyframes CommonComponentsReactDialogShadeFadeIn { 0% {
 100
 
 
+
+
 %
 {
 background
 
 
+
+
 :
 
 
+
+
 rgba
+
+
 (
+
+
 
 
 19
@@ -414,13 +472,17 @@ rgba
 31
 ,
 0
+
+
 .6
 
 
+
+
 )
+
+
 ;
-
-
 }
 }
 </style>
@@ -940,13 +1002,15 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 								</div>
 								<div
 									class="ui-layout-HeaderMainLogo normal-from-l-size main-logo--mobile">
-									<a class="main-logo__link" href="/"
+									<a class="main-logo__link"
+										href="http://localhost/HCYHotel/user/home/user_home.do"
 										itemprop="https://schema.org/logo"
 										aria-label="호텔스컴바인 홈페이지로 이동하기"><div
 											class="main-logo__logo has-compact-logo inverted-logo">
 											<span
 												style="transform: translate3d(0, 0, 0); vertical-align: middle; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; width: auto; height: auto"
-												class="logo-image"><svg width="100%" height="100%"
+												class="logo-image">
+												<!-- <svg width="100%" height="100%"
 													viewBox="0 0 190 24" xmlns="http://www.w3.org/2000/svg"
 													role="img"
 													style="width: inherit; height: inherit; line-height: inherit; color: inherit">
@@ -967,9 +1031,53 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 														fill="#00AEF0"></path>
 													<path
 														d="M14.8 9.966H8.793c-.235.04-.353.203-.353.366 0 .082 0 .163.04.204.196.447.392.895.667 1.342.432.732.903 1.424 1.57 2.075.196.203.432.447.667.65a.715.715 0 00.432.163c.157 0 .314-.04.432-.163.235-.203.432-.406.667-.65.668-.651 1.139-1.343 1.57-2.075.236-.407.472-.854.668-1.342.04-.082.04-.163.04-.204a.47.47 0 00-.393-.366z"
-														fill="#2C4162"></path></g></svg></span><span
+														fill="#2C4162"></path></g></svg> --> <svg id="_레이어_1"
+													data-name="레이어 1" xmlns="http://www.w3.org/2000/svg"
+													viewBox="0 0 136.04 15.76" onclick="goMain()">
+  											
+  
+  <defs>
+    <style>
+.cls-1 {
+	fill: #fff;
+}
+
+.cls-1, .cls-2 {
+	stroke-width: 0px;
+}
+
+.cls-2 {
+	fill: #293f5f;
+}
+</style>
+  </defs>
+  <path class="cls-2"
+														d="m10.2.1c.36,0,.64.08.83.23.19.16.28.31.28.47v14.1c0,.17-.09.33-.28.48-.19.15-.46.22-.81.22-.33,0-.58-.08-.77-.22-.19-.15-.28-.31-.28-.48v-6.72H2.15v6.72c0,.17-.09.33-.28.48-.19.15-.46.22-.81.22s-.6-.08-.78-.22c-.18-.15-.27-.31-.27-.48V.82c0-.16.09-.31.27-.47.18-.16.44-.23.78-.23.36,0,.64.08.82.23.18.16.27.31.27.47v5.51h7.01V.8c0-.16.09-.31.27-.47.18-.16.44-.23.76-.23Z" />
+  <path class="cls-2"
+														d="m25.47,11.35c.22.01.41.08.58.21.16.13.28.29.34.49.08.3.06.6-.05.91-.11.31-.3.61-.56.91-.39.44-1.01.87-1.85,1.28s-1.94.62-3.29.62c-2.04,0-3.7-.69-4.97-2.06s-1.9-3.29-1.9-5.75.64-4.47,1.91-5.84C16.96.74,18.61.06,20.62.06c1.22,0,2.27.23,3.13.68.87.46,1.6,1.05,2.2,1.8.17.26.25.54.24.83,0,.29-.15.54-.42.75-.27.2-.55.26-.83.21-.28-.06-.54-.23-.79-.52-.39-.53-.87-.97-1.45-1.31-.57-.34-1.27-.51-2.09-.51-1.46,0-2.59.56-3.41,1.68-.81,1.12-1.22,2.55-1.22,4.28s.44,3.23,1.31,4.29c.87,1.06,2,1.59,3.38,1.59,1.26,0,2.3-.28,3.12-.84s1.37-1.11,1.66-1.64Z" />
+  <path class="cls-2"
+														d="m32.95,9.55L28.14.82c-.1-.22-.05-.41.18-.56.22-.15.49-.22.8-.22.38,0,.67.06.88.19.21.12.39.32.55.58l3.5,6.27,3.42-6.17c.13-.26.31-.47.53-.62.22-.16.53-.23.94-.23.36,0,.64.08.84.23s.24.33.14.53l-4.8,8.75v5.37c0,.16-.09.31-.28.46-.19.15-.45.22-.79.22s-.62-.08-.8-.22c-.18-.15-.27-.3-.27-.46v-5.37Z" />
+  <path class="cls-1"
+														d="m53.46,11.35c.22.01.41.08.58.21.16.13.28.29.34.49.08.3.06.6-.05.91-.11.31-.3.61-.56.91-.39.44-1.01.87-1.85,1.28s-1.94.62-3.29.62c-2.04,0-3.7-.69-4.97-2.06s-1.9-3.29-1.9-5.75.64-4.47,1.91-5.84C44.95.74,46.59.06,48.61.06c1.22,0,2.27.23,3.13.68.87.46,1.6,1.05,2.2,1.8.17.26.25.54.24.83,0,.29-.15.54-.42.75-.27.2-.55.26-.83.21-.28-.06-.54-.23-.79-.52-.39-.53-.87-.97-1.45-1.31-.57-.34-1.27-.51-2.09-.51-1.46,0-2.59.56-3.41,1.68-.81,1.12-1.22,2.55-1.22,4.28s.44,3.23,1.31,4.29c.87,1.06,2,1.59,3.38,1.59,1.26,0,2.3-.28,3.12-.84s1.37-1.11,1.66-1.64Z" />
+  <path class="cls-1"
+														d="m61.54,5c1.59,0,2.9.48,3.94,1.45s1.55,2.28,1.55,3.96c0,1.59-.5,2.87-1.49,3.86s-2.33,1.47-3.99,1.47-3-.5-3.96-1.5c-.96-1-1.45-2.28-1.45-3.83,0-1.69.51-3.02,1.53-3.97,1.02-.96,2.31-1.44,3.88-1.44Zm0,8.91c.98,0,1.77-.31,2.39-.93.62-.62.93-1.47.93-2.57s-.31-1.96-.92-2.6c-.61-.64-1.41-.96-2.4-.96s-1.75.32-2.34.96c-.6.64-.9,1.5-.9,2.6s.3,1.95.9,2.57c.6.62,1.38.93,2.34.93Z" />
+  <path class="cls-1"
+														d="m78.32,4.98c1.12,0,2.02.35,2.7,1.04.68.7,1.02,1.69,1.02,2.98v5.96c0,.16-.09.31-.27.45-.18.14-.44.21-.76.21s-.58-.07-.76-.21c-.18-.14-.27-.29-.27-.45v-6.19c0-.6-.14-1.08-.42-1.44-.28-.36-.69-.54-1.22-.54s-.95.19-1.23.58c-.29.38-.43.86-.43,1.42v6.17c0,.16-.09.31-.27.45-.18.14-.44.21-.78.21s-.58-.07-.75-.21-.26-.29-.26-.45v-6.17c0-.55-.14-1.02-.41-1.41-.27-.39-.68-.59-1.23-.59s-.94.18-1.23.54c-.29.36-.43.84-.43,1.44v6.17c0,.16-.09.31-.28.45-.19.14-.45.21-.77.21s-.58-.07-.76-.21c-.18-.14-.27-.29-.27-.45v-5.9c0-1.37.35-2.39,1.06-3.06.71-.67,1.6-1.01,2.69-1.01.53,0,1.04.1,1.5.3.47.2.86.49,1.17.85.31-.35.7-.63,1.15-.84.46-.21.97-.31,1.54-.31Z" />
+  <path class="cls-1"
+														d="m89.88,5c1.41,0,2.52.45,3.35,1.34s1.24,2.11,1.24,3.66-.48,2.91-1.45,4.04-2.3,1.7-4,1.7c-1.24,0-2.3-.45-3.2-1.36s-1.35-2.21-1.35-3.92V.72c0-.16.09-.31.27-.45.18-.14.44-.21.78-.21.36,0,.64.07.82.21.18.14.27.29.27.45v5.7c.4-.42.89-.76,1.46-1.03.57-.27,1.17-.4,1.81-.4Zm2.42,4.86c0-.87-.2-1.59-.61-2.16-.4-.57-1.01-.85-1.82-.85-.99,0-1.78.39-2.38,1.18-.6.79-.9,1.71-.9,2.76,0,.89.22,1.62.67,2.22s1.08.89,1.88.89c1,0,1.78-.37,2.32-1.12s.82-1.72.82-2.92Z" />
+  <path class="cls-1"
+														d="m97.83,2.66c-.36,0-.68-.13-.94-.39-.26-.26-.39-.57-.39-.94s.13-.66.39-.93c.26-.27.57-.4.94-.4s.68.13.94.4c.26.27.39.58.39.93s-.13.68-.39.94c-.26.26-.57.39-.94.39Zm-.02,2.34c.35,0,.62.08.8.23s.27.31.27.47v9.22c0,.17-.09.33-.28.47s-.45.21-.79.21-.62-.08-.8-.22-.27-.3-.27-.46V5.7c0-.16.09-.31.28-.47s.45-.23.79-.23Z" />
+  <path class="cls-1"
+														d="m107.83,4.96c1.2,0,2.14.38,2.82,1.13s1.03,1.84,1.03,3.26v5.57c0,.16-.09.31-.27.46s-.46.22-.82.22c-.34,0-.6-.08-.78-.22s-.27-.3-.27-.46v-5.7c0-.73-.17-1.31-.52-1.75-.34-.44-.86-.65-1.53-.65-.95,0-1.73.32-2.32.96-.6.64-.9,1.57-.9,2.79v4.36c0,.17-.1.33-.29.47s-.46.21-.8.21-.6-.07-.79-.21-.28-.3-.28-.47V5.76c0-.16.09-.31.28-.47s.45-.23.79-.23.61.08.8.23.29.31.29.47v.68c.44-.46.95-.82,1.52-1.08.57-.27,1.26-.4,2.05-.4Z" />
+  <path class="cls-1"
+														d="m123.32,13.07c.12.05.21.15.29.3s.12.3.12.44c-.08.47-.47.91-1.18,1.32s-1.67.62-2.88.62c-1.82,0-3.24-.52-4.24-1.55s-1.5-2.29-1.5-3.78c0-1.6.55-2.9,1.64-3.91s2.44-1.5,4.04-1.5c1.25,0,2.32.32,3.22.96.9.64,1.35,1.43,1.35,2.38,0,1-.42,1.81-1.25,2.42s-1.93.92-3.3.92c-.55,0-1.13-.08-1.76-.25s-1.18-.46-1.68-.86c-.01,1.07.31,1.93.96,2.59s1.62.99,2.91.99c.56,0,1.16-.1,1.8-.29s1.13-.46,1.46-.78Zm-3.71-6.21c-.59,0-1.17.15-1.74.45-.57.3-1.02.81-1.35,1.54.43.39.91.69,1.45.89s1.09.3,1.66.3c.65,0,1.21-.14,1.67-.43s.69-.68.69-1.19c0-.56-.24-.96-.73-1.2-.49-.24-1.04-.36-1.65-.36Z" />
+  <path class="cls-1"
+														d="m134.92.06c.34,0,.6.07.79.21.19.14.28.29.28.45l.04,9.18c0,1.65-.5,3.04-1.5,4.16s-2.32,1.68-3.96,1.68c-1.34,0-2.44-.47-3.3-1.42s-1.29-2.18-1.29-3.72.5-2.85,1.51-3.95,2.28-1.65,3.8-1.65c.55,0,1.04.08,1.46.25.43.17.79.38,1.09.64V.72c0-.16.09-.31.27-.45.18-.14.45-.21.8-.21Zm-1.05,9.98c0-.98-.22-1.75-.66-2.32-.44-.57-1.04-.86-1.8-.86-1,0-1.8.4-2.4,1.19-.6.79-.9,1.73-.9,2.81,0,.87.23,1.6.7,2.18s1.08.87,1.84.87c1.05,0,1.86-.39,2.4-1.17s.82-1.68.82-2.7Z" />
+</svg>
+
+											</span><span
 												style="transform: translate3d(0, 0, 0); vertical-align: middle; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; width: auto; height: auto"
-												class="logo-image-compact"><svg width="100%"
+												class="logo-image-compact"> <svg width="100%"
 													height="100%" viewBox="0 0 24 24"
 													xmlns="http://www.w3.org/2000/svg" role="img"
 													style="width: inherit; height: inherit; line-height: inherit; color: inherit">
@@ -988,23 +1096,58 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 														fill="#00AEF0"></path>
 													<path
 														d="M15.12 9.727c-.012 0-.024-.006-.037-.006-.012 0-.025-.006-.043-.006H8.91a.11.11 0 00-.043.006c-.013 0-.025.006-.038.006-.224.045-.362.192-.356.397a.498.498 0 00.038.23c.193.474.424.935.687 1.377a9.68 9.68 0 001.622 2.138c.225.23.45.448.687.653.15.128.306.186.468.186a.705.705 0 00.468-.186 9.59 9.59 0 00.687-.653 9.83 9.83 0 001.623-2.138c.255-.442.486-.896.686-1.376a.498.498 0 00.038-.23c.006-.212-.125-.353-.356-.398z"
-														fill="#2C4162"></path></g></svg></span>
+														fill="#2C4162"></path></g></svg>
+											</span>
 										</div></a>
 								</div>
 							</div>
 							<div class="fv-6-right-section">
-							 <select class="form-select" aria-label="Default select example" style="width:180px; text-align:center">
-								  <option value="selected">호텔 예약내역</option>
-								  <option value="1">다이닝 예약내역</option>
-								  <option value="2">회원정보 관리</option>
-								  <option value="3">나의 호텔 후기</option>
-								  <option value="4">나의 다이닝 후기</option>
-								  <option value="5">나의 문의내역</option>
-							</select>
-							
-							
-							
-							
+								<select id="userMenu" class="form-select"
+									aria-label="Default select example"
+									style="width: 180px; text-align: center" onchange="redirectToUrl()">
+									<option value="selected" >마이페이지</option>
+									<option value="http://localhost/HCYHotel/user/mypage/myhotelreservation.do" >호텔 예약내역</option>
+									<option value="http://localhost/HCYHotel/user/mypage/mydiningreservation.do">다이닝 예약내역</option>
+									<option value="http://localhost/HCYHotel/user/mypage/check_to_modify.do">회원정보 관리</option>
+									<option value="http://localhost/HCYHotel/user/review/myreview/myroomreview_list.do">나의 호텔 후기</option>
+									<option value="http://localhost/HCYHotel/user/review/myreview/mydiningreview_list.do">나의 다이닝 후기</option>
+									<option value="http://localhost/HCYHotel/user/mypage/my_qna_list.do">나의 문의내역</option>
+								</select>
+
+
+<script>
+  function redirectToUrl() {
+    var selectElement = document.getElementById('userMenu');
+    var selectedValue = selectElement.options[selectElement.selectedIndex].value;
+
+    // 선택한 옵션의 값으로 페이지 이동
+    window.location.href = selectedValue;
+  }
+</script>
+
+								<script>
+window.onload = function () {
+    // 여기에서 로그인 여부를 확인하고 처리
+    var isLoggedIn = checkLoginStatus(); 
+
+    // 로그인되어 있으면 메뉴 표시, 그렇지 않으면 숨김
+    if (isLoggedIn) {
+        document.getElementById('userMenu').style.display = 'block';
+    } else {
+        document.getElementById('userMenu').style.display = 'none';
+    }
+
+
+};
+
+
+ function checkLoginStatus() {
+        var isLoggedIn = ${id == null ? "false" : "true"};
+        return isLoggedIn;
+    }
+</script>
+
+
 								<div>
 									<div
 										class="common-layout-react-HeaderAccountWrapper theme-dark account--collapsible">
@@ -1030,38 +1173,44 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																<path fill="currentColor"
 																	d="M12 17.007c-3.618 0-7.023.821-10 2.265v2.735h20v-2.735c-2.977-1.444-6.382-2.265-10-2.265zM12 14.793a4 4 0 0 1-4-4v-4a4 4 0 0 1 8 0v4a4 4 0 0 1-4 4z"></path></svg></span></span>
 												</div>
-												<div class="menu-label__wrapper" >
+												<div class="menu-label__wrapper">
 													<span class="menu-label">
-													<form id="logoutForm" action="/HCYHotel/user_logout.do" method="post">
-													 
-													<button role="button"
-															class="Iqt3 Iqt3-mod-bold Button-No-Standard-Style Iqt3-mod-variant-outline Iqt3-mod-theme-none Iqt3-mod-shape-rounded-small Iqt3-mod-shape-mod-default Iqt3-mod-spacing-default Iqt3-mod-size-default"
-															tabindex="0" aria-disabled="false">
-															<div class="Iqt3-button-container">
-																<div class="Iqt3-button-content">
-																	<div> 
-																		<span
-																			style="transform: translate3d(0, 0, 0); vertical-align: middle; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; width: auto; height: auto"><svg
-																				viewBox="0 0 200 200" width="100%" height="100%"
-																				xmlns="http://www.w3.org/2000/svg"
-																				class="auth-account-icon" role="img"
-																				style="width: inherit; height: inherit; line-height: inherit; color: inherit">
+														<form id="logoutForm" action="/HCYHotel/user_logout.do"
+															method="post">
+
+															<button role="button"
+																class="Iqt3 Iqt3-mod-bold Button-No-Standard-Style Iqt3-mod-variant-outline Iqt3-mod-theme-none Iqt3-mod-shape-rounded-small Iqt3-mod-shape-mod-default Iqt3-mod-spacing-default Iqt3-mod-size-default"
+																tabindex="0" aria-disabled="false">
+																<div class="Iqt3-button-container">
+																	<div class="Iqt3-button-content">
+																		<div>
+																			<span
+																				style="transform: translate3d(0, 0, 0); vertical-align: middle; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; width: auto; height: auto"><svg
+																					viewBox="0 0 200 200" width="100%" height="100%"
+																					xmlns="http://www.w3.org/2000/svg"
+																					class="auth-account-icon" role="img"
+																					style="width: inherit; height: inherit; line-height: inherit; color: inherit">
 																				<path
-																					d="M180 100c0-44.1-35.9-80-80-80s-80 35.9-80 80s35.9 80 80 80s80-35.9 80-80zm-80-70c38.6 0 70 31.4 70 70c0 16.3-5.6 31.3-15 43.2c-.5-.7-1-1.4-1.7-2c-3.2-3.1-17.3-7.1-27.3-9.6c9.5-10.2 13.9-25.5 13.9-38.3c0-28.7-13.5-43.3-40-43.3s-40 14.6-40.1 43.3c0 12.8 4.4 28.1 13.9 38.3c-9.9 2.5-24 6.5-27.2 9.5c-.6.6-1.2 1.2-1.7 2C35.6 131.2 30 116.2 30 100c0-38.6 31.4-70 70-70zM52 150.9c.6-1.4 1.1-2.1 1.3-2.4c3.4-2.2 25.1-8 32.5-9.5c4.5-.9 5.5-7 1.4-9.3c-10.4-5.8-17.4-20.5-17.4-36.4C70 70 79 60 100 60c20.7 0 30 10.3 30 33.3c0 15.7-7.2 30.7-17.4 36.4c-4 2.2-3.1 8.3 1.4 9.2c9.6 2.1 29.4 7.4 32.6 9.5c.3.3.8 1.1 1.4 2.4c-27.1 25.5-69 25.6-96 .1z"></path></svg></span>
+																						d="M180 100c0-44.1-35.9-80-80-80s-80 35.9-80 80s35.9 80 80 80s80-35.9 80-80zm-80-70c38.6 0 70 31.4 70 70c0 16.3-5.6 31.3-15 43.2c-.5-.7-1-1.4-1.7-2c-3.2-3.1-17.3-7.1-27.3-9.6c9.5-10.2 13.9-25.5 13.9-38.3c0-28.7-13.5-43.3-40-43.3s-40 14.6-40.1 43.3c0 12.8 4.4 28.1 13.9 38.3c-9.9 2.5-24 6.5-27.2 9.5c-.6.6-1.2 1.2-1.7 2C35.6 131.2 30 116.2 30 100c0-38.6 31.4-70 70-70zM52 150.9c.6-1.4 1.1-2.1 1.3-2.4c3.4-2.2 25.1-8 32.5-9.5c4.5-.9 5.5-7 1.4-9.3c-10.4-5.8-17.4-20.5-17.4-36.4C70 70 79 60 100 60c20.7 0 30 10.3 30 33.3c0 15.7-7.2 30.7-17.4 36.4c-4 2.2-3.1 8.3 1.4 9.2c9.6 2.1 29.4 7.4 32.6 9.5c.3.3.8 1.1 1.4 2.4c-27.1 25.5-69 25.6-96 .1z"></path></svg></span>
+																		</div>
+																		<%
+																		System.out.println("-----------------------" + (session.getAttribute("id")));
+																		%>
+																		<c:if test="${ id==null }">
+																			<div class="sign-in-nav-link">
+																				<a
+																					href="http://localhost/HCYHotel/user/login/user_login.do">로그인</a>
+																			</div>
+																		</c:if>
+																		<c:if test="${ id!=null}">
+																			<div class="sign-in-nav-link">로그아웃</div>
+																		</c:if>
 																	</div>
-																	<% System.out.println("-----------------------"+(session.getAttribute("id"))); %>
-																	<c:if test="${ id==null }">
-																		<div class="sign-in-nav-link"><a href="http://localhost/HCYHotel/user/login/user_login.do">로그인</a></div>
-																	</c:if>
-																	<c:if test="${ id!=null}">
-																		<div class="sign-in-nav-link">로그아웃</div>
-																	</c:if>
 																</div>
-															</div>
-															<div class="Iqt3-button-focus-outline"></div>
-														</button>
+																<div class="Iqt3-button-focus-outline"></div>
+															</button>
 														</form>
-														</span>
+													</span>
 												</div>
 											</div></span>
 									</div>
@@ -1080,7 +1229,9 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 								<div class="pRB0-nav-items">
 									<nav class="HtHs" aria-label="홈">
 										<ul class="HtHs-nav-list">
-											<li><a href="/hotels" aria-label="호텔 검색 "
+											<li><a
+												href="http://localhost/HCYHotel/user/home/user_home.do"
+												aria-label="호텔 검색 "
 												class="dJtn dJtn-active dJtn-expanded dJtn-mod-variant-accordion"
 												aria-current="page"><svg viewBox="0 0 200 200"
 														width="1.25em" height="1.25em"
@@ -1089,7 +1240,9 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 														<path
 															d="M175 170a5 5 0 0 1-5-5v-5H30v5a5 5 0 1 1-10 0v-43.092c0-8.176 3.859-15.462 10-20.027V65c0-13.785 11.215-25 25-25h90c13.785 0 25 11.215 25 25v36.98c6.093 4.613 10 11.922 10 19.928V165a5 5 0 0 1-5 5zM30 150h140v-10H30v10zm0-20h140v-8.092c0-7.342-5.486-13.707-12.762-14.806c-40.216-6.077-73.399-6.207-114.477 0C35.415 108.21 30 114.4 30 121.908V130zm120-34.027c2.877.382 9.581 1.381 10 1.467V65c0-8.271-6.729-15-15-15H55c-8.271 0-15 6.729-15 15v32.438c.418-.084 7.123-1.083 10-1.465V85c0-8.271 6.729-15 15-15h25a14.94 14.94 0 0 1 10 3.829A14.943 14.943 0 0 1 110 70h25c8.271 0 15 6.729 15 15v10.973zm-45-3.45c11.463.167 22.988.912 35 2.233V85c0-2.757-2.243-5-5-5h-25c-2.757 0-5 2.243-5 5v7.523zM65 80c-2.757 0-5 2.243-5 5v9.756c12.012-1.321 23.537-2.065 35-2.232V85c0-2.757-2.243-5-5-5H65z"></path></svg>
 													<div class="dJtn-menu-item-title">호텔</div></a></li>
-											<li><a href="/flights" aria-label="항공권 검색 "
+											<li><a
+												href="http://localhost/HCYHotel/user/dining/dining_main.do"
+												aria-label="항공권 검색 "
 												class="dJtn dJtn-expanded dJtn-mod-variant-accordion"
 												aria-current="false"><svg viewBox="0 0 200 200"
 														width="1.25em" height="1.25em"
@@ -1098,7 +1251,9 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 														<path
 															d="M140.448 177.069l-19.846-43.661c-2.877-6.328-7.998-11.612-12.447-14.676a1029.409 1029.409 0 0 1-14.935 12.983c-4.045 3.618-5.452 9.494-3.67 15.347l2.733 8.981a4.997 4.997 0 0 1-1.248 4.991l-10 10c-2.267 2.268-6.043 1.838-7.754-.851l-14.154-22.241l-10.592 10.592a5 5 0 1 1-7.071-7.07l10.593-10.593l-22.242-14.153c-2.695-1.716-3.112-5.493-.851-7.754l10-10a5 5 0 0 1 4.992-1.248l8.981 2.733c5.85 1.777 11.728.375 15.348-3.671c4.269-5.007 8.599-9.988 12.983-14.935c-3.063-4.449-8.349-9.571-14.676-12.447L22.931 59.552c-3.563-1.619-3.965-6.539-.705-8.712l11.53-7.687a15.083 15.083 0 0 1 11.333-2.213l60.319 12.364c6.006 1.33 14.836-3.512 20.984-9.246c6.775-6.625 13.831-12.567 25.684-17.738c5.899-2.573 12.876-1.07 17.773 3.828l.003.002c4.898 4.897 6.401 11.874 3.828 17.773c-5.171 11.853-11.111 18.909-17.735 25.682c-5.736 6.148-10.583 14.976-9.266 20.906l12.382 60.4a15.1 15.1 0 0 1-2.215 11.332l-7.687 11.53c-2.182 3.276-7.096 2.849-8.711-.704zm-24.66-65.169c5.789 4.467 10.925 10.784 13.918 17.369l16.123 35.472l2.697-4.045a5.034 5.034 0 0 0 .738-3.778L136.9 96.6a19.235 19.235 0 0 1-.445-3.891a1041.686 1041.686 0 0 1-20.667 19.191zm-49.416 28.799l12 18.857l3.471-3.471l-1.86-6.111c-2.938-9.652-.396-19.525 6.631-25.767l.077-.066c23.665-20.174 47.419-42.531 62.016-57.438c6.149-6.558 10.969-11.688 15.808-22.779c1.113-2.552-.165-5.136-1.733-6.703l-.003-.002c-1.567-1.568-4.151-2.846-6.704-1.734c-10.394 4.535-15.439 8.933-22.782 15.811c-15.335 15.027-37.539 38.676-57.433 62.013l-.067.076c-6.242 7.028-16.115 9.567-25.767 6.631l-6.111-1.859l-3.471 3.471l18.858 12l7.164-7.163a5 5 0 1 1 7.071 7.07l-7.165 7.164zM35.258 54.17l35.471 16.124c6.585 2.993 12.903 8.128 17.37 13.918a1045.845 1045.845 0 0 1 19.202-20.678a19.358 19.358 0 0 1-3.982-.452L43.081 50.735a5.039 5.039 0 0 0-3.778.738l-4.045 2.697z"></path></svg>
 													<div class="dJtn-menu-item-title">다이닝</div></a></li>
-											<li><a href="BusinessManage/businessmanage_hotel_main.do" aria-label="렌터카 검색 "
+											<li><a
+												href="/HCYHotel/BusinessManage/businessHotelMain.do"
+												aria-label="렌터카 검색 "
 												class="dJtn dJtn-expanded dJtn-mod-variant-accordion"
 												aria-current="false"><svg viewBox="0 0 200 200"
 														width="1.25em" height="1.25em"
@@ -1107,7 +1262,8 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 														<path
 															d="M165 160h-10c-7.2 0-13.2-5.1-14.7-11.9c-26.8 2.5-53.9 2.5-80.6 0c-1.5 6.8-7.5 11.9-14.7 11.9H35c-8.3 0-15-6.7-15-15v-43.7c-2.1-.5-4.2-1-6.2-1.5c-2.7-.7-4.3-3.4-3.6-6.1c.7-2.7 3.4-4.3 6.1-3.6c1.6.4 3.2.8 4.7 1.1l12.4-37.7C34.9 49 39.2 45 44.7 44c30-5.3 80.7-5.3 110.6 0c5.5 1 9.8 4.9 11.4 9.7L179 91.4c1.6-.4 3.1-.8 4.7-1.2c2.7-.7 5.4.9 6.1 3.6c.7 2.7-.9 5.4-3.6 6.1c-2.1.5-4.2 1.1-6.3 1.6v43.6c.1 8.2-6.6 14.9-14.9 14.9zm-15-17.4v2.4c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5v-19.2c-11 1.6-26.2 3.5-34.6 4.2c-2.8.2-5.2-1.8-5.4-4.6c-.2-2.8 1.8-5.2 4.6-5.4c8.4-.7 24.6-2.8 35.4-4.3v-12.1c-43.8 8.7-94.9 8.7-140-.1v12.2c10.8 1.6 27 3.7 35.4 4.3c2.8.2 4.8 2.6 4.6 5.4c-.2 2.8-2.6 4.8-5.4 4.6c-8.4-.7-23.6-2.6-34.6-4.2V145c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5v-2.4c0-2.9 2.5-5.3 5.5-5c29.5 3.2 59.4 3.2 88.9 0c3.1-.3 5.6 2.1 5.6 5zM30.8 93.4c44.6 8.9 95.3 8.9 138.5.1l-12-36.7c-.6-1.6-2-2.7-3.6-3c-29-5.1-78.1-5.1-107.2 0c-1.7.3-3.1 1.4-3.6 3L30.8 93.4zm74.4-4c-2.4-1.4-3.2-4.4-1.9-6.8C107.7 74.8 116 70 125 70s17.1 4.7 21.6 12.5c1.4 2.4.6 5.4-1.8 6.8c-2.4 1.4-5.4.6-6.8-1.8c-2.7-4.7-7.6-7.5-13-7.5s-10.3 2.9-12.9 7.5c-1.4 2.4-4.5 3.2-6.9 1.9z"></path></svg>
 													<div class="dJtn-menu-item-title">사업자</div></a></li>
-											<li><a href="https://www.hotelscombined.co.kr/c/events/"
+											<li><a
+												href="http://localhost/HCYHotel/user/notice/user_notice.do"
 												aria-label="MISSING STRING [NAV_LINK_ARIA_LABEL_PROMOTION] NEW"
 												class="dJtn dJtn-expanded dJtn-mod-variant-accordion"
 												aria-current="false"><svg viewBox="0 0 200 200"
@@ -1117,21 +1273,19 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 														<path
 															d="M166.9 185.3L145 170.7l-21.9 14.6c-1.7 1.2-4 1.1-5.7-.1c-1.7-1.2-2.4-3.4-1.9-5.4l7-25.4l-20.6-16.4c-1.6-1.3-2.3-3.5-1.6-5.5c.6-2 2.5-3.4 4.5-3.5l26.3-1.2l9.2-24.7c.7-2 2.6-3.2 4.7-3.2s4 1.3 4.7 3.2l9.2 24.7l26.3 1.2c2.1.1 3.9 1.5 4.5 3.5c.6 2 0 4.2-1.6 5.5l-20.6 16.3l7 25.4c.6 2-.2 4.2-1.9 5.4c-1.6 1.3-3.9 1.3-5.7.2zm-19.1-24.8l13.6 9l-4.3-15.7c-.5-1.9.1-4 1.7-5.2l12.7-10.1l-16.2-.7c-2-.1-3.8-1.4-4.5-3.2l-5.7-15.3l-5.7 15.3c-.7 1.9-2.5 3.2-4.5 3.2l-16.2.7l12.7 10.1c1.6 1.2 2.2 3.3 1.7 5.2l-4.3 15.7l13.6-9c1.5-1.1 3.7-1.1 5.4 0zM95 180H35c-8.3 0-15-6.7-15-15V35c0-8.3 6.7-15 15-15h25v-5c0-2.8 2.2-5 5-5s5 2.2 5 5v5h60v-5c0-2.8 2.2-5 5-5s5 2.2 5 5v5h25c8.3 0 15 6.7 15 15v70c0 2.8-2.2 5-5 5s-5-2.2-5-5V60H30v105c0 2.8 2.2 5 5 5h60c2.8 0 5 2.2 5 5s-2.2 5-5 5zM30 50h140V35c0-2.8-2.2-5-5-5h-25v5c0 2.8-2.2 5-5 5s-5-2.2-5-5v-5H70v5c0 2.8-2.2 5-5 5s-5-2.2-5-5v-5H35c-2.8 0-5 2.2-5 5v15z"></path></svg>
 													<div class="dJtn-menu-item-title">공지</div></a></li>
+											<li><a
+												href="http://localhost/HCYHotel/user/qna/user_qna_list.do"
+												aria-label="MISSING STRING [NAV_LINK_ARIA_LABEL_PROMOTION] NEW"
+												class="dJtn dJtn-expanded dJtn-mod-variant-accordion"
+												aria-current="false"><svg viewBox="0 0 200 200"
+														width="1.25em" height="1.25em"
+														xmlns="http://www.w3.org/2000/svg"
+														class="dJtn-menu-item-icon" role="img" aria-hidden="true">
+											<path
+															d="M20 165V45c0-8.3 6.7-15 15-15h130c8.3 0 15 6.7 15 15v80c0 8.3-6.7 15-15 15H75c-23.3 0-33.9 13.5-46.2 28.2c-3 3.6-8.8 1.5-8.8-3.2zM35 40c-2.8 0-5 2.2-5 5v106.4c9.8-10.9 22.8-21.4 45-21.4h90c2.8 0 5-2.2 5-5V45c0-2.8-2.2-5-5-5H35zm110 70c-3.8 0-7.3-1.4-10-3.8c-2.7 2.4-6.2 3.8-10 3.8c-2.8 0-5-2.2-5-5s2.2-5 5-5s5-2.2 5-5V75c0-2.8-2.2-5-5-5s-5-2.2-5-5s2.2-5 5-5c3.8 0 7.3 1.4 10 3.8c2.7-2.4 6.2-3.8 10-3.8c2.8 0 5 2.2 5 5s-2.2 5-5 5s-5 2.2-5 5v20c0 2.8 2.2 5 5 5s5 2.2 5 5s-2.2 5-5 5zm-50 0H55c-2.8 0-5-2.2-5-5s2.2-5 5-5h40c2.8 0 5 2.2 5 5s-2.2 5-5 5zm0-20H55c-2.8 0-5-2.2-5-5s2.2-5 5-5h40c2.8 0 5 2.2 5 5s-2.2 5-5 5zm0-20H55c-2.8 0-5-2.2-5-5s2.2-5 5-5h40c2.8 0 5 2.2 5 5s-2.2 5-5 5z"></path></svg>
+													<div class="dJtn-menu-item-title">문의</div></a></li>
 										</ul>
 									</nav>
-								</div>
-
-								<div class="pRB0-nav-items">
-									<div role="button" tabindex="0"
-										aria-label="사이트에 대한 피드백을 남겨주세요 "
-										class="dJtn dJtn-expanded dJtn-mod-variant-accordion">
-										<svg viewBox="0 0 200 200" width="1.25em" height="1.25em"
-											xmlns="http://www.w3.org/2000/svg"
-											class="dJtn-menu-item-icon" role="img" aria-hidden="true">
-											<path
-												d="M20 165V45c0-8.3 6.7-15 15-15h130c8.3 0 15 6.7 15 15v80c0 8.3-6.7 15-15 15H75c-23.3 0-33.9 13.5-46.2 28.2c-3 3.6-8.8 1.5-8.8-3.2zM35 40c-2.8 0-5 2.2-5 5v106.4c9.8-10.9 22.8-21.4 45-21.4h90c2.8 0 5-2.2 5-5V45c0-2.8-2.2-5-5-5H35zm110 70c-3.8 0-7.3-1.4-10-3.8c-2.7 2.4-6.2 3.8-10 3.8c-2.8 0-5-2.2-5-5s2.2-5 5-5s5-2.2 5-5V75c0-2.8-2.2-5-5-5s-5-2.2-5-5s2.2-5 5-5c3.8 0 7.3 1.4 10 3.8c2.7-2.4 6.2-3.8 10-3.8c2.8 0 5 2.2 5 5s-2.2 5-5 5s-5 2.2-5 5v20c0 2.8 2.2 5 5 5s5 2.2 5 5s-2.2 5-5 5zm-50 0H55c-2.8 0-5-2.2-5-5s2.2-5 5-5h40c2.8 0 5 2.2 5 5s-2.2 5-5 5zm0-20H55c-2.8 0-5-2.2-5-5s2.2-5 5-5h40c2.8 0 5 2.2 5 5s-2.2 5-5 5zm0-20H55c-2.8 0-5-2.2-5-5s2.2-5 5-5h40c2.8 0 5 2.2 5 5s-2.2 5-5 5z"></path></svg>
-										<div class="dJtn-menu-item-title">문의</div>
-									</div>
 								</div>
 
 
@@ -1722,166 +1876,141 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 											src="https://content.r9cdn.net/res/images/horizon/ui/hotels/frontdoor/components/max/max_paris.png?v=1aef86025f1f2e5f691909d25788c056c3c9e9dd&amp;cluster=5">
 									</div>
 								</div>
-								<div class="C4-Q-search-form">
-									<div class="C4-Q-search-form" style="height:50px;">
-										<div class="J_T2">
-											<div class="J_T2-header"></div>
-											<div
-												class="J_T2-row J_T2-mod-collapse-l J_T2-mod-spacing-y-xxsmall">
+
+								<form
+									action="/HCYHotel/user/hotel/hotelSearch/user_hotel_search.do"
+									method="get">
+
+									<div class="C4-Q-search-form">
+										<div class="C4-Q-search-form" style="height: 50px;">
+											<div class="J_T2">
+												<div class="J_T2-header"></div>
 												<div
-													class="J_T2-field-group J_T2-mod-collapse-l J_T2-mod-spacing-y-xxsmall J_T2-mod-grow">
-													<div class="pM26">
-														<div role="button" tabindex="-1"
-															class="puNl puNl-mod-cursor-inherit puNl-mod-font-size-base puNl-mod-radius-base puNl-mod-corner-radius-all puNl-mod-size-large puNl-mod-spacing-default puNl-mod-state-default puNl-mod-text-overflow-ellipsis puNl-mod-theme-search puNl-mod-validation-state-neutral puNl-mod-validation-style-border">
-															<div role="img"
-																class="TWls TWls-mod-size-large TWls-mod-variant-prefix">
-																<svg viewBox="0 0 200 200" width="20" height="20"
-																	xmlns="http://www.w3.org/2000/svg" role="img">
-																	<path
-																		d="M175 170a5 5 0 0 1-5-5v-5H30v5a5 5 0 1 1-10 0v-43.092c0-8.176 3.859-15.462 10-20.027V65c0-13.785 11.215-25 25-25h90c13.785 0 25 11.215 25 25v36.98c6.093 4.613 10 11.922 10 19.928V165a5 5 0 0 1-5 5zM30 150h140v-10H30v10zm0-20h140v-8.092c0-7.342-5.486-13.707-12.762-14.806c-40.216-6.077-73.399-6.207-114.477 0C35.415 108.21 30 114.4 30 121.908V130zm120-34.027c2.877.382 9.581 1.381 10 1.467V65c0-8.271-6.729-15-15-15H55c-8.271 0-15 6.729-15 15v32.438c.418-.084 7.123-1.083 10-1.465V85c0-8.271 6.729-15 15-15h25a14.94 14.94 0 0 1 10 3.829A14.943 14.943 0 0 1 110 70h25c8.271 0 15 6.729 15 15v10.973zm-45-3.45c11.463.167 22.988.912 35 2.233V85c0-2.757-2.243-5-5-5h-25c-2.757 0-5 2.243-5 5v7.523zM65 80c-2.757 0-5 2.243-5 5v9.756c12.012-1.321 23.537-2.065 35-2.232V85c0-2.757-2.243-5-5-5H65z"></path></svg>
+													class="J_T2-row J_T2-mod-collapse-l J_T2-mod-spacing-y-xxsmall">
+													<div
+														class="J_T2-field-group J_T2-mod-collapse-l J_T2-mod-spacing-y-xxsmall J_T2-mod-grow">
+														<div class="pM26">
+															<div role="button" tabindex="-1"
+																class="puNl puNl-mod-cursor-inherit puNl-mod-font-size-base puNl-mod-radius-base puNl-mod-corner-radius-all puNl-mod-size-large puNl-mod-spacing-default puNl-mod-state-default puNl-mod-text-overflow-ellipsis puNl-mod-theme-search puNl-mod-validation-state-neutral puNl-mod-validation-style-border">
+
+																<input type="text"
+																	class="NhpT NhpT-mod-radius-base NhpT-mod-corner-radius-all NhpT-mod-size-large NhpT-mod-state-default NhpT-mod-text-overflow-ellipsis NhpT-mod-theme-search NhpT-mod-validation-state-neutral NhpT-mod-validation-style-border"
+																	value="서울" tabindex="0" id="searchAddress"
+																	name="searchAddress" placeholder="지역명을 입력해주세요"
+																	aria-autocomplete="list" aria-haspopup="listbox">
 															</div>
-															<input type="text"
-																class="NhpT NhpT-mod-radius-base NhpT-mod-corner-radius-all NhpT-mod-size-large NhpT-mod-state-default NhpT-mod-text-overflow-ellipsis NhpT-mod-theme-search NhpT-mod-validation-state-neutral NhpT-mod-validation-style-border"
-																value="베스트 웨스턴 플러스 경주, 경주, 대한민국" tabindex="0"
-																placeholder="도시, 호텔, 공항 또는 랜드마크를 입력하세요"
-																aria-autocomplete="list" aria-haspopup="listbox">
 														</div>
 													</div>
-												</div>
-												<div
-													class="J_T2-field-group J_T2-mod-collapse-l J_T2-mod-spacing-y-xxsmall J_T2-mod-grow">
-													<div>
-														<div class="cBaN">
-															<div class="cBaN-date-select-wrapper">
-																<div class="jZyL">
-																	<div role="button" tabindex="0" class="JONo-button"
-																		aria-label="시작 날짜">
-																		<svg viewBox="0 0 200 200" width="1.25em"
-																			height="1.25em" xmlns="http://www.w3.org/2000/svg"
-																			class="JONo-icon" role="img">
-																			<path
-																				d="M165 180H35c-8.3 0-15-6.7-15-15V35c0-8.3 6.7-15 15-15h25v-5c0-2.8 2.2-5 5-5s5 2.2 5 5v5h60v-5c0-2.8 2.2-5 5-5s5 2.2 5 5v5h25c8.3 0 15 6.7 15 15v130c0 8.3-6.7 15-15 15zM30 60v105c0 2.8 2.2 5 5 5h130c2.8 0 5-2.2 5-5V60H30zm0-10h140V35c0-2.8-2.2-5-5-5h-25v5c0 2.8-2.2 5-5 5s-5-2.2-5-5v-5H70v5c0 2.8-2.2 5-5 5s-5-2.2-5-5v-5H35c-2.8 0-5 2.2-5 5v15zm75 100c-2.8 0-5-2.2-5-5V97.1l-11.5 11.5c-2 2-5.1 2-7.1 0s-2-5.1 0-7.1l20-20c1.4-1.4 3.6-1.9 5.4-1.1c1.9.8 3.1 2.6 3.1 4.6v60c.1 2.8-2.1 5-4.9 5z"></path></svg>
-																		<div class="SVL4-button-content">
-																			<span class="aJ3v">12월 6일 수</span>
+													<div
+														class="J_T2-field-group J_T2-mod-collapse-l J_T2-mod-spacing-y-xxsmall J_T2-mod-grow">
+														<div>
+															<div class="cBaN">
+																<div class="cBaN-date-select-wrapper">
+																	<div class="jZyL">
+																		<div role="button" tabindex="0" class="JONo-button"
+																			aria-label="시작 날짜">
+
+																			<div class="SVL4-button-content">
+																				<input type="text" style="height: 40px"
+																					id="datepicker" placeholder="yyyy-mm-dd"
+																					name="searchCheckin">
+																			</div>
+																		</div>
+																		<div class="SVL4-date-arrows">
+																			<div role="button" tabindex="-1"></div>
+																			<div role="button" tabindex="-1"></div>
 																		</div>
 																	</div>
-																	<div class="SVL4-date-arrows">
-																		<div role="button" tabindex="-1">
-																			<svg viewBox="0 0 200 200" width="16" height="16"
-																				xmlns="http://www.w3.org/2000/svg"
-																				class="SVL4-arrow-icon" role="img">
-																				<path
-																					d="M120.002 160a4.987 4.987 0 0 1-3.702-1.637l-50-55a5 5 0 0 1 0-6.727l50-55a5 5 0 0 1 7.4 6.727L76.757 100l46.943 51.637a5 5 0 0 1-3.698 8.363z"></path></svg>
+																	<div class="cBaN-separator-line"></div>
+																	<div class="jZyL">
+																		<div role="button" tabindex="0" class="JONo-button"
+																			aria-label="종료 날짜">
+
+																			<div class="SVL4-button-content">
+																				<input type="text" style="height: 40px"
+																					id="datepicker2" placeholder="yyyy-mm-dd"
+																					name="searchCheckout" value="">
+																			</div>
 																		</div>
-																		<div role="button" tabindex="-1">
-																			<svg viewBox="0 0 200 200" width="16" height="16"
-																				xmlns="http://www.w3.org/2000/svg"
-																				class="SVL4-arrow-icon" role="img">
-																				<path
-																					d="M79.999 160a5 5 0 0 1-3.698-8.363L123.243 100L76.3 48.363a5 5 0 0 1 7.399-6.727l50 55a5.002 5.002 0 0 1 0 6.727l-50 55a4.986 4.986 0 0 1-3.7 1.637z"></path></svg>
-																		</div>
-																	</div>
-																</div>
-																<div class="cBaN-separator-line"></div>
-																<div class="jZyL">
-																	<div role="button" tabindex="0" class="JONo-button"
-																		aria-label="종료 날짜">
-																		<svg viewBox="0 0 200 200" width="1.25em"
-																			height="1.25em" xmlns="http://www.w3.org/2000/svg"
-																			class="JONo-icon" role="img">
-																			<path
-																				d="M165 180H35c-8.3 0-15-6.7-15-15V35c0-8.3 6.7-15 15-15h25v-5c0-2.8 2.2-5 5-5s5 2.2 5 5v5h60v-5c0-2.8 2.2-5 5-5s5 2.2 5 5v5h25c8.3 0 15 6.7 15 15v130c0 8.3-6.7 15-15 15zM30 60v105c0 2.8 2.2 5 5 5h130c2.8 0 5-2.2 5-5V60H30zm0-10h140V35c0-2.8-2.2-5-5-5h-25v5c0 2.8-2.2 5-5 5s-5-2.2-5-5v-5H70v5c0 2.8-2.2 5-5 5s-5-2.2-5-5v-5H35c-2.8 0-5 2.2-5 5v15zm75 100c-2.8 0-5-2.2-5-5V97.1l-11.5 11.5c-2 2-5.1 2-7.1 0s-2-5.1 0-7.1l20-20c1.4-1.4 3.6-1.9 5.4-1.1c1.9.8 3.1 2.6 3.1 4.6v60c.1 2.8-2.1 5-4.9 5z"></path></svg>
-																		<div class="SVL4-button-content">
-																			<span class="aJ3v">12월 7일 목</span>
-																		</div>
-																	</div>
-																	<div class="SVL4-date-arrows">
-																		<div role="button" tabindex="-1">
-																			<svg viewBox="0 0 200 200" width="16" height="16"
-																				xmlns="http://www.w3.org/2000/svg"
-																				class="SVL4-arrow-icon" role="img">
-																				<path
-																					d="M120.002 160a4.987 4.987 0 0 1-3.702-1.637l-50-55a5 5 0 0 1 0-6.727l50-55a5 5 0 0 1 7.4 6.727L76.757 100l46.943 51.637a5 5 0 0 1-3.698 8.363z"></path></svg>
-																		</div>
-																		<div role="button" tabindex="-1">
-																			<svg viewBox="0 0 200 200" width="16" height="16"
-																				xmlns="http://www.w3.org/2000/svg"
-																				class="SVL4-arrow-icon" role="img">
-																				<path
-																					d="M79.999 160a5 5 0 0 1-3.698-8.363L123.243 100L76.3 48.363a5 5 0 0 1 7.399-6.727l50 55a5.002 5.002 0 0 1 0 6.727l-50 55a4.986 4.986 0 0 1-3.7 1.637z"></path></svg>
+																		<div class="SVL4-date-arrows">
+																			<div role="button" tabindex="-1"></div>
+																			<div role="button" tabindex="-1"></div>
 																		</div>
 																	</div>
 																</div>
 															</div>
 														</div>
 													</div>
-												</div>
-												<div
-													class="J_T2-field-group J_T2-mod-collapse-l J_T2-mod-spacing-y-xxsmall">
-													<div>
-														<div class="c3JX7-wrapper">
+													<div
+														class="J_T2-field-group J_T2-mod-collapse-l J_T2-mod-spacing-y-xxsmall">
+														<div>
+															<div class="c3JX7-wrapper">
+																<span class="c3JX7-userIcon">객실<input type="text"
+																	name="" value="" id="roomcnt"
+																	style="width: 30px; height: 25px">&nbsp;&nbsp;
+																	인원수<input type="text" name="searchCapacity" value=""
+																	id="pplcnt" style="width: 30px; height: 25px"></span>
+																<button role="button"
+																	class="RxNS RxNS-mod-stretch RxNS-mod-variant-none RxNS-mod-theme-none RxNS-mod-shape-default RxNS-mod-spacing-none RxNS-mod-size-xlarge"
+																	tabindex="0" aria-disabled="false">
+																	<div class="RxNS-button-container">
+																		<div class="RxNS-button-content">
+																			<div class="c3JX7-displayContent"></div>
+																		</div>
+																	</div>
+																</button>
+															</div>
+														</div>
+													</div>
+													<span class="QdG_"><span class="x_pP">
 															<button role="button"
-																class="RxNS RxNS-mod-stretch RxNS-mod-variant-none RxNS-mod-theme-none RxNS-mod-shape-default RxNS-mod-spacing-none RxNS-mod-size-xlarge"
-																tabindex="0" aria-disabled="false">
+																class="RxNS RxNS-mod-stretch RxNS-mod-animation-search RxNS-mod-variant-solid RxNS-mod-theme-progress RxNS-mod-shape-default RxNS-mod-spacing-base RxNS-mod-size-xlarge"
+																tabindex="0" aria-disabled="true" title="" type="submit"
+																aria-label="검색">
 																<div class="RxNS-button-container">
 																	<div class="RxNS-button-content">
-																		<div class="c3JX7-displayContent">
-																			<span class="c3JX7-userIcon"><svg
-																					viewBox="0 0 200 200" width="20" height="20"
-																					xmlns="http://www.w3.org/2000/svg" role="img">
-																					<path
-																						d="M160.6 180H39.4c-1.6 0-3.2-.8-4.1-2.1c-8-11.5-6.8-32.8 2.2-41.5c3.9-3.8 23.8-10.5 35.6-14C58.8 108.1 50 95.4 50 70.9C50 38.6 68.2 20 100 20s50 18.6 50 50.9c0 23.8-8.2 36.7-23.1 51.5c11.8 3.5 31.6 10.2 35.6 14c9.1 8.7 10.3 30 2.3 41.5c-1 1.3-2.6 2.1-4.2 2.1zM42.3 170h115.5c4-8.3 2.4-21.8-2.1-26.3c-3.6-2.8-31.2-12.1-38.9-13.8c-3.5-.8-5.1-4.9-3-7.8c7.9-10.8 26.3-19.2 26.3-51.2c0-18.7-6.9-40.9-40-40.9S60 52.2 60 70.9c0 31.9 18.4 40.3 26.3 51.2c2.1 2.9.5 7.1-3 7.8c-7.7 1.6-35.3 10.9-38.9 13.7c-4.6 4.5-6.1 18.1-2.1 26.4zm2.2-26.4z"></path></svg></span><span
-																				class="c3JX7-displayText">객실1개, 투숙객 2명</span>
+																		<div class="a7Uc">
+																			<div class="a7Uc-infix">
+																				<svg viewBox="0 0 200 200" width="24" height="24"
+																					xmlns="http://www.w3.org/2000/svg"
+																					class="A_8a-icon" role="img">
+																				<path
+																						d="M178.5 171.5l-44.2-44.2c9.8-11.4 15.7-26.1 15.7-42.3c0-35.8-29.2-65-65-65S20 49.2 20 85s29.2 65 65 65c16.1 0 30.9-5.9 42.3-15.7l44.2 44.2c2 2 5.1 2 7.1 0c1.9-1.9 1.9-5.1-.1-7zM30 85c0-30.3 24.7-55 55-55s55 24.7 55 55s-24.7 55-55 55s-55-24.7-55-55z"></path></svg>
+																			</div>
 																		</div>
 																	</div>
 																</div>
 															</button>
-														</div>
+													</span></span>
+												</div>
+												<div class="J_T2-footer">
+													<div class="OJEY-cmp2-wrapper">
+														<div></div>
 													</div>
+													<div class="c1ClF"></div>
 												</div>
-												<span class="QdG_"><span class="x_pP"><button
-															role="button"
-															class="RxNS RxNS-mod-stretch RxNS-mod-animation-search RxNS-mod-variant-solid RxNS-mod-theme-progress RxNS-mod-shape-default RxNS-mod-spacing-base RxNS-mod-size-xlarge"
-															tabindex="0" aria-disabled="false" title="" type="submit"
-															aria-label="검색">
-															<div class="RxNS-button-container">
-																<div class="RxNS-button-content">
-																	<div class="a7Uc">
-																		<div class="a7Uc-infix">
-																			<svg viewBox="0 0 200 200" width="24" height="24"
-																				xmlns="http://www.w3.org/2000/svg" class="A_8a-icon"
-																				role="img">
-																				<path
-																					d="M178.5 171.5l-44.2-44.2c9.8-11.4 15.7-26.1 15.7-42.3c0-35.8-29.2-65-65-65S20 49.2 20 85s29.2 65 65 65c16.1 0 30.9-5.9 42.3-15.7l44.2 44.2c2 2 5.1 2 7.1 0c1.9-1.9 1.9-5.1-.1-7zM30 85c0-30.3 24.7-55 55-55s55 24.7 55 55s-24.7 55-55 55s-55-24.7-55-55z"></path></svg>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</button></span></span>
-											</div>
-											<div class="J_T2-footer">
-												<div class="OJEY-cmp2-wrapper">
-													<div></div>
-												</div>
-												<div class="c1ClF"></div>
 											</div>
 										</div>
 									</div>
-								</div>
+
+								</form>
+
+
 							</div>
 						</div>
 					</div>
 					<div class="Seuf"></div>
 					<div class="Seuf">
 						<section class="bDbo bDbo-spacing-bottom" role="group">
-						<script>
+							<script>
 						function diningreservation(){
 							window.location.href="http://localhost/HCYHotel/user/dining/dining_booking.do";
 						}
 						</script>
-						
-						<button type="button" class="btn btn-info">호텔 바로 예약하기</button>
-						<button type="button" class="btn btn-warning" onclick="diningreservation()">다이닝 바로 예약하기</button>
+
+							<button type="button" class="btn btn-info">호텔 바로 예약하기</button>
+							<button type="button" class="btn btn-warning"
+								onclick="diningreservation()">다이닝 바로 예약하기</button>
 							<div class="kml-layout edges-s snap">
 								<div></div>
 							</div>
@@ -1894,9 +2023,9 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 									<div class="KzeV-header">
 										<div class="KzeV-info">
 											<div class="KzeV-title">추천 호텔</div>
-											<div class="KzeV-description">12월 6일 수 - 12월 7일 목</div>
+
 										</div>
-										
+
 									</div>
 								</header>
 								<div>
@@ -1904,1176 +2033,152 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 										class="c-5pd c-5pd-mod-sizing-quarter-wide c-5pd-mod-spacing-xsmall">
 										<div role="button" tabindex="-1" aria-disabled="true"
 											class="JRE_ JRE_-mod-direction-back JRE_-mod-size-large JRE_-mod-shape-square JRE_-mod-position-default JRE_-mod-disabled"
-											aria-label="뒤로" style="top: 135px;">
-											<svg viewBox="0 0 200 200" width="1.25em" height="1.25em"
-												xmlns="http://www.w3.org/2000/svg" class="JRE_-arrow-svg"
-												role="img">
-												<path
-													d="M120.002 160a4.987 4.987 0 0 1-3.702-1.637l-50-55a5 5 0 0 1 0-6.727l50-55a5 5 0 0 1 7.4 6.727L76.757 100l46.943 51.637a5 5 0 0 1-3.698 8.363z"></path></svg>
-										</div>
+											aria-label="뒤로" style="top: 135px;"></div>
 										<div class="c-5pd-list">
 											<div class="c-5pd-inner">
-												<div role="group" aria-label="8개 중 1번째 항목">
-													<a
-														href="https://www.hotelscombined.co.kr/hotels/%EA%B2%BD%EC%A3%BC%2C%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD-c43930-h381384/2023-12-06/2023-12-07/2adults"
-														class="FNY6 FNY6-pres-quarter FNY6-mod-variant-default FNY6-mod-fluid-stretch FNY6-mod-center FNY6-mod-shape-round FNY6-mod-transition-none"><div
-															role="figure" class="FNY6-image-container">
-															<div
-																class="ATNn FNY6-image FNY6-mod-image-position-center"
-																aria-label="스위트 호텔 경주"
-																style="background-image: url(&quot;/rimg/himg/34/d6/c8/revato-273183-12266211-482358.jpg?xhint=919&amp;yhint=661&quot;);"></div>
-															<div class="FNY6-label-container"></div>
-														</div>
-														<div
-															class="FNY6-content FNY6-mod-content-background-default">
-															<h5 class="FNY6-title">경주</h5>
-															<div class="esgW"></div>
-														</div></a>
-												</div>
-												<div role="group" aria-label="8개 중 2번째 항목">
-													<a
-														href="https://www.hotelscombined.co.kr/hotels/%EA%B2%BD%EC%A3%BC%2C%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD-c43930-h448139/2023-12-06/2023-12-07/2adults"
-														class="FNY6 FNY6-pres-quarter FNY6-mod-variant-default FNY6-mod-fluid-stretch FNY6-mod-center FNY6-mod-shape-round FNY6-mod-transition-none"><div
-															role="figure" class="FNY6-image-container">
-															<div
-																class="ATNn FNY6-image FNY6-mod-image-position-center"
-																aria-label="소노 호텔"
-																style="background-image: url(&quot;/rimg/himg/55/00/89/expediav2-448139-2728781918-776861.jpg?xhint=540&amp;yhint=333&quot;);"></div>
-															<div class="FNY6-label-container"></div>
-														</div>
-														<div
-															class="FNY6-content FNY6-mod-content-background-default">
-															<h5 class="FNY6-title">제주</h5>
 
-														</div></a>
-												</div>
-												<div role="group" aria-label="8개 중 3번째 항목">
-													<a
-														href="https://www.hotelscombined.co.kr/hotels/%EA%B2%BD%EC%A3%BC%2C%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD-c43930-h2253552/2023-12-06/2023-12-07/2adults"
-														class="FNY6 FNY6-pres-quarter FNY6-mod-variant-default FNY6-mod-fluid-stretch FNY6-mod-center FNY6-mod-shape-round FNY6-mod-transition-none"><div
-															role="figure" class="FNY6-image-container">
-															<div
-																class="ATNn FNY6-image FNY6-mod-image-position-center"
-																aria-label="141 미니 호텔"
-																style="background-image: url(&quot;/rimg/himg/d2/d4/5d/expediav2-2253552-3058009102-098725.jpg?xhint=540&amp;yhint=333&quot;);"></div>
-															<div class="FNY6-label-container"></div>
-														</div>
-														<div
-															class="FNY6-content FNY6-mod-content-background-default">
-															<h5 class="FNY6-title">141 미니 호텔</h5>
+												<c:forEach items="${recommendList}" var="recommend"
+													varStatus="status">
 
-														</div></a>
-												</div>
-												<div role="group" aria-label="8개 중 4번째 항목">
-													<a
-														href="https://www.hotelscombined.co.kr/hotels/%EA%B2%BD%EC%A3%BC%2C%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD-c43930-h386567/2023-12-06/2023-12-07/2adults"
-														class="FNY6 FNY6-pres-quarter FNY6-mod-variant-default FNY6-mod-fluid-stretch FNY6-mod-center FNY6-mod-shape-round FNY6-mod-transition-none"><div
-															role="figure" class="FNY6-image-container">
+													<div role="group" aria-label="8개 중 1번째 항목">
+														<a
+															href="http://localhost/HCYHotel/user/hotel/hotelInfo/user_hotel_info.do?hotelcode=${recommend.hotelcode}"
+															class="FNY6 FNY6-pres-quarter FNY6-mod-variant-default FNY6-mod-fluid-stretch FNY6-mod-center FNY6-mod-shape-round FNY6-mod-transition-none"><div
+																role="figure" class="FNY6-image-container">
+																<div
+																	class="ATNn FNY6-image FNY6-mod-image-position-center"
+																	aria-label="스위트 호텔 경주"
+																	style="background-image: url(&quot;/HCYHotel/common/business/img/${fn:split(recommend.filename,'.jpg')[0]}.jpg&quot;);"></div>
+																<div class="FNY6-label-container"></div>
+															</div>
 															<div
-																class="ATNn FNY6-image FNY6-mod-image-position-center"
-																aria-label="켄싱턴리조트 경주"
-																style="background-image: url(&quot;/rimg/himg/56/a9/9f/revato-386567-22163534-762350.jpg?xhint=1440&amp;yhint=843&quot;);"></div>
-														</div>
-														<div
-															class="FNY6-content FNY6-mod-content-background-default">
-															<h5 class="FNY6-title">켄싱턴리조트 경주</h5>
+																class="FNY6-content FNY6-mod-content-background-default">
+																<h5 class="FNY6-title">${recommend.hotelname}</h5>
+																<div class="esgW"></div>
+															</div> </a>
+													</div>
 
-														</div></a>
-												</div>
-												<div role="group" aria-label="8개 중 5번째 항목">
-													<a
-														href="https://www.hotelscombined.co.kr/hotels/%EA%B2%BD%EC%A3%BC%2C%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD-c43930-h2147651/2023-12-06/2023-12-07/2adults"
-														class="FNY6 FNY6-pres-quarter FNY6-mod-variant-default FNY6-mod-fluid-stretch FNY6-mod-center FNY6-mod-shape-round FNY6-mod-transition-none"><div
-															role="figure" class="FNY6-image-container">
-															<div
-																class="ATNn ATNn-hidden FNY6-image FNY6-mod-image-position-center"
-																aria-label="경주 나무 게스트하우스"></div>
-															<div
-																class="l6Lz l6Lz-mod-spacing-none l6Lz-mod-border-radius-none FNY6-image-placeholder"></div>
-															<div class="FNY6-label-container">
-																<div>
-																	<div
-																		class="ZGc- ZGc--mod-margin-left-xxsmall ZGc--mod-theme-default ZGc--mod-variant-neutral ZGc--mod-layout-inline ZGc--mod-padding-default ZGc--mod-size-default ZGc--mod-bold-text ZGc--mod-nowrap"
-																		tabindex="0">무료 취소</div>
-																</div>
-															</div>
-														</div>
-														<div
-															class="FNY6-content FNY6-mod-content-background-default">
-															<h5 class="FNY6-title">경주 나무 게스트하우스</h5>
-															<div class="esgW">
-																<div class="esgW-content">
-																	<div class="esgW-stars-holder esgW-mod-inlined">
-																		<div class="O3Yc O3Yc-sp-compact" role="img"
-																			aria-label="2성급">
-																			<span class="O3Yc-star O3Yc-mod-app-content-active"
-																				style="width: 12px; height: 12px;"><span
-																				class="O3Yc-circle"></span></span><span
-																				class="O3Yc-star O3Yc-mod-app-content-active"
-																				style="width: 12px; height: 12px;"><span
-																				class="O3Yc-circle"></span></span>
-																		</div>
-																	</div>
-																	<div>좋음 7.8</div>
-																</div>
-																<div class="esgW-price-holder">
-																	<div class="esgW-price">62,700원</div>
-																</div>
-															</div>
-														</div></a>
-												</div>
-												<div role="group" aria-label="8개 중 6번째 항목">
-													<a
-														href="https://www.hotelscombined.co.kr/hotels/%EA%B2%BD%EC%A3%BC%2C%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD-c43930-h359984/2023-12-06/2023-12-07/2adults"
-														class="FNY6 FNY6-pres-quarter FNY6-mod-variant-default FNY6-mod-fluid-stretch FNY6-mod-center FNY6-mod-shape-round FNY6-mod-transition-none"><div
-															role="figure" class="FNY6-image-container">
-															<div
-																class="ATNn ATNn-hidden FNY6-image FNY6-mod-image-position-center"
-																aria-label="코모도 호텔 경주"></div>
-															<div
-																class="l6Lz l6Lz-mod-spacing-none l6Lz-mod-border-radius-none FNY6-image-placeholder"></div>
-															<div class="FNY6-label-container">
-																<div>
-																	<div
-																		class="ZGc- ZGc--mod-margin-left-xxsmall ZGc--mod-theme-default ZGc--mod-variant-neutral ZGc--mod-layout-inline ZGc--mod-padding-default ZGc--mod-size-default ZGc--mod-bold-text ZGc--mod-nowrap"
-																		tabindex="0">무료 취소</div>
-																</div>
-															</div>
-														</div>
-														<div
-															class="FNY6-content FNY6-mod-content-background-default">
-															<h5 class="FNY6-title">코모도 호텔 경주</h5>
-															<div class="esgW">
-																<div class="esgW-content">
-																	<div class="esgW-stars-holder esgW-mod-inlined">
-																		<div class="O3Yc O3Yc-sp-compact" role="img"
-																			aria-label="4성급">
-																			<span class="O3Yc-star O3Yc-mod-app-content-active"
-																				style="width: 12px; height: 12px;"><span
-																				style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg
-																						viewBox="0 0 200 200" width="100%" height="100%"
-																						xmlns="http://www.w3.org/2000/svg" role="img"
-																						style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
-																						<path
-																							d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span
-																				class="O3Yc-star O3Yc-mod-app-content-active"
-																				style="width: 12px; height: 12px;"><span
-																				style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg
-																						viewBox="0 0 200 200" width="100%" height="100%"
-																						xmlns="http://www.w3.org/2000/svg" role="img"
-																						style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
-																						<path
-																							d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span
-																				class="O3Yc-star O3Yc-mod-app-content-active"
-																				style="width: 12px; height: 12px;"><span
-																				style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg
-																						viewBox="0 0 200 200" width="100%" height="100%"
-																						xmlns="http://www.w3.org/2000/svg" role="img"
-																						style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
-																						<path
-																							d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span
-																				class="O3Yc-star O3Yc-mod-app-content-active"
-																				style="width: 12px; height: 12px;"><span
-																				style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg
-																						viewBox="0 0 200 200" width="100%" height="100%"
-																						xmlns="http://www.w3.org/2000/svg" role="img"
-																						style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
-																						<path
-																							d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span>
-																		</div>
-																	</div>
-																	<div>좋음 7.6</div>
-																	<div>신평동</div>
-																</div>
-																<div class="esgW-price-holder">
-																	<div class="esgW-price">108,933원</div>
-																</div>
-															</div>
-														</div></a>
-												</div>
-												<div role="group" aria-label="8개 중 7번째 항목">
-													<a
-														href="https://www.hotelscombined.co.kr/hotels/%EA%B2%BD%EC%A3%BC%2C%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD-c43930-h447223/2023-12-06/2023-12-07/2adults"
-														class="FNY6 FNY6-pres-quarter FNY6-mod-variant-default FNY6-mod-fluid-stretch FNY6-mod-center FNY6-mod-shape-round FNY6-mod-transition-none"><div
-															role="figure" class="FNY6-image-container">
-															<div
-																class="ATNn ATNn-hidden FNY6-image FNY6-mod-image-position-center"
-																aria-label="베니키아 스위스로젠 호텔"></div>
-															<div
-																class="l6Lz l6Lz-mod-spacing-none l6Lz-mod-border-radius-none FNY6-image-placeholder"></div>
-															<div class="FNY6-label-container">
-																<div>
-																	<div
-																		class="ZGc- ZGc--mod-margin-left-xxsmall ZGc--mod-theme-default ZGc--mod-variant-neutral ZGc--mod-layout-inline ZGc--mod-padding-default ZGc--mod-size-default ZGc--mod-bold-text ZGc--mod-nowrap"
-																		tabindex="0">무료 취소</div>
-																</div>
-															</div>
-														</div>
-														<div
-															class="FNY6-content FNY6-mod-content-background-default">
-															<h5 class="FNY6-title">베니키아 스위스로젠 호텔</h5>
-															<div class="esgW">
-																<div class="esgW-content">
-																	<div class="esgW-stars-holder esgW-mod-inlined">
-																		<div class="O3Yc O3Yc-sp-compact" role="img"
-																			aria-label="3성급">
-																			<span class="O3Yc-star O3Yc-mod-app-content-active"
-																				style="width: 12px; height: 12px;"><span
-																				style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg
-																						viewBox="0 0 200 200" width="100%" height="100%"
-																						xmlns="http://www.w3.org/2000/svg" role="img"
-																						style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
-																						<path
-																							d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span
-																				class="O3Yc-star O3Yc-mod-app-content-active"
-																				style="width: 12px; height: 12px;"><span
-																				style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg
-																						viewBox="0 0 200 200" width="100%" height="100%"
-																						xmlns="http://www.w3.org/2000/svg" role="img"
-																						style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
-																						<path
-																							d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span
-																				class="O3Yc-star O3Yc-mod-app-content-active"
-																				style="width: 12px; height: 12px;"><span
-																				style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg
-																						viewBox="0 0 200 200" width="100%" height="100%"
-																						xmlns="http://www.w3.org/2000/svg" role="img"
-																						style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
-																						<path
-																							d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span>
-																		</div>
-																	</div>
-																	<div>좋음 7.7</div>
-																	<div>신평동</div>
-																</div>
-																<div class="esgW-price-holder">
-																	<div class="esgW-price">73,336원</div>
-																</div>
-															</div>
-														</div></a>
-												</div>
-												<div role="group" aria-label="8개 중 8번째 항목">
-													<a
-														href="https://www.hotelscombined.co.kr/hotels/%EA%B2%BD%EC%A3%BC%2C%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD-c43930-h76544/2023-12-06/2023-12-07/2adults"
-														class="FNY6 FNY6-pres-quarter FNY6-mod-variant-default FNY6-mod-fluid-stretch FNY6-mod-center FNY6-mod-shape-round FNY6-mod-transition-none"><div
-															role="figure" class="FNY6-image-container">
-															<div
-																class="ATNn ATNn-hidden FNY6-image FNY6-mod-image-position-center"
-																aria-label="경주 코오롱 호텔"></div>
-															<div
-																class="l6Lz l6Lz-mod-spacing-none l6Lz-mod-border-radius-none FNY6-image-placeholder"></div>
-															<div class="FNY6-label-container">
-																<div>
-																	<div
-																		class="ZGc- ZGc--mod-margin-left-xxsmall ZGc--mod-theme-default ZGc--mod-variant-neutral ZGc--mod-layout-inline ZGc--mod-padding-default ZGc--mod-size-default ZGc--mod-bold-text ZGc--mod-nowrap"
-																		tabindex="0">무료 취소</div>
-																</div>
-																<div>
-																	<div
-																		class="ZGc- ZGc--mod-margin-left-xxsmall ZGc--mod-theme-default ZGc--mod-variant-inverted ZGc--mod-layout-inline ZGc--mod-padding-default ZGc--mod-size-default ZGc--mod-bold-text ZGc--mod-nowrap"
-																		tabindex="0">트래블 서스테이너블 프로그램</div>
-																</div>
-															</div>
-														</div>
-														<div
-															class="FNY6-content FNY6-mod-content-background-default">
-															<h5 class="FNY6-title">경주 코오롱 호텔</h5>
-															<div class="esgW">
-																<div class="esgW-content">
-																	<div class="esgW-stars-holder esgW-mod-inlined">
-																		<div class="O3Yc O3Yc-sp-compact" role="img"
-																			aria-label="4성급">
-																			<span class="O3Yc-star O3Yc-mod-app-content-active"
-																				style="width: 12px; height: 12px;"><span
-																				style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg
-																						viewBox="0 0 200 200" width="100%" height="100%"
-																						xmlns="http://www.w3.org/2000/svg" role="img"
-																						style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
-																						<path
-																							d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span
-																				class="O3Yc-star O3Yc-mod-app-content-active"
-																				style="width: 12px; height: 12px;"><span
-																				style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg
-																						viewBox="0 0 200 200" width="100%" height="100%"
-																						xmlns="http://www.w3.org/2000/svg" role="img"
-																						style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
-																						<path
-																							d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span
-																				class="O3Yc-star O3Yc-mod-app-content-active"
-																				style="width: 12px; height: 12px;"><span
-																				style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg
-																						viewBox="0 0 200 200" width="100%" height="100%"
-																						xmlns="http://www.w3.org/2000/svg" role="img"
-																						style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
-																						<path
-																							d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span
-																				class="O3Yc-star O3Yc-mod-app-content-active"
-																				style="width: 12px; height: 12px;"><span
-																				style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg
-																						viewBox="0 0 200 200" width="100%" height="100%"
-																						xmlns="http://www.w3.org/2000/svg" role="img"
-																						style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
-																						<path
-																							d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span>
-																		</div>
-																	</div>
-																	<div>보통 이상 6.7</div>
-																</div>
-																<div class="esgW-price-holder">
-																	<div class="esgW-price">94,455원</div>
-																</div>
-															</div>
-														</div></a>
-												</div>
+												</c:forEach>
+
 											</div>
 										</div>
-										<div role="button" tabindex="0"
-											class="JRE_ JRE_-mod-direction-forward JRE_-mod-size-large JRE_-mod-shape-square JRE_-mod-position-default"
-											aria-label="전송" style="top: 135px;">
-											<svg viewBox="0 0 200 200" width="1.25em" height="1.25em"
-												xmlns="http://www.w3.org/2000/svg" class="JRE_-arrow-svg"
-												role="img">
-												<path
-													d="M79.999 160a5 5 0 0 1-3.698-8.363L123.243 100L76.3 48.363a5 5 0 0 1 7.399-6.727l50 55a5.002 5.002 0 0 1 0 6.727l-50 55a4.986 4.986 0 0 1-3.7 1.637z"></path></svg>
-										</div>
-									</div>
-								</div>
-							</div>
-						</section>
-						<section class="bDbo bDbo-spacing-bottom"
-							data-section-type="API_PROPERTY_TYPES" aria-label="다양한 숙소 둘러보기"
-							role="group">
-							<div class="kml-layout edges-s snap">
-								<header class="KzeV">
-									<div class="KzeV-header">
-										<div class="KzeV-info">
-											<div class="KzeV-title">다양한 숙소 둘러보기</div>
-											<div class="KzeV-description">경주 • 12월 6일 수 - 12월 7일 목</div>
-										</div>
-									
-									</div>
-								</header>
-								<div>
-									<div role="region" tabindex="0"
-										aria-label="다양한 숙소 둘러보기 이미지 슬라이드"
-										class="c-5pd c-5pd-mod-sizing-quarter-wide c-5pd-mod-spacing-xsmall">
-										<div role="button" tabindex="-1" aria-disabled="true"
-											class="JRE_ JRE_-mod-direction-back JRE_-mod-size-large JRE_-mod-shape-square JRE_-mod-position-default JRE_-mod-disabled"
-											aria-label="뒤로" style="top: 135px;">
-											<svg viewBox="0 0 200 200" width="1.25em" height="1.25em"
-												xmlns="http://www.w3.org/2000/svg" class="JRE_-arrow-svg"
-												role="img">
-												<path
-													d="M120.002 160a4.987 4.987 0 0 1-3.702-1.637l-50-55a5 5 0 0 1 0-6.727l50-55a5 5 0 0 1 7.4 6.727L76.757 100l46.943 51.637a5 5 0 0 1-3.698 8.363z"></path></svg>
-										</div>
-										<div class="c-5pd-list">
-											<div class="c-5pd-inner">
-												<div role="group" aria-label="6개 중 1번째 항목">
-													<a
-														href="/hotels/%EA%B2%BD%EC%A3%BC%2C%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD-c43930/2023-12-06/2023-12-07/2adults?fs=property-type%3Dapthotel"
-														class="FNY6 FNY6-pres-quarter FNY6-mod-variant-default FNY6-mod-fluid-stretch FNY6-mod-center FNY6-mod-shape-round FNY6-mod-transition-none"><div
-															role="figure" class="FNY6-image-container">
-															<div
-																class="ATNn FNY6-image FNY6-mod-image-position-center"
-																aria-label="레지던스 호텔"
-																style="background-image: url(&quot;/dimg/propertytypes/APARTHOTEL_shutterstock-portfolio_1086948236.jpg?crop=true&amp;height=624&quot;);"></div>
-														</div>
-														<div
-															class="FNY6-content FNY6-mod-content-background-default">
-															<h5 class="FNY6-title">레지던스 호텔</h5>
-															<div class="esgW">
-																<div class="esgW-content">
-																	<div>71,630원부터</div>
-																</div>
-																<div class="esgW-price-holder"></div>
-															</div>
-														</div></a>
-												</div>
-												<div role="group" aria-label="6개 중 2번째 항목">
-													<a
-														href="/hotels/%EA%B2%BD%EC%A3%BC%2C%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD-c43930/2023-12-06/2023-12-07/2adults?fs=property-type%3Dhostel"
-														class="FNY6 FNY6-pres-quarter FNY6-mod-variant-default FNY6-mod-fluid-stretch FNY6-mod-center FNY6-mod-shape-round FNY6-mod-transition-none"><div
-															role="figure" class="FNY6-image-container">
-															<div
-																class="ATNn FNY6-image FNY6-mod-image-position-center"
-																aria-label="호스텔"
-																style="background-image: url(&quot;/dimg/propertytypes/HOSTEL_shutterstock-portfolio_700242784.jpg?crop=true&amp;height=624&quot;);"></div>
-														</div>
-														<div
-															class="FNY6-content FNY6-mod-content-background-default">
-															<h5 class="FNY6-title">호스텔</h5>
-															<div class="esgW">
-																<div class="esgW-content">
-																	<div>40,000원부터</div>
-																</div>
-																<div class="esgW-price-holder"></div>
-															</div>
-														</div></a>
-												</div>
-												<div role="group" aria-label="6개 중 3번째 항목">
-													<a
-														href="/hotels/%EA%B2%BD%EC%A3%BC%2C%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD-c43930/2023-12-06/2023-12-07/2adults?fs=property-type%3Dpension"
-														class="FNY6 FNY6-pres-quarter FNY6-mod-variant-default FNY6-mod-fluid-stretch FNY6-mod-center FNY6-mod-shape-round FNY6-mod-transition-none"><div
-															role="figure" class="FNY6-image-container">
-															<div
-																class="ATNn FNY6-image FNY6-mod-image-position-center"
-																aria-label="펜션"
-																style="background-image: url(&quot;/dimg/propertytypes/PENSION-GettyImages-1387068363.jpg?crop=true&amp;height=624&quot;);"></div>
-														</div>
-														<div
-															class="FNY6-content FNY6-mod-content-background-default">
-															<h5 class="FNY6-title">펜션</h5>
-															<div class="esgW">
-																<div class="esgW-content">
-																	<div>32,193원부터</div>
-																</div>
-																<div class="esgW-price-holder"></div>
-															</div>
-														</div></a>
-												</div>
-												<div role="group" aria-label="6개 중 4번째 항목">
-													<a
-														href="/hotels/%EA%B2%BD%EC%A3%BC%2C%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD-c43930/2023-12-06/2023-12-07/2adults?fs=property-type%3Dresort"
-														class="FNY6 FNY6-pres-quarter FNY6-mod-variant-default FNY6-mod-fluid-stretch FNY6-mod-center FNY6-mod-shape-round FNY6-mod-transition-none"><div
-															role="figure" class="FNY6-image-container">
-															<div
-																class="ATNn FNY6-image FNY6-mod-image-position-center"
-																aria-label="리조트"
-																style="background-image: url(&quot;/dimg/propertytypes/RESORT_shutterstock-portfolio_796826071.jpg?crop=true&amp;height=624&quot;);"></div>
-														</div>
-														<div
-															class="FNY6-content FNY6-mod-content-background-default">
-															<h5 class="FNY6-title">리조트</h5>
-															<div class="esgW">
-																<div class="esgW-content">
-																	<div>48,093원부터</div>
-																</div>
-																<div class="esgW-price-holder"></div>
-															</div>
-														</div></a>
-												</div>
-												<div role="group" aria-label="6개 중 5번째 항목">
-													<a
-														href="/hotels/%EA%B2%BD%EC%A3%BC%2C%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD-c43930/2023-12-06/2023-12-07/2adults?fs=property-type%3Drental%3Alodge%2Crental%3Acondo%2Crental%3Aapartment%2Crental%3Agite%2Crental%3Ahomestay%2Crental%3Astudio%2Crental%3Acottage%2Crental%3Abungalow%2Crental%3Aholhome%2Crental%3Achateau%2Crental%3Avilla%2Crental%3Acabin%2Crental%3Achalet"
-														class="FNY6 FNY6-pres-quarter FNY6-mod-variant-default FNY6-mod-fluid-stretch FNY6-mod-center FNY6-mod-shape-round FNY6-mod-transition-none"><div
-															role="figure" class="FNY6-image-container">
-															<div
-																class="ATNn ATNn-hidden FNY6-image FNY6-mod-image-position-center"
-																aria-label="단기임대 숙소"></div>
-															<div
-																class="l6Lz l6Lz-mod-spacing-none l6Lz-mod-border-radius-none FNY6-image-placeholder"></div>
-														</div>
-														<div
-															class="FNY6-content FNY6-mod-content-background-default">
-															<h5 class="FNY6-title">단기임대 숙소</h5>
-															<div class="esgW">
-																<div class="esgW-content">
-																	<div>99,000원부터</div>
-																</div>
-																<div class="esgW-price-holder"></div>
-															</div>
-														</div></a>
-												</div>
-												<div role="group" aria-label="6개 중 6번째 항목">
-													<a
-														href="/hotels/%EA%B2%BD%EC%A3%BC%2C%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD-c43930/2023-12-06/2023-12-07/2adults?fs=property-type%3Dguesthouse"
-														class="FNY6 FNY6-pres-quarter FNY6-mod-variant-default FNY6-mod-fluid-stretch FNY6-mod-center FNY6-mod-shape-round FNY6-mod-transition-none"><div
-															role="figure" class="FNY6-image-container">
-															<div
-																class="ATNn ATNn-hidden FNY6-image FNY6-mod-image-position-center"
-																aria-label="게스트하우스"></div>
-															<div
-																class="l6Lz l6Lz-mod-spacing-none l6Lz-mod-border-radius-none FNY6-image-placeholder"></div>
-														</div>
-														<div
-															class="FNY6-content FNY6-mod-content-background-default">
-															<h5 class="FNY6-title">게스트하우스</h5>
-															<div class="esgW">
-																<div class="esgW-content">
-																	<div>38,775원부터</div>
-																</div>
-																<div class="esgW-price-holder"></div>
-															</div>
-														</div></a>
-												</div>
-											</div>
-										</div>
-										<div role="button" tabindex="0"
-											class="JRE_ JRE_-mod-direction-forward JRE_-mod-size-large JRE_-mod-shape-square JRE_-mod-position-default"
-											aria-label="전송" style="top: 135px;">
-											<svg viewBox="0 0 200 200" width="1.25em" height="1.25em"
-												xmlns="http://www.w3.org/2000/svg" class="JRE_-arrow-svg"
-												role="img">
-												<path
-													d="M79.999 160a5 5 0 0 1-3.698-8.363L123.243 100L76.3 48.363a5 5 0 0 1 7.399-6.727l50 55a5.002 5.002 0 0 1 0 6.727l-50 55a4.986 4.986 0 0 1-3.7 1.637z"></path></svg>
-										</div>
+
 									</div>
 								</div>
 							</div>
 						</section>
 
 						<section class="bDbo bDbo-spacing-bottom"
-							data-section-type="API_CURATED_STAYS" aria-label="지금 뜨는 호텔"
+							data-section-type="API_NEARBY_HOTELS" aria-label="경주 인근 숙소"
 							role="group">
 							<div class="kml-layout edges-s snap">
 								<header class="KzeV">
 									<div class="KzeV-header">
 										<div class="KzeV-info">
 											<div class="KzeV-title">지금 뜨는 호텔</div>
+
 										</div>
+
 									</div>
 								</header>
 								<div>
-									<div role="region" tabindex="0" aria-label="지금 뜨는 호텔 이미지 슬라이드"
+									<div role="region" tabindex="0" aria-label="경주 인근 숙소 이미지 슬라이드"
 										class="c-5pd c-5pd-mod-sizing-quarter-wide c-5pd-mod-spacing-xsmall">
 										<div role="button" tabindex="-1" aria-disabled="true"
 											class="JRE_ JRE_-mod-direction-back JRE_-mod-size-large JRE_-mod-shape-square JRE_-mod-position-default JRE_-mod-disabled"
-											aria-label="뒤로" style="top: 135px;">
-											<svg viewBox="0 0 200 200" width="1.25em" height="1.25em"
-												xmlns="http://www.w3.org/2000/svg" class="JRE_-arrow-svg"
-												role="img">
-												<path
-													d="M120.002 160a4.987 4.987 0 0 1-3.702-1.637l-50-55a5 5 0 0 1 0-6.727l50-55a5 5 0 0 1 7.4 6.727L76.757 100l46.943 51.637a5 5 0 0 1-3.698 8.363z"></path></svg>
-										</div>
+											aria-label="뒤로" style="top: 135px;"></div>
 										<div class="c-5pd-list">
 											<div class="c-5pd-inner">
-												<div role="group" aria-label="8개 중 1번째 항목">
-													<a
-														href="https://www.hotelscombined.co.kr/hotels/%EB%A3%A8%ED%94%BC%EB%82%98%2CTO%2C%EC%9D%B4%ED%83%88%EB%A6%AC%EC%95%84-c74264-h378155/2023-12-07/2023-12-08/2adults"
-														class="FNY6 FNY6-pres-quarter FNY6-mod-variant-default FNY6-mod-fluid-stretch FNY6-mod-center FNY6-mod-shape-round FNY6-mod-transition-none"><div
-															role="figure" class="FNY6-image-container">
-															<div
-																class="ATNn FNY6-image FNY6-mod-image-position-center"
-																aria-label="일 페차티노"
-																style="background-image: url(&quot;/rimg/himg/b7/30/e9/expediav2-378155-2ed244-462918.jpg?xhint=540&amp;yhint=333&quot;);"></div>
-														</div>
-														<div
-															class="FNY6-content FNY6-mod-content-background-default">
-															<h5 class="FNY6-title">일 페차티노</h5>
-															<div class="esgW">
-																<div class="esgW-content">
-																	<div>매우 좋음 8.0</div>
-																	<div>루피나, TO, 이탈리아</div>
-																</div>
-																<div class="esgW-price-holder"></div>
+
+												<c:forEach items="${risingList}" var="rising"
+													varStatus="status">
+
+													<div role="group" aria-label="8개 중 1번째 항목">
+														<a
+															href="http://localhost/HCYHotel/user/hotel/hotelInfo/user_hotel_info.do?hotelcode=${rising.hotelcode}"
+															class="FNY6 FNY6-pres-quarter FNY6-mod-variant-default FNY6-mod-fluid-stretch FNY6-mod-center FNY6-mod-shape-round FNY6-mod-transition-none"><div
+																role="figure" class="FNY6-image-container">
+																<div
+																	class="ATNn FNY6-image FNY6-mod-image-position-center"
+																	aria-label="스위트 호텔 경주"
+																	style="background-image: url(&quot;/HCYHotel/common/business/img/${fn:split(rising.filename,'.jpg')[0]}.jpg&quot;);"></div>
+																<div class="FNY6-label-container"></div>
 															</div>
-														</div></a>
-												</div>
-												<div role="group" aria-label="8개 중 2번째 항목">
-													<a
-														href="https://www.hotelscombined.co.kr/hotels/%EB%B6%80%EC%82%B0%2C%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD-c41830-h5313249/2023-12-07/2023-12-08/2adults"
-														class="FNY6 FNY6-pres-quarter FNY6-mod-variant-default FNY6-mod-fluid-stretch FNY6-mod-center FNY6-mod-shape-round FNY6-mod-transition-none"><div
-															role="figure" class="FNY6-image-container">
 															<div
-																class="ATNn FNY6-image FNY6-mod-image-position-center"
-																aria-label="아바니 센트럴 부산"
-																style="background-image: url(&quot;/rimg/himg/64/80/96/revato-3235705-13093032-930215.jpg?xhint=1189&amp;yhint=840&quot;);"></div>
-														</div>
-														<div
-															class="FNY6-content FNY6-mod-content-background-default">
-															<h5 class="FNY6-title">아바니 센트럴 부산</h5>
-															<div class="esgW">
-																<div class="esgW-content">
-																	<div class="esgW-stars-holder esgW-mod-inlined">
-																		<div class="O3Yc O3Yc-sp-compact" role="img"
-																			aria-label="4성급">
-																			<span class="O3Yc-star O3Yc-mod-app-content-active"
-																				style="width: 12px; height: 12px;"><span
-																				style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg
-																						viewBox="0 0 200 200" width="100%" height="100%"
-																						xmlns="http://www.w3.org/2000/svg" role="img"
-																						style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
-																						<path
-																							d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span
-																				class="O3Yc-star O3Yc-mod-app-content-active"
-																				style="width: 12px; height: 12px;"><span
-																				style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg
-																						viewBox="0 0 200 200" width="100%" height="100%"
-																						xmlns="http://www.w3.org/2000/svg" role="img"
-																						style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
-																						<path
-																							d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span
-																				class="O3Yc-star O3Yc-mod-app-content-active"
-																				style="width: 12px; height: 12px;"><span
-																				style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg
-																						viewBox="0 0 200 200" width="100%" height="100%"
-																						xmlns="http://www.w3.org/2000/svg" role="img"
-																						style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
-																						<path
-																							d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span
-																				class="O3Yc-star O3Yc-mod-app-content-active"
-																				style="width: 12px; height: 12px;"><span
-																				style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg
-																						viewBox="0 0 200 200" width="100%" height="100%"
-																						xmlns="http://www.w3.org/2000/svg" role="img"
-																						style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
-																						<path
-																							d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span>
-																		</div>
-																	</div>
-																	<div>매우 좋음 8.8</div>
-																	<div>부산, 대한민국</div>
-																</div>
-																<div class="esgW-price-holder"></div>
-															</div>
-														</div></a>
-												</div>
-												<div role="group" aria-label="8개 중 3번째 항목">
-													<a
-														href="https://www.hotelscombined.co.kr/hotels/%EA%B3%A0%EC%84%B1%2C%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD-c308246-h404022/2023-12-07/2023-12-08/2adults"
-														class="FNY6 FNY6-pres-quarter FNY6-mod-variant-default FNY6-mod-fluid-stretch FNY6-mod-center FNY6-mod-shape-round FNY6-mod-transition-none"><div
-															role="figure" class="FNY6-image-container">
-															<div
-																class="ATNn FNY6-image FNY6-mod-image-position-center"
-																aria-label="델피노"
-																style="background-image: url(&quot;/rimg/himg/80/a3/48/expediav2-404022-c523da-036060.jpg?crop=true&amp;height=624&quot;);"></div>
-														</div>
-														<div
-															class="FNY6-content FNY6-mod-content-background-default">
-															<h5 class="FNY6-title">델피노</h5>
-															<div class="esgW">
-																<div class="esgW-content">
-																	<div class="esgW-stars-holder esgW-mod-inlined">
-																		<div class="O3Yc O3Yc-sp-compact" role="img"
-																			aria-label="4성급">
-																			<span class="O3Yc-star O3Yc-mod-app-content-active"
-																				style="width: 12px; height: 12px;"><span
-																				style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg
-																						viewBox="0 0 200 200" width="100%" height="100%"
-																						xmlns="http://www.w3.org/2000/svg" role="img"
-																						style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
-																						<path
-																							d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span
-																				class="O3Yc-star O3Yc-mod-app-content-active"
-																				style="width: 12px; height: 12px;"><span
-																				style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg
-																						viewBox="0 0 200 200" width="100%" height="100%"
-																						xmlns="http://www.w3.org/2000/svg" role="img"
-																						style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
-																						<path
-																							d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span
-																				class="O3Yc-star O3Yc-mod-app-content-active"
-																				style="width: 12px; height: 12px;"><span
-																				style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg
-																						viewBox="0 0 200 200" width="100%" height="100%"
-																						xmlns="http://www.w3.org/2000/svg" role="img"
-																						style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
-																						<path
-																							d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span
-																				class="O3Yc-star O3Yc-mod-app-content-active"
-																				style="width: 12px; height: 12px;"><span
-																				style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg
-																						viewBox="0 0 200 200" width="100%" height="100%"
-																						xmlns="http://www.w3.org/2000/svg" role="img"
-																						style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
-																						<path
-																							d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span>
-																		</div>
-																	</div>
-																	<div>좋음 7.8</div>
-																	<div>고성, 대한민국</div>
-																</div>
-																<div class="esgW-price-holder"></div>
-															</div>
-														</div></a>
-												</div>
-												<div role="group" aria-label="8개 중 4번째 항목">
-													<a
-														href="https://www.hotelscombined.co.kr/hotels/%EB%B6%80%EC%82%B0%2C%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD-c41830-h2950908/2023-12-07/2023-12-08/2adults"
-														class="FNY6 FNY6-pres-quarter FNY6-mod-variant-default FNY6-mod-fluid-stretch FNY6-mod-center FNY6-mod-shape-round FNY6-mod-transition-none"><div
-															role="figure" class="FNY6-image-container">
-															<div
-																class="ATNn FNY6-image FNY6-mod-image-position-center"
-																aria-label="아난티 힐튼 부산"
-																style="background-image: url(&quot;/rimg/himg/ba/96/af/ice-2950908-99758856-375658.jpg?xhint=1439&amp;yhint=1047&quot;);"></div>
-														</div>
-														<div
-															class="FNY6-content FNY6-mod-content-background-default">
-															<h5 class="FNY6-title">아난티 힐튼 부산</h5>
-															<div class="esgW">
-																<div class="esgW-content">
-																	<div class="esgW-stars-holder esgW-mod-inlined">
-																		<div class="O3Yc O3Yc-sp-compact" role="img"
-																			aria-label="5성급">
-																			<span class="O3Yc-star O3Yc-mod-app-content-active"
-																				style="width: 12px; height: 12px;"><span
-																				style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg
-																						viewBox="0 0 200 200" width="100%" height="100%"
-																						xmlns="http://www.w3.org/2000/svg" role="img"
-																						style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
-																						<path
-																							d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span
-																				class="O3Yc-star O3Yc-mod-app-content-active"
-																				style="width: 12px; height: 12px;"><span
-																				style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg
-																						viewBox="0 0 200 200" width="100%" height="100%"
-																						xmlns="http://www.w3.org/2000/svg" role="img"
-																						style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
-																						<path
-																							d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span
-																				class="O3Yc-star O3Yc-mod-app-content-active"
-																				style="width: 12px; height: 12px;"><span
-																				style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg
-																						viewBox="0 0 200 200" width="100%" height="100%"
-																						xmlns="http://www.w3.org/2000/svg" role="img"
-																						style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
-																						<path
-																							d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span
-																				class="O3Yc-star O3Yc-mod-app-content-active"
-																				style="width: 12px; height: 12px;"><span
-																				style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg
-																						viewBox="0 0 200 200" width="100%" height="100%"
-																						xmlns="http://www.w3.org/2000/svg" role="img"
-																						style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
-																						<path
-																							d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span
-																				class="O3Yc-star O3Yc-mod-app-content-active"
-																				style="width: 12px; height: 12px;"><span
-																				style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg
-																						viewBox="0 0 200 200" width="100%" height="100%"
-																						xmlns="http://www.w3.org/2000/svg" role="img"
-																						style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
-																						<path
-																							d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span>
-																		</div>
-																	</div>
-																	<div>매우 좋음 8.6</div>
-																	<div>부산, 대한민국</div>
-																</div>
-																<div class="esgW-price-holder"></div>
-															</div>
-														</div></a>
-												</div>
-												<div role="group" aria-label="8개 중 5번째 항목">
-													<a
-														href="https://www.hotelscombined.co.kr/hotels/%EC%A0%9C%EC%A3%BC%EC%8B%9C%2C%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD-c32610-h8651584/2023-12-07/2023-12-08/2adults"
-														class="FNY6 FNY6-pres-quarter FNY6-mod-variant-default FNY6-mod-fluid-stretch FNY6-mod-center FNY6-mod-shape-round FNY6-mod-transition-none"><div
-															role="figure" class="FNY6-image-container">
-															<div
-																class="ATNn ATNn-hidden FNY6-image FNY6-mod-image-position-center"
-																aria-label="에코랜드 호텔"></div>
-															<div
-																class="l6Lz l6Lz-mod-spacing-none l6Lz-mod-border-radius-none FNY6-image-placeholder"></div>
-														</div>
-														<div
-															class="FNY6-content FNY6-mod-content-background-default">
-															<h5 class="FNY6-title">에코랜드 호텔</h5>
-															<div class="esgW">
-																<div class="esgW-content">
-																	<div class="esgW-stars-holder esgW-mod-inlined">
-																		<div class="O3Yc O3Yc-sp-compact" role="img"
-																			aria-label="5성급">
-																			<span class="O3Yc-star O3Yc-mod-app-content-active"
-																				style="width: 12px; height: 12px;"><span
-																				style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg
-																						viewBox="0 0 200 200" width="100%" height="100%"
-																						xmlns="http://www.w3.org/2000/svg" role="img"
-																						style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
-																						<path
-																							d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span
-																				class="O3Yc-star O3Yc-mod-app-content-active"
-																				style="width: 12px; height: 12px;"><span
-																				style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg
-																						viewBox="0 0 200 200" width="100%" height="100%"
-																						xmlns="http://www.w3.org/2000/svg" role="img"
-																						style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
-																						<path
-																							d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span
-																				class="O3Yc-star O3Yc-mod-app-content-active"
-																				style="width: 12px; height: 12px;"><span
-																				style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg
-																						viewBox="0 0 200 200" width="100%" height="100%"
-																						xmlns="http://www.w3.org/2000/svg" role="img"
-																						style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
-																						<path
-																							d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span
-																				class="O3Yc-star O3Yc-mod-app-content-active"
-																				style="width: 12px; height: 12px;"><span
-																				style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg
-																						viewBox="0 0 200 200" width="100%" height="100%"
-																						xmlns="http://www.w3.org/2000/svg" role="img"
-																						style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
-																						<path
-																							d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span
-																				class="O3Yc-star O3Yc-mod-app-content-active"
-																				style="width: 12px; height: 12px;"><span
-																				style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg
-																						viewBox="0 0 200 200" width="100%" height="100%"
-																						xmlns="http://www.w3.org/2000/svg" role="img"
-																						style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
-																						<path
-																							d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span>
-																		</div>
-																	</div>
-																	<div>매우 좋음 8.8</div>
-																	<div>제주시, 대한민국</div>
-																</div>
-																<div class="esgW-price-holder"></div>
-															</div>
-														</div></a>
-												</div>
-												<div role="group" aria-label="8개 중 6번째 항목">
-													<a
-														href="https://www.hotelscombined.co.kr/hotels/%EC%96%91%EC%96%91%2C%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD-c55073-h7586273/2023-12-07/2023-12-08/2adults"
-														class="FNY6 FNY6-pres-quarter FNY6-mod-variant-default FNY6-mod-fluid-stretch FNY6-mod-center FNY6-mod-shape-round FNY6-mod-transition-none"><div
-															role="figure" class="FNY6-image-container">
-															<div
-																class="ATNn ATNn-hidden FNY6-image FNY6-mod-image-position-center"
-																aria-label="센텀마크 호텔 양양"></div>
-															<div
-																class="l6Lz l6Lz-mod-spacing-none l6Lz-mod-border-radius-none FNY6-image-placeholder"></div>
-														</div>
-														<div
-															class="FNY6-content FNY6-mod-content-background-default">
-															<h5 class="FNY6-title">센텀마크 호텔 양양</h5>
-															<div class="esgW">
-																<div class="esgW-content">
-																	<div class="esgW-stars-holder esgW-mod-inlined">
-																		<div class="O3Yc O3Yc-sp-compact" role="img"
-																			aria-label="2성급">
-																			<span class="O3Yc-star O3Yc-mod-app-content-active"
-																				style="width: 12px; height: 12px;"><span
-																				class="O3Yc-circle"></span></span><span
-																				class="O3Yc-star O3Yc-mod-app-content-active"
-																				style="width: 12px; height: 12px;"><span
-																				class="O3Yc-circle"></span></span>
-																		</div>
-																	</div>
-																	<div>매우 좋음 8.2</div>
-																	<div>양양, 대한민국</div>
-																</div>
-																<div class="esgW-price-holder"></div>
-															</div>
-														</div></a>
-												</div>
-												<div role="group" aria-label="8개 중 7번째 항목">
-													<a
-														href="https://www.hotelscombined.co.kr/hotels/%EA%B0%95%EB%A6%89%2C%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD-c52588-h4201966/2023-12-07/2023-12-08/2adults"
-														class="FNY6 FNY6-pres-quarter FNY6-mod-variant-default FNY6-mod-fluid-stretch FNY6-mod-center FNY6-mod-shape-round FNY6-mod-transition-none"><div
-															role="figure" class="FNY6-image-container">
-															<div
-																class="ATNn ATNn-hidden FNY6-image FNY6-mod-image-position-center"
-																aria-label="강릉 씨티 호텔"></div>
-															<div
-																class="l6Lz l6Lz-mod-spacing-none l6Lz-mod-border-radius-none FNY6-image-placeholder"></div>
-														</div>
-														<div
-															class="FNY6-content FNY6-mod-content-background-default">
-															<h5 class="FNY6-title">강릉 씨티 호텔</h5>
-															<div class="esgW">
-																<div class="esgW-content">
-																	<div class="esgW-stars-holder esgW-mod-inlined">
-																		<div class="O3Yc O3Yc-sp-compact" role="img"
-																			aria-label="3성급">
-																			<span class="O3Yc-star O3Yc-mod-app-content-active"
-																				style="width: 12px; height: 12px;"><span
-																				class="O3Yc-circle"></span></span><span
-																				class="O3Yc-star O3Yc-mod-app-content-active"
-																				style="width: 12px; height: 12px;"><span
-																				class="O3Yc-circle"></span></span><span
-																				class="O3Yc-star O3Yc-mod-app-content-active"
-																				style="width: 12px; height: 12px;"><span
-																				class="O3Yc-circle"></span></span>
-																		</div>
-																	</div>
-																	<div>매우 좋음 8.5</div>
-																	<div>강릉, 대한민국</div>
-																</div>
-																<div class="esgW-price-holder"></div>
-															</div>
-														</div></a>
-												</div>
-												<div role="group" aria-label="8개 중 8번째 항목">
-													<a
-														href="https://www.hotelscombined.co.kr/hotels/%EB%B0%A9%EC%BD%95%2C%ED%83%9C%EA%B5%AD-c26166-h5948637/2023-12-07/2023-12-08/2adults"
-														class="FNY6 FNY6-pres-quarter FNY6-mod-variant-default FNY6-mod-fluid-stretch FNY6-mod-center FNY6-mod-shape-round FNY6-mod-transition-none"><div
-															role="figure" class="FNY6-image-container">
-															<div
-																class="ATNn ATNn-hidden FNY6-image FNY6-mod-image-position-center"
-																aria-label="칼튼 호텔 방콕 수쿰윗"></div>
-															<div
-																class="l6Lz l6Lz-mod-spacing-none l6Lz-mod-border-radius-none FNY6-image-placeholder"></div>
-														</div>
-														<div
-															class="FNY6-content FNY6-mod-content-background-default">
-															<h5 class="FNY6-title">칼튼 호텔 방콕 수쿰윗</h5>
-															<div class="esgW">
-																<div class="esgW-content">
-																	<div class="esgW-stars-holder esgW-mod-inlined">
-																		<div class="O3Yc O3Yc-sp-compact" role="img"
-																			aria-label="5성급">
-																			<span class="O3Yc-star O3Yc-mod-app-content-active"
-																				style="width: 12px; height: 12px;"><span
-																				style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg
-																						viewBox="0 0 200 200" width="100%" height="100%"
-																						xmlns="http://www.w3.org/2000/svg" role="img"
-																						style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
-																						<path
-																							d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span
-																				class="O3Yc-star O3Yc-mod-app-content-active"
-																				style="width: 12px; height: 12px;"><span
-																				style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg
-																						viewBox="0 0 200 200" width="100%" height="100%"
-																						xmlns="http://www.w3.org/2000/svg" role="img"
-																						style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
-																						<path
-																							d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span
-																				class="O3Yc-star O3Yc-mod-app-content-active"
-																				style="width: 12px; height: 12px;"><span
-																				style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg
-																						viewBox="0 0 200 200" width="100%" height="100%"
-																						xmlns="http://www.w3.org/2000/svg" role="img"
-																						style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
-																						<path
-																							d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span
-																				class="O3Yc-star O3Yc-mod-app-content-active"
-																				style="width: 12px; height: 12px;"><span
-																				style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg
-																						viewBox="0 0 200 200" width="100%" height="100%"
-																						xmlns="http://www.w3.org/2000/svg" role="img"
-																						style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
-																						<path
-																							d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span
-																				class="O3Yc-star O3Yc-mod-app-content-active"
-																				style="width: 12px; height: 12px;"><span
-																				style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg
-																						viewBox="0 0 200 200" width="100%" height="100%"
-																						xmlns="http://www.w3.org/2000/svg" role="img"
-																						style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
-																						<path
-																							d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span>
-																		</div>
-																	</div>
-																	<div>훌륭함 9.3</div>
-																	<div>방콕, 태국</div>
-																</div>
-																<div class="esgW-price-holder"></div>
-															</div>
-														</div></a>
-												</div>
+																class="FNY6-content FNY6-mod-content-background-default">
+																<h5 class="FNY6-title">${rising.hotelname}</h5>
+																<div class="esgW"></div>
+															</div> </a>
+													</div>
+
+												</c:forEach>
+
 											</div>
 										</div>
-										<div role="button" tabindex="0"
-											class="JRE_ JRE_-mod-direction-forward JRE_-mod-size-large JRE_-mod-shape-square JRE_-mod-position-default"
-											aria-label="전송" style="top: 135px;">
-											<svg viewBox="0 0 200 200" width="1.25em" height="1.25em"
-												xmlns="http://www.w3.org/2000/svg" class="JRE_-arrow-svg"
-												role="img">
-												<path
-													d="M79.999 160a5 5 0 0 1-3.698-8.363L123.243 100L76.3 48.363a5 5 0 0 1 7.399-6.727l50 55a5.002 5.002 0 0 1 0 6.727l-50 55a4.986 4.986 0 0 1-3.7 1.637z"></path></svg>
-										</div>
+
 									</div>
 								</div>
 							</div>
 						</section>
 
-
-
 						<section class="bDbo bDbo-spacing-bottom"
-							data-section-type="API_TRENDING_DESTINATIONS_HOTELS"
-							aria-label="인기 여행지 상위 8곳" role="group">
+							data-section-type="API_NEARBY_HOTELS" aria-label="경주 인근 숙소"
+							role="group">
 							<div class="kml-layout edges-s snap">
 								<header class="KzeV">
 									<div class="KzeV-header">
 										<div class="KzeV-info">
-											<div class="KzeV-title">인기 여행지 상위 8곳</div>
-											<div class="KzeV-description">다른 사용자들이 많이 찾는 상품을
-												확인해보세요.</div>
+											<div class="KzeV-title">인기 여행지 호텔</div>
+
 										</div>
+
 									</div>
 								</header>
 								<div>
-									<div role="region" tabindex="0"
-										aria-label="인기 여행지 상위 8곳 이미지 슬라이드"
-										class="c-5pd c-5pd-mod-sizing-half c-5pd-mod-spacing-xsmall">
+									<div role="region" tabindex="0" aria-label="경주 인근 숙소 이미지 슬라이드"
+										class="c-5pd c-5pd-mod-sizing-quarter-wide c-5pd-mod-spacing-xsmall">
 										<div role="button" tabindex="-1" aria-disabled="true"
 											class="JRE_ JRE_-mod-direction-back JRE_-mod-size-large JRE_-mod-shape-square JRE_-mod-position-default JRE_-mod-disabled"
-											aria-label="뒤로" style="top: 183.5px;">
-											<svg viewBox="0 0 200 200" width="1.25em" height="1.25em"
-												xmlns="http://www.w3.org/2000/svg" class="JRE_-arrow-svg"
-												role="img">
-												<path
-													d="M120.002 160a4.987 4.987 0 0 1-3.702-1.637l-50-55a5 5 0 0 1 0-6.727l50-55a5 5 0 0 1 7.4 6.727L76.757 100l46.943 51.637a5 5 0 0 1-3.698 8.363z"></path></svg>
-										</div>
+											aria-label="뒤로" style="top: 135px;"></div>
 										<div class="c-5pd-list">
 											<div class="c-5pd-inner">
-												<div role="group" aria-label="8개 중 1번째 항목">
-													<a
-														href="/hotels/%EC%84%9C%EC%9A%B8%2C%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD-c35982/2023-12-06/2023-12-07/2adults"
-														class="FNY6 FNY6-pres-half FNY6-mod-variant-default FNY6-mod-fluid-stretch FNY6-mod-center FNY6-mod-shape-round FNY6-mod-transition-none"><div
-															role="figure" class="FNY6-image-container">
-															<div
-																class="ATNn FNY6-image FNY6-mod-image-position-center"
-																aria-label="서울, 대한민국"
-																style="background-image: url(&quot;/rimg/dimg/30/0c/6318617a-city-35982-163ff913019.jpg?crop=true&amp;height=734&quot;);"></div>
-														</div>
-														<div
-															class="FNY6-content FNY6-mod-content-background-default">
-															<h5 class="FNY6-title">서울, 대한민국</h5>
-															<div class="esgW">
-																<div class="esgW-content"></div>
-																<div class="esgW-price-holder"></div>
+
+												<c:forEach items="${hotList}" var="hot" varStatus="status">
+
+													<div role="group" aria-label="8개 중 1번째 항목">
+														<a
+															href="http://localhost/HCYHotel/user/hotel/hotelInfo/user_hotel_info.do?hotelcode=${hot.hotelcode}"
+															class="FNY6 FNY6-pres-quarter FNY6-mod-variant-default FNY6-mod-fluid-stretch FNY6-mod-center FNY6-mod-shape-round FNY6-mod-transition-none"><div
+																role="figure" class="FNY6-image-container">
+																<div
+																	class="ATNn FNY6-image FNY6-mod-image-position-center"
+																	aria-label="스위트 호텔 경주"
+																	style="background-image: url(&quot;/HCYHotel/common/business/img/${fn:split(hot.filename,'.jpg')[0]}.jpg&quot;);"></div>
+																<div class="FNY6-label-container"></div>
 															</div>
-														</div></a>
-												</div>
-												<div role="group" aria-label="8개 중 2번째 항목">
-													<a
-														href="/hotels/%EB%B6%80%EC%82%B0%2C%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD-c41830/2023-12-06/2023-12-07/2adults"
-														class="FNY6 FNY6-pres-half FNY6-mod-variant-default FNY6-mod-fluid-stretch FNY6-mod-center FNY6-mod-shape-round FNY6-mod-transition-none"><div
-															role="figure" class="FNY6-image-container">
 															<div
-																class="ATNn FNY6-image FNY6-mod-image-position-center"
-																aria-label="부산, 대한민국"
-																style="background-image: url(&quot;/rimg/dimg/30/6e/8bdba93d-city-41830-172044905bc.jpg?crop=true&amp;height=734&quot;);"></div>
-														</div>
-														<div
-															class="FNY6-content FNY6-mod-content-background-default">
-															<h5 class="FNY6-title">부산, 대한민국</h5>
-															<div class="esgW">
-																<div class="esgW-content">
-																	<div>숙소 22,282원~</div>
-																</div>
-																<div class="esgW-price-holder"></div>
-															</div>
-														</div></a>
-												</div>
-												<div role="group" aria-label="8개 중 3번째 항목">
-													<a
-														href="/hotels/%EC%A0%9C%EC%A3%BC%EC%8B%9C%2C%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD-c32610/2023-12-06/2023-12-07/2adults"
-														class="FNY6 FNY6-pres-half FNY6-mod-variant-default FNY6-mod-fluid-stretch FNY6-mod-center FNY6-mod-shape-round FNY6-mod-transition-none"><div
-															role="figure" class="FNY6-image-container">
-															<div
-																class="ATNn ATNn-hidden FNY6-image FNY6-mod-image-position-center"
-																aria-label="제주시, 대한민국"></div>
-															<div
-																class="l6Lz l6Lz-mod-spacing-none l6Lz-mod-border-radius-none FNY6-image-placeholder"></div>
-														</div>
-														<div
-															class="FNY6-content FNY6-mod-content-background-default">
-															<h5 class="FNY6-title">제주시, 대한민국</h5>
-															<div class="esgW">
-																<div class="esgW-content"></div>
-																<div class="esgW-price-holder"></div>
-															</div>
-														</div></a>
-												</div>
-												<div role="group" aria-label="8개 중 4번째 항목">
-													<a
-														href="/hotels/%EA%B0%95%EB%A6%89%2C%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD-c52588/2023-12-06/2023-12-07/2adults"
-														class="FNY6 FNY6-pres-half FNY6-mod-variant-default FNY6-mod-fluid-stretch FNY6-mod-center FNY6-mod-shape-round FNY6-mod-transition-none"><div
-															role="figure" class="FNY6-image-container">
-															<div
-																class="ATNn ATNn-hidden FNY6-image FNY6-mod-image-position-center"
-																aria-label="강릉, 대한민국"></div>
-															<div
-																class="l6Lz l6Lz-mod-spacing-none l6Lz-mod-border-radius-none FNY6-image-placeholder"></div>
-														</div>
-														<div
-															class="FNY6-content FNY6-mod-content-background-default">
-															<h5 class="FNY6-title">강릉, 대한민국</h5>
-															<div class="esgW">
-																<div class="esgW-content"></div>
-																<div class="esgW-price-holder"></div>
-															</div>
-														</div></a>
-												</div>
-												<div role="group" aria-label="8개 중 5번째 항목">
-													<a
-														href="/hotels/%EC%97%AC%EC%88%98%2C%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD-c55089/2023-12-06/2023-12-07/2adults"
-														class="FNY6 FNY6-pres-half FNY6-mod-variant-default FNY6-mod-fluid-stretch FNY6-mod-center FNY6-mod-shape-round FNY6-mod-transition-none"><div
-															role="figure" class="FNY6-image-container">
-															<div
-																class="ATNn ATNn-hidden FNY6-image FNY6-mod-image-position-center"
-																aria-label="여수, 대한민국"></div>
-															<div
-																class="l6Lz l6Lz-mod-spacing-none l6Lz-mod-border-radius-none FNY6-image-placeholder"></div>
-														</div>
-														<div
-															class="FNY6-content FNY6-mod-content-background-default">
-															<h5 class="FNY6-title">여수, 대한민국</h5>
-															<div class="esgW">
-																<div class="esgW-content"></div>
-																<div class="esgW-price-holder"></div>
-															</div>
-														</div></a>
-												</div>
-												<div role="group" aria-label="8개 중 6번째 항목">
-													<a
-														href="/hotels/%EC%86%8D%EC%B4%88%2C%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD-c48734/2023-12-06/2023-12-07/2adults"
-														class="FNY6 FNY6-pres-half FNY6-mod-variant-default FNY6-mod-fluid-stretch FNY6-mod-center FNY6-mod-shape-round FNY6-mod-transition-none"><div
-															role="figure" class="FNY6-image-container">
-															<div
-																class="ATNn ATNn-hidden FNY6-image FNY6-mod-image-position-center"
-																aria-label="속초, 대한민국"></div>
-															<div
-																class="l6Lz l6Lz-mod-spacing-none l6Lz-mod-border-radius-none FNY6-image-placeholder"></div>
-														</div>
-														<div
-															class="FNY6-content FNY6-mod-content-background-default">
-															<h5 class="FNY6-title">속초, 대한민국</h5>
-															<div class="esgW">
-																<div class="esgW-content"></div>
-																<div class="esgW-price-holder"></div>
-															</div>
-														</div></a>
-												</div>
-												<div role="group" aria-label="8개 중 7번째 항목">
-													<a
-														href="/hotels/%EC%84%9C%EA%B7%80%ED%8F%AC%EC%8B%9C%2C%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD-c48541/2023-12-06/2023-12-07/2adults"
-														class="FNY6 FNY6-pres-half FNY6-mod-variant-default FNY6-mod-fluid-stretch FNY6-mod-center FNY6-mod-shape-round FNY6-mod-transition-none"><div
-															role="figure" class="FNY6-image-container">
-															<div
-																class="ATNn ATNn-hidden FNY6-image FNY6-mod-image-position-center"
-																aria-label="서귀포시, 대한민국"></div>
-															<div
-																class="l6Lz l6Lz-mod-spacing-none l6Lz-mod-border-radius-none FNY6-image-placeholder"></div>
-														</div>
-														<div
-															class="FNY6-content FNY6-mod-content-background-default">
-															<h5 class="FNY6-title">서귀포시, 대한민국</h5>
-															<div class="esgW">
-																<div class="esgW-content">
-																	<div>숙소 23,688원~</div>
-																</div>
-																<div class="esgW-price-holder"></div>
-															</div>
-														</div></a>
-												</div>
-												<div role="group" aria-label="8개 중 8번째 항목">
-													<a
-														href="/hotels/%EA%B2%BD%EC%A3%BC%2C%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD-c43930/2023-12-06/2023-12-07/2adults"
-														class="FNY6 FNY6-pres-half FNY6-mod-variant-default FNY6-mod-fluid-stretch FNY6-mod-center FNY6-mod-shape-round FNY6-mod-transition-none"><div
-															role="figure" class="FNY6-image-container">
-															<div
-																class="ATNn ATNn-hidden FNY6-image FNY6-mod-image-position-center"
-																aria-label="경주, 대한민국"></div>
-															<div
-																class="l6Lz l6Lz-mod-spacing-none l6Lz-mod-border-radius-none FNY6-image-placeholder"></div>
-														</div>
-														<div
-															class="FNY6-content FNY6-mod-content-background-default">
-															<h5 class="FNY6-title">경주, 대한민국</h5>
-															<div class="esgW">
-																<div class="esgW-content"></div>
-																<div class="esgW-price-holder"></div>
-															</div>
-														</div></a>
-												</div>
+																class="FNY6-content FNY6-mod-content-background-default">
+																<h5 class="FNY6-title">${hot.hotelname}</h5>
+																<div class="esgW"></div>
+															</div> </a>
+													</div>
+
+												</c:forEach>
+
 											</div>
 										</div>
-										<div role="button" tabindex="0"
-											class="JRE_ JRE_-mod-direction-forward JRE_-mod-size-large JRE_-mod-shape-square JRE_-mod-position-default"
-											aria-label="전송" style="top: 183.5px;">
-											<svg viewBox="0 0 200 200" width="1.25em" height="1.25em"
-												xmlns="http://www.w3.org/2000/svg" class="JRE_-arrow-svg"
-												role="img">
-												<path
-													d="M79.999 160a5 5 0 0 1-3.698-8.363L123.243 100L76.3 48.363a5 5 0 0 1 7.399-6.727l50 55a5.002 5.002 0 0 1 0 6.727l-50 55a4.986 4.986 0 0 1-3.7 1.637z"></path></svg>
-										</div>
+
 									</div>
 								</div>
 							</div>
 						</section>
+
+
+
+
+
+
+
 
 					</div>
 					<div class="EoVr-search-form-dialog-wrapper">
@@ -3101,10 +2206,10 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 				</main>
 			</div>
 			<!-- footer -->
-			<jsp:include page="../include/footer.jsp"/>
-			
-			
-			
+			<jsp:include page="../include/footer.jsp" />
+
+
+
 		</div>
 	</div>
 	<link rel="stylesheet" type="text/css"
@@ -3145,7 +2250,8 @@ l.context.add('pageId', "frontdoor");
 	<script
 		src="https://content.r9cdn.net/res/combined.js?v=762eaee90130ea5bc4f9319200094278b30e8ace-14pre-flipped&amp;cluster=5&amp;tag=ui/hotels/frontdoor/HotelFrontDoorPage"
 		type="text/javascript" defer=""></script>
-	--><script type="text/javascript">
+	-->
+	<script type="text/javascript">
 window.R9.init = window.R9.init || [];
 window.R9.init.push(function() {
 var perf = window['@r9/perf'];

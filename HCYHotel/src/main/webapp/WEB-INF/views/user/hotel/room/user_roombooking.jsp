@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ page info="회원정보 수정창 _ 가입창에서 긁은거라 뺄거 싹 빼야댐"%>
+<%@ page info=""%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html lang="ko">
 <head>
-<title>회원정보 수정 | HCYCombined</title>
+<title>회원가입 - 사람인에 오신 것을 환영합니다! - 사람인</title>
 <meta name="naver-site-verification"
 	content="86455485e27cab6986d130e4c3b90c5b516820d1">
 <meta name="Description"
@@ -151,9 +151,9 @@
 		</div>
 	</header> --%>
 	<!-- header -->
-	<jsp:include page="../include/header.jsp"/>
+	<jsp:include page="../../include/header.jsp"/>
 	
-   <!--<script>
+  <script>
     $(document).ready(function() {
       $("#frm").submit(function(event) {
         /* var idValue = $("#id").val().trim();
@@ -229,14 +229,15 @@
           $("#msg_cell").hide();
         }
         
-        // 이메일 유효성 검사
-        if (!/^[a-zA-Z]+@[a-zA-Z]+/.test(emailValue)) {
+    	 // 이메일 유효성 검사
+        if (!/^[a-zA-Z0-9]+@[a-zA-Z]+/.test(emailValue)) {
           $("#sms_msg_email1").show();
           event.preventDefault();
           return;
         } else {
           $("#sms_msg_email1").hide();
         }
+
 
         // 전체 동의 및 필수 약관 동의 검사
         if (!agreeAllChecked && (!agree1Checked || !agree2Checked)) {
@@ -323,7 +324,7 @@ $(document).ready(function() {
     });//blur
 });//ready
 
-</script> -->
+</script>
 	
 	
 	<div id="sri_section">
@@ -331,80 +332,102 @@ $(document).ready(function() {
 
 			<div id="join_wrapper" class="join_cont_wrap">
 				<div id="member_personal" class="member_cate">
-					<form name="frm" id="frm" method="post"
-						action="니은user_join.do">
+					<form name="frm" id="frm" method="get"
+						action="user/hotel/room/user_roombooking.do">
 
 						<fieldset>
-
 							<div class="cont_division">
 								<div class="write_base">
 									<!-- 아이디 -->
-									<div class="item">
-										<label for="id"><strong>아이디</strong></label>
+									<div class="item"> 
+										<label for="id"><strong>예약자 성함</strong></label>
 										<div class="TypoBox">
 											<input name="id" id="id" type="text"
 												class="Typo SizeL defalt" maxlength="20"
 												style="ime-mode: disabled" autocapitalize="off"
 												autocomplete="off"
-												placeholder="4~20자리 / 영문, 숫자, 특수문자 '_'사용가능">
+												placeholder="예약자 성함을 입력해주세요">
 										</div>
 										<p class="alert_column focus_txt" id="idFocusMsg"
-											style="display: none">4 ~ 20자의 영문, 숫자와 특수문자 '_'만 사용해주세요.</p>
-										<em class="msgInvalid" id="idCheckMsg1" style="display: none">이미 사용중인 ID입니다.</em>
+											style="display: none">예약자 성함은 한글로 입력해주세요.</p>
+										<em class="msgInvalid" id="idCheckMsg1" style="display: none"></em>
 										<!-- 오류 시 텍스트 -->
 										<p class="alert_column good_txt" id="idCheckMsg2"
-											style="display: none">사용가능한 아이디에요.</p>
+											style="display: none"></p>
 									</div>
 
-									<!-- 비밀번호 -->
+									<!-- 체크인 -->
 									<div class="item">
-										<label for="password"><strong>비밀번호</strong></label>
+										<label for="password"><strong>체크인</strong></label>
 										<div class="TypoBox pass_box">
 					
 											<input autocapitalize="off" name="password"
-												class="Typo SizeL defalt" id="password" type="password"
+												class="Typo SizeL defalt" id="password" type="text"
 												maxlength="16" autocomplete="off"
-												placeholder="8~16자리/영문 대소문자, 숫자, 특수문자 조합">
+												placeholder="체크인 날짜를 입력해주세요">
 											<button type="button" toggle="#password1"
 												id="masking_password" class="toggle_password field_eye on"
 												style="display: none;"></button>
 										</div>
 
 										<p class="alert_column focus_txt" id="password1FocusMsg"
-											style="display: none">8~16자리 영문 대소문자, 숫자, 특수문자 중 3가지 이상
-											조합으로 올바르게 입력하세요</p>
+											style="display: none"></p>
 										<!-- focus 시 텍스트 -->
 										<em class="msgInvalid" id="password1_warning_txt"
-											style="display: none"><span>8~16자리 영문 대소문자, 숫자,
-												특수문자 중 3가지 이상 조합으로 올바르게 입력하세요</span></em>
+											style="display: none"><span></span></em>
+										<p class="alert_column good_txt" id="password1_good_txt"
+											style="display: none"></p>
+										<p class="pass_safety" id="pw_strnegth_level"
+											style="display: none"></p>
+									</div>
+									
+									<!-- 체크아웃 -->
+									<div class="item">
+										<label for="password"><strong>체크아웃</strong></label>
+										<div class="TypoBox pass_box">
+					
+											<input autocapitalize="off" name="password"
+												class="Typo SizeL defalt" id="password" type="text"
+												maxlength="16" autocomplete="off"
+												placeholder="체크아웃 날짜를 입력해주세요">
+											<button type="button" toggle="#password1"
+												id="masking_password" class="toggle_password field_eye on"
+												style="display: none;"></button>
+										</div>
+
+										<p class="alert_column focus_txt" id="password1FocusMsg"
+											style="display: none"></p>
+										<!-- focus 시 텍스트 -->
+										<em class="msgInvalid" id="password1_warning_txt"
+											style="display: none"><span></span></em>
 										<p class="alert_column good_txt" id="password1_good_txt"
 											style="display: none"></p>
 										<p class="pass_safety" id="pw_strnegth_level"
 											style="display: none"></p>
 									</div>
 
-									<!-- 이름 -->
+									<!-- 인원수 -->
 									<div class="item">
-										<label for="name"><strong>이름</strong></label>
+										<label for="name"><strong>인원 수</strong></label>
 										<div class="TypoBox">
 											<input type="text" name="name" id="name"
 												class="Typo SizeL defalt" style="ime-mode: active"
-												autocapitalize="off" placeholder="이름 입력">
+												autocapitalize="off" placeholder="인원 수">
 										</div>
 										<em class="msgInvalid" id="user_nm_msg" name="user_nm_msg"
-											style="display: none">이름을 올바르게 입력하세요</em>
+											style="display: none">인원 수를 올바르게 입력하세요</em>
 									</div>
 
-									<!-- 생년월일 -->
+									<!-- 요청사항 -->
 									<div class="item">
-										<label for="identifier"><strong>생년월일</strong></label>
+										<label for="identifier"><strong>요청사항</strong></label>
 										<div class="TypoBox">
-											<input type="number" name="identifier" id="identifier"
-												maxlength="8" autocapitalize="off" placeholder="YYYYMMDD"
+											<input type="text" name="identifier" id="identifier"
+												maxlength="8" autocapitalize="off" placeholder="요청사항을 입력해주세요"
 												class="Typo SizeL defalt">
 										</div>
 										<em class="msgInvalid" id="cyr_msg" style="display: none">
-											<span>YYYYMMDD 입력 형식을 확인해주세요.</span>
+											<span>요청사항을 입력해주세요</span>
 										</em>
 										<div class="wrap_collection_basis">
 											<button type="button" class="btn_link"
@@ -434,13 +457,22 @@ $(document).ready(function() {
 									<!-- 휴대폰 인증 -->
 
 										<div class="item">
-										<label for="tel"><strong>휴대폰</strong></label>
+										<label for="tel"><strong>옵션사항</strong></label>
 										<div class="TypoBox">
 											<input type="text" name="tel" id="tel"
 												class="Typo SizeL defalt" style="ime-mode: active"
-												autocapitalize="off" placeholder="010-0000-0000">
+												autocapitalize="off" placeholder="조식/10000원">
 										</div>
-												<em class="msgInvalid" id="msg_cell" style="display: none;">잘못된 휴대폰 번호입니다. 휴대폰 번호를 정확하게 입력해주세요.</em>
+												<em class="msgInvalid" id="msg_cell" style="display: none;">옵션사항을 올바르게 기재해주세요.</em>
+									</div>
+										<div class="item">
+										<label for="tel"><strong>카드종류</strong></label>
+										<div class="TypoBox">
+											<input type="text" name="tel" id="tel"
+												class="Typo SizeL defalt" style="ime-mode: active"
+												autocapitalize="off" placeholder="ex)우리은행">
+										</div>
+												<em class="msgInvalid" id="msg_cell" style="display: none;">카드종류를 올바르게 기재해주세요.</em>
 									</div>
 										<!-- <div class="input_collect TypoBox">
 											<input type="hidden" name="sms_confirm_complete" value="n"
@@ -451,14 +483,14 @@ $(document).ready(function() {
 										</div> -->
 										
 								<!-- 휴대폰 인증시 이메일 -->
-									<li class="item identify_phone"><label for="sms_email_id"><strong>이메일</strong></label>
+									<li class="item identify_phone"><label for="sms_email_id"><strong>카드번호</strong></label>
 										<div class="TypoBox">
 											<input type="text" id="sms_email_id" name="email"
 												style="ime-mode: inactive" class="Typo SizeL defalt"
-												placeholder="email@hotel.co.kr">
+												placeholder="0000-0000-0000-0000">
 										</div> <!-- 자동리스트 영역 -->
 										 <em class="msgInvalid" id="sms_msg_email1" name="email"
-										style="display: none">이메일 주소를 입력해주세요.</em>
+										style="display: none">0000-0000-0000-0000</em>
 										<p class="alert_column good_txt" id="msg_email2"
 											style="display: none">인증되었습니다</p>
 										<div class="wrap_collection_basis"></div></li>
@@ -470,76 +502,19 @@ $(document).ready(function() {
 								
 									
 										<em class="msgInvalid" id="mail_msg_email1" name="email"
-											style="display: none">이메일 주소를 입력해주세요.</em>
+											style="display: none">이메일 주소를 입력해주세요.</em> 
 
 									</div>
 
 									
 								</div>
 
-								<!-- 약관 -->
-								<div class="cont_division">
-									<span class="terms_agree"><strong>약관</strong></span>
-									<div class="agree_box">
-										<ul class="agree_article">
-											<li>
-												<div class="InpBox">
-													<span class="Chk SizeL"> <input type="checkbox"
-														class="check_mail" id="agreeAllPersonal"> <label
-														class="check_all check_off Lbl" for="agreeAllPersonal">
-															<strong class="all_agree">전체 동의</strong>
-													</label> <input type="hidden" name="hidden_check_all" value="0"
-														id="hidden_check_all">
-													</span>
-												</div>
-												<p class="agree_txt">위치기반 서비스 이용약관(선택), 마케팅 정보 수신
-													동의(이메일,SMS/MMS)(선택) 동의를 포함합니다.</p>
-											</li>
-										</ul>
-										<ul class="agree_article depth2">
-											<li>
-												<div class="agree_desc">
-													<div class="InpBox">
-														<span class="Chk"> <input type="checkbox"
-															id="agree_rule1"> <label
-															class="Lbl check_custom check_off" for="agree_rule1">
-																<span><strong>(필수) 개인회원 약관에 동의</strong></span>
-														</label>
-														</span>
-
-													</div>
-												</div> <!-- <a href="/zf_user/help/terms-of-service/person"
-												class="view_indetail" target="_blank"> <span
-													class="blind">개인회원 약관 상세보기</span>
-											</a> -->
-											</li>
-											<li>
-												<div class="agree_desc">
-													<div class="InpBox">
-														<span class="Chk"> <input type="checkbox"
-															id="agree_take1"> <label
-															class="Lbl check_custom check_off" for="agree_take1">
-																<span><strong>(필수) 개인정보 수집 및 이용에 동의</strong></span>
-														</label>
-														</span>
-
-													</div>
-												</div> <!-- <a id="popupClausePrivacyPerson"
-												href="/zf_user/popup/privacy-policy?category=person_privacy_req"
-												class="view_indetail popup_clause_open" target="_blank">
-													<span class="blind">개인정보 수집 및 이용에 동의 약관 상세보기</span>
-											</a> -->
-											</li>
-
-										</ul>
-									</div>
-								</div>
 
 								<div class="btn_join">
 									<button type="button" id="btn_submit"
 										class="inp_join BtnType SizeL defalt ga_data_layer btn_input_complete"
 										data-ga_data_layer="ga_lead|member_join|join_pc|step_2"
-										>회원가입 완료</button>
+										>결제</button>
 								</div>
 							</div>
 						</fieldset>

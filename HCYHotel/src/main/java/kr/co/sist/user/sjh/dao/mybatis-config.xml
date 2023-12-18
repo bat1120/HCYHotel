@@ -27,5 +27,8 @@
 <mapper resource="kr/co/sist/user/sjh/mapper/loginMapper.xml"></mapper>
 <mapper resource="kr/co/sist/user/sjh/mapper/joinMapper.xml"></mapper>
 <mapper resource="kr/co/sist/user/sjh/mapper/findIdPassMapper.xml"></mapper>
+<mapper resource="kr/co/sist/user/sjh/mapper/homeMapper.xml"></mapper>
+<mapper resource="kr/co/sist/user/sjh/mapper/hotelSearchMapper.xml"></mapper>
+<mapper resource="kr/co/sist/user/sjh/mapper/roomMapper.xml"></mapper>
   </mappers>
 </configuration>
