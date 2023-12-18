@@ -272,33 +272,16 @@
 													class="blind">개인회원 약관 상세보기</span>
 											</a> -->
 											</li>
-											<li>
-												<div class="agree_desc">
-													<div class="InpBox">
-														<span class="Chk"> <input type="checkbox"
-															id="agree_take1"> <label
-															class="Lbl check_custom check_off" for="agree_take1">
-																<span><strong>(필수) 개인정보 수집 및 이용에 동의</strong></span>
-														</label>
-														</span>
-
-													</div>
-												</div> <!-- <a id="popupClausePrivacyPerson"
-												href="/zf_user/popup/privacy-policy?category=person_privacy_req"
-												class="view_indetail popup_clause_open" target="_blank">
-													<span class="blind">개인정보 수집 및 이용에 동의 약관 상세보기</span>
-											</a> -->
-											</li>
-
+										
 										</ul>
 									</div>
 								</div>
 
-								<div class="btn_join">
+								<div class="submit_btn">
 									<button type="button" id="btn_submit"
 										class="inp_join BtnType SizeL defalt ga_data_layer btn_input_complete"
 										data-ga_data_layer="ga_lead|member_join|join_pc|step_2"
-										>회원가입 완료</button>
+										>정보 수정</button>
 								</div>
 							</div>
 						</fieldset>

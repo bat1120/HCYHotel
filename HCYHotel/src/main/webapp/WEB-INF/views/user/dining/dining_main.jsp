@@ -46,7 +46,7 @@ $(function(){
 										<div class="c-5pd-list">
 											<div class="c-5pd-inner">
 												<div role="group" aria-label="8개 중 1번째 항목">
-													<img src="http://localhost/HCYHotel/WEB-INF/views/user/dining/img/dining_sevensquare.PNG"/>
+ <img src="http://localhost/HCYHotel/WEB-INF/views/user/dining/img/dining_sevensquare.jpg/>
 														<div
 															class="FNY6-content FNY6-mod-content-background-default">
 															<h5 class="FNY6-title">세븐스퀘어</h5>
@@ -55,7 +55,8 @@ $(function(){
 												<div role="group" aria-label="8개 중 2번째 항목">
 													<a
 														href="https://www.hotelscombined.co.kr/hotels/%EB%B6%80%EC%97%AC%2C%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD-c72568-h7231684/2023-12-07/2023-12-14/2adults"
-														class="FNY6 FNY6-pres-quarter FNY6-mod-variant-default FNY6-mod-fluid-stretch FNY6-mod-center FNY6-mod-shape-round FNY6-mod-transition-none"><div
+														class="FNY6 FNY6-pres-quarter FNY6-mod-variant-default FNY6-mod-fluid-stretch FNY6-mod-center FNY6-mod-shape-round FNY6-mod-transition-none">
+														<div
 															role="figure" class="FNY6-image-container">
 															<div
 																class="ATNn FNY6-image FNY6-mod-image-position-center"
