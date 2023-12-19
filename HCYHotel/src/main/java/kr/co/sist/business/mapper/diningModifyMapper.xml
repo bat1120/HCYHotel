@@ -51,4 +51,7 @@ set diningname=#{diningname}
 , description=#{description}
 where diningcode=#{diningcode}
 </update>
+<delete id="deletedining" parameterType="String">
+delete from dining where diningcode=#{diningcode}
+</delete>
 </mapper>

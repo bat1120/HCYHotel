@@ -131,4 +131,10 @@ public class BusinessDiningScheduleModifyController {
 		
 		return "redirect:businessDining.do";
 	}
+	@GetMapping("/BusinessManage/delete_schedule.do")
+	public String deleteSchedule(HttpServletRequest request) {
+		String schedulecode=request.getParameter("schedulecode");
+		BusinessDiningScheduleModifyService.getInstance().deleteSchedule(schedulecode);
+		return "redirect:businessDiningSchedule.do";
+	}
 }

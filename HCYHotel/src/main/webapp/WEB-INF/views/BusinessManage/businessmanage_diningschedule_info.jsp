@@ -1930,6 +1930,10 @@ $(function(){
 	$("#save").click(function(){
 		$("#frm").submit();
 	})
+	var schedulecode=$("#schedulecode").val();
+	$("#delete").click(function(){
+		location.href="delete_schedule.do?schedulecode="+schedulecode;
+	})
 })
 </script>
 
@@ -1967,6 +1971,7 @@ $(function(){
     <div>
     </div>
     <button type="button" class="btn btn-primary" id="save">저장</button>
+    <button type="button" class="btn btn-primary" id="delete">삭제</button>
 </form>
 				
 			

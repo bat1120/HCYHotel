@@ -83,4 +83,10 @@ public class DiningManageDAO {
 		ss.selectOne("kr.co.sist.business.diningModifyMapper.updateDining",duVO);
 		mbh.closeHandler(ss);
 	}
+	 public void deleteDining(String diningcode) {
+		   MyBatiseHandlerBusiness mbh=MyBatiseHandlerBusiness.getInstance();
+		   SqlSession ss=mbh.getMyBatisHandler(true);
+		   ss.delete("kr.co.sist.business.diningModifyMapper.deletedining",diningcode);
+		   mbh.closeHandler(ss);
+	   }
 }

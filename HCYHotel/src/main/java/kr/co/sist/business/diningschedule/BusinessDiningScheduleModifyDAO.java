@@ -58,6 +58,12 @@ public class BusinessDiningScheduleModifyDAO {
 		System.out.println(cnt);
 		mbh.closeHandler(ss);
 	}
+	public void deleteSchedule(String schedulecode) {
+		MyBatiseHandlerBusiness mbh=MyBatiseHandlerBusiness.getInstance();
+		SqlSession ss=mbh.getMyBatisHandler(true);
+		ss.delete("kr.co.sist.business.diningScheduleMapper.deleteSchedule",schedulecode);
+		mbh.closeHandler(ss);
+	}
 //	public static void main(String[] args) {
 //		BusinessDiningScheduleModifyDAO bdsmDAO=new BusinessDiningScheduleModifyDAO();
 //		DiningSearchVO dsVO =new DiningSearchVO();
