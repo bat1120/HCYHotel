@@ -186,14 +186,12 @@
 					</tr>
 				</thead>
 				<tbody>
-				<c:forEach var="qnaList" varStatus="i" items="${ qnaList }">
-					<tr onclick="detail('${ qnaList.questionCode }')">
-						<td><c:out value="${ i.count }"/></td>
-						<td><c:out value="${ qnaList.title }"/></td>
-						<td><c:out value="${ qnaList.id }"/></td>
-						<td><c:out value="${ qnaList.inputDate }"/></td>
+					<tr >
+						<td>1</td>
+						<td>문의1</td>
+						<td>member1</td>
+						<td>2023-12-13</td>
 					</tr>
-				</c:forEach>
 				</tbody>
 			</table>
 			<form id="questionCodeFrm" action="user_qna_detail.do" method="get">

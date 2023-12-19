@@ -27,8 +27,8 @@ $(function(){
 	<li><a href="user/dining/dining_info.do">다이닝 상세</a></li>
 	<li><a href="user/dining/dining_booking.do">다이닝 예약창 으악</a></li>
 	<br>
-	<li><a href="user/review/myreview/mydiningreview_write.do">다이닝리뷰작성해야댐(마페)</a></li>
-	<li><a href="user/review/myreview/myroomreview_write.do">객실리뷰작성해야댐(마페)</a></li>
+	<li><a href="user/mypage/mydiningreview_write.do">다이닝리뷰작성해야댐(마페)</a></li>
+	<li><a href="user/mypage/myroomreview_write.do">객실리뷰작성해야댐(마페)</a></li>
 	<li><a href="user/mypage/modify_info.do">회원정보수정-수정창</a></li>
 
 	

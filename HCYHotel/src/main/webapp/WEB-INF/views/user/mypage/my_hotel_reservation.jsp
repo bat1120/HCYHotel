@@ -125,7 +125,10 @@
 				<td>번호</td>
 				<td>번호</td>
 				<td>번호</td>
-				<td><input type="button" class="btn btn-info btn" id="btn_review" value="리뷰쓰기" /></td>
+				<td>
+				<a href="user/mypage/mydiningreview_write.do">
+				<input type="button" class="btn btn-info btn" id="btn_review" value="리뷰쓰기" />
+				</a></td>
 				</tbody>
 			</table>
 

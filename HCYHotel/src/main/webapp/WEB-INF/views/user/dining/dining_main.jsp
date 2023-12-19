@@ -1656,28 +1656,91 @@ window.onload = function () {
 										<div class="c-5pd-list">
 											<div class="c-5pd-inner">
 
-												<c:forEach items="${recommendList}" var="recommend"
-													varStatus="status">
 
 													<div role="group" aria-label="8개 중 1번째 항목">
 														<a
-															href="http://localhost/HCYHotel/user/hotel/hotelInfo/user_hotel_info.do?hotelcode=${recommend.hotelcode}"
+															href="http://localhost/HCYHotel/user/dining/dining_info.do"
 															class="FNY6 FNY6-pres-quarter FNY6-mod-variant-default FNY6-mod-fluid-stretch FNY6-mod-center FNY6-mod-shape-round FNY6-mod-transition-none"><div
 																role="figure" class="FNY6-image-container">
+																 <div>
+																<img src="http://localhost/HCYHotel/common/business/img/D000042_1.jpg"/>
+																</div> 
 																<div
 																	class="ATNn FNY6-image FNY6-mod-image-position-center"
 																	aria-label="스위트 호텔 경주"
-																	style="background-image: url(&quot;/HCYHotel/common/business/img/${fn:split(recommend.filename,'.jpg')[0]}.jpg&quot;);"></div>
+																	style="background-image: 'http://localhost/HCYHotel/common/business/img/D000042_1.jpg'"></div>
 																<div class="FNY6-label-container"></div>
 															</div>
 															<div
 																class="FNY6-content FNY6-mod-content-background-default">
-																<h5 class="FNY6-title">${recommend.hotelname}</h5>
+																<h5 class="FNY6-title">뇸뇸</h5>
 																<div class="esgW"></div>
 															</div> </a>
 													</div>
+													
+													<div role="group" aria-label="8개 중 2번째 항목">
+														<a
+															href="http://localhost/HCYHotel/user/dining/dining_main.do"
+															class="FNY6 FNY6-pres-quarter FNY6-mod-variant-default FNY6-mod-fluid-stretch FNY6-mod-center FNY6-mod-shape-round FNY6-mod-transition-none"><div
+																role="figure" class="FNY6-image-container">
+																<div>
+																<img src="http://localhost/HCYHotel/common/business/img/D000003.jpg"/>
+																</div>
+																<div
+																	class="ATNn FNY6-image FNY6-mod-image-position-center"
+																	aria-label="스위트 호텔 경주"
+																	style="background-image: 'http://localhost/HCYHotel/common/business/img/D000003.jpg'"></div>
+																<div class="FNY6-label-container"></div>
+															</div>
+															<div
+																class="FNY6-content FNY6-mod-content-background-default">
+																<h5 class="FNY6-title">아리아떼</h5>
+																<div class="esgW"></div>
+															</div> </a>
+													</div>
+													<div role="group" aria-label="8개 중 3번째 항목">
+														<a
+															href="http://localhost/HCYHotel/user/dining/dining_main.do"
+															class="FNY6 FNY6-pres-quarter FNY6-mod-variant-default FNY6-mod-fluid-stretch FNY6-mod-center FNY6-mod-shape-round FNY6-mod-transition-none"><div
+																role="figure" class="FNY6-image-container">
+																<div>
+																<img src="http://localhost/HCYHotel/common/business/img/D000005.jpg"/>
+																</div>
+																<div
+																	class="ATNn FNY6-image FNY6-mod-image-position-center"
+																	aria-label="스위트 호텔 경주"
+																	style="background-image: 'http://localhost/HCYHotel/common/business/img/D000005.jpg'"></div>
+																<div class="FNY6-label-container"></div>
+															</div>
+															<div
+																class="FNY6-content FNY6-mod-content-background-default">
+																<h5 class="FNY6-title">라연</h5>
+																<div class="esgW"></div>
+															</div> </a>
+													</div>
+													<div role="group" aria-label="8개 중 4번째 항목">
+														<a
+															href="http://localhost/HCYHotel/user/dining/dining_main.do"
+															class="FNY6 FNY6-pres-quarter FNY6-mod-variant-default FNY6-mod-fluid-stretch FNY6-mod-center FNY6-mod-shape-round FNY6-mod-transition-none"><div
+																role="figure" class="FNY6-image-container">
+																<div>
+																<img src="http://localhost/HCYHotel/common/business/img/D000004.jpg"/>
+																</div>
+																<div
+																	class="ATNn FNY6-image FNY6-mod-image-position-center"
+																	aria-label="스위트 호텔 경주"
+																	style="background-image: 'http://localhost/HCYHotel/common/business/img/D000004.jpg'"></div>
+																<div class="FNY6-label-container"></div>
+															</div>
+															<div
+																class="FNY6-content FNY6-mod-content-background-default">
+																<h5 class="FNY6-title">화이트</h5>
+																<div class="esgW"></div>
+															</div> </a>
+													</div>
+													
+													
 
-												</c:forEach>
 
 											</div>
 										</div>
@@ -1754,6 +1817,7 @@ window.onload = function () {
 									</div>
 								</header>
 								<div>
+								
 									<div role="region" tabindex="0" aria-label="경주 인근 숙소 이미지 슬라이드"
 										class="c-5pd c-5pd-mod-sizing-quarter-wide c-5pd-mod-spacing-xsmall">
 										<div role="button" tabindex="-1" aria-disabled="true"
@@ -1765,21 +1829,12 @@ window.onload = function () {
 												<c:forEach items="${hotList}" var="hot" varStatus="status">
 
 													<div role="group" aria-label="8개 중 1번째 항목">
-														<a
-															href="http://localhost/HCYHotel/user/hotel/hotelInfo/user_hotel_info.do?hotelcode=${hot.hotelcode}"
-															class="FNY6 FNY6-pres-quarter FNY6-mod-variant-default FNY6-mod-fluid-stretch FNY6-mod-center FNY6-mod-shape-round FNY6-mod-transition-none"><div
-																role="figure" class="FNY6-image-container">
-																<div
-																	class="ATNn FNY6-image FNY6-mod-image-position-center"
-																	aria-label="스위트 호텔 경주"
-																	style="background-image: url(&quot;/HCYHotel/common/business/img/${fn:split(hot.filename,'.jpg')[0]}.jpg&quot;);"></div>
-																<div class="FNY6-label-container"></div>
-															</div>
+													
 															<div
 																class="FNY6-content FNY6-mod-content-background-default">
-																<h5 class="FNY6-title">${hot.hotelname}</h5>
+																<h5 class="FNY6-title">뇸뇸</h5>
 																<div class="esgW"></div>
-															</div> </a>
+															</div> 
 													</div>
 
 												</c:forEach>
