@@ -7,22 +7,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class MyHotelReservationController {
 
-	@GetMapping("user/mypage/myhotelreservation.do")
+	@GetMapping("/user/mypage/myhotelreservation.do")
 	public String goHotelreservation( /* Model model */ ) {
 		
-		return "user/mypage/my_hotel_reservation";
+		return "/user/mypage/my_hotel_reservation";
 	}//myHotelReviewList
 	
-	@GetMapping("user/review/myreview/myhotelreview_list.do")
-	public String goHotelReview( Model model ) {
-		
-		return "user/review/myreview/myhotelreview_list";
-	}//myHotelReviewWrite
+	
 
-	@GetMapping("user/review/myreview/myhotelreview_write.do")
+	@GetMapping("/user/mypage/myroomreview_write.do")
 	public String writeHotelReview() {
 		
-		return "user/review/myreview/myhotelreview_write";
+		return "/user/mypage/myroomreview_write";
 	}//myHotelReviewWrite
 	
 }

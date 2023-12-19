@@ -245,7 +245,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             
                         </div>
                        
-                         <input type="button" value="문의등록" class="btn btn-primary" style="margin-left:340px; " id="btn_write"/>
+                         <input type="button" value="후기등록" class="btn btn-primary" style="margin-left:340px; " id="btn_write"/>
                          <input type="button" value="취소" class="btn btn-dark" style="margin-left: 450px" id="btn_backtolist"/>
                          
                     </form>

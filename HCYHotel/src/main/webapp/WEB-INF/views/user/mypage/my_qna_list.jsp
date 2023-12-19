@@ -188,9 +188,39 @@
 				<tbody>
 					<tr >
 						<td>1</td>
-						<td>문의1</td>
-						<td>member1</td>
+						<td><a href="my_qna_detail.do">문의드립니다</a></td>
+						<td>amu1</td>
 						<td>2023-12-13</td>
+					</tr>
+					<tr >
+						<td>2</td>
+						<td>문의드립니다</td>
+						<td>amu1</td>
+						<td>2023-12-13</td>
+					</tr>
+					<tr >
+						<td>3</td>
+						<td>문의드립니다1</td>
+						<td>amu1</td>
+						<td>2023-12-11</td>
+					</tr>
+					<tr >
+						<td>4</td>
+						<td>문의드립니다1</td>
+						<td>amu1</td>
+						<td>2023-12-13</td>
+					</tr>
+					<tr >
+						<td>5</td>
+						<td>문의드립니다1</td>
+						<td>amu1</td>
+						<td>2023-12-14</td>
+					</tr>
+					<tr >
+						<td>6</td>
+						<td>문의드립니다1</td>
+						<td>amu1</td>
+						<td>2023-12-19</td>
 					</tr>
 				</tbody>
 			</table>

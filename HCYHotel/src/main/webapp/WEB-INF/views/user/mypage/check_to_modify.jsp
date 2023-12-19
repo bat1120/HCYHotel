@@ -473,10 +473,11 @@ googletag.cmd.push(function() {
 								<div class="wrap_link">
 								</div>
 							</fieldset>
-							<input type="submit" class="btn btn-info" style="width:200px;margin-left:550px;height:60px;" value="비밀번호 확인">
+							<a href="modify_info.do">
+							<input type="button" class="btn btn-info" style="width:200px;margin-left:550px;height:60px;" value="비밀번호 확인" id="next">
+							</a>						
 						</form>
 					</div>
-
 				</div>
 
 				<!--    <script type="text/javascript" src="//www.saraminimage.co.kr/js/libs/jquery-1.8.3.min.js"></script>-->

@@ -90,7 +90,7 @@
 <h3 class="content-main-title" style="margin-top:7%; ">나의 다이닝 후기</h3>
 <table class="board-list" style="width: 1200px; margin-left:20%; margin-top:100px; margin-bottom: 100px;">
 <tr style="font-family: ; color: ; ">
-	<td colspan="3" style="width: 400px;"><strong>다이닝 </strong> 뇸뇸 /></td>
+	<td colspan="3" style="width: 400px;"><strong>다이닝 </strong> 뇸뇸</td>
 	<td style="width: 400px"><strong>호텔 </strong> 자스민호텔</td>
 	<td style="width 300px;"><strong>내 평점 </strong> 9.5 / 10.0</td>
 	<td rowspan="2" style="width: 100px;"><input type="button" class="btn btn-dark btn-sm" value="삭제"/></td>
