@@ -1992,7 +1992,7 @@ th, td {
 					                        output += "<td>" + jsonTemp.bookingname + "</td>";
 					                        output += "<td>" + jsonTemp.checkin + " ~ " + jsonTemp.checkout + "</td>";
 					                        if (jsonTemp.status === "Y") {
-					                            output += "<td>" + "<input type='button' class='btn btn-danger' name='btn' value='예약취소'>" + "<input type='hidden' class='hiddenValue' name='" + jsonTemp.bookingcode + "' value='"+jsonTemp.bookingcode+"'>" + "</td>";
+					                            output += "<td>" + "<input type='button' class='btn btn-danger' id='delete' name='btn' value='예약취소'>" + "<input type='hidden' id='bookingcode' class='hiddenValue' name='" + jsonTemp.bookingcode + "' value='"+jsonTemp.bookingcode+"'>" + "</td>";
 					                        } else if (jsonTemp.status === "N") {
 					                            output += "<td>예약 가능</td>";
 					                        } else {
@@ -2004,8 +2004,8 @@ th, td {
 					                    $("#output").html(output);
 
 					                    // 수정된 부분: 클래스(btn)로 이벤트 리스너 연결
-					                    $(".btn").click(function(){
-					                        var hiddenValue = $(this).siblings('.hiddenValue').val();
+					                        var hiddenValue = $("#bookingcode").val();
+					                    $("#delete").click(function(){
 					                        location.href="room_deleteRes.do?bookingcode="+hiddenValue
 					                    });
 					                }

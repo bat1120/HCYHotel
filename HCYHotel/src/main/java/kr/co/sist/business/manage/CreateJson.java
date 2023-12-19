@@ -28,6 +28,7 @@ public class CreateJson {
 			json.put("pplCnt", bmd.getPplCnt());
 			json.put("roomcode", bmd.getRoomcode());
 			json.put("status", bmd.getStatus());
+			json.put("bookingcode", bmd.getBookingcode());
 
 			jsonArr.add(json);
 		}

@@ -41,7 +41,7 @@ public class BusinessManageController {
 		shVO.setHotelName(request.getParameter("selectedValue"));
 		
 		JSONObject jsonObj=cj.createJson(session, shVO);
-		
+		System.out.println(jsonObj.toJSONString());
 //		model.addAttribute("jsonObj",jsonObj.toJSONString());
 		return jsonObj.toJSONString();
 	}//dailyBookingList
