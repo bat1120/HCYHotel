@@ -18,7 +18,7 @@ in
 select r.hotelcode  from room r
 inner join roomtype t
 on  t.maxcapacity &gt;= #{searchCapacity}
-where r.roomcode not in (select r.roomcode from roombooking r where r.checkin &lt; #{searchCheckout} or r.checkout &gt; #{searchCheckin})
+where r.roomcode not in (select r.roomcode from roombooking r where r.checkin &lt; #{searchCheckout} and r.checkout &gt; #{searchCheckin})
 group by r.hotelcode
 )
 
