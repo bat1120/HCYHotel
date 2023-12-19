@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ page info="공지사항 상세"%>
+<%@ page info="문의사항 상세"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <html lang="ko" class="noIE">
@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=1280">
 <meta name="format-detection" content="telephone=no">
 
-<title>문희씨 테스트 | HCYCombined</title>
+<title>나의 문의사항 - 마이페이지| HCYCombined</title>
 
 <link rel="shortcut icon" href="/system/images/favicon.ico">
 <link rel="apple-touch-icon" href="/system/images/favicon.ico">
@@ -19,11 +19,11 @@
 	href="http://localhost/HCYHotel/common/user/css/phoenix/common.min.css">
 <link rel="stylesheet"
 	href="http://localhost/HCYHotel/common/user/css/phoenix/contents.min.css">
+
 <!-- bootstrap -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <!-- jQuery CDN -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-
 <!-- js -->
 <script type="text/javascript" async=""
 	src="https://www.googletagmanager.com/gtag/js?id=G-1J0VYQ4NSJ&amp;cx=c&amp;_slc=1"></script>
@@ -74,19 +74,6 @@
 <script type="text/javascript"
 	src="https://pg.easypay.co.kr/webpay/EasypayCard_Web.js"></script>
 
-<script type="text/javascript">
-	/* (DEVELOP ONLY) Enable Vue devtools */
-	Vue.prototype._ssrNode = function() {
-		return null;
-	};
-	Vue.config.debug = true;
-	Vue.config.devtools = true;
-
-	/* NProgress Config */
-	NProgress.configure({
-		showSpinner : false
-	});
-</script>
 
 <script>
 	(function(i, s, o, g, r, a, m) {
@@ -180,25 +167,38 @@
 					<h4 class="detail-tit">
 						<span class="tit-text"><c:out value="${ qna.title }"/></span>
 					</h4>
-					<div class="detail-info">작성일 <c:out value="${ qna.inputDate }"/></div>
+					<div class="detail-info">문의등록일 : <c:out value="${ qna.inputDate }"/></div>
 				</div>
 				<div class="detail-content" style="overflow: auto;">
+				<!-- 내용 들어가는 자리 : 문의 -->
 				<c:out value="${ qna.content }"/>
 				</div>
+				<div class="detail-info">답변일 : <c:out value="${ qna.answerDate }"/></div>
+				<div class="detail-content" style="overflow: auto;">
+				<!-- 내용 들어가는 자리 : 답변-->
+				<c:out value="${ qna.answer }"/>
+				</div>
+				
 			</div>
 
 			<div class="page-foot">
-				<input type="button" id="btn_list" value="목록" class="btn btn-dark" />
-				<!-- 	<a
-					href="/page/customer/notice?q%5BhmpgDivCd%5D=&amp;page=1&amp;size=10"
-					class="btn-action light primary">목록</a> -->
+				<input type="button" id="btn_list" value="목록"
+					class="btn btn-dark btn-sm" />
 			</div>
 		</div>
 	</div>
 	<!-- // content-main -->
 	</section>
 	<!-- // section-container -->
-
+<script type="text/javascript">
+$(function(){
+	$("#btn_list").click(function(){
+		location.href="user_qna_list.do"
+	});//click
+	
+	
+});//ready
+</script>
 
 	<!-- footer // -->
 	<jsp:include page="../include/footer.jsp" />

@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+.fbrSkin *{font-family: '맑은 고딕',Malgun Gothic;}
+.fbrSkin html,body{height:auto;}
+.fbrSkin html.lock,
+.fbrSkin body.lock{-webkit-overflow-scrolling : unset !important;overflow: hidden;position: fixed;width : 100%;}
+.fbrSkin body,p,div,span,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select,figure,figurecaption{margin:0;padding:0;}
+.fbrSkin body,input,textarea,select,button,h1,h2,h3,h4,h5,h6{font-size:15px;line-height:1.7;color:#252525;}
+.fbrSkin section,nav,article,aside,hgroup,header,footer{display:block}
+/*html{height:100%}*/
+.fbrSkin body{position:relative;/*height:100%;*/background-color:#fff;-webkit-text-size-adjust:none;/*overflow-x:hidden;*//*min-width:320px;*/word-break:keep-all;}
+*{-webkit-tap-highlight-color:rgba(0,0,0,.2);}
+
+:root {
+  --sat: env(safe-area-inset-top);
+  --sar: env(safe-area-inset-right);
+  --sab: env(safe-area-inset-bottom);
+  --sal: env(safe-area-inset-left);
+}
+
+.fbrSkin img,fieldset{border:0}
+.fbrSkin img{vertical-align:middle}
+.fbrSkin iframe{vertical-align:bottom}
+.fbrSkin ul,ol,li{list-style:none}
+.fbrSkin em,address{font-style:normal}
+.fbrSkin a{color:#000;text-decoration:none;cursor:pointer}
+.fbrSkin table{border-collapse:collapse}
+b.nf_time_txt{font-size: 15px; margin:0 10px 0 5px} /*추가*/
+
+/* layout */
+.fbrSkin .wrap{padding:0 0 0 0;box-sizing:border-box;}
+
+
+/* 넷퍼넬 & 404 */
+.fbrSkin .nf_wrap { position:fixed; top:0; left:0; width:100%; height:100%;overflow:auto;background: white;}
+.fbrSkin .nf_inner {/*overflow:hidden;*/ position:relative; width:100%; height:auto; margin: 80px 0;}
+.fbrSkin .nf_top {position:absolute; /*top:50%;*/ left:0; width:100%; /*margin-top:-33px; -webkit-transform:translateY(-50%); transform:translateY(-50%);*/ text-align:center;}
+.fbrSkin .nf_title {display:block; font-size:24px; color:#685845; font-weight:bold; text-align:center;}
+.fbrSkin .nf_title em {font-style:italic;}
+.fbrSkin .nf_text {font-size:15px; color:#505050; dispaly:block; margin:0 auto; width:60%; max-width:640px;} @media (max-width:767px) {.nf_text {width:85%;} .nf_inner {margin: 45px 0; height: 100%;}}
+.fbrSkin .nf_text em {display:inline-block; padding-top:1px; text-decoration:underline;}
+.fbrSkin .nf_time {padding:36px 0 32px; text-align:center;}
+.fbrSkin .nf_time_inner {display:inline-block; position:relative; font-size:0; margin-top:15px;}
+.fbrSkin .nf_time_inner:before {display:block; content:""; position:absolute; top:50%; left:0; z-index:100; width:100%; height:2px; margin-top:-1px; background:#fff;}
+.fbrSkin .nf_time_inner span {display:inline-block; position:relative; width:40px; height:60px; margin-left:5px; border-radius:5px; background:#81725f; font-size:36px; font-weight:bold; color:#ffffff; text-align:center; line-height:63px;}
+/* .fbrSkin .nf_time_inner span:nth-child(2n) {margin-right:20px;} */
+/* .fbrSkin .nf_time_inner span:nth-child(2n):after {display:block; content:""; position:absolute; top:0; right:-20px; width:20px; height:100%; background:url('../img/ico_nf_time_inner.png') no-repeat center center /2px auto; line-height:60px;} */
+/* .fbrSkin .nf_time_inner span:nth-child(2n + 1) {margin-left:0;} */
+.fbrSkin .nf_time_inner span:first-child {margin-left:0;}
+.fbrSkin .nf_time_inner span:last-child {margin-right:0;}
+.fbrSkin .nf_time_inner span:last-child:after {display:none;}
+.fbrSkin .nf_wrap.type_404 .nf_title {padding-top:74.5px; background:url('../img/ico_404.png') no-repeat center 0 /auto 56px;}
+/*.nf_wrap.type_404 .nf_text {padding-top:12px; font-size:14px;}*/
+.fbrSkin .shillaLogo{background:#f1e3c4; height:90px; text-align:center}
+.fbrSkin .shillaLogo h1 span{/*text-indent: -9999%;*/ overflow:hidden; background:url('https://www.shillahotels.com/images/ko/mem/main/logo.gif') no-repeat center top /200px auto; height:50px; margin-top:20px; display:inline-block; line-height:999px}
+
+@media (max-width:767px) {
+.fbrSkin .shillaLogo{background:#f1e3c4; height:45px; margin-bottom:45px;}
+.fbrSkin .shillaLogo h1 span{background:url('https://www.shillahotels.com/images/mbl/ko/mem/main/m_logo.gif') no-repeat center top /116px auto;  height:45px; margin-top:0px; display:inline-block}
+.fbrSkin .nf_wrap {overflow:auto;}
+}

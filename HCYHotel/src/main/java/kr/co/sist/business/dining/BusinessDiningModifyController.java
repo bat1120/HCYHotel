@@ -8,11 +8,15 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import org.json.simple.JSONObject;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.context.support.HttpRequestHandlerServlet;
 import org.springframework.web.multipart.MultipartFile;
 
 import oracle.jdbc.proxy.annotation.Post;
@@ -161,5 +165,12 @@ public class BusinessDiningModifyController {
 		duVO.setDiningcode(request.getParameter("diningcode"));
 		DiningManageDAO.getInstance().updateDining(duVO);
 		return "BusinessManage/businessmanage_dining";
+	}
+	@GetMapping("/BusinessManage/dining_delete.do")
+	public String deleteDining(HttpServletRequest reqeust) {
+		String diningcode=reqeust.getParameter("diningcode");
+		DiningManageService.getInstance().deleteDining(diningcode);
+		
+		return "redirect:businessDining.do";
 	}
 }

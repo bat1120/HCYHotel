@@ -81,4 +81,7 @@ select roomcode,hotelcode,typecode,servicecode,roomname
 from room
 where roomcode=#{roomcode}
 </select>
+<delete id="deleteRoom" parameterType="String">
+delete from room where roomcode=#{roomcode}
+</delete>
 </mapper>

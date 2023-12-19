@@ -199,7 +199,15 @@
 	</section>
 	<!-- // section-container -->
 
-
+<script type="text/javascript">
+$(function(){
+	$("#btn_list").click(function(){
+		location.href="user_notice.do"
+	});//click
+	
+	
+});//ready
+</script>
 	<!-- footer // -->
 	<jsp:include page="../include/footer.jsp" />
 

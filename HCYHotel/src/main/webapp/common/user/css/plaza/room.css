@@ -1,0 +1,209 @@
+@charset "utf-8";
+
+#contents .room_content{position: relative;margin-left: 270px;}
+#contents .room_content:after{content: '';position: absolute;top:0;bottom:0;}
+#contents .room_content .common_btn{border: 1px solid #d0d0d0;border-radius: 80px;width:134px;height: 38px;float: left;margin-right:8px;text-align: center;line-height: 40px;font-size: 13px; font-weight: 700; transition:background-color 0.3s;}
+#contents .room_content .common_btn:hover{background:#3c1650;color: #fff;}
+#contents .room_content .section{position: relative; box-sizing: border-box;-moz-box-sizing: border-box;-moz-box-sizing: border-box;text-align: left;padding: 100px 0 90px;  max-width: 960px;
+    margin: 0 auto;}
+#contents .room_content.all{background: #f7f7f7;padding-bottom: 150px;}
+#contents .room_content .room_list{max-width: 960px;margin: 0 auto;text-align: center;padding-bottom: 40px;}
+#contents .room_content .room_list ul{overflow: hidden;}
+#contents .room_content .room_list ul li{width: 50%;float: left;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box; border-left: 1px solid #e8e8e8; opacity:0; transform:translate(0, 100px); background-color:#fff;}
+#contents .room_content .room_list h1,
+#contents .room_content .room_list h3{position: relative;font-size: 14px;line-height: 16px; margin: 30px 0 35px; opacity:0;text-transform: uppercase;}
+#contents .room_content .room_list h1 span,
+#contents .room_content .room_list h3 span{position: relative;padding: 0 20px;letter-spacing: 1px;background: #f7f7f7; font-weight: 500;}
+#contents .room_content .room_list h1:before,
+#contents .room_content .room_list h3:before{content: '';position: absolute; left:50%; right: 50%; top: 50%;height: 1px;background: #dadada;display: block;}
+/*#contents .room_content .room_list ul li a:before {content:""; position:absolute; bottom:0; left:0; width:100%; height:80px; background-color:#fff; transition:all 0.3s;}*/
+#contents .room_content .room_list ul li .room_text{position:relative; font-size: 18px;line-height: 21px;padding: 20px 0; transition:all 0.3s;}
+#contents .room_content .room_list ul li .room_text span{display: block;font-size: 11px;line-height: 13px;font-weight: 300;padding-top: 5px;letter-spacing: 2px;}
+#contents .room_content .room_list ul li .room_img {overflow: hidden;}
+#contents .room_content .room_list ul li .room_img img {transition:transform 0.7s; }
+
+/*#contents .room_content .room_list ul li a:hover:before {height:133px; background-color:#d9cfe7;}
+#contents .room_content .room_list ul li a:hover .room_text {transform:translate(0, -45px); color:#3c1650;}*/
+
+/*#contents .room_content .room_list ul li:hover .room_img img {transform:scale(1.1);}*/
+#contents .room_content .section_top{white-space: nowrap;letter-spacing:26px;color: #fff;font-size: 72px;font-weight: 300;text-align: center;height: 670px;line-height: 674px;}
+#contents .room_content .section_top .top_bg {position:fixed; top:107px; left:0; width:100%; height:670px; min-width: 1230px;}
+#contents .room_content .section_top .top_bg .bg {position:relative; left:270px; width:calc(100% - 270px); height:670px; background-size:cover; background-position:center; }
+#contents .room_content .section_top .top_title {position:fixed; top:107px; left:138px; width:100%; height:670px; min-width: 1230px;}
+#contents .room_content .section_top .top_title span {display: inline-block; opacity:0;}
+#contents .room_content .section_top .top_title span.top  {transform:translate(-20px, 0); opacity:0;}
+#contents .room_content .section_top .top_title span.bottom  {transform:translate(20px, 0); opacity:0;}
+#contents .room_content .section_top .top_title span.active {opacity:1; transition:all 1.5s;}
+#contents .room_content .section_top svg {position:relative;}
+/*#contents .room_content .section_top text { stroke-dasharray: 1000; stroke-dashoffset: 1000; fill:#fff;}*/
+#contents .room_content .section_bottom {position:relative; background-color:#fff;}
+/*#contents .room_content .section_top.inmotion .top_bg .bg{transform:scale(1.1); transition:all 5s; transition-delay:0.5s;}*/
+
+#contents .room_content .room_list.inmotion h1,
+#contents .room_content .room_list.inmotion h3 {opacity:1; transition:all 1s;}
+#contents .room_content .room_list.inmotion h1:before,
+#contents .room_content .room_list.inmotion h3:before {left:0; right:0; transition:all 1s; transition-delay: 0.3s;}
+#contents .room_content .room_list.inmotion ul li {transform:translate(0, 0); opacity:1; transition:all 1s;}
+#contents .room_content .room_list.inmotion ul li:nth-child(2) {transition-delay: 0.2s;}
+#contents .room_content .room_list.inmotion ul li:nth-child(3) {transition-delay: 0.4s;}
+#contents .room_content .room_list.inmotion ul li:nth-child(4) {transition-delay: 0.6s;}
+#contents .room_content .room_list.inmotion ul li:nth-child(5) {transition-delay: 0.8s;}
+#contents .room_content .room_list.inmotion ul li:nth-child(6) {transition-delay: 1s;}
+#contents .room_content .room_list.inmotion ul li:nth-child(7) {transition-delay: 1.2s;}
+
+
+#contents .room_content.deluxe .section_top .top_bg .bg {background-image: url(../images/room/top_deluxe.jpg);}
+#contents .room_content.premier_suite .section_top .top_bg .bg {background-image: url(../images/room/top_premier_suite.jpg)}
+#contents .room_content.plaza_suite .section_top .bg {background-image: url(../images/room/top_plaza_suite.jpg)}
+#contents .room_content.residential_suite .section_top .bg {background-image: url(../images/room/top_residential_suite.jpg)}
+#contents .room_content.prestige_suite .section_top .bg {background-image: url(../images/room/top_prestige_suite.jpg)}
+#contents .room_content.presidential_suite .section_top .bg {background-image: url(../images/room/top_presidential_suite.jpg)}
+#contents .room_content.royal_plaza_suite .section_top .bg {background-image: url(../images/room/top_royal_plaza_suite.jpg)}
+#contents .room_content.club_lounge .section_top .bg {background-image: url(../images/room/top_club_lounge.jpg)}
+#contents .room_content .section_desc{overflow: hidden}
+#contents .room_content .section_desc .left_area{float: left;width: 50%;}
+#contents .room_content .section_desc .left_area .tit{font-size: 13px;color: #be9336;font-weight: bold;letter-spacing: 1px;line-height: 43px;padding-bottom: 25px;}
+#contents .room_content .section_desc .left_area .desc{font-size: 13px;line-height: 28px;  padding-bottom: 62px; font-weight: 900; letter-spacing: 0.6pt;}
+#contents .room_content .section_desc .left_area .qna{font-size: 13px;}
+#contents .room_content .section_desc .left_area .qna dt{font-weight: bold;float: left;padding-right: 25px;  clear: both;}
+#contents .room_content .section_desc .left_area .qna dd{float: left;}
+#contents .room_content .section_desc .right_area{float: right;width: 50%;}
+#contents .room_content .section_desc .right_area h1,
+#contents .room_content .section_desc .right_area h3{font-size: 40px;font-weight: 300;line-height: 43px;padding-bottom: 25px;text-transform:capitalize;}
+#contents .room_content .section_desc .right_area p{font-size: 14px;line-height: 30px;padding-bottom: 35px;}
+#contents .room_content .section_amenity{}
+#contents .room_content .section_amenity h1,
+#contents .room_content .section_amenity h3{font-size: 34px;font-weight: 300;line-height: 37px;padding-bottom: 64px; letter-spacing: -1px;}
+#contents .room_content .section_amenity .img{position: absolute;top:17px;margin-left: 25%; overflow:hidden; }
+#contents .room_content .section_amenity .img img {float:right; max-width:none;}
+#contents .room_content .section_amenity .amen_list{font-size: 0;letter-spacing: 0;word-spacing: 0;height: 330px;overflow: hidden}
+#contents .room_content .section_amenity .amen_list.jp {height:335px;}
+#contents .room_content .section_amenity .amen_list dl{display: inline-block;vertical-align: top;font-size: 13px;line-height: 29px;letter-spacing: -0.5px;width:25%;}
+#contents .room_content .section_amenity .amen_list dl dt{font-weight: 900; margin-bottom: 8px;}
+#contents .room_content .section_amenity .amen_list dl dd{line-height: 18px;padding: 6px 0 5px}
+#contents .room_content .section_amenity .btn_more{position: relative; border:1px solid #cccccc;width: 45px;height: 45px;display: block;margin:25px auto 0;border-radius: 100%;text-indent: -9999em;overflow: hidden}
+#contents .room_content .section_amenity .btn_more:before{content: '';position: absolute;width: 15px;height: 15px;top:50%;left:50%;margin: -7.5px 0 0 -7.5px;background: url(../images/room/ico_plus.png) no-repeat  50% 0;}
+#contents .room_content .section_amenity .btn_more:hover{background: #ccc;}
+#contents .room_content .section_amenity .btn_more:hover:before{background-position:50% -15px}
+#contents .room_content .section_amenity .btn_more.hide{visibility: hidden}
+#contents .room_content .section_gallery{padding-top: 0;}
+#contents .room_content .section_gallery a.btn_layout{position: absolute;  top: 0;right: 0;margin: 0;  padding-left: 20px;width: 115px;}
+#contents .room_content .section_gallery a.btn_layout:before{content: '';position: absolute;top:50%;left:18px;margin-top: -5px; width: 11px;height: 11px;background: url(../images/room/ico_gallery.png) no-repeat  50% 0;}
+#contents .room_content .section_gallery h3{font-size: 34px;font-weight: 300;line-height: 37px;padding-bottom: 40px;}
+#contents .room_content .section_gallery .carousel ul{font-size: 0;letter-spacing: 0;word-spacing: 0;text-align: center;margin-top: 25px;}
+#contents .room_content .section_gallery .carousel ul li{border-radius: 100%;background:#d2d2d2;display: inline-block;vertical-align: top;margin: 0 5px; }
+#contents .room_content .section_gallery .carousel ul li.on{background: #787878}
+#contents .room_content .section_gallery .carousel ul li a{display: block;text-indent: -999em;width: 7px;height: 7px;}
+#contents .room_content .section_gallery .slide_area{position: relative;}
+#contents .room_content .section_gallery .slide_area .slide_inner{height: 500px}
+#contents .room_content .section_gallery .slide_area .slide_inner ul{z-index: 0 !important;}
+#contents .room_content .section_gallery .slide_area .slide_inner ul li{float: left;opacity: 0.4;-webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;}
+#contents .room_content .section_gallery .slide_area .slide_inner ul li.active{opacity: 1;}
+#contents .room_content .section_gallery .arw_btn_area{position: absolute;top:50%;left: -80px;right: -80px;margin-top: -22px;z-index: 1}
+#contents .room_content .section_gallery .arw_btn_area a{position: absolute; border:1px solid #cccccc;width: 45px;height: 45px;display: block;margin: 0 auto;border-radius: 100%;text-indent: -9999em;overflow: hidden}
+#contents .room_content .section_gallery .arw_btn_area a:before{content: '';position: absolute;width: 7px;height: 12px;top:50%;left:50%;margin: -6px 0 0 -3.5px;background: url(../images/room/ico_arw_right.png) no-repeat  50% 0;}
+#contents .room_content .section_gallery .arw_btn_area a:hover{background: #ccc;}
+#contents .room_content .section_gallery .arw_btn_area a:hover:before{background-position:50% -12px}
+#contents .room_content .section_gallery .arw_btn_area a.prev{left: 0;}
+#contents .room_content .section_gallery .arw_btn_area a.next{right: 0;}
+#contents .room_content .section_gallery .arw_btn_area a.prev:before{background-image: url(../images/room/ico_arw_left.png);}
+#contents .room_content .section_gallery .arw_btn_area a.next:before{background-image: url(../images/room/ico_arw_right.png);}
+#contents .room_content .section_gallery .arw_btn_area a.disabled{opacity: 0;visibility: hidden}
+
+#contents .room_content.club_lounge .section_desc .left_area .qna{border-top:1px solid #ebebeb;overflow: hidden;width: 360px;}
+#contents .room_content.club_lounge .section_desc .left_area .qna.first{border-top:none}
+#contents .room_content.club_lounge .section_desc .left_area .qna dt{width: 98px;line-height: 48px}
+#contents .room_content.club_lounge .section_desc .left_area .qna dd{line-height: 48px; letter-spacing: 0.6px;}
+#contents .room_content.club_lounge .section_amenity .amen_list{height: auto}
+
+
+
+#pop_layout{}
+#pop_layout .pop_inner{ width: 820px;margin: -355px 0 0 -410px;background: #fff;padding: 60px 0 45px}
+#pop_layout .pop_inner .pop_header h3{font-size: 30px;line-height: 35px; }
+#pop_layout .pop_inner .pop_header p{padding-top:10px;color:#999;text-transform: uppercase;font-weight: 300;letter-spacing: 1px;font-size: 14px;line-height: 17px;}
+#pop_layout .pop_inner .pop_content .img_layout{position:relative; padding: 50px 0 35px}
+#pop_layout .pop_inner .pop_content .img_layout .other {position:absolute; top:0; left:0; width:100%; text-align: center; padding: 50px 0 35px}
+#pop_layout .pop_inner .pop_content .img_layout .img_layouts {opacity:0; transition:all 0.5s;}
+#pop_layout .pop_inner .pop_content .img_layout .img_layouts.on {opacity:1;}
+#pop_layout .pop_inner .pop_content .exclusive_area{font-size: 12px;color: #666;}
+#pop_layout .pop_inner .pop_content .exclusive_area em{font-weight: 900;margin-right: 5px;}
+
+#pop_layout .pop_inner .pop_content .carousel {width:100%; margin-bottom: 20px;}
+#pop_layout .pop_inner .pop_content .carousel a {display: inline-block; width:6px; height:6px; background-color:#acacac; border-radius: 10px; margin:0 4px;}
+#pop_layout .pop_inner .pop_content .carousel a.active {background-color:#666666;}
+
+
+#contents .room_content .section_roomdining{background: #f9f9f9;max-width: 100%;text-align: center;padding-bottom: 48px;}
+#contents .room_content .section_roomdining h3{font-size: 34px;line-height: 37px;padding-bottom: 50px;font-weight: 500;}
+#contents .room_content .section_roomdining .img_area{padding: 10px 0 20px; overflow: hidden;}
+#contents .room_content .section_roomdining .copy_box {width:960px; margin:43px auto 0; overflow: hidden;}
+#contents .room_content .section_roomdining .copy_box div {position:relative; width:50%; float:left; text-align: left;}
+#contents .room_content .section_roomdining .copy_box .left {font-size:14px; color:#282828; line-height:28px;}
+#contents .room_content .section_roomdining .copy_box .left span {display: inline-block; font-size:22px; margin-bottom:22px; line-height: 22px;}
+#contents .room_content .section_roomdining .copy_box .left:after {content:""; position:absolute; top:15px; right:0; width:1px; height:176px; background-color:rgba(0,0,0,0.07);}
+#contents .room_content .section_roomdining .copy_box .right dl {padding:21px 0 0 47px;}
+#contents .room_content .section_roomdining .copy_box .right dl dt {font-size:14px; color:#444444; font-weight: 900;}
+#contents .room_content .section_roomdining .copy_box .right dl dd {font-size:14px; color:#282828; margin:8px 0 27px;line-height: 22px;}
+
+
+#contents .room_content .section.section_specialOffers{background: #f9f9f9;max-width: 100%; padding-top:50px;}
+#contents .room_content .section_specialOffers h3{font-size: 34px;font-weight: 500;line-height: 37px;padding-bottom: 15px;text-align: center;}
+#contents .room_content .section_specialOffers .offer_txt{text-align: center;font-size: 15px;color: #666}
+#contents .room_content .section_specialOffers .offer_area{background: #f9f9f9;max-width: 960px;margin: 64px auto 0}
+#contents .room_content .section_specialOffers .offer_area ul li{float: left;width: 232px;margin-left: 10px;text-align: center}
+#contents .room_content .section_specialOffers .offer_area ul li:first-child{margin-left: 0}
+#contents .room_content .section_specialOffers .offer_area ul li a{display: block}
+#contents .room_content .section_specialOffers .offer_area ul li span{margin-top: 20px;font-size: 13px;color: #888;display: block}
+#contents .room_content .section_specialOffers .offer_area ul li span.eng{font-size: 14px;color: #333;font-weight: bold;margin-top: 15px}
+#contents .room_content .section_specialOffers .offer_area ul li span.engnone{font-size: 14px;color: #333;font-weight: bold;margin-top: 15px}
+#contents .room_content .section_specialOffers .offer_area ul li span.img_area {width:232px; height:232px; margin-top:0;}
+
+
+
+
+/* set motion */
+/*#contents .room_content .section_desc .left_area {transform:translate(-100px, 0); opacity:0;}
+#contents .room_content .section_desc .right_area {transform:translate(100px, 0); opacity:0;}
+#contents .room_content .section_amenity {transform:translate(0, 100px); opacity:0;}
+#contents .room_content .section_amenity .img {width:0px; right:0;}
+#contents .room_content .section_gallery {transform:translate(0, 100px); opacity:0;}
+#contents .room_content .section_gallery .slide_area .slide_inner ul li img {opacity:0; transform:scale(1) translate(900px, 0);}
+#contents .room_content .section_roomdining h3 {transform:translate(0, 50px); opacity:0;}
+#contents .room_content .section_roomdining .img_area img {transform:translate(0, 100px); opacity:0;}
+#contents .room_content .section_roomdining .copy_box {transform:translate(0, 50px); opacity:0;}
+#contents .room_content .section_specialOffers h3 {transform:translate(0, 50px); opacity:0;}
+#contents .room_content .section_specialOffers .offer_area ul li {transform:translate(0, 50px); opacity:0;}*/
+
+
+/* start motion */
+/*#contents .room_content .section_desc.active .left_area {transform:translate(0,0); opacity:1; transition:all 1s;}
+#contents .room_content .section_desc.active .right_area {transform:translate(0,0); opacity:1; transition:all 1s;}
+#contents .room_content .section_amenity.active {transform:translate(0,0); opacity:1; transition:all 1s;}
+#contents .room_content .section_amenity.active .img {width:720px; transition:width 1s; transition-delay: 0.5s;}
+#contents .room_content .section_gallery.active {transform:translate(0,0); opacity:1; transition:all 1s;}
+#contents .room_content .section_gallery.active .slide_area .slide_inner ul li img {opacity:1; transform:scale(1) translate(0,0); transition:all 1s;}
+#contents .room_content .section_gallery.active .slide_area .slide_inner ul li:nth-child(1) img {transition-delay: 0.2s;}
+#contents .room_content .section_gallery.active .slide_area .slide_inner ul li:nth-child(2) img {transition-delay: 0.4s;}
+#contents .room_content .section_roomdining.active h3 {transform:translate(0, 0); opacity:1; transition:all 0.7s;}
+#contents .room_content .section_roomdining.active .img_area img {transform:translate(0, 0); opacity:1; transition:all 0.7s; transition-delay: 0.2s;}
+#contents .room_content .section_roomdining.active .copy_box {transform:translate(0, 0); opacity:1; transition:all 0.7s; transition-delay: 0.4s;}
+#contents .room_content .section_specialOffers.active h3 {transform:translate(0, 0); opacity:1; transition:all 1s; padding-bottom: 0;}
+#contents .room_content .section_specialOffers.active .offer_area ul li {transform:translate(0, 0); opacity:1; transition:all 0.7s;}
+#contents .room_content .section_specialOffers.active .offer_area ul li:nth-child(1) {transition-delay: 0.4s;}
+#contents .room_content .section_specialOffers.active .offer_area ul li:nth-child(2) {transition-delay: 0.6s;}
+#contents .room_content .section_specialOffers.active .offer_area ul li:nth-child(3) {transition-delay: 0.8s;}
+#contents .room_content .section_specialOffers.active .offer_area ul li:nth-child(4) {transition-delay: 1s;}*/
+
+
+
+#contents .room_content .section_top .btn_view_360 {position:absolute; top:600px; right:30px; }
+#contents .room_content .section_top .btn_view_360 a {display: block; width:144px; height:42px; border-radius: 30px; font-size:13px; line-height:44px; border:1px solid rgba(255,255,255,0.5); letter-spacing: 0; font-weight: 300; transition:all 0.3s;}
+#contents .room_content .section_top .btn_view_360 a span {display: inline-block;position:relative; top:50%; margin-right: 10px;}
+#contents .room_content .section_top .btn_view_360 a span img {margin-top:-8px;}
+#contents .room_content .section_top .btn_view_360 a span .on {position:absolute; top:0; left:0; opacity:0; transition:all 0.3s;}
+#contents .room_content .section_top .btn_view_360 a:hover {color:#000000; background-color:#fff;}
+#contents .room_content .section_top .btn_view_360 a:hover span .on {opacity:1;}

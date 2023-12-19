@@ -27,10 +27,4 @@ public class MyDiningReviewController {
 		return "";
 	}//reviewErase
 	
-	@GetMapping("user/review/myreview/mydiningreview_write.do")
-	public String myDiningReviewWrite() {
-		
-		return "user/review/myreview/mydiningreview_write";
-	}//myDiningReviewWrite
-	
 }//class

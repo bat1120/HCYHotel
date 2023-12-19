@@ -46,7 +46,7 @@ public class LoginController {
 	public String login(Model model,LoginVO lVO,HttpServletResponse response, HttpSession session) {
 		
 		LoginService ls=LoginService.getInstance();
-		
+		System.out.println(lVO.getMemberFlag());
 		if("1".equals(lVO.getMemberFlag())){
 			if(ls.checkLogin(lVO)) {
 				session.setAttribute("id",lVO.getId());	
@@ -55,11 +55,11 @@ public class LoginController {
 					System.out.println("id : "+lVO.getId());
 					ls.setCookie(response, "useridRememberFlag", "Y");
 					ls.setCookie(response, "userid", lVO.getId());
-					return "user/home/user_home";
+					return "redirect:/user/home/user_home.do";
 				}//if
 				ls.removeCookie(response, "useridRememberFlag", "");
 				ls.removeCookie(response,"userid", "");
-				return "user/home/user_home";
+				return "redirect:/user/home/user_home.do";
 			}else {
 				model.addAttribute("loginerror","로그인 정보를 다시 확인해주세요");
 				return "user/login/login_error";
@@ -71,11 +71,11 @@ public class LoginController {
 				if("Y".equals(lVO.getId_save())) {
 					ls.setCookie(response, "busidRememberFlag", "Y");
 					ls.setCookie(response, "busid", lVO.getId());
-					return "user/home/user_home";
+					return "redirect:/BusinessManage/businessHotelMain.do";
 				}//if
 				ls.removeCookie(response, "busidRememberFlag", "");
 				ls.removeCookie(response,"busid", "");
-				return "user/home/user_home";
+				return "redirect:/BusinessManage/businessHotelMain.do";
 				
 			}else {
 				model.addAttribute("loginerror","로그인 정보를 다시 확인해주세요");

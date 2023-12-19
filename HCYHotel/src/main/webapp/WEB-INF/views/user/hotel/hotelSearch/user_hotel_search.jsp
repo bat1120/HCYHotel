@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ page info=""%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <html lang="ko-kr" dir="ltr"><head>
 <meta name="r9-version" content="R696a">
 <meta name="r9-built" content="20231204.060219">
@@ -1334,7 +1335,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																				</div>
 																			</div>
 																			<div class="lNCO-inner">
-																			<input type="text" placeholder="숙소명">
+																			<input type="text" placeholder="숙소명" style="width:150px">
 																			</div>
 																		</div>
 																	</div>
@@ -1398,6 +1399,10 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 											<div class="">
 												<div class="c71z4">
 													
+<!-- --------------------------------------------------------------------------- -->
+												<c:forEach items="${hotelList}" var="hotel" varStatus="status">
+													
+
 													<div>
 														<div class="IirT IirT-mod-responsive">
 															<div class="yuAt yuAt-pres-apac" role="group" tabindex="-1" aria-label="토요코인 서울영등포점는 영등포구 인근에 위치한 2성급 호텔입니다. 후기 2,322개개 후기에서 8.5점으로 평가되었습니다. 호텔에 관한 상세 정보를 보려면 클릭하세요.">
@@ -1409,6 +1414,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																	<button class="L9ZF-skip-to-details" aria-label="결과 상세 페이지로 이동하려면 클릭하세요.">결과 상세
 																		정보로 이동</button>
 																</div>
+																<a href="http://localhost/HCYHotel/user/hotel/hotelInfo/user_hotel_info.do?hotelcode=${hotel.hotelcode}"><button type="button" class="btn btn-info">호텔 바로가기</button></a>
 																<div id="responsive-info-photo-container-1">
 																	<div class="IirT-photo-container" role="button" tabindex="-1">
 																		<div class="IirT-resultActionsMenuContainer IirT-alwaysVisible">
@@ -1431,7 +1437,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																		<div class="e9fk e9fk-pres-apac e9fk-mod-responsive">
 																			<div class="e9fk-photoContainer" data-index="2">
 																				<button class="e9fk-photoWrap">
-																					<img class="e9fk-photo" alt="토요코인 서울영등포점" src="https://content.r9cdn.net/rimg/himg/16/8e/b8/expediav2-6094950-29198e-711165.jpg?width=432&amp;height=432&amp;xhint=540&amp;yhint=333&amp;crop=true&amp;watermarkheight=28&amp;watermarkpadding=10" srcset="https://content.r9cdn.net/rimg/himg/16/8e/b8/expediav2-6094950-29198e-711165.jpg?width=216&amp;height=216&amp;xhint=540&amp;yhint=333&amp;crop=true&amp;watermarkheight=14&amp;watermarkpadding=5 1x, https://content.r9cdn.net/rimg/himg/16/8e/b8/expediav2-6094950-29198e-711165.jpg?width=432&amp;height=432&amp;xhint=540&amp;yhint=333&amp;crop=true&amp;watermarkheight=28&amp;watermarkpadding=10 2x" style="object-position: left center;">
+																					<img class="e9fk-photo" alt="토요코인 서울영등포점" src="/HCYHotel/common/business/img/${fn:split(hotel.filename,'.jpg')[0]}.jpg" srcset="https://content.r9cdn.net/rimg/himg/16/8e/b8/expediav2-6094950-29198e-711165.jpg?width=216&amp;height=216&amp;xhint=540&amp;yhint=333&amp;crop=true&amp;watermarkheight=14&amp;watermarkpadding=5 1x, https://content.r9cdn.net/rimg/himg/16/8e/b8/expediav2-6094950-29198e-711165.jpg?width=432&amp;height=432&amp;xhint=540&amp;yhint=333&amp;crop=true&amp;watermarkheight=28&amp;watermarkpadding=10 2x" style="object-position: left center;">
 																				</button>
 																			</div>
 																			<div class="e9fk-bannerRow e9fk-highBanners"></div>
@@ -1447,29 +1453,23 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																		<div class="IirT-header-info-section">
 																			<div>
 																				<div role="button" tabindex="-1" class="IirT-header-container">
-																					<h3 class="IirT-header">토요코인 서울영등포점</h3>
-																					<div class="">
-																						<div class="O3Yc O3Yc-sp-default" role="img" aria-label="2성급">
-																							<span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
-																										<path d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
-																										<path d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span>
-																						</div>
-																					</div>
+																					<h3 class="IirT-header">${hotel.hotelname}</h3>
 																					
 																					
-																					<input type="button" name="호텔 상세보기" value="호텔 상세보기">
+																					
+																					<button type="button" class="btn btn-info">Info</button>
 																					
 																					
 																					
 																				</div>
 																				<button class="IirT-location-container" aria-label="토요코인 서울영등포점 호텔을 지도에서 보려면 클릭하세요.">
 																					<span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 16px; height: 16px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" class="IirT-location-icon" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
-																							<path d="M173.2 179.7c-.3-.1-26.4-9.7-73.2-9.7c-46.8 0-73 9.6-73.2 9.7c-2.6 1-5.5-.3-6.4-2.9c-1-2.6.3-5.5 2.9-6.4c1-.4 22.9-8.5 63.1-10.1C69.7 145.7 40 114.6 40 80c0-33.1 26.9-60 60-60s60 26.9 60 60c0 34.6-29.7 65.7-46.3 80.3c40.1 1.6 62.1 9.7 63.1 10.1c2.6 1 3.9 3.9 2.9 6.4c-1 2.6-3.9 3.8-6.5 2.9zM100 30c-27.6 0-50 22.4-50 50c0 36.1 38.9 69.8 50 78.7c11.1-8.9 50-42.6 50-78.7c0-27.6-22.4-50-50-50zm0 75c-13.8 0-25-11.2-25-25s11.2-25 25-25s25 11.2 25 25s-11.2 25-25 25zm0-40c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15z"></path></svg></span><span class="IirT-neighborhood">영등포구</span><span class="IirT-divider"></span>
+																							<path d="M173.2 179.7c-.3-.1-26.4-9.7-73.2-9.7c-46.8 0-73 9.6-73.2 9.7c-2.6 1-5.5-.3-6.4-2.9c-1-2.6.3-5.5 2.9-6.4c1-.4 22.9-8.5 63.1-10.1C69.7 145.7 40 114.6 40 80c0-33.1 26.9-60 60-60s60 26.9 60 60c0 34.6-29.7 65.7-46.3 80.3c40.1 1.6 62.1 9.7 63.1 10.1c2.6 1 3.9 3.9 2.9 6.4c-1 2.6-3.9 3.8-6.5 2.9zM100 30c-27.6 0-50 22.4-50 50c0 36.1 38.9 69.8 50 78.7c11.1-8.9 50-42.6 50-78.7c0-27.6-22.4-50-50-50zm0 75c-13.8 0-25-11.2-25-25s11.2-25 25-25s25 11.2 25 25s-11.2 25-25 25zm0-40c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15z"></path></svg></span><span class="IirT-neighborhood">${hotel.hoteladdress}</span><span class="IirT-divider"></span>
 																				</button>
 																			</div>
 																			<button class="IirT-rating-section" aria-label="토요코인 서울영등포점는 후기 2,322개개 평점에서 매우 좋음 8.5개를 받았습니다. 사용자 및 다른 상세 후기를 보려면 클릭하세요.">
 																				<div class="IirT-rating-category-and-count">
-																					<span class="IirT-rating-count">후기 2,322개</span>
+																					<span class="IirT-rating-count">후기 12개</span>
 																				</div>
 																				<div class="eddo eddo-pres-circular eddo-size-default eddo-positive-rating">
 																					<svg class="eddo-circular-svg">
@@ -1487,7 +1487,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																			<div class="e9fk e9fk-pres-apac e9fk-mod-responsive">
 																				<div class="e9fk-photoContainer" data-index="2">
 																					<button class="e9fk-photoWrap">
-																						<img class="e9fk-photo" alt="토요코인 서울영등포점" src="https://content.r9cdn.net/rimg/himg/16/8e/b8/expediav2-6094950-29198e-711165.jpg?width=432&amp;height=432&amp;xhint=540&amp;yhint=333&amp;crop=true&amp;watermarkheight=28&amp;watermarkpadding=10" srcset="https://content.r9cdn.net/rimg/himg/16/8e/b8/expediav2-6094950-29198e-711165.jpg?width=216&amp;height=216&amp;xhint=540&amp;yhint=333&amp;crop=true&amp;watermarkheight=14&amp;watermarkpadding=5 1x, https://content.r9cdn.net/rimg/himg/16/8e/b8/expediav2-6094950-29198e-711165.jpg?width=432&amp;height=432&amp;xhint=540&amp;yhint=333&amp;crop=true&amp;watermarkheight=28&amp;watermarkpadding=10 2x" style="object-position: left center;">
+																						<img class="e9fk-photo" alt="토요코인 서울영등포점" src="/HCYHotel/common/business/img/${fn:split(hotel.filename,'.jpg')[0]}.jpg"  style="object-position: left center;">
 																					</button>
 																				</div>
 																				<div class="e9fk-bannerRow e9fk-highBanners"></div>
@@ -1533,6 +1533,11 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																	</div>
 																	<div class="SO-5 SO-5-mod-responsive">
 																		<div class="SO-5-providers-list-wrapper" tabindex="-1">
+
+
+																		<!-- --------------------- -->
+																		<c:forEach items="${hotel.roomtypes}" var="roomtype" varStatus="status">
+
 																			<div class="D8J- D8J--mod-responsive">
 																				<div class="D8J--outer-border"></div>
 																				<div class="D8J--multi-book-item" aria-label="트립닷컴 토요코인 서울영등포점에서 1박 84,213원 숙박 상품 보기 조식 포함, 무료 인터넷 포함 무료 서비스." role="button" tabindex="0">
@@ -1541,21 +1546,20 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																							<div class="D8J--freebie">
 																								<svg viewBox="0 0 200 200" width="16" height="16" xmlns="http://www.w3.org/2000/svg" role="img">
 																									<path d="M86.3 148.4l-45-49.3c-1.9-2-1.7-5.2.3-7.1c2-1.9 5.2-1.7 7.1.3l40.9 44.8l61.4-85c1.6-2.2 4.7-2.7 7-1.1c2.2 1.6 2.7 4.7 1.1 7l-65 90c-1.9 2.5-5.7 2.7-7.8.4z"></path></svg>
-																								<span class="D8J--freebie-text">스위트 룸(객실
-																									이름 누르면 상세정보창)</span>
+																								<span class="D8J--freebie-text">${roomtype.typename}</span>
 																							</div>
 																						</div>
 																					</div>
 																					<div class="D8J--price-info-container D8J--no-margin-right-padding">
 																						<div class="D8J--price-container">
-																							<span class="D8J--price D8J--featured" role="button" tabindex="-1">84,213원</span>
+																							<span class="D8J--price D8J--featured" role="button" tabindex="-1">${roomtype.price}원</span>
 																						</div>
 																						<span class="D8J--for-n-nights">1박 요금</span>
 																						<div class="D8J--view-deal-container">
-																							<button role="button" class="Iqt3 Iqt3-mod-stretch Iqt3-mod-bold Button-No-Standard-Style Iqt3-mod-variant-solid Iqt3-mod-theme-progress Iqt3-mod-shape-rounded-small Iqt3-mod-shape-mod-default Iqt3-mod-spacing-default Iqt3-mod-size-xsmall" tabindex="-1" aria-disabled="false">
+																							<button type="button" class="Iqt3 Iqt3-mod-stretch Iqt3-mod-bold Button-No-Standard-Style Iqt3-mod-variant-solid Iqt3-mod-theme-progress Iqt3-mod-shape-rounded-small Iqt3-mod-shape-mod-default Iqt3-mod-spacing-default Iqt3-mod-size-xsmall" tabindex="-1" aria-disabled="false">
 																								<div class="Iqt3-button-container">
 																									<div class="Iqt3-button-content">
-																										<span>객실 예약</span>
+																										<a href="http://localhost/HCYHotel/user/hotel/room/user_room_reser.do"><span>객실 예약</span></a>
 																									</div>
 																								</div>
 																								<div class="Iqt3-button-focus-outline"></div>
@@ -1564,37 +1568,9 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																					</div>
 																				</div>
 																			</div>
-																			<div class="D8J- D8J--mod-responsive">
-																				<div class="D8J--outer-border"></div>
-																				<div class="D8J--multi-book-item" aria-label="트립닷컴 토요코인 서울영등포점에서 1박 84,213원 숙박 상품 보기 조식 포함, 무료 인터넷 포함 무료 서비스." role="button" tabindex="0">
-																					<div class="D8J--promotions-and-freebies-container">
-																						<div class="D8J--freebies">
-																							<div class="D8J--freebie">
-																								<svg viewBox="0 0 200 200" width="16" height="16" xmlns="http://www.w3.org/2000/svg" role="img">
-																									<path d="M86.3 148.4l-45-49.3c-1.9-2-1.7-5.2.3-7.1c2-1.9 5.2-1.7 7.1.3l40.9 44.8l61.4-85c1.6-2.2 4.7-2.7 7-1.1c2.2 1.6 2.7 4.7 1.1 7l-65 90c-1.9 2.5-5.7 2.7-7.8.4z"></path></svg>
-																								<span class="D8J--freebie-text">디럭스 룸(객실
-																									이름 누르면 상세정보창)</span>
-																							</div>
-																						</div>
-																					</div>
-																					<div class="D8J--price-info-container D8J--no-margin-right-padding">
-																						<div class="D8J--price-container">
-																							<span class="D8J--price D8J--featured" role="button" tabindex="-1">84,213원</span>
-																						</div>
-																						<span class="D8J--for-n-nights">1박 요금</span>
-																						<div class="D8J--view-deal-container">
-																							<button role="button" class="Iqt3 Iqt3-mod-stretch Iqt3-mod-bold Button-No-Standard-Style Iqt3-mod-variant-solid Iqt3-mod-theme-progress Iqt3-mod-shape-rounded-small Iqt3-mod-shape-mod-default Iqt3-mod-spacing-default Iqt3-mod-size-xsmall" tabindex="-1" aria-disabled="false">
-																								<div class="Iqt3-button-container">
-																									<div class="Iqt3-button-content">
-																										<span>객실 예약</span>
-																									</div>
-																								</div>
-																								<div class="Iqt3-button-focus-outline"></div>
-																							</button>
-																						</div>
-																					</div>
-																				</div>
-																			</div>
+																		</c:forEach>	
+
+																	<!-- --------------------- -->
 																		</div>
 																	</div>
 																</div>
@@ -1602,211 +1578,13 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 															</div>
 														</div>
 													</div>
-													<div>
-														<div class="Xwhi">
-															<div id="kn-slot-3385080" data-google-query-id="COboo_Dk94IDFbuC6QUdnvQFFQ" style="margin-bottom: 0px; display: none;">
-																<div id="google_ads_iframe_12907657/hotelscombined/kr/hotel/results_0__container__" style="border: 0pt none; width: 728px; height: 0px;"></div>
-															</div>
-														</div>
-													</div>
+
+<!-- --------------------------------------------------------------------------- -->
+												</c:forEach>
+
+
 												<div>
-														<div class="IirT IirT-mod-responsive">
-															<div class="yuAt yuAt-pres-apac" role="group" tabindex="-1" aria-label="토요코인 서울영등포점는 영등포구 인근에 위치한 2성급 호텔입니다. 후기 2,322개개 후기에서 8.5점으로 평가되었습니다. 호텔에 관한 상세 정보를 보려면 클릭하세요.">
-																<div>
-																	<button class="L9ZF-skip-result" aria-label="현재 결과가 마음에 들지 않는다면 클릭하여 다음 결과를 확인해보세요.">다음
-																		검색 결과로 이동</button>
-																	<button class="L9ZF-skip-to-price" aria-label="현재 결과에서 가격 정보를 보려면 클릭하세요.">가격으로
-																		이동</button>
-																	<button class="L9ZF-skip-to-details" aria-label="결과 상세 페이지로 이동하려면 클릭하세요.">결과 상세
-																		정보로 이동</button>
-																</div>
-																<div id="responsive-info-photo-container-1">
-																	<div class="IirT-photo-container" role="button" tabindex="-1">
-																		<div class="IirT-resultActionsMenuContainer IirT-alwaysVisible">
-																			<div class="dSkV dSkV-pres-hrp-over-image">
-																				<div class="dSkV-action-item">
-																					<div class="izza izza-pres-translucent izza-highlightSaved" role="button" tabindex="0" aria-label="트립 위시리스트에 토요코인 서울영등포점 저장">
-																						<span class="izza-content"><span class="izza-heartIconSVG" aria-hidden="true" style="width: 20px; height: 20px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 32px; height: 32px;"><svg class="oLv- oLv--mod-unsaved" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="100%" height="100%" fill="inherit" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
-																										<defs>
-																										<path id="heart-outline-2822856033" d="M20.02000005345326,29.59999942779541 C19.555000066757202,29.59999942779541 19.102000057697296,29.44499969482422 18.71400010585785,29.14799976348877 C17.022000074386597,27.817999839782715 15.214000225067139,26.086999893188477 13.15999984741211,23.83899974822998 C10.57699966430664,21.01099967956543 9.258999824523926,18.401999711990356 9.258999824523926,16.089999675750732 C9.258999824523926,14.616999626159668 9.82699966430664,13.221999645233154 10.87399959564209,12.149999618530273 C11.906999588012695,11.090999603271484 13.289000034332275,10.470999717712402 14.749000072479248,10.406000137329102 C17.332000017166138,10.289999961853027 19.077000081539154,11.852999687194824 20.02000005345326,13.066999912261963 C20.96200007200241,11.852999687194824 22.705000162124634,10.289999961853027 25.289000034332275,10.406000137329102 C26.761000156402588,10.470999717712402 28.131000518798828,11.090999603271484 29.164000511169434,12.149999618530273 C30.211000442504883,13.221999645233154 30.779000282287598,14.616999626159668 30.779000282287598,16.089999675750732 C30.779000282287598,18.401999711990356 29.461999893188477,21.01099967956543 26.878000259399414,23.83899974822998 C24.825000286102295,26.086999893188477 23.003000020980835,27.830999851226807 21.324000000953674,29.14799976348877 C20.937000036239624,29.457999229431152 20.485000044107437,29.59999942779541 20.02000005345326,29.59999942779541z M15.006999969482422,12.317999839782715 C15.006999969482422,12.317999839782715 14.839000225067139,12.317999839782715 14.839000225067139,12.317999839782715 C12.823999881744385,12.407999515533447 11.184000015258789,14.099999904632568 11.184000015258789,16.089999675750732 C11.184000015258789,17.884999752044678 12.359000205993652,20.106999695301056 14.580999851226807,22.53499960899353 C16.570000171661377,24.704999923706055 18.300999999046326,26.370999813079834 19.915000051259995,27.63699960708618 C19.9800000526011,27.68899965286255 20.084000051021576,27.68899965286255 20.14900004863739,27.63699960708618 C21.75,26.370999813079834 23.49399995803833,24.704999923706055 25.4830002784729,22.53499960899353 C27.704999923706055,20.106999695301056 28.880000114440918,17.871999740600586 28.880000114440918,16.089999675750732 C28.880000114440918,14.099999904632568 27.240000247955322,12.407999515533447 25.22499990463257,12.317999839782715 C24.075000286102295,12.265999794006348 23.015000104904175,12.717999458312988 22.05900001525879,13.660999774932861 C21.29700005054474,14.422999858856201 20.897000074386597,15.223999500274658 20.897000074386597,15.23699951171875 C20.74200004339218,15.572999477386475 20.406000047922134,15.779999732971191 20.03100005351007,15.779999732971191 C19.657000064849854,15.779999732971191 19.32200002670288,15.572999477386475 19.16700005531311,15.23699951171875 C19.16700005531311,15.23699951171875 18.76700007915497,14.435999870300293 18.005000114440918,13.673999786376953 C17.100000143051147,12.769999504089355 16.092000007629395,12.317999839782715 15.006999969482422,12.317999839782715z"></path>
-																										<clipPath id="heartClip-2822856033">
-																										<path d="M19.998999999952503,29.60099942779541 C19.534000009298325,29.60099942779541 19.082000017166138,29.44599969482422 18.695000052452087,29.14899976348877 C17.002000093460083,27.818999839782716 15.195000171661377,26.087999893188478 13.140999794006348,23.83999974822998 C10.557999610900879,21.01199967956543 9.239999771118164,18.401999665260316 9.239999771118164,16.08999974822998 C9.239999771118164,14.61799962615967 9.807999610900879,13.222999645233156 10.854000091552734,12.150999618530275 C11.88700008392334,11.091999603271486 13.270999908447266,10.471999717712404 14.730000019073486,10.407000137329103 C17.312999963760376,10.290999961853029 19.055999994277954,11.853999687194825 19.998999999952503,13.067999912261964 C20.941999971866608,11.853999687194825 22.687000036239624,10.290999961853029 25.269999980926514,10.407000137329103 C26.742000102996826,10.471999717712404 28.112000465393066,11.091999603271486 29.145000457763672,12.150999618530275 C30.19099998474121,13.222999645233156 30.760000228881836,14.61799962615967 30.760000228881836,16.08999974822998 C30.760000228881836,18.401999665260316 29.44200038909912,21.01199967956543 26.859000205993652,23.83999974822998 C24.804999828338623,26.087999893188478 22.983999967575073,27.830999923706056 21.304999947547913,29.14899976348877 C20.916999995708466,29.458999229431154 20.46399998664856,29.60099942779541 19.998999999952503,29.60099942779541z"></path></clipPath></defs>
-																										<g>
-																										<use href="#heart-outline-2822856033"></use>
-																										<g clip-path="url(#heartClip-2822856033)">
-																										<path class="oLv--heartWave" d="M35.8989999655448,44.100999465197816 C34.98310523074035,46.157234260088714 32.3710338922795,46.99535233691914 30.833036567252698,48.45328857508328 C29.23893981921156,49.96439298433779 28.239005266352315,52.508837640537095 26.21994514123117,53.283559585976555 C24.201044345140936,54.05829517486923 21.755805656303757,52.8356133499956 19.559862204509066,52.77861010001452 C17.441631361758233,52.723605785854645 14.939443830148655,53.84814310155439 12.883208931109259,52.93224958300208 C10.826960492765146,52.01651417722854 9.989015388418842,49.404297153189994 8.531224835832397,47.866472800647315 C7.0199747410001905,46.272203080122054 4.475530084800887,45.27226852726281 3.7007944959082124,43.253367731172574 C2.9262318794996602,41.234321249504646 4.148740731889166,38.78922824624516 4.205569786624704,36.59343045189542 C4.260575310527441,34.475199789308846 3.1362109803303753,31.972866420090057 4.051931526398562,29.916777206628353 C4.967826261203015,27.860542411737455 7.579911243117081,27.022265005876122 9.117894924690667,25.564488096742892 C10.711991672731806,24.053383687488378 11.711939869044265,21.508779702258167 13.730986350712193,20.734217085849615 C15.749887146802429,19.95948149695694 18.195125835639608,21.18216332183057 20.3910692874343,21.23916657181165 C22.509313773638347,21.29401155694062 25.01148766179471,20.169633570271778 27.06773620428732,21.08536775979318 C29.12397099917822,22.001262494597633 29.961916103524523,24.613479518636176 31.419706656110968,26.151303871178854 C32.93097039439639,27.745414262673208 35.47541505059569,28.745348815532452 36.25013699603515,30.764408940653595 C37.024699612443705,32.78345542232152 35.8021907600542,35.22854842558101 35.74536170531866,37.42434621993075 C35.69035618141592,39.542576882517324 36.81473418110333,42.04475061864217 35.8989999655448,44.100999465197816z" style="transform-box: fill-box; transform-origin: center center;"></path></g></g></svg></span></span></span>
-																					</div>
-																				</div>
-																			</div>
-																		</div>
-																		<div class="e9fk e9fk-pres-apac e9fk-mod-responsive">
-																			<div class="e9fk-photoContainer" data-index="2">
-																				<button class="e9fk-photoWrap">
-																					<img class="e9fk-photo" alt="토요코인 서울영등포점" src="https://content.r9cdn.net/rimg/himg/16/8e/b8/expediav2-6094950-29198e-711165.jpg?width=432&amp;height=432&amp;xhint=540&amp;yhint=333&amp;crop=true&amp;watermarkheight=28&amp;watermarkpadding=10" srcset="https://content.r9cdn.net/rimg/himg/16/8e/b8/expediav2-6094950-29198e-711165.jpg?width=216&amp;height=216&amp;xhint=540&amp;yhint=333&amp;crop=true&amp;watermarkheight=14&amp;watermarkpadding=5 1x, https://content.r9cdn.net/rimg/himg/16/8e/b8/expediav2-6094950-29198e-711165.jpg?width=432&amp;height=432&amp;xhint=540&amp;yhint=333&amp;crop=true&amp;watermarkheight=28&amp;watermarkpadding=10 2x" style="object-position: left center;">
-																				</button>
-																			</div>
-																			<div class="e9fk-bannerRow e9fk-highBanners"></div>
-																			<div class="e9fk-badImageWrap"></div>
-																		</div>
-																	</div>
-																	<div class="IirT-top-section">
-																		<div class="IirT-hotel-badges-section">
-																			<div class="hwJn hwJn-pres-apac">
-																				<div class="hwJn-badge-row hwJn-mod-responsive"></div>
-																			</div>
-																		</div>
-																		<div class="IirT-header-info-section">
-																			<div>
-																				<div role="button" tabindex="-1" class="IirT-header-container">
-																					<h3 class="IirT-header">토요코인 서울영등포점</h3>
-																					<div class="">
-																						<div class="O3Yc O3Yc-sp-default" role="img" aria-label="2성급">
-																							<span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
-																										<path d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
-																										<path d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span>
-																						</div>
-																					</div>
-																				</div>
-																				<button class="IirT-location-container" aria-label="토요코인 서울영등포점 호텔을 지도에서 보려면 클릭하세요.">
-																					<span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 16px; height: 16px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" class="IirT-location-icon" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
-																							<path d="M173.2 179.7c-.3-.1-26.4-9.7-73.2-9.7c-46.8 0-73 9.6-73.2 9.7c-2.6 1-5.5-.3-6.4-2.9c-1-2.6.3-5.5 2.9-6.4c1-.4 22.9-8.5 63.1-10.1C69.7 145.7 40 114.6 40 80c0-33.1 26.9-60 60-60s60 26.9 60 60c0 34.6-29.7 65.7-46.3 80.3c40.1 1.6 62.1 9.7 63.1 10.1c2.6 1 3.9 3.9 2.9 6.4c-1 2.6-3.9 3.8-6.5 2.9zM100 30c-27.6 0-50 22.4-50 50c0 36.1 38.9 69.8 50 78.7c11.1-8.9 50-42.6 50-78.7c0-27.6-22.4-50-50-50zm0 75c-13.8 0-25-11.2-25-25s11.2-25 25-25s25 11.2 25 25s-11.2 25-25 25zm0-40c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15z"></path></svg></span><span class="IirT-neighborhood">영등포구</span><span class="IirT-divider"></span>
-																				</button>
-																			</div>
-																			<button class="IirT-rating-section" aria-label="토요코인 서울영등포점는 후기 2,322개개 평점에서 매우 좋음 8.5개를 받았습니다. 사용자 및 다른 상세 후기를 보려면 클릭하세요.">
-																				<div class="IirT-rating-category-and-count">
-																					<span class="IirT-rating-count">후기 2,322개</span>
-																				</div>
-																				<div class="eddo eddo-pres-circular eddo-size-default eddo-positive-rating">
-																					<svg class="eddo-circular-svg">
-																						<circle class="eddo-circular-svg-blank" cx="20" cy="20" r="16.666666666666668" stroke-width="4" stroke-dasharray="104.71975511965978" stroke-linecap="round"></circle>
-																						<circle class="eddo-circular-svg-filled" cx="20" cy="20" r="16.666666666666668" stroke-width="4" stroke-dasharray="104.71975511965978" stroke-dashoffset="15.70796326794897" stroke-linecap="round"></circle></svg>
-																					<span class="eddo-rating-score">8.5</span>
-																				</div>
-																			</button>
-																		</div>
-																	</div>
-																</div>
-																<div class="IirT-bottom-section">
-																	<div id="responsive-info-photo-container-2">
-																		<div class="IirT-photo-container" role="button" tabindex="-1">
-																			<div class="e9fk e9fk-pres-apac e9fk-mod-responsive">
-																				<div class="e9fk-photoContainer" data-index="2">
-																					<button class="e9fk-photoWrap">
-																						<img class="e9fk-photo" alt="토요코인 서울영등포점" src="https://content.r9cdn.net/rimg/himg/16/8e/b8/expediav2-6094950-29198e-711165.jpg?width=432&amp;height=432&amp;xhint=540&amp;yhint=333&amp;crop=true&amp;watermarkheight=28&amp;watermarkpadding=10" srcset="https://content.r9cdn.net/rimg/himg/16/8e/b8/expediav2-6094950-29198e-711165.jpg?width=216&amp;height=216&amp;xhint=540&amp;yhint=333&amp;crop=true&amp;watermarkheight=14&amp;watermarkpadding=5 1x, https://content.r9cdn.net/rimg/himg/16/8e/b8/expediav2-6094950-29198e-711165.jpg?width=432&amp;height=432&amp;xhint=540&amp;yhint=333&amp;crop=true&amp;watermarkheight=28&amp;watermarkpadding=10 2x" style="object-position: left center;">
-																					</button>
-																				</div>
-																				<div class="e9fk-bannerRow e9fk-highBanners"></div>
-																				<div class="e9fk-badImageWrap"></div>
-																			</div>
-																		</div>
-																		<div class="IirT-top-section">
-																			<div class="IirT-hotel-badges-section">
-																				<div class="hwJn hwJn-pres-apac">
-																					<div class="hwJn-badge-row hwJn-mod-responsive"></div>
-																				</div>
-																			</div>
-																			<div class="IirT-header-info-section">
-																				<div>
-																					<div role="button" tabindex="-1" class="IirT-header-container">
-																						<h3 class="IirT-header">토요코인 서울영등포점</h3>
-																						<div class="">
-																							<div class="O3Yc O3Yc-sp-default" role="img" aria-label="2성급">
-																								<span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
-																											<path d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span><span class="O3Yc-star O3Yc-mod-black-active" style="width: 12px; height: 12px;"><span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 12px; height: 12px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
-																											<path d="M185.2 71.8l-59.7-2.6l-20.8-56c-1.6-4.3-7.8-4.3-9.4 0l-20.8 56l-59.7 2.6c-4.6.2-6.5 6-2.9 8.9l46.8 37.1l-16 57.5c-1.2 4.4 3.7 8.1 7.6 5.5l49.7-33l49.7 33c3.8 2.5 8.8-1 7.6-5.5l-16-57.5l46.8-37.1c3.6-2.9 1.7-8.7-2.9-8.9z"></path></svg></span></span>
-																							</div>
-																						</div>
-																					</div>
-																					<button class="IirT-location-container" aria-label="토요코인 서울영등포점 호텔을 지도에서 보려면 클릭하세요.">
-																						<span style="transform: translate3d(0px, 0px, 0px); vertical-align: middle; -webkit-font-smoothing: antialiased; width: 16px; height: 16px;"><svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" class="IirT-location-icon" role="img" style="width: inherit; height: inherit; line-height: inherit; color: inherit;">
-																								<path d="M173.2 179.7c-.3-.1-26.4-9.7-73.2-9.7c-46.8 0-73 9.6-73.2 9.7c-2.6 1-5.5-.3-6.4-2.9c-1-2.6.3-5.5 2.9-6.4c1-.4 22.9-8.5 63.1-10.1C69.7 145.7 40 114.6 40 80c0-33.1 26.9-60 60-60s60 26.9 60 60c0 34.6-29.7 65.7-46.3 80.3c40.1 1.6 62.1 9.7 63.1 10.1c2.6 1 3.9 3.9 2.9 6.4c-1 2.6-3.9 3.8-6.5 2.9zM100 30c-27.6 0-50 22.4-50 50c0 36.1 38.9 69.8 50 78.7c11.1-8.9 50-42.6 50-78.7c0-27.6-22.4-50-50-50zm0 75c-13.8 0-25-11.2-25-25s11.2-25 25-25s25 11.2 25 25s-11.2 25-25 25zm0-40c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15z"></path></svg></span><span class="IirT-neighborhood">영등포구</span><span class="IirT-divider"></span><span class="IirT-show-on-map">지도 보기</span>
-																					</button>
-																				</div>
-																				<button class="IirT-rating-section" aria-label="토요코인 서울영등포점는 후기 2,322개개 평점에서 매우 좋음 8.5개를 받았습니다. 사용자 및 다른 상세 후기를 보려면 클릭하세요.">
-																					<div class="IirT-rating-category-and-count">
-																						<span class="IirT-rating-category">매우 좋음<span class="IirT-rating-score-in-category">8.5</span></span><span class="IirT-rating-count">후기 2,322개</span>
-																					</div>
-																					<div class="eddo eddo-pres-circular eddo-size-default eddo-positive-rating">
-																						<svg class="eddo-circular-svg">
-																							<circle class="eddo-circular-svg-blank" cx="20" cy="20" r="16.666666666666668" stroke-width="4" stroke-dasharray="104.71975511965978" stroke-linecap="round"></circle>
-																							<circle class="eddo-circular-svg-filled" cx="20" cy="20" r="16.666666666666668" stroke-width="4" stroke-dasharray="104.71975511965978" stroke-dashoffset="15.70796326794897" stroke-linecap="round"></circle></svg>
-																						<span class="eddo-rating-score">8.5</span>
-																					</div>
-																				</button>
-																			</div>
-																		</div>
-																	</div>
-																	<div class="SO-5 SO-5-mod-responsive">
-																		<div class="SO-5-providers-list-wrapper" tabindex="-1">
-																			<div class="D8J- D8J--mod-responsive">
-																				<div class="D8J--outer-border"></div>
-																				<div class="D8J--multi-book-item" aria-label="트립닷컴 토요코인 서울영등포점에서 1박 84,213원 숙박 상품 보기 조식 포함, 무료 인터넷 포함 무료 서비스." role="button" tabindex="0">
-																					<div class="D8J--promotions-and-freebies-container">
-																						<div class="D8J--freebies">
-																							<div class="D8J--freebie">
-																								<svg viewBox="0 0 200 200" width="16" height="16" xmlns="http://www.w3.org/2000/svg" role="img">
-																									<path d="M86.3 148.4l-45-49.3c-1.9-2-1.7-5.2.3-7.1c2-1.9 5.2-1.7 7.1.3l40.9 44.8l61.4-85c1.6-2.2 4.7-2.7 7-1.1c2.2 1.6 2.7 4.7 1.1 7l-65 90c-1.9 2.5-5.7 2.7-7.8.4z"></path></svg>
-																								<span class="D8J--freebie-text">스위트 룸(객실
-																									이름 누르면 상세정보창)</span>
-																							</div>
-																						</div>
-																					</div>
-																					<div class="D8J--price-info-container D8J--no-margin-right-padding">
-																						<div class="D8J--price-container">
-																							<span class="D8J--price D8J--featured" role="button" tabindex="-1">84,213원</span>
-																						</div>
-																						<span class="D8J--for-n-nights">1박 요금</span>
-																						<div class="D8J--view-deal-container">
-																							<button role="button" class="Iqt3 Iqt3-mod-stretch Iqt3-mod-bold Button-No-Standard-Style Iqt3-mod-variant-solid Iqt3-mod-theme-progress Iqt3-mod-shape-rounded-small Iqt3-mod-shape-mod-default Iqt3-mod-spacing-default Iqt3-mod-size-xsmall" tabindex="-1" aria-disabled="false">
-																								<div class="Iqt3-button-container">
-																									<div class="Iqt3-button-content">
-																										<span>객실 예약</span>
-																									</div>
-																								</div>
-																								<div class="Iqt3-button-focus-outline"></div>
-																							</button>
-																						</div>
-																					</div>
-																				</div>
-																			</div>
-																			<div class="D8J- D8J--mod-responsive">
-																				<div class="D8J--outer-border"></div>
-																				<div class="D8J--multi-book-item" aria-label="트립닷컴 토요코인 서울영등포점에서 1박 84,213원 숙박 상품 보기 조식 포함, 무료 인터넷 포함 무료 서비스." role="button" tabindex="0">
-																					<div class="D8J--promotions-and-freebies-container">
-																						<div class="D8J--freebies">
-																							<div class="D8J--freebie">
-																								<svg viewBox="0 0 200 200" width="16" height="16" xmlns="http://www.w3.org/2000/svg" role="img">
-																									<path d="M86.3 148.4l-45-49.3c-1.9-2-1.7-5.2.3-7.1c2-1.9 5.2-1.7 7.1.3l40.9 44.8l61.4-85c1.6-2.2 4.7-2.7 7-1.1c2.2 1.6 2.7 4.7 1.1 7l-65 90c-1.9 2.5-5.7 2.7-7.8.4z"></path></svg>
-																								<span class="D8J--freebie-text">디럭스 룸(객실
-																									이름 누르면 상세정보창)</span>
-																							</div>
-																						</div>
-																					</div>
-																					<div class="D8J--price-info-container D8J--no-margin-right-padding">
-																						<div class="D8J--price-container">
-																							<span class="D8J--price D8J--featured" role="button" tabindex="-1">84,213원</span>
-																						</div>
-																						<span class="D8J--for-n-nights">1박 요금</span>
-																						<div class="D8J--view-deal-container">
-																							<button role="button" class="Iqt3 Iqt3-mod-stretch Iqt3-mod-bold Button-No-Standard-Style Iqt3-mod-variant-solid Iqt3-mod-theme-progress Iqt3-mod-shape-rounded-small Iqt3-mod-shape-mod-default Iqt3-mod-spacing-default Iqt3-mod-size-xsmall" tabindex="-1" aria-disabled="false">
-																								<div class="Iqt3-button-container">
-																									<div class="Iqt3-button-content">
-																										<span>객실 예약</span>
-																									</div>
-																								</div>
-																								<div class="Iqt3-button-focus-outline"></div>
-																							</button>
-																						</div>
-																					</div>
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-																<div class="IirT-ranking-debug-section" role="button" tabindex="-1"></div>
-															</div>
-														</div>
-													</div></div>
+
 											</div>
 											<div class="Pf_g-pagination">
 												<nav aria-labelledby="paginationLabel" class="Joiu Joiu-mod-variant-action Joiu-with-label">
@@ -3690,7 +3468,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 															</div>
 														</div>
 														<div class="IirT-bottom-section">
-															<div id="responsive-info-photo-container-2">
+														<input type="button" value="ㅇㄹ">															<div id="responsive-info-photo-container-2">
 																<div class="IirT-photo-container" role="button" tabindex="-1">
 																	<div class="IirT-resultActionsMenuContainer IirT-alwaysVisible">
 																		<div class="dSkV dSkV-pres-hrp-over-image">

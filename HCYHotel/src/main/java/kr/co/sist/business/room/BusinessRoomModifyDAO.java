@@ -118,4 +118,10 @@ MyBatiseHandlerBusiness mbh=MyBatiseHandlerBusiness.getInstance();
 	    mbh.closeHandler(ss);
 	    return rid;
 	}
+	public void deleteRoom(String roomcode) {
+		MyBatiseHandlerBusiness mbh = MyBatiseHandlerBusiness.getInstance();
+	    SqlSession ss = mbh.getMyBatisHandler(true);
+	    ss.delete("kr.co.sist.business.roomModifyMapper.deleteRoom",roomcode);
+	    mbh.closeHandler(ss);
+	}
 }

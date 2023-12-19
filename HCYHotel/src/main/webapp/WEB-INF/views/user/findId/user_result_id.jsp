@@ -4,7 +4,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html lang="ko">
 <head>
-<title>사람인</title>
+<title>아이디 찾기</title>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="Content-Language" content="ko-KR">
@@ -18,7 +18,7 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ko_KR">
 <meta property="fb:app_id" content="1593727887570039">
-<meta property="og:image:width" content="200">
+<meta property="og:image:width" content="200"> 
 <meta property="og:image:height" content="200">
 <link href="http://localhost/HCYHotel/common/user/css/sticky_assist.css" media="all"
 	rel="stylesheet" type="text/css">

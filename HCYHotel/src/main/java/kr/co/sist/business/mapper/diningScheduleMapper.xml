@@ -18,5 +18,23 @@ select diningname,diningcode
 from dining
 where hotelcode=#{hotelcode}
 </select>
-
+<insert id="insertSchedule" parameterType="dsVO2">
+insert into diningschedule(schedulecode, diningcode, price, scheduledate, category, pplcnt)
+values('S'||to_char(lpad(seq_diningschedule.nextval, 6, '0')),#{diningcode},#{price},#{scheduledate},#{category},#{pplcnt})
+</insert>
+<select id="selectSchedule2" resultType="dsid2" parameterType="String">
+select * from diningschedule where schedulecode=#{schedulecode}
+</select>
+<update id="updateSchedule" parameterType="dsVO2">
+update diningschedule
+set diningcode=#{diningcode},
+category=#{category},
+pplcnt=#{pplcnt},
+price=#{price},
+scheduledate=#{scheduledate}
+where schedulecode=#{schedulecode}
+</update>
+<delete id="deleteSchedule" parameterType="String">
+delete from diningschedule where schedulecode=#{schedulecode}
+</delete>
 </mapper>

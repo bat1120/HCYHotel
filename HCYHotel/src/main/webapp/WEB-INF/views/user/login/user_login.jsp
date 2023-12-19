@@ -5,7 +5,7 @@
 
 <html lang="ko">
 <head>
-<title>로그인 - 사람인</title>
+<title>로그인</title>
 	<jsp:include page="../include/header.jsp"/>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -331,41 +331,44 @@ googletag.cmd.push(function() {
 	</div>
 
 <script>
-    function setMemberFlag(flag) {
-        document.getElementById("memberFlag").value = flag;
-        
-        // 모든 버튼의 클래스를 초기화
-        document.querySelectorAll('.btn_tab').forEach(function (btn) {
-            btn.classList.remove('active');
-        });
- 
-        // flag에 따라 버튼 active 활성화 
-        var selectedBtn;
-        if (flag == 1) {
-            selectedBtn = document.querySelector('.btn_tab.t_per');
-            if(${idRememberFlag=='Y'}){
-            $("#id_save").attr("checked","checked");
-                $("#id").val('${id}')
-            }else{
-                $("#id_save").removeAttr("checked");
-                $("#id").val('')
-            }//else
-        } else if (flag == 2) {
-            selectedBtn = document.querySelector('.btn_tab.t_com');
-        	if(${busidRememberFlag=='Y'}){
-                $("#id_save").attr("checked",'checked');
-                $("#id").val('${busid}')
-                }else{
-                $("#id_save").removeAttr("checked");
-                $("#id").val('')
-                }//else
-        }//else if
+function setMemberFlag(flag) {
+    document.getElementById("memberFlag").value = flag;
 
-        if (selectedBtn) {
-            selectedBtn.classList.add('active');
+    // 모든 버튼의 클래스를 초기화
+    document.querySelectorAll('.btn_tab').forEach(function (btn) {
+        btn.classList.remove('active');
+    });
+
+    // flag에 따라 버튼 active 활성화
+    var selectedBtn;
+    var idRememberFlag = '${idRememberFlag}'; // 서버에서 가져온 값으로 대체해야 합니다.
+    var busidRememberFlag = '${busidRememberFlag}'; // 서버에서 가져온 값으로 대체해야 합니다.
+
+    if (flag == 1) {
+        selectedBtn = document.querySelector('.btn_tab.t_per');
+        if (idRememberFlag === 'Y') {
+            $("#id_save").prop("checked", true);
+            $("#id").val('${id}');
+        } else {
+            $("#id_save").prop("checked", false);
+            $("#id").val('');
         }
-
+    } else if (flag == 2) {
+        selectedBtn = document.querySelector('.btn_tab.t_com');
+        if (busidRememberFlag === 'Y') {
+            $("#id_save").prop("checked", true);
+            $("#id").val('${busid}');
+        } else {
+            $("#id_save").prop("checked", false);
+            $("#id").val('');
+        }
     }
+
+    if (selectedBtn) {
+        selectedBtn.classList.add('active');
+    }
+}
+
 </script>
 
 

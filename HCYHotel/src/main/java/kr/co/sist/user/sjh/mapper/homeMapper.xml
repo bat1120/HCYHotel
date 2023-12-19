@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.co.sist.user.sjh.homeMapper">
+
+
+<select id="getRecommendedHotels" resultType="kr.co.sist.user.home.HotelDomain">
+  select * from
+ (
+ select  h.*, i.filename from hotel h
+ left outer join INFOFILE i
+ on h.hotelcode = i.hotelcode
+ where hotelrate in('4','5')
+ order by inputdate desc
+ ) TTT
+ where ROWNUM &lt;= 4
+</select>
+
+<select id="getRisingHotels" resultType="kr.co.sist.user.home.HotelDomain">
+ select * from
+ (
+ select  h.*, i.filename from hotel h
+ left outer join INFOFILE i
+ on h.hotelcode = i.hotelcode 
+ where hotelrate='5'
+ order by inputdate desc
+ ) TTT
+ where ROWNUM &lt;= 3
+</select>
+
+<select id="getHotHotels" resultType="kr.co.sist.user.home.HotelDomain">
+select * from
+ (
+ select  h.*, i.filename from hotel h
+ left outer join INFOFILE i
+ on h.hotelcode = i.hotelcode
+ where hotelrate ='5'
+ ) TTT
+ where ROWNUM &lt;= 5
+</select>
+
+</mapper>

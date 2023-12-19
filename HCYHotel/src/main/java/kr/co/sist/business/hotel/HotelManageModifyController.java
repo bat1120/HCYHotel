@@ -53,6 +53,7 @@ public class HotelManageModifyController {
 		model.addAttribute("hoteltel", hid.getTel());
 		model.addAttribute("breakfastprice", hid.getBreackfastprice());
 		model.addAttribute("filelist", list);
+		model.addAttribute("hotelcode",request.getParameter("hotelcode"));
 
 		return "BusinessManage/businessmanage_hotel_info";
 	}
@@ -194,8 +195,12 @@ public class HotelManageModifyController {
 	
 
 	
-	@GetMapping({ "/BusinessManage/businessHotelDelete.do" })
-	public String hotelErase(String hotelCode) {
-		return "";
+	@GetMapping({ "/BusinessManage/delete_hotel.do" })
+	public String hotelErase(HttpServletRequest request) {
+		String hotelcode=request.getParameter("hotelcode");
+		HotelManageModifySevice hmms=HotelManageModifySevice.getInstance();
+
+		hmms.deleteHotel(hotelcode);
+		return "redirect:businessHotel.do";
 	}
 }

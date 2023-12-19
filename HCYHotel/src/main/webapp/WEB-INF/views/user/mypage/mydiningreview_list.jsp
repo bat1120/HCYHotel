@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=1280">
 <meta name="format-detection" content="telephone=no">
 
-<title>나의 다이닝 리뷰 | HCYCombined</title>
+<title>나의 다이닝 후기 - 마이페이지 | HCYCombined</title>
 
 <link rel="shortcut icon" href="/system/images/favicon.ico">
 <link rel="apple-touch-icon" href="/system/images/favicon.ico">
@@ -74,76 +74,8 @@
 	src="https://pg.easypay.co.kr/webpay/EasypayCard_Web.js"></script>
 
 
-<script>
-    (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date(); a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
-    ga('create', 'UA-87590871-1', 'auto');
-    ga('send', 'pageview');
-</script>
-
-
-<!-- Global site tag (gtag.js) - Google Ads: 796355633 휘닉스 마케팅팀 김하나과장 요청 20190926-->
-<script async=""
-	src="https://www.googletagmanager.com/gtag/js?id=AW-796355633"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-796355633');
-</script>
-
-<script type="text/javascript" async=""
-	src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/796355633/?random=1701769204151&amp;cv=11&amp;fst=1701769204151&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45be3bt0&amp;gcd=11l1l1l1l1&amp;dma=0&amp;u_w=1920&amp;u_h=1080&amp;url=https%3A%2F%2Fphoenixhnr.co.kr%2Fpage%2Fcustomer%2Fnotice%3Fq%255BhmpgDivCd%255D%3D%26page%3D1%26size%3D10&amp;ref=https%3A%2F%2Fwww.google.com%2F&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=%EA%B3%B5%EC%A7%80%EC%82%AC%ED%95%AD%20%3C%20%EA%B3%A0%EA%B0%9D%EC%84%BC%ED%84%B0%20%7C%20%ED%9C%98%EB%8B%89%EC%8A%A4%20%ED%98%B8%ED%85%94%EC%95%A4%EB%93%9C%EB%A6%AC%EC%A1%B0%ED%8A%B8&amp;auid=1184424877.1701769204&amp;fledge=1&amp;uaa=x86&amp;uab=64&amp;uafvl=Google%2520Chrome%3B119.0.6045.200%7CChromium%3B119.0.6045.200%7CNot%253FA_Brand%3B24.0.0.0&amp;uamb=0&amp;uap=Windows&amp;uapv=10.0.0&amp;uaw=0&amp;data=event%3Dgtag.config&amp;rfmt=3&amp;fmt=4"></script>
-</head>
-<body cz-shortcut-listen="true">
-
-	<a href="#content-main" class="skip-navi">본문 바로가기</a>
-
-	<script type="text/x-template" id="globalMessageboxAlertTemplate">
-            <article id="commonAlert" class="common-pop default-pop is-layer" style="display:none;">
-                <!-- 팝업 body // -->
-                <div class="common-pop-body pop-class-name common-message-box-pop-body">
-                    <header class="common-pop-title">
-                        <h1 class="title">알림</h1>
-                        <a id="commonAlertClose" href="javascript:;" class="common-message-box-close">취소</a>
-                    </header>
-                    <div id="alertMessageContent" class="common-pop-content common-message-box-pop-content">
-                    </div>
-                    <div class="common-pop-btn-area">
-                        <button id="commonAlertOk" type="button" class="btn-action primary">확인</button>
-                    </div>
-                </div>
-                <!-- // 팝업 body -->
-            </article>
-        </script>
-
-	<script type="text/x-template" id="globalMessageboxConfirmTemplate">
-            <article id="commonConfirm" class="common-pop default-pop is-layer" style="display:none;">
-                <!-- 팝업 body // -->
-                <div class="common-pop-body pop-class-name common-message-box-pop-body">
-                    <header class="common-pop-title">
-                        <h1 class="title">알림</h1>
-                        <a id="commonConfirmClose" href="javascript:;" class="common-message-box-close">닫기</a>
-                    </header>
-                    <div id="confirmMessageContent" class="common-pop-content common-message-box-pop-content">
-                    </div>
-                    <div class="common-pop-btn-area">
-                        <button id="commonConfirmCancel" type="button" class="btn-action">취소</button>
-                        <button id="commonConfirmOk" type="button" class="btn-action primary">확인</button>
-                    </div>
-                </div>
-                <!-- // 팝업 body -->
-            </article>
-        </script>
-
 	<!-- header -->
-	<jsp:include page="../../include/header.jsp" />
+	<jsp:include page="../include/header.jsp" />
 	
 	<script type="text/javascript">
 	$(function(){
@@ -151,23 +83,23 @@
 	});//ready
 	
 	
-	</script>
+	</script>ㅊ
 	
 <div id="content-main" class="content-main">
 <div >
-<h3 class="content-main-title" style="margin-top:7%; ">나의 다이닝리뷰</h3>
-<table class="board-list" style="width: 1200px; margin-left:20%; margin-top:100px;">
+<h3 class="content-main-title" style="margin-top:7%; ">나의 다이닝 후기</h3>
+<table class="board-list" style="width: 1200px; margin-left:20%; margin-top:100px; margin-bottom: 100px;">
 <c:forEach var="diningReviewList" varStatus="i" items="${ diningReviewList }">
 <tr style="font-family: ; color: ; ">
-	<td colspan="3">다이닝 <c:out value="${ diningReviewList.diningName }" /></td>
-	<td>호텔 <c:out value="${ diningReviewList.hotelName }"/></td>
-	<td>내 평점 <c:out value="${ diningReviewList.rating }"/></td>
-	<td rowspan="2"><input type="button" class="btn btn-dark btn-sm" value="삭제"/></td>
+	<td colspan="3" style="width: 400px;"><strong>다이닝 </strong><c:out value="${ diningReviewList.diningName }" /></td>
+	<td style="width: 400px"><strong>호텔 </strong><c:out value="${ diningReviewList.hotelName }"/></td>
+	<td style="width 300px;"><strong>내 평점 </strong><c:out value="${ diningReviewList.rating }"/> / 10.0</td>
+	<td rowspan="2" style="width: 100px;"><input type="button" class="btn btn-dark btn-sm" value="삭제"/></td>
 </tr>
 <tr style="text-align: left;">
-	<td colspan="3"><c:out value="${ diningReviewList.content }"/></td>
+	<td colspan="3" width="1100px" ><c:out value="${ diningReviewList.content }"/></td>
 	<td></td>
-	<td></td>
+	<td></td> 
 </tr>	
 </c:forEach>
 </table>
@@ -177,7 +109,7 @@
 	
 
 	<!-- footer -->
-	<jsp:include page="../../include/footer.jsp" />
+	<jsp:include page="../include/footer.jsp" />
 
 	</div>
 	<iframe allow="join-ad-interest-group" data-tagging-id="AW-796355633"

@@ -36,4 +36,19 @@ public class DiningManageDAO {
       mbh.closeHandler(ss);
       return list;
    }
+   public List<DiningDomain> selectDiningList(DiningRegisterVO drVO){
+	   MyBatiseHandlerBusiness mbh = MyBatiseHandlerBusiness.getInstance();
+	      SqlSession ss = mbh.getMyBatisHandler(true);
+	      List<DiningDomain> list = ss.selectList("kr.co.sist.business.diningReservationMapper.selectDiningRegister", drVO);
+	      mbh.closeHandler(ss);
+	      
+	      return list;
+	      
+   }
+   public void deleteBooking(String bookingcode) {
+	   MyBatiseHandlerBusiness mbh = MyBatiseHandlerBusiness.getInstance();
+	      SqlSession ss = mbh.getMyBatisHandler(true);
+	      ss.delete("kr.co.sist.business.diningReservationMapper.deleteBooking", bookingcode);
+	      mbh.closeHandler(ss);
+   }
 }

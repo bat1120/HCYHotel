@@ -60,4 +60,7 @@ public class BusinessRoomModifyService {
 		RoomInfoDomain rid=BusinessRoomModifyDAO.getInstance().selectRoom(roomcode);
 		return rid;
 	}
+	public void deleteRoom(String roomcode) {
+		BusinessRoomModifyDAO.getInstance().deleteRoom(roomcode);
+	}
 }

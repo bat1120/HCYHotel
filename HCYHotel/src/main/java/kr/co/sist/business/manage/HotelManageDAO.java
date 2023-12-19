@@ -43,6 +43,12 @@ public class HotelManageDAO {
 		return list;
 	}//searchBookingHotel
 		
+		public void deleteBooking(String bookingcode) {
+			MyBatiseHandlerBusiness mbh=MyBatiseHandlerBusiness.getInstance();
+			SqlSession ss=mbh.getMyBatisHandler(true);
+			ss.delete("kr.co.sist.business.hotelMapper.deleteBooking",bookingcode);
+			mbh.closeHandler(ss);
+		}
 		
 //	public static void main(String[] arg) {
 //		List<BusinessHotelDomain> list=new ArrayList<BusinessHotelDomain>();

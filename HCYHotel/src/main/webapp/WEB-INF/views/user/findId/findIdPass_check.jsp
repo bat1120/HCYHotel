@@ -3,7 +3,7 @@
 <%@ page info=""%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html lang="ko"><head>
-        <title>아이디/비밀번호 찾기 - 사람인</title>    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <title>아이디/비밀번호 찾기</title>    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="Content-Language" content="ko-KR">
 <meta name="naver-site-verification" content="86455485e27cab6986d130e4c3b90c5b516820d1">

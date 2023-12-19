@@ -1,240 +1,346 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ page info="문의작성"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+    pageEncoding="UTF-8"%>
+<%@ page info="" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<html lang="ko" class="noIE">
-<head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-<meta name="viewport" content="width=1280">
-<meta name="format-detection" content="telephone=no">
 
-<title>문의사항 작성 | HCYCombined</title>
+<html lang="ko"><head>
+    <title>문의하기 - 문의사항 | HCYCombined</title>
 
-<link rel="shortcut icon" href="/system/images/favicon.ico">
-<link rel="apple-touch-icon" href="/system/images/favicon.ico">
-<!-- style -->
-<link rel="stylesheet"
-	href="http://localhost/HCYHotel/common/user/css/phoenix/common.min.css">
-<link rel="stylesheet"
-	href="http://localhost/HCYHotel/common/user/css/phoenix/contents.min.css">
+<meta charset="utf-8">
+
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="title" content="객실 - 문의하기 - 온라인 컨시어지 | 더 플라자 호텔 서울">
+<meta name="description" content="문의하신 내용은 관련 담당자에게 메일로 자동 발송됩니다. 최대한 빠른 시간 내에 답변 드리도록 노력하겠습니다.">
+<meta name="keywords" content="객실문의 더플라자 호텔 서울, 객실문의 더플라자, 객실문의 더플라자호텔">
+<meta property="og:title" content="객실 - 문의하기 - 온라인 컨시어지 | 더 플라자 호텔 서울">
+<meta property="og:image" content="https://www.hoteltheplaza.com/sp4/img/thumb.jpg">
+<meta property="og:image:type" content="image/jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="631">
+<meta property="og:url" content="https://www.hoteltheplaza.com/kr/">
+<meta property="og:description" content="문의하신 내용은 관련 담당자에게 메일로 자동 발송됩니다. 최대한 빠른 시간 내에 답변 드리도록 노력하겠습니다.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="더 플라자 호텔 서울">
+<meta property="og:locale" content="ko_KR">
+<!-- <meta property="fb:app_id" content="499127953852895"> -->
+<meta property="fb:app_id" content="142078889760752">
+<link rel="shortcut icon" type="image/x-icon" href="/_resource/favicon.ico">
+<link rel="stylesheet" type="text/css" href="http://localhost/HCYHotel/common/user/css/plaza/common.css">
+<script src="https://connect.facebook.net/signals/config/345077226063324?v=2.9.138&amp;r=stable&amp;domain=www.hoteltheplaza.com" async=""></script><script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script src="/_resource/js/vendor/jquery-1.9.1.min.js"></script>
+<script src="/_resource/js/vendor/TweenMax.min.js"></script>
+<script src="/_resource/js/vendor/Draggable.min.js"></script>
+<script>
+    var lang= location.href.replace(/^http.+(\/[a-z]{2})\/.*$/gi, "$1");
+</script>
 <!-- bootstrap -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <!-- jQuery CDN -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<!-- js -->
-<script type="text/javascript" async=""
-	src="https://www.googletagmanager.com/gtag/js?id=G-1J0VYQ4NSJ&amp;cx=c&amp;_slc=1"></script>
-	<!-- summernote  -->
-    <!-- include summernote css/js -->
-<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
-<script src="/js/libs/jquery-3.3.1.min.js"></script>
-<script src="/js/libs/jquery-ui/jquery-ui.min.js"></script>
-<script src="/js/libs/jquery.form.min.js"></script>
-<script src="/js/libs/jquery.datepicker.extension.range.modified.js"></script>
-<script src="/js/libs/jquery.bxslider.min.js"></script>
-<script src="/js/libs/swiper.min.js"></script>
-<script src="/js/pwUtil.js"></script>
-<script src="/js/ko/ui-common.js"></script>
-<link rel="stylesheet"
-	href="https://unpkg.com/nprogress@0.2.0/nprogress.css">
-<link rel="stylesheet"
-	href="http://localhost/HCYHotel/common/user/css/phoenix/system.css">
-
-<script type="text/javascript"
-	src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
-<script type="text/javascript" src="/system/js/libs/es6-promise.min.js"></script>
-<script type="text/javascript" src="/system/js/libs/lodash.min.js"></script>
-<script type="text/javascript" src="/system/js/libs/moment.min.js"></script>
-<script type="text/javascript" src="/system/js/libs/moment.locale.ko.js"></script>
-<script type="text/javascript" src="/system/js/libs/axios.min.js"></script>
-<script type="text/javascript" src="/system/js/libs/vue.min.js"></script>
-
-<script type="text/javascript" src="/system/js/system.js"></script>
-<script type="text/javascript" src="/system/js/system.utils.js"></script>
-<script type="text/javascript" src="/system/js/system.axios.js"></script>
-<script type="text/javascript" src="/system/js/system.eventBus.js"></script>
-<script type="text/javascript" src="/system/js/system.filters.js"></script>
-
-<script type="text/javascript"
-	src="/system/js/components/common/datepicker.component.js"></script>
-<script type="text/javascript"
-	src="/system/js/components/common/full-datepicker.component.js"></script>
-<script type="text/javascript"
-	src="/system/js/components/common/spinner.component.js"></script>
-<script type="text/javascript"
-	src="/system/js/components/common/pagination.component.js"></script>
-<script type="text/javascript"
-	src="/system/js/components/common/board.component.js"></script>
-
-<script type="text/javascript" src="/system/js/custom.js"></script>
-<script type="text/javascript" src="/system/js/libs/history.min.js"></script>
-
-<script type="text/javascript" src="/payment/js/easypay_payment.js"></script>
-<script type="text/javascript"
-	src="https://pg.easypay.co.kr/webpay/EasypayCard_Web.js"></script>
-
-<script type="text/javascript">
-	/* (DEVELOP ONLY) Enable Vue devtools */
-	Vue.prototype._ssrNode = function() {
-		return null;
-	};
-	Vue.config.debug = true;
-	Vue.config.devtools = true;
-
-	/* NProgress Config */
-	NProgress.configure({
-		showSpinner : false
-	});
-</script>
-
+<!-- Facebook Pixel Code -->
 <script>
-	(function(i, s, o, g, r, a, m) {
-		i['GoogleAnalyticsObject'] = r;
-		i[r] = i[r] || function() {
-			(i[r].q = i[r].q || []).push(arguments)
-		}, i[r].l = 1 * new Date();
-		a = s.createElement(o), m = s.getElementsByTagName(o)[0];
-		a.async = 1;
-		a.src = g;
-		m.parentNode.insertBefore(a, m)
-	})(window, document, 'script',
-			'https://www.google-analytics.com/analytics.js', 'ga');
-
-	ga('create', 'UA-87590871-1', 'auto');
-	ga('send', 'pageview');
-</script>
-
-
-<!-- Global site tag (gtag.js) - Google Ads: 796355633 휘닉스 마케팅팀 김하나과장 요청 20190926-->
-<script async=""
-	src="https://www.googletagmanager.com/gtag/js?id=AW-796355633"></script>
-<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag() {
-		dataLayer.push(arguments);
+	!function(f,b,e,v,n,t,s)
+	{
+		if(f.fbq)return;
+		n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+		if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+		n.queue=[];t=b.createElement(e);t.async=!0;
+		t.src=v;
+		s=b.getElementsByTagName(e)[0];
+		s.parentNode.insertBefore(t,s)
 	}
-	gtag('js', new Date());
-
-	gtag('config', 'AW-796355633');
+	(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+	fbq('init', '345077226063324'); 
+	fbq('track', 'PageView');
 </script>
-<script type="text/javascript">
-$(function(){
+<noscript>
+	<img height="1" width="1" src="https://www.facebook.com/tr?id=345077226063324&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Facebook Pixel Code -->
+	<meta property="og:url" content="https://www.hoteltheplaza.com/kr/customer_center/inquiry.jsp?inquiry=1">
+	<link rel="canonical" href="https://www.hoteltheplaza.com/kr/customer_center/inquiry.jsp?inquiry=1">
+	<link rel="alternate" href="https://www.hoteltheplaza.com/m/kr/customer_center/inquiry.jsp?inquiry=1">
+	<link hreflang="en" rel="alternate" href="https://www.hoteltheplaza.com/en/customer_center/inquiry.jsp?inquiry=1">
+	<link hreflang="ja" rel="alternate" href="https://www.hoteltheplaza.com/ja/customer_center/inquiry.jsp?inquiry=1">
+	<link hreflang="cn" rel="alternate" href="https://www.hoteltheplaza.com/cn/customer_center/inquiry.jsp?inquiry=1">
+    <link rel="stylesheet" type="text/css" href="http://localhost/HCYHotel/common/user/css/plaza/customer_center.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	
-	$("#txtContent").summernote({
-        toolbar: [
-    // [groupName, [list of button]]
-    ['style', ['bold', 'italic', 'underline', 'clear']],
-    // ['font', ['strikethrough', 'superscript', 'subscript']],
-    ['fontsize', ['fontsize']],
-    ['color', ['color']],
-    ['para', ['ul', 'ol', 'paragraph']],
-    // ['height', ['height']]
-    ['table', ['table']],
-  ['insert', ['picture']]
-  ],
-  placeholder: '문의사항을 작성해주세요. ',
-    height: 300,
-    lang: 'ko-KR'
-   
-    });//summernote
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>var globalDepth1=8,globalDepth2=3;</script>
+    <script>
+        var lang= location.href.replace(/^http.+(\/[a-z]{2})\/.*$/gi, "$1");
+        //console.log(lang)
+    </script>
+    <style>
+        .ui-datepicker .ui-datepicker-title select{margin: 1px 3px}
+        .ui-datepicker-month{background:#fff url("/_resource/images/customer_center/ico_select.png") no-repeat 93% center;margin-right: 2px}
+        .ui-datepicker-year{background:#fff url("/_resource/images/customer_center/ico_select.png") no-repeat 93% center;margin-right: 2px}
+      
+
+    </style>
+<script type="application/ld+json">
+{
+ "@context": "http://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [{
+"@type": "ListItem",
+"position": 1,
+"item": {
+ 	"@id": "https://www.hoteltheplaza.com/kr/",
+ 	"name": "홈",
+	"image":"https://www.hoteltheplaza.com/_resource/images/common/icon_home.png"
+} },
+{	"@type": "ListItem",
+"position": 2,
+"item": {
+ 	"@id": "https://www.hoteltheplaza.com/kr/customer_center/contactus.jsp",
+ 	"name": "온라인 컨시어지"
+}  },
+{	"@type": "ListItem",
+"position": 3,
+"item": {
+ 	"@id": "https://www.hoteltheplaza.com/kr/customer_center/inquiry.jsp",
+ 	"name": "문의하기"
+}  }]
+}
+</script>    
+</head>
+
+ <style type="text/css">
+     #titleTextArea {
+    resize: none;
+    width: 620px;
+    height: 30px;
+    padding: 14px 18px;
+    border: 1px solid #d9d9d9;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.title dd {
+    line-height: 1
+}
+      
+
+    </style>
+
+<body cz-shortcut-listen="true">
+<div id="wrap">
+    
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WNLK849"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- header -->
+<jsp:include page="../include/header.jsp"/>
+
+<script>
+
+	if(localStorage.getItem("email")!=null){
+		$(".login_email").val(localStorage.getItem("email"));
+		$("#email_save").addClass("active");
+	}
+	function login() {
+		var mailStr = $(".login_email").val();
+		var pwStr = $(".login_pw").val();
+		var regExp = /[0-9a-zA-Z][_0-9a-zA-Z-]*@[_0-9a-zA-Z-]+(\.[_0-9a-zA-Z-]+){1,2}$/;
+		if(mailStr == ""){
+			$(".login_box .wrong_copy").html("이메일을 입력해 주세요.");
+			$(".login_email").focus();
+			wrongAction();
+			return;
+		} else if(!mailStr.match(regExp)){
+			$(".login_box .wrong_copy").html("이메일 형식에 맞게 입력해주세요.");
+			$(".login_email").focus();
+			wrongAction();
+			return;
+		} else if(pwStr == ""){
+			$(".login_box .wrong_copy").html("비밀번호를 입력해 주세요.");
+			$(".login_pw").focus();
+			wrongAction();
+			return;
+		}
+
+		var lang		= location.href.replace(/^http.+(\/[a-z]{2})\/.*$/gi, "$1");
+		var protocol	= ( location.href.indexOf("localhost") != -1 ? "http" : "https" ) + "://";
+		var f			= document.signForm;
+		var returnUrl	= location.href.replace(/#/gi,"");
+		var cond		= returnUrl.indexOf("signup_complete") != -1
+				|| returnUrl.indexOf("login.jsp") != -1;
+		f.returnUrl.value = cond ? lang : returnUrl;
+
+		$.ajax({
+			url			: protocol + location.hostname + lang + "/sign/signIn.do",
+			dataType	: "jsonp",
+			method		: "post",
+			data		: {
+				email	: f.email.value,
+				passwd	: f.passwd.value,
+				returnUrl : f.returnUrl.value
+			},
+			success		: function( resp ) {
+				if($("#email_save").hasClass("active") == true){
+					localStorage.setItem("email", f.email.value);
+				}else{
+					localStorage.removeItem("email");
+				}
+				$(".login_box .wrong_copy").text(resp.msg);
+				wrongAction();
+				if( resp.result === "ok" )
+					location.href = resp.returnUrl;
+			},
+			fail : function( resp ) {
+				$(".login_box .wrong_copy").text("잠시 후에 다시 시도해주세요.");
+			}
+		});
+	}
+	
+
+	function contACTUSLine() {
+		win_hoteltheplaza = window.open("","voc_hoteltheplaza","width=1000,height=700,scrollbars=yes,resizeable=yes,left=150,top=150");
+		document.form_signup.target = "voc_hoteltheplaza";
+		document.form_signup.action = "https://voc.hwhnr.com/voc/system/vocIndex";
+		document.form_signup.submit();
+		win_hoteltheplaza.focus();
+	}
+	function wrongAction(){
+		$(".login_box .wrong_copy").removeClass("active");
+		setTimeout(function(){
+			$(".login_box .wrong_copy").addClass("active");
+		}, 100);
+	}
+	function logoAkClick(){
+		window.open('https://autograph-hotels.marriott.com/', '_blank');
+		
+	}
+	
+  
+</script>
+    <div id="contents">
+
+        <div class="about_content inquiries ">
+           
+            <div class="section_content room">
+                <h3>문의하기</h3>
+                <p>문의하신 내용은 최대한 빠른 시간 내에 답변 드리도록 노력하겠습니다.</p>
+
+                <div class="content_inner">
+                    <form method="post" name="frm_qna" id="frm_qna">
+                        <!-- 문의 내용 -->
+						<input type="hidden" name="title" id="title">
+						<input type="hidden" name="content" id="content">
+                        
+                        <div class="cnt_textarea">
+                            <dl class="fclear" id="div_rm_inq">
+                                <dt class="inner_tit line2">제목</dt>
+                                <dd class="title"><textarea name="title" class="cntTextArea" id="titleTextArea" maxlength="50" style="height: 48px;" placeholder="제목"></textarea></dd>
+                            </dl>
+							<dl class="fclear">
+                                <dt class="inner_tit line2">내용</dt>
+                                <dd class="txt_area"><textarea name="content" id="cntTextArea" maxlength="800" placeholder="내용을 입력해주세요." title="내용란"></textarea></dd>
+                            </dl>
+                            
+                        </div>
+                       
+                         <input type="button" value="문의등록" class="btn btn-primary" style="margin-left:340px; " id="btn_write"/>
+                         <input type="button" value="목록으로" class="btn btn-dark" style="margin-left: 450px" id="btn_backtolist"/>
+                         
+                    </form>
+                </div>
+            </div>
+        </div>
+		<script type="text/javascript">
+$(function(){
+	$("#btn_backtolist").click(function(){
+		location.href="user_qna_list.do";
+	});//목록버튼
+	
+	$("#btn_write").click(function(){
+		
+	});
+	
+	
 });//ready
 </script>
+        
+    </div>
+    
+<!-- footer -->
+<jsp:include page="../include/footer.jsp"/>
+
+<script src="/_resource/js/common.js"></script>
+
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+    <div style="display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/923468141/?guid=ON&amp;script=0"/>
+    </div>
+</noscript>
 
 
-<script type="text/javascript" async=""
-	src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/796355633/?random=1701771796905&amp;cv=11&amp;fst=1701771796905&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45be3bt0&amp;gcd=11l1l1l1l1&amp;dma=0&amp;u_w=1920&amp;u_h=1080&amp;url=https%3A%2F%2Fphoenixhnr.co.kr%2Fpage%2Fcustomer%2Fnotice%2F14304%3F%3Fq%255BhmpgDivCd%255D%3D%26page%3D1%26size%3D10&amp;ref=https%3A%2F%2Fphoenixhnr.co.kr%2Fpage%2Fcustomer%2Fnotice%3Fq%255BhmpgDivCd%255D%3D%26page%3D1%26size%3D10&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=%EA%B3%B5%EC%A7%80%EC%82%AC%ED%95%AD%20%3C%20%EA%B3%A0%EA%B0%9D%EC%84%BC%ED%84%B0%20%7C%20%ED%9C%98%EB%8B%89%EC%8A%A4%20%ED%98%B8%ED%85%94%EC%95%A4%EB%93%9C%EB%A6%AC%EC%A1%B0%ED%8A%B8&amp;auid=1184424877.1701769204&amp;fledge=1&amp;uaa=x86&amp;uab=64&amp;uafvl=Google%2520Chrome%3B119.0.6045.200%7CChromium%3B119.0.6045.200%7CNot%253FA_Brand%3B24.0.0.0&amp;uamb=0&amp;uap=Windows&amp;uapv=10.0.0&amp;uaw=0&amp;data=event%3Dgtag.config&amp;rfmt=3&amp;fmt=4"></script>
-</head>
-<body cz-shortcut-listen="true">
-
-	<a href="#content-main" class="skip-navi">본문 바로가기</a>
-
-	<script type="text/x-template" id="globalMessageboxAlertTemplate">
-            <article id="commonAlert" class="common-pop default-pop is-layer" style="display:none;">
-                <!-- 팝업 body // -->
-                <div class="common-pop-body pop-class-name common-message-box-pop-body">
-                    <header class="common-pop-title">
-                        <h1 class="title">알림</h1>
-                        <a id="commonAlertClose" href="javascript:;" class="common-message-box-close">취소</a>
-                    </header>
-                    <div id="alertMessageContent" class="common-pop-content common-message-box-pop-content">
-                    </div>
-                    <div class="common-pop-btn-area">
-                        <button id="commonAlertOk" type="button" class="btn-action primary">확인</button>
-                    </div>
-                </div>
-                <!-- // 팝업 body -->
-            </article>
-        </script>
-
-	<script type="text/x-template" id="globalMessageboxConfirmTemplate">
-            <article id="commonConfirm" class="common-pop default-pop is-layer" style="display:none;">
-                <!-- 팝업 body // -->
-                <div class="common-pop-body pop-class-name common-message-box-pop-body">
-                    <header class="common-pop-title">
-                        <h1 class="title">알림</h1>
-                        <a id="commonConfirmClose" href="javascript:;" class="common-message-box-close">닫기</a>
-                    </header>
-                    <div id="confirmMessageContent" class="common-pop-content common-message-box-pop-content">
-                    </div>
-                    <div class="common-pop-btn-area">
-                        <button id="commonConfirmCancel" type="button" class="btn-action">취소</button>
-                        <button id="commonConfirmOk" type="button" class="btn-action primary">확인</button>
-                    </div>
-                </div>
-                <!-- // 팝업 body -->
-            </article>
-        </script>
-	<!-- header -->
-	<jsp:include page="../include/header.jsp" />
-
-
-	<!-- content-main : 본문 페이지 영역 // -->
-	<div id="content-main" class="content-main" style="margin-top: 4%; margin-bottom: 8%">
-		<!-- #BREADCRUMB -->
-		<div class="common-content customer-notice">
-			<h3 class="content-main-title">문의사항</h3>
-
-			<div class="board-detail">
-				<div class="detail-header">
-					<h4 class="detail-tit">
-						<span class="tit-text">제목</span>
-						<input type="text" id="question_title" style="width: 500px; height: 30px;"/>
-					</h4>
-				</div>
-				<div class="detail-content" style="overflow: auto;">
-					<!-- 여기 써머노트 들어가면 될거같공~~ -->
-				<textarea id="txtContent" name="txtContent"/>	
-				</div>
-			</div>
-			<input type="button" class="btn btn-primary" value="문의제출" id="btn_write"/>
-
-			<div class="page-foot">
-			<input type="button" id="btn_list" value="목록" class="btn btn-dark btn-sm"/>
-			<!-- 	<a
-					href="/page/customer/notice?q%5BhmpgDivCd%5D=&amp;page=1&amp;size=10"
-					class="btn-action light primary">목록</a> -->
-			</div>
-		</div>
-	</div>
-	<!-- // content-main -->
-	</section>
-	<!-- // section-container -->
+</div>
+<script src="/_resource/js/customer_center.js"></script>
+<script>
+    $(function() {
+        $( "#feastCalendar1" ).datepicker({
+            dateFormat : 'yy-mm-dd',
+            changeMonth : true,
+            changeYear : true,
+            yearRange : 'c-0:c+30',
+            showButtonPanel : true,
+            closeText : '닫기',
+            minDate : '0'
+        });
+        $( "#weddCalendar1" ).datepicker({
+            dateFormat: 'yy-mm-dd',
+            changeMonth : true,
+            changeYear : true,
+            yearRange : 'c-0:c+30',
+            showButtonPanel : true,
+            closeText : '닫기',
+            minDate : '0'
+        });
+        $( "#weddCalendar2" ).datepicker({
+            dateFormat: 'yy-mm-dd',
+            changeMonth : true,
+            changeYear : true,
+            yearRange : 'c-0:c+30',
+            showButtonPanel : true,
+            closeText : '닫기',
+            minDate : '0'
+        });
+        
+        
+    });
+    
+    function checkFile(target, obj){
+    	
+    	var fileSize = 10 * 1024 * 1024 ; //10M
+    	
+    	if(obj.files[0] != undefined){			
+    		if(fileSize*1 < obj.files[0].size*1){
+    			alert('파일용량을 초과하였습니다.(최대 10MB)');
+    			$(obj).val('');
+    			return;
+    		}
+    		var ext = obj.files[0].name
+    		ext = ext.slice(ext.lastIndexOf(".") + 1).toLowerCase();
+    		if($.inArray(ext, ['doc','docx','pdf']) == -1) {
+    			alert('pdf, doc, docx 파일만 가능합니다.');
+    			$(obj).val('');
+    			return;
+    		}
+    	}
+    	
+    	document.getElementById(target).value = obj.value;
+    }
+    
+</script>
 
 
-	<!-- footer // -->
-	<jsp:include page="../include/footer.jsp" />
-
-	</div>
-	<iframe allow="join-ad-interest-group" data-tagging-id="AW-796355633"
-		data-load-time="1701771796915" height="0" width="0"
-		style="display: none; visibility: hidden;"
-		src="https://td.doubleclick.net/td/rul/796355633?random=1701771796905&amp;cv=11&amp;fst=1701771796905&amp;fmt=3&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45be3bt0&amp;gcd=11l1l1l1l1&amp;dma=0&amp;u_w=1920&amp;u_h=1080&amp;url=https%3A%2F%2Fphoenixhnr.co.kr%2Fpage%2Fcustomer%2Fnotice%2F14304%3F%3Fq%255BhmpgDivCd%255D%3D%26page%3D1%26size%3D10&amp;ref=https%3A%2F%2Fphoenixhnr.co.kr%2Fpage%2Fcustomer%2Fnotice%3Fq%255BhmpgDivCd%255D%3D%26page%3D1%26size%3D10&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=%EA%B3%B5%EC%A7%80%EC%82%AC%ED%95%AD%20%3C%20%EA%B3%A0%EA%B0%9D%EC%84%BC%ED%84%B0%20%7C%20%ED%9C%98%EB%8B%89%EC%8A%A4%20%ED%98%B8%ED%85%94%EC%95%A4%EB%93%9C%EB%A6%AC%EC%A1%B0%ED%8A%B8&amp;auid=1184424877.1701769204&amp;fledge=1&amp;uaa=x86&amp;uab=64&amp;uafvl=Google%2520Chrome%3B119.0.6045.200%7CChromium%3B119.0.6045.200%7CNot%253FA_Brand%3B24.0.0.0&amp;uamb=0&amp;uap=Windows&amp;uapv=10.0.0&amp;uaw=0&amp;data=event%3Dgtag.config"></iframe>
-
-
-
-</body>
-</html>
+<div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div></body></html>

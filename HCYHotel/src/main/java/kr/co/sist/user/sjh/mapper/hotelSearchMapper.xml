@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.co.sist.user.sjh.hotelSearchMapper">
+
+
+<select id="getHotelBySearch" parameterType="kr.co.sist.user.hotelsearch.SearchVO" resultType="kr.co.sist.user.home.HotelDomain">
+
+select h.*,f.filename from hotel h
+left outer join infofile f
+on h.hotelcode = f.hotelcode
+where 
+h.hoteladdress like '%' || #{searchAddress} || '%' and
+h.hotelcode
+in
+(
+select r.hotelcode  from room r
+inner join roomtype t
+on  t.maxcapacity &gt;= #{searchCapacity}
+where r.roomcode not in (select r.roomcode from roombooking r where r.checkin &lt; #{searchCheckout} or r.checkout &gt; #{searchCheckin})
+group by r.hotelcode
+)
+
+</select>
+
+<select id="getRoomTypeBySearch" parameterType="kr.co.sist.user.hotelsearch.SearchVO" resultType="kr.co.sist.user.hotelsearch.RoomTypeDomain">
+
+    SELECT t.typecode, t.hotelcode, t.typename, t.price, t.basiccapacity, t.maxcapacity
+FROM roomtype t
+WHERE
+    t.hotelcode = #{hotelcode} 
+    AND t.maxcapacity &gt;= 2
+    AND NOT EXISTS (
+        SELECT 1
+        FROM roombooking rb
+        WHERE rb.roomcode IN (
+            SELECT r.roomcode
+            FROM room r
+            WHERE r.hotelcode = t.hotelcode
+              AND r.typecode = t.typecode
+        )
+        AND rb.checkin &lt;  #{searchCheckin}
+        AND rb.checkout &gt;  #{searchCheckout}
+    )
+
+</select>
+
+
+
+<select id="selectHotelDetail" parameterType="String" resultType="kr.co.sist.user.hotelinfo.HotelInfoDomain">
+   select h.*, i.filename
+   from hotel h
+   left outer join infofile i on h.hotelcode = i.hotelcode
+   where h.hotelcode = #{hotelcode}
+</select>
+
+
+</mapper>

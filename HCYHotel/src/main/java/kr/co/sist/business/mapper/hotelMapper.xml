@@ -10,12 +10,14 @@ from   hotel
 where  id=#{id}
 </select>
  <select id="searchReservation" resultType="bhd" parameterType="shVO">
-   select r.roomname,rb.roomcode,rb.checkin,rb.checkout,rb.pplcnt,rb.status,rb.id,rb.bookingname
+   select r.roomname,rb.roomcode,rb.checkin,rb.checkout,rb.pplcnt,rb.status,rb.id,rb.bookingname,rb.bookingcode
 from roombooking rb , hotel h, room r
     where checkin &lt;= #{date}
     and checkout &gt;= #{date}
     and h.hotelname=#{hotelName}
 and (h.hotelcode(+)=r.hotelcode and r.roomcode=rb.roomcode)
 </select>
-
+<delete id="deleteBooking" parameterType="String">
+delete from roombooking where bookingcode=#{bookingcode}
+</delete>
 </mapper>

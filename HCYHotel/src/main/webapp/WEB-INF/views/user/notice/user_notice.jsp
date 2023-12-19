@@ -120,53 +120,16 @@
 
 	<a href="#content-main" class="skip-navi">본문 바로가기</a>
 
-	<script type="text/x-template" id="globalMessageboxAlertTemplate">
-            <article id="commonAlert" class="common-pop default-pop is-layer" style="display:none;">
-                <!-- 팝업 body // -->
-                <div class="common-pop-body pop-class-name common-message-box-pop-body">
-                    <header class="common-pop-title">
-                        <h1 class="title">알림</h1>
-                        <a id="commonAlertClose" href="javascript:;" class="common-message-box-close">취소</a>
-                    </header>
-                    <div id="alertMessageContent" class="common-pop-content common-message-box-pop-content">
-                    </div>
-                    <div class="common-pop-btn-area">
-                        <button id="commonAlertOk" type="button" class="btn-action primary">확인</button>
-                    </div>
-                </div>
-                <!-- // 팝업 body -->
-            </article>
-        </script>
-
-	<script type="text/x-template" id="globalMessageboxConfirmTemplate">
-            <article id="commonConfirm" class="common-pop default-pop is-layer" style="display:none;">
-                <!-- 팝업 body // -->
-                <div class="common-pop-body pop-class-name common-message-box-pop-body">
-                    <header class="common-pop-title">
-                        <h1 class="title">알림</h1>
-                        <a id="commonConfirmClose" href="javascript:;" class="common-message-box-close">닫기</a>
-                    </header>
-                    <div id="confirmMessageContent" class="common-pop-content common-message-box-pop-content">
-                    </div>
-                    <div class="common-pop-btn-area">
-                        <button id="commonConfirmCancel" type="button" class="btn-action">취소</button>
-                        <button id="commonConfirmOk" type="button" class="btn-action primary">확인</button>
-                    </div>
-                </div>
-                <!-- // 팝업 body -->
-            </article>
-        </script>
-
 	<!-- header -->
 	<jsp:include page="../include/header.jsp" />
 
 <script type="text/javascript">
 $(function(){
+	
 
 });// ready
 
 function detail( noticeCode ){
-	alert("바부야");
 	$("#noticeCode").val( noticeCode );
 	$("#noticeCodeFrm").submit();
 };//detail
