@@ -1944,6 +1944,11 @@ $(function(){
 	$("#updateBtn").click(function(){
      $("#frm").submit();
 	})
+	var roomcode=$("#roomcode").val();
+	$("#cancel").click(function(){
+	location.href="businessroom_delete.do?roomcode="+roomcode;
+	})
+
 })
 </script>
 

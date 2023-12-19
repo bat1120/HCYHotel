@@ -2008,7 +2008,7 @@ th, td {
 	                                    output2 += "<div class='mb-3'><label for='disabledTextInput' class='form-label'>최대인원</label> <input type='text' id='maxcapacity' name='maxcapacity' class='form-control' readonly='readonly' value='" + secondJsonObj.maxcapacity + "'></div>";
 	                                    output2 += "<div class='mb-3'><label for='disabledTextInput' class='form-label'>객실정보</label> <input type='text' id='information' name='information' class='form-control' readonly='readonly' value='" + secondJsonObj.information + "'></div>";
 	                                    output2 += "<div class='mb-3'><label for='disabledTextInput' class='form-label'>어매니티</label> <input type='text' id='amenity' name='amenity' class='form-control' readonly='readonly' value='" + secondJsonObj.amenity + "'></div>";
-	                                    output2 += "<div class='mb-3'><label for='disabledTextInput' class='form-label'>어매니티</label> <input type='text' id='roomname' name='roomname' class='form-control' placeholder='호실'></div>";
+	                                    output2 += "<div class='mb-3'><label for='disabledTextInput' class='form-label'>호실</label> <input type='text' id='roomname' name='roomname' class='form-control' placeholder='호실'></div>";
 	                                    output2 += "<div class='mb-3'><label for='disabledTextInput' class='form-label'>서비스</label><select id='service' name='service'></select></div>";
 
 
@@ -2035,6 +2035,10 @@ th, td {
         $(document).on("click", "#savebtn", function() {
             $("#frm").submit();
         });
+    	var roomcode=$("#roomcode").val();
+    	$("#cancel").click(function(){
+    		location.href="room_delete.do?roomcode="+roomcode;
+    	})
         </script>
 
 					<div class="mb-3">
@@ -2053,6 +2057,7 @@ th, td {
 					<div id="output2">
 						
 					</div>
+					
 				</main>
 			</div>
 		</div>
