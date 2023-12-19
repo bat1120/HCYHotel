@@ -45,4 +45,10 @@ public class DiningManageDAO {
 	      return list;
 	      
    }
+   public void deleteBooking(String bookingcode) {
+	   MyBatiseHandlerBusiness mbh = MyBatiseHandlerBusiness.getInstance();
+	      SqlSession ss = mbh.getMyBatisHandler(true);
+	      ss.delete("kr.co.sist.business.diningReservationMapper.deleteBooking", bookingcode);
+	      mbh.closeHandler(ss);
+   }
 }

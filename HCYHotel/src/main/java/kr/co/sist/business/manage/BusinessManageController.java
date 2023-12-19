@@ -49,6 +49,12 @@ public class BusinessManageController {
 	public String cancelBooking(HttpSession session,String hotelCode) {
 		return "";
 	}//cancelBooking
-	
+	@GetMapping("/BusinessManage/room_deleteRes.do")
+	public String deleteBooking(HttpServletRequest request) {
+		String bookingcode=request.getParameter("bookingcode");
+		HotelManageDAO.getInstance().deleteBooking(bookingcode);
+		
+		return "redirect:businessHotelMain.do";
+	}
 	
 }//class
