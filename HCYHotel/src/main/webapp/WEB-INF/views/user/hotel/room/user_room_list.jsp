@@ -287,7 +287,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div class="room_img"><img src="http://localhost/HCYHotel/common/business/img/image_readtop_2021_655383_16256232714708432.jpg" alt="플라자 스위트 이미지" style="height:400px"></div>
                         <div class="room_text">
                            스위트 <span class="eng">SUITE</span>
-                        </div>
+                        </div> 
                     </a>
                 </li>
                 <li>

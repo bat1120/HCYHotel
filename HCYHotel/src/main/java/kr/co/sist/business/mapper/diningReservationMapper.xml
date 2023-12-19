@@ -28,4 +28,7 @@ INNER JOIN hotel h ON d.hotelcode = h.hotelcode
 WHERE h.id = #{id}
 and d.diningcode=#{diningcode}
 </select>
+<delete id="deleteBooking" parameterType="String">
+delete from diningbooking where bookingcode=#{bookingcode}
+</delete>
 </mapper>

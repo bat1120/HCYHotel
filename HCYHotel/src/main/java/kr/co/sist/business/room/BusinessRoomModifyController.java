@@ -104,8 +104,11 @@ public class BusinessRoomModifyController {
 		
 		return "/BusinessManage/businessmanage_hotel";
 	}
-	public String deleteRoomType() {
-		return "";
+	@GetMapping("/BusinessManage/room_delete.do")
+	public String deleteRoomType(HttpServletRequest request) {
+		String roomcode=request.getParameter("roomcode");
+		BusinessRoomModifyService.getInstance().deleteRoom(roomcode);
+		return "redirect:business_room_modify.do";
 	}
 	
 	@GetMapping("/BusinessManage/businessRomm_modify.do")
@@ -178,6 +181,18 @@ public class BusinessRoomModifyController {
 		BusinessRoomModifyDAO.getInstance().updateRoom(ruVO);
 		
 		return "/BusinessManage/businessmanage_room";
+	}
+	@PostMapping("/BusinessManage/businessroom_update2.do")
+	public String update2Room(HttpSession session,HttpServletRequest request,Model model) {
+		
+		
+		return "redirect:business_room_modify.do";
+	}
+	@GetMapping("/BusinessManage/businessroom_delete.do")
+	public String deleteRoom(HttpServletRequest request) {
+		String roomcode=request.getParameter("roomcode");
+		BusinessRoomModifyDAO.getInstance().deleteRoom(roomcode);
+		return "redurect:business_room_modify.do";
 	}
 	
 }

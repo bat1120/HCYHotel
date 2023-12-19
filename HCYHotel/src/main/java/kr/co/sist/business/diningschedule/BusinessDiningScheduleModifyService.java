@@ -35,5 +35,8 @@ public class BusinessDiningScheduleModifyService {
 	public void updateSchedule(DiningScheduleVO dsVO) {
 		BusinessDiningScheduleModifyDAO.getInstance().updateSchedule(dsVO);
 	}
+	public void deleteSchedule(String schedulecode) {
+		BusinessDiningScheduleModifyDAO.getInstance().deleteSchedule(schedulecode);
+	}
 	
 }

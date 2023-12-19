@@ -39,4 +39,10 @@ public class DiningManageController {
 		System.out.println(json.get("data"));
 		return json.toJSONString();
 	}
+   @GetMapping("/BusinessManage/delete_diningbooking.do")
+   public String deleteBooking(HttpServletRequest request) {
+	   String bookingcode=request.getParameter("bookingcode");
+	   DiningManageService.getInstance().deleteBooking(bookingcode);
+	   return "redirect:businessDiningMain.do";
+   }
 }

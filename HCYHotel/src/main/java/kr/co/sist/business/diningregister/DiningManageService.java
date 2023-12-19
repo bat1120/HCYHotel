@@ -25,4 +25,7 @@ public class DiningManageService {
       List<BusinessDiningDomain> list = DiningManageDAO.getInstace().selecAllDining(id);
       return list;
    }
+   public void deleteBooking(String bookingcode) {
+	   DiningManageDAO.getInstace().deleteBooking(bookingcode);
+   }
 }
