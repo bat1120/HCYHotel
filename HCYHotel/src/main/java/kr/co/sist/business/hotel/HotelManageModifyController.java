@@ -207,4 +207,9 @@ public class HotelManageModifyController {
 		hmms.deleteHotel(hotelcode);
 		return "redirect:businessHotel.do";
 	}
+	@GetMapping("/BusinessManage/businessLogout.do")
+	public String Logout(HttpSession session) {
+		session.setAttribute("id", null);
+		return "/user/login/user_login";
+	}
 }
