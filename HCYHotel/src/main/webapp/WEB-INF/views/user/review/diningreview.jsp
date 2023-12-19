@@ -87,21 +87,48 @@
 	
 <div id="content-main" class="content-main">
 <div >
-<h3 class="content-main-title" style="margin-top:7%; "><!-- 식당이름 -->다이닝 리뷰</h3>
+<h3 class="content-main-title" style="margin-top:7%; "><!-- 식당이름 -->뇸뇸 다이닝 리뷰</h3>
 <table class="board-list" style="width: 1200px; margin-left:20%; margin-top:100px; margin-bottom: 100px;">
 <%-- <c:forEach var="diningReviewList" varStatus="i" items="${ diningReviewList }"> --%>
 <tr style="font-family: ; color: ; ">
-	<td colspan="3" style="width: 400px;"><strong>다이닝 </strong><%-- <c:out value="${ diningReviewList.diningName }" /> --%></td>
-	<td style="width: 400px"><strong>호텔 </strong><%-- <c:out value="${ diningReviewList.hotelName }"/> --%></td>
-	<td style="width 300px;"><strong>평점 </strong><%-- <c:out value="${ diningReviewList.rating }"/> --%> / 10.0</td>
-	<td style="width 100px;">작성자 <%-- <c:out value="${ diningReviewList.rating }"/> --%></td>
+	<td colspan="3" style="width: 400px;"><strong>다이닝 </strong>뇸뇸<%-- <c:out value="${ diningReviewList.diningName }" /> --%></td>
+	<td style="width: 400px"><strong>호텔 </strong>자스민호텔<%-- <c:out value="${ diningReviewList.hotelName }"/> --%></td>
+	<td style="width 300px;"><strong>평점 </strong>9.5<%-- <c:out value="${ diningReviewList.rating }"/> --%> / 10.0</td>
+	<td style="width 100px;">작성자 amu1 <%-- <c:out value="${ diningReviewList.rating }"/> --%></td>
 	
 </tr>
 <tr style="text-align: left;">
-	<td colspan="3" width="1200px" ><%-- <c:out value="${ diningReviewList.content }"/> --%></td>
+	<td colspan="3" width="1200px" >맛있게 잘 먹었어요<%-- <c:out value="${ diningReviewList.content }"/> --%></td>
 	<td></td>
 	<td></td> 
 </tr>	
+
+<tr style="font-family: ; color: ; ">
+	<td colspan="3" style="width: 400px;"><strong>다이닝 </strong>뇸뇸<%-- <c:out value="${ diningReviewList.diningName }" /> --%></td>
+	<td style="width: 400px"><strong>호텔 </strong>자스민호텔<%-- <c:out value="${ diningReviewList.hotelName }"/> --%></td>
+	<td style="width 300px;"><strong>평점 </strong>10.0<%-- <c:out value="${ diningReviewList.rating }"/> --%> / 10.0</td>
+	<td style="width 100px;">작성자 member1 <%-- <c:out value="${ diningReviewList.rating }"/> --%></td>
+	
+</tr>
+<tr style="text-align: left;">
+	<td colspan="3" width="1200px" >맛도 있고 즐거운 시간이었음<%-- <c:out value="${ diningReviewList.content }"/> --%></td>
+	<td></td>
+	<td></td> 
+</tr>	
+
+<tr style="font-family: ; color: ; ">
+	<td colspan="3" style="width: 400px;"><strong>다이닝 </strong>뇸뇸<%-- <c:out value="${ diningReviewList.diningName }" /> --%></td>
+	<td style="width: 400px"><strong>호텔 </strong>자스민호텔<%-- <c:out value="${ diningReviewList.hotelName }"/> --%></td>
+	<td style="width 300px;"><strong>평점 </strong>10.0<%-- <c:out value="${ diningReviewList.rating }"/> --%> / 10.0</td>
+	<td style="width 100px;">작성자 member1 <%-- <c:out value="${ diningReviewList.rating }"/> --%></td>
+	
+</tr>
+<tr style="text-align: left;">
+	<td colspan="3" width="1200px" >재방문 했어요. 너무 맛있어요.<%-- <c:out value="${ diningReviewList.content }"/> --%></td>
+	<td></td>
+	<td></td> 
+</tr>	
+
 <%-- </c:forEach> --%>
 </table>
 

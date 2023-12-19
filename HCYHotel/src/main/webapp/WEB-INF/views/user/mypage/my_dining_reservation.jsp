@@ -105,8 +105,8 @@
 				</colgroup>
 				<thead>
 					<tr>
-						<th scope="col">에약번호</th>
-						<th scope="col">에약날짜</th>
+						<th scope="col">예약번호</th>
+						<th scope="col">예약날짜</th>
 						<th scope="col">다이닝정보</th>
 						<th scope="col">이용시간</th>
 						<th scope="col">예약자 성함</th>
@@ -117,15 +117,16 @@
 					</tr>
 				</thead>
 				<tbody>
-				<td>번호</td>
-				<td>번호</td>
-				<td>번호</td>
-				<td>번호</td>
-				<td>번호</td>
-				<td>번호</td>
-				<td>번호</td>
-				<td>번호</td>
-				<td><input type="button" class="btn btn-info btn" id="btn_review" value="리뷰쓰기"/></td>
+				<td>B000041</td>
+				<td>2023-12-13</td>
+				<td>뇸뇸</td>
+				<td>런치</td>
+				<td>강다연</td>
+				<td>2</td>
+				<td>70000</td>
+				<td>예약완료</td>
+				<td>
+				<a href="mydiningreview_write.do"><input type="button" class="btn btn-info btn" id="btn_review" value="리뷰쓰기"/></a></td>
 				</tbody>
 			</table>
 

@@ -165,26 +165,29 @@
 			<div class="board-detail">
 				<div class="detail-header">
 					<h4 class="detail-tit">
-						<span class="tit-text"><c:out value="${ qna.title }"/></span>
+						<span class="tit-text">문의드립니다</span>
 					</h4>
-					<div class="detail-info">문의등록일 : <c:out value="${ qna.inputDate }"/></div>
+					<div class="detail-info">문의등록일 : 2023-12-13/div>
 				</div>
 				<div class="detail-content" style="overflow: auto;">
 				<!-- 내용 들어가는 자리 : 문의 -->
-				<c:out value="${ qna.content }"/>
+				호텔 건의사항은 호텔 측에 따로 연락해야하는건가요? 
 				</div>
-				<div class="detail-info">답변일 : <c:out value="${ qna.answerDate }"/></div>
+				<div class="detail-info"></div>
 				<div class="detail-content" style="overflow: auto;">
 				<!-- 내용 들어가는 자리 : 답변-->
-				<c:out value="${ qna.answer }"/>
+				답변일 : 2023-12-14<br>
+				<br>
+				네 호텔측에 연락주시면 됩니다.
 				</div>
 				
 			</div>
 
-			<div class="page-foot">
+			<div class="page-foot" style="margin-bottom: 30px">
 				<input type="button" id="btn_list" value="목록"
 					class="btn btn-dark btn-sm" />
 			</div>
+			
 		</div>
 	</div>
 	<!-- // content-main -->
@@ -193,7 +196,7 @@
 <script type="text/javascript">
 $(function(){
 	$("#btn_list").click(function(){
-		location.href="user_qna_list.do"
+		location.href="my_qna_list.do"
 	});//click
 	
 	

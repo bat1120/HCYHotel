@@ -105,7 +105,7 @@
 												class="Typo SizeL defalt" maxlength="20"
 												style="ime-mode: disabled" autocapitalize="off"
 												autocomplete="off"
-												placeholder="4~20자리 / 영문, 숫자, 특수문자 '_'사용가능">
+												placeholder="amu1">
 										</div>
 										<p class="alert_column focus_txt" id="idFocusMsg"
 											style="display: none">4 ~ 20자의 영문, 숫자와 특수문자 '_'만 사용해주세요.</p>
@@ -148,7 +148,7 @@
 										<div class="TypoBox">
 											<input type="text" name="name" id="name"
 												class="Typo SizeL defalt" style="ime-mode: active"
-												autocapitalize="off" placeholder="이름 입력">
+												autocapitalize="off" placeholder="강다연">
 										</div>
 										<em class="msgInvalid" id="user_nm_msg" name="user_nm_msg"
 											style="display: none">이름을 올바르게 입력하세요</em>
@@ -159,7 +159,7 @@
 										<label for="identifier"><strong>생년월일</strong></label>
 										<div class="TypoBox">
 											<input type="number" name="identifier" id="identifier"
-												maxlength="8" autocapitalize="off" placeholder="YYYYMMDD"
+												maxlength="8" autocapitalize="off" placeholder="19950131"
 												class="Typo SizeL defalt">
 										</div>
 										<em class="msgInvalid" id="cyr_msg" style="display: none">
@@ -236,49 +236,9 @@
 									
 								</div>
 
-								<!-- 약관 -->
-								<div class="cont_division">
-									<span class="terms_agree"><strong>약관</strong></span>
-									<div class="agree_box">
-										<ul class="agree_article">
-											<li>
-												<div class="InpBox">
-													<span class="Chk SizeL"> <input type="checkbox"
-														class="check_mail" id="agreeAllPersonal"> <label
-														class="check_all check_off Lbl" for="agreeAllPersonal">
-															<strong class="all_agree">전체 동의</strong>
-													</label> <input type="hidden" name="hidden_check_all" value="0"
-														id="hidden_check_all">
-													</span>
-												</div>
-												<p class="agree_txt">위치기반 서비스 이용약관(선택), 마케팅 정보 수신
-													동의(이메일,SMS/MMS)(선택) 동의를 포함합니다.</p>
-											</li>
-										</ul>
-										<ul class="agree_article depth2">
-											<li>
-												<div class="agree_desc">
-													<div class="InpBox">
-														<span class="Chk"> <input type="checkbox"
-															id="agree_rule1"> <label
-															class="Lbl check_custom check_off" for="agree_rule1">
-																<span><strong>(필수) 개인회원 약관에 동의</strong></span>
-														</label>
-														</span>
-
-													</div>
-												</div> <!-- <a href="/zf_user/help/terms-of-service/person"
-												class="view_indetail" target="_blank"> <span
-													class="blind">개인회원 약관 상세보기</span>
-											</a> -->
-											</li>
-										
-										</ul>
-									</div>
-								</div>
 
 								<div class="submit_btn">
-									<button type="button" id="btn_submit"
+													<button type="button" id="btn_submit"
 										class="inp_join BtnType SizeL defalt ga_data_layer btn_input_complete"
 										data-ga_data_layer="ga_lead|member_join|join_pc|step_2"
 										>정보 수정</button>
@@ -286,6 +246,15 @@
 							</div>
 						</fieldset>
 					</form>
+		<script type="text/javascript">
+		$(function(){
+			$("#btn_submit").click(function(){
+				alert("수정되었습니다.");
+				window.location.href="http://localhost/HCYHotel/user/home/user_home.do";
+			});
+			
+		});//ready
+		</script>					
 
 					<!-- 중복가입 알림 레이어 -->
 					<div class="member_nudge ModalBox" id="p_member_nudge"
