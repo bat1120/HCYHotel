@@ -340,13 +340,13 @@ $(document).ready(function() {
 
 									<!-- 체크인 -->
 									<div class="item">
-										<label for="password"><strong>체크인</strong></label>
+										<label for="password"><strong>식사날짜</strong></label>
 										<div class="TypoBox pass_box">
 					
 											<input autocapitalize="off" name="password"
 												class="Typo SizeL defalt" id="password" type="text"
 												maxlength="16" autocomplete="off"
-												placeholder="체크인 날짜를 입력해주세요">
+												placeholder="식사 날짜를 입력해주세요">
 											<button type="button" toggle="#password1"
 												id="masking_password" class="toggle_password field_eye on"
 												style="display: none;"></button>
@@ -363,31 +363,7 @@ $(document).ready(function() {
 											style="display: none"></p>
 									</div>
 									
-									<!-- 체크아웃 -->
-									<div class="item">
-										<label for="password"><strong>체크아웃</strong></label>
-										<div class="TypoBox pass_box">
-					
-											<input autocapitalize="off" name="password"
-												class="Typo SizeL defalt" id="password" type="text"
-												maxlength="16" autocomplete="off"
-												placeholder="체크아웃 날짜를 입력해주세요">
-											<button type="button" toggle="#password1"
-												id="masking_password" class="toggle_password field_eye on"
-												style="display: none;"></button>
-										</div>
-
-										<p class="alert_column focus_txt" id="password1FocusMsg"
-											style="display: none"></p>
-										<!-- focus 시 텍스트 -->
-										<em class="msgInvalid" id="password1_warning_txt"
-											style="display: none"><span></span></em>
-										<p class="alert_column good_txt" id="password1_good_txt"
-											style="display: none"></p>
-										<p class="pass_safety" id="pw_strnegth_level"
-											style="display: none"></p>
-									</div>
-
+									
 									<!-- 인원수 -->
 									<div class="item">
 										<label for="name"><strong>인원 수</strong></label>
@@ -439,13 +415,13 @@ $(document).ready(function() {
 									<!-- 휴대폰 인증 -->
 
 										<div class="item">
-										<label for="tel"><strong>옵션사항</strong></label>
+										<label for="tel"><strong>식사시간대</strong></label>
 										<div class="TypoBox">
 											<input type="text" name="tel" id="tel"
 												class="Typo SizeL defalt" style="ime-mode: active"
-												autocapitalize="off" placeholder="조식/10000원">
+												autocapitalize="off" placeholder="조식/런치/디너 중 택1">
 										</div>
-												<em class="msgInvalid" id="msg_cell" style="display: none;">옵션사항을 올바르게 기재해주세요.</em>
+												<em class="msgInvalid" id="msg_cell" style="display: none;">조식/런치/디너 중 식사시간대를 골라주세요.</em>
 									</div>
 										<div class="item">
 										<label for="tel"><strong>카드종류</strong></label>
@@ -493,6 +469,7 @@ $(document).ready(function() {
 
 
 								<div class="btn_join">
+								
 									<button type="button" id="btn_submit"
 										class="inp_join BtnType SizeL defalt ga_data_layer btn_input_complete"
 										data-ga_data_layer="ga_lead|member_join|join_pc|step_2"

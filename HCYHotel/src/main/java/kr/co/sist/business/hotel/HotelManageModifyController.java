@@ -149,12 +149,14 @@ public class HotelManageModifyController {
 		hVO.setLatitude(request.getParameter("Latitude"));
 		hVO.setLoccode(loccode);
 		hVO.setTel(request.getParameter("tel"));
+		System.out.println("1");
 		hmms.insertHotel(hVO);
 		String hotelcode=hmms.searchHotelcode();
 		File directory = new File(uploadDir);
 		if (!directory.exists()) {
 			directory.mkdirs();
 		}
+		System.out.println("2");
 		FileVO fVO=new FileVO();
 		List<String> fileList=new ArrayList<String>();
 		for (int i = 0; i < files.length; i++) {
@@ -171,6 +173,7 @@ public class HotelManageModifyController {
 					fVO.setFilename(hotelcode + "_" + (i+1));
 					fVO.setHotelcode(hotelcode);
 					hmms.insertFile(fVO);
+					System.out.println("3");
 					try {
 						file.transferTo(new File(filePath)); // 파일 저장
 
@@ -178,6 +181,7 @@ public class HotelManageModifyController {
 					} catch (IOException e) {
 						e.printStackTrace();
 						// 파일 업로드 중 오류가 발생한 경우 처리
+						System.out.println("4");
 					}
 				}else {
 					 String alertMessage = "올바른 파일 형식이 아닙니다."; // 사용자에게 보여줄 경고 메시지
@@ -202,5 +206,10 @@ public class HotelManageModifyController {
 
 		hmms.deleteHotel(hotelcode);
 		return "redirect:businessHotel.do";
+	}
+	@GetMapping("/BusinessManage/businessLogout.do")
+	public String Logout(HttpSession session) {
+		session.setAttribute("id", null);
+		return "/user/login/user_login";
 	}
 }

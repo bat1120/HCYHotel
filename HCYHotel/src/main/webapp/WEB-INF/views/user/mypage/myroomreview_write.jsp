@@ -245,7 +245,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             
                         </div>
                        
-                         <input type="button" value="문의등록" class="btn btn-primary" style="margin-left:340px; " id="btn_write"/>
+                         <input type="button" value="후기등록" class="btn btn-primary" style="margin-left:340px; " id="btn_write"/>
                          <input type="button" value="취소" class="btn btn-dark" style="margin-left: 450px" id="btn_backtolist"/>
                          
                     </form>
@@ -255,11 +255,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<script type="text/javascript">
 $(function(){
 	$("#btn_backtolist").click(function(){
-		location.href="myroomreview.do";
+		window.location.href="myroomreview.do";
 	});//목록버튼
 	
 	$("#btn_write").click(function(){
-		
+		alert("소중한 후기 감사합니다.")
+		window.location.href="http://localhost/HCYHotel/user/home/user_home.do";
 	});
 	
 	

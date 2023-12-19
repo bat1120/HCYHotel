@@ -105,8 +105,8 @@
 				</colgroup>
 				<thead>
 					<tr>
-						<th scope="col">에약번호</th>
-						<th scope="col">에약날짜</th>
+						<th scope="col">예약번호</th>
+						<th scope="col">예약날짜</th>
 						<th scope="col">호텔/객실정보</th>
 						<th scope="col">예약기간</th>
 						<th scope="col">예약자 성함</th>
@@ -117,16 +117,16 @@
 					</tr>
 				</thead>
 				<tbody>
-				<td>번호</td>
-				<td>번호</td>
-				<td>번호</td>
-				<td>번호</td>
-				<td>번호</td>
-				<td>번호</td>
-				<td>번호</td>
-				<td>번호</td>
+				<td>A000052</td>
+				<td>2023-12-11</td>
+				<td>자스민호텔 / 디럭스룸</td>
+				<td>2023-12-13 ~ 2023-12-14</td>
+				<td>강다연</td>
+				<td>2</td>
+				<td>300000</td>
+				<td>예약완료</td>
 				<td>
-				<a href="user/mypage/mydiningreview_write.do">
+				<a href="myroomreview_write.do">
 				<input type="button" class="btn btn-info btn" id="btn_review" value="리뷰쓰기" />
 				</a></td>
 				</tbody>
