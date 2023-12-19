@@ -1083,7 +1083,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 			});//ready
 			
 			function goMain(){
-				location.href="http://localhost/HCYHotel/user/home/user_home.do";
+				location.href="http://192.168.10.147/HCYHotel/user/home/user_home.do";
 			};//
 			</script>
 		<div class="JjjA">
@@ -1110,7 +1110,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 								<div
 									class="ui-layout-HeaderMainLogo normal-from-l-size main-logo--mobile">
 									<a class="main-logo__link"
-										href="http://localhost/HCYHotel/user/home/user_home.do"
+										href="http://192.168.10.147/HCYHotel/user/home/user_home.do"
 										itemprop="https://schema.org/logo"
 										aria-label="호텔스컴바인 홈페이지로 이동하기"><div
 											class="main-logo__logo has-compact-logo inverted-logo">
@@ -1213,12 +1213,12 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 									aria-label="Default select example"
 									style="width: 180px; text-align: center" onchange="redirectToUrl()">
 									<option value="selected" >마이페이지</option>
-									<option value="http://localhost/HCYHotel/user/mypage/myhotelreservation.do" >호텔 예약내역</option>
-									<option value="http://localhost/HCYHotel/user/mypage/mydiningreservation.do">다이닝 예약내역</option>
-									<option value="http://localhost/HCYHotel/user/mypage/check_to_modify.do">회원정보 관리</option>
-									<option value="http://localhost/HCYHotel/user/mypage/myroomreview_list.do">나의 호텔 후기</option>
-									<option value="http://localhost/HCYHotel/user/mypage/mydiningreview_list.do">나의 다이닝 후기</option>
-									<option value="http://localhost/HCYHotel/user/mypage/my_qna_list.do">나의 문의내역</option>
+									<option value="http://192.168.10.147/HCYHotel/user/mypage/myhotelreservation.do" >호텔 예약내역</option>
+									<option value="http://192.168.10.147/HCYHotel/user/mypage/mydiningreservation.do">다이닝 예약내역</option>
+									<option value="http://192.168.10.147/HCYHotel/user/mypage/check_to_modify.do">회원정보 관리</option>
+									<option value="http://192.168.10.147/HCYHotel/user/mypage/myroomreview_list.do">나의 호텔 후기</option>
+									<option value="http://192.168.10.147/HCYHotel/user/mypage/mydiningreview_list.do">나의 다이닝 후기</option>
+									<option value="http://192.168.10.147/HCYHotel/user/mypage/my_qna_list.do">나의 문의내역</option>
 								</select>
 
 
@@ -1307,7 +1307,7 @@ window.onload = function () {
 																		<c:if test="${ id==null }">
 																			<div class="sign-in-nav-link">
 																				<a
-																					href="http://localhost/HCYHotel/user/login/user_login.do">로그인</a>
+																					href="http://192.168.10.147/HCYHotel/user/login/user_login.do">로그인</a>
 																			</div>
 																		</c:if>
 																		<c:if test="${ id!=null}">
@@ -1338,7 +1338,7 @@ window.onload = function () {
 									<nav class="HtHs" aria-label="홈">
 										<ul class="HtHs-nav-list">
 											<li><a
-												href="http://localhost/HCYHotel/user/home/user_home.do"
+												href="http://192.168.10.147/HCYHotel/user/home/user_home.do"
 												aria-label="호텔 검색 "
 												class="dJtn dJtn-active dJtn-expanded dJtn-mod-variant-accordion"
 												aria-current="page"><svg viewBox="0 0 200 200"
@@ -1349,7 +1349,7 @@ window.onload = function () {
 															d="M175 170a5 5 0 0 1-5-5v-5H30v5a5 5 0 1 1-10 0v-43.092c0-8.176 3.859-15.462 10-20.027V65c0-13.785 11.215-25 25-25h90c13.785 0 25 11.215 25 25v36.98c6.093 4.613 10 11.922 10 19.928V165a5 5 0 0 1-5 5zM30 150h140v-10H30v10zm0-20h140v-8.092c0-7.342-5.486-13.707-12.762-14.806c-40.216-6.077-73.399-6.207-114.477 0C35.415 108.21 30 114.4 30 121.908V130zm120-34.027c2.877.382 9.581 1.381 10 1.467V65c0-8.271-6.729-15-15-15H55c-8.271 0-15 6.729-15 15v32.438c.418-.084 7.123-1.083 10-1.465V85c0-8.271 6.729-15 15-15h25a14.94 14.94 0 0 1 10 3.829A14.943 14.943 0 0 1 110 70h25c8.271 0 15 6.729 15 15v10.973zm-45-3.45c11.463.167 22.988.912 35 2.233V85c0-2.757-2.243-5-5-5h-25c-2.757 0-5 2.243-5 5v7.523zM65 80c-2.757 0-5 2.243-5 5v9.756c12.012-1.321 23.537-2.065 35-2.232V85c0-2.757-2.243-5-5-5H65z"></path></svg>
 													<div class="dJtn-menu-item-title">호텔</div></a></li>
 											<li><a
-												href="http://localhost/HCYHotel/user/dining/dining_main.do"
+												href="http://192.168.10.147/HCYHotel/user/dining/dining_main.do"
 												aria-label="항공권 검색 "
 												class="dJtn dJtn-expanded dJtn-mod-variant-accordion"
 												aria-current="false"><svg viewBox="0 0 200 200"
@@ -1359,7 +1359,7 @@ window.onload = function () {
 														<path
 															d="M140.448 177.069l-19.846-43.661c-2.877-6.328-7.998-11.612-12.447-14.676a1029.409 1029.409 0 0 1-14.935 12.983c-4.045 3.618-5.452 9.494-3.67 15.347l2.733 8.981a4.997 4.997 0 0 1-1.248 4.991l-10 10c-2.267 2.268-6.043 1.838-7.754-.851l-14.154-22.241l-10.592 10.592a5 5 0 1 1-7.071-7.07l10.593-10.593l-22.242-14.153c-2.695-1.716-3.112-5.493-.851-7.754l10-10a5 5 0 0 1 4.992-1.248l8.981 2.733c5.85 1.777 11.728.375 15.348-3.671c4.269-5.007 8.599-9.988 12.983-14.935c-3.063-4.449-8.349-9.571-14.676-12.447L22.931 59.552c-3.563-1.619-3.965-6.539-.705-8.712l11.53-7.687a15.083 15.083 0 0 1 11.333-2.213l60.319 12.364c6.006 1.33 14.836-3.512 20.984-9.246c6.775-6.625 13.831-12.567 25.684-17.738c5.899-2.573 12.876-1.07 17.773 3.828l.003.002c4.898 4.897 6.401 11.874 3.828 17.773c-5.171 11.853-11.111 18.909-17.735 25.682c-5.736 6.148-10.583 14.976-9.266 20.906l12.382 60.4a15.1 15.1 0 0 1-2.215 11.332l-7.687 11.53c-2.182 3.276-7.096 2.849-8.711-.704zm-24.66-65.169c5.789 4.467 10.925 10.784 13.918 17.369l16.123 35.472l2.697-4.045a5.034 5.034 0 0 0 .738-3.778L136.9 96.6a19.235 19.235 0 0 1-.445-3.891a1041.686 1041.686 0 0 1-20.667 19.191zm-49.416 28.799l12 18.857l3.471-3.471l-1.86-6.111c-2.938-9.652-.396-19.525 6.631-25.767l.077-.066c23.665-20.174 47.419-42.531 62.016-57.438c6.149-6.558 10.969-11.688 15.808-22.779c1.113-2.552-.165-5.136-1.733-6.703l-.003-.002c-1.567-1.568-4.151-2.846-6.704-1.734c-10.394 4.535-15.439 8.933-22.782 15.811c-15.335 15.027-37.539 38.676-57.433 62.013l-.067.076c-6.242 7.028-16.115 9.567-25.767 6.631l-6.111-1.859l-3.471 3.471l18.858 12l7.164-7.163a5 5 0 1 1 7.071 7.07l-7.165 7.164zM35.258 54.17l35.471 16.124c6.585 2.993 12.903 8.128 17.37 13.918a1045.845 1045.845 0 0 1 19.202-20.678a19.358 19.358 0 0 1-3.982-.452L43.081 50.735a5.039 5.039 0 0 0-3.778.738l-4.045 2.697z"></path></svg>
 													<div class="dJtn-menu-item-title">다이닝</div></a></li>
-											<li><a href="http://localhost/HCYHotel/BusinessManage/businessHotelMain.do" aria-label="렌터카 검색 "
+											<li><a href="http://192.168.10.147/HCYHotel/BusinessManage/businessHotelMain.do" aria-label="렌터카 검색 "
 												class="dJtn dJtn-expanded dJtn-mod-variant-accordion"
 												aria-current="false"><svg viewBox="0 0 200 200"
 														width="1.25em" height="1.25em"
@@ -1369,7 +1369,7 @@ window.onload = function () {
 															d="M165 160h-10c-7.2 0-13.2-5.1-14.7-11.9c-26.8 2.5-53.9 2.5-80.6 0c-1.5 6.8-7.5 11.9-14.7 11.9H35c-8.3 0-15-6.7-15-15v-43.7c-2.1-.5-4.2-1-6.2-1.5c-2.7-.7-4.3-3.4-3.6-6.1c.7-2.7 3.4-4.3 6.1-3.6c1.6.4 3.2.8 4.7 1.1l12.4-37.7C34.9 49 39.2 45 44.7 44c30-5.3 80.7-5.3 110.6 0c5.5 1 9.8 4.9 11.4 9.7L179 91.4c1.6-.4 3.1-.8 4.7-1.2c2.7-.7 5.4.9 6.1 3.6c.7 2.7-.9 5.4-3.6 6.1c-2.1.5-4.2 1.1-6.3 1.6v43.6c.1 8.2-6.6 14.9-14.9 14.9zm-15-17.4v2.4c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5v-19.2c-11 1.6-26.2 3.5-34.6 4.2c-2.8.2-5.2-1.8-5.4-4.6c-.2-2.8 1.8-5.2 4.6-5.4c8.4-.7 24.6-2.8 35.4-4.3v-12.1c-43.8 8.7-94.9 8.7-140-.1v12.2c10.8 1.6 27 3.7 35.4 4.3c2.8.2 4.8 2.6 4.6 5.4c-.2 2.8-2.6 4.8-5.4 4.6c-8.4-.7-23.6-2.6-34.6-4.2V145c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5v-2.4c0-2.9 2.5-5.3 5.5-5c29.5 3.2 59.4 3.2 88.9 0c3.1-.3 5.6 2.1 5.6 5zM30.8 93.4c44.6 8.9 95.3 8.9 138.5.1l-12-36.7c-.6-1.6-2-2.7-3.6-3c-29-5.1-78.1-5.1-107.2 0c-1.7.3-3.1 1.4-3.6 3L30.8 93.4zm74.4-4c-2.4-1.4-3.2-4.4-1.9-6.8C107.7 74.8 116 70 125 70s17.1 4.7 21.6 12.5c1.4 2.4.6 5.4-1.8 6.8c-2.4 1.4-5.4.6-6.8-1.8c-2.7-4.7-7.6-7.5-13-7.5s-10.3 2.9-12.9 7.5c-1.4 2.4-4.5 3.2-6.9 1.9z"></path></svg>
 													<div class="dJtn-menu-item-title">사업자</div></a></li>
 											<li><a
-												href="http://localhost/HCYHotel/user/notice/user_notice.do"
+												href="http://192.168.10.147/HCYHotel/user/notice/user_notice.do"
 												aria-label="MISSING STRING [NAV_LINK_ARIA_LABEL_PROMOTION] NEW"
 												class="dJtn dJtn-expanded dJtn-mod-variant-accordion"
 												aria-current="false"><svg viewBox="0 0 200 200"
@@ -1380,7 +1380,7 @@ window.onload = function () {
 															d="M166.9 185.3L145 170.7l-21.9 14.6c-1.7 1.2-4 1.1-5.7-.1c-1.7-1.2-2.4-3.4-1.9-5.4l7-25.4l-20.6-16.4c-1.6-1.3-2.3-3.5-1.6-5.5c.6-2 2.5-3.4 4.5-3.5l26.3-1.2l9.2-24.7c.7-2 2.6-3.2 4.7-3.2s4 1.3 4.7 3.2l9.2 24.7l26.3 1.2c2.1.1 3.9 1.5 4.5 3.5c.6 2 0 4.2-1.6 5.5l-20.6 16.3l7 25.4c.6 2-.2 4.2-1.9 5.4c-1.6 1.3-3.9 1.3-5.7.2zm-19.1-24.8l13.6 9l-4.3-15.7c-.5-1.9.1-4 1.7-5.2l12.7-10.1l-16.2-.7c-2-.1-3.8-1.4-4.5-3.2l-5.7-15.3l-5.7 15.3c-.7 1.9-2.5 3.2-4.5 3.2l-16.2.7l12.7 10.1c1.6 1.2 2.2 3.3 1.7 5.2l-4.3 15.7l13.6-9c1.5-1.1 3.7-1.1 5.4 0zM95 180H35c-8.3 0-15-6.7-15-15V35c0-8.3 6.7-15 15-15h25v-5c0-2.8 2.2-5 5-5s5 2.2 5 5v5h60v-5c0-2.8 2.2-5 5-5s5 2.2 5 5v5h25c8.3 0 15 6.7 15 15v70c0 2.8-2.2 5-5 5s-5-2.2-5-5V60H30v105c0 2.8 2.2 5 5 5h60c2.8 0 5 2.2 5 5s-2.2 5-5 5zM30 50h140V35c0-2.8-2.2-5-5-5h-25v5c0 2.8-2.2 5-5 5s-5-2.2-5-5v-5H70v5c0 2.8-2.2 5-5 5s-5-2.2-5-5v-5H35c-2.8 0-5 2.2-5 5v15z"></path></svg>
 													<div class="dJtn-menu-item-title">공지</div></a></li>
 											<li><a
-												href="http://localhost/HCYHotel/user/qna/user_qna_list.do"
+												href="http://192.168.10.147/HCYHotel/user/qna/user_qna_list.do"
 												aria-label="MISSING STRING [NAV_LINK_ARIA_LABEL_PROMOTION] NEW"
 												class="dJtn dJtn-expanded dJtn-mod-variant-accordion"
 												aria-current="false"><svg viewBox="0 0 200 200" width="1.25em" height="1.25em"

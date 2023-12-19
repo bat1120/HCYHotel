@@ -24,7 +24,7 @@
 <meta property="fb:app_id" content="142078889760752">
 <link rel="shortcut icon" type="image/x-icon"
 	href="/_resource/favicon.ico">
-<link rel="stylesheet" type="text/css" href="http://localhost/HCYHotel/common/user/css/common.css">
+<link rel="stylesheet" type="text/css" href="http://192.168.10.147/HCYHotel/common/user/css/common.css">
 <!-- bootstrap -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <script type="text/javascript" async=""
@@ -75,7 +75,7 @@
 <link hreflang="cn" rel="alternate"
 	href="https://www.hoteltheplaza.com/cn/about/brand.jsp">
 
-<link rel="stylesheet" type="text/css" href="http://localhost/HCYHotel/common/user/css/about.css">
+<link rel="stylesheet" type="text/css" href="http://192.168.10.147/HCYHotel/common/user/css/about.css">
 <script>
 	var globalDepth1 = 1, globalDepth2 = 1;
 </script>
@@ -169,7 +169,7 @@
 
 				var lang = location.href.replace(/^http.+(\/[a-z]{2})\/.*$/gi,
 						"$1");
-				var protocol = (location.href.indexOf("localhost") != -1 ? "http"
+				var protocol = (location.href.indexOf("192.168.10.147") != -1 ? "http"
 						: "https")
 						+ "://";
 				var f = document.signForm;
@@ -270,7 +270,7 @@
 						<div class="bg_inner">
 							<div class="tit_bg">
 								<div class="bg_img">
-								 <img src="http://localhost/HCYHotel/common/business/img/D000042_1.jpg" alt="" style="float: left; margin-right: 400px;" width="800" height="400">
+								 <img src="http://192.168.10.147/HCYHotel/common/business/img/D000042_1.jpg" alt="" style="float: left; margin-right: 400px;" width="800" height="400">
  
 								</div>
 
@@ -282,9 +282,9 @@
 									</div>
 								</div>
 								<div class="right_area cnt_inner">
-								<a href="http://localhost/HCYHotel/user/review/diningreview.do">
+								<a href="http://192.168.10.147/HCYHotel/user/review/diningreview.do">
 								<button type="button" class="btn btn-secondary">후기</button></a>
-								<a href="http://localhost/HCYHotel/user/dining/dining_booking.do">
+								<a href="http://192.168.10.147/HCYHotel/user/dining/dining_booking.do">
 								<button type="button" class="btn btn-dark">예약하기</button></a>
 									<p class="sub_tit_b">
 								맛있고 깔끔한 식사를 함께할 수 있는 최적의 공간 뇸뇸

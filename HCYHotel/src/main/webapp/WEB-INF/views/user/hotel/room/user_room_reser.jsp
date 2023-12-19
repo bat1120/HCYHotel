@@ -17,7 +17,7 @@
 	content="호텔 베니키아, 베니키아 호텔 공식 예약사이트,호텔,비지니스 호텔,대한민국,KOREA HOTEL">
 <meta name="viewport"
 	content="user-scalable=yes, width=1200, target-densitydpi=medium-dpi">
-<link rel="stylesheet" type="text/css" href="http://localhost/HCYHotel/common/user/css/common2.css">
+<link rel="stylesheet" type="text/css" href="http://192.168.10.147/HCYHotel/common/user/css/common2.css">
 <link rel="shortcut icon" href="/images/favicon.ico">
 <script type="text/javascript" async=""
 	src="https://www.google-analytics.com/analytics.js"></script>
@@ -399,7 +399,7 @@
 								<li><div class="chh_thum" style="width:1000px;">
 										<div class="chh_img" onclick="infoHotel(1083)">
 											<img style="width: 280px;"
-												src="http://localhost/HCYHotel/common/business/img/H000048_1.jpg"
+												src="http://192.168.10.147/HCYHotel/common/business/img/H000048_1.jpg"
 												alt="베니키아 스위스로젠 호텔">
 										</div>
 										<div class="chh_txt" onclick="infoHotel(1083)">
@@ -415,7 +415,7 @@
 											</ul>
 										</div>
 										<div class="chh_price">
-										<a href="http://localhost/HCYHotel/user/hotel/room/user_roombooking.do"><button type="button">결제하기</button></a>
+										<a href="http://192.168.10.147/HCYHotel/user/hotel/room/user_roombooking.do"><button type="button">결제하기</button></a>
 											<span class="pr_txt">가격 </span><strong class="pr_red">₩120,000</strong>
 											<span class="btn_reser_s"> 
 											<button type="button" class="btn btn-danger">예약하기</button>

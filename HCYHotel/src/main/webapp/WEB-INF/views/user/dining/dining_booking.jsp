@@ -13,11 +13,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="Content-Language" content="ko-KR">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-<link href="http://localhost/HCYHotel/common/user/css/pattern.css" media="all"
+<link href="http://192.168.10.147/HCYHotel/common/user/css/pattern.css" media="all"
 	rel="stylesheet" type="text/css">
-<link href="http://localhost/HCYHotel/common/user/css/etc.css" media="all"
+<link href="http://192.168.10.147/HCYHotel/common/user/css/etc.css" media="all"
 	rel="stylesheet" type="text/css">
-<link href="http://localhost/HCYHotel/common/user/css/member_join.css" media="all"
+<link href="http://192.168.10.147/HCYHotel/common/user/css/member_join.css" media="all"
 	rel="stylesheet" type="text/css">
 <link href="/favicon.ico?ver=3" rel="favicon">
 <link
@@ -279,7 +279,7 @@
   if (successMessage) {
     alert(successMessage);
     // 로그인으로 이동
-    window.location.href = "http://localhost/HCYHotel/user/login/user_login.do";
+    window.location.href = "http://192.168.10.147/HCYHotel/user/login/user_login.do";
   }
 </script>
 <script>
@@ -302,7 +302,7 @@ $(document).ready(function() {
 
         // 모든 필수 입력이 완료되었다면 예약을 완료하고 알림창을 띄움
         alert('예약이 완료되었습니다.');
-        location.href="http://localhost/HCYHotel/user/home/user_home.do";
+        location.href="http://192.168.10.147/HCYHotel/user/home/user_home.do";
     });
 });
 
@@ -793,7 +793,7 @@ wcs_do(_nasa);
 	<!-- End Google Tag Manager (noscript) -->
 	<div id="_sticky_warp" role="complementary"></div>
 
-	<link href="http://localhost/HCYHotel/common/user/css/login.css" rel="stylesheet"
+	<link href="http://192.168.10.147/HCYHotel/common/user/css/login.css" rel="stylesheet"
 		type="text/css">
 	<script type="text/javascript" src="/js/libs/secure/rsa.min.js"></script>
 	<script type="text/javascript"

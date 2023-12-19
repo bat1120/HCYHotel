@@ -20,21 +20,21 @@
 <meta property="fb:app_id" content="1593727887570039">
 <meta property="og:image:width" content="200"> 
 <meta property="og:image:height" content="200">
-<link href="http://localhost/HCYHotel/common/user/css/sticky_assist.css" media="all"
+<link href="http://192.168.10.147/HCYHotel/common/user/css/sticky_assist.css" media="all"
 	rel="stylesheet" type="text/css">
-<link href="http://localhost/HCYHotel/common/user/css/layout.css" media="all"
+<link href="http://192.168.10.147/HCYHotel/common/user/css/layout.css" media="all"
 	rel="stylesheet" type="text/css">
-<link href="http://localhost/HCYHotel/common/user/css/pattern.css" media="all"
+<link href="http://192.168.10.147/HCYHotel/common/user/css/pattern.css" media="all"
 	rel="stylesheet" type="text/css">
-<link href="http://localhost/HCYHotel/common/user/css/header_default.css" media="all"
+<link href="http://192.168.10.147/HCYHotel/common/user/css/header_default.css" media="all"
 	rel="stylesheet" type="text/css">
-<link href="http://localhost/HCYHotel/common/user/css/gnb_default_override.css"
+<link href="http://192.168.10.147/HCYHotel/common/user/css/gnb_default_override.css"
 	media="all" rel="stylesheet" type="text/css">
-<link href="http://localhost/HCYHotel/common/user/css/common_ui_keeping.css" media="all"
+<link href="http://192.168.10.147/HCYHotel/common/user/css/common_ui_keeping.css" media="all"
 	rel="stylesheet" type="text/css">
-<link href="http://localhost/HCYHotel/common/user/css/components.css" media="all"
+<link href="http://192.168.10.147/HCYHotel/common/user/css/components.css" media="all"
 	rel="stylesheet" type="text/css">
-<link href="http://localhost/HCYHotel/common/user/css/help.css" media="all"
+<link href="http://192.168.10.147/HCYHotel/common/user/css/help.css" media="all"
 	rel="stylesheet" type="text/css">
 <link href="/favicon.ico?ver=3" rel="favicon">
 <link href="/favicon.ico?ver=3" rel="icon" type="image/x-icon">
@@ -1600,7 +1600,7 @@ var setApplyReload = function (flag) {
 			style="display: none; position: fixed; right: 34px; bottom: 0; z-index: 150; width: 448px; height: 740px; border: 0; border-radius: 20px; border-bottom-left-radius: 0; border-bottom-right-radius: 0; box-sizing: border-box; box-shadow: 0 2px 30px 0 rgba(0, 0, 0, 0.15);"></iframe>
 	</div>
 	<script src="/js/apply/QuickApply.js?v=20231130103248"></script>
-	<link href="http://localhost/HCYHotel/common/user/css/login.css" rel="stylesheet"
+	<link href="http://192.168.10.147/HCYHotel/common/user/css/login.css" rel="stylesheet"
 		type="text/css">
 	<script type="text/javascript" src="/js/libs/secure/rsa.min.js"></script>
 	<script type="text/javascript"

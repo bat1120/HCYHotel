@@ -20,21 +20,21 @@
 <meta property="fb:app_id" content="1593727887570039">
 <meta property="og:image:width" content="200">
 <meta property="og:image:height" content="200">
-<link href="http://localhost/HCYHotel/common/user/css/sticky_assist.css" media="all"
+<link href="http://192.168.10.147/HCYHotel/common/user/css/sticky_assist.css" media="all"
 	rel="stylesheet" type="text/css">
-<link href="http://localhost/HCYHotel/common/user/css/layout.css" media="all"
+<link href="http://192.168.10.147/HCYHotel/common/user/css/layout.css" media="all"
 	rel="stylesheet" type="text/css">
-<link href="http://localhost/HCYHotel/common/user/css/pattern.css" media="all"
+<link href="http://192.168.10.147/HCYHotel/common/user/css/pattern.css" media="all"
 	rel="stylesheet" type="text/css">
-<link href="http://localhost/HCYHotel/common/user/css/header_default.css" media="all"
+<link href="http://192.168.10.147/HCYHotel/common/user/css/header_default.css" media="all"
 	rel="stylesheet" type="text/css">
-<link href="http://localhost/HCYHotel/common/user/css/gnb_default_override.css"
+<link href="http://192.168.10.147/HCYHotel/common/user/css/gnb_default_override.css"
 	media="all" rel="stylesheet" type="text/css">
-<link href="http://localhost/HCYHotel/common/user/css/common_ui_keeping.css" media="all"
+<link href="http://192.168.10.147/HCYHotel/common/user/css/common_ui_keeping.css" media="all"
 	rel="stylesheet" type="text/css">
-<link href="http://localhost/HCYHotel/common/user/css/components.css" media="all"
+<link href="http://192.168.10.147/HCYHotel/common/user/css/components.css" media="all"
 	rel="stylesheet" type="text/css">
-<link href="http://localhost/HCYHotel/common/user/css/help.css" media="all"
+<link href="http://192.168.10.147/HCYHotel/common/user/css/help.css" media="all"
 	rel="stylesheet" type="text/css">
 <link href="/favicon.ico?ver=3" rel="favicon">
 <link href="/favicon.ico?ver=3" rel="icon" type="image/x-icon">
@@ -334,7 +334,7 @@ googletag.cmd.push(function() {
   if (successMessage) {
     alert(successMessage);
     // 로그인으로 이동
-    window.location.href = "http://localhost/HCYHotel/user/login/user_login.do";
+    window.location.href = "http://192.168.10.147/HCYHotel/user/login/user_login.do";
   }
 </script>
   

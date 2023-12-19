@@ -27,7 +27,7 @@
 <script type="text/javascript">
 $(function(){
 	alert("${finderror}");
-	window.location.href="http://localhost/HCYHotel/user/login/user_login.do";
+	window.location.href="http://192.168.10.147/HCYHotel/user/login/user_login.do";
 });//ready
 </script>
 
