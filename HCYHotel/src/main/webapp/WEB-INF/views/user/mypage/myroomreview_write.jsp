@@ -26,7 +26,7 @@
 <!-- <meta property="fb:app_id" content="499127953852895"> -->
 <meta property="fb:app_id" content="142078889760752">
 <link rel="shortcut icon" type="image/x-icon" href="/_resource/favicon.ico">
-<link rel="stylesheet" type="text/css" href="http://localhost/HCYHotel/common/user/css/plaza/common.css">
+<link rel="stylesheet" type="text/css" href="http://192.168.10.147/HCYHotel/common/user/css/plaza/common.css">
 <script src="https://connect.facebook.net/signals/config/345077226063324?v=2.9.138&amp;r=stable&amp;domain=www.hoteltheplaza.com" async=""></script><script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script src="/_resource/js/vendor/jquery-1.9.1.min.js"></script>
 <script src="/_resource/js/vendor/TweenMax.min.js"></script>
 <script src="/_resource/js/vendor/Draggable.min.js"></script>
@@ -63,7 +63,7 @@
 	<link hreflang="en" rel="alternate" href="https://www.hoteltheplaza.com/en/customer_center/inquiry.jsp?inquiry=1">
 	<link hreflang="ja" rel="alternate" href="https://www.hoteltheplaza.com/ja/customer_center/inquiry.jsp?inquiry=1">
 	<link hreflang="cn" rel="alternate" href="https://www.hoteltheplaza.com/cn/customer_center/inquiry.jsp?inquiry=1">
-    <link rel="stylesheet" type="text/css" href="http://localhost/HCYHotel/common/user/css/plaza/customer_center.css">
+    <link rel="stylesheet" type="text/css" href="http://192.168.10.147/HCYHotel/common/user/css/plaza/customer_center.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -166,7 +166,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		}
 
 		var lang		= location.href.replace(/^http.+(\/[a-z]{2})\/.*$/gi, "$1");
-		var protocol	= ( location.href.indexOf("localhost") != -1 ? "http" : "https" ) + "://";
+		var protocol	= ( location.href.indexOf("192.168.10.147") != -1 ? "http" : "https" ) + "://";
 		var f			= document.signForm;
 		var returnUrl	= location.href.replace(/#/gi,"");
 		var cond		= returnUrl.indexOf("signup_complete") != -1
@@ -260,7 +260,7 @@ $(function(){
 	
 	$("#btn_write").click(function(){
 		alert("소중한 후기 감사합니다.")
-		window.location.href="http://localhost/HCYHotel/user/home/user_home.do";
+		window.location.href="http://192.168.10.147/HCYHotel/user/home/user_home.do";
 	});
 	
 	

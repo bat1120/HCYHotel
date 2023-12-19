@@ -25,24 +25,24 @@
 <meta property="og:image:width" content="200">
 <meta property="og:image:height" content="200"> 
 
-<link href="http://localhost/HCYHotel/common/user/css/sticky_assist.css" media="all"
+<link href="http://192.168.10.147/HCYHotel/common/user/css/sticky_assist.css" media="all"
 	rel="stylesheet" type="text/css">
 <link href="https://www.saramin.co.kr/zf_user/auth" rel="canonical">
-<link href="http://localhost/HCYHotel/common/user/css/layout.css" media="all"
+<link href="http://192.168.10.147/HCYHotel/common/user/css/layout.css" media="all"
 	rel="stylesheet" type="text/css">
-<link href="http://localhost/HCYHotel/common/user/css/header_default.css" media="all"
+<link href="http://192.168.10.147/HCYHotel/common/user/css/header_default.css" media="all"
 	rel="stylesheet" type="text/css">
-<link href="http://localhost/HCYHotel/common/user/css/gnb_default_override.css"
+<link href="http://192.168.10.147/HCYHotel/common/user/css/gnb_default_override.css"
 	media="all" rel="stylesheet" type="text/css">
-<link href="http://localhost/HCYHotel/common/user/css/common_ui_keeping.css" media="all"
+<link href="http://192.168.10.147/HCYHotel/common/user/css/common_ui_keeping.css" media="all"
 	rel="stylesheet" type="text/css">
-<link href="http://localhost/HCYHotel/common/user/css/components.css" media="all"
+<link href="http://192.168.10.147/HCYHotel/common/user/css/components.css" media="all"
 	rel="stylesheet" type="text/css">
-<link href="http://localhost/HCYHotel/common/user/css/etc.css" media="all"
+<link href="http://192.168.10.147/HCYHotel/common/user/css/etc.css" media="all"
 	rel="stylesheet" type="text/css">
-<link href="http://localhost/HCYHotel/common/user/css/pattern.css" media="screen"
+<link href="http://192.168.10.147/HCYHotel/common/user/css/pattern.css" media="screen"
 	rel="stylesheet" type="text/css">
-<link href="http://localhost/HCYHotel/common/user/css/login.css" media="screen"
+<link href="http://192.168.10.147/HCYHotel/common/user/css/login.css" media="screen"
 	rel="stylesheet" type="text/css">
 <link href="/favicon.ico?ver=3" rel="favicon">
 <link href="/favicon.ico?ver=3" rel="icon" type="image/x-icon">
@@ -433,10 +433,10 @@ function setMemberFlag(flag) {
 										<button type="submit" class="btn-login BtnType SizeML">로그인</button>
 									</div>
 									<div class="signup-forgotten" style="text-align: right">
-										<a id="a_join" href="http://localhost/HCYHotel/user/join/join_check.do"
+										<a id="a_join" href="http://192.168.10.147/HCYHotel/user/join/join_check.do"
 											class="sign_up"
 											onmousedown="try{n_trackEvent('login', 'pc_login_page' , 'join', '');}catch(e){}">회원가입</a>
-										<a href="http://localhost/HCYHotel/user/findId/findIdPass_check.do" class="forgotten"
+										<a href="http://192.168.10.147/HCYHotel/user/findId/findIdPass_check.do" class="forgotten"
 											onmousedown="try{n_trackEvent('login', 'pc_login_page' , 'find', '');}catch(e){}">아이디/비밀번호
 											찾기</a> 
 									</div>

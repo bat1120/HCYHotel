@@ -47,7 +47,7 @@
  </filter-mapping> 
 	<context-param>
 		<param-name>default_url</param-name>
-		<param-value>http://localhost/HCYHotel/common/admin/</param-value>
+		<param-value>http://192.168.10.147/HCYHotel/common/admin/</param-value>
 	</context-param>
 
 </web-app>

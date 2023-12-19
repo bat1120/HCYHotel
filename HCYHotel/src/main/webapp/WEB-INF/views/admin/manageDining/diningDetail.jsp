@@ -133,7 +133,7 @@
                             <c:when test="${empty files }">
 	                            <div class="owl-carousel testimonial-carousel">
 	                                <div class="testimonial-item text-center">
-	                                    <img class="img-fluid rounded-circle mx-auto mb-1" src="http://localhost/HCYHotel/common/business/img/noImage.png" style="width: 100%; height: 100%;">
+	                                    <img class="img-fluid rounded-circle mx-auto mb-1" src="http://192.168.10.147/HCYHotel/common/business/img/noImage.png" style="width: 100%; height: 100%;">
 	                                    <h5 class="mb-1">사진 없음</h5>
 	                                </div>
 	                            </div>
@@ -142,7 +142,7 @@
                             <c:forEach var="file" items="${files }" varStatus="i">
 	                            <div class="owl-carousel testimonial-carousel">
 	                                <div class="testimonial-item text-center">
-	                                    <img class="img-fluid rounded-circle mx-auto mb-4" src="http://localhost/HCYHotel/common/business/img/${file}.jpg" style="width: 100%; height: 100%;">
+	                                    <img class="img-fluid rounded-circle mx-auto mb-4" src="http://192.168.10.147/HCYHotel/common/business/img/${file}.jpg" style="width: 100%; height: 100%;">
 	                                </div>
 	                            </div>
                             </c:forEach>

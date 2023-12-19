@@ -8,7 +8,7 @@
 <!-- jQuery CDN 시작 -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <!-- jQuery CDN 끝 -->
-<link href="http://localhost/mvc_prj/common/main/favicon.png" rel="icon">
+<link href="http://192.168.10.147/mvc_prj/common/main/favicon.png" rel="icon">
 <style>
 
 </style>

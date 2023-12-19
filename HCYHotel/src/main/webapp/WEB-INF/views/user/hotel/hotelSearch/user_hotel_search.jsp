@@ -1414,7 +1414,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																	<button class="L9ZF-skip-to-details" aria-label="결과 상세 페이지로 이동하려면 클릭하세요.">결과 상세
 																		정보로 이동</button>
 																</div>
-																<a href="http://localhost/HCYHotel/user/hotel/hotelInfo/user_hotel_info.do?hotelcode=${hotel.hotelcode}"><button type="button" class="btn btn-info">호텔 바로가기</button></a>
+																<a href="http://192.168.10.147/HCYHotel/user/hotel/hotelInfo/user_hotel_info.do?hotelcode=${hotel.hotelcode}"><button type="button" class="btn btn-info">호텔 바로가기</button></a>
 																<div id="responsive-info-photo-container-1">
 																	<div class="IirT-photo-container" role="button" tabindex="-1">
 																		<div class="IirT-resultActionsMenuContainer IirT-alwaysVisible">
@@ -1559,7 +1559,7 @@ iframe.usabilla-live-button#usabilla_live_button_container_iframe640962128
 																							<button type="button" class="Iqt3 Iqt3-mod-stretch Iqt3-mod-bold Button-No-Standard-Style Iqt3-mod-variant-solid Iqt3-mod-theme-progress Iqt3-mod-shape-rounded-small Iqt3-mod-shape-mod-default Iqt3-mod-spacing-default Iqt3-mod-size-xsmall" tabindex="-1" aria-disabled="false">
 																								<div class="Iqt3-button-container">
 																									<div class="Iqt3-button-content">
-																										<a href="http://localhost/HCYHotel/user/hotel/room/user_room_reser.do"><span>객실 예약</span></a>
+																										<a href="http://192.168.10.147/HCYHotel/user/hotel/room/user_room_reser.do"><span>객실 예약</span></a>
 																									</div>
 																								</div>
 																								<div class="Iqt3-button-focus-outline"></div>

@@ -13,11 +13,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="Content-Language" content="ko-KR">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-<link href="http://localhost/HCYHotel/common/user/css/pattern.css" media="all"
+<link href="http://192.168.10.147/HCYHotel/common/user/css/pattern.css" media="all"
 	rel="stylesheet" type="text/css">
-<link href="http://localhost/HCYHotel/common/user/css/etc.css" media="all"
+<link href="http://192.168.10.147/HCYHotel/common/user/css/etc.css" media="all"
 	rel="stylesheet" type="text/css">
-<link href="http://localhost/HCYHotel/common/user/css/member_join.css" media="all"
+<link href="http://192.168.10.147/HCYHotel/common/user/css/member_join.css" media="all"
 	rel="stylesheet" type="text/css">
 <link href="/favicon.ico?ver=3" rel="favicon">
 <link
@@ -250,7 +250,7 @@
 		$(function(){
 			$("#btn_submit").click(function(){
 				alert("수정되었습니다.");
-				window.location.href="http://localhost/HCYHotel/user/home/user_home.do";
+				window.location.href="http://192.168.10.147/HCYHotel/user/home/user_home.do";
 			});
 			
 		});//ready
@@ -570,7 +570,7 @@ wcs_do(_nasa);
 	<!-- End Google Tag Manager (noscript) -->
 	<div id="_sticky_warp" role="complementary"></div>
 
-	<link href="http://localhost/HCYHotel/common/user/css/login.css" rel="stylesheet"
+	<link href="http://192.168.10.147/HCYHotel/common/user/css/login.css" rel="stylesheet"
 		type="text/css">
 	<script type="text/javascript" src="/js/libs/secure/rsa.min.js"></script>
 	<script type="text/javascript"

@@ -16,7 +16,7 @@
 <!-- <meta property="fb:app_id" content="499127953852895"> -->
 <meta property="fb:app_id" content="142078889760752">
 <link rel="shortcut icon" type="image/x-icon" href="/_resource/favicon.ico">
-<link rel="stylesheet" type="text/css" href="http://localhost/HCYHotel/common/user/css/plaza/common.css">
+<link rel="stylesheet" type="text/css" href="http://192.168.10.147/HCYHotel/common/user/css/plaza/common.css">
 <script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-C2XCVPTE5M&amp;l=dataLayer&amp;cx=c"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-WNLK849"></script><script src="/_resource/js/vendor/jquery-1.9.1.min.js"></script>
 <script src="/_resource/js/vendor/TweenMax.min.js"></script>
 <script src="/_resource/js/vendor/Draggable.min.js"></script>
@@ -43,7 +43,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link hreflang="en" rel="alternate" href="https://www.hoteltheplaza.com/en/room/roomall.jsp">
     <link hreflang="ja" rel="alternate" href="https://www.hoteltheplaza.com/jp/room/roomall.jsp">
     <link hreflang="cn" rel="alternate" href="https://www.hoteltheplaza.com/cn/room/roomall.jsp">
-    <link rel="stylesheet" type="text/css" href="http://localhost/HCYHotel/common/user/css/plaza/room.css">
+    <link rel="stylesheet" type="text/css" href="http://192.168.10.147/HCYHotel/common/user/css/plaza/room.css">
 
   
     <script>var globalDepth1=3,globalDepth2=1;</script>
@@ -146,7 +146,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		}
 
 		var lang		= location.href.replace(/^http.+(\/[a-z]{2})\/.*$/gi, "$1");
-		var protocol	= ( location.href.indexOf("localhost") != -1 ? "http" : "https" ) + "://";
+		var protocol	= ( location.href.indexOf("192.168.10.147") != -1 ? "http" : "https" ) + "://";
 		var f			= document.signForm;
 		var returnUrl	= location.href.replace(/#/gi,"");
 		var cond		= returnUrl.indexOf("signup_complete") != -1
@@ -267,32 +267,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <h3><span>룸 &amp; 스위트</span></h3>
             <ul>
                 <li>
-                    <a href="http://localhost/HCYHotel/user/hotel/room/user_room_info.do">
-                        <div class="room_img"><img src="http://localhost/HCYHotel/common/business/img/gallery_deluxe7.jpg" alt="디럭스룸 이미지" style="height:400px"></div>
+                    <a href="http://192.168.10.147/HCYHotel/user/hotel/room/user_room_info.do">
+                        <div class="room_img"><img src="http://192.168.10.147/HCYHotel/common/business/img/gallery_deluxe7.jpg" alt="디럭스룸 이미지" style="height:400px"></div>
                         <div class="room_text">
                             디럭스 룸 <span class="eng">DELUXE ROOM</span>
                         </div> 
                     </a>
                 </li>
                 <li>
-                    <a href="http://localhost/HCYHotel/user/hotel/room/user_room_info.do">
-                        <div class="room_img"><img src="http://localhost/HCYHotel/common/business/img/2878-01-2000-acc-LTWO.jpg.thumb.768.768.jpg" alt="프리미어 스위트 이미지" style="height:400px"></div>
+                    <a href="http://192.168.10.147/HCYHotel/user/hotel/room/user_room_info.do">
+                        <div class="room_img"><img src="http://192.168.10.147/HCYHotel/common/business/img/2878-01-2000-acc-LTWO.jpg.thumb.768.768.jpg" alt="프리미어 스위트 이미지" style="height:400px"></div>
                         <div class="room_text">
                             프리미어 스위트 <span class="eng">PREMIER SUITE</span>
                         </div>
                     </a>
                 </li>
                 <li>
-                    <a href="http://localhost/HCYHotel/user/hotel/room/user_room_info.do">
-                        <div class="room_img"><img src="http://localhost/HCYHotel/common/business/img/image_readtop_2021_655383_16256232714708432.jpg" alt="플라자 스위트 이미지" style="height:400px"></div>
+                    <a href="http://192.168.10.147/HCYHotel/user/hotel/room/user_room_info.do">
+                        <div class="room_img"><img src="http://192.168.10.147/HCYHotel/common/business/img/image_readtop_2021_655383_16256232714708432.jpg" alt="플라자 스위트 이미지" style="height:400px"></div>
                         <div class="room_text">
                            스위트 <span class="eng">SUITE</span>
                         </div> 
                     </a>
                 </li>
                 <li>
-                    <a href="http://localhost/HCYHotel/user/hotel/room/user_room_info.do">
-                        <div class="room_img"><img src="http://localhost/HCYHotel/common/business/img/3892-01-2000-roo-LTWO.jpg.thumb.768.768.jpg" alt="레지덴셜 스위트 이미지" style="height:400px"></div>
+                    <a href="http://192.168.10.147/HCYHotel/user/hotel/room/user_room_info.do">
+                        <div class="room_img"><img src="http://192.168.10.147/HCYHotel/common/business/img/3892-01-2000-roo-LTWO.jpg.thumb.768.768.jpg" alt="레지덴셜 스위트 이미지" style="height:400px"></div>
                         <div class="room_text">
                             레지덴셜 스위트 <span class="eng">RESIDENTIAL SUITE</span>
                         </div>

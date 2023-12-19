@@ -30,21 +30,21 @@
 <meta property="og:description"
 	content="아이디/비밀번호 찾기 페이지 입니다. 사람인에서 더 많은 정보를 확인해보세요.">
 <meta property="fb:app_id" content="1593727887570039">
-<link href="http://localhost/HCYHotel/common/user/css/sticky_assist.css?v=20231130163301" media="all"
+<link href="http://192.168.10.147/HCYHotel/common/user/css/sticky_assist.css?v=20231130163301" media="all"
 	rel="stylesheet" type="text/css">
-<link href="http://localhost/HCYHotel/common/user/css/layout.css?v=20231130163301" media="all"
+<link href="http://192.168.10.147/HCYHotel/common/user/css/layout.css?v=20231130163301" media="all"
 	rel="stylesheet" type="text/css">
-<link href="http://localhost/HCYHotel/common/user/css/pattern.css?v=20231130163301" media="all"
+<link href="http://192.168.10.147/HCYHotel/common/user/css/pattern.css?v=20231130163301" media="all"
 	rel="stylesheet" type="text/css">
-<link href="http://localhost/HCYHotel/common/user/css/header_default.css?v=20231130163301" media="all"
+<link href="http://192.168.10.147/HCYHotel/common/user/css/header_default.css?v=20231130163301" media="all"
 	rel="stylesheet" type="text/css">
-<link href="http://localhost/HCYHotel/common/user/css/gnb_default_override.css?v=20231130163301"
+<link href="http://192.168.10.147/HCYHotel/common/user/css/gnb_default_override.css?v=20231130163301"
 	media="all" rel="stylesheet" type="text/css">
-<link href="http://localhost/HCYHotel/common/user/css/common_ui_keeping.css?v=20231130163301" media="all"
+<link href="http://192.168.10.147/HCYHotel/common/user/css/common_ui_keeping.css?v=20231130163301" media="all"
 	rel="stylesheet" type="text/css">
-<link href="http://localhost/HCYHotel/common/user/css/components.css?v=20231130163301" media="all"
+<link href="http://192.168.10.147/HCYHotel/common/user/css/components.css?v=20231130163301" media="all"
 	rel="stylesheet" type="text/css">
-<link href="http://localhost/HCYHotel/common/user/css/help.css?v=20231130163301" media="all"
+<link href="http://192.168.10.147/HCYHotel/common/user/css/help.css?v=20231130163301" media="all"
 	rel="stylesheet" type="text/css">
 <link href="https://www.saramin.co.kr/zf_user/helpdesk/idpw-find"
 	rel="canonical">
@@ -952,8 +952,8 @@ googletag.cmd.push(function() {
 					<p class="desc_find">회원가입 대상확인</p>
 					<div class="cont_find">
 						<ul class="list_idpwd">
-							<li><strong class="tit_idpwd"><a href="http://localhost/HCYHotel/user/join/user_join_check.do" onclick="setMemberFlag(1)">개인회원</a></strong></li>
-							<li><strong class="tit_idpwd"><a href="http://localhost/HCYHotel/user/join/business_join_check.do" onclick="setMemberFlag(2)">사업자 회원</a></strong></li>
+							<li><strong class="tit_idpwd"><a href="http://192.168.10.147/HCYHotel/user/join/user_join_check.do" onclick="setMemberFlag(1)">개인회원</a></strong></li>
+							<li><strong class="tit_idpwd"><a href="http://192.168.10.147/HCYHotel/user/join/business_join_check.do" onclick="setMemberFlag(2)">사업자 회원</a></strong></li>
 							<input type="hidden" id="memberFlag" name="memberFlag" value="1">
 						</ul>
 					</div>
@@ -964,9 +964,9 @@ googletag.cmd.push(function() {
 					document.getElementById("memberFlag").value=flag;
 					alert("mem"+$("#memberFlag").val());
 					if (flag === 1) {
-				        location.href = "http://localhost/HCYHotel/user/join/user_join_check.do";
+				        location.href = "http://192.168.10.147/HCYHotel/user/join/user_join_check.do";
 				    } else if (flag === 2) {
-				        location.href = "http://localhost/HCYHotel/user/join/business_join_check.do";
+				        location.href = "http://192.168.10.147/HCYHotel/user/join/business_join_check.do";
 				    }
 				}
 				</script>
@@ -1607,7 +1607,7 @@ var setApplyReload = function (flag) {
 			style="display: none; position: fixed; right: 34px; bottom: 0; z-index: 150; width: 448px; height: 740px; border: 0; border-radius: 20px; border-bottom-left-radius: 0; border-bottom-right-radius: 0; box-sizing: border-box; box-shadow: 0 2px 30px 0 rgba(0, 0, 0, 0.15);"></iframe>
 	</div>
 	<script src="/js/apply/QuickApply.js?v=20231130103248"></script>
-	<link href="http://localhost/HCYHotel/common/user/css/login.css?v=20231130163301" rel="stylesheet"
+	<link href="http://192.168.10.147/HCYHotel/common/user/css/login.css?v=20231130163301" rel="stylesheet"
 		type="text/css">
 	<script type="text/javascript" src="/js/libs/secure/rsa.min.js"></script>
 	<script type="text/javascript"
