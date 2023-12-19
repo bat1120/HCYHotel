@@ -271,7 +271,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div class="room_img"><img src="http://localhost/HCYHotel/common/business/img/gallery_deluxe7.jpg" alt="디럭스룸 이미지" style="height:400px"></div>
                         <div class="room_text">
                             디럭스 룸 <span class="eng">DELUXE ROOM</span>
-                        </div>
+                        </div> 
                     </a>
                 </li>
                 <li>
