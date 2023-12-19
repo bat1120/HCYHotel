@@ -1,5 +1,8 @@
 package kr.co.sist.admin.manageMem;
 
+import java.io.UnsupportedEncodingException;
+import java.security.GeneralSecurityException;
+import java.security.NoSuchAlgorithmException;
 import java.util.List;
 
 import org.apache.ibatis.exceptions.PersistenceException;
@@ -55,15 +58,15 @@ public class AdminManageMemService {
 	public MemInfoDomain loadMemInfo(MemDtailPagingVO mVO){
 		MemInfoDomain mid = null;
 		mid = ammDAO.selectMemInfo(mVO);
-//			try {
-//				mid.setName(e.decryption(mid.getName()));
-//			} catch (NoSuchAlgorithmException e1) {
-//				e1.printStackTrace();
-//			} catch (UnsupportedEncodingException e2) {
-//				e2.printStackTrace();
-//			} catch (GeneralSecurityException e3) {
-//				e3.printStackTrace();
-//			}//catch
+			try {
+				mid.setTel(e.decryption(mid.getTel()));
+			} catch (NoSuchAlgorithmException e1) {
+				e1.printStackTrace();
+			} catch (UnsupportedEncodingException e2) {
+				e2.printStackTrace();
+			} catch (GeneralSecurityException e3) {
+				e3.printStackTrace();
+			}//catch
 
 		if("mem".equals(mVO.getMemFlag())) {
 			List<RoomReviewDomain> roomList = ammDAO.selectRoomReview(mVO);
