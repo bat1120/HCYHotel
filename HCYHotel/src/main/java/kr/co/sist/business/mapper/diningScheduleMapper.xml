@@ -34,4 +34,7 @@ price=#{price},
 scheduledate=#{scheduledate}
 where schedulecode=#{schedulecode}
 </update>
+<delete id="deleteSchedule" parameterType="String">
+delete from diningschedule where schedulecode=#{schedulecode}
+</delete>
 </mapper>

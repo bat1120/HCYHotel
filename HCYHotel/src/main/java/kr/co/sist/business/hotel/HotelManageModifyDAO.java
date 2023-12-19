@@ -90,4 +90,5 @@ public class HotelManageModifyDAO {
 	   ss.selectOne("kr.co.sist.business.hotelModifyMapper.insertHotel",hVO);
 	   mbh.closeHandler(ss);
    }
+  
 }

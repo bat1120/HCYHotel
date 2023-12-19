@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.context.support.HttpRequestHandlerServlet;
 import org.springframework.web.multipart.MultipartFile;
 
 import oracle.jdbc.proxy.annotation.Post;
@@ -165,5 +166,11 @@ public class BusinessDiningModifyController {
 		DiningManageDAO.getInstance().updateDining(duVO);
 		return "BusinessManage/businessmanage_dining";
 	}
-	
+	@GetMapping("/BusinessManage/dining_delete.do")
+	public String deleteDining(HttpServletRequest reqeust) {
+		String diningcode=reqeust.getParameter("diningcode");
+		DiningManageService.getInstance().deleteDining(diningcode);
+		
+		return "redirect:businessDining.do";
+	}
 }

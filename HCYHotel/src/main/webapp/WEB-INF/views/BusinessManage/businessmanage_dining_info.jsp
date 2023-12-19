@@ -1930,6 +1930,10 @@ $(function(){
 	$("#save").click(function(){
 		$("#frm").submit();
 	})
+	var diningcode=$("#diningcode").val();
+	$("#delete").click(function(){
+		location.href="dining_delete.do?diningcode="+diningcode;
+	})
 })
 </script>
 
@@ -1979,10 +1983,9 @@ $(function(){
     <div>
     </div>
     <button type="button" class="btn btn-primary" id="save">수정</button>
+    <button type="button" class="btn btn-primary" id="delete">삭제</button>
     <button type="button" class="btn btn-primary" id="cancel">취소</button>
 </form>
-				
-			
 					
 				</main>
 			</div>

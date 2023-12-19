@@ -46,4 +46,7 @@ public class DiningManageService {
 		List<FileDomain> list=DiningManageDAO.getInstance().selectFilename(diningcode);
 		return list;
 	}
+	public void deleteDining(String diningcode) {
+		DiningManageDAO.getInstance().deleteDining(diningcode);
+	}
 }
