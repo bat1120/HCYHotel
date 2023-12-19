@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ page info="내가쓴다이닝리뷰목록띄우는거해야져"%>
+<%@ page info=""%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <html lang="ko" class="noIE">
@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=1280">
 <meta name="format-detection" content="telephone=no">
 
-<title>나의 다이닝 후기 - 마이페이지 | HCYCombined</title>
+<title>다이닝 예약 | HCYCombined</title>
 
 <link rel="shortcut icon" href="/system/images/favicon.ico">
 <link rel="apple-touch-icon" href="/system/images/favicon.ico">
@@ -23,6 +23,8 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <!-- jQuery CDN -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+
 <!-- js -->
 <script type="text/javascript" async=""
 	src="https://www.googletagmanager.com/gtag/js?id=G-1J0VYQ4NSJ&amp;cx=c&amp;_slc=1"></script>
@@ -72,8 +74,8 @@
 <script type="text/javascript" src="/payment/js/easypay_payment.js"></script>
 <script type="text/javascript"
 	src="https://pg.easypay.co.kr/webpay/EasypayCard_Web.js"></script>
-
-
+	
+<body>
 	<!-- header -->
 	<jsp:include page="../include/header.jsp" />
 	
@@ -81,28 +83,50 @@
 	$(function(){
 		
 	});//ready
-	
-	
-	</script>ㅊ
+		
+	</script>
 	
 <div id="content-main" class="content-main">
 <div >
-<h3 class="content-main-title" style="margin-top:7%; ">나의 다이닝 후기</h3>
-<table class="board-list" style="width: 1200px; margin-left:20%; margin-top:100px; margin-bottom: 100px;">
-<c:forEach var="diningReviewList" varStatus="i" items="${ diningReviewList }">
-<tr style="font-family: ; color: ; ">
-	<td colspan="3" style="width: 400px;"><strong>다이닝 </strong><c:out value="${ diningReviewList.diningName }" /></td>
-	<td style="width: 400px"><strong>호텔 </strong><c:out value="${ diningReviewList.hotelName }"/></td>
-	<td style="width 300px;"><strong>내 평점 </strong><c:out value="${ diningReviewList.rating }"/> / 10.0</td>
-	<td rowspan="2" style="width: 100px;"><input type="button" class="btn btn-dark btn-sm" value="삭제"/></td>
-</tr>
-<tr style="text-align: left;">
-	<td colspan="3" width="1100px" ><c:out value="${ diningReviewList.content }"/></td>
-	<td></td>
-	<td></td> 
-</tr>	
-</c:forEach>
-</table>
+<h3 class="content-main-title" style="margin-top:7%; ">다이닝 예약</h3>
+
+<table border="1" class="board-list" style="margin-bottom: 20px; width:1000px; height: 200px; margin-left: 450px; margin-bottom: 50px;">
+				<caption>
+					<strong>다이닝 예약</strong>
+				</caption>
+				<colgroup >
+				
+					<col style="width: 10px;">
+					<col style="width: 50px;">
+					<col style="width: 300px;">
+					<col style="width: 100px;">
+					<col style="width: 300px;">
+					<col style="width: 10px;">
+					<col style="width: 50x;">
+					<col style="width: 10px;">
+					
+				</colgroup>
+			
+				<tbody>
+				<tr style="text-align: left;">
+				<td></td>
+				<td><strong>호텔</strong></td>
+				<td> <select id="hotels" style="width: 200px;">
+<option>호텔1</option>
+</select></td>
+<td><strong>다이닝</strong></td>
+				<td> <select id="dinings" style="width: 200px;">
+<option>다이닝1</option>
+</select></td>
+<td></td>
+				<td>
+				<a href="dining_booking1.do">
+<input type="button" class="btn btn-dark" value="다음" id="dining_choose"/>
+</a>
+</td>
+<td></td>
+				</tbody>
+			</table>
 
 </div>
 </div>

@@ -130,7 +130,6 @@ $(function(){
 });// ready
 
 function detail( noticeCode ){
-	alert("바부야");
 	$("#noticeCode").val( noticeCode );
 	$("#noticeCodeFrm").submit();
 };//detail

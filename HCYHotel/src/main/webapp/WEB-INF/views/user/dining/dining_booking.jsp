@@ -1,2806 +1,1488 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ page info="다이닝 예약"%>
-
-<html xml:lang="ko" lang="ko" class="webkit chrome win  js portrait pc"><head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<%@ page info=""%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<html lang="ko">
+<head>
+<title>객실예약</title>
+<meta name="naver-site-verification"
+	content="86455485e27cab6986d130e4c3b90c5b516820d1">
+<meta name="Description"
+	content="개인/기업 회원가입 안내: 취업 확률을 높이는 사람인 만의 특별한 개인회원 서비스, 기본 이력서/명품 이력서/직종별 이력서 등 다양하고 쉬운 이력서 작성, 무료 입사지원 통계 서비스, 무료 이력서 강조 효과 서비스. 채용효과를 높이는 사람인 만의 특별한 기업회원 서비스 - 최대 10개까지 채용공고 무료 등록, 채용업무 효율화 - 편리하고 간편한 지원자 관리, 명품 인재가 가득한 인재정보 열람 상품, 높은 채용효과를 보장하는 저렴하고 다양한 채용광고 상품.">
+<meta name="naver" content="nosublinks">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="format-detection" content="telephone=no">
-<title>다이닝예약 | HCYCombined</title>
-<!-- <meta name="keywords" content="" /> -->
-<meta name="og:title" content="예약 | 다이닝예약 | The Shilla Hotels &amp; Resorts">
-<!-- 검색엔진용 추가 180524 -->
-<meta name="keywords" content="신라스테이,신라호텔,서울신라호텔,제주신라호텔,호텔신라,럭셔리호텔,신라리워즈">
-<meta name="description" content="국내 최고 럭셔리 호텔인 호텔신라는 신라호텔과 신라스테이 브랜드를 보유하고 있습니다.">
-<meta name="subject" content="신라스테이 소개,신라 리워즈 안내,브랜드 및 호텔 소개,객실 패키지 안내,온라인 최저가 예약,">
-<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-30Y6N61ES4&amp;l=dataLayer&amp;cx=c"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-MVMT1LF00G&amp;l=dataLayer&amp;cx=c"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-T3LBJ26"></script><script type="text/javascript">
-
-document.write("<div id='popCalendarDiv' class='popCalendar' style='display:none' ></div>");
-
-
-function getDaysInMonth(year, month) {
-  return [31,((!(year % 4 ) && ( (year % 100 ) || !( year % 400 ) ))?29:28),31,30,31,30,31,31,30,31,30,31][month-1];
-}
-
-function getDayOfWeek(year, month, day) {
-  var date = new Date(year,month-1,day);
-  return date.getDay();
-}
-
-this.clearDate = clearDate;
-function clearDate() {
-  dateField.value = '';
-  hide();
-}
-
- function getCurrentYear() {
-  var year = new Date().getFullYear();
-  if(year < 1900) year += 1900;
-  return year;
-}
-
-function getCurrentMonth() {
-  return new Date().getMonth() + 1;
-} 
-
-function getCurrentDay() {
-  return new Date().getDate();
-}
-
-var thisYear = getCurrentYear();
-var thisMonth = getCurrentMonth();
-var thisDay = getCurrentDay();
-
-
-var selectedYear = thisYear;
-var selectedMonth = thisMonth;
-var selectedDay = "";
-
-
-function calendarDrawTable( calenderDivId , currentYear , currentMonth , currentDay ) {
-
-	if(currentMonth == 0){
-		currentYear = currentYear - 1;
-		currentMonth = 12;
-	}
-
-	var lastMonth =  currentMonth;
-
-	if(currentMonth == 12){
-		lastMonth = 1; 
-	}else{
-		lastMonth = lastMonth + 1;
-	}
-
-	var dayOfMonth = 1;
-	var validDay = 0;
-	var startDayOfWeek = getDayOfWeek(currentYear, currentMonth, dayOfMonth);
-	var daysInMonth = getDaysInMonth(currentYear, currentMonth);
-	
-	var months = [];
-	months.push(messages["javascript.calendar.january"]);
-	months.push(messages["javascript.calendar.february"]);
-	months.push(messages["javascript.calendar.march"]);
-	months.push(messages["javascript.calendar.april"]);
-	months.push(messages["javascript.calendar.may"]);
-	months.push(messages["javascript.calendar.june"]);
-	months.push(messages["javascript.calendar.july"]);
-	months.push(messages["javascript.calendar.august"]);
-	months.push(messages["javascript.calendar.september"]);
-	months.push(messages["javascript.calendar.october"]);
-	months.push(messages["javascript.calendar.november"]);
-	months.push(messages["javascript.calendar.december"]);
-
-    var table = "	<div class='dateCtl'>";
-
-	table = table + "	<div class='datePrev'><a class='btnPrev' href='javascript:calenderView(0,-1);' title='" + messages["javascript.calendar.pre.month.title"] + "'>&lt;</a></div>";
-	table = table + "	<div class='dateNow'>"+currentYear+"."+months[currentMonth-1]+"</div>";
-	table = table + "	<div class='dateNext'><a class='btnNext' href='javascript:calenderView(0,1);' title='" + messages["javascript.calendar.next.month.title"] + "'>"+" &gt;</a></div>";
-	table = table + "	</div>";
-
-    table = table + "	<table summary='" + messages["javascript.calendar.next.month.title"] + "'>";
-    table = table + "	<caption>" + messages["javascript.calendar.table.caption"].replaceMsg([months[currentMonth-1]]) + "</caption>";
-    table = table + "	<thead>";
-    table = table + "		<tr>";
-    table = table + "		<th scope='col' class='sun'><span>" + messages["javascript.calendar.table.col.sun"] + "</span></th>	";
-    table = table + "		<th scope='col' class='mon'><span>" + messages["javascript.calendar.table.col.mon"] + "</span></th>";
-    table = table + "		<th scope='col' class='tue'><span>" + messages["javascript.calendar.table.col.tue"] + "</span></th>";
-    table = table + "		<th scope='col' class='wed'><span>" + messages["javascript.calendar.table.col.wed"] + "</span></th>";
-    table = table + "		<th scope='col' class='thu'><span>" + messages["javascript.calendar.table.col.thu"] + "</span></th>";
-    table = table + "		<th scope='col' class='fri'><span>" + messages["javascript.calendar.table.col.fri"] + "</span></th>";
-    table = table + "		<th scope='col' class='sat'><span>" + messages["javascript.calendar.table.col.sat"] + "</span></th>";
-    table = table + "	</tr>	";
-    table = table + "	</thead>	";
-    table = table + "	<tbody>	";
-    
-    for(var week=0; week < 6; week++) {
-      table = table + "<tr>";
-      for(var dayOfWeek=0; dayOfWeek < 7; dayOfWeek++) {
-        if(week == 0 && startDayOfWeek == dayOfWeek) {
-          validDay = 1;
-        } else if (validDay == 1 && dayOfMonth > daysInMonth) {
-          validDay = 0;
-        }
-
-        if(validDay) {
-          
-
-		  var viewMonth = currentMonth;
-		  var viewDay = dayOfMonth;
-		  
-		  if(currentMonth < 10 && viewMonth.length == 1 ){
-			viewMonth = "0"+currentMonth;
-		  }
-		  if(dayOfMonth < 10 && viewDay.length == 1 ){
-			viewDay = "0"+dayOfMonth;
-		  }
-
-		  
-		  if(thisYear == currentYear && thisMonth == viewMonth && thisDay == viewDay ){
-	          table = table + "<td><span class='today' >";
-		  }else{
-	          table = table + "<td><span  >";
-		  }
-		  table = table + "<div id='count_"+currentYear+viewMonth+viewDay+"'></div>";
-		  table = table + "<div id='"+currentYear+viewMonth+viewDay+"'>";
-		  table = table + "<a href=\"#none\" title='" + currentYear + messages["javascript.calendar.year.title"] + viewMonth + messages["javascript.calendar.month.title"] + viewDay + messages["javascript.calendar.day.title"]+"' onclick='javascript:setCalendarControlDate("+currentYear+","+viewMonth+","+viewDay+");'  >"+viewDay+"</a>";
-		  table = table + "</div>";
-		  table = table + "</span></td>";
-          dayOfMonth++;
-        } else {
-          table = table + "<td><span>&nbsp;</span></td>";
-        }
-      }
-      table = table + "</tr>";
-    }
-    table = table + "</tbody>";
-
-
-    table = table + "</table>";
-    
-    $("#"+calenderDivId).html(table);
-
-  }
-  
-
-function calenderView( yearMovieNum , monthMovieNum ){
-	
-	if (yearMovieNum == 0 && monthMovieNum == 0) {
-		selectedYear = thisYear;
-		selectedMonth = thisMonth;
-		selectedDay = thisDay;
-	}else{
-		selectedYear = new Date(selectedYear+yearMovieNum,selectedMonth+monthMovieNum,1).getFullYear();
-		selectedMonth = new Date(selectedYear+yearMovieNum,selectedMonth+monthMovieNum,1).getMonth();
-		selectedDay = new Date(selectedYear+yearMovieNum,selectedMonth+monthMovieNum,1).getDate();
-	}
-	calendarDrawTable( "popCalendarDiv" , selectedYear,selectedMonth,1);
-	
-}
-//Ã¬Â¡Â°Ã­ÂÂ Ã¬ÂÂÃ¬ÂÂÃªÂ¸Â°ÃªÂ°ÂÃªÂ³Â¼ Ã¬Â¢ÂÃ«Â£ÂÃªÂ¸Â°ÃªÂ°ÂÃ¬ÂÂ´ Ã¬ÂÂÃ¬ÂÂÃ«ÂÂ Ã¬Â¢ÂÃ«Â£ÂÃªÂ¸Â°ÃªÂ°ÂÃ¬ÂÂ Ã¬ÂÂÃ«ÂÂ Ã­ÂÂ¨Ã¬ÂÂÃ«Â¥Â¼ Ã¬ÂÂ¬Ã¬ÂÂ©Ã­ÂÂ´Ã¬ÂÂ Ã«ÂÂ¬Ã«Â Â¥ Ã«ÂÂ¸Ã¬Â¶Â
-function calenderEndView( yearMovieNum , monthMovieNum ){
-	
-	selectedYear = new Date(selectedYear,selectedMonth,1).getFullYear();
-	selectedMonth = new Date(selectedYear,selectedMonth,1).getMonth();
-	selectedDay = new Date(selectedYear,selectedMonth,1).getDate();
-	
-	calendarDrawTable( "popCalendarDiv" , selectedYear,selectedMonth,1);
-	
-}
-
-var DATE_ID = "";
-function popCalendarLayer(dateId , today){
-	DATE_ID = dateId;
-	if(today != '2023-12-18'){
-		today = today.split("-");
-		var originToday = "2023-12-18".split("-");
-		
-		var date1 = new Date(today[0],today[1],today[2]);
-		var date2 = new Date(originToday[0],originToday[1],originToday[2]);
-		
-		var diff = date2 - date1;
-		var currDay = 24 * 60 * 60 * 1000;// Ã¬ÂÂ * Ã«Â¶Â * Ã¬Â´Â * Ã«Â°ÂÃ«Â¦Â¬Ã¬ÂÂ¸Ã¬Â»Â¨
-	    var currMonth = currDay * 30;// Ã¬ÂÂ Ã«Â§ÂÃ«ÂÂ¬
-	    var currYear = currMonth * 12; // Ã«ÂÂ Ã«Â§ÂÃ«ÂÂ¬
-	    
-	    var year = parseInt(diff/currYear);
-	    var month = parseInt(diff/currMonth);
-
-		calenderEndView(  year , month);
-	}else{
-		
-		calenderView(  "0" , "0");
-		
-	}
-	var p = $("#"+dateId);
-	var offset = p.offset();
-	$("#popCalendarDiv").attr("style","z-Index:99999;display:;left:"+offset.left+"px; top:"+(offset.top+25)+"px;");
-}
-function setCalendarControlDate(yyyy,mm,dd){
-	  if(mm < 10){
-		  mm = "0"+mm;
-	  }
-	  if(dd < 10){
-		  dd = "0"+dd;
-	  }
-	  $("#"+DATE_ID).val(yyyy+"-"+mm+"-"+dd);
-	  
-	  $("#popCalendarDiv").attr("style","z-Index:99999;display:none;");
-}
-
-function popCalendarLayerHide(){
-	$("#popCalendarDiv").attr("style","z-Index:99999;display:none;");
-}
-</script></head><body class="subBody joinBody" cz-shortcut-listen="true"><div id="popCalendarDiv" class="popCalendar" style="display:none"></div><link href="http://localhost/HCYHotel/common/user/css/shilla/mainImages.css" rel="stylesheet" type="text/css">
-<link href="http://localhost/HCYHotel/common/user/css/shilla/title_ko.css" rel="stylesheet" type="text/css">
-<link href="http://localhost/HCYHotel/common/user/css/shilla/print.css" rel="stylesheet" type="text/css" media="print">
-<link href="http://localhost/HCYHotel/common/user/css/shilla/mainImages.css" rel="stylesheet" type="text/css">
-<link href="http://localhost/HCYHotel/common/user/css/shilla/reserve_new.css" rel="stylesheet" type="text/css">
-<link href="http://localhost/HCYHotel/common/user/css/shilla/lang-ko_N.css" rel="stylesheet" type="text/css">
-<link href="http://localhost/HCYHotel/common/user/css/shilla/btn.css" rel="stylesheet" type="text/css">
-<link href="http://localhost/HCYHotel/common/user/css/shilla/swiper.min.css" rel="stylesheet" type="text/css">
-
-<script src="/js/json2.js" charset="UTF-8"></script>
-<script src="/js/jquery-1.8.3.js" charset="UTF-8"></script>
-<script src="/js/jquery/jquery-ui-1.10.3.min.js" charset="UTF-8"></script>
-<script src="/js/mbl/dining_new2020/panzoom.min.js"></script>
-<script src="/js/uniform.js" charset="UTF-8"></script>
-<script src="/js/browser.js" charset="UTF-8"></script>
-<script src="/js/style.hub.js" charset="UTF-8"></script>
-<script src="/js/swiper.min.js"></script>
-<script src="/js/style.advance.js" charset="UTF-8"></script><!-- 개선 : js 추가 -->
-<script src="/js/resv/advResvCalendarFb.js" charset="UTF-8"></script> <!-- [2019_모션추가]3 달력 고도화 -->
-<script src="/index.do/secu/messageJs.do" charset="UTF-8"></script>
-	<script src="/js/common.js" charset="UTF-8"></script>
-<script src="/js/commonEx.js" charset="UTF-8"></script>
-<script src="/js/jquery.slides.js" charset="UTF-8"></script>
-<script src="/js/mbr/popLogin.js" charset="UTF-8"></script><div id="popLoginDiv" class="popLogin" style="display:none"></div>
-<script src="/js/mbr/forIdPwd.js" charset="UTF-8"></script><div id="popForIdPwDiv" style="display:none">0</div>
-<script src="/js/mbr/mbshPointRead.js" charset="UTF-8"></script><div id="mbshPotinRead" style="display:none"></div>
-<script src="/js/resv/resvCalendar.js" charset="UTF-8"></script><script src="/js/resv/resvPromotionCalendar.js" charset="UTF-8"></script><script src="/js/resv/resv.js?dt=20231218" charset="UTF-8"></script><script src="/js/resv/din.js" charset="UTF-8"></script><script src="/js/ask/ask.js" charset="UTF-8"></script><script src="/js/mbr/zipno.js" charset="UTF-8"></script><div id="zipNoLayerDiv" class="popLogin" style="display:none"></div><script src="/js/offers/makeAPlan.js" charset="UTF-8"></script><div id="makeAPlanLayerDiv" class="popLogin" style="display:none"></div><script src="/js/mbr/mbr_join.js" charset="UTF-8"></script><script src="/js/jquery.cookie.js" charset="UTF-8"></script>
-<script src="/js/placeholders.js" charset="UTF-8"></script>
-<script src="/js/dining_new2020.js" charset="UTF-8"></script>
-<script src="/js/moment.min.js" charset="UTF-8"></script>
-<script src="/js/es6-promise.min.js" charset="UTF-8"></script>
-<script src="/js/es6-promise.auto.min.js" charset="UTF-8"></script>
-<script src="/js/axios.js" charset="UTF-8"></script>
-
-<!--[if IE 6]><script src="/js/png24.js"></script><![endif]-->
-
-<!-- 개별 step1 start-->
-	<script src="/js/jquery.flexslider-min.js" charset="UTF-8"></script><!-- 2017추가 -->
-	<script src="/js/jquery.jsSelect.js" charset="UTF-8"></script><!-- 2017추가 -->
-<!-- 개별 step1 end-->
-
-<script type="text/javascript">
-
-	</script>
-
-<script>
-jQuery(document).ready(function () {
-
-	$(".findBtn a").click(function () {
-		$(".findBox").slideToggle("fast");
-	});
-
-});
-
-function ssoLogout() {
-	location.href = "/index.do/login/SSOLogout.do";
-
-}
-$("#benefitBtn").click(function () {
-	$("#showCardbox").show("slow");
-	$("#hiddencardbox").hide("slow");
-});
-</script>
-
-<script>
-	document.oncontextmenu = function () { // 컨텍스트 메뉴금지
-		return false;
-	};
-</script>
-
-<!-- 운영인 경우만 Google Analytics 호출 -->
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-T3LBJ26');</script>
-<!-- End Google Tag Manager -->
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-119797985-1"></script>
-
-<script>
-
-  window.dataLayer = window.dataLayer || [];
-
-  function gtag(){dataLayer.push(arguments);}
-
-  gtag('js', new Date());
-
-
-
-  gtag('config', 'UA-119797985-1');
-
-</script>
-<style>
-.custumCal{
-	display:none;
-}
-.opacity{background-color:#000000; display: block; height: 400%; left: 0; margin: 0; opacity: 0.5; position: absolute; top: 0; width: 100%; z-index: 1100; !important;}
-.opacity{-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; /* IE 8 */ filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50); /* IE 7 and olders */   opacity: .5; !important;}
-</style>
-
-
-<dl class="skipNavi">
-	<dt>THE SHILLA 바로가기 메뉴</dt><dd><a class="goContents" href="#contents">본문으로 바로가기</a></dd><dd><a class="goGnbMenu" href="#gnbMenu">메인메뉴 바로가기</a></dd></dl>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T3LBJ26"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-<script>
-var resvType;
-var serachDateTf = false;
-var isLogin;
-var timmer;
-var blockTimmer;
-var historyUrl = "";
-</script>
-<!--자바스크립트 인크루드  -->
-<script>
-	///공통---------------------------------------------------------------------------------START
-	var min4ck = true;
-	var min8ck = true;
-	var min12ck = true;
-	var min16ck = true;
-	$(document).ready(function(){
-		
-		blockageTimeCheck();
-	});
-
-	//
-	function fncChangeForLabel(objId, targetLabel){
-		$("#"+targetLabel).text($("#"+objId+" option:selected").text());
-	}
-
-	//셀렉트 박스 선택시 값세팅
-	function selSet(my,objId){
-		$("#"+objId).val($(my).val());
-	}
-
-	//+버튼 클릭시 값세팅
-	function addCnt(objId){
-		var cnt =  parseInt($("#"+objId).val());
-		if(isNaN(cnt)){ cnt = 0; };
-		$("#"+objId).val(cnt+1);
-	}
-
-	//-버튼 클릭시 값세팅
-	function remCnt(objId){
-		var cnt =  parseInt($("#"+objId).val());
-		if(isNaN(cnt)){ cnt = 0; };
-		if(0 < cnt ){
-			$("#"+objId).val(cnt-1);
-		}
-	}
-
-	//사용자 입력값 중간저장
-	function setSessionStorage(){
-		$(".saveField").each(function(index, item){
-			var key = $(item).attr("name");
-			var value = $(item).val();
-			sessionStorage.setItem(key,value);
-		})
-	}
-
-	//사용자 입력값 불러오기
-	function getSessionStorage(){
-		$(".saveField").each(function(index, item){
-			var key = $(item).attr("name");
-			var value = sessionStorage.getItem(key);
-			$(item).val(value);
-		})
-
-	}
-
-	//사용자 입력값 삭제
-	function removeSessionStorage(){
-		sessionStorage.clear();
-	}
-
-	function backStep(index){
-		$("#submitForm").attr("action","/fbresv/web/memDiningStep"+index+".do");
-		$("#submitForm").submit();
-	}
-
-	function backStepPb(index){
-		$("#submitForm").attr("action","/fbresv/web/memDiningStep"+index+"Pb.do");
-		$("#submitForm").submit();
-	}
-
-	//유의사항 체크박스
-	function policyCk(objId,targetId,btnId){
-		if($(objId).prop("checked")){
-			$(targetId).val("Y");
-			$(btnId).removeClass("disable");
-		}else{
-			$(targetId).val("");
-			$(btnId).addClass("disable");
-		}
-	}
-
-	//비회원중복예약체크
-	function checkOverlapNonMem(){
-		$.ajax({
-			url: '/fbresv/mbl/selectOverlapNonMember.do',
-			type: "post",
-			dataType:"json",
-			data : {
-				shopId : shopId,
-			},
-			async : false,
-			error: function(request,status,error){
-
-			},
-			success: function( data ){
-				pc.layerPopup.openPop("#popDbCheckInfo");
-				return false;
-			}
-		});
-	}
-
-	
-	function blockageTimeCheck(){
-		var blockageId = $("#blockageId").val();
-		if(blockageId != ""){
-			blockTimmer = setInterval(blocktimeCk,5000);
-		}
-	}
-
-	
-	function blocktimeCk(){
-		var fmt = "YYYYMMDDHHmm";
-	    var d = new Date();
-	    var now = moment(d).format(fmt);
-		var ntime = parseInt(now);
-		var dtime = parseInt($("#blockDelTime").val());
-
-		//4분마다 블록케이지 업데이트 해서 블록케이지 id수명연장
-		var cntTime = dtime-ntime;
-		switch(cntTime){
-		case 4:
-			if(min4ck){
-				upBlockageNotLoading();
-				min4ck = false;
-			};
-			break;
-		case 8:
-			if(min8ck){
-				upBlockageNotLoading();
-				min8ck = false;
-			};
-			break;
-		case 12:
-			if(min12ck){
-				upBlockageNotLoading();
-				min12ck = false;
-			};
-			break;
-		case 16:
-			if(min16ck){
-				upBlockageNotLoading();
-				min16ck = false;
-			};
-			break;
-		}
-
-		
-		if(dtime <= ntime){
-			$(".layerPopup").css("display,","none");
-			delBlockage();
-			//기존 타이머 삭제
-			clearInterval(blockTimmer);
-			pc.layerPopup.openPop("#popRsvOverInfo");
-		}
-	}
-
-	
-	function upBlockage(){
-		var visitAdlt = isNaN(parseInt($("#visitAdlt").val())) ? 0 : parseInt($("#visitAdlt").val());
-		var visitChld = isNaN(parseInt($("#visitChld").val())) ? 0 : parseInt($("#visitChld").val());
-		var visitInnt = isNaN(parseInt($("#visitInnt").val())) ? 0 : parseInt($("#visitInnt").val());
-
-		var allCnt = visitAdlt+visitChld+visitInnt;
-		var re = false;
-
-		if(isPreResv()){
-			re = true;
-			return re;
-		}
-
-		$.ajax({
-			url: '/fbresv/mbl/upBlockage.do',
-			type: "post",
-			dataType:"json",
-			data: {
-				blockageId : $("#blockageId").val(),
-				resvSeatType  : $("#resvSeatType").val(),
-				visitAdlt : $("#visitAdlt").val(),
-				visitChld : $("#visitChld").val(),
-				visitInnt : $("#visitInnt").val(),
-				visitDate  : $("#visitDate").val(),
-				visitTime  : $("#visitTime").val(),
-				roomPerson : $("#roomPerson").val(),
-			},
-			async : false,
-			error: function(request,status,error){
-
-			},
-			success: function( data ){
-				if(data.model.result == "true"){
-					//기존 타이머 삭제
-					clearInterval(blockTimmer);
-					//블록케이지 시간체크 4분뒤 블록케이지 삭제
-					blockageTimeCheck();
-					re = true;
-					loadPopOff();
-					tbNotCkPolicy();
-				}else if(data.model.result == "false"){
-					apiErrPop(data.model.errCd);
-					re = false;
-				}
-			},
-			beforeSend:function(){
-				//로딩창
-				loadPopOn();
-			},
-		});
-
-		return re;
-	}
-
-	//블록케이지 업데이트 로딩창x
-	function upBlockageNotLoading(){
-		var visitAdlt = isNaN(parseInt($("#visitAdlt").val())) ? 0 : parseInt($("#visitAdlt").val());
-		var visitChld = isNaN(parseInt($("#visitChld").val())) ? 0 : parseInt($("#visitChld").val());
-		var visitInnt = isNaN(parseInt($("#visitInnt").val())) ? 0 : parseInt($("#visitInnt").val());
-
-		var allCnt = visitAdlt+visitChld+visitInnt;
-		var re = false;
-
-		if(isPreResv()){
-			re = true;
-			return re;
-		}
-
-		$.ajax({
-			url: '/fbresv/mbl/upBlockage.do',
-			type: "post",
-			dataType:"json",
-			data: {
-				blockageId : $("#blockageId").val(),
-				resvSeatType  : $("#resvSeatType").val(),
-				visitAdlt : $("#visitAdlt").val(),
-				visitChld : $("#visitChld").val(),
-				visitInnt : $("#visitInnt").val(),
-				visitDate  : $("#visitDate").val(),
-				visitTime  : $("#visitTime").val(),
-				roomPerson : $("#roomPerson").val(),
-			},
-			async : false,
-			error: function(request,status,error){
-
-			},
-			success: function( data ){
-				if(data.model.result == "true"){
-					//기존 타이머 삭제
-					clearInterval(blockTimmer);
-					//블록케이지 시간체크 4분뒤 블록케이지 삭제
-					blockageTimeCheck();
-					re = true;
-					//mob.layerPopup.closePop('#viewLoading');
-					tbNotCkPolicy();
-				}else if(data.model.result == "false"){
-					apiErrPop(data.model.errCd);
-					re = false;
-				}
-			},
-		});
-
-		return re;
-	}
-
-	//블록케이지 삭제 비동기
-	function delBlockage(){
-		if($("#blockageId").val() == ""){return true;}
-
-		$.ajax({
-			url: '/fbresv/mbl/delBlockage.do',
-			type: "post",
-			dataType:"json",
-			data: {
-				blockageId : $("#blockageId").val()
-			},
-			async : false,
-			error: function(request,status,error){
-
-			},
-			success: function( data ){
-				$("#blockageId").val("");
-				$("#blockDelTime").val("");
-				$("#blockCreTime").val("");
-				clearInterval(blockTimmer);
-			}
-		});
-	}
-
-	//블록케이지 삭제 동기
-	function delBlockageAsync(){
-
-		if($("#blockageId").val() == ""){return true;}
-
-		$.ajax({
-			url: '/fbresv/mbl/delBlockage.do',
-			type: "post",
-			dataType:"json",
-			data: {
-				blockageId : $("#blockageId").val()
-			},
-			error: function(request,status,error){
-
-			},
-			success: function( data ){
-				$("#blockageId").val("");
-				$("#blockDelTime").val("");
-				$("#blockCreTime").val("");
-				clearInterval(blockTimmer);
-			}
-		});
-	}
-
-	//자동 탭넘기기
-	function autoTab(tabno, invalue, next) {
-		if (invalue.length == tabno.maxLength) {
-			$(".cardInput").eq(next).focus();
-		}
-	}
-
-	//선호구역 초기화
-	function initArea(){
-		$('#randAreaYn').val('Y');
-		$('#prefAreaCd').val('');
-		$('#prefAreaText').val('');
-		pc.layerPopup.closePop('#popAreaInfo');
-		pc.layerPopup.openPop("#comparePop2");
-	}
-
-	//예약초기화
-	function resetResv(){
-		var blockageId = $("#blockageId").val();
-		if(blockageId != ""){
-			delBlockage();
-		}
-		var newForm = document.createElement('form');
-		// set attribute (form)
-		newForm.name = 'newForm';
-		newForm.method = 'post';
-		newForm.action = '/fbresv/web/memDiningStep0.do';
-		document.body.appendChild(newForm);
-		newForm.submit();
-	}
-
-	//요금팝업 내용셋팅
-	function pricePopSet(shopId){
-		$.ajax({
-			url: '/fbresv/web/pricePop.do',
-			type: "post",
-			dataType:"json",
-			data : {
-				shopId : shopId,
-			},
-			async : false,
-			error: function(request,status,error){
-
-			},
-			success: function( data ){
-				$("#priceContents").html(data.model.priceContents);
-			}
-		});
-	}
-
-	//api 상태체크
-	function apiHealthCk(){
-		$.ajax({
-			url: '/fbresv/mbl/apiHealthCk.do',
-			type: "post",
-			dataType:"json",
-			error: function(request,status,error){
-
-			},
-			success: function( data ){
-				if(data.model.result == "fail"){
-					pc.layerPopup.openPop("#popSysErr");
-				}
-			}
-		});
-	}
-
-	function apiErrPop(errCd){
-		loadPopOff();
-		if(errCd == "TABLECHECK_BLOCKAGE_FAIL"){//블록케이지 업뎃 시 해당 시간 마감
-			pc.layerPopup.openPop("#popReplayInfo");
-		}else if(errCd == "TABLECHECK_BLOCKAGE_EXPIRED"){//블록케이지 id 시간 끝남
-			pc.layerPopup.openPop("#popRsvOverInfo");
-		}else if(errCd == "TABLECHECK_ERROR"){// 테이블 체크 오류 응답
-			pc.layerPopup.openPop("#popSysErr");
-		}else if(errCd == "TABLECHECK_UNHEALTHY"){// 테이블체크 헬스체크 실패
-			pc.layerPopup.openPop("#popSysErr");
-		}else if(errCd == "FBR_MAINTENANCE"){ // 다이	닝 예약 점검 관리자 설정
-			pc.layerPopup.openPop("#popSysErr");
-		}else{//기타에러
-			pc.layerPopup.openPop("#popSysErr");
-		}
-	}
-
-	//입력글자수 제한
-	function InputLength(my,length){
-		$(my).val($(my).val().substr(0,length));
-	}
-
-	//keyup정규식
-	function keyUpRexp(my,type,targetId){
-		if(type == "num"){
-			$(my).val($(my).val().replace(/[^\d\-]/g, ''));
-		}else{
-
-		}
-		if(targetId != ""){
-			if($(my).val() == ""){
-				$(targetId).prop("disabled",true);
-			}else{
-				$(targetId).prop("disabled",false);
-			}
-		}
-		//this.value=this.value.replace(/[^\d\- ]/g, '');
-	}
-
-	//회원 && 테이블인 경우 유의사항 체크 안하고 다음버튼 활성화
-	function tbNotCkPolicy(){
-
-	}
-
-	//로딩팝업 온
-	function loadPopOn(){
-		$('.opacity').show();
-		pc.layerPopup.lockScroll();
-		$('.re-loader').show();
-	}
-
-	//로딩 팝업 오프
-	function loadPopOff(){
-		$('.opacity').hide();
-		pc.layerPopup.unLockScroll();
-		$('.re-loader').hide();
-	}
-
-	//예약 가능 시간 초과 안내 팝업 확인 클릭시 스텝2로이동
-	function timeOverBlockage(){
-
-		var newForm = document.createElement('form');
-		// set attribute (form)
-		newForm.name = 'newForm';
-		newForm.method = 'post';
-		newForm.action = '/fbresv/web/memDiningStep0.do';
-		// create element (input)
-		var input1 = document.createElement('input');
-		var input2 = document.createElement('input');
-		// set attribute (input)
-		input1.setAttribute("type", "hidden");
-		input1.setAttribute("name", "hotlId");
-		input1.setAttribute("value", $("#hotlId").val());
-		input2.setAttribute("type", "hidden");
-		input2.setAttribute("name", "shopId");
-		input2.setAttribute("value", $("#shopId").val());
-		// append input (to form)
-		newForm.appendChild(input1);
-		newForm.appendChild(input2);
-		// append form (to body)
-		document.body.appendChild(newForm);
-		// submit form
-		newForm.submit();
-
-	}
-
-	//시스템 에러 팝업 확인시 동작
-	function sysErrMove(){
-
-		if(historyUrl == "Y"){
-			if($("#netFunnelIsOn").val()=="on"){
-				history.go(-2);
-			}else{
-				history.go(-1);
-			}
-		}else{
-			location.href = "/index.do"
-		}
-
-	}
-
-	//예약 변경 시 기존 예약 방문일 시 같은지 체크
-	function isPreResv(){
-		var re = false;
-
-		if(($("#visitDate").val() == $("#preUpdateDate").val()) && ($("diniCho").val() == $("preUpdateDiniCho").val()) && ($("#visitDate").val() == $("#preUpdateDate").val()) ){
-			re = true;
-			return re;
-		}
-		return re;
-	}
-
-	///공통---------------------------------------------------------------------------------END
-</script>
-
-
-
-<!--레이어 팝업 인크루드 // -->
-<!-- 공통팝업 start ------------------------------------------------------------------------->
-	<!-- 로딩팝업 -->
-	<div id="viewLoading" class="re-loader" style="z-index:99999; margin-left:-101.5px; margin-top:-84px; position: fixed; top: 50%;left: 50%; display:none;">
-				 <img src="/images/ko/common/loadingAnimation.gif" alt="">
-			</div>
-			<div class="opacity" style="display: none;"></div>
-		<!-- <div id="viewLoading" class="re-loader">
-      	<img src="/images/ko/common/loadingAnimation.gif" alt="" />
-    </div>
-    <div class="opacity"></div> -->
-
-
-	<!-- STEP 0 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -- - - - - -->
-	<!-- STEP 0 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -- - - - - -->
-
-
-	<!-- STEP 1 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -- - - - - -->
-	<!-- 예약 인원 입력 안내 레이어 팝업 -->
-	<div id="popPeopleChInfo" class="usepop" style="display:none">
-		<div class="popLayer popLayerRegistCard new_popLayer diningPop" tabindex="0" style="width: 430px; position: fixed; top: 50%; left: 50%; margin-left: -215px; margin-top: -106px;" aria-hidden="false">
-			<div class="popHead">
-				<h2 class="tit">예약 인원 입력 안내</h2>
-				<div class="btn"><a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#popPeopleChInfo'); return false;"><span>닫기</span></a>
-				</div>
-			</div>
-			<div class="popCtn new_rsvBox diningPop" style="width: 430px;">
-					<p class="checkTxt mgb15"><span>예약인원 입력 후, 날짜를 검색해주시기 바랍니다.</span></p><!--  -->
-				<div class="btnBox">
-					<a href="#" onclick="pc.layerPopup.closePop('#popPeopleChInfo'); return false;"><img src="../../images/ko/mem/new_2019/btn_card_complete.gif" alt="확인"></a>
-				</div>
-			</div>
-			<div class="btnAcc">
-				<a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#popPeopleChInfo'); return false;"><span>닫기</span></a>
-			</div>
-		</div>
-		<div class="mdScreen" style="display: block; height: 1048px;"></div>
-	</div>
-
-	<!-- 예약 인원 설정 안내 레이어 팝업 -->
-	<div id="popPersonInfo" style="display:none;">
-		<div class="popLayer popLayerRegistCard new_popLayer diningPop" tabindex="-1" style="width: 430px;">
-			<div class="popHead">
-				<h2 class="tit">예약인원 안내<!-- 예약 인원 설정 안내 --></h2>
-				<div class="btn"><a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#popPersonInfo'); return false;"><span>닫기<!-- 닫기 --></span></a>
-				</div>
-			</div>
-			<div id="popPersonInfoHidden" style="display: none;">
-				<p class="checkTxt mgb15"><span>$좌석$은(는) 최소 $최소$명부터 최대 $최대$명까지 이용 가능합니다.</span></p> 
-<ul class="notiList2"> 
-<li class="first last">※ 추가 문의 사항은 전화 문의해주시기 바랍니다.</li> 
-</ul><!--  -->
-			</div>
-			<div class="popCtn new_rsvBox diningPop" style="width: 430px;">
-				<div id="popPersonInfoText">
-				</div>
-				<div class="btnBox">
-					<a href="#" onclick="pc.layerPopup.closePop('#popPersonInfo'); return false;"><img src="../../images/ko/mem/new_2019/btn_card_complete.gif" alt="확인"></a>
-				</div>
-			</div>
-			<div class="btnAcc">
-				<a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#popPersonInfo'); return false;"><span>닫기<!-- 닫기 --></span></a>
-			</div>
-		</div>
-		<div class="mdScreen" style="display: block; height: 1048px;"></div>
-	</div>
-	<!-- 예약 인원 설정 안내 레이어 팝업 -->
-
-	<!-- 재검색 안내 레이어 팝업 -->
-	<div id="popPeopleChInfo2" style="display:none;">
-		<div class="popLayer popLayerRegistCard new_popLayer diningPop" tabindex="-1" style="width: 430px;">
-			<div class="popHead">
-				<h2 class="tit">재검색 안내<!-- 재검색 안내 --></h2>
-				<div class="btn"><a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#popPeopleChInfo2'); return false;"><span>닫기<!-- 닫기 --></span></a>
-				</div>
-			</div>
-			<div class="popCtn new_rsvBox diningPop" style="width: 430px;">
-				<p>예약 인원 입력 후, 날짜를 재검색 해주시기 바랍니다.</p><!--  -->
-				<div class="btnBox">
-					<a href="#" onclick="pc.layerPopup.closePop('#popPeopleChInfo2'); return false;"><img src="../../images/ko/mem/new_2019/btn_card_complete.gif" alt="확인"></a>
-				</div>
-			</div>
-			<div class="btnAcc">
-				<a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#popPeopleChInfo2'); return false;"><span>닫기<!-- 닫기 --></span></a>
-			</div>
-		</div>
-		<div class="mdScreen" style="display: block; height: 1048px;"></div>
-	</div>
-	<!-- 재검색 안내 레이어 팝업 -->
-
-	<!-- 예약 재시도 안내  -->
-	<div id="popReplayInfo" style="display:none;">
-		<div class="popLayer popLayerRegistCard new_popLayer diningPop" tabindex="-1" style="width: 430px;">
-			<div class="popHead">
-				<h2 class="tit">예약 재시도 안내<!-- 예약 재시도 안내 --></h2>
-				<div class="btn"><a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#popReplayInfo'); return false;"><span>닫기<!-- 닫기 --></span></a>
-				</div>
-			</div>
-			<div class="popCtn new_rsvBox diningPop" style="width: 430px;">
-				<ul class="notiList2"> 
-<li class="first last">선택하신 시간 혹은 날짜의 예약이 마감되었습니다. </li> 
-</ul> 
-<p class="checkTxt"><span>다시 선택해주시기 바랍니다.</span></p><!--  -->
-				<div class="btnBox">
-					<a href="#" onclick="pc.layerPopup.closePop('#popReplayInfo'); return false;"><img src="../../images/ko/mem/new_2019/btn_card_complete.gif" alt="확인"></a>
-				</div>
-			</div>
-			<div class="btnAcc">
-				<a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#popReplayInfo'); return false;"><span>닫기<!-- 닫기 --></span></a>
-			</div>
-		</div>
-		<div class="mdScreen" style="display: block; height: 1048px;"></div>
-	</div>
-	<!-- 예약 재시도 안내  -->
-
-	<!-- 좌석유형 초기화 안내  -->
-	<div id="popSetInit" style="display:none;">
-		<div class="popLayer popLayerRegistCard new_popLayer diningPop" tabindex="-1" style="width: 430px;">
-			<div class="popHead">
-				<h2 class="tit">예약 초기화 안내<!-- 예약 초기화 안내 --></h2>
-				<div class="btn"><a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#popSetInit'); return false;"><span>닫기<!-- 닫기 --></span></a>
-				</div>
-			</div>
-			<div style="display: none" id="popSetInitHidden">
-				<p class="checkTxt"><span>$변수$ 변경 시 검색결과가 초기화 됩니다.</span></p><!--  -->
-			</div>
-			<div class="popCtn new_rsvBox diningPop" style="width: 430px;">
-				<div id="popSetInitText">
-
-				</div>
-				<div class="btnBox">
-					<a href="#" onclick="pc.layerPopup.closePop('#popSetInit'); return false;"><img src="../../images/ko/mem/new_2020/resv_cancel.jpg" alt="취소"></a>
-					<a href="#" onclick="" id="setInitEvent"><img src="../../images/ko/mem/new_2019/btn_card_complete.gif" alt="확인"></a>
-				</div>
-			</div>
-			<div class="btnAcc">
-				<a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#popSetInit'); return false;"><span>닫기<!-- 닫기 --></span></a>
-			</div>
-		</div>
-		<div class="mdScreen" style="display: block; height: 1048px;"></div>
-	</div>
-	<!-- 날짜 검색 초기화 안내 -->
-
-	<!-- STEP 1 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -- - - - - -->
-
-
-	<!-- STEP 2 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -- - - - - -->
-	<!-- STEP 2 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -- - - - - -->
-
-
-	<!-- STEP 3 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -- - - - - -->
-	<!-- STEP 3 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -- - - - - -->
-
-	<!-- 등록된 카드 정보 레이어팝업 (step3 + step4)-->
-	<div id="popCardInfo" style="display:none">
-		<div class="popLayer popLayerRegistCard new_popLayer" tabindex="-1">
-			<div class="popHead">
-				<h2 class="tit">등록된 카드 정보<!-- 등록된 카드 정보 --></h2>
-				<div class="btn"><a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#popCardInfo'); return false;"><span>닫기<!-- 닫기 --></span></a>
-				</div>
-			</div>
-			<div class="popCtn new_rsvBox">
-				 <h3 class="cardInfoTit"><span id="mbrRegDt"></span>&nbsp;등록하신 카드정보<!-- 등록하신 카드정보 --></h3>
-				 <table class="tableType2">
-					<caption><!-- 카드 번호, 카드 종류, 유효기간 으로 구성된 등록된 카드 정보 --></caption>
-					<colgroup>
-						<col style="width:135px" class="col1">
-						<col style="width:auto" class="col2">
-					</colgroup>
-					<tbody>
-						<tr>
-							<th scope="row">카드번호<!-- 카드 번호 --></th>
-							<td id="cardNum"></td>
-						</tr>
-						<tr>
-							<th scope="row">카드종류<!-- 카드 종류 --></th>
-							<td id="cardNm"></td>
-						</tr>
-						<tr>
-							<th scope="row">유효기간<!-- 유효기간 --></th>
-							<td id="cardExp"></td>
-						</tr>
-					</tbody>
-				</table>
-				<ul class="notiList1">
-					<li class="first">신용카드 정보는 고객님의 당일 취소 또는 노쇼(No- Show)에 의한 개런티 외에는 어떤 목적으로도 사용되지 않으며, 체크카드 및 일부 신용 카드의 경우 사용이 제한 될 수 있습니다.<!-- 신용카드 정보는 고객님의 당일 취소 또는 노쇼(No- Show)에 의한 개런티 외에는 어떤 목적으로도 사용되지 않으며, 체크카드 및 일부 신용 카드의 경우 사용이 제한 될 수 있습니다.  --></li>
-					<li class="last"><span class="fontRed">온라인 예약 시 직접 결제가 이루어지지 않으며,</span> 최종 결제는 레스토랑에서 해주시기 바랍니다.<!-- <em class="pointColor1">온라인 예약 시 직접 결제가 이루어지지 않으며,</em> 최종 결제는 레스토랑에서 해주시기 바랍니다. --></li>
-					<!-- 2020-11-19 내용 삭제 -->
-				</ul>
-				<p class="checkTxt"><span>등록하신 카드정보로 예약하시겠습니까?<!-- 등록하신 카드정보로 예약하시겠습니까? --></span></p>
-				<div class="btnBox">
-					<a href="#" onclick="pc.layerPopup.closePop('#popCardInfo'); return false;"><img src="../../images/ko/mem/new_2019/btn_card_cancel.gif" alt="취소"></a>
-					<a href="#" onclick="confirmCardInfo();"><img src="../../images/ko/mem/new_2019/btn_card_complete.gif" alt="확인"></a>
-				</div>
-			</div>
-			<div class="btnAcc"><a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#popCardInfo'); return false;"><span>닫기<!-- 닫기 --></span></a></div>
-		</div>
-		<div class="mdScreen" style="display: block; height: 1048px;"></div>
-	</div>
-	<!-- //등록된 카드 정보 레이어팝업 -->
-
-	<!-- 신용카드 정보 및 개인정보 수집, 이용에 동의 레이어팝업 (step3 + step4)-->
-	<div id="popPolicy1" style="display:none">
-		<div class="popLayer popLayerCCInfo new_popLayer" tabindex="-1">
-			<div class="popHead">
-				<h2 class="tit">신용카드 정보 수집 약관<!-- 신용카드 정보 및 개인정보 수집, 이용에 동의 --></h2>
-				<div class="btn"><a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#popPolicy1'); return false;"><span>닫기<!-- 닫기 --></span></a></div>
-			</div>
-			<div class="popCtn new_rsvBox">
-				<div class="termsWrap">
-					<div class="termsCon">
-						<div class="inner">
-							<p>신라호텔 다이닝 예약과 관련하여 귀사가 아래와 같이 본인의 개인정보를 수집 및 이용하는데 동의합니다.</p>
-<dl class="mt15">
-<dt class="tit1">&lt;개인정보의 수집 · 이용에 관한 사항&gt;</dt>
-<dd class="termsList1 bold">
-	<ol class="termsList1 bold">
-		  <li>① <span class="txtBline">수집 이용 항목 | 카드정보(카드종류, 카드번호, 유효기간)</span></li>
-		  <li>② <span class="txtBline">수집 이용 목적 | 호텔 다이닝 예약 시 저장하신 결제정보 활용</span>
-		    <p class="fNormal">* 신용카드 정보 수집으로 직접 결제가 이루어지는 것은 아니며, 다음 호텔 다이닝 예약 이용 시 카드정보를 다시 입력하지 않아도 되는 편의 제공 목적입니다.</p>
-		  </li>
-		  <li>③ <span class="txtBline">보유 이용 기간 | 예약일 후 1년</span></li>
-  </ol>
-</dd>
-<p class="mt15">※ 위 사항에 대한 동의를 거부할 수 있으나, 이에 대한 동의가 없을 경우 다음 호텔 다이닝 예약 시, 다시 해당 결제 정보를 입력해야 함을 알려드립니다.</p>
-</dl></div>
-					</div>
-				</div>
-				<div class="btnBox">
-					<a href="#" onclick="pc.layerPopup.closePop('#popPolicy1'); return false;">
-						<img src="../../images/ko/mem/new_2019/btn_card_complete.gif" alt="확인">
-					</a>
-				</div>
-			</div>
-			<div class="btnAcc"><a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#popPolicy1'); return false;"><span>닫기<!-- 닫기 --></span></a></div>
-		</div>
-		<div class="mdScreen" style="display: block; height: 1048px;"></div>
-	</div>
-	<!-- //신용카드 정보 및 개인정보 수집, 이용에 동의 레이어팝업 -->
-
-	<!-- 선호구역 예약마감 안내 레이어 팝업 (step3 + step4)-->
-	<div id="popAreaInfo" style="display:none;">
-		<div class="popLayer popLayerRegistCard new_popLayer diningPop" tabindex="-1" style="width: 430px;">
-			<div class="popHead">
-				<h2 class="tit">선호구역 마감 안내<!-- 선호구역 예약마감 안내 --></h2>
-				<div class="btn"><a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#popAreaInfo'); return false;"><span>닫기<!-- 닫기 --></span></a>
-				</div>
-			</div>
-			<div class="popCtn new_rsvBox diningPop" style="width: 430px;">
-				<p class="checkTxt"><span>이용에 불편을 드려 죄송합니다</span></p> 
-<ul class="notiList2"> 
-<li class="first">선택하신 선호 구역이 모두 마감되어</li> 
-<li class="last">방문 당일 순차적으로 임의 배정됩니다.</li> 
-</ul> 
-<ul class="notiList1"> 
-<li class="first">선호 구역은 온라인에서만 제공되는 서비스로 일부에 한 해 예약 가능하며, 예약완료 순으로 마감됩니다.</li> 
-<li class="last">전화문의로 구역 선택 및 변경, 취소는 불가합니다.</li> 
-</ul><!--  -->
-				<div class="btnBox">
-					<a href="#" onclick="backStep(2)"><img src="../../images/ko/mem/new_2020/resv_zone.jpg" alt="구역 재선택"></a>
-					<a href="#" onclick="initArea();"><img src="../../images/ko/mem/new_2020/resv_progress.jpg" alt="예약 진행"></a>
-				</div>
-			</div>
-			<div class="btnAcc">
-				<a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#popAreaInfo'); return false;"><span>닫기<!-- 닫기 --></span></a>
-			</div>
-		</div>
-		<div class="mdScreen" style="display: block; height: 1048px;"></div>
-	</div>
-	<!-- // 선호구역 예약마감 안내 레이어 팝업 -->
-
-	<!-- 인증번호 재 입력 안내 레이어 팝업 -->
-	<div id="popAutNumMiss" style="display:none;">
-		<div class="popLayer popLayerRegistCard new_popLayer diningPop" tabindex="-1" style="width: 430px;">
-			<div class="popHead">
-				<h2 class="tit">인증번호 재 입력 안내<!-- 인증번호 재 입력 안내 --></h2>
-				<div class="btn"><a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#popAutNumMiss'); return false;"><span>닫기<!-- 닫기 --></span></a>
-				</div>
-			</div>
-			<div class="popCtn new_rsvBox diningPop" style="width: 430px;">
-				<p class="checkTxt"><span>인증번호가 일치하지 않습니다.</span></p> 
-<ul class="notiList2"> 
-<li class="first last">확인 후 다시 입력해주시기 바랍니다.</li> 
-</ul><!--  -->
-				<div class="btnBox">
-					<a href="#" onclick="pc.layerPopup.closePop('#popAutNumMiss'); return false;"><img src="../../images/ko/mem/new_2020/resv_confirm.jpg" alt="확인"></a>
-				</div>
-			</div>
-			<div class="btnAcc">
-				<a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#popAutNumMiss'); return false;"><span>닫기<!-- 닫기 --></span></a>
-			</div>
-		</div>
-		<div class="mdScreen" style="display: block; height: 1048px;"></div>
-	</div>
-	<!-- // 인증번호 재 입력 안내 레이어 팝업 -->
-
-	<!-- 인증번호 전송 횟수 초과 안내 -->
-	<div id="popNumOverInfo" style="display:none;">
-		<div class="popLayer popLayerRegistCard new_popLayer diningPop" tabindex="-1" style="width: 430px;">
-			<div class="popHead">
-				<h2 class="tit">인증번호 전송 횟수 초과 안내<!-- 인증번호 전송 횟수 초과 안내 --></h2>
-				<div class="btn"><a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#popNumOverInfo'); return false;"><span>닫기</span></a>
-				</div>
-			</div>
-			<div class="popCtn new_rsvBox diningPop" style="width: 430px;">
-				<p class="checkTxt"><span>인증번호 전송 횟수가 초과되었습니다.</span></p> 
-<ul class="notiList2"> 
-<li class="first last">추가 예약 문의는 전화해주시기 바랍니다.</li> 
-</ul><!--  -->
-				<div class="btnBox">
-					<a href="#" onclick="pc.layerPopup.closePop('#popNumOverInfo'); return false;"><img src="../../images/ko/mem/new_2020/resv_confirm.jpg" alt="확인"></a>
-				</div>
-			</div>
-			<div class="btnAcc">
-				<a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#popNumOverInfo'); return false;"><span>닫기</span></a>
-			</div>
-		</div>
-		<div class="mdScreen" style="display: block; height: 1048px;"></div>
-	</div>
-	<!-- // 인증번호 전송 횟수 초과 안내 -->
-
-	<!--인증번호 입력시간 초과 안내 레이어 팝업 -->
-	<div id="popAutNumTimeOver" style="display:none;">
-		<div class="popLayer popLayerRegistCard new_popLayer diningPop" tabindex="-1" style="width: 430px;">
-			<div class="popHead">
-				<h2 class="tit">입력시간 초과 안내<!-- 입력시간 초과 안내 --></h2>
-				<div class="btn"><a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#popAutNumTimeOver'); return false;"><span>닫기<!-- 닫기 --></span></a>
-				</div>
-			</div>
-			<div class="popCtn new_rsvBox diningPop" style="width: 430px;">
-				<p class="checkTxt"><span>인증번호 입력 시간을 초과했습니다.</span></p> 
-<ul class="notiList2"> 
-<li class="first last">인증번호를 재 요청해주시기 바랍니다.</li> 
-</ul><!--  -->
-				<div class="btnBox">
-					<a href="#" onclick="pc.layerPopup.closePop('#popAutNumTimeOver'); return false;"><img src="../../images/ko/mem/new_2020/resv_confirm.jpg" alt="확인"></a>
-				</div>
-			</div>
-			<div class="btnAcc">
-				<a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#popAutNumTimeOver'); return false;"><span>닫기<!-- 닫기 --></span></a>
-			</div>
-		</div>
-		<div class="mdScreen" style="display: block; height: 1048px;"></div>
-	</div>
-	<!-- // 입력시간 초과 안내 레이어 팝업 -->
-
-	<!-- 카드정보 저장 약관 동의 알림 레이어 팝업 -->
-	<div id="popCardSave" style="display:none;">
-		<div class="popLayer popLayerRegistCard new_popLayer diningPop" tabindex="-1">
-			<div class="popHead">
-				<h2 class="tit">카드정보 저장 약관 동의 알림<!-- 카드정보 저장 약관 동의 알림 --></h2>
-				<div class="btn"><a class="btnClose" href="javascript:void(0);" onclick="fncCardSaveYn('N');"><span>닫기<!-- 닫기 --></span></a>
-				</div>
-			</div>
-			<div class="popCtn new_rsvBox diningPop">
-				<ul class="notiList2 mgb15"> 
-<li class="first last">선택한 카드 정보 저장을 위해 약관 동의가 필요합니다.</li> 
-</ul> 
-<p class="checkTxt"><span>동의하시겠습니까?</span></p><!--  -->
-				<div class="btnBox">
-					<a href="javascript:void(0);" onclick="fncCardSaveYn('N');"><img src="../../images/ko/mem/new_2019/btn_disagree.gif" alt="미동의"></a>
-					<a href="javascript:void(0);" onclick="fncCardSaveYn('Y');"><img src="../../images/ko/mem/new_2019/btn_agree.gif" alt="동의"></a>
-				</div>
-			</div>
-			<div class="btnAcc">
-				<a class="btnClose" href="javascript:void(0);" onclick="pc.layerPopup.closePop('#popCardSave'); return false;"><span>닫기<!-- 닫기 --></span></a>
-			</div>
-		</div>
-		<div class="mdScreen" style="display: block; height: 1048px;"></div>
-	</div>
-	<!-- // 카드정보 저장 약관 동의 알림 레이어 팝업 -->
-
-	<!-- 인증 완료 안내 레이어 팝업 -->
-	<div id="popAutNumConfirm" style="display:none;">
-		<div class="popLayer popLayerRegistCard new_popLayer diningPop" tabindex="-1" style="width: 430px;">
-			<div class="popHead">
-				<h2 class="tit">인증 완료 안내<!-- 인증 완료 안내 --></h2>
-				<div class="btn"><a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#popAutNumConfirm'); return false;"><span>닫기<!-- 닫기 --></span></a>
-				</div>
-			</div>
-			<div class="popCtn new_rsvBox diningPop" style="width: 430px;">
-				<p class="checkTxt"><span>인증번호가 정상적으로 확인되었습니다.</span></p><!--  -->
-				<div class="btnBox">
-					<a href="#" onclick="pc.layerPopup.closePop('#popAutNumConfirm'); return false;"><img src="../../images/ko/mem/new_2020/resv_confirm.jpg" alt="확인"></a>
-				</div>
-			</div>
-			<div class="btnAcc">
-				<a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#popAutNumConfirm'); return false;"><span>닫기<!-- 닫기 --></span></a>
-			</div>
-		</div>
-		<div class="mdScreen" style="display: block; height: 1048px;"></div>
-	</div>
-	<!-- // 인증 완료 안내 레이어 팝업 -->
-
-	<!-- 온라인 예약 가능 가능 안내 레이어 팝업 -->
-	<div id="popOverlapResvComfirm" style="display:none;">
-		<div class="popLayer popLayerRegistCard new_popLayer diningPop" tabindex="-1" style="width: 430px;">
-			<div class="popHead">
-				<h2 class="tit">온라인 예약 가능 안내<!-- 예약진행 가능 안내 --></h2>
-				<div class="btn"><a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#popOverlapResvComfirm'); return false;"><span>닫기<!-- 닫기 --></span></a>
-				</div>
-			</div>
-			<div class="popCtn new_rsvBox diningPop" style="width: 430px;">
-				<p class="checkTxt"><span>온라인 예약이 가능합니다.</span></p> 
-<ul class="notiList2 mgb5"> 
-<li class="first last">※ 동일 날짜의 동일 시간대에 온라인과 유선으로 예약한 내역이 중복으로 확인될 경우 단 건으로 처리될 수 있습니다.</li> 
-</ul><!--  -->
-				<div class="btnBox">
-					<a href="#" onclick="pc.layerPopup.closePop('#popOverlapResvComfirm'); return false;"><img src="../../images/ko/mem/new_2020/resv_confirm.jpg" alt="확인"></a>
-				</div>
-			</div>
-			<div class="btnAcc">
-				<a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#popOverlapResvComfirm'); return false;"><span>닫기<!-- 닫기 --></span></a>
-			</div>
-		</div>
-		<div class="mdScreen" style="display: block; height: 1048px;"></div>
-	</div>
-	<!-- // 예약진행 가능 안내 레이어 팝업 -->
-
-	<!-- 전화번호양식 확인 팝업 시작 -->
-	<div id="popPhonNumConfirm" style="display:none;">
-		<div class="popLayer popLayerRegistCard new_popLayer diningPop" tabindex="-1" style="width: 430px;">
-			<div class="popHead">
-				<h2 class="tit">휴대전화 번호 확인 안내<!-- 핸드폰 번호 확인 --></h2>
-				<div class="btn"><a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#popPhonNumConfirm'); return false;"><span>닫기<!-- 닫기 --></span></a>
-				</div>
-			</div>
-			<div class="popCtn new_rsvBox diningPop" style="width: 430px;">
-				<p class="checkTxt"><span>휴대전화 번호를 올바르게 입력하시기 바랍니다.</span></p> 
-<ul class="notiList2"> 
-<li class="first last">※ 온라인 예약 시, 올바른 예약 정보 확인을 위해 <br> 휴대전화로만 예약이 가능합니다.</li> 
-</ul><!--  -->
-				<div class="btnBox">
-					<a href="#" onclick="pc.layerPopup.closePop('#popPhonNumConfirm'); return false;"><img src="../../images/ko/mem/new_2020/resv_confirm.jpg" alt="확인"></a>
-				</div>
-			</div>
-			<div class="btnAcc">
-				<a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#popPhonNumConfirm'); return false;"><span>닫기<!-- 닫기 --></span></a>
-			</div>
-		</div>
-		<div class="mdScreen" style="display: block; height: 1048px;"></div>
-	</div>
-	<!-- // 예약진행 가능 안내 레이어 팝업 -->
-
-
-	<!-- STEP 4 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -- - - - - -->
-
-	<!-- STEP 4 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -- - - - - -->
-
-	<!-- STEP 5 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -- - - - - -->
-	<!-- STEP 5 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -- - - - - -->
-
-
-	<!-- STEP 공통 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -- - - - - -->
-
-
-	<!-- 운영시간 안내 레이어 팝업 (step1 + step2)-->
-	<div id="popPriceInfo" style="display:none">
-		<div class="popLayer new_popLayer diningPop" tabindex="-1" style="width: 430px;">
-			<div class="popHead">
-				<h2 class="tit">운영시간 안내<!-- 운영시간 및 요금 안내 --></h2>
-				<div class="btn"><a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#popPriceInfo'); return false;"><span>닫기<!-- 닫기 --></span></a>
-				</div>
-			</div>
-			<div class="popCtn new_rsvBox">
-				<div id="priceContents"></div>
-				<div class="btnBox">
-					<a href="#" onclick="pc.layerPopup.closePop('#popPriceInfo'); return false;"><img src="../../images/ko/mem/new_2019/btn_card_complete.gif" alt="확인"></a>
-				</div>
-			</div>
-			<div class="btnAcc"><a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#popPriceInfo'); return false;"><span>닫기<!-- 닫기 --></span></a></div>
-		</div>
-		<div class="mdScreen" style="display: block; height: 1048px;"></div>
-	</div>
-	<!-- //운영시간 안내 레이어 팝업-->
-
-	<!-- 예약 초기화 레이어 팝업 (step2 + step3 + step4)-->
-	<div id="popReset" style="display:none;">
-		<div class="popLayer popLayerRegistCard new_popLayer diningPop" tabindex="-1" style="width: 430px;">
-			<div class="popHead">
-				<h2 class="tit">예약 초기화 안내<!-- 예약 초기화 안내 --></h2>
-				<div class="btn"><a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#popReset'); return false;"><span>닫기<!-- 닫기 --></span></a>
-				</div>
-			</div>
-			<div class="popCtn new_rsvBox diningPop" style="width: 430px;">
-				<ul class="notiList2"> 
-<li class="first last">지금까지 입력하신 예약 정보는 모두 삭제됩니다.</li> 
-</ul> 
-<p class="checkTxt"><span>초기화 하시겠습니까?</span></p><!--  -->
-				<div class="btnBox">
-					<a href="#" onclick="pc.layerPopup.closePop('#popReset'); return false;"><img src="../../images/ko/mem/new_2020/resv_cancel.jpg" alt="취소"></a>
-					<a href="javascript:void(0);" onclick="resetResv();"><img src="../../images/ko/mem/new_2019/btn_card_complete.gif" alt="확인"></a>
-				</div>
-			</div>
-			<div class="btnAcc">
-				<a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#ResvResetPop'); return false;"><span>닫기<!-- 닫기 --></span></a>
-			</div>
-		</div>
-		<div class="mdScreen" style="display: block; height: 1048px;"></div>
-	</div>
-	<!-- // 예약 초기화 레이어 팝업 -->
-
-	<!-- 약관동의 안내 레이어 팝업 -->
-	<div id="popNoticeInfoPo" style="display:none;">
-		<div class="popLayer popLayerRegistCard new_popLayer diningPop" tabindex="-1" style="width: 430px;">
-			<div class="popHead">
-				<h2 class="tit">약관동의 안내<!-- 약관동의 안내 --></h2>
-				<div class="btn"><a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#popNoticeInfoPo'); return false;"><span>닫기<!-- 닫기 --></span></a>
-				</div>
-			</div>
-			<div class="popCtn new_rsvBox diningPop" style="width: 430px;">
-				<p class="checkTxt"><span>개인정보 수집 및 이용에 대한 약관에 <br> 동의해주시기 바랍니다.</span></p><!--  -->
-				<div class="btnBox">
-					<a href="#" onclick="pc.layerPopup.closePop('#popNoticeInfoPo'); return false;"><img src="../../images/ko/mem/new_2020/resv_confirm.jpg" alt="확인"></a>
-				</div>
-			</div>
-			<div class="btnAcc">
-				<a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#popNoticeInfoPo'); return false;"><span>닫기<!-- 닫기 --></span></a>
-			</div>
-		</div>
-		<div class="mdScreen" style="display: block; height: 1048px;"></div>
-	</div>
-
-	<!-- 예약가능 시간 안내 레이어 팝업  (step3 + step4)-->
-	<div id="popRsvOverInfo" style="display:none;">
-		<div class="popLayer popLayerRegistCard new_popLayer diningPop" tabindex="-1" style="width: 430px;z-index: 999999;">
-			<div class="popHead">
-				<h2 class="tit">예약가능 시간 초과 안내<!-- 예약가능 시간초과 안내 --></h2>
-				<div class="btn"><a class="btnClose" href="/index.do?lang=ko"><span>닫기<!-- 닫기 --></span></a>
-				</div>
-			</div>
-			<div class="popCtn new_rsvBox diningPop" style="width: 430px;">
-				<ul class="notiList2"> 
-<li class="first last">예약 가능 시간이 초과되어 예약이 취소되었습니다.</li> 
-</ul> 
-<p class="checkTxt"><span>다시 예약을 진행하시겠습니까?</span></p><!--  -->
-				<div class="btnBox">
-					<a href="/index.do?lang=ko"><img src="../../images/ko/common/mypage/btn_card_cancel.gif" alt="예약 취소"></a>
-					<a href="javascript:void(0);" onclick="timeOverBlockage()"><img src="../../images/ko/mem/new_2020/resv_confirm.jpg" alt="확인"></a>
-				</div>
-			</div>
-			<div class="btnAcc">
-				<a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#popRsvOverInfo'); return false;"><span>닫기<!-- 닫기 --></span></a>
-			</div>
-		</div>
-		<div class="mdScreen" style="display: block; height: 1048px;"></div>
-	</div>
-	<!-- // 예약가능 시간초과 안내 레이어 팝업 -->
-
-	<!-- 필수정보 입력 레이어 팝업-->
-	<div id="popAlertInfo" style="display:none;">
-		<div class="popLayer popLayerRegistCard new_popLayer diningPop" tabindex="-1" style="width: 430px;">
-			<div class="popHead">
-				<h2 class="tit">필수정보 입력 안내<!-- 필수정보 입력 안내--></h2>
-				<div class="btn"><a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#popAlertInfo'); return false;"><span>닫기<!-- 닫기 --></span></a>
-				</div>
-			</div>
-			<div style="display: none" id="popAlertInfoHidden">
-				<p class="checkTxt"><span>$변수$를(을) 확인해주시기 바랍니다.</span></p></div>
-			<div class="popCtn new_rsvBox diningPop" style="width: 430px;">
-				<div id="popAlertInfoText">
-
-				</div>
-				<div class="btnBox">
-					<a href="#" onclick="pc.layerPopup.closePop('#popAlertInfo'); return false;"><img src="../../images/ko/mem/new_2020/resv_confirm.jpg" alt="확인"></a>
-				</div>
-			</div>
-			<div class="btnAcc">
-				<a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#popAlertInfo'); return false;"><span>닫기<!-- 닫기 --></span></a>
-			</div>
-		</div>
-		<div class="mdScreen" style="display: block; height: 1048px;"></div>
-	</div>
-	<!-- // 필수정보 입력 레이어 팝업-->
-
-	<!-- 중복예약 안내 레이어 팝업 -->
-	<div id="popOverlapInfo" style="display:none;">
-		<div class="popLayer popLayerRegistCard new_popLayer diningPop" tabindex="-1" style="width: 430px;">
-			<div class="popHead">
-				<h2 class="tit">중복예약 안내<!-- 중복예약 안내 --></h2>
-				<div class="btn"><a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#popOverlapInfo'); return false;"><span>닫기<!-- 닫기 --></span></a>
-				</div>
-			</div>
-			<div class="popCtn new_rsvBox diningPop" style="width: 430px;">
-				<p class="checkTxt"><span>동일한 날짜와 시간대에<br>
- 이미 레스토랑 예약이 있습니다.<br> 예약 날짜 또는 시간을 변경하시겠습니까?</span></p> 
-<ul class="notiList2 mgb5"> 
-<li class="first last">※ 온라인 예약은 동일 날짜/시간에 중복 예약이 불가합니다.</li> 
-</ul><!--  -->
-				<div class="btnBox">
-					<a href="#" onclick="overlapClose();"><img src="../../images/ko/mem/new_2020/resv_confirm.jpg" alt="확인"></a>
-				</div>
-			</div>
-			<div class="btnAcc">
-				<a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#popOverlapInfo'); return false;"><span>닫기<!-- 닫기 --></span></a>
-			</div>
-		</div>
-		<div class="mdScreen" style="display: block; height: 1048px;"></div>
-	</div>
-	<!-- // 중복예약 안내 레이어 팝업 -->
-
-	<!-- 예약 가능 횟수 초과 안내 레이어 팝업 -->
-	<div id="popOverlapCntInfo" style="display:none;">
-		<div class="popLayer popLayerRegistCard new_popLayer diningPop" tabindex="-1" style="width: 430px;">
-			<div class="popHead">
-				<h2 class="tit">온라인 예약 가능 횟수 초과 안내<!-- 예약 가능 횟수 초과 안내 --></h2>
-				<div class="btn"><a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#popOverlapCntInfo'); return false;"><span>닫기<!-- 닫기 --></span></a>
-				</div>
-			</div>
-			<div class="popCtn new_rsvBox diningPop" style="width: 430px;">
-				<p class="checkTxt"><span>해당 레스토랑의 온라인 예약 가능 횟수가 초과되었습니다.</span></p> 
-<ul class="notiList2"> 
-<li class="first last">추가 예약 문의는 전화해주시기 바랍니다.</li> 
-</ul><div class="btnBox">
-					<a href="#" onclick="pc.layerPopup.closePop('#popOverlapCntInfo'); return false;"><img src="../../images/ko/mem/new_2019/btn_card_complete.gif" alt="확인"></a>
-				</div>
-			</div>
-			<div class="btnAcc">
-				<a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#popOverlapCntInfo'); return false;"><span>닫기<!-- 닫기 --></span></a>
-			</div>
-		</div>
-		<div class="mdScreen" style="display: block; height: 1048px;"></div>
-	</div>
-	<!-- 예약 가능 횟수 초과 안내 레이어 팝업 -->
-
-	<!-- 유의사항 확인 안내 레이어 팝업 -->
-	<div id="popAlertInfo3" style="display:none;">
-		<div class="popLayer popLayerRegistCard new_popLayer diningPop" tabindex="-1" style="width: 430px;">
-			<div class="popHead">
-				<h2 class="tit">유의사항 확인안내<!-- 유의사항 확인 안내 --></h2>
-				<div class="btn"><a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#popAlertInfo3'); return false;"><span>닫기<!-- 닫기 --></span></a>
-				</div>
-			</div>
-			<div class="popCtn new_rsvBox diningPop" style="width: 430px;">
-				<p class="checkTxt mgb15"><span>유의사항을 모두 읽고 확인해 주시기 바랍니다.</span></p><!--  -->
-				<div class="btnBox">
-					<a href="#" onclick="pc.layerPopup.closePop('#popAlertInfo3'); return false;"><img src="../../images/ko/mem/new_2019/btn_card_complete.gif" alt="확인"></a>
-				</div>
-			</div>
-			<div class="btnAcc">
-				<a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#popAlertInfo3'); return false;"><span>닫기<!-- 닫기 --></span></a>
-			</div>
-		</div>
-		<div class="mdScreen" style="display: block; height: 1048px;"></div>
-	</div>
-	<!-- 유의사항 확인 안내 레이어 팝업 -->
-
-
-	<!-- 시스템 점검 안내  -->
-	<div id="popSysErr" class="usepop" style="display:none;">
-		<div class="popLayer popLayerRegistCard new_popLayer diningPop" tabindex="-1" style="width: 430px;z-index: 9999999;">
-			<div class="popHead">
-				<h2 class="tit">예약 문의 안내</h2>
-				<div class="btn"><a class="btnClose" href="/index.do"><span>닫기</span></a>
-				</div>
-			</div>
-			<div class="popCtn new_rsvBox diningPop" style="width: 430px;">
-				<p class="checkTxt"><span>이용에 불편을 드려 죄송합니다.</span></p> 
-<ul class="notiList2"> 
-<li class="first">현재 접속 고객이 많아 서비스 이용이 원활하지 않습니다.</li> <!--<li>현재 시스템 점검으로 인하여 서비스 이용이 원활하지 않습니다.</li>  --> 
-<li class="last">고객 여러분의 양해 부탁드리며, <br> 예약 및 문의는 전화해주시기 바랍니다.</li> 
-</ul><!--  -->
-				<div class="btnBox">
-					<!-- <a href="#" onclick="pc.layerPopup.closePop('#ResvResetPop'); return false;"><img src="../../images/ko/mem/new_2020/resv_cancel.jpg" alt="취소"></a> -->
-					<a href="javascript:void(0);" onclick="sysErrMove();"><img src="../../images/ko/mem/new_2019/btn_card_complete.gif" alt="확인"></a>
-				</div>
-			</div>
-			<div class="btnAcc">
-				<a class="btnClose" href="/index.do"><span>닫기</span></a>
-			</div>
-		</div>
-		<div class="mdScreen" style="display: block; height: 1048px;"></div>
-	</div>
-	<!-- 시스템 점검 안내  -->
-
-	<!-- 매월1,15일 팝업 -->
-	<div id="popNoReady" class="usepop" style="display:none;">
-		<div class="popLayer popLayerRegistCard new_popLayer diningPop" tabindex="-1" style="width: 430px;z-index: 9999;">
-			<div class="popHead">
-				<h2 class="tit"></h2>
-				<div class="btn"><a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#popAlertInfo3'); return false;"><span>닫기</span></a>
-				</div>
-			</div>
-			<div class="popCtn new_rsvBox diningPop" style="width: 430px;">
-				잠시 후 예약이 오픈됩니다.<br>원활한 예약 진행을 위해 잠시만 기다려주시기 바랍니다.<br><br>* 매월 1일 7:30~8:00, 15일 08:30~09:00는 오픈을 위한 대기시간입니다.<br>* 각 레스토랑에 따라 예약 오픈일이 상이합니다.<br>  [매월 1일]<br>  - 오전 8시 : 서울신라호텔 '더 파크뷰'<br>    - 오전 9시 : 제주신라호텔 '더 파크뷰'<br>  [매월 15일]<br> - 오전 9시 : 서울신라호텔 '팔선', '아리아께', '콘티넨탈', '라연'<br><div class="btnBox">
-					<!-- <a href="#" onclick="pc.layerPopup.closePop('#ResvResetPop'); return false;"><img src="../../images/ko/mem/new_2020/resv_cancel.jpg" alt="취소"></a> -->
-					<a href="javascript:void(0);" onclick="pc.layerPopup.closePop('#popNoReady'); return false;"><img src="../../images/ko/mem/new_2019/btn_card_complete.gif" alt="확인"></a>
-				</div>
-			</div>
-			<div class="btnAcc">
-				<a class="btnClose" href="/index.do"><span>닫기</span></a>
-			</div>
-		</div>
-		<div class="mdScreen" style="display: block; height: 1048px;"></div>
-	</div>
-	<!-- 매월1,15일 팝업 -->
-
-	<!-- STEP 공통 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -- - - - - -->
-
-
-
-<!-- ViewRpmResv popup start ------------------------------------------------------------->
-	<!-- 예약취소 레이어팝업 -->
-	<div id="popRsvCancel" style="display:none">
-		<div class="popLayer popLayerRsvCancel new_popLayer diningPop" tabindex="-1" style="width: 380px;">
-			<div class="popHead">
-				<h2 class="tit">예약 취소 안내<!-- 예약취소 안내 --></h2>
-				<div class="btn">
-					<a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#popRsvCancel'); return false;"><span>닫기<!-- 닫기 --></span></a>
-				</div>
-			</div>
-			<div class="popCtn new_rsvBox">
-				<ul class="notiList2"> 
-<li class="first last">예약취소 시 기존 예약으로 복구가 불가합니다.</li> 
-</ul> 
-<div class="checkTxt mgt10"><span>예약을 취소하시겠습니까?</span></div><!--  -->
-				<div class="btnBox">
-					<a href="#" onclick="pc.layerPopup.closePop('#popRsvCancel'); return false;"><img src="../../images/ko/common/mypage/btn_card_cancel.gif" alt="취소"></a>
-					<a href="#" onclick="cancelResv();"><img src="../../images/ko/common/mypage/btn_card_complete.gif" alt="확인"></a>
-				</div>
-			</div>
-			<div class="btnAcc">
-				<a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#popRsvCancel'); return false;"><span>닫기<!-- 닫기 --></span></a>
-			</div>
-		</div>
-		<div class="mdScreen" style="display: block; height: 1048px;"></div>
-	</div>
-	<!-- //예약취소 레이어팝업 -->
-
-	<!-- 도면보기 레이어팝업 -->
-	<div id="popShowArea" style="display:none">
-		<div class="popLayer new_popLayer diningPop" tabindex="-1" style="width: 604px;">
-			<div class="popHead">
-				<h2 class="tit">도면보기 안내<!-- 도면보기 안내 --></h2>
-				<div class="btn">
-					<a class="btnClose" href="javascript:void(0);" onclick="pc.layerPopup.closePop('#popShowArea');"><span>닫기<!-- 닫기 --></span></a>
-				</div>
-			</div>
-			<div class="popCtn new_rsvBox">
-				<div class="diningImg">
-					<img src="" alt="선호구역이미지" id="zoomImg">
-				</div>
-			</div>
-		</div>
-		<div class="mdScreen" style="display: block; height: 1048px;"></div>
-	</div>
-	<!-- //도면보기 레이어팝업 -->
-
-<!-- ViewRpmResv popup end --------------------------------------------------------------->
-
-
-<!-- 고정 step 3  -->
-
-	<!-- 예약정보 레이어팝업 (step3 + step4)-->
-	<div id="comparePop2" style="display:none;">
-		<div class="popLayer popLayerCompare new_popLayer" tabindex="-1" style="z-index: 9990;">
-			<div class="popHead">
-				<h2 class="tit">예약정보<!-- 예약정보 --></h2>
-				<div class="btn">
-					<a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#comparePop2'); return false;"><span>닫기<!-- 닫기 --></span>
-					</a>
-				</div>
-			</div>
-			<div class="popCtn pop_rsvInfo_wrap new_rsvBox">
-				<div class="pop_rsvInfo diningPop">
-					<!-- 레스토랑 정보 -->
-					<div class="fLeft">
-						<h3>레스토랑 정보<!-- 레스토랑 정보 --></h3>
-						<dl class="r_list1">
-							<dt>
-								<img src="" alt="더 파크뷰" id="popShopImg">
-							</dt>
-							<dd>
-								<strong><span class="popInfo"></span></strong>
-								<ul>
-									<li class="txt first"><span class="popInfo"></span></li>
-									<li class="txt"><span class="popInfo"></span></li>
-									<li class="txt last"><span class="popInfo"></span></li>
-								</ul>
-							</dd>
-						</dl>
-					</div>
-					<!-- //레스토랑 정보 -->
-
-					<!-- 예약 상세 정보 -->
-					<div class="fCenter fRight">
-						<div class="r_list2">
-							<dl>
-								<dt>
-									<strong class="tit">예약 상세 정보<!-- 예약 상세 정보 --></strong>
-								</dt>
-								<dd>
-									<dl class="con">
-										<dt>예약일<!-- 예약일 --></dt>
-										<dd><span class="popInfo"></span></dd>
-									</dl>
-									<dl class="con" style="display:none;">
-										<dt>예약인원<!-- 예약인원 --></dt>
-										<dd>성인<!-- 성인 --><span class="popInfo"></span>, 어린이<!-- 어린이 --> <span class="popInfo"></span>, 유아<!-- 유아  --><span class="popInfo"></span></dd>
-									</dl>
-									<dl class="con">
-										<dt>예약인원<!-- 예약인원 --></dt>
-										<dd><span class="popInfo"></span></dd>
-									</dl>
-									<dl class="con">
-										<dt>선호구역<!-- 선호구역 --></dt>
-										<dd><span class="popInfo"></span></dd>
-									</dl>
-									<dl class="con">
-										<dt>알레르기<!-- 알레르기 --></dt>
-										<dd><span class="popInfo"></span></dd>
-									</dl>
-									<dl class="con">
-										<dt>유아/어린이용 의자<!-- 유아/어린이용 의자 --></dt>
-										<dd><span class="popInfo"></span></dd>
-									</dl>
-									<dl class="con">
-										<dt>추가 요청사항<!-- 추가 요청사항 --></dt>
-										<dd><span class="popInfo"></span></dd>
-									</dl>
-								</dd>
-							</dl>
-						</div>
-					</div>
-					<!-- //예약 상세 정보 -->
-
-					<!-- 고객 정보 -->
-					<div class="fRight">
-						<div class="r_list2">
-							<dl>
-								<dt>
-									<strong class="tit">고객 정보<!-- 고객 정보 --></strong>
-								</dt>
-								<dd>
-									<dl class="con">
-										<dt>예약자명<!-- 예약자명 --></dt>
-										<dd><span class="popInfo"></span></dd>
-									</dl>
-									<dl class="con dispKo">
-										<dt>연락처<!-- 연락처 --></dt>
-										<dd><span class="popInfo"></span></dd>
-									</dl>
-									<dl class="con">
-										<dt>이메일<!-- 이메일 --></dt>
-										<dd><span class="popInfo"></span></dd>
-									</dl>
-								</dd>
-							</dl>
-						</div>
-					</div>
-					<!-- //고객 정보 -->
-				</div>
-				<div class="btnBox">
-					<a href="#" onclick="pc.layerPopup.closePop('#comparePop2'); return false;"><img src="../../images/ko/mem/new_2019/btn_cancel.gif" alt="취소"></a>
-					<a href="javascript:void(0);" onclick="backStep('2')"><img src="../../images/ko/mem/new_2019/btn_rsv_modify.gif" alt="수정"></a>
-					<!-- 수정 2019-10-10 -->
-					<a href="javascript:void(0);" onclick="regResv();"><img src="../../images/ko/mem/new_2019/btn_rsv_complete.gif" alt="예약완료"></a>
-				</div>
-			</div>
-		</div>
-		<div class="mdScreen" style="display: block; height: 1048px;"></div>
-	</div>
-	<!-- //예약정보 레이어팝업 -->
-
-	<!--민감정보 미동의 시 안내 팝업-->
-	 <div id="popFoodAll" style="display:none;">
-	  <div class="popLayer popLayerFoodAllSave new_popLayer diningPop" tabindex="0" aria-hidden="false">
-	   <div class="popHead">
-	    <h2 class="tit">민감정보 저장 약관 동의 알림</h2>
-	    <div class="btn"><a class="btnClose" href="javascript:void(0);" onclick="pc.layerPopup.closePop('#popFoodAll'); return false;"><span>닫기</span></a>
-	    </div>
-	   </div>
-	    <div class="popCtn new_rsvBox diningPop">
-	    <ul class="notiList2 mgb15">
-	     <li class="first last">알레르기 정보 수집을 위해 동의가 필요합니다. <br> 미동의 시 선택한 정보는 삭제됩니다.<br>
-	</li></ul>
-	    <p class="checkTxt"><span>동의하시겠습니까?</span></p><div class="btnBox">
-	     <a href="javascript:void(0);" onclick="fncFoodAllYn('N');return false;"><img src="../../images/ko/mem/new_2019/btn_disagree.gif" alt="미동의"></a>
-	     <a href="javascript:void(0);" onclick="fncFoodAllYn('Y');return false;"><img src="../../images/ko/mem/new_2019/btn_agree.gif" alt="동의"></a>
-	    </div>
-	   </div>
-	   <div class="btnAcc">
-	    <a class="btnClose" href="javascript:void(0);" onclick="pc.layerPopup.closePop('#popFoodAll'); return false;"><span>닫기</span></a>
-	   </div>
-	  </div>
-	  <div class="mdScreen" style="display: block; height: 1048px;"></div>
-	 </div>
-	<!--민감정보 미동의 시 안내 팝업 끝-->
-
-
-	<!-- 중복예약 안내 레이어 팝업 -->
-	<div id="popOverlapInfoPb" style="display:none;">
-		<div class="popLayer popLayerRegistCard new_popLayer diningPop" tabindex="-1" style="width: 430px;">
-			<div class="popHead">
-				<h2 class="tit">중복예약 안내<!-- 중복예약 안내 --></h2>
-				<div class="btn"><a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#popOverlapInfoPb'); return false;"><span>닫기<!-- 닫기 --></span></a>
-				</div>
-			</div>
-			<div class="popCtn new_rsvBox diningPop" style="width: 430px;">
-				<p class="checkTxt"><span>당일 온라인 예약 가능 횟수가 초과되었습니다.</span></p><!--  -->
-				<div class="btnBox">
-					<a href="#" onclick="overlapClose();"><img src="../../images/ko/mem/new_2020/resv_confirm.jpg" alt="확인"></a>
-				</div>
-			</div>
-			<div class="btnAcc">
-				<a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#popOverlapInfoPb'); return false;"><span>닫기<!-- 닫기 --></span></a>
-			</div>
-		</div>
-		<div class="mdScreen" style="display: block; height: 1048px;"></div>
-	</div>
-	<!-- // 중복예약 안내 레이어 팝업 -->
-
-	<!-- 예약 가능 횟수 초과 안내 레이어 팝업 -->
-	<div id="popOverlapCntInfoPb" style="display:none;">
-		<div class="popLayer popLayerRegistCard new_popLayer diningPop" tabindex="-1" style="width: 430px;">
-			<div class="popHead">
-				<h2 class="tit">온라인 예약 가능 횟수 초과 안내<!-- 예약 가능 횟수 초과 안내 --></h2>
-				<div class="btn"><a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#popOverlapCntInfoPb'); return false;"><span>닫기<!-- 닫기 --></span></a>
-				</div>
-			</div>
-			<div class="popCtn new_rsvBox diningPop" style="width: 430px;">
-				<p class="checkTxt"><span>해당 월 온라인 예약 가능 횟수가 초과되었습니다.<br> ※ 추가 예약 문의는 패스트리 부티크로 전화 주시기 바랍니다. </span></p><div class="btnBox">
-					<a href="#" onclick="pc.layerPopup.closePop('#popOverlapCntInfoPb'); return false;"><img src="../../images/ko/mem/new_2019/btn_card_complete.gif" alt="확인"></a>
-				</div>
-			</div>
-			<div class="btnAcc">
-				<a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#popOverlapCntInfoPb'); return false;"><span>닫기<!-- 닫기 --></span></a>
-			</div>
-		</div>
-		<div class="mdScreen" style="display: block; height: 1048px;"></div>
-	</div>
-	<!-- 예약 가능 횟수 초과 안내 레이어 팝업 -->
-
-<div class="subWrap subWrapHub">
-		<div class="head headHub">
-			<script type="text/javascript">
-	$(document).ready(function(){
-		$(".findBtn a").click(function(){
-		 	$(".findBox").slideToggle("fast");
-		});
-	});
-	function ssoLogout() {
-		location.href = "/fbresv/login/SSOLogout.do";
-
-	}
-	$( "#benefitBtn" ).click(function() {
-		  $( "#showCardbox" ).show( "slow" );
-		  $( "#hiddencardbox" ).hide( "slow" );
-	});
-</script>
-
-<script>
-	document.oncontextmenu = function(){ // 컨텍스트 메뉴금지
-		return false;
-	};
-</script>
-
-<div class="header">
-  <h1 class="logo"><a href="/index.do">THE SHILLA HOTELS &amp; RESORTS</a></h1>
-  <!-- 로그인 -->
-  <span class="loginArea">
-	<a href="/membership/mbr/login/memLogin.do">로그인</a>
-    <a href="/mem/mbr/join/memViewBrowsewrap.do">신라리워즈 가입</a>
-    </span>
-  <!-- 예약확인 추가 -->
-  <div class="resvConfirm">
-		  <div class="resvConBox">
-			  <a class="btn" href="#">예약확인<!-- 예약확인 --></a>
-			  <ul class="list">
-				  <li class="dn1 first last">
-					  <ul class="listSt">
-						  <li class="st first st1">
-							  <a href="/membership/mbr/login/memLogin.do?resvYn=Y&amp;resvType=R"><span>객실<!-- 객실 --></span></a>
-						  </li>
-						  <li class="st last st2">
-						  	  <a href="/membership/mbr/login/memLogin.do?resvYn=Y&amp;resvType=D"><span>다이닝<!-- 다이닝 --></span></a>
-						  </li>
-					  </ul>
-				  </li>
-			  </ul>
-		  </div>
-	  </div>
-  <!-- 예약확인 추가 -->
-  <!-- 한국어 영어 일어 시작  -->
-    <div class="language">
-		<div class="globalBox">
-			<a class="btn" href="#">한국어</a><ul class="list">
-				<li class="dn1 first last">
-					<ul class="listSt">
-						<li class="st first st3"><a href="/hub/cmm/setLang.do?lang=en"><span>English</span></a></li><li class="st st4"><a href="/hub/cmm/setLang.do?lang=ja"><span>日本語</span></a></li><li class="st last st5"><a href="/hub/cmm/setLang.do?lang=zh"><span>简体中文</span></a></li></ul>
-				</li>
-			</ul>
-		</div>
-    </div>
-    <script type="text/javascript">
-        jQuery(function() {
-            jQuery('.dn1 > ul > li').each(function(idx) {
-                jQuery(this).addClass('st'+(idx+1));
-            });
-        });
+<meta http-equiv="Content-Language" content="ko-KR">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link href="http://localhost/HCYHotel/common/user/css/pattern.css" media="all"
+	rel="stylesheet" type="text/css">
+<link href="http://localhost/HCYHotel/common/user/css/etc.css" media="all"
+	rel="stylesheet" type="text/css">
+<link href="http://localhost/HCYHotel/common/user/css/member_join.css" media="all"
+	rel="stylesheet" type="text/css">
+<link href="/favicon.ico?ver=3" rel="favicon">
+<link
+	href="//www.saraminimage.co.kr/js/libs/swiper_4.4.6/swiper.min.css"
+	media="screen" rel="stylesheet" type="text/css">
+<script type="text/javascript" async=""
+	src="https://www.googletagmanager.com/gtag/js?id=G-GR2XRGQ0FK&amp;l=dataLayer&amp;cx=c"></script>
+<script type="text/javascript" async=""
+	src="https://www.google-analytics.com/gtm/js?id=GTM-KN35GK2&amp;cid=1713712516.1694412036"></script>
+<script type="text/javascript" async=""
+	src="https://www.google-analytics.com/plugins/ua/linkid.js"></script>
+<script async=""
+	src="https://www.googletagmanager.com/gtm.js?id=GTM-MK2GBBH"></script>
+<script
+	src="https://connect.facebook.net/signals/config/2188045911206841?v=2.9.138&amp;r=stable&amp;domain=www.saramin.co.kr"
+	async=""></script>
+<script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script>
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script async="" src="//static.airbridge.io/sdk/latest/airbridge.min.js"></script>
+<script type="text/javascript"
+	src="//www.saraminimage.co.kr/js/libs/jquery-1.8.3.min.js"></script>
+<script type="text/javascript"
+	src="/js/libs/secure/PasswordStrength.js?v=20231130103248"></script>
+<script type="text/javascript"
+	src="//www.saraminimage.co.kr/js/libs/swiper_4.4.6/swiper.min.js"></script>
+<script type="text/javascript"
+	src="/js/libs/placeholders/jquery.placeholder.js"></script>
+<script type="text/javascript" src="/js/join/join.js?v=20231130103248"></script>
+<script type="text/javascript"
+	src="/js/join/join-person.js?v=20231130103248"></script>
+<script type="text/javascript"
+	src="/js/join/smsEmailConfirm.js?v=20231130103248"></script>
+<meta http-equiv="origin-trial"
+	content="AwnOWg2dzaxHPelVjqOT/Y02cSxnG2FkjXO7DlX9VZF0eyD0In8IIJ9fbDFZGXvxNvn6HaF51qFHycDGLOkj1AUAAACAeyJvcmlnaW4iOiJodHRwczovL2NyaXRlby5jb206NDQzIiwiZmVhdHVyZSI6IlByaXZhY3lTYW5kYm94QWRzQVBJcyIsImV4cGlyeSI6MTY5NTE2Nzk5OSwiaXNTdWJkb21haW4iOnRydWUsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0=">
+</head>
+<body cz-shortcut-listen="true">
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script>
+    (function(a_,i_,r_,_b,_r,_i,_d,_g,_e){if(!a_[_b]){var d={queue:[]};_r.concat(_i).forEach(function(a){var i_=a.split("."),a_=i_.pop();i_.reduce(function(a,i_){return a[i_]=a[i_]||{}},d)[a_]=function(){d.queue.push([a,arguments])}});a_[_b]=d;a_=i_.getElementsByTagName(r_)[0];i_=i_.createElement(r_);i_.onerror=function(){d.queue.filter(function(a){return 0<=_i.indexOf(a[0])}).forEach(function(a){a=a[1];a=a[a.length-1];"function"===typeof a&&a("error occur when load airbridge")})};i_.async=1;i_.src="//static.airbridge.io/sdk/latest/airbridge.min.js";a_.parentNode.insertBefore(i_,a_)}})(window,document,"script","airbridge","init fetchResource setBanner setDownload setDownloads openDeeplink setDeeplinks sendWeb setUserAgent setUserAlias addUserAlias setMobileAppData setUserId setUserEmail setUserPhone setUserAttributes clearUser setDeviceIFV setDeviceIFA setDeviceGAID events.send events.signIn events.signUp events.signOut events.purchased events.addedToCart events.productDetailsViewEvent events.homeViewEvent events.productListViewEvent events.searchResultViewEvent".split(" "),["events.wait"]);
+    var airbridgeWebKey = 'ca79046f9e144d959f976fe69cdcb672';
+    var appName = 'saramin';
+    airbridge.init({
+        app: appName,
+        webToken: airbridgeWebKey,
+        useProtectedAttributionWindow : true,
+        utmParsing: true,
+        cookieWindow: 1,
+        forceFirstPartyCookieID: true
+    });
     </script>
+	<script>
 
-	<!-- Find a hotel 시작 -->
-	<div class="hotelBox_wrap"><!-- 개선 : class="hotelBox_wrap"변경 -->
-		<a class="btn" href="javascript:void(0);">호텔찾기 콤보상자</a>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-		<!-- 개선 : 호텔찾기 -->
-		<div class="hotelBox_N">
-			<div class="hHead">
-				<ul class="htTab">
-   					<li class="tab2 on first"><a href="#"><span>권역별</span></a></li>
-					<li class="tab1  last"><a href="#"><span>브랜드별</span></a></li><!-- a 선택시 li class on 추가 -->
-				</ul>
-			</div>
+  ga('create', 'UA-12546634-1', 'saramin.co.kr');
+  ga('require', 'GTM-KN35GK2');
+  ga('require','displayfeatures');
+  ga('require', 'linkid');
+  ga('send', 'pageview');
 
-			<!-- 권역별 -->
-			<div class="hCon" style="display:block;">
-				<div class="list2">
-					<dl>
-						<dt><a href="#"><img src="/images/ko/mem/new_2019/main_tab2_tit1.gif" alt="국내"></a></dt>
-						<dd>
-							<strong class="tit"><img src="/images/ko/mem/new_2019/main_tab2_stit1.gif" alt="서울 강북"></strong>
-							<ul>
-								<li class="first"><a href="https://www.shilla.net/seoul/index.do?lang=ko">서울신라호텔</a></li>
-													<li><a href="https://www.shillastay.com/gwanghwamun/index.do?lang=ko">신라스테이 광화문</a></li>
-														<li><a href="https://www.shillastay.com/mapo/index.do?lang=ko">신라스테이 마포</a></li>
-														<li class="last"><a href="https://www.shillastay.com/seodaemun/index.do?lang=ko">신라스테이 서대문</a></li>
-														</ul>
-						</dd>
-						<dd>
-							<strong class="tit"><img src="/images/ko/mem/new_2019/main_tab2_stit2.gif" alt="서울 강남"></strong>
-							<ul>
-								<li class="first"><a href="https://www.shillastay.com/yeoksam/index.do?lang=ko">신라스테이 역삼</a></li>
-														<li><a href="https://www.shillastay.com/seocho/index.do?lang=ko">신라스테이 서초</a></li>
-														<li><a href="https://www.shillastay.com/guro/index.do?lang=ko">신라스테이 구로</a></li>
-														<li class="last"><a href="https://www.shillastay.com/samsung/index.do?lang=ko">신라스테이 삼성</a></li>
-														</ul>
-						</dd>
-						<dd>
-							<strong class="tit"><img src="/images/ko/mem/new_2019/main_tab2_stit3.gif" alt="전국"></strong>
-							<ul>
-								<li class="first"><a href="https://www.shilla.net/jeju/index.do?lang=ko">제주신라호텔</a></li>
-													<li><a href="https://www.shillastay.com/dongtan/index.do?lang=ko">신라스테이 동탄</a></li>
-														<li><a href="https://www.shillastay.com/cheonan/index.do?lang=ko">신라스테이 천안</a></li>
-														<li><a href="https://www.shillastay.com/ulsan/index.do?lang=ko">신라스테이 울산</a></li>
-														<li><a href="https://www.shillastay.com/haeundae/index.do?lang=ko">신라스테이 해운대</a></li>
-														<li><a href="https://www.shillastay.com/seobusan/index.do?lang=ko">신라스테이 서부산</a></li>
-														<li><a href="https://www.shillastay.com/yeosu/index.do?lang=ko">신라스테이 여수</a></li>
-														<li class="last"><a href="https://www.shillastay.com/jeju/index.do?lang=ko">신라스테이 제주</a></li>
-													</ul>
-						</dd>
-					</dl>
-					<dl>
-						<dt><a href="#"><img src="/images/ko/mem/new_2019/main_tab2_tit2.gif" alt="해외"></a></dt>
-						<dd>
-							<strong class="tit"><img src="/images/ko/mem/new_2019/main_tab2_stit4.gif" alt="베트남"></strong>
-							<ul>
-								<li class="first last"><a href="https://www.shillamonogram.com/dnmg/index.do?lang=ko">신라모노그램 다낭</a></li>
-												</ul>
-						</dd>
-					</dl>
-				</div>
-			</div>
-			<!-- //권역별 -->
+</script>
 
 
-			<!-- 브랜드별 -->
-			<div class="hCon" style="display:none;">
-				<div class="list1">
-					<dl>
-						<dt><a href="/index.do"><img src="/images/ko/mem/new_2019/main_tab1_tit1.gif" alt="THE SHILLA"></a></dt>
-						<dd>
-							<ul>
-							<li class="first"><a href="https://www.shilla.net/seoul/index.do?lang=ko">서울신라호텔</a></li>
-														<li class="last"><a href="https://www.shilla.net/jeju/index.do?lang=ko">제주신라호텔</a></li>
-														</ul>
-						</dd>
-					</dl>
-					<dl>
-						<dt><a href="https://www.shillamonogram.com/mghub/index.do?lang=ko"><img src="/images/ko/mem/new_2019/main_tab1_tit2.gif" alt="SHILLA MONOGRAM"></a></dt>
-						<dd>
-							<ul>
-								<li class="first last"><a href="https://www.shillamonogram.com/dnmg/index.do?lang=ko">신라모노그램 다낭</a></li>
-												</ul>
-						</dd>
-					</dl>
-					<dl>
-						<dt><a href="https://www.shillastay.com/"><img src="/images/ko/mem/new_2019/main_tab1_tit3.gif" alt="SHILLA STAY"></a></dt>
-						<dd>
-							<ul>
-								<li class="first"><a href="https://www.shillastay.com/gwanghwamun/index.do?lang=ko">신라스테이 광화문</a></li>
-													<li><a href="https://www.shillastay.com/mapo/index.do?lang=ko">신라스테이 마포</a></li>
-													<li><a href="https://www.shillastay.com/seodaemun/index.do?lang=ko">신라스테이 서대문</a></li>
-													<li><a href="https://www.shillastay.com/yeoksam/index.do?lang=ko">신라스테이 역삼</a></li>
-													<li><a href="https://www.shillastay.com/seocho/index.do?lang=ko">신라스테이 서초</a></li>
-													<li><a href="https://www.shillastay.com/guro/index.do?lang=ko">신라스테이 구로</a></li>
-													<li><a href="https://www.shillastay.com/samsung/index.do?lang=ko">신라스테이 삼성</a></li>
-													<li><a href="https://www.shillastay.com/dongtan/index.do?lang=ko">신라스테이 동탄</a></li>
-													<li><a href="https://www.shillastay.com/cheonan/index.do?lang=ko">신라스테이 천안</a></li>
-													<li><a href="https://www.shillastay.com/ulsan/index.do?lang=ko">신라스테이 울산</a></li>
-													<li><a href="https://www.shillastay.com/haeundae/index.do?lang=ko">신라스테이 해운대</a></li>
-													<li><a href="https://www.shillastay.com/seobusan/index.do?lang=ko">신라스테이 서부산</a></li>
-													<li><a href="https://www.shillastay.com/yeosu/index.do?lang=ko">신라스테이 여수</a></li>
-													<li class="last"><a href="https://www.shillastay.com/jeju/index.do?lang=ko">신라스테이 제주</a></li>
-												</ul>
-						</dd>
-					</dl>
-				</div>
-			</div>
-			<!-- //브랜드별 -->
-
-			<a href="#" class="btnClose">닫기</a>
-		</div>
-		<!-- //개선 : 호텔찾기 -->
-
-		<div class="list" style="display:none"><!-- 20180307 호텔찾기 가로형 변경 -->
-		    <div class="hotel">
-		        <h3><a href="/index.do" class="tit">The Shilla</a></h3>
-		        <ul class="hotelListBox">
-					<li class="first"><a href="http://www.shilla.net/seoul/index.do?lang=ko">서울신라호텔</a></li>
-					<li class="last"><a href="http://www.shilla.net/jeju/index.do?lang=ko">제주신라호텔</a></li>
-				</ul>
-		    </div>
-		    <div class="stay">
-		        <h3><a href="http://www.shillastay.com/stayhub/index.do" class="tit">Shilla Stay</a></h3>
-		        <ul class="stayListBox">
-		            <li class="first">
-		                <span class="tit">서울 강북<!-- 서울 강북 --></span>
-		                <ul>
-							<li class="first"><a href="http://www.shillastay.com/gwanghwamun/index.do?lang=ko">신라스테이 광화문</a></li>
-							<li><a href="http://www.shillastay.com/mapo/index.do?lang=ko">신라스테이 마포</a></li>
-							<li class="last"><a href="http://www.shillastay.com/seodaemun/index.do?lang=ko">신라스테이 서대문</a></li>
-						</ul>
-		                <span class="tit">서울 강남<!-- 서울 강남 --></span>
-		                <ul>
-							<li class="first"><a href="http://www.shillastay.com/yeoksam/index.do?lang=ko">신라스테이 역삼</a></li>
-							<li><a href="http://www.shillastay.com/seocho/index.do?lang=ko">신라스테이 서초</a></li>
-							<li class="last"><a href="http://www.shillastay.com/guro/index.do?lang=ko">신라스테이 구로</a></li>
-						</ul>
-		            </li>
-		            <li class="last">
-		                <span class="tit">전국<!-- 전국 --></span>
-		                <ul>
-							<li class="first"><a href="http://www.shillastay.com/dongtan/index.do?lang=ko">신라스테이 동탄</a></li>
-							<li><a href="http://www.shillastay.com/cheonan/index.do?lang=ko">신라스테이 천안</a></li>
-							<li><a href="http://www.shillastay.com/ulsan/index.do?lang=ko">신라스테이 울산</a></li>
-							<li><a href="http://www.shillastay.com/haeundae/index.do?lang=ko">신라스테이 해운대</a></li>
-							<li class="last"><a href="http://www.shillastay.com/jeju/index.do?lang=ko">신라스테이 제주</a></li>
-						</ul>
-		            </li>
-		        </ul>
-		    </div>
-		</div><!-- 20180307 호텔찾기 가로형 변경 -->
-	</div>
-
-	<!-- 예약 팝업 추가 -->
-	<div class="rsvBox_wrap rsvBtn">
-		<a class="btn" href="#none">예약<!-- 예약 --></a>
-		<div class="newDim"></div>
-		<div class="rsvBox_N">
-			<div class="hHead">
-				<ul class="htTab">
-					<li class="tab1 first last"><a href="#"><span>예약<!-- 예약 --></span></a></li>
-				</ul>
-			</div>
-			<div class="hCon">
-				<div class="list1">
-					<ul>
-						<li class="rsvHotelGo first"><a href="/seoul/resv/rpm/memSetStep1.do">객실 예약<!-- 객실 예약 --></a></li>
-						<li class="rsvDiningGo last"><a href="/fbresv/web/memDiningStepWait.do">다이닝 예약<!-- 다이닝 예약 --></a></li>
-					</ul>
-				</div>
-			</div>
-			<a href="#" class="btnClose">닫기</a>
-		</div>
-	</div>
-	<!-- // 예약 팝업 추가 -->
-  <div class="hubMenu">
-    <ul>
-        <li class="first"><span class="hMenu1"><a href="/membership/inquires/aboutShilla/memOverView.do">호텔신라 소개</a></span></li>
-        <li><span class="hMenu2"><a href="/membership/inquires/contactus/memIndex.do">고객문의</a></span></li>
-        <li class="last"><span class="hMenu3">
-		<a href="/membership/offers/pack/memListRewardsPack.do">신라리워즈</a>
+	<%-- <header id="sri_header" class="join_header">
+		<div class="area_logo">
+			<a href="/zf_user" class="link_saramin_logo" aria-label="사람인"> <svg
+					xmlns="http://www.w3.org/2000/svg" width="105" height="21"
+					viewBox="0 0 105 21" fill="none" aria-hidden="true">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+						d="M43.132 16.5434L43.0995 16.5634C42.8572 16.7137 42.1187 17.1717 40.7773 17.1717C39.3862 17.1717 38.5878 16.5856 38.5878 15.5634C38.5878 14.6288 39.4396 14.0004 40.7067 14.0004C41.6088 14.0004 42.2839 14.1423 43.0818 14.3715L43.132 14.3855V16.5434ZM36.4668 9.05678C36.4668 9.48237 36.6392 9.84036 36.9522 10.0646C37.3387 10.3406 37.9034 10.3846 38.5424 10.1871C39.1179 10.0076 39.9811 9.79319 40.8249 9.79319C42.4418 9.79319 43.1319 10.3497 43.1319 11.6546V12.3618L43.0457 12.3418C42.1774 12.1411 41.4826 11.9989 40.4481 11.9989C36.0107 11.9989 35.666 14.8153 35.666 15.6781C35.666 17.6015 36.9533 19.6565 40.5656 19.6565C43.3854 19.6565 45.052 18.6977 45.4956 18.4037C45.9005 18.1401 46.0303 17.8912 46.0303 17.3794V11.7469C46.0303 8.69492 44.3027 7.14783 40.8952 7.14783C39.4712 7.14783 38.1165 7.44246 37.4606 7.71703C36.8011 7.98209 36.4668 8.43302 36.4668 9.05678Z"
+						fill="#4876EF"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+						d="M77.8228 8.48966L77.7791 8.444C76.9299 7.55983 75.8608 7.14783 74.4142 7.14783C72.8569 7.14783 71.2814 7.63522 70.1987 8.45179C69.7639 8.76186 69.6182 9.03334 69.6182 9.52993V18.1299C69.6182 18.9575 70.3037 19.6565 71.1156 19.6565C71.9698 19.6565 72.6138 19.0003 72.6138 18.1299V10.6247L72.6908 10.5766C72.9211 10.4297 73.5335 10.0389 74.5542 10.0389C75.8576 10.0389 76.5187 10.7624 76.5187 12.1885V18.1299C76.5187 18.9575 77.2046 19.6565 78.0165 19.6565C78.8564 19.6565 79.5143 18.9858 79.5143 18.1299V10.6247L79.5917 10.5766C79.822 10.4297 80.4341 10.0389 81.4555 10.0389C82.7406 10.0389 83.4196 10.79 83.4196 12.2115V18.1299C83.4196 18.9575 84.0947 19.6565 84.8934 19.6565C85.7469 19.6565 86.4156 18.9858 86.4156 18.1299V12.1425C86.4156 8.78168 84.8465 7.14783 81.6188 7.14783C80.2589 7.14783 78.9635 7.59876 77.8722 8.45073L77.8228 8.48966Z"
+						fill="#4876EF"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+						d="M64.2181 16.5434L64.1856 16.5634C63.9436 16.7137 63.2059 17.1717 61.8638 17.1717C60.4723 17.1717 59.6743 16.5856 59.6743 15.5634C59.6743 14.6288 60.5256 14.0004 61.7931 14.0004C62.6949 14.0004 63.3703 14.1423 64.1679 14.3715L64.2181 14.3855V16.5434ZM57.5529 9.05678C57.5529 9.48237 57.7257 9.84001 58.0383 10.0646C58.4252 10.3406 58.9895 10.3846 59.6285 10.1871C60.204 10.0076 61.0672 9.79319 61.911 9.79319C63.5279 9.79319 64.218 10.3497 64.218 11.6546V12.3618L64.1319 12.3418C63.2636 12.1411 62.5687 11.9989 61.5342 11.9989C57.0968 11.9989 56.7521 14.8153 56.7521 15.6781C56.7521 17.6015 58.0394 19.6565 61.6517 19.6565C64.4715 19.6565 66.1382 18.6977 66.582 18.4037C66.9866 18.1404 67.1164 17.8916 67.1164 17.3794V11.7469C67.1164 8.69492 65.3889 7.14783 61.9817 7.14783C60.557 7.14783 59.2026 7.44246 58.5471 7.71703C57.8872 7.98209 57.5529 8.43267 57.5529 9.05678Z"
+						fill="#4876EF"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+						d="M54.6265 7.33082C54.1659 7.21826 53.3949 7.14783 52.6149 7.14783C50.0202 7.14783 48.5321 8.56364 48.5321 11.0328V18.2344C48.5321 19.0187 49.1835 19.6565 49.9837 19.6565C49.9971 19.6548 50.004 19.6537 50.0115 19.6534L50.0368 19.6555H50.0383C50.8909 19.6555 51.5539 18.9957 51.5539 18.1529V11.6108C51.5539 10.5794 51.9773 10.0655 52.8487 10.0393C53.2464 10.0255 53.5799 10.091 53.9007 10.1536C54.1496 10.2017 54.3848 10.2474 54.6208 10.2474C55.5872 10.2474 56.0373 9.41915 56.0373 8.85955C56.0373 8.11306 55.5366 7.57009 54.6265 7.33082Z"
+						fill="#4876EF"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+						d="M30.7968 12.446L28.9436 12.0679C27.9063 11.8371 27.4644 11.4971 27.4644 10.9309C27.4644 10.6029 27.6355 9.84022 29.2186 9.84022C29.8752 9.84022 30.8244 10.0675 31.4268 10.3682C32.1774 10.7556 32.9513 10.6874 33.3982 10.1954C33.6478 9.9102 33.7793 9.50942 33.7482 9.12489C33.7277 8.86689 33.6266 8.49579 33.2635 8.19573C32.5069 7.56876 30.9291 7.14783 29.3367 7.14783C26.4306 7.14783 24.5526 8.66968 24.5526 11.0253C24.5526 13.2335 26.4176 14.1743 27.982 14.5744C28.5183 14.7118 28.7863 14.7599 29.0967 14.8158C29.319 14.8557 29.5492 14.8974 29.9056 14.9762C30.8951 15.2116 31.3356 15.5767 31.3356 16.1602C31.3356 16.5839 31.0966 17.2947 29.4926 17.2947C28.3818 17.2947 27.1808 16.983 26.4331 16.5005C26.1312 16.3083 25.8218 16.2139 25.5302 16.2139C25.1194 16.2139 24.7439 16.4009 24.4731 16.7667C24.0595 17.3099 24.1871 18.1941 24.745 18.6589C25.2314 19.0664 26.6583 20.0139 29.3926 20.0139C32.2898 20.0139 34.2364 18.3892 34.2364 15.9707C34.2364 14.1315 33.1111 12.9783 30.7968 12.446Z"
+						fill="#4876EF"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+						d="M90.3468 5.71826C89.5323 5.71826 88.9174 6.37066 88.9174 7.23595V15.2801C88.9174 16.1028 89.5719 16.7974 90.3468 16.7974C91.1483 16.7974 91.7765 16.1309 91.7765 15.2801V7.23595C91.7765 6.38509 91.1483 5.71826 90.3468 5.71826Z"
+						fill="#4876EF"></path>
+            <mask id="mask0_2445_27765" style="mask-type:alpha"
+						maskUnits="userSpaceOnUse" x="88" y="0" width="5" height="5">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+						d="M88.2026 0H92.4913V4.2887H88.2026V0Z" fill="white"></path>
+            </mask>
+            <g mask="url(#mask0_2445_27765)">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+						d="M90.347 0C89.1244 0 88.2026 0.908848 88.2026 2.11382C88.2026 3.33362 89.1445 4.2887 90.347 4.2887C91.5094 4.2887 92.4913 3.29303 92.4913 2.11382C92.4913 0.92826 91.5495 0 90.347 0Z"
+						fill="#4876EF"></path>
+            </g>
+            <mask id="mask1_2445_27765" style="mask-type:alpha"
+						maskUnits="userSpaceOnUse" x="94" y="7" width="11" height="13">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+						d="M94.2783 7.14783H105V19.6565H94.2783V7.14783Z" fill="white"></path>
+            </mask>
+            <g mask="url(#mask1_2445_27765)">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+						d="M99.7299 7.14783C96.7401 7.14783 95.1152 8.19659 94.8134 8.40684C94.4133 8.68434 94.2783 8.95547 94.2783 9.48392V18.1296C94.2783 18.9571 94.9679 19.6565 95.7843 19.6565C96.6432 19.6565 97.2907 19 97.2907 18.1296V10.6247L97.3228 10.6045C97.7618 10.332 98.6524 10.0389 99.6363 10.0389C100.773 10.0389 101.988 10.6279 101.988 12.2809V18.1296C101.988 18.9571 102.678 19.6565 103.494 19.6565C104.353 19.6565 105 19 105 18.1296V12.1421C105 8.87477 103.178 7.14783 99.7299 7.14783Z"
+						fill="#4876EF"></path>
+            </g>
+            <circle cx="3.75261" cy="6.65767" r="3.75261" fill="#4876EF"></circle>
+            <circle cx="13.7596" cy="6.65771" r="3.75261" fill="#B4C0D3"></circle>
+            <circle cx="3.75261" cy="16.6647" r="3.75261" fill="#B4C0D3"></circle>
+            <circle cx="13.7596" cy="16.6647" r="3.75261" fill="#00D3AB"></circle>
+        </svg>
+			</a> <span class="link_speed_logo" aria-label="개인 회원가입"> <svg
+					width="101" height="18" viewBox="0 0 101 18" fill="none"
+					xmlns="http://www.w3.org/2000/svg">
+            <path
+						d="M5.566 2.346C6.094 2.346 6.454 2.442 6.646 2.634C6.85 2.826 6.952 3.18 6.952 3.696V5.604C6.952 6.144 6.934 6.624 6.898 7.044C6.862 7.452 6.778 7.83 6.646 8.178C6.526 8.526 6.346 8.856 6.106 9.168C5.878 9.48 5.566 9.816 5.17 10.176C4.786 10.524 4.306 10.914 3.73 11.346C3.166 11.766 2.482 12.258 1.678 12.822C1.498 12.954 1.3 12.99 1.084 12.93C0.868 12.87 0.694 12.756 0.562 12.588C0.442 12.42 0.376 12.222 0.364 11.994C0.364 11.754 0.46 11.568 0.652 11.436C1.372 10.944 1.984 10.518 2.488 10.158C2.992 9.786 3.412 9.456 3.748 9.168C4.096 8.868 4.366 8.598 4.558 8.358C4.75 8.106 4.894 7.842 4.99 7.566C5.098 7.29 5.164 6.99 5.188 6.666C5.212 6.342 5.224 5.964 5.224 5.532V4.272C5.224 4.032 5.098 3.912 4.846 3.912H1.192C0.964 3.912 0.796 3.834 0.688 3.678C0.592 3.522 0.544 3.342 0.544 3.138C0.544 2.922 0.592 2.736 0.688 2.58C0.796 2.424 0.964 2.346 1.192 2.346H5.566ZM13.378 0.995999C13.594 0.995999 13.786 1.056 13.954 1.176C14.134 1.284 14.224 1.458 14.224 1.698V15.846C14.224 16.086 14.134 16.26 13.954 16.368C13.786 16.488 13.594 16.548 13.378 16.548C13.174 16.548 12.982 16.488 12.802 16.368C12.634 16.26 12.55 16.086 12.55 15.846V8.052H10.516V15.09C10.516 15.33 10.426 15.504 10.246 15.612C10.078 15.732 9.886 15.792 9.67 15.792C9.466 15.792 9.274 15.732 9.094 15.612C8.926 15.504 8.842 15.33 8.842 15.09V1.878C8.842 1.638 8.926 1.464 9.094 1.356C9.274 1.236 9.466 1.176 9.67 1.176C9.886 1.176 10.078 1.236 10.246 1.356C10.426 1.464 10.516 1.638 10.516 1.878V6.522H12.55V1.698C12.55 1.458 12.634 1.284 12.802 1.176C12.982 1.056 13.174 0.995999 13.378 0.995999ZM21.3368 1.806C22.0328 1.806 22.6448 1.914 23.1728 2.13C23.7008 2.346 24.1388 2.64 24.4868 3.012C24.8348 3.384 25.0928 3.828 25.2608 4.344C25.4408 4.848 25.5308 5.394 25.5308 5.982C25.5308 6.582 25.4408 7.14 25.2608 7.656C25.0928 8.16 24.8348 8.598 24.4868 8.97C24.1388 9.342 23.7008 9.636 23.1728 9.852C22.6448 10.068 22.0328 10.176 21.3368 10.176C20.6288 10.176 20.0108 10.068 19.4828 9.852C18.9668 9.636 18.5348 9.342 18.1868 8.97C17.8388 8.598 17.5748 8.16 17.3948 7.656C17.2268 7.14 17.1428 6.582 17.1428 5.982C17.1428 5.394 17.2268 4.848 17.3948 4.344C17.5748 3.828 17.8388 3.384 18.1868 3.012C18.5348 2.64 18.9668 2.346 19.4828 2.13C20.0108 1.914 20.6288 1.806 21.3368 1.806ZM21.3368 3.336C20.8928 3.336 20.5148 3.408 20.2028 3.552C19.8908 3.684 19.6328 3.876 19.4288 4.128C19.2368 4.368 19.0928 4.65 18.9968 4.974C18.9128 5.286 18.8708 5.622 18.8708 5.982C18.8708 6.342 18.9128 6.684 18.9968 7.008C19.0928 7.332 19.2368 7.614 19.4288 7.854C19.6328 8.094 19.8908 8.286 20.2028 8.43C20.5148 8.574 20.8928 8.646 21.3368 8.646C21.7808 8.646 22.1588 8.574 22.4708 8.43C22.7828 8.286 23.0348 8.094 23.2268 7.854C23.4308 7.614 23.5748 7.332 23.6588 7.008C23.7548 6.684 23.8028 6.342 23.8028 5.982C23.8028 5.622 23.7548 5.286 23.6588 4.974C23.5748 4.65 23.4308 4.368 23.2268 4.128C23.0348 3.876 22.7828 3.684 22.4708 3.552C22.1588 3.408 21.7808 3.336 21.3368 3.336ZM29.1848 0.995999C29.4248 0.995999 29.6348 1.056 29.8148 1.176C29.9948 1.296 30.0848 1.488 30.0848 1.752V12.408C30.0848 12.672 29.9948 12.864 29.8148 12.984C29.6348 13.104 29.4248 13.164 29.1848 13.164C28.9448 13.164 28.7348 13.104 28.5548 12.984C28.3748 12.864 28.2848 12.672 28.2848 12.408V1.752C28.2848 1.488 28.3748 1.296 28.5548 1.176C28.7348 1.056 28.9448 0.995999 29.1848 0.995999ZM20.4908 11.652C20.7188 11.652 20.9228 11.712 21.1028 11.832C21.2948 11.952 21.3908 12.144 21.3908 12.408V15.45C21.3908 15.582 21.4148 15.672 21.4628 15.72C21.5228 15.78 21.6248 15.81 21.7688 15.81H29.8688C30.0968 15.81 30.2588 15.888 30.3548 16.044C30.4628 16.2 30.5168 16.386 30.5168 16.602C30.5168 16.806 30.4628 16.986 30.3548 17.142C30.2588 17.298 30.0968 17.376 29.8688 17.376H20.9588C20.4308 17.376 20.0648 17.28 19.8608 17.088C19.6688 16.896 19.5728 16.542 19.5728 16.026V12.408C19.5728 12.144 19.6628 11.952 19.8428 11.832C20.0348 11.712 20.2508 11.652 20.4908 11.652ZM43.0296 5.298C44.2656 5.298 45.2316 5.55 45.9276 6.054C46.6236 6.546 46.9716 7.218 46.9716 8.07C46.9716 8.922 46.6236 9.6 45.9276 10.104C45.2316 10.596 44.2656 10.842 43.0296 10.842C41.7936 10.842 40.8276 10.596 40.1316 10.104C39.4476 9.6 39.1056 8.922 39.1056 8.07C39.1056 7.218 39.4476 6.546 40.1316 6.054C40.8276 5.55 41.7936 5.298 43.0296 5.298ZM43.0296 6.684C42.2616 6.684 41.6856 6.816 41.3016 7.08C40.9176 7.332 40.7256 7.662 40.7256 8.07C40.7256 8.466 40.9176 8.796 41.3016 9.06C41.6856 9.324 42.2616 9.456 43.0296 9.456C43.8096 9.456 44.3856 9.324 44.7576 9.06C45.1416 8.796 45.3336 8.466 45.3336 8.07C45.3336 7.662 45.1416 7.332 44.7576 7.08C44.3856 6.816 43.8096 6.684 43.0296 6.684ZM43.0296 1.05C43.2696 1.05 43.4796 1.11 43.6596 1.23C43.8396 1.35 43.9296 1.542 43.9296 1.806V2.85H47.2776C47.4936 2.85 47.6496 2.928 47.7456 3.084C47.8536 3.24 47.9076 3.42 47.9076 3.624C47.9076 3.828 47.8536 4.008 47.7456 4.164C47.6496 4.308 47.4936 4.38 47.2776 4.38H38.6556C38.4276 4.38 38.2596 4.308 38.1516 4.164C38.0556 4.008 38.0076 3.828 38.0076 3.624C38.0076 3.42 38.0556 3.24 38.1516 3.084C38.2596 2.928 38.4276 2.85 38.6556 2.85H42.1296V1.806C42.1296 1.542 42.2196 1.35 42.3996 1.23C42.5916 1.11 42.8016 1.05 43.0296 1.05ZM50.3916 0.995999C50.6316 0.995999 50.8416 1.056 51.0216 1.176C51.2016 1.296 51.2916 1.488 51.2916 1.752V15.792C51.2916 16.056 51.2016 16.248 51.0216 16.368C50.8416 16.488 50.6316 16.548 50.3916 16.548C50.1636 16.548 49.9596 16.488 49.7796 16.368C49.5996 16.248 49.5096 16.056 49.5096 15.792V1.752C49.5096 1.488 49.5996 1.296 49.7796 1.176C49.9596 1.056 50.1636 0.995999 50.3916 0.995999ZM43.9296 12.48C44.5776 12.456 45.2316 12.426 45.8916 12.39C46.5516 12.342 47.2236 12.288 47.9076 12.228C48.1116 12.204 48.2676 12.258 48.3756 12.39C48.4956 12.522 48.5676 12.69 48.5916 12.894C48.6156 13.098 48.5796 13.278 48.4836 13.434C48.3996 13.59 48.2556 13.68 48.0516 13.704C46.5996 13.836 45.0456 13.932 43.3896 13.992C41.7456 14.052 40.0296 14.082 38.2416 14.082C38.0256 14.082 37.8636 14.004 37.7556 13.848C37.6596 13.692 37.6116 13.512 37.6116 13.308C37.6116 13.104 37.6596 12.93 37.7556 12.786C37.8636 12.642 38.0256 12.57 38.2416 12.57C38.8896 12.57 39.5376 12.57 40.1856 12.57C40.8336 12.57 41.4876 12.558 42.1476 12.534V10.104H43.9296V12.48ZM59.4124 1.302C60.8404 1.302 61.9084 1.584 62.6164 2.148C63.3244 2.7 63.6784 3.42 63.6784 4.308C63.6784 5.196 63.3244 5.922 62.6164 6.486C61.9084 7.038 60.8404 7.314 59.4124 7.314C57.9844 7.314 56.9164 7.038 56.2084 6.486C55.5124 5.934 55.1644 5.208 55.1644 4.308C55.1644 3.408 55.5124 2.682 56.2084 2.13C56.9164 1.578 57.9844 1.302 59.4124 1.302ZM59.4124 2.724C58.5244 2.724 57.8764 2.874 57.4684 3.174C57.0604 3.474 56.8564 3.852 56.8564 4.308C56.8564 4.764 57.0604 5.142 57.4684 5.442C57.8764 5.742 58.5244 5.892 59.4124 5.892C60.3004 5.892 60.9484 5.742 61.3564 5.442C61.7764 5.142 61.9864 4.764 61.9864 4.308C61.9864 3.852 61.7764 3.474 61.3564 3.174C60.9484 2.874 60.3004 2.724 59.4124 2.724ZM66.7744 0.995999C67.0144 0.995999 67.2244 1.056 67.4044 1.176C67.5844 1.296 67.6744 1.488 67.6744 1.752V12.948C67.6744 13.212 67.5844 13.404 67.4044 13.524C67.2244 13.644 67.0144 13.704 66.7744 13.704C66.5464 13.704 66.3424 13.644 66.1624 13.524C65.9824 13.404 65.8924 13.212 65.8924 12.948V12.12H63.0124C62.8084 12.12 62.6524 12.054 62.5444 11.922C62.4484 11.778 62.4004 11.604 62.4004 11.4C62.4004 11.196 62.4484 11.022 62.5444 10.878C62.6524 10.734 62.8084 10.662 63.0124 10.662H65.8924V1.752C65.8924 1.488 65.9824 1.296 66.1624 1.176C66.3424 1.056 66.5464 0.995999 66.7744 0.995999ZM64.2544 8.052C64.4584 8.028 64.6204 8.082 64.7404 8.214C64.8604 8.334 64.9264 8.502 64.9384 8.718C64.9624 8.922 64.9264 9.102 64.8304 9.258C64.7464 9.414 64.6024 9.504 64.3984 9.528C63.7744 9.612 63.1024 9.684 62.3824 9.744C61.6744 9.792 60.9304 9.834 60.1504 9.87V11.994C60.1504 12.234 60.0604 12.414 59.8804 12.534C59.7124 12.642 59.5024 12.696 59.2504 12.696C59.0104 12.696 58.8004 12.642 58.6204 12.534C58.4524 12.414 58.3684 12.234 58.3684 11.994V9.924C57.1084 9.96 55.8604 9.978 54.6244 9.978C54.4084 9.978 54.2464 9.906 54.1384 9.762C54.0424 9.618 53.9944 9.444 53.9944 9.24C53.9944 9.036 54.0424 8.862 54.1384 8.718C54.2464 8.562 54.4084 8.484 54.6244 8.484C56.1364 8.484 57.7144 8.46 59.3584 8.412C61.0144 8.364 62.6464 8.244 64.2544 8.052ZM57.5584 12.984C57.7864 12.984 57.9904 13.044 58.1704 13.164C58.3624 13.284 58.4584 13.476 58.4584 13.74V15.504C58.4584 15.636 58.4824 15.732 58.5304 15.792C58.5904 15.852 58.6924 15.882 58.8364 15.882H67.4764C67.6924 15.882 67.8484 15.954 67.9444 16.098C68.0524 16.254 68.1064 16.434 68.1064 16.638C68.1064 16.842 68.0524 17.022 67.9444 17.178C67.8484 17.334 67.6924 17.412 67.4764 17.412H58.0264C57.4984 17.412 57.1324 17.316 56.9284 17.124C56.7364 16.932 56.6404 16.578 56.6404 16.062V13.74C56.6404 13.476 56.7304 13.284 56.9104 13.164C57.1024 13.044 57.3184 12.984 57.5584 12.984ZM76.8393 2.238C77.3673 2.238 77.7273 2.334 77.9193 2.526C78.1233 2.718 78.2253 3.072 78.2253 3.588V5.586C78.2253 6.09 78.1953 6.546 78.1353 6.954C78.0753 7.35 77.9613 7.728 77.7933 8.088C77.6253 8.448 77.3913 8.802 77.0913 9.15C76.8033 9.486 76.4193 9.846 75.9393 10.23C75.4713 10.602 74.9013 11.01 74.2293 11.454C73.5573 11.898 72.7653 12.402 71.8533 12.966C71.6493 13.086 71.4453 13.11 71.2413 13.038C71.0373 12.954 70.8753 12.828 70.7553 12.66C70.6353 12.492 70.5753 12.294 70.5753 12.066C70.5873 11.838 70.6953 11.658 70.8993 11.526C71.7393 11.01 72.4593 10.56 73.0593 10.176C73.6593 9.78 74.1633 9.426 74.5713 9.114C74.9913 8.79 75.3213 8.496 75.5613 8.232C75.8013 7.956 75.9873 7.686 76.1193 7.422C76.2513 7.146 76.3353 6.858 76.3713 6.558C76.4073 6.246 76.4253 5.898 76.4253 5.514V4.164C76.4253 4.032 76.3953 3.942 76.3353 3.894C76.2873 3.834 76.1913 3.804 76.0473 3.804H71.4033C71.1753 3.804 71.0073 3.726 70.8993 3.57C70.8033 3.414 70.7553 3.234 70.7553 3.03C70.7553 2.814 70.8033 2.628 70.8993 2.472C71.0073 2.316 71.1753 2.238 71.4033 2.238H76.8393ZM82.0593 0.995999C82.2993 0.995999 82.5093 1.056 82.6893 1.176C82.8693 1.296 82.9593 1.488 82.9593 1.752V6.432H84.9393C85.1793 6.432 85.3473 6.51 85.4433 6.666C85.5513 6.81 85.6053 6.99 85.6053 7.206C85.6053 7.422 85.5513 7.608 85.4433 7.764C85.3473 7.92 85.1793 7.998 84.9393 7.998H82.9593V15.792C82.9593 16.056 82.8693 16.248 82.6893 16.368C82.5093 16.488 82.2993 16.548 82.0593 16.548C81.8193 16.548 81.6093 16.488 81.4293 16.368C81.2493 16.248 81.1593 16.056 81.1593 15.792V1.752C81.1593 1.488 81.2493 1.296 81.4293 1.176C81.6093 1.056 81.8193 0.995999 82.0593 0.995999ZM91.3681 1.626C92.0641 1.626 92.6761 1.728 93.2041 1.932C93.7321 2.124 94.1701 2.394 94.5181 2.742C94.8661 3.09 95.1241 3.504 95.2921 3.984C95.4721 4.452 95.5621 4.962 95.5621 5.514C95.5621 6.078 95.4721 6.6 95.2921 7.08C95.1241 7.548 94.8661 7.956 94.5181 8.304C94.1701 8.652 93.7321 8.928 93.2041 9.132C92.6761 9.324 92.0641 9.42 91.3681 9.42C90.6601 9.42 90.0421 9.324 89.5141 9.132C88.9981 8.928 88.5661 8.652 88.2181 8.304C87.8701 7.956 87.6061 7.548 87.4261 7.08C87.2581 6.6 87.1741 6.078 87.1741 5.514C87.1741 4.962 87.2581 4.452 87.4261 3.984C87.6061 3.504 87.8701 3.09 88.2181 2.742C88.5661 2.394 88.9981 2.124 89.5141 1.932C90.0421 1.728 90.6601 1.626 91.3681 1.626ZM91.3681 3.12C90.9241 3.12 90.5461 3.186 90.2341 3.318C89.9221 3.438 89.6641 3.612 89.4601 3.84C89.2681 4.056 89.1241 4.308 89.0281 4.596C88.9441 4.884 88.9021 5.19 88.9021 5.514C88.9021 5.838 88.9441 6.144 89.0281 6.432C89.1241 6.72 89.2681 6.978 89.4601 7.206C89.6641 7.422 89.9221 7.596 90.2341 7.728C90.5461 7.848 90.9241 7.908 91.3681 7.908C91.8121 7.908 92.1901 7.848 92.5021 7.728C92.8141 7.596 93.0661 7.422 93.2581 7.206C93.4621 6.978 93.6061 6.72 93.6901 6.432C93.7861 6.144 93.8341 5.838 93.8341 5.514C93.8341 5.19 93.7861 4.884 93.6901 4.596C93.6061 4.308 93.4621 4.056 93.2581 3.84C93.0661 3.612 92.8141 3.438 92.5021 3.318C92.1901 3.186 91.8121 3.12 91.3681 3.12ZM99.2161 0.995999C99.4561 0.995999 99.6661 1.056 99.8461 1.176C100.026 1.296 100.116 1.488 100.116 1.752V9.15C100.116 9.414 100.026 9.606 99.8461 9.726C99.6661 9.846 99.4561 9.906 99.2161 9.906C98.9761 9.906 98.7661 9.846 98.5861 9.726C98.4061 9.606 98.3161 9.414 98.3161 9.15V1.752C98.3161 1.488 98.4061 1.296 98.5861 1.176C98.7661 1.056 98.9761 0.995999 99.2161 0.995999ZM90.4681 10.68C90.6961 10.68 90.9001 10.74 91.0801 10.86C91.2721 10.98 91.3681 11.166 91.3681 11.418V12.93H98.3521V11.418C98.3521 11.166 98.4421 10.98 98.6221 10.86C98.8021 10.74 99.0001 10.68 99.2161 10.68C99.4561 10.68 99.6661 10.74 99.8461 10.86C100.026 10.98 100.116 11.166 100.116 11.418V16.152C100.116 16.668 100.014 17.022 99.8101 17.214C99.6181 17.406 99.2581 17.502 98.7301 17.502H90.9901C90.4621 17.502 90.0961 17.406 89.8921 17.214C89.7001 17.022 89.6041 16.668 89.6041 16.152V11.418C89.6041 11.166 89.6941 10.98 89.8741 10.86C90.0541 10.74 90.2521 10.68 90.4681 10.68ZM91.3681 15.648C91.3681 15.78 91.3921 15.876 91.4401 15.936C91.5001 15.996 91.6021 16.026 91.7461 16.026H97.9741C98.2261 16.026 98.3521 15.9 98.3521 15.648V14.37H91.3681V15.648Z"
+						fill="#373F57"></path>
+        </svg>
 			</span>
-        </li>
-    </ul>
-  </div>
-</div></div>
-		<div class="contain">
-			<div class="container">
-			<div class="contents" id="contents">
-					<style>
-.dnBox {
-    background: #faf7ed;
-    padding: 20px 15px;
-    margin-top: 50px;
-}
-
-.dnBox dl {
-    overflow: hidden;
-    margin-bottom: 15px;
-    line-height: 100%;
-}
-h6.titCType {
-    margin-top: 40px;
-}
-.roomPrice {
-    margin-top: 20px;
-}
-.goodIntroduce {
-    margin-top: 40px;
-    overflow: hidden;
-}
-.snsList li a.Twitter {
-    width: 23px;
-    height: 23px;
-    background-position: 0 0;
-    overflow: hidden;
-    display: block;
-}
-.snsList li a.Facebook {
-    width: 23px;
-    height: 23px;
-    background-position: -29px 0;
-    overflow: hidden;
-    display: block;
-}
-.snsList li a {
-    background: url(../../images/ko/common/bgSns.gif) 0 0 no-repeat;
-    width: 23px;
-    height: 23px;
-    float: left;
-}
-
-</style>
-<script src="/js/fbr/netfunnel1_r.js" charset="UTF-8"></script>
-<link href="http://localhost/HCYHotel/common/user/css/shilla/net_common.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="/js/fbr/fbrSkin.js" charset="UTF-8"></script>
-<script type="text/javascript" src="/js/fbr/jquery.ad-gallery.js"></script>
-
-<input type="hidden" value="" name="netFunnelIsOn" id="netFunnelIsOn" autocomplete="off">
-<div id="accViewPop" style="display:none">
-	<div class="popLayer new_popLayer diningPop">
-		<div class="popHead">
-			<h2 class="tit"></h2>
-			<div class="btn"><a id="accViewPopCloseBtn" class="btnClose" href="#none" onclick="fncLayerClose('accViewPop', 'roomViewMd');"><span>닫기</span></a></div>
 		</div>
-		<div class="popCtn" style="height: 600px; overflow-y: scroll;" id="accView">
-			<div class="slidePhotoBox" id="slidePhotoBox">
-				<div id="gallery" class="ad-gallery">
-					<div class="ad-image-wrapper"> </div>
-					<div class="ad-controls"> </div>
-					<div class="ad-nav">
-						<div class="ad-thumbs">
-							<ul class="ad-thumb-list" id="ad-thumb-list">
 
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="conWrap mgt40">
-				<div class="leftArea" id="leftArea">
-				</div>
-				<div class="rightArea" id="rightArea">
-					<div class="dnBox" id="dnBox">
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="btnAcc"><a class="btnClose" href="#none" onclick="fncLayerClose('accViewPop', 'roomViewMd');"><span>확인<!-- 확인 --></span></a></div>
-	</div>
-
-	<div class="mdScreen" style="display: block; height: 1048px;" id="roomViewMd"></div>
-</div>
-
-
-<!-- 2020-12-08 추가 -->
-<!-- 호텔 및 다이닝 선택 안내 -->
-<div id="popSelectInfo" style="display:none;">
-	<div class="popLayer popLayerRegistCard new_popLayer diningPop" tabindex="-1" style="width: 430px;">
-		<div class="popHead">
-			<h2 class="tit"><!-- 호텔 및 다이닝 선택 안내 --></h2>
-			<div class="btn"><a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#popSelectInfo'); return false;"><span>닫기</span></a>
-			</div>
-		</div>
-		<div class="popCtn new_rsvBox diningPop" style="width: 430px;">
-			<p class="checkTxt mgb15"><span><span id="selectHD"></span>을 선택해주시기 바랍니다.<!-- 을 선택해주시기 바랍니다. --></span></p>
-				<div class="btnBox">
-				<a href="#" onclick="pc.layerPopup.closePop('#popSelectInfo'); return false;"><img src="../../images/ko/mem/new_2019/btn_card_complete.gif" alt="확인"></a>
-			</div>
-		</div>
-		<div class="btnAcc">
-			<a class="btnClose" href="#" onclick="pc.layerPopup.closePop('#popSelectInfo'); return false;"><span>닫기</span></a>
-		</div>
-	</div>
-	<div class="mdScreen" style="display: block; height: 1048px;"></div>
-</div>
-<!-- //호텔 및 다이닝 선택 안내 -->
-
-
-<!-- 내용 -->
-<div class="new_rsvBox diningNew">
-	<div class="rsvStepWrap">
-		<div class="rsvStepList step0">
-			<ul>
-				<li class="step0 first last">
-					<span>현재단계</span><img src="../../images/ko/mem/new_2020/diningRsv_step0_on.png" alt="Step0. 다이닝 예약">
-				</li>
+		<div class="area_util">
+			<ul class="util">
+				<li class="util_item"><a href="/zf_user"
+					class="util_menu menu_saramin">사람인 홈</a></li>
 			</ul>
 		</div>
-	</div>
-	<div class="rsvWrap diningHotelBox_N">
-		<!-- 호텔 선택 -->
-		<div class="rsvSchHotel">
-			<div class="rsvSchCont">
-				<dl>
-					<dt>
-						<img src="../../images/ko/mem/new_2020/diningTit_hotel.png" alt="호텔 선택">
-					</dt>
-					<dd class="diningChList">
-						<ul class="hotelList2">
-							<li class="first"><a href="javascript:void(0)" onclick="getDiningList(this);" hotlid="S" class="hotlIdClass ">서울신라호텔</a></li>
-							<li><a href="javascript:void(0)" onclick="getDiningList(this);" hotlid="C" class="hotlIdClass ">제주신라호텔</a></li>
-							<li class="last"><a href="javascript:void(0)" onclick="getDiningList(this);" hotlid="SS" class="hotlIdClass ">신라스테이</a></li>
-							</ul>
-					</dd>
-				</dl>
-			</div>
-			<!-- //호텔 선택 -->
-			<!-- 다이닝 선택 -->
-			<div class="rsvSchCont clearfix">
-				<dl>
-					<dt>
-						<img src="../../images/ko/mem/new_2020/diningTit_dining.png" alt="다이닝 선택">
-					</dt>
-					<dd class="optionList diningChList2">
-						<div class="cus-select-wrap">
-							<div class="selected">
-								<div class="selected-value" id="diningSelText">다이닝 선택</div>
-								<span class="select-arrow"></span>
-							</div>
-							<ul class="select-box" id="diningSel">
-							</ul>
-						</div>
-						<div class="diningBtnSearch fr">
-							<a href="javascript:void(0);" onclick="goStep2()"><img src="../../images/ko/mem/new_2020/btn_diningRsv.gif" alt="예약"></a>
-						</div>
-					</dd>
-				</dl>
-			</div>
-		</div>
-		<!-- //다이닝 선택 -->
-		<!-- 신라스테이 click 시, 활성 -->
-		<!-- 신라스테이 click 시, 활성 -->
-<div class="diningStay_N diningPop" id="popStayLayerInfo">
-	<!-- 2020-11-30 이미지 변경, 내용추가 -->
-	<div class="hHead">
-		<strong><img src="../../images/ko/mem/new_2020/shillaStayTit.png" alt="신라스테이 다이닝 예약"></strong>
-	</div>
-	<div class="hCon">
-		<p class="spNoticeTxt">
-			※ 신라스테이 다이닝 예약은 본 사이트에서는 예약 조회가 되지 않으며, 예약 후 받으신 이메일 또는 문자(알림톡)로 확인 가능합니다.<br>
-			※ 레스토랑 Cafe에 한해 온라인 예약이 가능하며, 신라스테이 제주점은 전화 예약만 가능합니다.
-		</p>
-		<div class="list2">
-			<!-- 2020-11-25 링크 변경 -->
-			<dl>
-				<dt>
-					<a href="https://www.shillastay.com/">
-						<img src="../../images/ko/mem/new_2019/main_tab2_tit1.gif" alt="국내">
-					</a>
-				</dt>
-				<dd>
-					<strong class="tit">
-						<img src="../../images/ko/mem/new_2019/main_tab2_stit1.gif" alt="서울 강북">
-					</strong>
-					<ul>
-						<li class="first"><a href="#" stayurl="https://app.catchtable.co.kr/ct/shop/shillastaygwanghwamun">신라스테이 광화문</a></li>
-						<li><a href="#" stayurl="https://app.catchtable.co.kr/ct/shop/shillastaymapo">신라스테이 마포</a></li>
-						<li class="last"><a href="#" stayurl="https://app.catchtable.co.kr/ct/shop/shillastayseodaemun">신라스테이 서대문</a></li>
-					</ul>
-				</dd>
-				<dd>
-					<strong class="tit"><img src="../../images/ko/mem/new_2019/main_tab2_stit2.gif" alt="서울 강남"></strong>
-					<ul>
-						<li class="first"><a href="#" stayurl="https://app.catchtable.co.kr/ct/shop/shillastayyeoksam">신라스테이 역삼</a></li>
-						<li><a href="#" stayurl="https://app.catchtable.co.kr/ct/shop/shillastayseocho">신라스테이 서초</a></li>
-						<li><a href="#" stayurl="https://app.catchtable.co.kr/ct/shop/shillastayguro">신라스테이 구로</a></li>
-						<li class="last"><a href="#" stayurl="https://app.catchtable.co.kr/ct/shop/shillastaysamsung">신라스테이 삼성</a></li>
-					</ul>
-				</dd>
-				<dd>
-					<strong class="tit"><img src="../../images/ko/mem/new_2019/main_tab2_stit3.gif" alt="전국"></strong>
-					<ul>
-						<li class="first"><a href="#" stayurl="https://app.catchtable.co.kr/ct/shop/shillastaydongtan">신라스테이 동탄</a></li>
-						<li><a href="#" stayurl="https://app.catchtable.co.kr/ct/shop/shillastaycheonan">신라스테이 천안</a></li>
-						<li><a href="#" stayurl="https://app.catchtable.co.kr/ct/shop/shillastayulsan">신라스테이 울산</a></li>
-						<li><a href="#" stayurl="https://app.catchtable.co.kr/ct/shop/shillastayhaeundae">신라스테이 해운대</a></li>
-						<li><a href="#" stayurl="https://app.catchtable.co.kr/ct/shop/shillastayseobusan">신라스테이 서부산</a></li>
-						<li class="last"><a href="#" stayurl="https://app.catchtable.co.kr/ct/shop/shillastayyeosu">신라스테이 여수</a></li>
-					</ul>
-				</dd>
-			</dl>
-		</div>
-		<div class="btnList">
-			<input type="hidden" id="stayLink" autocomplete="off">
-			<a href="javascript:void(0);" onclick="stayLinkMove()" id="stayResvBtn">
-				<img id="keywordAreaBtn" src="../../images/ko/mem/new_2020/step0_confirm_deful.jpg" alt="예약확인" draggable="false">
-			</a>
-		</div>
-	</div>
-	<a href="javascript:void(0);" onclick="stayInitClose();" class="btnStayClose">닫기<!-- 닫기 --></a>
-</div>
-<div class="mdScreen" style="height: 1048px;"></div></div>
-	<!-- 호텔, 다이닝 선택 전 기본 메세지 영역 -->
-	<div class="rsvDescWrap beforeSearchDining" id="beforeSearchWrap">
-		<div class="rsvDescDefault">
-			예약을 원하시는 호텔, 다이닝을 선택해주세요.<!-- 예약을 원하시는 호텔, 다이닝을 선택해주세요. -->
-		</div>
-	</div>
-	<!-- //호텔, 다이닝 선택 전 기본 메세지 영역 -->
-	<!-- 호텔, 다이닝 선택 후 기본 메세지 영역 -->
-	<div class="rsvResultWrap afterSearchDining" id="rsvResultWrap">
-		<!-- 선택한 다이닝 -->
-		<div class="rsvResultCon">
-			<div class="rsvResultList rsvResultDiningList">
-				<ul class="clearfix diningDetail">
-					<li class="first">
-						<!-- 선택한 레스토랑 이미지 영역 -->
-						<img src="" alt="선택한 레스토랑 이미지" id="imgSrc">
-					</li>
-					<li class="last">
-						<!-- 선택한 레스토랑 정보 영역 -->
-						<div id="intro"></div>
-						<p><!-- 선택된 레스토랑별 상세로 이동합니다. -->
-							<a class="btnBenfitInfo" href="javascript:void(0);" id="linkPage" onclick="detailPop(this)">자세히 보기<!-- 자세히보기 --></a>
-						</p>
-						<div id="info" class="diningInfoBoxWrap"></div>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<!-- //선택한 다이닝 -->
-	</div>
-	<!-- //호텔, 다이닝 선택 후 기본 메세지 영역 -->
-</div>
-<!-- //내용 -->
+	</header> --%>
+	<!-- header -->
+	<jsp:include page="../include/header.jsp"/>
+	
+  <script>
+    $(document).ready(function() {
+      $("#frm").submit(function(event) {
+        /* var idValue = $("#id").val().trim();
+        var idMessage = $("#idCheckMsg1"); */
 
+        var passwordValue = $("#password").val();
+        var passwordMessage = $("#password1_warning_txt");
+
+        var nameValue = $("#name").val().trim();
+        var nameMessage = $("#user_nm_msg");
+
+        var birthDateValue = $("#identifier").val().trim();
+        var birthDateMessage = $("#cyr_msg");
+
+        var telValue = $("#tel").val().replace(/\s/g, "");
+        var telMessage = $("#msg_cell");
+
+        var emailValue = $("#sms_email_id").val().trim();
+        var emailMessage = $("#sms_msg_email1");
+
+        var agreeAllChecked = $("#agreeAllPersonal").prop("checked");
+        var agree1Checked = $("#agree_rule1").prop("checked");
+        var agree2Checked = $("#agree_take1").prop("checked");
+
+       
+
+        /* // 아이디 유효성 검사
+        if (!/^[a-zA-Z0-9_]{4,20}$/.test(idValue)) {
+          $("#idCheckMsg1").show();
+          event.preventDefault();
+          return;
+        } else {
+          $("#idCheckMsg1").hide();
+        } */
+
+        // 비밀번호 유효성 검사
+        if (
+          !/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,16}$/.test(
+            passwordValue
+          )
+        ) {
+          $("#password1_warning_txt").show();
+          event.preventDefault();
+          return;
+        } else {
+          $("#password1_warning_txt").hide();
+        }
+
+        // 이름 유효성 검사
+        if (!/^[가-힣]+$/.test(nameValue)) {
+          $("#user_nm_msg").show();
+          event.preventDefault();
+          return;
+        } else {
+          $("#user_nm_msg").hide();
+        }
+
+        // 생년월일 유효성 검사
+        if (!/^\d{8}$/.test(birthDateValue)) {
+          $("#cyr_msg").show();
+          event.preventDefault();
+          return;
+        } else {
+          $("#cyr_msg").hide();
+        }
+
+        // 휴대폰 번호 유효성 검사
+        if (!/^\d{3}-\d{4}-\d{4}$/.test(telValue)) {
+          $("#msg_cell").show();
+          event.preventDefault();
+          return;
+        } else {
+          $("#msg_cell").hide();
+        }
+        
+    	 // 이메일 유효성 검사
+        if (!/^[a-zA-Z0-9]+@[a-zA-Z]+/.test(emailValue)) {
+          $("#sms_msg_email1").show();
+          event.preventDefault();
+          return;
+        } else {
+          $("#sms_msg_email1").hide();
+        }
+
+
+        // 전체 동의 및 필수 약관 동의 검사
+        if (!agreeAllChecked && (!agree1Checked || !agree2Checked)) {
+          alert("모든 약관에 동의해주세요.");
+          event.preventDefault();
+          return;
+        }
+
+        // 모든 유효성 검사를 통과하면 폼 제출
+        this.submit();
+      });
+
+      // 전체 동의 체크박스 변경 이벤트 핸들러
+      $("#agreeAllPersonal").change(function() {
+        var isChecked = $(this).prop("checked");
+        $("#agree_rule1, #agree_take1").prop("checked", isChecked);
+      });
+
+      // 각 약관 체크박스 변경 이벤트 핸들러
+      $("#agreeAllPersonal, #agree_rule1, #agree_take1").change(function() {
+        var agreeAllChecked = $("#agreeAllPersonal").prop("checked");
+        var agree1Checked = $("#agree_rule1").prop("checked");
+        var agree2Checked = $("#agree_take1").prop("checked");
+
+        if (agreeAllChecked) {
+          $("#agree_rule1, #agree_take1").prop("checked", true);
+        } else {
+          if (agree1Checked && agree2Checked) {
+            $("#agreeAllPersonal").prop("checked", true);
+          } else {
+            $("#agreeAllPersonal").prop("checked", false);
+          }
+        }
+      });
+    });
+  </script>
+  <script>
+  var successMessage = "${successMessage}";
+  if (successMessage) {
+    alert(successMessage);
+    // 로그인으로 이동
+    window.location.href = "http://localhost/HCYHotel/user/login/user_login.do";
+  }
+</script>
 <script>
-//STEP1---------------------------------------------------------------------------------START
-var domain = 'https://www.shilla.net/';
-var shopinfo;
-$(document).ready(function (){
-	NetFunnel_Complete({},function(ev, ret){
-	});
+$(document).ready(function() {
+    $('#btn_submit').on('click', function() {
+        // 필수 입력 필드들을 확인
+        var id = $('#id').val().trim();
+        var checkin = $('#password').val().trim();
+        var checkout = $('#password').val().trim();
+        var name = $('#name').val().trim();
 
-	historyUrl = 'N';
+        // 필수 입력 필드 중 하나라도 비어있으면 알림창을 띄움
+        if (!id || !checkin || !checkout || !name) {
+            alert('모든 필수 입력 항목을 작성해주세요.');
+            return;
+        }
 
-	$("select, input").not(".design-checkbox").uniform();
+        // 여기에 추가적으로 필요한 입력 항목들을 확인할 수 있습니다.
+        // 예를 들어, 옵션사항, 카드종류 등
 
-	var selHotl = '';
-	var selShop = '';
+        // 모든 필수 입력이 완료되었다면 예약을 완료하고 알림창을 띄움
+        alert('예약이 완료되었습니다.');
+        location.href="http://localhost/HCYHotel/user/home/user_home.do";
+    });
+});
 
-	shopIsY = '';
-	if(shopIsY == "N"){
-		pc.layerPopup.openPop("#popSysErr");
+</script>
+	
+	
+	<div id="sri_section">
+		<div id="sri_wrap">
+
+			<div id="join_wrapper" class="join_cont_wrap">
+				<div id="member_personal" class="member_cate">
+					<form name="frm" id="frm" method="get"
+						action="user/hotel/room/user_roombooking.do">
+
+						<fieldset>
+							<div class="cont_division">
+								<div class="write_base">
+									<!-- 아이디 -->
+									<div class="item"> 
+										<label for="id"><strong>예약자 성함</strong></label>
+										<div class="TypoBox">
+											<input name="id" id="id" type="text"
+												class="Typo SizeL defalt" maxlength="20"
+												style="ime-mode: disabled" autocapitalize="off"
+												autocomplete="off"
+												placeholder="예약자 성함을 입력해주세요">
+										</div>
+										<p class="alert_column focus_txt" id="idFocusMsg"
+											style="display: none">예약자 성함은 한글로 입력해주세요.</p>
+										<em class="msgInvalid" id="idCheckMsg1" style="display: none"></em>
+										<!-- 오류 시 텍스트 -->
+										<p class="alert_column good_txt" id="idCheckMsg2"
+											style="display: none"></p>
+									</div>
+
+									<!-- 체크인 -->
+									<div class="item">
+										<label for="password"><strong>체크인</strong></label>
+										<div class="TypoBox pass_box">
+					
+											<input autocapitalize="off" name="password"
+												class="Typo SizeL defalt" id="password" type="text"
+												maxlength="16" autocomplete="off"
+												placeholder="체크인 날짜를 입력해주세요">
+											<button type="button" toggle="#password1"
+												id="masking_password" class="toggle_password field_eye on"
+												style="display: none;"></button>
+										</div>
+
+										<p class="alert_column focus_txt" id="password1FocusMsg"
+											style="display: none"></p>
+										<!-- focus 시 텍스트 -->
+										<em class="msgInvalid" id="password1_warning_txt"
+											style="display: none"><span></span></em>
+										<p class="alert_column good_txt" id="password1_good_txt"
+											style="display: none"></p>
+										<p class="pass_safety" id="pw_strnegth_level"
+											style="display: none"></p>
+									</div>
+									
+									<!-- 체크아웃 -->
+									<div class="item">
+										<label for="password"><strong>체크아웃</strong></label>
+										<div class="TypoBox pass_box">
+					
+											<input autocapitalize="off" name="password"
+												class="Typo SizeL defalt" id="password" type="text"
+												maxlength="16" autocomplete="off"
+												placeholder="체크아웃 날짜를 입력해주세요">
+											<button type="button" toggle="#password1"
+												id="masking_password" class="toggle_password field_eye on"
+												style="display: none;"></button>
+										</div>
+
+										<p class="alert_column focus_txt" id="password1FocusMsg"
+											style="display: none"></p>
+										<!-- focus 시 텍스트 -->
+										<em class="msgInvalid" id="password1_warning_txt"
+											style="display: none"><span></span></em>
+										<p class="alert_column good_txt" id="password1_good_txt"
+											style="display: none"></p>
+										<p class="pass_safety" id="pw_strnegth_level"
+											style="display: none"></p>
+									</div>
+
+									<!-- 인원수 -->
+									<div class="item">
+										<label for="name"><strong>인원 수</strong></label>
+										<div class="TypoBox">
+											<input type="text" name="name" id="name"
+												class="Typo SizeL defalt" style="ime-mode: active"
+												autocapitalize="off" placeholder="인원 수">
+										</div>
+										<em class="msgInvalid" id="user_nm_msg" name="user_nm_msg"
+											style="display: none">인원 수를 올바르게 입력하세요</em>
+									</div>
+
+									<!-- 요청사항 -->
+									<div class="item">
+										<label for="identifier"><strong>요청사항</strong></label>
+										<div class="TypoBox">
+											<input type="text" name="identifier" id="identifier"
+												maxlength="8" autocapitalize="off" placeholder="요청사항을 입력해주세요"
+												class="Typo SizeL defalt">
+										</div>
+										<em class="msgInvalid" id="cyr_msg" style="display: none">
+											<span>요청사항을 입력해주세요</span>
+										</em>
+										<div class="wrap_collection_basis">
+											<button type="button" class="btn_link"
+												aria-describeby="tootip_content" id="birth_date_msg"
+												style="cursor: pointer; display: none" aria-expanded="false">만
+												15세 이상인지 확인이 필요해요</button>
+											<!--툴팁 노출 시 aria-expanded="ture"로 변경-->
+											<div class="TipBox social_tooltip Click" id="tootip_content">
+												<div class="TipCont BottomCenter"
+													id="collectionBasisContents">
+													<span class="Tail"></span>
+													<div class="TipTxt">
+														취직 최저 연령에 대한 제한<br> (근로기준법 제 64조 1항)
+													</div>
+													<button type="button" class="BtnClose btnClose"
+														id="close_birth_date_msg">
+														<span class="blind">닫기</span>
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<input type="hidden" name="cellnum" id="cellnum"> <input
+										type="hidden" name="email_id" id="email_id">
+
+									<!-- 휴대폰 인증 -->
+
+										<div class="item">
+										<label for="tel"><strong>옵션사항</strong></label>
+										<div class="TypoBox">
+											<input type="text" name="tel" id="tel"
+												class="Typo SizeL defalt" style="ime-mode: active"
+												autocapitalize="off" placeholder="조식/10000원">
+										</div>
+												<em class="msgInvalid" id="msg_cell" style="display: none;">옵션사항을 올바르게 기재해주세요.</em>
+									</div>
+										<div class="item">
+										<label for="tel"><strong>카드종류</strong></label>
+										<div class="TypoBox">
+											<input type="text" name="tel" id="tel"
+												class="Typo SizeL defalt" style="ime-mode: active"
+												autocapitalize="off" placeholder="ex)우리은행">
+										</div>
+												<em class="msgInvalid" id="msg_cell" style="display: none;">카드종류를 올바르게 기재해주세요.</em>
+									</div>
+										<!-- <div class="input_collect TypoBox">
+											<input type="hidden" name="sms_confirm_complete" value="n"
+												id="sms_confirm_complete"> <input type="text"
+												id="sms_cellnum" name="tmp_cellnum"
+												placeholder="'-' 빼고 숫자만 입력"
+												class="Typo SizeL join_input defalt">
+										</div> -->
+										
+								<!-- 휴대폰 인증시 이메일 -->
+									<li class="item identify_phone"><label for="sms_email_id"><strong>카드번호</strong></label>
+										<div class="TypoBox">
+											<input type="text" id="sms_email_id" name="email"
+												style="ime-mode: inactive" class="Typo SizeL defalt"
+												placeholder="0000-0000-0000-0000">
+										</div> <!-- 자동리스트 영역 -->
+										 <em class="msgInvalid" id="sms_msg_email1" name="email"
+										style="display: none">0000-0000-0000-0000</em>
+										<p class="alert_column good_txt" id="msg_email2"
+											style="display: none">인증되었습니다</p>
+										<div class="wrap_collection_basis"></div></li>
+
+									<!-- 이메일 인증 -->
+									<div class="item identify_mail" style="display: none;">
+										<label for="email"><strong>이메일</strong></label>
+									
+								
+									
+										<em class="msgInvalid" id="mail_msg_email1" name="email"
+											style="display: none">이메일 주소를 입력해주세요.</em> 
+
+									</div>
+
+									
+								</div>
+
+
+								<div class="btn_join">
+									<button type="button" id="btn_submit"
+										class="inp_join BtnType SizeL defalt ga_data_layer btn_input_complete"
+										data-ga_data_layer="ga_lead|member_join|join_pc|step_2"
+										>결제</button>
+								</div>
+							</div>
+						</fieldset>
+					</form>
+
+					<!-- 중복가입 알림 레이어 -->
+					<div class="member_nudge ModalBox" id="p_member_nudge"
+						style="display: none">
+						<h3 class="Tit">이미 가입된 정보입니다</h3>
+						<div class="ModalCont">
+							<p class="txt_info">가입된 아이디에 회원님의 소중한 이력서와 입사지원 내역 등이 있을 수
+								있어요!</p>
+							<div class="id_already">
+								<span>아이디</span> <strong id="p_already_id">%nbsp;</strong>
+							</div>
+							<div class="BtmArea">
+								<a href="/zf_user/helpdesk/idpw-find"
+									class="BtnType SizeM search_user">아이디/비밀번호 찾기</a> <a
+									href="/zf_user/auth" class="BtnType SizeM">로그인</a>
+							</div>
+						</div>
+						<button type="button" class="btnClose BtnClose close_btn"
+							onclick="$('#p_member_nudge').hide();$('#dimmed').hide();">
+							<span class="blind">닫기</span>
+						</button>
+					</div>
+					<div id="dimmed" class="sri_dimmed" style="display: none"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+(function() {
+  var pszProto = (("https:" == document.location.protocol) ? "https://www.saramin.co.kr/js/" : "//www.saraminimage.co.kr/js/");
+  document.write(unescape("%3Cscript src='" + pszProto + "wl6.js' type='text/javascript'%3E%3C/script%3E"));
+})();
+</script>
+	<script src="https://www.saramin.co.kr/js/wl6.js"
+		type="text/javascript"></script>
+
+	<script type="text/javascript">
+    // 1.
+_n_sid = "saramin";
+_n_uid_cookie = "UID";
+_n_info1_cookie = "Mtype";
+n_logging();
+</script>
+
+	<script>
+    (function ($, window) {
+        var _self = [],
+            MetaPixelManager = {
+                init: function () {
+                    _self = this;
+                    _self.initVariable();
+                    _self.bindEvent();
+                    _self.initMetaPixelEvent();
+                },
+                initVariable: function () {
+                    _self.pixelId = '2188045911206841';
+                    _self.hyperLink = window.location.href;
+                },
+                bindEvent: function () {
+                    //페이지의 meta_pixel_event 바인딩
+                    $(document).on('mousedown', '.meta_pixel_event', function () {
+                        _self.bindSendMetaPixelEventByData(this);
+                    });
+
+                    //iframe 로드시 meta_pixel_event 바인딩 (ex, 입사지원)
+                    $('iframe').on('load', function () {
+                        var kakaoPixelEventList = $(this).contents().find('.meta_pixel_event');
+                        if (kakaoPixelEventList.length > 0) {
+                            kakaoPixelEventList.on('mousedown', function () {
+                                _self.bindSendMetaPixelEventByData(this);
+                            });
+                        }
+                    });
+                },
+                initMetaPixelEvent: function () {
+                    !function (f, b, e, v, n, t, s) {
+                        if (f.fbq) return;
+                        n = f.fbq = function () {
+                            n.callMethod ?
+                                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                        };
+                        if (!f._fbq) f._fbq = n;
+                        n.push = n;
+                        n.loaded = !0;
+                        n.version = '2.0';
+                        n.queue = [];
+                        t = b.createElement(e);
+                        t.async = !0;
+                        t.src = v;
+                        s = b.getElementsByTagName(e)[0];
+                        s.parentNode.insertBefore(t, s)
+                    }(window, document, 'script',
+                        'https://connect.facebook.net/en_US/fbevents.js');
+                    fbq('init', _self.pixelId);
+                    fbq('track', 'PageView');
+                },
+                /**
+                 * data속성으로 부터 event 불러와 전송
+                 * @param ele
+                 */
+                bindSendMetaPixelEventByData: function (ele) {
+                    var data = $(ele).data('meta_pixel_event'),
+                        event = '';
+
+                    if (!!data) {
+                        event = data.toString();
+                    }
+
+                    if (!event) {
+                        return;
+                    }
+
+                    _self.sendMetaPixelEvent(event);
+                },
+                sendMetaPixelEvent: function (event) {
+                    switch (event) {
+                        case 'Purchase': //입사지원
+                            fbq('track', event, {value: 0.00, currency: 'USD'});
+                            break;
+                        case 'StartTrial': //프로필 등록 완료
+                            fbq('track', event, {value: 0.00, currency: 'USD', predicted_ltv: '0.00'});
+                            break;
+                    }
+                },
+            }
+
+        MetaPixelManager.init();
+    })(jQuery, window);
+</script>
+	<script type="text/javascript">
+
+	function n_trackEvent(category, action, opt_label, opt_value, opt_noninteraction) {
+	    var l = document.location;
+	    var url = l.protocol + '//' + l.host + '/trackEvent?category=' + category + '&action=' + action;
+	    var label = opt_label || '';
+	    var value = opt_value || '';
+	    url = url + '&opt_label=' + label + '&opt_value=' + value;
+	    n_click_logging(url, l.href);
+	    try {
+	        _gaq.push(['_trackEvent', category, action, opt_label, opt_value, opt_noninteraction]);
+	        ga('send', 'event', category, action, opt_label, opt_value, opt_noninteraction);
+	    } catch (_e) {}
 	}
+	
+	function pushDataLayer(event, category, event_flow, event_label) {
+	    try {
+            dataLayer.push({
+                'event': event || 'ga_lead',
+                'category': category || '',
+                'event-flow': event_flow || '',
+                'event-label': event_label || ''
+            });
 
-	//선택된 호텔이있을때
-	if(selHotl != "" ){
-		$("#hotlId").val(selHotl);
-		getDiningList($(".hotlIdClass.on"));
-	}
-	if(selHotl != "" && selShop != ""){
-		$("#hotlId").val(selHotl);
-		getDiningList($(".hotlIdClass.on"));
-		getDiningDetail(selShop);
-		fncChangeForLabel('diningSel','seoulDiningLd');
-	}
+        }catch (e) {
+
+        }
+    }
+
+    // 클릭 이벤트 + 구글 태그매니져 로깅
+    function loggingEventAndTagManager(trackEventAttr, tagManagerAttr) {
+        n_trackEvent(trackEventAttr[0], trackEventAttr[1], trackEventAttr[2], trackEventAttr[3]);
+        pushDataLayer(tagManagerAttr[0], tagManagerAttr[1], tagManagerAttr[2], tagManagerAttr[3]);
+    }
+
+
+    function promotionPushDataLayer(log_event, log_id, log_name, log_creative, log_position) {
+	    try{
+            var ecommerce_type = log_event === 'promotionClick' ? 'promoClick' : 'promoView';
+            var promotion_log = {};
+            promotion_log[ecommerce_type] = {
+                'promotions': [
+                    {
+                        'id': log_id,
+                        'name': log_name,
+                        'creative': log_creative,
+                        'position': log_position
+                    }
+                ]
+            };
+
+            var log_data = {
+                'event': log_event,
+                'ecommerce': promotion_log
+            };
+
+            dataLayer.push(log_data);
+        } catch (e) {
+
+        }
+    }
 
 	
-	apiHealthCk();
+	function _hwaClick(cc) {
+		n_trackEvent('ADs', 'Click-' + cc);
+	}
 
+    function applyTrackEvent(el, opt_category, opt_content, opt_ref, opt_ref_content) {
+
+        try {
+            var url         = el.href;
+            var category    = opt_category || '';
+            var content     = opt_content || '';
+            var ref         = opt_ref || '';
+            var ref_content = opt_ref_content || '';
+            var anchor      = '';
+
+            if ( url.indexOf('#') != -1 ) {
+                var splitUrl = url.split('#');
+                url = splitUrl[0];
+                anchor = splitUrl[1];
+            }
+
+            if( url.indexOf('?') < 0 ) {
+                url = url + '?t_category=' + category + '&t_content=' + content + '&t_ref=' + ref + '&t_ref_content=' + ref_content;
+            } else {
+                url = url + '&t_category=' + category + '&t_content=' + content + '&t_ref=' + ref + '&t_ref_content=' + ref_content;
+            }
+
+            if ( anchor != '' ) {
+                url += '#' + anchor;
+            }
+
+            el.href = url;
+        } catch (e) {
+        }
+    }
+
+    function sriRecomLog(path, itemId, nonce) {
+        try{
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', '/zf_user/recommend-log/logging');
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.onload = function() {};
+            xhr.send('path=' + path + '&itemId=' + itemId + '&nonce=' + nonce);
+        } catch (e) {}
+    }
+
+    function s_trackApply(el, opt_ref, opt_ref_content, opt_ref_scnid, opt_ref_area, opt_etc) {
+
+        try {
+            var url         = el.href;
+            var ref         = opt_ref || '';
+            var ref_content = opt_ref_content || '';
+            var ref_scnid   = opt_ref_scnid || '';
+            var ref_area   = opt_ref_area || '';
+            var anchor      = '';
+
+            var opt = opt_etc || {};
+
+            if( url.indexOf('t_ref') > 0 ) return;
+
+            if ( url.indexOf('#') != -1 ) {
+                var splitUrl = url.split('#');
+                url = splitUrl[0];
+                anchor = splitUrl[1];
+            }
+
+            if( url.indexOf('?') < 0 ) {
+                url = url + '?t_ref=' + ref + '&t_ref_content=' + ref_content;
+            } else {
+                url = url + '&t_ref=' + ref + '&t_ref_content=' + ref_content;
+            }
+
+            if (!!ref_scnid) {
+				url += '&t_ref_scnid=' + ref_scnid;
+            }
+
+            if (!!ref_area) {
+				url += '&t_ref_area=' + ref_area;
+            }
+
+            if ( anchor != '' ) {
+                url += '#' + anchor;
+            }
+
+            if (opt.constructor === Object) {
+                for (k in opt) {
+                    if (opt.hasOwnProperty(k)) {
+                        url += '&' + k + '=' + opt[k];
+                    }
+                }
+            }
+
+            el.href = url;
+
+        } catch (e) {
+        }
+    }
+</script>
+
+
+	<script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+
+	<script type="text/javascript"> 
+if (!wcs_add) var wcs_add={};
+wcs_add["wa"] = "s_1d3a45fb0bfe";
+if (!_nasa) var _nasa={};
+wcs.inflow();
+wcs_do(_nasa);
+</script>
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MK2GBBH');</script>
+	<!-- End Google Tag Manager -->
+	<!-- Google Tag Manager (noscript) -->
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MK2GBBH"
+			height="0" width="0" style="display: none; visibility: hidden"></iframe>
+	</noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	<div id="_sticky_warp" role="complementary"></div>
+
+	<link href="http://localhost/HCYHotel/common/user/css/login.css" rel="stylesheet"
+		type="text/css">
+	<script type="text/javascript" src="/js/libs/secure/rsa.min.js"></script>
+	<script type="text/javascript"
+		src="/js/libs/secure/secure-login.js?v=131018"></script>
+
+	<div id="pop_login_layer_dimmed"
+		style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url(//www.saraminimage.co.kr/event_2014/0708_rank1/bg_dimmed.png) repeat 0 0; z-index: 9998;"></div>
+	<div id="pop_login_layer" class="pop_login_layer"
+		style="display: none; position: absolute; top: 280px;" role="dialog"
+		aria-labelledby="login_title">
+		<div class="outer">
+			<form name="loginFrm" id="loginFrm"
+				action="https://www.saramin.co.kr/zf_user/auth/login" method="post"
+				onsubmit="return loginCheckMainLayer(this);">
+				<input type="hidden" name="page_url" id="page_url"
+					value="L3pmX3VzZXIvbWVtYmVyL3JlZ2lzdHJhdGlvbi9qb2luLWRldGFpbD91dD1w">
+				<input type="hidden" name="url" value=""> <input
+					type="hidden" name="allowType" value=""> <input
+					type="hidden" name="ut" value=""> <input type="hidden"
+					name="layerScrapIdx" value=""> <input type="hidden"
+					name="layerFavorIdx" value=""> <input type="hidden"
+					name="rec_apply_fl" value="n"> <input type="hidden"
+					name="encid" value="" id="encid"><input type="hidden"
+					name="encpw" value="" id="encpw"><input type="hidden"
+					name="seq" value="" id="seq">
+				<fieldset class="inner">
+					<h4 id="login_title" class="title">
+						<span class="txt_point">로그인</span>이 필요한 서비스입니다.
+					</h4>
+					<div class="setting">
+						<span class="inpChk"> <input type="checkbox"
+							id="ly_autologin" class="setting_inp" name="autologin"
+							onmousedown="try{n_trackEvent('login', 'pc_login_page' , 'login_save', '');}catch(e){}">
+							<label class="setting_label" for="ly_autologin"
+							onmousedown="try{n_trackEvent('login', 'pc_login_page' , 'login_save', '');}catch(e){}">
+								로그인 유지 </label>
+						</span> <span class="inpChk"> <input type="checkbox"
+							id="ly_id_save" class="setting_inp" name="id_save"
+							onmousedown="try{n_trackEvent('login', 'pc_login_page' , 'id_save', '');}catch(e){}">
+							<label class="setting_label" for="ly_id_save"
+							onmousedown="try{n_trackEvent('login', 'pc_login_page' , 'id_save', '');}catch(e){}">
+								아이디 저장 </label>
+						</span> <span class="inpChkSwP ssl_login_box"> <input
+							type="checkbox" id="ly_ssl_login" title="보안접속"
+							class="ssl_login_hide" checked="checked"> <label
+							for="ly_ssl_login" id="ly_ssl_login_label" class="lbl label_type">보안</label>
+						</span>
+					</div>
+					<div id="login_form" class="login-form">
+						<div id="id_input_form" class="id-input-box focus">
+							<input type="text" name="id" id="ly_id" class="txt_tool" value=""
+								required=""> <label id="ly-id-label" class="id-label"
+								for="ly_id"><span>아이디</span></label>
+						</div>
+						<div id="pw_input_form" class="pw-input-box">
+							<input type="password" name="password" id="ly_password" value=""
+								required=""> <label id="ly-password-label"
+								for="ly_password"><span>비밀번호</span></label>
+						</div>
+						<button type="submit" class="btn-login"
+							onmousedown="loggingEventAndTagManager(['login','pc_login_layer','per_login',''],['ga_lead','login','pc_login_layer','per_login'])">
+							<span>로그인</span>
+						</button>
+					</div>
+					<div class="signup-forgotten">
+						<a href="/zf_user/member/registration/join" target="_blank"
+							class="sign_up">회원가입</a> <a href="/zf_user/helpdesk/idpw-find"
+							target="_blank" class="forgotten">아이디/비밀번호 찾기</a>
+					</div>
+					<div class="social_login_tit">
+						<p class="tit">소셜 계정으로 간편 로그인</p>
+					</div>
+					<ul class="social_login" id="wrap_social_login">
+						<li class="login_naver"><a
+							href="/zf_user/auth/sign-in-with?provider=naver.com&amp;display=popup&amp;url=%2Fzf_user%2Fmember%2Fregistration%2Fjoin-detail%3Fut%3Dp&amp;login_type=p"
+							class="sl_naver ga_data_layer" data-provider="naver"><span
+								class="wrap_icon"><svg class="icon">
+										<use xlink:href="#icon_login_naver"></use></svg></span></a></li>
+						<li class="login_kakao"><a
+							href="/zf_user/auth/sign-in-with?provider=kakao.com&amp;display=popup&amp;url=%2Fzf_user%2Fmember%2Fregistration%2Fjoin-detail%3Fut%3Dp&amp;login_type=p"
+							class="sl_kakao ga_data_layer" data-provider="kakao"><span
+								class="wrap_icon"><svg class="icon">
+										<use xlink:href="#icon_login_kakao"></use></svg></span></a></li>
+						<li class="login_google"><a
+							href="/zf_user/auth/sign-in-with?provider=google.com&amp;display=popup&amp;url=%2Fzf_user%2Fmember%2Fregistration%2Fjoin-detail%3Fut%3Dp&amp;login_type=p"
+							class="sl_google ga_data_layer" data-provider="google"><span
+								class="wrap_icon"><svg class="icon">
+										<use xlink:href="#icon_login_google"></use></svg></span></a></li>
+						<li class="login_facebook"><a
+							href="/zf_user/auth/sign-in-with?provider=facebook.com&amp;display=popup&amp;url=%2Fzf_user%2Fmember%2Fregistration%2Fjoin-detail%3Fut%3Dp&amp;login_type=p"
+							class="sl_facebook ga_data_layer" data-provider="facebook"><span
+								class="wrap_icon"><svg class="icon">
+										<use xlink:href="#icon_login_facebook"></use></svg></span></a></li>
+						<li class="login_apple"><a
+							href="/zf_user/auth/sign-in-with?provider=apple.com&amp;display=popup&amp;url=%2Fzf_user%2Fmember%2Fregistration%2Fjoin-detail%3Fut%3Dp&amp;login_type=p"
+							class="sl_apple ga_data_layer" data-provider="apple"><span
+								class="wrap_icon"><svg class="icon">
+										<use xlink:href="#icon_login_apple"></use></svg></span></a></li>
+					</ul>
+				</fieldset>
+			</form>
+			<button class="pop_login_layer_close" id="pop_login_layer_close">닫기</button>
+		</div>
+		<svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+        <symbol id="icon_login_naver" viewBox="0 0 20 20" fill="none">
+            <path
+				d="M13.5615 10.704L6.14588 0H0V20H6.43845V9.296L13.8541 20H20V0H13.5615V10.704Z"
+				fill="white"></path>
+        </symbol>
+        <symbol id="icon_login_kakao" viewBox="0 0 24 22" fill="none">
+            <path
+				d="M12 -0.00012207C5.37092 -0.00012207 0 4.23616 0 9.46609C0 12.868 2.27684 15.8528 5.69401 17.5215C5.44314 18.4545 4.78556 20.9082 4.65252 21.4316C4.48907 22.0839 4.89199 22.0725 5.15426 21.8981C5.35952 21.7616 8.44219 19.6681 9.77257 18.7654C10.4948 18.8716 11.2398 18.9285 12 18.9285C18.6291 18.9285 24 14.6922 24 9.4623C24 4.23237 18.6291 -0.00012207 12 -0.00012207Z"
+				fill="#181600"></path>
+        </symbol>
+		<symbol id="icon_login_google" viewBox="0 0 22 22" fill="none">
+			<path fill-rule="evenodd" clip-rule="evenodd"
+				d="M21.5593 11.25C21.5593 10.4697 21.4888 9.72048 21.3593 9.00027H10.9998V13.2552H16.9199C16.665 14.6303 15.8899 15.7951 14.7251 16.5754V19.3349H18.2805C20.3603 17.4199 21.5603 14.6002 21.5603 11.25H21.5593Z"
+				fill="#4285F4"></path>
+			<path fill-rule="evenodd" clip-rule="evenodd"
+				d="M10.9993 22.0002C13.9692 22.0002 16.4594 21.0147 18.2791 19.3349L14.7236 16.5754C13.7382 17.2355 12.4791 17.6251 10.9983 17.6251C8.133 17.6251 5.70815 15.6904 4.84287 13.0904H1.16931V15.9401C2.97966 19.5349 6.69881 22.0002 10.9993 22.0002Z"
+				fill="#34A853"></path>
+			<path fill-rule="evenodd" clip-rule="evenodd"
+				d="M4.84453 13.0895C4.62484 12.4294 4.49946 11.7248 4.49946 10.9994C4.49946 10.274 4.62484 9.56933 4.84453 8.90923V6.05951H1.16994C0.424868 7.54448 0 9.22426 0 10.9994C0 12.7745 0.424868 14.4543 1.16994 15.9392L4.84453 13.0895Z"
+				fill="#FBBC05"></path>
+			<path fill-rule="evenodd" clip-rule="evenodd"
+				d="M10.9993 4.37511C12.6138 4.37511 14.0646 4.93054 15.2045 6.01966L18.3599 2.86423C16.4542 1.09015 13.9641 0 10.9993 0C6.69881 0 2.97966 2.46527 1.16931 6.06007L4.8439 8.90979C5.70918 6.30981 8.13404 4.37511 10.9993 4.37511Z"
+				fill="#EA4335"></path>
+		</symbol>
+        <symbol id="icon_login_facebook" viewBox="0 0 14 26" fill="none">
+            <path
+				d="M4.60526 25.5H8.9386V14.4801H12.9504L13.3677 10.3223C13.3677 10.3223 13.4544 10.118 13.0165 10.118H8.9386V6.97963C8.9386 6.97963 8.75842 4.60805 11.1053 4.60805H13.5V0.937039C13.5 0.937039 12.4691 0.477875 9.97404 0.500833C9.97404 0.500833 7.77316 0.473283 6.05123 2.13086C6.05123 2.13086 4.60526 3.43489 4.60526 4.9134V10.118H0.5V14.4801H4.60526V25.5Z"
+				fill="white"></path>
+        </symbol>
+        <symbol id="icon_login_apple" viewBox="0 0 22 25" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+				d="M8.48584 5.81313C8.27201 4.15256 9.4239 0.539339 13.4774 0C13.9464 2.78179 11.6001 5.97873 8.48584 5.81313Z"
+				fill="white"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+				d="M20.7747 8.39829C19.4527 7.15287 18.3008 5.94884 15.8694 5.82349C13.9071 5.7407 13.0115 6.90332 11.1768 6.94472C9.47077 6.98612 9.59836 5.6579 6.0576 6.03164C2.98587 6.36283 0.298109 9.35277 0.511949 13.5467C0.725788 18.073 3.96764 24.3427 6.99566 24.3427C9.12815 24.3013 9.64089 23.3043 11.3894 23.3043C13.5644 23.3043 14.0772 24.5497 15.7832 24.3002C18.7261 23.885 21.499 19.3587 21.499 17.9063C19.878 17.076 18.2571 15.6638 18.0433 13.2972C17.8731 10.9305 19.3653 9.43557 20.7736 8.39714L20.7747 8.39829Z"
+				fill="white"></path>
+        </symbol>
+	</svg>
+		<script type="text/javascript">
+
+        var getId = (function () {
+            var elCache = {};
+            return function (id) {
+                if (!elCache[id]) {
+                    elCache[id] = document.getElementById(id);
+                }
+                return elCache[id];
+            }
+        })();
+
+        var page_url = 'L3pmX3VzZXIvbWVtYmVyL3JlZ2lzdHJhdGlvbi9qb2luLWRldGFpbD91dD1w';
+
+
+        function addEvent(ele, eventType, func) {
+            var obj = typeof ele === 'string' ? getId(ele) : ele;
+            if (obj.addEventListener) {
+                obj.addEventListener(eventType, func, false);
+            } else if (obj.attachEvent) {//IE
+                obj.attachEvent('on' + eventType, func);
+            }
+        }
+        
+
+        //창닫기
+        addEvent("pop_login_layer_close", "click", function () {
+            getId('page_url').value = page_url;
+            getId('pop_login_layer').style.display = 'none';
+            getId('pop_login_layer_dimmed').style.display = 'none';
+            /**
+             * 신입인턴 홈에서 버튼 클릭후 로그인레이어 창 띄우고 닫았을때 사용되는 부분입니다.
+             */
+            if(window.jobsHomeClickBeforeDom) window.jobsHomeClickBeforeDom.focus();
+        });
+
+        /**
+         * 로그인 모달 창 마지막 포커스 닫기 버튼에 tab 키로 이동시 모달안으로 포커스 유지하기 위해 ly_autologin 이동
+         */
+        addEvent("pop_login_layer_close", "keydown", function (e) {
+            var keycode = e.keyCode;
+            if(keycode === 9) {
+                if(!e.shiftKey) {
+                    e.preventDefault();
+                    document.querySelector('#ly_autologin').focus();
+                }
+            }
+        });
+
+        /**
+         * 로그인 모달 창 첫 포커스 element인 로그인 유지에 tab+shift일때 닫기 버튼으로 포커스이동
+         */
+        addEvent("ly_autologin", "keydown", function (e) {
+            var keycode = e.keyCode;
+            if(keycode === 9) {
+                if(e.shiftKey && e.target) {
+                    e.preventDefault();
+                    document.querySelector('#pop_login_layer_close').focus();
+                }
+            }
+        });
+        
+
+        //폼  체크
+        function loginCheckMainLayer(form) {
+            if (form.id.value === "") {
+                alert("아이디를 입력하세요.");
+                form.id.focus();
+                return false;
+            }
+            if (form.id.value.indexOf(" ") > 0) {
+                alert("아이디에 공백에 있습니다. 공백을 제거해주세요");
+                form.id.focus();
+                return false;
+            }
+            if (form.id.value.length < 4) {
+                alert("아이디는 4자이상이어야 합니다");
+                form.id.focus();
+                return false;
+            }
+            if (form.password.value === "") {
+                alert("비밀번호를 입력하세요");
+                form.password.focus();
+                return false;
+            }
+            if (form.password.value.length < 4 || form.password.value.length > 32) {
+                alert("비밀번호는 영문,숫자,특수문자 조합 6~32자 입니다.");
+                form.password.focus();
+                return false;
+            }
+
+            if (form['ly_ssl_login'].checked) {
+                SecureLogin.encrypt(form);
+            }
+
+            return true;
+        }
+
+        //페이지 로딩시 초기화 시켜 준다.
+        setTimeout(function () {
+            var idInPut = getId('ly_id');
+            var pwInput = getId('ly_password');
+            if (!getId('ly_id').value) {
+                idInPut.value = '';
+                idInPut.blur();
+            }
+            pwInput.value = '';
+            pwInput.blur();
+        }, 50);
+
+        /**
+         *
+         * @param name
+         * @param value
+         * @param expiredays
+         */
+        function setHoursCookie(name, value, expiredays) {
+            var todayDate = new Date();
+            todayDate.setHours(todayDate.getHours() + expiredays);
+            document.cookie = name + "=" + escape(value) + "; path=/; expires=" + todayDate.toGMTString() + ";";
+        }
+
+
+        (document.addEventListener('DOMContentLoaded', function (e) {
+
+            var socialLoginBtnList = document.querySelectorAll('#pop_login_layer .social_login li a');
+
+            [].forEach.call(socialLoginBtnList, function(socialLoginBtn){
+                socialLoginBtn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    var link = e.currentTarget.href,
+                        provider = e.currentTarget.dataset.provider,
+                        isCompany = '',
+                        label = isCompany ? 'com_login_' : 'per_login_';
+
+                    label += provider;
+                    loggingEventAndTagManager(['login','pc_login_layer', label,''],['ga_lead','login','pc_login_layer', label]);
+
+                    //소셜 버튼을 누를때 쿠키를 만들어 주고 소셜 회원 가입 완료 페이지에서 사용 한다.
+                    setHoursCookie('login_referer_url', encodeURIComponent(location.href.replace(/.*\/\/[^\/]*/, '')), 1);
+
+                    if((navigator.userAgent.toLowerCase().indexOf("msie") !== -1) && provider === 'apple'){
+                        if(confirm('IE10이하 버전의 인터넷 익스플로러에서는 Apple 로그인이 정상 작동하지 않을 수 있습니다.\n' +
+                            '인터넷 익스플로러를 최신 버전으로 업데이트 해주세요'))
+                        {
+                            window.open(link, '_blank', 'width=480,height=640');
+                        }
+                        return;
+                    }
+                    window.open(link, '_blank', 'width=480,height=640');
+                });
+            });
+
+            var isCompany = '';
+            var toolTipClass = document.getElementsByClassName('social_tooltip');
+
+            if (toolTipClass.length > 0 && isCompany) {
+                toolTipClass[0].style.display = "none";
+            }
+
+            var popLoginLayer = document.getElementById('pop_login_layer');
+            if (toolTipClass.length > 0 && !isCompany) {
+                var fadeTarget = toolTipClass[0],
+                    fadeEffect = null,
+                    fadeTimeOut = null;
+
+                var startToolTipInterval = function () {
+                    fadeEffect = setInterval(function () {
+                        if (!fadeTarget.style.opacity) {
+                            fadeTarget.style.opacity = 1;
+                        }
+                        if (fadeTarget.style.opacity > 0) {
+                            fadeTarget.style.opacity -= 0.1;
+                        } else {
+                            clearInterval(fadeEffect);
+                        }
+                    }, 20);
+                };
+
+                var hideSocialTooltip = function () {
+                    fadeTimeOut = setTimeout(function () {
+                        startToolTipInterval();
+                    }, 5000);
+                };
+            }
+
+            var respondToVisibility = function(element, callback) {
+                var options = {
+                    root: document
+                };
+
+                var observer = new IntersectionObserver(function (entries, observer){
+                    entries.forEach(function (entry){
+                        callback(entry.intersectionRatio > 0);
+                    });
+                }, options);
+
+                observer.observe(element);
+            };
+
+            respondToVisibility(popLoginLayer, function(visible){
+                if(visible) {
+                    if (toolTipClass.length > 0 && !isCompany) {
+                        fadeTarget.style.display = 'block';
+                        fadeTarget.style.opacity = 1;
+                        clearInterval(fadeEffect);
+                        clearTimeout(fadeTimeOut);
+                        hideSocialTooltip();
+                    }
+
+                    document.getElementsByTagName('html')[0].style.overflow = 'hidden';
+                    document.getElementsByTagName('html')[0].style.height = '100%';
+                    document.getElementsByTagName('body')[0].style.height = '100%';
+                } else {
+                    document.getElementsByTagName('html')[0].style.overflow = '';
+                    document.getElementsByTagName('html')[0].style.height = '';
+                    document.getElementsByTagName('body')[0].style.height = '';
+                }
+            });
+
+        }))
+    </script>
+	</div>
+	<div class="img_svg_layout">
+		<svg xmlns="http://www.w3.org/2000/svg">
+        <symbol id="svg_saramin_ci" viewBox="0 0 126 40">
+            <g transform="translate(29 7)">
+                <path fill="#4876EF"
+				d="M22.467 19.27l-.039.023c-.288.175-1.166.708-2.76.708-1.653 0-2.602-.682-2.602-1.873 0-1.089 1.012-1.82 2.518-1.82 1.072 0 1.875.165 2.823.432l.06.016v2.513zm-7.922-8.72c0 .495.205.912.577 1.173.46.322 1.13.373 1.89.143.684-.21 1.71-.46 2.713-.46 1.921 0 2.742.65 2.742 2.17v.823l-.103-.024c-1.032-.233-1.858-.399-3.087-.399-5.274 0-5.684 3.28-5.684 4.286 0 2.24 1.53 4.634 5.823 4.634 3.352 0 5.333-1.117 5.86-1.46.481-.307.636-.597.636-1.193v-6.56c0-3.555-2.054-5.357-6.104-5.357-1.692 0-3.302.343-4.082.663-.784.308-1.181.834-1.181 1.56zM63.698 9.889l-.051-.054c-1.01-1.03-2.28-1.51-4-1.51-1.85 0-3.723.568-5.01 1.52-.517.36-.69.677-.69 1.255v10.017c0 .964.815 1.779 1.78 1.779 1.015 0 1.78-.765 1.78-1.779v-8.742l.092-.056c.274-.17 1.001-.626 2.215-.626 1.549 0 2.335.843 2.335 2.504v6.92c0 .964.815 1.779 1.78 1.779.998 0 1.78-.782 1.78-1.779v-8.742l.092-.056c.274-.17 1.001-.626 2.215-.626 1.528 0 2.335.875 2.335 2.53v6.894c0 .964.802 1.779 1.751 1.779 1.015 0 1.81-.782 1.81-1.779v-6.974c0-3.914-1.865-5.817-5.702-5.817-1.616 0-3.156.525-4.453 1.517l-.059.046zM47.529 19.27l-.039.023c-.288.175-1.164.708-2.76.708-1.654 0-2.602-.682-2.602-1.873 0-1.089 1.012-1.82 2.518-1.82 1.072 0 1.875.165 2.823.432l.06.016v2.513zm-7.922-8.72c0 .495.205.911.577 1.173.46.322 1.13.373 1.89.143.684-.21 1.71-.46 2.713-.46 1.921 0 2.742.65 2.742 2.17v.823l-.103-.024c-1.032-.233-1.858-.399-3.087-.399-5.274 0-5.684 3.28-5.684 4.286 0 2.24 1.53 4.634 5.823 4.634 3.352 0 5.333-1.117 5.86-1.46.481-.306.635-.596.635-1.193v-6.56c0-3.555-2.053-5.357-6.102-5.357-1.694 0-3.304.343-4.083.663-.784.308-1.181.833-1.181 1.56zM36.129 8.539c-.548-.131-1.464-.213-2.391-.213-3.084 0-4.853 1.649-4.853 4.525v8.388c0 .914.774 1.657 1.725 1.657.016-.002.024-.004.033-.004l.03.002h.002c1.014 0 1.801-.768 1.801-1.75v-7.62c0-1.201.504-1.8 1.54-1.83.472-.017.869.06 1.25.133.296.056.575.109.856.109 1.148 0 1.683-.965 1.683-1.617 0-.87-.595-1.501-1.676-1.78M7.806 14.497l-2.203-.44c-1.233-.27-1.758-.665-1.758-1.325 0-.382.203-1.27 2.085-1.27.78 0 1.908.264 2.624.615.893.45 1.812.371 2.344-.202.296-.332.452-.799.416-1.246-.025-.301-.145-.733-.577-1.083-.899-.73-2.774-1.22-4.667-1.22-3.454 0-5.686 1.772-5.686 4.516 0 2.572 2.217 3.668 4.076 4.134.638.16.956.216 1.325.281.264.047.538.095.961.187 1.177.274 1.7.7 1.7 1.38 0 .493-.284 1.32-2.19 1.32-1.32 0-2.748-.363-3.637-.924-.359-.224-.726-.334-1.073-.334-.488 0-.935.217-1.256.643-.492.633-.34 1.663.323 2.205.578.474 2.274 1.578 5.524 1.578 3.443 0 5.757-1.893 5.757-4.71 0-2.142-1.338-3.485-4.088-4.105M78.584 6.66c-.968 0-1.699.76-1.699 1.768v9.37c0 .958.778 1.767 1.699 1.767.953 0 1.7-.776 1.7-1.767v-9.37c0-.99-.747-1.767-1.7-1.767"></path>
+                <path fill="#4876EF"
+				d="M78.584 0c-1.453 0-2.549 1.059-2.549 2.462 0 1.42 1.12 2.533 2.55 2.533 1.38 0 2.548-1.16 2.548-2.533 0-1.38-1.12-2.462-2.549-2.462"
+				mask="url(#1f8v900bkb)"></path>
+                <path fill="#4876EF"
+				d="M89.736 8.326c-3.553 0-5.485 1.221-5.843 1.466-.476.323-.636.64-.636 1.255v10.07c0 .964.82 1.779 1.79 1.779 1.02 0 1.79-.765 1.79-1.779v-8.742l.038-.023c.522-.317 1.58-.659 2.75-.659 1.35 0 2.795.686 2.795 2.612v6.812c0 .964.82 1.779 1.79 1.779 1.02 0 1.79-.765 1.79-1.779v-6.974c0-3.806-2.166-5.817-6.264-5.817"
+				mask="url(#09ysurdxqd)"></path>
+            </g>
+            <g>
+                <circle cx="4.5" cy="14.5" r="4.5" fill="#4876EF"></circle>
+                <circle cx="16.5" cy="14.5" r="4.5" fill="currentColor"></circle>
+                <circle cx="4.5" cy="26.5" r="4.5" fill="currentColor"></circle>
+                <circle cx="16.5" cy="26.5" r="4.5" fill="#00D3AB"></circle>
+            </g>
+        </symbol>
+        <symbol id="svg_gnb_profile_bracket" viewBox="0 0 10 6">
+            <path d="M1 1L5 5L9 1" stroke="currentColor"
+				stroke-width="1.2" stroke-linecap="round" fill="none"></path>
+        </symbol>
+        <symbol id="svg_gnb_profile_arrow" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M92 18L100 18 96 23z"
+				transform="translate(-1976 -481) translate(120 445) translate(1768 24)"></path>
+        </symbol>
+        <symbol id="svg_gnb_search" viewBox="0 0 24 24">
+            <g fill="none">
+                <circle cx="11" cy="11" r="8.75" stroke="#4876EF"
+				stroke-width="2.5"></circle>
+                <path d="M22 21L18 17" stroke="#4876EF"
+				stroke-width="2.5" stroke-linecap="round"></path>
+            </g>
+        </symbol>
+        <symbol id="svg_gnb_social1" viewBox="0 0 16 16">
+            <path fill="#58B04B"
+				d="M2.034 3L2 12.968 6.154 12.984 6.171 8.953 5.897 7.691 9.829 12.968 14 13 13.983 3.032 9.812 3.016 9.897 7.128 10.171 8.596 6.171 3.016z"></path>
+        </symbol>
+        <symbol id="svg_gnb_social2" viewBox="0 0 16 16">
+            <path fill="#3C5A9A"
+				d="M6.087 14V7.614h2.36l.352-2.489H6.087V3.536c0-.72.22-1.212 1.358-1.212h1.45V.098C8.644.068 7.783 0 6.782 0 4.69 0 3.26 1.16 3.26 3.29v1.835H.895v2.489h2.364V14h2.828z"
+				transform="translate(3.105 1)"></path>
+        </symbol>
+        <symbol id="svg_gnb_social3" viewBox="0 0 16 16">
+            <path fill="#4285F4"
+				d="M11.758 6.133c0-.494-.04-.854-.126-1.227H5.999v2.226h3.306C9.24 7.686 8.88 8.52 8.08 9.08l-.011.074 1.78 1.38.124.012c1.133-1.046 1.786-2.586 1.786-4.412"
+				transform="translate(2 2)"></path>
+            <path fill="#34A853"
+				d="M6 11.998c1.619 0 2.979-.533 3.972-1.453L8.079 9.08c-.507.353-1.187.6-2.08.6-1.586 0-2.933-1.047-3.413-2.493l-.07.006L.664 8.625l-.024.067c.986 1.96 3.013 3.306 5.36 3.306"
+				transform="translate(2 2)"></path>
+            <path fill="#FBBC05"
+				d="M2.586 7.186c-.126-.374-.2-.774-.2-1.187 0-.413.074-.813.194-1.186l-.004-.08L.701 3.277l-.061.03C.233 4.118 0 5.032 0 5.998c0 .967.233 1.88.64 2.693l1.946-1.506"
+				transform="translate(2 2)"></path>
+            <path fill="#EB4335"
+				d="M6 2.32c1.126 0 1.886.486 2.319.893l1.693-1.653C8.972.593 7.619 0 5.999 0 3.653 0 1.626 1.346.64 3.306l1.94 1.507C3.067 3.366 4.414 2.32 6 2.32"
+				transform="translate(2 2)"></path>
+        </symbol>
+        <symbol id="svg_gnb_social4" viewBox="0 0 16 16">
+            <path fill="#000"
+				d="M7 .02C3.15.02.03 2.494.03 5.545c0 1.972 1.305 3.703 3.267 4.68-.107.37-.686 2.382-.709 2.54 0 0-.014.119.063.164.076.045.166.01.166.01.22-.03 2.543-1.671 2.945-1.956.402.057.816.087 1.238.087 3.85 0 6.97-2.474 6.97-5.525S10.85.02 7 .02z"
+				transform="translate(1 2)"></path>
+            <path fill="#FFF"
+				d="M3.147 7.473c-.222 0-.403-.173-.403-.386V4.686h-.627c-.218 0-.395-.178-.395-.396 0-.218.177-.396.395-.396h2.059c.218 0 .395.178.395.396 0 .218-.177.396-.395.396h-.627v2.401c0 .213-.18.386-.402.386zm3.525-.005c-.167 0-.296-.068-.334-.178l-.2-.524H4.914l-.2.524c-.038.11-.166.178-.334.178-.088 0-.175-.019-.256-.056-.11-.051-.217-.192-.095-.574l.962-2.545c.068-.193.273-.393.535-.399.263.006.469.206.537.4l.961 2.544c.122.382.016.523-.095.574-.08.037-.167.056-.256.056zM5.927 6.05l-.401-1.147-.402 1.147h.803zM7.67 7.414c-.212 0-.385-.166-.385-.37V4.298c0-.223.184-.404.41-.404.227 0 .41.181.41.404v2.375h.855c.213 0 .386.167.386.37 0 .205-.173.371-.386.371H7.67zm2.234.054c-.222 0-.402-.181-.402-.404V4.298c0-.223.18-.404.402-.404.222 0 .402.181.402.404v.87l1.122-1.129c.058-.058.137-.09.223-.09.1 0 .201.044.277.12.07.07.112.162.118.256.006.095-.026.183-.089.246l-.916.921.99 1.319c.064.085.092.193.077.299-.015.106-.07.202-.156.267-.07.053-.155.081-.242.081-.126 0-.245-.059-.321-.16l-.943-1.257-.14.14v.883c0 .223-.18.404-.402.404z"
+				transform="translate(1 2)"></path>
+        </symbol>
+        <symbol id="svg_gnb_social5" viewBox="0 0 16 16">
+            <path
+				d="M9.187 7.438C9.206 9.556 10.98 10.26 11 10.27c-.015.05-.284 1.005-.935 1.992-.563.852-1.147 1.702-2.068 1.72-.904.017-1.195-.556-2.23-.556-1.033 0-1.357.538-2.213.573-.888.035-1.565-.922-2.133-1.772C.261 10.49-.626 7.316.565 5.173 1.156 4.11 2.213 3.436 3.36 3.42c.873-.018 1.696.608 2.23.608.533 0 1.534-.752 2.586-.642.44.02 1.677.185 2.47 1.389-.063.041-1.474.892-1.46 2.664m-1.7-5.203C7.96 1.644 8.277.82 8.19 0 7.51.028 6.687.47 6.2 1.061c-.437.524-.82 1.362-.716 2.166.758.06 1.532-.4 2.004-.992"
+				transform="translate(3 1)"></path>
+        </symbol>
+        <symbol id="svg_gnb_member_photo" viewBox="0 0 32 32">
+            <circle cx="16" cy="16" r="16" fill="#ccd0d6"></circle>
+            <path stroke="#FFF" fill="#ccd0d6" stroke-linecap="round"
+				stroke-linejoin="round" stroke-width="1.5"
+				d="M25 24c0-2.21-2.015-4-4.5-4h-9C9.015 20 7 21.79 7 24"></path>
+            <path stroke="#FFF" fill="#ccd0d6" stroke-width="1.5"
+				d="M16 8h3.5c.276 0 .5.224.5.5V12c0 2.21-1.79 4-4 4s-4-1.79-4-4 1.79-4 4-4z"></path>
+        </symbol>
+        <symbol id="svg_gnb_plus" viewBox="0 0 10 10">
+            <rect y="4" width="10" height="2" fill="currentColor"></rect>
+            <rect x="4" y="10" width="10" height="2"
+				transform="rotate(-90 4 10)" fill="currentColor"></rect>
+        </symbol>
+        <symbol id="svg_gnb_write" viewBox="0 0 24 24">
+            <path fill="none" stroke="currentColor"
+				d="M0 11.427V14.3c0 .11.09.2.2.2h2.655c.254 0 .498-.097.683-.27L14.246 4.206c.403-.377.424-1.01.046-1.413l-.023-.024L12.192.692C11.807.307 11.186.3 10.793.676L.31 10.705c-.197.188-.309.45-.309.722zM12.25 5.5L8.75 2"
+				transform="translate(-1562 -2145) translate(1542 2089) translate(1 48) translate(19 8) translate(4.5 5)"></path>
+        </symbol>
+        <symbol id="svg_gnb_total_off" viewBox="0 0 20 40">
+            <g fill="currentColor">
+                <rect width="20" height="2" y="13" rx="1"></rect>
+                <path
+				d="M1 19h12c.552 0 1 .448 1 1s-.448 1-1 1H1c-.552 0-1-.448-1-1s.448-1 1-1z"></path>
+                <rect width="20" height="2" y="25" rx="1"></rect>
+            </g>
+        </symbol>
+        <symbol id="svg_gnb_total_on" viewBox="0 0 20 40">
+            <path fill="currentColor"
+				d="M3.343 11.929L10 18.585l6.657-6.656c.39-.39 1.024-.39 1.414 0 .39.39.39 1.024 0 1.414L11.415 20l6.656 6.657c.39.39.39 1.024 0 1.414-.39.39-1.024.39-1.414 0L10 21.415l-6.657 6.656c-.39.39-1.024.39-1.414 0-.39-.39-.39-1.024 0-1.414L8.585 20l-6.656-6.657c-.39-.39-.39-1.024 0-1.414.39-.39 1.024-.39 1.414 0z"></path>
+        </symbol>
+        <symbol id="svg_gnb_link1" viewBox="0 0 20 20">
+            <path d="M9.99805 10.1289L19.0002 7.5396L9.99805 1V10.1289Z"
+				fill="#B0C8FA"></path>
+            <path
+				d="M9.99805 10.1172L19.0002 7.52783L15.561 18.1086L9.99805 10.1172Z"
+				fill="#6D9CFA"></path>
+            <path
+				d="M10.0004 10.1333L4.4375 18.1247H15.5633L10.0004 10.1333Z"
+				fill="#387BFF"></path>
+            <path
+				d="M10.0002 10.1587L1 7.56939L10.0002 1.02979V10.1587Z"
+				fill="#6D9CFA"></path>
+            <path
+				d="M10.0002 10.1689L1 7.57959L4.43732 18.1603L10.0002 10.1689Z"
+				fill="#387BFF"></path>
+        </symbol>
+        <symbol id="svg_gnb_link2" viewBox="0 0 20 20">
+            <g fill="none">
+                <path
+				d="M9.50055 17C5.91035 17 3 14.0906 3 10.4997C3 6.90944 5.9103 4 9.50055 4C13.0901 4 16 6.90929 16 10.4997C16 14.0908 13.0901 17 9.50055 17Z"
+				fill="white" stroke="#BC8EFF" stroke-width="2"
+				stroke-linecap="round" stroke-linejoin="round"></path>
+                <path
+				d="M9.50026 13C8.11931 13 7 11.881 7 10.4999C7 9.11905 8.11926 8 9.50026 8C10.8808 8 12 9.11891 12 10.4999C12 11.8811 10.8808 13 9.50026 13Z"
+				fill="white" stroke="#BC8EFF" stroke-width="2"
+				stroke-linecap="round" stroke-linejoin="round"></path>
+                <path
+				d="M13.0538 1.94908C13.3871 1.61585 13.9274 1.61585 14.2606 1.94908L16.0673 3.75579L13.6538 6.16931L13.0538 5.56937C12.0541 4.56965 12.0541 2.9488 13.0538 1.94908Z"
+				fill="#955CEA"></path>
+                <path
+				d="M17.882 6.7694C18.2152 6.43616 18.2152 5.89587 17.882 5.56263L16.0753 3.75593L13.6617 6.16945L14.2617 6.76939C15.2614 7.76911 16.8823 7.76911 17.882 6.7694Z"
+				fill="#955CEA"></path>
+                <path d="M11.2471 8.57568L9.2358 10.587"
+				stroke="#8491A7" stroke-linecap="round"></path>
+                <path
+				d="M16.0328 2.89536C16.2889 2.69608 16.6533 2.71874 16.8828 2.94821C17.1122 3.17767 17.1349 3.54211 16.9356 3.79823L12.695 9.24848C12.141 9.96049 11.0846 10.0222 10.4467 9.38426C9.80881 8.74635 9.87049 7.68997 10.5825 7.13598L16.0328 2.89536Z"
+				fill="#373F57"></path>
+            </g>
+        </symbol>
+        <symbol id="svg_gnb_link3" viewBox="0 0 20 20">
+            <path
+				d="M10.3371 1.5737L0.686635 15.9753C0.436625 16.3484 0.767086 16.8364 1.20632 16.7427L19.2382 12.8959C19.5944 12.8199 19.7525 12.4006 19.535 12.1084L16.4286 7.93333L13.5714 9.53333L13.9249 5.10256L11.1466 1.54432C10.9371 1.27604 10.5266 1.29094 10.3371 1.5737Z"
+				fill="#94B5FC"></path>
+            <path
+				d="M13.926 5.125L0.944517 16.3213C0.898468 16.361 0.902589 16.4336 0.952838 16.4679C0.981751 16.4876 1.01931 16.4893 1.04989 16.4723L14.5019 9L13.926 5.125Z"
+				fill="#4876EF"></path>
+        </symbol>
+        <symbol id="svg_gnb_link4" viewBox="0 0 20 20">
+            <g fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+				d="M2 9.99971C2 14.4192 5.58207 18 10.0006 18C14.4185 18 18 14.4192 18 9.99971C18 5.58077 14.4185 2 10.0006 2C5.58207 2 2 5.58077 2 9.99971Z"
+				fill="#00D3AB"></path>
+                <path
+				d="M6.99902 7L8.49902 13L10.0005 7L11.499 13L12.999 7"
+				stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M14.5 9.5H5.5" stroke="white"
+				stroke-linecap="round" stroke-linejoin="round"></path>
+            </g>
+        </symbol>
+        <symbol id="svg_gnb_link5" viewBox="0 0 20 20">
+            <path d="M4.537 6h6.708v10.854H3L4.537 6Z" fill="#E5CDFF"></path>
+            <path d="M15.463 6H8.755v10.854H17L15.463 6Z" fill="#E5CDFF"></path>
+            <path
+				d="M17 16.854C17 18 15 20 10 20s-7-2-7-3.146C3.768 15.36 5.945 14 10 14s5.976 1.438 7 2.854Z"
+				fill="#E5CDFF"></path>
+            <rect x="18" y="5" width="1" height="9" rx=".5"
+				fill="#BC8EFF"></rect>
+            <path
+				d="M9.42.143a1.242 1.242 0 0 1 1.16 0l9.066 4.758c.472.248.472.95 0 1.198l-9.066 4.758a1.242 1.242 0 0 1-1.16 0L.354 6.099c-.472-.248-.472-.95 0-1.198L9.42.143Z"
+				fill="#955CEA"></path>
+            <ellipse cx="10" cy="5" rx="2" ry="1" fill="#fff"></ellipse>
+        </symbol>
+        <symbol id="svg_gnb_link6" viewBox="0 0 20 20">
+            <path d="m9.581 5.973 9.091 2.5V13.7H7.99l1.591-7.727Z"
+				fill="#BCD1FC"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+				d="M2.727 13.386V8.035l4.546-.99.675.388 4.39 1.177 3.074.823a.909.909 0 1 1-.47 1.757l-2.854-.765a.227.227 0 0 0-.118.439l2.854.765a.909.909 0 1 1-.47 1.756l-2.855-.765a.227.227 0 0 0-.117.44l1.975.529a.91.91 0 0 1-.47 1.756l-1.976-.53a.227.227 0 0 0-.118.44l1.098.294a.909.909 0 1 1-.47 1.756l-1.318-.353-1.156-.31a15 15 0 0 1-4.756-2.225l-1.464-1.031Z"
+				fill="#4876EF"></path>
+            <path
+				d="M.61 7.655a1 1 0 0 1 1-1h1.523a1 1 0 0 1 .994 1.107l-.651 6.091a1 1 0 0 1-.995.894H1.61a1 1 0 0 1-1-1V7.655Z"
+				fill="#4876EF"></path>
+            <path
+				d="M8.537 6.083c.378-.216.826-.27 1.245-.15l8.891 2.54-9.181-.355-2.366 1.375a1.132 1.132 0 1 1-1.13-1.961l2.54-1.449Z"
+				fill="#BCD1FC"></path>
+            <path
+				d="M19.58 7.655a1 1 0 0 0-1-1h-1.524a1 1 0 0 0-.994 1.107l.652 6.091a1 1 0 0 0 .994.894h.872a1 1 0 0 0 1-1V7.655Z"
+				fill="#BCD1FC"></path>
+        </symbol>
+        <symbol id="svg_gnb_cs" viewBox="0 0 20 20">
+            <path
+				d="M16.8436 6.51589C16.6152 3.34476 13.9694 0.835938 10.7434 0.835938H10.0122C6.79074 0.835938 4.14973 3.34002 3.91199 6.50218H3.87083C3.13967 6.50218 2.5 7.23335 2.5 8.14718V10.4776C2.5 11.3914 3.09408 12.1226 3.87083 12.1226H5.28283V6.54801C5.50223 4.15821 7.57667 2.20716 10.0122 2.20716H10.7434C13.3206 2.20716 15.4955 4.38229 15.4955 6.95926V12.1684C15.4955 14.4897 13.7865 16.4819 11.502 16.8567C11.269 16.5368 10.8943 16.3266 10.4693 16.3266C9.76112 16.3266 9.18983 16.8977 9.18983 17.6061C9.18983 18.3143 9.76096 18.8856 10.4693 18.8856C10.9445 18.8856 11.3558 18.6252 11.5752 18.2367C14.591 17.8163 16.8666 15.2071 16.8666 12.1686V12.1047C17.6937 12.0179 18.3333 11.3325 18.3333 10.4779V8.14747C18.3333 7.28838 17.6799 6.5938 16.8436 6.51625L16.8436 6.51589Z"
+				fill="currentColor"></path>
+        </symbol>
+        <symbol id="svg_gnb_notice" viewBox="0 0 20 20">
+            <path
+				d="M7 6.60606C7 6.19477 7.25183 5.82542 7.6347 5.67517L15.6347 2.53578C16.2907 2.27836 17 2.762 17 3.46667V14.5333C17 15.238 16.2907 15.7216 15.6347 15.4642L7.6347 12.3248C7.25183 12.1746 7 11.8052 7 11.3939V6.60606Z"
+				fill="currentColor"></path>
+            <path
+				d="M2 9C2 7.34315 3.34315 6 5 6H5.47826C5.76641 6 6 6.23359 6 6.52174V11.4783C6 11.7664 5.76641 12 5.47826 12H5C3.34315 12 2 10.6569 2 9Z"
+				fill="currentColor"></path>
+            <rect x="7" y="8" width="2" height="10" rx="1"
+				fill="currentColor"></rect>
+        </symbol>
+        <symbol id="svg_gnb_event" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+				d="M2.55331 17.2127L3.80093 13.8361L6.9941 17.0295L3.61817 18.2767C3.30726 18.3914 2.97865 18.3195 2.74501 18.0855C2.51103 17.8515 2.43894 17.5231 2.55342 17.2127L2.55331 17.2127ZM9.59867 2.57853C9.38923 2.36943 9.38923 2.03032 9.59867 1.82089C9.80778 1.61179 10.1469 1.61179 10.3563 1.82089C11.158 2.62309 11.5592 3.67432 11.5592 4.72516C11.5592 5.77601 11.158 6.82758 10.3563 7.62944C10.1469 7.83888 9.80776 7.83888 9.59867 7.62944C9.38923 7.42033 9.38923 7.08122 9.59867 6.8718C10.1913 6.27902 10.4873 5.50152 10.4873 4.72499C10.4873 3.94881 10.1911 3.17114 9.59867 2.57819V2.57853ZM8.95899 4.04062C9.22934 4.31097 9.22934 4.74956 8.95899 5.02008C8.68864 5.29026 8.25022 5.29026 7.97988 5.02008C7.70952 4.74973 7.70952 4.31114 7.98021 4.04096C8.25039 3.76994 8.68863 3.76994 8.95898 4.04063L8.95899 4.04062ZM16.7904 11.8717C17.0608 12.1423 17.0608 12.5804 16.7904 12.8511C16.5198 13.1213 16.0815 13.1213 15.811 12.8511C15.5403 12.5804 15.5403 12.1423 15.811 11.872C16.0813 11.6013 16.5198 11.6013 16.7904 11.8717V11.8717ZM13.9526 3.43866C14.2229 3.70885 14.2229 4.1476 13.9526 4.41778C13.6819 4.68846 13.2436 4.68846 12.9734 4.41778C12.7031 4.14759 12.7031 3.70884 12.9734 3.43866C13.2436 3.16831 13.6819 3.16831 13.9526 3.43866ZM17.3916 6.87782C17.6622 7.14851 17.6619 7.58659 17.3916 7.85694C17.1214 8.12729 16.6828 8.12729 16.4128 7.85694C16.1421 7.58658 16.1421 7.14851 16.4128 6.87782C16.683 6.60747 17.1215 6.60747 17.3916 6.87782ZM19.0098 10.4742C19.2189 10.6836 19.2189 11.0228 19.0098 11.2318C18.8002 11.4413 18.4613 11.4413 18.2522 11.2318C17.6594 10.6392 16.8817 10.3432 16.1054 10.3432C15.3289 10.3432 14.5515 10.6394 13.9586 11.2318C13.7491 11.4413 13.41 11.4413 13.2009 11.2318C12.9915 11.0227 12.9915 10.6836 13.2009 10.4742C14.0028 9.67247 15.0544 9.27131 16.1052 9.27131C17.1561 9.27131 18.2073 9.67249 19.0095 10.4742H19.0098ZM12.1576 9.43066C11.9481 9.6401 11.609 9.6401 11.3999 9.43066C11.1905 9.22156 11.1905 8.88245 11.3999 8.67302L16.4074 3.66552C16.6165 3.45608 16.956 3.45608 17.1651 3.66552C17.3742 3.87462 17.3742 4.21408 17.1651 4.42316L12.1576 9.43066ZM4.20992 12.7295L5.15917 10.1606L10.6704 15.6718L8.10151 16.6207L4.20992 12.7295ZM5.56802 9.05402L6.26141 7.17688C6.36204 6.90386 6.57732 6.71676 6.86136 6.65438C7.14539 6.59214 7.4191 6.67224 7.62485 6.87784L13.9529 13.2059C14.1587 13.4117 14.2389 13.6854 14.1764 13.9694C14.114 14.2536 13.9269 14.4687 13.6539 14.569L11.7767 15.2627L5.56787 9.05387L5.56802 9.05402Z"
+				fill="currentColor"></path>
+        </symbol>
+        <symbol id="svg_default_close" viewBox="0 0 40 40">
+            <g fill="none">
+                <path d="M26 14L14 26" stroke="currentColor"
+				stroke-width="2" stroke-linecap="round"></path>
+                <path d="M14 14L26 26" stroke="currentColor"
+				stroke-width="2" stroke-linecap="round"></path>
+            </g>
+        </symbol>
+        <symbol id="svg_search_input" viewBox="0 0 20 21">
+            <circle fill="none" cx="9" cy="9" r="7.5"
+				stroke="currentColor"></circle>
+            <path fill="currentColor"
+				d="M15.593 13.472H16.593V19.472H15.593z"
+				transform="rotate(-45 16.093 16.472)"></path>
+        </symbol>
+        <symbol id="icon_product" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+				d="M16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16C12.4183 16 16 12.4183 16 8ZM1.2 8C1.2 4.24446 4.24446 1.2 8 1.2C11.7555 1.2 14.8 4.24446 14.8 8C14.8 11.7555 11.7555 14.8 8 14.8C4.24446 14.8 1.2 11.7555 1.2 8ZM9 5C9 5.552 8.552 6 8 6C7.448 6 7 5.552 7 5C7 4.4475 7.448 4 8 4C8.552 4 9 4.4475 9 5ZM8.79462 7.9067C8.74841 7.50883 8.41027 7.2 8 7.2C7.55817 7.2 7.2 7.55817 7.2 8V11.6L7.20538 11.6933C7.25159 12.0912 7.58973 12.4 8 12.4C8.44183 12.4 8.8 12.0418 8.8 11.6V8L8.79462 7.9067Z"
+				fill="#6B768B"></path>
+        </symbol>
+        <symbol id="svg_gnb_cosmetic1" viewBox="0 0 65 15">
+            <g fill="currentColor" fill-rule="evenodd"
+				clip-rule="evenodd">
+                <path
+				d="M1.09961 13.5867V1.42188H4.23704L7.90344 10.3821L11.5853 1.42188H14.7228V13.5867H11.696V7.51184L11.5035 7.47394L8.99998 13.5867H6.82241L4.31892 7.47394L4.12639 7.51184V13.5867H1.09961Z"></path>
+                <path
+				d="M15.9224 13.6866L15.9219 13.6882H15.9228V13.6867L15.9224 13.6866ZM19.0781 13.5867H16.0623L20.1828 1.42188H24.1044L28.226 13.5867H25.2102L24.0233 10.1052L19.8791 11.2461L19.0781 13.5867ZM23.2502 7.85967L22.1447 4.5784L20.7936 8.54378L23.2502 7.85967Z"></path>
+                <path
+				d="M27.5977 3.88624V1.41797H38.4748V3.88624H34.5491V13.5828H31.5223V3.88624H27.5977Z"></path>
+                <path
+				d="M43.176 1.56395C43.9868 1.25823 44.8594 1.08984 45.8084 1.08984C47.067 1.08984 48.1666 1.35044 49.0794 1.8528C49.9731 2.35885 50.7815 3.09887 51.5059 4.07607L49.5438 5.72395C49.1602 5.07812 48.6899 4.55777 48.1312 4.16606L48.1302 4.16537C47.5205 3.74885 46.7705 3.54299 45.8862 3.54299C45.3294 3.54299 44.8201 3.65371 44.3732 3.84604L44.3718 3.84666C43.91 4.05378 43.5268 4.32512 43.2067 4.67748C42.872 5.04332 42.6179 5.45827 42.4427 5.93574C42.2518 6.42989 42.1727 6.95427 42.1727 7.49092C42.1727 8.02662 42.2516 8.55084 42.4424 9.03015C42.6025 9.50805 42.8568 9.92223 43.1916 10.273C43.5112 10.64 43.9108 10.9282 44.3893 11.1196C44.8391 11.3283 45.3502 11.4227 45.9186 11.4227C46.3595 11.4227 46.772 11.3755 47.1558 11.2633C47.5085 11.1672 47.8439 11.0069 48.1608 10.8004L48.1617 10.7998C48.4484 10.6087 48.7346 10.3543 48.988 10.069L48.9901 10.0664C49.2034 9.80943 49.4046 9.52788 49.6033 9.21006L51.525 10.917C50.8318 11.8628 50.0532 12.5738 49.1585 13.096C48.2294 13.6134 47.1148 13.8898 45.8106 13.8898C44.8615 13.8898 43.9889 13.7215 43.1781 13.4157C42.3523 13.0939 41.6497 12.6513 41.07 12.1024L41.0691 12.1016C40.4603 11.5384 40.0026 10.8677 39.6663 10.0727L39.6654 10.0706C39.3155 9.29447 39.147 8.43916 39.147 7.48984V7.38984H39.1455C39.1571 6.49484 39.3261 5.67221 39.6638 4.90766C40.0002 4.1286 40.4582 3.45725 41.0679 2.87723C41.6476 2.32833 42.3492 1.88577 43.176 1.56395Z"></path>
+                <path
+				d="M60.7084 13.6711V13.6726H60.7088V13.6711H60.7084ZM63.8356 13.5711H60.8088V7.75291L55.9701 9.08034V13.5711H52.9434V1.40625H55.9701V6.63499L60.8088 5.29178V1.40625H63.8356V13.5711Z"></path>
+            </g>
+        </symbol>
+    </svg>
+	</div>
+	<script>
+    jQuery(document).ready(function ($) {
+        $(document).on('mousedown', '.ga_data_layer', function () {
+            var gaData = $(this).data('ga_data_layer') || '';
+            var data = gaData.toString().split("|");
+            var event = data[0] || '',
+                category = data[1] || '',
+                eventFlow = data[2] || '',
+                eventLabel = data[3] || ''
+            ;
+
+            if (!event || !category) {
+                return true;
+            }
+
+            try {
+                dataLayer.push({
+                    'event': event,
+                    'category': category,
+                    'event-flow': eventFlow,
+                    'event-label': eventLabel
+                });
+            } catch (e) {
+            }
+        });
+    });
+</script>
+
+	<div style="display: none; visibility: hidden;">
+		<script type="text/javascript"
+			src="//dynamic.criteo.com/js/ld/ld.js?a=96026" async="true"></script>
+	</div>
+	<script type="text/javascript" id="">window.dataLayer=window.dataLayer||[];dataLayer.push({userId:"undefined"});</script>
+	<div style="display: none; visibility: hidden;">
+
+		<script type="text/javascript">window.criteo_q=window.criteo_q||[];var deviceType=/iPad/.test(navigator.userAgent)?"t":/Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Silk/.test(navigator.userAgent)?"m":"d";window.criteo_q.push({event:"setAccount",account:96026},{event:"setEmail",email:""},{event:"setZipcode",zipcode:""},{event:"setSiteType",type:deviceType},{event:"viewHome"});</script>
+
+	</div>
+	<div id="criteo-tags-div" style="display: none;"></div>
+</body>
+</html>
+
+<script>
+
+$("#btn_submit").on("click", function(e) {
+	console.log("가입");
+	e.preventDefault();
+	// 비어있는지 체크
+	// 유효성체크
+	
+	$("#frm").submit();
 })
 
-//step 2 페이지 불러오기
-function goStep2(){
-
-	if(!resvTimeCk()){
-		pc.layerPopup.openPop("#popNoReady");
-		return false;
-	}
-
-	if($("#hotlId").val() == ""){
-		$("#selectHD").text('호텔');
-		pc.layerPopup.openPop("#popSelectInfo");
-		return false;
-	}
-	if($("#shopId").val() == ""){
-		$("#selectHD").text('다이닝');
-		pc.layerPopup.openPop("#popSelectInfo");
-		return false;
-	}
-	//부띠끄 예외처리
-	if(shopinfo.contIdRest != "PSBQ"){
-		$("#submitForm").attr("action","/fbresv/web/memDiningStep1.do");
-	}else{
-		$("#submitForm").attr("action","/fbresv/web/memDiningStep1Pb.do");
-	}
-	var frm = document.submitForm;
-	NetFunnel_Action({action_id:'SHILLANET2'},frm);
-}
-
-
-//호텔 선택시 레스토랑 불러오기
-function getDiningList(my){
-	var hotlId = $(my).attr("hotlId");
-	$("#hotlId").val(hotlId);
-	$("#shopId").val("")
-	//다이닝 선택 초기화
-	$.uniform.update($("#diningSel").val(""));
-	contentview();
-	$("#diningSelText").text('다이닝 선택');
-	//신라스테이 일떄 팝업 On
-	if(hotlId == "SS"){
-		$('#popStayLayerInfo, .mdScreen').show();
-        pc.layerPopup.lockScroll();
-		$(".diningContainer").hide();
-		$("#diningSel").val("");
-		$("#hotlId").val("");
-		return false;
-	}
-
-	$.ajax({
-		url: '/fbresv/mbl/searchDiningList.do',
-		type: "post",
-		dataType:"json",
-		data : {
-			hotlId : hotlId
-		},
-		async : false,
-		error: function(request,status,error){
-
-		},
-		success: function( data ){
-			$("#diningSel").html("");
-
-			var restHead = '';
-			var bakeHead = '';
-			var restHtml = "";
-			var bakeHtml = "";
-			var rest = false;
-			var bake = false;
-			$.each(data.model.shopList, function(index, item){
-				if(item.category == "N" || item.category == ""){
-					//레스토랑
-					rest = true;
-					restHead = '<li class="tit" id="rest">레스토랑</li>';
-					restHtml += '<li class="option" onclick="getDiningDetail(\''+item.shopId+'\')">'+item.shopNm+'</li>';
-				}else if(item.category == "P"){
-					//베이커리
-					bake = true;
-					bakeHead = '<li class="tit" id="bake">베이커리</li>';
-					bakeHtml += '<li class="option" onclick="getDiningDetail(\''+item.shopId+'\')">'+item.shopNm+'</li>';
-
-				}else{
-
-				}
-			});
-			$("#diningSel").html(restHead+bakeHead);
-			if(rest){
-				$("#rest").after(restHtml);
-			}
-			if(bake){
-				$("#bake").after(bakeHtml);
-			}
-			fncChangeForLabel('diningSel','seoulDiningLd');
-			$(".diningContainer").show();
-			$(".diningSch").hide();
-	        $("#tab1").fadeIn();
-		}
-	});
-
-}
-
-//레스토랑 정보 불로오기
-function getDiningDetail(shopId){
-	$("#shopId").val(shopId);
-	contentview();
-
-	if(shopId != ""){
-		$.ajax({
-				url: '/fbresv/mbl/searchDiningDetail.do',
-				type: "post",
-				dataType:"json",
-				data : {
-					shopId : shopId,
-				},
-				async : false,
-				error: function(request,status,error){
-
-				},
-				success: function( data ){
-					shopinfo = data.model.shopInfo;
-					$("#diningSelText").text(data.model.shopCont.shopNm);
-					$("#intro").html(data.model.shopCont.pcIntro);
-					$("#info").html(data.model.shopCont.pcInfo);
-					if(data.model.shopInfo.openHourYn == "Y"){
-						$("#info").append('<p class="dinigmore"><a href="#popPriceInfo" class="txtLink">'+data.model.shopCont.pcOpenHour+'</a></p>');
-						pricePopSet(shopId);
-					}
-					$("#info").append(data.model.shopCont.pcTel);
-					$("#linkPage").attr("link",data.model.shopCont.pcRestUrl);
-					$('.diningDetail').show();
-					var src ='https://www.shilla.net/'+"images/contents"+data.model.shopCont.rescId;
-					$("#imgSrc").attr("src",src);
-
-				}
-		});
-	}
-
-}
-
-//다이닝 정보 온/오프
-function contentview(){
-	if($("#shopId").val() == ""){
-		$("#beforeSearchWrap").show();
-		$("#rsvResultWrap").hide();
-	}else{
-		$("#beforeSearchWrap").hide();
-		$("#rsvResultWrap").show();
-	}
-}
-
-//신라스테이 예약하기버튼
-function stayLinkMove(){
-	if($("#stayLink").val() == ""){
-		return false;
-	}
-	window.open($("#stayLink").val());
-}
-
-//신라스테이 팝업창 닫기
-function stayInitClose(){
-	$(".list2 a").removeClass("on");
-	$("#keywordAreaBtn").attr("src","../../images/ko/mem/new_2020/step0_confirm_deful.jpg");
-	$("#stayLink").val("");
-	$(".hotlIdClass").removeClass("on");
-	$(".diningContainer").hide();
-	pc.layerPopup.closePop('#popStayLayerInfo');
-}
-
-//신라스테이예약
-$(document).on("click", ".list2 a", function(){
-	$(".list2 a").removeClass("on");
-	$(this).addClass("on");
-	$("#keywordAreaBtn").attr("src","../../images/ko/mem/new_2020/step0_confirm.jpg");
-	$("#stayLink").val($(this).attr("stayUrl"));
-});
-
-
-//예약 가능 확인 여부
-function resvTimeCk(){
-
-	var re = true;
-
-	$.ajax({
-		url: '/fbresv/mbl/resvTimeCk.do',
-		type: "post",
-		dataType:"json",
-		async : false,
-		error: function(request,status,error){
-
-		},
-		success: function( data ){
-
-			if(data.model.result == 'N'){
-				re = false;
-			}
-		}
-	});
-
-	return re;
-}
-
-//레스토랑 상세보기
-function detailPop(my){
-
-	//부띠끄 예외처리
-	if(shopinfo.contIdRest != "PSBQ"){
-		var imgHtml = "";
-		imgHtml += "<div class=\"slidePhotoBox\">";
-		imgHtml += "	<div id=\"gallery\" class=\"ad-gallery\">";
-		imgHtml += "		<div class=\"ad-image-wrapper\"></div>";
-		imgHtml += "		<div class=\"ad-controls\"></div>";
-		imgHtml += "		<div class=\"ad-nav\">";
-		imgHtml += "		<div class=\"ad-thumbs\">";
-		imgHtml += "			<ul class=\"ad-thumb-list\" id=\"ad-thumb-list\">";
-		imgHtml += "			</ul>";
-		imgHtml += "		</div>";
-		imgHtml += "		</div>";
-		imgHtml += "	</div>";
-		imgHtml += "</div>";
-		imgHtml += '<div class="conWrap mgt40">';
-		imgHtml += '	<div class="leftArea" id="leftArea">';
-		imgHtml += '	</div>';
-		imgHtml += '	<div class="rightArea" id="rightArea">';
-		imgHtml += '		<div class="dnBox" id="dnBox">';
-		imgHtml += '		</div>';
-		imgHtml += '	</div>';
-		imgHtml += '</div>';
-		$("#accView").html(imgHtml);
-
-
-		var link = $(my).attr("link");
-		axios.get(link)
-	    .then(function (response) {
-	        var html = response.data;
-	        var adthumblist = $(html).find(".ad-thumb-list").html();
-	        var leftArea = $(html).find(".leftArea").html();
-	        var rightArea = $(html).find(".rightArea").html();
-
-			$("#ad-thumb-list").html(adthumblist);
-			$("#leftArea").html(leftArea);
-			$("#rightArea").html(rightArea);
-
-			$(".btnSet").remove();
-
-			$("#ad-thumb-list").find("img").each(function(index,item){
-				var src = $(item).attr("src");
-				$(item).attr("src",'https://www.shilla.net/'+src);
-			});
-
-			$("#leftArea").find("img").each(function(index,item){
-				var src = $(item).attr("src");
-				$(item).attr("src",'https://www.shilla.net/'+src);
-			});
-
-			$(".titAType").find("img").each(function(index,item){
-				var src = $(item).attr("src");
-				$(item).attr("src",'https://www.shilla.net/'+src);
-			});
-
-			$(".downMenu").find("img").each(function(index,item){
-				var src = $(item).attr("src");
-				$(item).attr("src",'https://www.shilla.net/'+src);
-			});
-
-
-			$(".titBType").hide();
-			$(".dnSeasonSpecial").hide();
-
-
-			
-
-			var isloc = '';
-			if(isloc != ""){
-				$(".downMenu").find("li").find("a").each(function(index,item){
-					var href = $(item).attr("href");
-					$(item).attr("href",'https://www.shilla.net/'+href);
-				});
-			}
-
-	        pc.layerPopup.openPop("#accViewPop");
-			$(".ad-gallery").adGallery();
-			$(".slidePhotoBox .btnFullScreen").remove();
-			$(".slidePhotoBox .ad-back").remove();
-			$(".slidePhotoBox .ad-forward").remove();
-
-	    });
-	}else{
-		var imgHtml = "";
-		imgHtml += "<div class=\"slidePhotoBox\">";
-		imgHtml += "	<div id=\"gallery\" class=\"ad-gallery\">";
-		imgHtml += "		<div class=\"ad-image-wrapper\"></div>";
-		imgHtml += "		<div class=\"ad-controls\"></div>";
-		imgHtml += "		<div class=\"ad-nav\">";
-		imgHtml += "		<div class=\"ad-thumbs\">";
-		imgHtml += "			<ul class=\"ad-thumb-list\" id=\"ad-thumb-list\">";
-		imgHtml += "			</ul>";
-		imgHtml += "		</div>";
-		imgHtml += "		</div>";
-		imgHtml += "	</div>";
-		imgHtml += "</div>";
-		imgHtml += '<div class="conWrap mgt40" id="innerArea">';
-		imgHtml += '</div>';
-		$("#accView").html(imgHtml);
-
-		var link = $(my).attr("link");
-		axios.get(link)
-	    .then(function (response) {
-	        var html = response.data;
-	        var adthumblist = $(html).find(".ad-thumb-list").html();
-	        var innerArea = $(html).find(".conWrapB").html();
-
-			$("#ad-thumb-list").html(adthumblist);
-			$("#innerArea").html(innerArea);
-			$(".firsta").remove();
-
-			$("#ad-thumb-list").find("img").each(function(index,item){
-				var src = $(item).attr("src");
-				$(item).attr("src",'https://www.shilla.net/'+src);
-			});
-
-			$("#innerArea").find("img").each(function(index,item){
-				var src = $(item).attr("src");
-				$(item).attr("src",'https://www.shilla.net/'+src);
-			});
-
-			
-
-			var isloc = '';
-			if(isloc != ""){
-				$(".downMenu").find("li").find("a").each(function(index,item){
-					var href = $(item).attr("href");
-					$(item).attr("href",'https://www.shilla.net/'+href);
-				});
-			}
-
-	        pc.layerPopup.openPop("#accViewPop");
-			$(".ad-gallery").adGallery();
-			$(".slidePhotoBox .btnFullScreen").remove();
-			$(".slidePhotoBox .ad-back").remove();
-			$(".slidePhotoBox .ad-forward").remove();
-
-	    });
-	}
-
-}
-
-//STEP1---------------------------------------------------------------------------------END
 
 </script>
-</div>
-			</div>
-
-			<div class="foot footHub">
-				<script type="text/javascript">
-	function openIdInfo() {
-		var url = "http://www.ftc.go.kr/bizCommPop.do?wrkr_no=2038143363";
-		window.open(url, "bizCommPop", "width=750, height=700, scrollbars=1");
-	}
-</script>
-<div class="localBox">
-	<div class="localBoxer">
-		<div class="compInfo">
-			<h2 class="logo">THE SHILLA SEOUL</h2>
-		</div>
-		<!-- 20191218 MG -->
-		<div class="brandWrap">
-			<div class="brand"><dl><dt><a href="/index.do">The Shilla</a></dt></dl></div>
-			<div class="brandMono"><a href="https://www.shillamonogram.com/mghub/index.do?lang=ko">신라모노그램</a></div>
-			<div class="brandStay"><a href="https://www.shillastay.com/stayhub/index.do">신라스테이</a></div>
-		</div>
-		<div class="linkInfo">
-			<dl class="introduction">
-				<dd class="d1"><a href="/membership/inquires/aboutShilla/memOverView.do"><span>호텔신라 소개</span></a></dd> 
-				<dd class="d2"><a href="/membership/inquires/hotelDevelopment.do"><span>호텔 개발</span></a></dd>
-					<dd class="d3"><a href="/membership/inquires/contactus/memIndex.do"><span>고객문의</span></a></dd>
-					<dd class="d8"><a href="/membership/inquires/aboutShilla/memSiteMap.do"><span>사이트맵</span></a></dd>
-				<dd class="d4"><a href="/membership/inquires/memChangeRewards.do"><span>신라리워즈 전환 안내</span></a></dd>
-				<dd class="d5"><a href="https://www.theshilla.shop/" target="_blank"><span>The Shilla shop</span></a></dd>
-					<dd class="d6"><a href="https://www.samsunggiftcard.net/common/sgc/index.html" target="_blank"><span>삼성상품권</span></a></dd>
-					<dd class="d7"><a href="#" onclick="oldHopenO('oldHpopup'); return false;"><span>신라리워즈 전환 안내</span></a></dd>
-				</dl>
-			<dl class="inquiries">
-				<dt class="dt">SNS</dt>
-				    <dd class="insta"><a title="Instagram - popup" target="_blank" href="https://www.instagram.com/shillahotels/"><span>Instagram</span></a></dd>
-				    <dd class="facebook"><a title="Facebook - popup" target="_blank" href="http://www.facebook.com/theshillahotels"><span>Facebook</span></a></dd>
-				    <dd class="weibo"><a title="Weibo - popup" target="_blank" href="http://weibo.com/shillahotel"><span>Weibo</span></a></dd>
-				    <dd class="youtube"><a title="Youtube - popup" target="_blank" href="https://www.youtube.com/@theshillahotelsresorts9834"><span>Youtube</span></a></dd>
-			</dl>
-			
-			<dl class="ContactInfo">
-				<dd class="d1"><span>서울신라호텔 02-2233-3131</span></dd> 
-				<dd class="d2"><span>제주신라호텔 064-735-5114</span></dd>
-				<dd class="d3"><span>신라스테이 02-2230-0700</span></dd>
-				<dd class="d4"><span>신라리워즈 02-2230-5528</span></dd>
-			</dl>
-		</div>
-	</div>
-</div>
-<div class="footer">
-	<div class="linkBox">
-		<ul>
-			<li class="link1 first"><a href="/membership/memFooter/memAgreement.do">신라리워즈 약관</a></li>
-			<li class="link2"><a href="/membership/memFooter/memIndividualPolicy.do">개인정보처리방침</a></li>
-			<li class="link3"><a href="/membership/memFooter/pop/memEmailAdCollectPop.do" onclick="openCtrlPopup('/fbresv/memFooter/pop/memEmailAdCollectPop.do','emailAdCollectPop');  return false;">이메일무단수집금지</a></li>
-			<li class="link4"><a href="https://www.shillaaudit.com/audit/inf_information.do" target="_blank">윤리경영</a></li>
-			<li class="link5 last"><a href="/membership/memFooter/pop/memSafeMngPop.do" onclick="openCtrlPopup('/fbresv/memFooter/pop/memSafeMngPop.do','emailAdCollectPop');  return false;">건축/시설물 안전관리</a></li>  </ul>
-	</div>
-	<div class="selectLang">
-		<ul>
-			<li class="en first"><a href="/hub/cmm/setLang.do?lang=en">English</a></li>
-					<li class="ja"><a href="/hub/cmm/setLang.do?lang=ja">日本語</a></li>
-					<li class="zh last"><a href="/hub/cmm/setLang.do?lang=zh">简体中文</a></li>
-					</ul>
-	</div> 
-	<div class="adressBox">
-		<p>㈜호텔신라 서울특별시 중구 동호로 249 (우: 04605)  Tel: 02-2233-3131 Fax: 02-2230-3769 사업자등록번호: 203-81-43363 통신판매신고번호: 중구00272호 대표이사 이부진    호스팅서비스제공자 삼성SDS㈜    서울객실예약 shilla.reserve@samsung.com  제주객실예약 jejushilla@samsung.com</p>
-		<a class="footLinkbtn" href="#" onclick="openIdInfo(); return false;">사업자 정보 확인</a>
-		</div>
-	<div class="copyright"><p>COPYRIGHT © HOTEL SHILLA CO., LTD. ALL RIGHTS RESERVED.</p></div>
-</div>
-				<!-- 17.03.28 popup 추가 -->
-		            <div id="oldHpopup">
-						<div class="oldHback" style="z-index:999;"></div>
-						<div class="oldHwrap" style="z-index:999;">
-						<div class="ctnTitle">
-							<img alt="명품고택 소개" src="/images/ko/hub/main/oldHpoptit.gif">
-						<div class="close"><a href="#" onclick="oldHopenC('oldHpopup'); return false;">
-							<img src="/images/ko/mem/reservation/step1Infoclose.gif" alt="닫기"></a>
-						</div>
-						</div>
-						<div class="ctnWrap">
-							<img src="/images/ko/hub/main/oldHctn.jpg">
-                            	<p>경북 명품고택</p>
-                            	<p>호텔신라가 문화체육관광부에서 선정한 경상북도 명품 고택을 소개하여 드립니다.</p>
-                            	<p>여행 테마에 따라 우리나라 전통문화와 선조들의 멋과 정신을 오롯이 체험하실 수 있습니다.</p>
-                            	<p>* 호텔신라는 고택 예약 서비스를 직접 운영하지 않으며, 본 사이트는 고택 소개 정보만을 제공하고 있음을 알려드립니다.</p>
-                            	<p>신라호텔 고객의 문의 및 의견과 관련하여 귀사가 아래와 같이 본인의 개인정보를 수집 및 이용하는데 동의합니다.</p>
-						<div class="btnCtn">
-							<a class="oldHbtn" href="http://gyeongbukgotaek.modoo.at" target="_blank">자세히 보기</a></div>
-						</div>
-						</div>
-						</div>
-						<script>
-						function oldHopenO(IdName) {
-							var pop = document.getElementById(IdName);
-							pop.style.display = "block";
-							$('html, body').animate({scrollTop: 0 }, 'fast');
-							return false;
-						}
-
-						function oldHopenC(IdName) {
-							var pop = document.getElementById(IdName);
-							pop.style.display = "none";
-							return false;
-						}
-						</script>
-				<iframe id="hidden_frame" name="hidden_frame" style="display:none" title="빈 프레임"> </iframe></div>
-		</div>
-	</div>
-	<form id="submitForm" method="post" name="submitForm">
-		<input type="hidden" id="pageIndex" value="1" class="saveField" autocomplete="off">
-		<input type="hidden" id="resvId" name="resvId" value="" class="saveField" autocomplete="off">													<input type="hidden" id="hotlId" name="hotlId" value="" class="saveField" autocomplete="off">													<input type="hidden" id="shopId" name="shopId" value="" class="saveField" autocomplete="off"> 												<input type="hidden" id="visitDate" name="visitDate" value="" alerttext="[날짜]" class="saveField" autocomplete="off">         				<input type="hidden" id="visitTime" name="visitTime" value="" alerttext="[방문예정시간]" class="saveField" autocomplete="off">        			<input type="hidden" id="visitAdlt" name="visitAdlt" value="" class="saveField" autocomplete="off">          								<input type="hidden" id="visitChld" name="visitChld" value="" class="saveField" autocomplete="off">          								<input type="hidden" id="visitInnt" name="visitInnt" value="" class="saveField" autocomplete="off">         								<input type="hidden" id="visitName" name="visitName" value="" alerttext="[성명]" class="saveField" autocomplete="off">       				<input type="hidden" id="visitNameFirst" name="visitNameFirst" value="" alerttext="[성명]첫번쨰" class="saveField" autocomplete="off">      	<input type="hidden" id="visitNameLast" name="visitNameLast" value="" alerttext="[성명]두번쨰" class="saveField" autocomplete="off">        	<input type="hidden" id="visitPhon" name="visitPhon" value="" alerttext="[연락처]" class="saveField" autocomplete="off">         			<input type="hidden" id="visitEmail" name="visitEmail" value="" alerttext="[이메일]" class="saveField" autocomplete="off">         			<input type="hidden" id="resvTypeCd" name="resvTypeCd" value="" class="saveField" autocomplete="off">        								<input type="hidden" id="resvLangCd" name="resvLangCd" value="" class="saveField" autocomplete="off">        								<input type="hidden" id="resvStateCd" name="resvStateCd" value="" class="saveField" autocomplete="off">      							<input type="hidden" id="allgyCd" name="allgyCd" value="" class="saveField" autocomplete="off">           									<input type="hidden" id="allgyEtcCd" name="allgyEtcCd" value="" class="saveField" autocomplete="off">        								<input type="hidden" id="chairText" name="chairText" value="" class="saveField" autocomplete="off">     	 								<input type="hidden" id="chairTextLang" name="chairTextLang" value="" class="saveField" autocomplete="off">         					<input type="hidden" id="addEtc" name="addEtc" value="" class="saveField" alerttext="[추가요청사항]" autocomplete="off">      	<input type="hidden" id="prefAreaCd" name="prefAreaCd" value="" alerttext="[선호 구역]" class="saveField" autocomplete="off">   				<input type="hidden" id="cardTypeCd" name="cardTypeCd" value="" alerttext="[카드 종류]" class="saveField" autocomplete="off">         		<input type="hidden" id="cardNo" name="cardNo" value="" alerttext="[유효한 카드번호]" class="saveField" autocomplete="off">	          				<input type="hidden" id="cardExprYm" name="cardExprYm" value="" alerttext="[카드유효기간]" class="saveField" autocomplete="off">		   			<input type="hidden" id="diniCho" name="diniCho" value="" alerttext="[시간]" class="saveField" autocomplete="off">		   						<input type="hidden" id="visitGender" name="visitGender" value="" alerttext="[성별]" class="saveField" autocomplete="off">    				<input type="hidden" id="step2NotiYn" name="step2NotiYn" value="" class="saveField" autocomplete="off">      													<input type="hidden" id="rewardNo" name="rewardNo" value="" class="saveField" autocomplete="off">      										<input type="hidden" id="smsCertYn" name="smsCertYn" alerttext="[휴대폰 인증]" value="" class="saveField" autocomplete="off">    				<input type="hidden" id="resvSeatType" name="resvSeatType" alerttext="[좌석유형]" value="" class="saveField" autocomplete="off">    			<input type="hidden" id="roomType" name="roomType" value="" alerttext="[룸]" autocomplete="off">	<input type="hidden" id="roomTypeText" name="roomTypeText" value="" autocomplete="off">																<input type="hidden" id="roomPerson" name="roomPerson" value="" autocomplete="off">														<input type="hidden" id="preUpdateDate" name="preUpdateDate" value="" autocomplete="off">												<input type="hidden" id="preUpdateDiniCho" name="preUpdateDiniCho" value="" autocomplete="off">										<input type="hidden" id="preUpdateTime" name="preUpdateTime" value="" autocomplete="off">										<input type="hidden" id="updateYn" name="updateYn" value="" autocomplete="off">
-
-		<input type="hidden" id="allgyMemo" name="allgyMemo" value="" class="saveField" autocomplete="off">           								<input type="hidden" id="allgyText" name="allgyText" value="" class="saveField" autocomplete="off">           								<input type="hidden" id="allgyAgreeYN" name="allgyAgreeYN" value="" class="saveField" autocomplete="off">           								<input type="hidden" id="prefAreaText" name="prefAreaText" value="" class="saveField" autocomplete="off">           					<input type="hidden" id="blockageId" name="blockageId" value="" class="saveField" autocomplete="off">      								<input type="hidden" id="blockDelTime" name="blockDelTime" value="" class="saveField" autocomplete="off">      							<input type="hidden" id="blockCreTime" name="blockCreTime" value="" class="saveField" autocomplete="off">      							<input type="hidden" id="cardSaved" name="cardSaved" value="" class="saveField" autocomplete="off">      									<input type="hidden" id="memo" name="memo" value="" class="saveField" autocomplete="off">      													<input type="hidden" id="confirmNum" name="confirmNum" value="" class="saveField" autocomplete="off">      								<input type="hidden" id="searchDateSel" name="searchDateSel" value="" class="saveField" autocomplete="off">      						<input type="hidden" id="searchDateGubun" name="searchDateGubun" value="" class="saveField" autocomplete="off">      				<input type="hidden" id="searchDateType" name="searchDateType" value="" class="saveField" autocomplete="off">      					<input type="hidden" id="sDate" name="sDate" value="" class="saveField" autocomplete="off">      												<input type="hidden" id="eDate" name="eDate" value="" class="saveField" autocomplete="off">      												<input type="hidden" id="randAreaYn" name="randAreaYn" value="" autocomplete="off">     <!-- 비회원 중복예약체크 -->									<input type="hidden" id="natCd" name="natCd" value="" alerttext="[연락처]" autocomplete="off">	<input type="hidden" id="natCdIdx" name="natCdIdx" value="" autocomplete="off">	<input type="hidden" id="checkGift" name="checkGift" value="" autocomplete="off">	<input type="hidden" id="checkCake" name="checkCake" value="" autocomplete="off">	<input type="hidden" id="giftCnt" name="giftCnt" value="" autocomplete="off">	<input type="hidden" id="cakeCnt" name="cakeCnt" value="" autocomplete="off">	<input type="hidden" id="selectGiftSn" name="selectGiftSn" value="" autocomplete="off">	<input type="hidden" id="resvCategory" name="resvCategory" value="" autocomplete="off">	</form>
-
-<script type="text/javascript" id="">document.all&&!document.addEventListener||window.proxied_alert||(window.proxied_alert=window.alert,window.alert=function(){var a=arguments[0]?arguments[0]:"null";dataLayer.push({event:"alert_showed",alert_message:a});return proxied_alert.apply(this,arguments)});</script><script type="text/javascript" id="">(function(){var b=document.querySelector("select#diningSel"),c=function(a){a=a.target.options[a.target.selectedIndex];window.dataLayer.push({event:"selectionMade",selectedElement:a})};b.addEventListener("change",c,!0);0<document.querySelector("#diningSel").selectedIndex&&window.dataLayer.push({event:"selectionMade",selectedElement:document.querySelector("#diningSel").selectedOptions[0]})})();</script><script type="text/javascript" id="">(function(){if(null==sessionStorage.getItem("_PageViewCounter")||void 0==sessionStorage.getItem("_PageViewCounter"))sessionStorage.setItem("_PageViewCounter",1);else{var f=0;f=parseInt(sessionStorage.getItem("_PageViewCounter"));f+=1;sessionStorage.setItem("_PageViewCounter",f)}var v=!0,l=2592E5;if(window.Storage){var c=JSON.parse(localStorage.getItem("_tab_ids"))||[],d=sessionStorage.getItem("_tab_id"),a=JSON.parse(sessionStorage.getItem("_nav_path")),e=document.location.href;f=!1;var w=document.location.origin,
-t,p,m,g,u=function(b){return 0===l?b:b.filter(function(h){try{return m=parseInt(h.split("_")[1],10),m>(new Date).getTime()}catch(q){return!1}})};var r=function(b){if(0===l)return b;try{g=b.split("_");m=parseInt(g[1],10);if(m>(new Date).getTime())return b;g=g[0]+"_"+((new Date).getTime()+l);sessionStorage.setItem("_tab_id",g);return g}catch(h){return b}};var x=function(){if(!1===v)return"BACK/FORWARD";if(2>a.length)return"FORWARD";t=a[a.length-2];p=a[a.length-1];return t===e||p===e?"BACK":"FORWARD"},
-y=function(){c=JSON.parse(localStorage.getItem("_tab_ids"))||[];d=sessionStorage.getItem("_tab_id");c=u(c);if(c.length&&null!==d){var b=c.indexOf(d);-1<b&&c.splice(b,1);localStorage.setItem("_tab_ids",JSON.stringify(c))}},z=function(){var b=(new Date).getTime();"undefined"!==typeof performance&&"function"===typeof performance.now&&(b+=performance.now());return"xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g,function(h){var q=(b+16*Math.random())%16|0;b=Math.floor(b/16);return("x"===h?q:q&3|
-8).toString(16)})+(0<l?"_"+((new Date).getTime()+l):"")},A=function(b,h){return!(!0===h&&0!==b&&255!==b)};null===d?(d=z(),f=!0,sessionStorage.setItem("_tab_id",d)):d=r(d);c=u(c);-1===c.indexOf(d)&&(c.push(d),localStorage.setItem("_tab_ids",JSON.stringify(c)));r=c.length;if(window.PerformanceNavigation){a=a||[];var n=window.performance.navigation.redirectCount;if(A(window.performance.navigation.type,f))switch(window.performance.navigation.type){case 0:var k="NAVIGATE";a.push(e);break;case 1:k="RELOAD";
-0!==a.length&&a[a.length-1]===e||a.push(e);break;case 2:k=x();"FORWARD"===k?-1<document.referrer.indexOf(w)&&a.push(e):"BACK"===k?p!==e&&a.pop():a.push(e);break;default:k="OTHER",a.push(e)}else a.push(e);sessionStorage.setItem("_nav_path",JSON.stringify(a))}window.addEventListener("beforeunload",y);n={tabCount:r,redirectCount:n,navigationType:k,newTab:!0===f?"New":"Existing",tabId:d.replace(/_.+/,"")};window.google_tag_manager[google_tag_manager["rm"]["32068102"](58)].dataLayer.set("browsingBehavior",n);window.dataLayer.push({event:"custom.navigation",
-browsingBehavior:n})}})();</script>
-<script type="text/javascript" id="">var resvType=google_tag_manager["rm"]["32068102"](68);sessionStorage.setItem("_resvType",resvType);</script></body></html>
