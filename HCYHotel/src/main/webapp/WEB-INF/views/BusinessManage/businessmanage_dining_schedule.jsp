@@ -1885,15 +1885,13 @@ th, td {
 							location.href="businessDiningSchedule_modify.do?diningcode="+$("#diningcode").val()+"&hotelcode="+$("#hotelcode").val()+"&schedulecode="+schedulecode;
 						}
 					</script>
-					<div
-						style="display: flex; flex-direction: column; align-items: center;">
-						<div
-							style="display: flex; justify-content: flex-start; width: 900px;">
+					<div style="display: flex; flex-direction: column; align-items: center;">
+    <div style="display: flex; justify-content: flex-start; width: 900px;">
 							<input type="button" value="스케쥴 등록" class="btn btn-info btn-sm"
 								id="newScheduleBtn">
 						</div>
 						<div
-							style="display: flex; justify-content: center; align-items: center; height: 200px;">
+						style="display: flex; justify-content: center; align-items: center;">
 						<table style="width: 900px; bolder: 1;">
 							<tr>
 								<th>스케쥴종류</th>
