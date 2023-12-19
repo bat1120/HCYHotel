@@ -260,6 +260,9 @@ $(function(){
 	});//목록버튼
 	
 	$("#btn_write").click(function(){
+		alert("문의주셔서 감사합니다. 빠른 시간 안에 답변 드리겠습니다.");
+		location.href="user_qna_list.do"
+		
 		
 	});
 	

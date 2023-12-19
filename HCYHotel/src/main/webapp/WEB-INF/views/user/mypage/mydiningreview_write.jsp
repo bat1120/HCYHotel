@@ -255,11 +255,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<script type="text/javascript">
 $(function(){
 	$("#btn_backtolist").click(function(){
-		location.href="mydiningreview.do";
+		location.href="mydiningreview_list.do";
 	});//목록버튼
 	
 	$("#btn_write").click(function(){
-		
+		alert("소중한 후기 감사합니다.")
+		location.href="mydiningreview_list.do"
 	});
 	
 	

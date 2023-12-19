@@ -120,11 +120,25 @@
 </select></td>
 <td></td>
 				<td>
+				
+</td>
+<td></td>
+</tr>
+				<tr style="text-align: left;">
+				<td></td>
+				<td><strong>날짜</strong></td>
+				<td> <input type="text" id="date" style="height:40px;" /></td>
+<td><strong>인원수</strong></td>
+				<td> <input type="text" id="ppl" style="height: 40px;" />명</td>
+<td></td>
+				<td>
 				<a href="dining_booking1.do">
-<input type="button" class="btn btn-dark" value="다음" id="dining_choose"/>
+<input type="button" class="btn btn-dark" value="다음" id="dining_choose" />
 </a>
 </td>
 <td></td>
+</tr>
+
 				</tbody>
 			</table>
 

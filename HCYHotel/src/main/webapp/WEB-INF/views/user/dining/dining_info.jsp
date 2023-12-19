@@ -270,7 +270,7 @@
 						<div class="bg_inner">
 							<div class="tit_bg">
 								<div class="bg_img">
-								 <img src="http://localhost/HCYHotel/common/business/img/${fn:split(hotelInfo.fileName,'.jpg')[0]}.jpg" alt="" style="float: left; margin-right: 400px;" width="800" height="400">
+								 <img src="http://localhost/HCYHotel/common/business/img/D000042_1.jpg" alt="" style="float: left; margin-right: 400px;" width="800" height="400">
  
 								</div>
 
@@ -278,7 +278,7 @@
 							<div class="section_inner fclear">
 								<div class="left_area">
 									<div class="sec_tit">
-										${hotelInfo.hotelName}
+										뇸뇸
 									</div>
 								</div>
 								<div class="right_area cnt_inner">
@@ -287,18 +287,15 @@
 								<a href="http://localhost/HCYHotel/user/dining/dining_booking.do">
 								<button type="button" class="btn btn-dark">예약하기</button></a>
 									<p class="sub_tit_b">
-									${hotelInfo.description}
+								맛있고 깔끔한 식사를 함께할 수 있는 최적의 공간 뇸뇸
 										
 									</p>
 									<div class="clear_line"></div>
 									<div class="section_txt">
-									<a href="http://localhost/HCYHotel/user/hotel/room/user_room_list.do">
-								<button type="button" class="btn btn-secondary">메뉴보기</button></a>
 										<p>
-											호텔 전화번호 : ${hotelInfo.tel }<br>
-											호텔 주소 : ${hotelInfo.hotelAddress }<br>
-											경도 :${hotelInfo.longitude } <br>
-											위도 :${hotelInfo.latitude } <br>
+											다이닝 전화번호 : 02-1234-5677<br>
+											위치 : 자스민호텔 1F<br>
+											<br>
 										</p>
 
 									</div>
