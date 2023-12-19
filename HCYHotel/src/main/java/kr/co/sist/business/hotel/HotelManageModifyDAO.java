@@ -60,8 +60,8 @@ public class HotelManageModifyDAO {
    }
    public void deleteHotel(String hotelcode) {
 	   MyBatiseHandlerBusiness mbh=MyBatiseHandlerBusiness.getInstance();
-	   SqlSession ss=mbh.getMyBatisHandler(false);
-	   ss.selectOne("kr.co.sist.business.hotelModifyMapper.deleteHotel",hotelcode);
+	   SqlSession ss=mbh.getMyBatisHandler(true);
+	   ss.delete("kr.co.sist.business.hotelModifyMapper.deleteHotel",hotelcode);
 	   mbh.closeHandler(ss);
    }
    public String selectLoccode(LocVO lVO) {
@@ -73,8 +73,8 @@ public class HotelManageModifyDAO {
    }
    public void insertFile(FileVO fVO) {
 	   MyBatiseHandlerBusiness mbh=MyBatiseHandlerBusiness.getInstance();
-	   SqlSession ss=mbh.getMyBatisHandler(false);
-	   ss.selectOne("kr.co.sist.business.hotelModifyMapper.insertFile",fVO);
+	   SqlSession ss=mbh.getMyBatisHandler(true);
+	   ss.insert("kr.co.sist.business.hotelModifyMapper.insertFile",fVO);
 	   mbh.closeHandler(ss);
    }
    public String selectFilecode() {
@@ -86,8 +86,8 @@ public class HotelManageModifyDAO {
    }
    public void insertHotel(HotelVO hVO) {
 	   MyBatiseHandlerBusiness mbh=MyBatiseHandlerBusiness.getInstance();
-	   SqlSession ss=mbh.getMyBatisHandler(false);
-	   ss.selectOne("kr.co.sist.business.hotelModifyMapper.insertHotel",hVO);
+	   SqlSession ss=mbh.getMyBatisHandler(true);
+	   ss.insert("kr.co.sist.business.hotelModifyMapper.insertHotel",hVO);
 	   mbh.closeHandler(ss);
    }
   

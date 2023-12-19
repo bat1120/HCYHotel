@@ -1972,7 +1972,8 @@ th, td {
         });
     </script>
 
-					<div style="position: absolute; left: 500px">
+					<div style="display: flex; flex-direction: column; align-items: center;">
+    <div style="display: flex; justify-content: flex-start; width: 900px;">
 						<select id="hotelSelect">
 							<option>객실선택</option>
 							<c:forEach var="hotelList" items="${hotelList }">
@@ -1980,12 +1981,12 @@ th, td {
 										value="${hotelList.hotelname }" /></option>
 							</c:forEach>
 						</select>
-					</div>
-					<div style="position: absolute; left: 623px">
-
 						<input type="button" value="객실 등록" class="btn btn-info btn-sm"
 							id="newHotelBtn">
 					</div>
+					</div>
+
+				
 					<div
 						style="display: flex; justify-content: center; align-items: center; height: 200px;" id="output">
 						<table style="width: 900px; bolder: 1;">
